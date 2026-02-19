@@ -1,3 +1,5 @@
 notion-raw/
 .claude/
 *.output
+.DS_Store
+.playwright-mcp/
