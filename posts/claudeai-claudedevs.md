@@ -22,6 +22,14 @@
 
 ### Febbraio 2026
 
+#### Sonnet 4.6 in Claude Code
+> "This is Claude Sonnet 4.6: our most capable Sonnet model yet. It's a full upgrade across coding, computer use, long-context reasoning, agent planning, knowledge work, and design. It also features a 1M token context window in beta."
+🔗 https://x.com/claudeai/status/2023817132581208353
+
+#### Sonnet 4.6 free tier
+> "Claude Sonnet 4.6 is available now on all plans, Cowork, Claude Code, our API, and all major cloud platforms. We've also upgraded our free tier to Sonnet 4.6 by default — it now includes file creation, connectors, skills, and compaction."
+🔗 https://x.com/claudeai/status/2023817147303292948
+
 #### Opus 4.6
 > "Opus 4.6 is state-of-the-art on several evaluations including agentic coding, multi-discipline reasoning, knowledge work, and agentic search. We're also shipping new features across Claude in Excel, Claude in PowerPoint, Claude Code, and our API to let Opus 4.6 do even more."
 🔗 https://x.com/claudeai/status/2019467374420722022
@@ -43,6 +51,22 @@
 🔗 https://x.com/claudeai/status/2024986293248127452
 
 ### Marzo 2026
+
+#### Cowork scheduled tasks
+> "New in Cowork: scheduled tasks. Claude can now complete recurring tasks at specific times automatically: a morning brief, weekly spreadsheet updates, Friday team presentations."
+🔗 https://x.com/claudeai/status/2026720870631354429
+
+#### Cowork projects
+> "Projects are now available in Cowork. Keep your tasks and context in one place, focused on one area of work. Files and instructions stay on your computer. Import existing projects in one click, or start fresh."
+🔗 https://x.com/claudeai/status/2035025492617961704
+
+#### Computer use launch
+> "You can now enable Claude to use your computer to complete tasks. It opens your apps, navigates your browser, fills in spreadsheets — anything you'd do sitting at your desk. Research preview in Claude Cowork and Claude Code, macOS only."
+🔗 https://x.com/claudeai/status/2036195789601374705
+
+#### Computer use Windows
+> "Computer use in Claude Cowork and Claude Code Desktop is now available on Windows."
+🔗 https://x.com/claudeai/status/2039836891508261106
 
 #### Remote Control GA
 > "New in Claude Code: Remote Control. Kick off a task in your terminal and pick it up from your phone while you take a walk or join a meeting. Claude keeps running on your machine, and you can control the session from the Claude app or ..."
@@ -73,6 +97,10 @@
 🔗 https://x.com/claudeai/status/2044785266590622185
 
 ### Aprile 2026
+
+#### Cowork GA
+> "Claude Cowork is now generally available to all paid plans. For Enterprise, we are adding role-based access controls, group spend limits, usage analytics, and expanded OpenTelemetry to give admins what they need to deploy it across the org."
+🔗 https://x.com/claudeai/status/2042273755485888810
 
 #### Hackathon Opus 4.7
 > "The Claude Code hackathon is back for Opus 4.7. Join builders from around the world for a week with the Claude Code team in the room, with a prize pool of $100K in API credits."

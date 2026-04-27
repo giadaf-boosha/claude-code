@@ -41,6 +41,11 @@ URL: https://x.com/_catwu/status/1996287136161767883
 
 ### Dicembre 2025
 
+**VS Code extension GA**
+"The VS Code extension for Claude Code is now generally available. It's now much closer to the CLI experience: @-mention files for context, use familiar slash commands (/model, /mcp, /context), and more."
+URL: https://x.com/claudeai/status/2013704053226717347 (RT)
+
+
 **Claude Code in Claude Desktop**
 "If want to use Claude Code but are don't like the terminal interface, you can now use local Claude Code from Claude Desktop! ..." (download Desktop, sidebar -> Code, scegli folder)
 

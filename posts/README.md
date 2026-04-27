@@ -8,11 +8,13 @@ Questa cartella raccoglie i post X (Twitter) principali del team Claude Code dal
 
 ## Indice
 
-- [bcherny.md](./bcherny.md) — Boris Cherny, creator Claude Code (~14 post)
-- [catwu.md](./catwu.md) — Cat Wu, PM Claude Code (~12 post)
-- [noahzweben.md](./noahzweben.md) — Noah Zweben, PM Claude Code engineer (~8 post)
-- [trq212.md](./trq212.md) — Thariq, engineer Claude Code (~3 post)
-- [claudeai-claudedevs.md](./claudeai-claudedevs.md) — account ufficiali Anthropic (Claude AI + ClaudeDevs)
+- [bcherny.md](./bcherny.md) — Boris Cherny, creator Claude Code (~46 post: tip thread, hidden features, drop di feature)
+- [catwu.md](./catwu.md) — Cat Wu, PM Claude Code (~13 post: annunci di prodotto)
+- [noahzweben.md](./noahzweben.md) — Noah Zweben, PM Claude Code engineer (~9 post: drop tecnici)
+- [trq212.md](./trq212.md) — Thariq, engineer Claude Code (~14 post: lessons + nuove feature)
+- [claudeai-claudedevs.md](./claudeai-claudedevs.md) — account ufficiali Anthropic (~22 post)
+- [alistaiir.md](./alistaiir.md) — Alistair, Anthropic engineer (Monitor tool + easter eggs)
+- [ecosistema.md](./ecosistema.md) — @rauchg (Vercel), @swyx (latent.space), @transitive_bs, @ClaudeCodeLog (changelog non ufficiale)
 
 ---
 

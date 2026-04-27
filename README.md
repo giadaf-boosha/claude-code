@@ -1,30 +1,129 @@
-# Claude Code — Guida ragionata (aprile 2026)
+# Claude Code — Guida (27 aprile 2026)
 
-> Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.ai).
-> Aggiornata al **27 aprile 2026** integrando tutti gli aggiornamenti dal 15 febbraio in poi.
-> Versione CLI di riferimento: **v2.1.119**.
+> Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
+> Ultimo aggiornamento: **27 aprile 2026, 11:00 CEST**.
+> Versione CLI di riferimento: **v2.1.119** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
 
 ---
 
 ## Cos'e' Claude Code
 
-Strumento di sviluppo AI di Anthropic che opera come agente autonomo: legge, scrive, modifica codice, esegue comandi, naviga il filesystem, parla con tool esterni via [MCP](./docs/10-mcp.md).
+Strumento di sviluppo AI di Anthropic che opera come agente autonomo: legge, scrive, modifica codice, esegue comandi, naviga il filesystem, parla con tool esterni via [MCP](./docs/10-mcp.md). Lanciato il **24 febbraio 2025** come research preview, GA il **22 maggio 2025**, oggi disponibile su 8 surface.
 
-Disponibile su:
-- **Terminal CLI** (`claude`)
-- **Desktop app** (macOS, Windows, Windows ARM64) — multi-session redesign mar 2026
-- **VS Code / Cursor** (estensione)
-- **JetBrains** (plugin marketplace)
-- **Web** ([claude.ai/code](https://claude.ai/code))
-- **Slack** (`/install-slack-app`)
-- **Mobile** (iOS app + Remote Control)
-- **GitHub Actions / GitLab CI/CD**
-
-Modello default: `claude-sonnet-4-6`. Premium: `claude-opus-4-7` con effort `xhigh` su Max plan (da v2.1.111).
+| Surface | Come si attiva |
+|---|---|
+| Terminal CLI | `claude` |
+| Desktop app | macOS / Windows / Windows ARM64 (multi-session redesign mar 2026) |
+| VS Code / Cursor | Estensione `vscode:extension/anthropic.claude-code` |
+| JetBrains | Plugin marketplace |
+| Web | [claude.ai/code](https://claude.ai/code) |
+| Slack | `/install-slack-app` |
+| Mobile | iOS app + Remote Control (Android via web) |
+| GitHub Actions / GitLab CI/CD | `/install-github-app` |
 
 ---
 
-## Indice della guida
+## Master Claude Code — Field Guide
+
+> Mappa rapida ispirata al format "Master Claude for Free" di [Ruben Hassid](https://ruben.substack.com/). Ogni voce porta a un documento di approfondimento o a un post di riferimento. Numeri solo come ancore, non rappresentano un ordine prescrittivo.
+
+### Setup + Fondamenti
+
+| # | Voce | 1-liner | Vai a |
+|---|---|---|---|
+| 01 | **Snapshot prodotto** | Versione, modelli, surface, pricing, roadmap | [docs/01](./docs/01-snapshot.md) |
+| 02 | **Installazione e CLI** | Install + comandi + flag + env vars | [docs/02](./docs/02-cli-installazione.md) |
+| 03 | **Slash commands** | 60+ comandi built-in e bundled skills | [docs/03](./docs/03-slash-commands.md) |
+| 04 | **CLAUDE.md > prompting** | "Configura, non promptare" — context persistente | [docs/06](./docs/06-claude-md-memory.md) |
+| 05 | **Sandbox + permessi** | OS-level isolation, plan mode, auto mode | [docs/04](./docs/04-modalita-permessi.md) |
+
+### Apps + Feature
+
+| # | Voce | 1-liner | Vai a |
+|---|---|---|---|
+| 06 | **Skills** (`SKILL.md`) | Workflow ricorrenti come `/comandi` | [docs/09](./docs/09-skills.md) |
+| 07 | **Hooks** | 28 eventi del lifecycle, 5 handler | [docs/07](./docs/07-hooks.md) |
+| 08 | **MCP** | Server, transport, channels, registry | [docs/10](./docs/10-mcp.md) |
+| 09 | **Plugins & Marketplace** | 101+ plugin ufficiali, LSP, integrazioni | [docs/11](./docs/11-plugins-marketplace.md) |
+| 10 | **Subagents** | Explore, Plan, custom, forking | [docs/08](./docs/08-subagents.md) |
+
+### Cloud + Workflow
+
+| # | Voce | 1-liner | Vai a |
+|---|---|---|---|
+| 11 | **Routines** | Cloud automation con schedule + API + GitHub triggers | [docs/13](./docs/13-routines-cloud.md) |
+| 12 | **`/loop` + Monitor tool** | Automazione intra-sessione, push-based, self-pacing | [docs/14](./docs/14-loop-monitor.md) |
+| 13 | **`/ultraplan` + `/ultrareview`** | Planning e review multi-agent in cloud | [docs/15](./docs/15-ultraplan-ultrareview.md) |
+| 14 | **Agent Teams** | Coordinamento multi-istanza con task list condivisa | [docs/12](./docs/12-agent-teams.md) |
+| 15 | **Headless + Agent SDK** | CLI `-p`, SDK Python/TS, GitHub Actions | [docs/16](./docs/16-headless-agent-sdk.md) |
+
+### Modelli + Performance
+
+| # | Voce | 1-liner | Vai a |
+|---|---|---|---|
+| 16 | **Opus 4.7 + xhigh** | Max plan, ragionamento esteso, adaptive thinking | [docs/05](./docs/05-fast-mode-1m-context.md) |
+| 17 | **Fast mode Opus 4.6** | 2.5x latenza ridotta, stessa qualita' | [docs/05](./docs/05-fast-mode-1m-context.md) |
+| 18 | **1M context GA** | Codebase intero in single request | [docs/05](./docs/05-fast-mode-1m-context.md) |
+| 19 | **Auto mode** | Classifier-based permission decision | [docs/04](./docs/04-modalita-permessi.md) |
+| 20 | **Computer use** | Click UI, validate native apps end-to-end | [docs/17](./docs/17-ide-surface.md) |
+
+### Mindset + Tip operative
+
+| # | Voce | 1-liner | Source |
+|---|---|---|---|
+| 21 | **Setup vanilla > custom** | "CC works great out of the box" | [@bcherny](https://x.com/bcherny/status/2007179832300581177) |
+| 22 | **Full task context upfront** | Goal + constraints + acceptance al primo turno | [@_catwu](https://x.com/_catwu/status/2044808536790847693) |
+| 23 | **Verifica feedback loop** | "Give Claude a way to verify its work, 2-3x quality" | [@bcherny](https://x.com/bcherny/status/2007179861115511237) |
+| 24 | **Output style "Explanatory"** | Claude spiega il *perche'* dietro le scelte | [@bcherny](https://x.com/bcherny/status/2017742759218794768) |
+| 25 | **Parallel worktrees** | 3-5 worktrees in parallelo come productivity unlock | [@bcherny](https://x.com/bcherny/status/2017742743125299476) |
+| 26 | **`/btw` per side query** | Domande laterali senza interrompere il flow | [@trq212](https://x.com/trq212/status/2031506296697131352) |
+| 27 | **Spec-based dev** | Spec minimale + AskUserQuestionTool + nuova sessione | [@trq212](https://x.com/trq212/status/2005315275026260309) |
+
+### Riferimenti
+
+| # | Voce | Vai a |
+|---|---|---|
+| 28 | **Settings & Auth** | [docs/18](./docs/18-settings-auth.md) |
+| 29 | **IDE & altre surface** | [docs/17](./docs/17-ide-surface.md) |
+| 30 | **Changelog feb 2025 → apr 2026** | [docs/19](./docs/19-changelog.md) |
+| 31 | **Tips & best practices** | [docs/20](./docs/20-tips-best-practices.md) |
+| 32 | **Guide per target user** | [docs/21](./docs/21-guide-target-user.md) |
+
+---
+
+## Highlights generali di Claude Code
+
+| Categoria | In un'idea | Vai a |
+|---|---|---|
+| **8 surface** | Stesso engine su CLI, Desktop, VS Code, JetBrains, Web, Slack, Mobile, CI/CD | [docs/17](./docs/17-ide-surface.md) |
+| **Customizability** | Hooks + Skills + Plugins + LSPs + MCPs + Agents + Status lines + Output styles | [@bcherny](https://x.com/bcherny/status/2021699851499798911) |
+| **Context engineering** | CLAUDE.md hierarchy + auto-memory + path-specific rules + import @ | [docs/06](./docs/06-claude-md-memory.md) |
+| **Cloud automation** | Routines (schedule + API + GitHub) eseguibili senza laptop acceso | [docs/13](./docs/13-routines-cloud.md) |
+| **Multi-agent review** | `/ultrareview` con fleet specialisti + verification agent | [docs/15](./docs/15-ultraplan-ultrareview.md) |
+| **Cross-device** | Remote Control: parti CLI, continui da telefono | [docs/17](./docs/17-ide-surface.md) |
+| **Sandboxed by default** | OS-level isolation (Seatbelt, bubblewrap) + filesystem/network rules | [docs/04](./docs/04-modalita-permessi.md) |
+| **1M context GA** | Sonnet 4.6 + Opus 4.6 a pricing standard | [docs/05](./docs/05-fast-mode-1m-context.md) |
+| **Open standards** | MCP donato a Linux Foundation, Skills compatibile con [agentskills.io](https://agentskills.io) | [docs/10](./docs/10-mcp.md) |
+| **Headless first-class** | Print mode, structured outputs, Agent SDK Python/TS, distributed tracing | [docs/16](./docs/16-headless-agent-sdk.md) |
+
+---
+
+## Highlights post-15 febbraio 2026
+
+| Data | Novita' | Documento |
+|---|---|---|
+| 7 feb 2026 | Fast mode Opus 4.6 (research preview) | [05](./docs/05-fast-mode-1m-context.md) |
+| 13 mar 2026 | 1M context GA Opus/Sonnet 4.6 | [05](./docs/05-fast-mode-1m-context.md) |
+| 24 mar 2026 (w13) | **Auto mode** + Computer use Desktop + PowerShell tool | [04](./docs/04-modalita-permessi.md) |
+| 30 mar 2026 (w14) | **`/ultrareview`** + Computer use CLI | [15](./docs/15-ultraplan-ultrareview.md) |
+| 6-10 apr 2026 (w15) | **`/ultraplan`** + **Monitor tool** + `/loop` self-pacing + `/team-onboarding` + `/autofix-pr` | [14](./docs/14-loop-monitor.md), [15](./docs/15-ultraplan-ultrareview.md) |
+| 14 apr 2026 | **Routines** GA in research preview + Desktop redesign multi-session | [13](./docs/13-routines-cloud.md) |
+| 16 apr 2026 | **Opus 4.7 + xhigh effort** + `/effort` slider + `/ultrareview` GA | [05](./docs/05-fast-mode-1m-context.md), [15](./docs/15-ultraplan-ultrareview.md) |
+| 23 apr 2026 | v2.1.119 — Vim visual mode, custom themes, hooks `mcp_tool` | [19](./docs/19-changelog.md) |
+
+---
+
+## Indice della guida (completo)
 
 ### Fondamenta
 1. [Snapshot prodotto aprile 2026](./docs/01-snapshot.md) — versione, modelli, surface, pricing, roadmap
@@ -55,35 +154,23 @@ Modello default: `claude-sonnet-4-6`. Premium: `claude-opus-4-7` con effort `xhi
 18. [Settings & Authentication](./docs/18-settings-auth.md) — gerarchia, permission syntax, Teams/Enterprise
 
 ### Riferimenti
-19. [Changelog feb → apr 2026](./docs/19-changelog.md) — versione per versione + post-mortem qualita'
+19. [Changelog completo (feb 2025 → apr 2026)](./docs/19-changelog.md) — 7 fasi, versione per versione, post-mortem
 20. [Tips & best practices](./docs/20-tips-best-practices.md) — pattern operativi e tip dal team Anthropic
-
----
-
-## Highlights post-15 febbraio 2026
-
-| Data | Novita' | Documento |
-|---|---|---|
-| 7 feb 2026 | Fast mode Opus 4.6 (research preview) | [05](./docs/05-fast-mode-1m-context.md) |
-| 13 mar 2026 | 1M context GA Opus/Sonnet 4.6 | [05](./docs/05-fast-mode-1m-context.md) |
-| 24 mar 2026 (w13) | **Auto mode** + Computer use Desktop + PowerShell tool | [04](./docs/04-modalita-permessi.md) |
-| 30 mar 2026 (w14) | **`/ultrareview`** + Computer use CLI | [15](./docs/15-ultraplan-ultrareview.md) |
-| 6-10 apr 2026 (w15) | **`/ultraplan`** + **Monitor tool** + `/loop` self-pacing + `/team-onboarding` + `/autofix-pr` | [14](./docs/14-loop-monitor.md), [15](./docs/15-ultraplan-ultrareview.md) |
-| 14 apr 2026 | **Routines** GA in research preview + Desktop redesign multi-session | [13](./docs/13-routines-cloud.md) |
-| 16 apr 2026 | **Opus 4.7 + xhigh effort** + `/effort` slider + `/ultrareview` GA | [05](./docs/05-fast-mode-1m-context.md), [15](./docs/15-ultraplan-ultrareview.md) |
-| 23 apr 2026 | v2.1.119 — Vim visual mode, custom themes, hooks `mcp_tool` | [19](./docs/19-changelog.md) |
+21. [Guide per target user](./docs/21-guide-target-user.md) — 8 percorsi (beginner, indie, senior backend, frontend, DevOps, tech lead, AI/ML, legacy stack)
 
 ---
 
 ## Post X di riferimento
 
-[posts/](./posts/) raccoglie i post X principali del team Claude Code (Boris Cherny, Cat Wu, Noah Zweben, Thariq, account ufficiali) che documentano feature, tips e annunci. Ogni post e' citato con URL originale e contesto.
+[posts/](./posts/) raccoglie i post X principali del team Claude Code (Boris Cherny, Cat Wu, Noah Zweben, Thariq, Alistair, account ufficiali, ecosistema developer come @rauchg e @swyx) che documentano feature, tips e annunci. Ogni post e' citato con URL originale e contesto.
 
-- [posts/bcherny.md](./posts/bcherny.md) — Boris Cherny, creator Claude Code
-- [posts/catwu.md](./posts/catwu.md) — Cat Wu, PM Claude Code
-- [posts/noahzweben.md](./posts/noahzweben.md) — Noah Zweben, PM Claude Code (drop tecnici)
-- [posts/trq212.md](./posts/trq212.md) — Thariq, engineer Claude Code
-- [posts/claudeai-claudedevs.md](./posts/claudeai-claudedevs.md) — account ufficiali
+- [posts/bcherny.md](./posts/bcherny.md) — Boris Cherny, creator Claude Code (~46 post: tip thread, hidden features, drop di feature)
+- [posts/catwu.md](./posts/catwu.md) — Cat Wu, PM Claude Code (~13 post: annunci di prodotto)
+- [posts/noahzweben.md](./posts/noahzweben.md) — Noah Zweben, PM engineer (~9 post: drop tecnici)
+- [posts/trq212.md](./posts/trq212.md) — Thariq, engineer (~14 post: lessons + nuove feature)
+- [posts/claudeai-claudedevs.md](./posts/claudeai-claudedevs.md) — account ufficiali Anthropic (~22 post)
+- [posts/alistaiir.md](./posts/alistaiir.md) — Alistair, Anthropic engineer (Monitor tool, easter eggs)
+- [posts/ecosistema.md](./posts/ecosistema.md) — @rauchg, @swyx, @transitive_bs, @ClaudeCodeLog (community + changelog non ufficiale)
 
 ---
 
@@ -97,11 +184,15 @@ Modello default: `claude-sonnet-4-6`. Premium: `claude-opus-4-7` con effort `xhi
 
 ## Risorse di ricerca
 
-[`_research/`](./_research/) contiene i dossier di ricerca generati durante la riscrittura aprile 2026:
-- `dossier-docs.md` (~64KB) — documentazione ufficiale code.claude.com
+[`_research/`](./_research/) contiene i dossier di ricerca:
+- `dossier-docs.md` — documentazione ufficiale code.claude.com (~64KB)
 - `dossier-x-engineers.md` — post X di @noahzweben + @trq212
 - `dossier-x-product.md` — post X di @_catwu + @ClaudeDevs + @bcherny + @claudeai
+- `dossier-x-extended.md` — 76 post X aggiuntivi (Boris tip thread, ClaudeCodeLog, Alistair, ecosistema)
 - `dossier-features.md` — feature specifiche post-15 feb (Routines, /loop, Monitor, /ultraplan, /ultrareview, Excalidraw skill)
+- `dossier-changelog-completo.md` — changelog Feb 2025 → Mar 2026 (Fase 1 → Fase 6)
+- `dossier-ruben-hassid.md` — Ruben Hassid Substack ultimi 3 mesi + decifratura infografica "Master Claude for Free"
+- `dossier-target-user.md` — 8 personas con setup + workflow + casi d'uso flagship
 
 ---
 
@@ -119,13 +210,12 @@ Modello default: `claude-sonnet-4-6`. Premium: `claude-opus-4-7` con effort `xhi
 - Weekly what's new: https://code.claude.com/docs/en/whats-new
 - GitHub: https://github.com/anthropics/claude-code
 - Plugin marketplace ufficiale: https://claude.com/plugins
+- Help Center release notes: https://support.claude.com/en/articles/12138966-release-notes
 
 ---
 
 ## Licenza & contributi
 
-Questa repo e' una **guida didattica** mantenuta da [Boosha AI](https://boosha.ai) per i corsi di formazione AI. I contenuti citano ogni fonte (docs ufficiali, post X) per consentire deep-dive autonomo.
+Questa repo e' una **guida didattica** mantenuta da [Boosha AI](https://boosha.it). I contenuti citano ogni fonte (docs ufficiali, post X) per consentire deep-dive autonomo.
 
 Per segnalazioni / aggiornamenti / aggiunte, apri una issue o PR.
-
-> Originale Notion (snapshot feb 2026): https://giadaf.notion.site/Claude-Code-23da6050b48780b596cdf17df630d43a

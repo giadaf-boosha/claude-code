@@ -14,6 +14,10 @@ PM Claude Code (Anthropic), focus su feature engineering. Profilo: https://x.com
 
 ### Marzo 2026
 
+#### Remote Control rollout Pro
+> "Rolling out Claude Code Remote Control to Pro users - because they deserve to use the bathroom too. (Team and Enterprise coming soon). Rolling out to 10% and ramping. 1. Update to claude v2.1.58+. 2. Try log-out and log-in to get fresh flag values. 3. /remote-control"
+🔗 https://x.com/i/status/2027460961884639663
+
 #### Remote Control in VSCode
 > "A few 🔥 Claude Code VSCode drops — 1. Remote Control in VSCode …"
 🔗 https://x.com/noahzweben/status/2034452278971932695
