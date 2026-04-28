@@ -8,13 +8,20 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today
+## What's new today (2026-04-28)
 
-> _Sezione popolata automaticamente dalla [routine daily](./automations/daily-whats-new/) ogni mattina alle 07:00 Europe/Rome. Storico: [archive](./docs/whats-new-archive.md)._
+> _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> **Status**: routine configurata, primo run al prossimo trigger. Fino al primo run questa sezione e' un placeholder.
-
----
+- **CLI v2.1.121** (28 apr 2026, 00:31 UTC): MCP `alwaysLoad`, `plugin prune`, PostToolUse hook output-replace per tutti i tool, fix memory leak immagini/`/usage`, fix scrollback duplication tmux/GNOME/Windows Terminal, Vertex AI mTLS. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Vedi [docs/19 § Fase 7](./docs/19-changelog.md).
+- **MCP `alwaysLoad`**: impostare `"alwaysLoad": true` su un server MCP forza il caricamento di tutti i suoi tool saltando il tool-search deferral — utile per server di uso continuo. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/10 § Configurazione](./docs/10-mcp.md).
+- **`claude plugin prune`**: nuovo comando che rimuove le dipendenze auto-installate da plugin rimossi; `plugin uninstall --prune` le elimina in cascata. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Vedi [docs/11 § Gestione plugin](./docs/11-plugins-marketplace.md).
+- **PostToolUse hooks output-replace**: `hookSpecificOutput.updatedToolOutput` ora funziona per tutti i tool (prima solo MCP), permettendo agli hook di sostituire qualsiasi output prima che Claude lo elabori. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/07 § PostToolUse](./docs/07-hooks.md).
+- **`/skills` search box**: aggiunta casella type-to-filter in `/skills` per trovare skill in liste lunghe senza scorrere. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Vedi [docs/09 § Bundled skills](./docs/09-skills.md).
+- **MCP auto-retry**: server MCP con errori transitori al boot ora ritenta automaticamente fino a 3 volte prima di fallire. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/10 § Configurazione](./docs/10-mcp.md).
+- **Fix memory leak**: risolto unbounded memory growth durante processing di immagini e leak ~2GB in `/usage` su sessioni lunghe. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases).
+- **Fix scrollback duplication**: eliminato il bug che duplicava output in tmux, GNOME Terminal e Windows Terminal in modalita' non-fullscreen. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases).
+- **Fix Bash tool**: risolto il caso in cui il Bash tool diventava inutilizzabile se la directory di avvio veniva eliminata a sessione gia' avviata. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases).
+- **Vertex AI mTLS + OpenTelemetry**: supporto X.509 Workload Identity Federation (mTLS ADC) per Vertex AI; LLM span OTel arricchiti con `stop_reason` e `gen_ai.response.finish_reasons`. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases).
 
 ---
 

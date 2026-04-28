@@ -17,6 +17,8 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
 
+> **2026-04-28 (auto-update)**: v2.1.121 aggiunge una search box type-to-filter in `/skills` — basta iniziare a digitare il nome per filtrare la lista senza scorrere, utile quando i plugin aggiungono decine di skill. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 9.1 Bundled skills (sempre disponibili)

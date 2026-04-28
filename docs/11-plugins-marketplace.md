@@ -17,6 +17,8 @@ I plugin sono pacchetti che bundlano Skills, Subagents, Hooks, MCP server, LSP s
 
 > Fonti: [`/en/plugins`](https://code.claude.com/docs/en/plugins), [`/en/discover-plugins`](https://code.claude.com/docs/en/discover-plugins), [`/en/plugin-marketplaces`](https://code.claude.com/docs/en/plugin-marketplaces).
 
+> **2026-04-28 (auto-update)**: v2.1.121 aggiunge `claude plugin prune` — rimuove le dipendenze auto-installate da plugin non piu' presenti nell'installazione. Disponibile anche come flag: `claude plugin uninstall <nome> --prune` elimina il plugin e le sue dipendenze in cascata. Utile per chi ruota plugin frequentemente. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 11.1 Struttura di un plugin

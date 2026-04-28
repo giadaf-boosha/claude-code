@@ -17,6 +17,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 > Fonte: [`/en/hooks`](https://code.claude.com/docs/en/hooks).
 
+> **2026-04-28 (auto-update)**: v2.1.121 espande `PostToolUse` hooks — `hookSpecificOutput.updatedToolOutput` ora funziona per tutti i tool (in precedenza limitato ai tool MCP). Un hook `PostToolUse` puo' quindi intercettare e sostituire l'output di qualsiasi tool (Bash, Read, Edit, MCP, ecc.) prima che Claude lo elabori. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 7.1 Eventi supportati (28+)

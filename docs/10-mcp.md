@@ -17,6 +17,8 @@ MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app).
 
 > Fonte: [`/en/mcp`](https://code.claude.com/docs/en/mcp).
 
+> **2026-04-28 (auto-update)**: v2.1.121 introduce due novita' per la configurazione MCP: (1) `alwaysLoad: true` su un server forza il caricamento immediato di tutti i suoi tool saltando il tool-search deferral — utile per server di uso continuo; (2) auto-retry fino a 3 volte su errori transitori al boot del server, eliminando restart manuali per flakiness temporanea. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 10.1 Configurazione base

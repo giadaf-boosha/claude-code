@@ -348,6 +348,23 @@ Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.
 - `--from-pr` accepts GitLab MR/Bitbucket PR/GHE (v2.1.119)
 - PostToolUse hooks include `duration_ms` (v2.1.119)
 
+### Week 17-18 (April 24–28, 2026, v2.1.120–v2.1.121)
+
+> **2026-04-28 (auto-update)**: v2.1.121 introduce MCP `alwaysLoad` (skip tool-search deferral), `claude plugin prune` per dipendenze orfane, PostToolUse hook output-replace per tutti i tool, `/skills` type-to-filter search box, MCP auto-retry (3x), fix memory leak immagini e `/usage`, fix scrollback duplication tmux/GNOME Terminal/Windows Terminal, Vertex AI mTLS ADC, OTel LLM span enrichment. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Vedi anche README "What's new today" del giorno.
+
+- **MCP `alwaysLoad`** (v2.1.121): `"alwaysLoad": true` in config server MCP — tutti i tool di quel server saltano il tool-search deferral
+- **`claude plugin prune`** (v2.1.121): rimuove dipendenze auto-installate da plugin rimossi; `--prune` flag su `plugin uninstall` per cascata
+- **PostToolUse hook output-replace per tutti i tool** (v2.1.121): `hookSpecificOutput.updatedToolOutput` precedentemente solo MCP, ora universale
+- **`/skills` type-to-filter** (v2.1.121): search box inline in `/skills`
+- **MCP auto-retry 3x** (v2.1.121): errori transitori al boot → retry automatico
+- **Fix memory leak** (v2.1.121): unbounded growth immagini + ~2GB leak `/usage` su sessioni lunghe
+- **Fix scrollback duplication** (v2.1.121): tmux, GNOME Terminal, Windows Terminal in non-fullscreen
+- **Fix Bash tool startup dir** (v2.1.121): tool non si blocca piu' se la working dir viene eliminata
+- **Vertex AI mTLS ADC** (v2.1.121): X.509 Workload Identity Federation
+- **OTel LLM span** (v2.1.121): `stop_reason`, `gen_ai.response.finish_reasons`, `user_system_prompt`
+- **`claude ultrareview [target]`** (v2.1.120, 24 apr): subcommand non-interattivo per CI/CD — [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2047882231343878309)
+- **Windows: PowerShell default** (v2.1.120): Git Bash non piu' richiesto, PowerShell diventa shell di default
+
 ---
 
 ## 19.8 Post-mortem qualita' (apr 2026)
@@ -439,6 +456,7 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 23 apr 2026 | v2.1.118 | Vim visual mode, custom themes, `mcp_tool` hooks |
 | 23 apr 2026 | v2.1.119 | `/config` persist, `prUrlTemplate`, `CLAUDE_CODE_HIDE_CWD` |
 | 24 apr 2026 | v2.1.120 | `claude ultrareview` non-interactive subcommand — [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2047882231343878309) |
+| 28 apr 2026 | v2.1.121 | MCP `alwaysLoad`, `plugin prune`, PostToolUse hooks per tutti i tool, `/skills` search box, fix memory leak immagini/`/usage`, fix scrollback duplication tmux/GNOME/WinTerm, Vertex AI mTLS, OTel LLM span |
 
 ---
 
