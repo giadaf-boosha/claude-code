@@ -228,6 +228,45 @@ Vedi [10 MCP § 10.8 Channels](./10-mcp.md#10.8-channels-research-preview).
 
 ---
 
+## 17.12 Ecosystem: tool esterni e GUI di terze parti
+
+Oltre alle surface ufficiali Anthropic (CLI, Desktop, VS Code, JetBrains, Web, Slack, Mobile), esistono **tool esterni** che integrano Claude Code in modi specifici. Non sono parte del core ma vale la pena conoscerli.
+
+> ⚠️ Disclaimer: questi sono prodotti di terze parti, non maintained da Anthropic. Funzionalita' e roadmap possono cambiare.
+
+### 17.12.1 Conductor — GUI per Claude Code paralleli
+
+[Conductor](https://conductor.build) e' un'app desktop macOS che permette di eseguire **piu' istanze di Claude Code in parallelo**, ciascuna in un workspace isolato (git worktree).
+
+**Caratteristiche**:
+- **Workspace isolati**: ogni Claude Code ottiene un ambiente separato basato su git worktrees
+- **Gestione visuale**: vedi a colpo d'occhio chi sta lavorando, chi e' bloccato, cosa e' cambiato
+- **Integrazione GitHub**: lavora su issue con un click, aggiunta repo privati semplificata
+- **Sessioni persistenti**: terminali persistono quando navighi tra workspace
+- **Coda messaggi**: invia piu' messaggi che vengono processati in ordine
+
+**Come funziona**:
+1. Aggiungi il tuo repo: Conductor lo clona localmente sul Mac
+2. Distribuisci agenti: ogni Claude Code che avvii ottiene un workspace isolato
+3. Conduci: vedi chi lavora, cosa richiede attenzione, rivedi il codice
+
+**Auth**: Conductor riusa la tua sessione esistente Claude Code (API key, Pro o Max).
+
+**Quando usarlo**: se gestisci 5+ agenti paralleli quotidianamente e l'overhead di tmux/terminale ti costa tempo. La CLI nativa con `claude --worktree` (vedi [02 § flag worktree](./02-cli-installazione.md)) e' sufficiente per la maggior parte degli usi.
+
+### 17.12.2 Altri tool community
+
+| Tool | Cosa fa | Status |
+|---|---|---|
+| `ralph-wiggum` plugin | Loop autonomo overnight (originally dreamt up by [@GeoffreyHuntley](https://github.com/GeoffreyHuntley)) | Citato da [@bcherny](https://x.com/bcherny/status/2007179858435281082) come pattern community |
+| `claude-code-skills` (daymade) | Marketplace community skill | Vedi [11 § marketplace community](./11-plugins-marketplace.md) |
+| `claude-skills` (alirezarezvani) | 232+ skill community | Vedi [11 § marketplace community](./11-plugins-marketplace.md) |
+| `ccc-skills` (ooiyeefei) | Skill custom Excalidraw architecture diagrams | Vedi [09 § esempio Excalidraw](./09-skills.md) |
+
+> Per skill ufficiali vedi [11 § marketplace ufficiale](./11-plugins-marketplace.md). Per il pattern community piu' generale, vedi [22 § community patterns](./22-compound-engineering.md).
+
+---
+
 ## 17.11 Fonti aggregate
 
 - VS Code: [`/en/vs-code`](https://code.claude.com/docs/en/vs-code)

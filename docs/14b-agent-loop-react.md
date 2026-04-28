@@ -189,6 +189,40 @@ flowchart TD
 
 ---
 
+## 14b.10 Pattern community: Ralph Wiggum loop
+
+> Pattern community emergente, originally dreamt up da Geoffrey Huntley e adottato dal team Claude Code come riferimento per loop autonomi overnight.
+
+**Cos'e' Ralph Wiggum**: skill community che incarna il pattern "autonomous coding overnight" — un loop ReAct senza supervisione umana che lavora su task ben definiti mentre tu dormi.
+
+**Perche' funziona**:
+- Idempotenza forte (re-run su stato gia' raggiunto = no-op)
+- Stop hook deterministico per check completion (`agent Stop` hook)
+- Verification feedback loop esplicito ([Boris tip 13](https://x.com/bcherny/status/2007179861115511237))
+- Boundary chiare nel prompt (no merge, no force push, no irreversible action)
+
+**Pattern di base**:
+```bash
+# Pseudocodice ralph-wiggum loop
+while not done:
+    1. Read goal + current state
+    2. Reason: prossimo step concreto
+    3. Act: implementa
+    4. Observe: verifica via test/lint/build
+    5. If verified: done? continue? blocked? -> log
+    6. If blocked > N volte: pausa, alert utente
+```
+
+**Riferimenti**:
+- Citazione Boris: [@bcherny](https://x.com/bcherny/status/2007179858435281082) — "use the ralph-wiggum plugin (originally dreamt up by @GeoffreyHuntley)"
+- Repo originale: https://github.com/GeoffreyHuntley (cercare `ralph-wiggum`)
+
+**Quando usarlo**: progetti con suite test affidabile e linter strict (Ralph "verifica via test"); migrazioni step-by-step con criterio di stop chiaro; refactor di N file con pattern ripetitivo.
+
+**Quando NON usarlo**: feature design, task creativi, cambi su shared infra prod (blast radius alto + verification debole). Per quelli, [`/ultraplan`](./15-ultraplan-ultrareview.md) e' la scelta giusta.
+
+---
+
 ## 14b.9 Letture di approfondimento
 
 - Paper originale ReAct: https://arxiv.org/abs/2210.03629

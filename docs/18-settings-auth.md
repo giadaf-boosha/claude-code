@@ -168,6 +168,24 @@ Shell script che ritorna API key. Refresh ogni 5 min o HTTP 401. Custom TTL: `CL
 
 > Note: `CLAUDE_CODE_OAUTH_TOKEN` NON letto in bare mode. Web sessions usano sempre subscription credentials.
 
+### Login con subscription vs API key — quando scegliere quale
+
+La scelta tra **subscription OAuth** (Claude Pro/Max/Team/Enterprise) e **API key Anthropic Console** ha implicazioni di costo e capabilities concrete:
+
+- **Subscription OAuth** (`/login` con account claude.ai)
+  - Rate limit piu' alti rispetto al tier free
+  - Accesso ai modelli piu' recenti (Sonnet 4.7, Opus 4.7) senza per-request cost se hai Max
+  - **Nessun costo per richiesta** sul piano Max — adatto a sessioni lunghe e a `--dangerously-skip-permissions` in worktree isolati
+  - Tracking unificato in `/usage` (sessione, settimana, breakdown per modello)
+  - Verifica login: `/cost` deve mostrare info subscription, non saldo API
+- **API key** (`ANTHROPIC_API_KEY`)
+  - Pay-per-token, nessun cap settimanale
+  - Necessaria per CI/CD, headless, GitHub Actions, container ephemeri
+  - Indispensabile per Bedrock/Vertex (vedi 18.6)
+  - Scelta default in scenari multi-tenant o team senza piano Max condiviso
+
+> **Regola pratica**: subscription per uso interattivo locale quotidiano, API key per automazione / pipeline / agent SDK in produzione.
+
 > Fonte: [`/en/authentication`](https://code.claude.com/docs/en/authentication).
 
 ---

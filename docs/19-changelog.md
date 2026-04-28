@@ -121,6 +121,29 @@ Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.
 - **Code Review beta** (nov 2025): team di agenti scansiona PR per bug — [@claudeai](https://x.com/claudeai/status/1998109172634902629)
 - **Desktop App** (14 nov 2025): app nativa macOS/Windows
 
+### Storico — Annuncio Claude Code 2.0 + Sonnet 4.5 (29 set 2025)
+
+> Anthropic annuncia Sonnet 4.5 come "the best coding model in the world", con guadagni sostanziali su reasoning e math. Drop-in replacement per Sonnet 4 allo stesso prezzo (cit. Alex Albert).
+
+**Benchmark riportati al lancio** (selezione):
+
+| Benchmark | Sonnet 4.5 | Opus 4.1 | Sonnet 4 | GPT-5 |
+|---|---|---|---|---|
+| Agentic coding (self-hosted) | 82.0% | 79.4% | 77.2% | 72.8% |
+| Agentic reasoning (coding) | 80.2% | 46.5% | 34.4% | 43.8% |
+| Computer use (OSWorld) | 96.0% | 71.5% | 49.6% | 96.7% |
+| High school math (competition) | 100% | 78.0% | 70.5% | 99.6% |
+| Financial analysis (Finance Agent) | 55.3% | 50.9% | 44.6% | 40.9% |
+
+**Novita' lanciate insieme a CC 2.0**:
+- **`/rewind`**: rollback instantaneo dei cambi codice — citazione Ian Nuttall ("Model messes up? No biggie, just rewind it back")
+- **Checkpoints**: snapshot automatico pre-edit
+- **VS Code extension nativa**: sidebar con inline diff
+- **Context editing** + 1M context API (Cognition/Devin team consigliava di capparlo a 200K per evitare "anxiety-driven shortcuts")
+- **Parallel agents + subagent maturation**
+
+> Nota: Sonnet 4.5 e Opus 4.1 sono superati da Sonnet 4.6 / Opus 4.6 / Opus 4.7 (apr 2026). I benchmark sopra sono storici al 29 set 2025. Per i modelli correnti vedi [05 — Fast mode + 1M context](./05-fast-mode-1m-context.md).
+
 ### Link
 - Sonnet 4.5: https://www.anthropic.com/news/claude-sonnet-4-5
 - "Enabling Claude Code to work more autonomously": https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously

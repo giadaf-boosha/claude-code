@@ -4,6 +4,9 @@
 
 Per il README master e l'indice tradizionale → [README.md](./README.md).
 
+> 🚀 **Vuoi partire subito? Vai a [docs/QUICKSTART.md](./docs/QUICKSTART.md)** — primi 60 minuti dall'install al primo `/loop` funzionante.
+> 🎯 **Hai gia' una persona in mente? Vai a [examples/personas/](./examples/personas/)** — 8 template `.claude/` pronti.
+
 ---
 
 ## 🚀 Quick start: 3 percorsi per profilo

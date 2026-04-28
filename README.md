@@ -1,11 +1,11 @@
 # Claude Code — Guida (28 aprile 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **28 aprile 2026, 12:30 CEST**.
+> Ultimo aggiornamento: **28 aprile 2026, 16:00 CEST**.
 > Versione CLI di riferimento: **v2.1.119** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
 
-> 🆕 **Novita' aprile 2026**: 8 nuovi **capitoli concettuali** (harness, context engineering, ReAct, Authority model, memory architecture, planning strategy, compound engineering, glossario) + sistema di navigazione dedicato.
-> 👉 **Nuovo a Claude Code?** Inizia da [README-NAVIGATION.md](./README-NAVIGATION.md) per il quick start path adatto al tuo profilo (90 min beginner, 3h intermedio, 6h harness engineer).
+> 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
+> 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 
 ---
 
@@ -261,7 +261,11 @@ E come reference:
 
 ## Archive
 
-[`archive/docs-pre-feb2026/`](./archive/docs-pre-feb2026/) contiene la struttura precedente della repo (snapshot 15 feb 2026), preservata per riferimento storico.
+[`archive/docs-pre-feb2026/`](./archive/docs-pre-feb2026/) contiene la struttura precedente della repo (snapshot 15 feb 2026), preservata per riferimento storico. Vedi il [README archive](./archive/docs-pre-feb2026/README.md) per il mapping completo dei contenuti integrati.
+
+## Examples
+
+[`examples/personas/`](./examples/personas/) contiene 8 cartelle template `.claude/` (CLAUDE.md + settings.json + skill + hook esempio) configurate per le 8 persona di [docs/21](./docs/21-guide-target-user.md). Copia la cartella della tua persona nel tuo progetto come punto di partenza.
 
 ---
 

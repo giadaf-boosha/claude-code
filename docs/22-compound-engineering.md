@@ -234,7 +234,177 @@ Compound **e' over-engineering** quando:
 
 ---
 
-## 22.7 Letture di approfondimento
+## 22.7 Philosophy: vibe-to-agentic transition
+
+Il compounding engineering nasce da un cambio di paradigma documentato dal team Every (Kieran Klaassen, Dan Shipper) nel corso del 2025: il passaggio dal **vibe coding** all'**agentic coding**.
+
+### Vibe coding (era Cursor / Windsurf)
+
+Caratteristiche del primo paradigma AI-assisted, dominante 2023-meta' 2025:
+- Idea trasformata in codice attraverso un feedback loop **stretto** (umano-AI a ogni keystroke)
+- Collaborazione real-time tipo "autocomplete potenziato": Cmd+K, accept/reject, shortcut continui
+- Strumenti di riferimento: Cursor, Windsurf, GitHub Copilot
+- Forte sull'**ideazione rapida**, debole sul **delivery sostenibile**: tendenza al "cancello tutto e ricomincio"
+
+### Agentic coding (era Claude Code)
+
+> "Coding with AI is more than just the coding part — utilizing it for research, for workflows, it should be used for everything." — Kieran Klaassen ([Every podcast, 2025](https://every.to/))
+
+Caratteristiche:
+- Si delega **una specifica intera** (non singola riga) a un agente capace
+- Feedback loop **largo** ma piu' potente: l'umano fa review a checkpoint strategici, non a ogni token
+- Possibilita' di orchestrare **piu' agenti in parallelo** (vedi 22.4 worktree, [docs/12 agent teams](./12-agent-teams.md))
+- Strumento di riferimento: Claude Code (CLI minimalista, terminale, niente UI distrazionale)
+
+> "We're now at a point where the agents are good enough that they can actually do everything, so we need to rethink again. It's a realization: oh, actually we can just give a task and it will do it." — Kieran Klaassen
+
+### Il mindset shift in pratica
+
+Stima del team Kora sulla distribuzione del lavoro reale di un engineer:
+
+> "Most of the work is maybe coding, but maybe it's actually 20%. Maybe 80% of the work is figuring out what to do next."
+
+Implicazioni operative:
+- L'AI va usata per **ricerca** (codebase + web), **planning** (issue, ADR), **review** (security, perf), **migrazione**, **doc** — non solo per scrivere funzioni
+- Ogni interazione ben strutturata diventa **template riusabile** (slash command, skill, sub-agent) → effetto compound
+- L'investimento in setup (CLAUDE.md, skill, hook, comandi) ripaga in modo non lineare nel tempo
+
+### Perche' Claude Code abilita la transizione
+
+> "Claude just takes it one step further by simplifying it by a factor of 10. Cursor: Cmd+K, shortcuts, accept, reject. Claude Code: nothing except a text box — and it works because the underlying model is so much more capable now." — Natasha Mascarenhas (Every)
+
+L'interfaccia minimale **non e' un limite**: e' un'affermazione. Quando il modello sottostante e' abbastanza capace, l'attrito UX si dissolve e resta solo l'intent dell'utente.
+
+> Vedi anche: [00b — Context engineering](./00b-context-engineering.md), 22.1 (definizione operativa) e 22.8 per il case study Kora.
+
+---
+
+## 22.8 Case study: il team Kora di Every (Kieran Klaassen)
+
+[Kora](https://www.korahq.com/) e' un assistente email AI sviluppato da Every (la media company di Dan Shipper). Il team di sviluppo conta **2 persone** — Kieran Klaassen e Nityesh Agarwal — ma produce, per loro stessa ammissione, **output paragonabile a un team di 15**.
+
+> "Feels like there's 15 coding." — Kieran Klaassen ([Every podcast, 2025](https://every.to/))
+
+Il caso e' rilevante perche' documenta un'applicazione **end-to-end** dei principi di compounding engineering, con metriche, workflow e fallimenti reali. Modelli usati: Claude Sonnet 4.5 → 4.7 e Opus 4.x via Claude Code.
+
+### 22.8.1 Architettura del prodotto
+
+Kora esegue:
+- Connessione a Gmail via OAuth
+- Archiviazione automatica di email non importanti
+- Brief riassuntivo due volte al giorno
+- Categorizzazione e prioritizzazione personalizzate per profilo di rischio utente
+
+Stack: Rails 7.1 + Hotwire + Postgres + pgvector, deploy Render. Multi-LLM: diversi modelli per diversi step (riassunto, classificazione, embedding).
+
+### 22.8.2 Workflow "Friday feedback bug" — root-cause + migration in minuti
+
+Storia documentata da Kieran in podcast Every, 2025. Form di feedback in produzione che da 14 giorni non riceveva submit, ma nessun errore in Sentry.
+
+Prompt iniziale (voice-to-text via Monologue):
+
+```text
+> 14 days ago something went wrong with feedback form, can you see what
+  went wrong? Look at the git history.
+```
+
+Esecuzione autonoma di Claude Code:
+1. `git log --since="14 days ago"` sui controller rilevanti
+2. Identificazione del commit "incriminato": refactor che ha rimosso una chiamata `addUser`
+3. Diagnosi: "We removed a piece of code that adds people"
+4. Fix proposto + apertura PR via `gh pr create`
+5. **Bonus non richiesto**: script di migrazione per recuperare i ~30 utenti "persi" nei 14 giorni — l'agente ha capito autonomamente che servisse
+
+> "It didn't cost me any energy. It was as easy as me writing it down in GitHub to look at later — but I don't need to. I just ask it and it does it immediately." — Kieran Klaassen
+
+Tempo totale: ~3 minuti vs ~45 minuti stimati per investigazione manuale.
+
+### 22.8.3 Custom command template "/cc" per feature requests
+
+Il team ha codificato il proprio workflow in un singolo slash command (`.claude/commands/cc.md`). Esempio reale di prompt vocale:
+
+```text
+> I want infinite scroll in Kora where if I am at the end of a brief
+  it should load the next brief and it should go until every brief
+  that's unread is read.
+```
+
+Steps automatici eseguiti dal comando:
+1. **Inserimento nel feature template** (problem statement + solution vision)
+2. **Research phase**: grounding nel codebase (Rails routes, controller, view)
+3. **Best-practices research**: web search per pattern open-source di infinite scroll in Hotwire
+4. **Plan presentation**: piano dettagliato con implementation steps + timeline
+5. **Human-in-the-loop**: Kieran approva/corregge il piano (checkpoint critico)
+6. **GitHub integration**: `gh issue create` con label, milestone, link a featurebase
+7. (Opzionale) Implementazione in worktree separato
+
+> "Most of the time it's right. Then I say 'yep sounds good.' And it creates the GitHub issue." — Kieran Klaassen
+
+Template skeleton (semplificato):
+
+```markdown
+# /cc — Feature creation command
+
+Sei un AI assistant che crea GitHub issue ben strutturate.
+
+<feature_description>$ARGUMENTS</feature_description>
+
+Steps (crea to-do, pensa ultra hard):
+1. Research del repo: struttura, issue esistenti, CONTRIBUTING.md
+2. Research best practices web per il pattern richiesto
+3. Presenta un <plan> con architettura, file impattati, test strategy
+4. Attendi approvazione umana
+5. Genera <github_issue> con titolo, descrizione, criteri accettazione
+6. Esegui `gh issue create` con label e milestone corretti
+```
+
+### 22.8.4 Multi-agent specialization
+
+Kieran descrive il suo "tool portfolio" come un team di specialisti:
+
+> "I'm thinking about it more like you're interviewing for a role and you find a developer to solve a certain problem. It's similar with coding agents."
+
+Suddivisione 2025-2026 (modernizzata):
+
+| Tool | Specializzazione |
+|---|---|
+| **Claude Code** (Sonnet/Opus 4.7) | Research, refactor, migrazioni, lavoro pesante in terminale |
+| **Friday** | UI work (componenti, design system) |
+| **Charlie** | Code review automatica su PR GitHub |
+| **Cursor** | Editing puntuale "vibe-style" su file singoli |
+
+L'idea-chiave: **non esiste un tool che fa tutto bene**, e cercarlo e' un anti-pattern. Compound = sapere quale agente per quale task.
+
+### 22.8.5 Quality control: "fix problems at lowest value stage"
+
+Natasha Mascarenhas cita "High Output Management" di Andy Grove (Intel CEO):
+
+> "When we are using the workflow that Kieran just showed to create a very detailed GitHub issue, then it's very tempting to start another Claude Code to fix it immediately — but that's actually going to be a problem. There are chances that the plan wasn't the direction you wanted, and you want to catch that **before** you ask Claude to implement."
+
+Checkpoint umani strategici:
+1. **Plan review** prima dell'implementazione (10 sec di lettura, ore di lavoro evitate)
+2. **Architecture validation** per scelte di direzione
+3. **Taste & intuition**: l'umano nota cose che l'agente non flagga ("perche' qui un loop e non un job?")
+
+> "There is still like a human touch of intuition. It's still a skill." — Natasha Mascarenhas
+
+### 22.8.6 Risultati misurabili
+
+- Output 2 persone ≈ 15 sviluppatori tradizionali (stima qualitativa team)
+- 25 minuti di esecuzione autonoma continuativa di Claude Code (record interno tra Kieran e Natasha)
+- Feature complete (es. infinite scroll) dall'idea al prod in **~1 ora** vs giorni
+- iOS app vibe-coded in un weekend con Sonnet 4.5 in Claude Code ([Kieran su X](https://x.com/kieranklaassen))
+
+### Fonti
+
+- Every podcast / blog: [every.to](https://every.to/)
+- Kieran Klaassen su X: [@kieranklaassen](https://x.com/kieranklaassen)
+- Dan Shipper su X: [@danshipper](https://x.com/danshipper)
+- Annuncio Sonnet 4.5 (drop-in usato da Kora): [@AnthropicAI](https://x.com/AnthropicAI)
+
+---
+
+## 22.9 Letture di approfondimento
 
 - [00 — Harness overview](./00-harness-overview.md) — il livello sotto
 - [00b — Context engineering](./00b-context-engineering.md) — il livello tra harness e compound
