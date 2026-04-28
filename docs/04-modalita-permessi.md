@@ -1,6 +1,19 @@
 # 04 — Modalita' permessi, Sandbox, Checkpoints
 
+> 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **04 Permessi**
+> 🔧 Operational · 🟡 Intermediate
+
 Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoint per il rollback. Questo documento li copre tutti.
+
+## Cosa e' concettualmente
+
+> Le modalita' permessi sono il **Layer 1** dell'Authority dell'harness: dichiari cosa l'agent puo' fare a runtime. La sandbox e' il **Layer 2** (OS-level). I checkpoint sono il **layer State**: snapshot per recovery deterministico.
+
+**Modello mentale**: permission mode = profilo `sudoers`; sandbox = container Docker; checkpoint = snapshot di filesystem.
+
+**Componente harness IMPACT**: Authority (permission + sandbox) + State (checkpoints).
+
+**Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per il framework completo.
 
 ---
 

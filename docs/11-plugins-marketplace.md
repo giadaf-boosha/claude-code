@@ -1,6 +1,19 @@
 # 11 — Plugins & Marketplace
 
+> 📍 [README](../README.md) → [Estensibilita'](../README.md#estensibilita) → **11 Plugins & Marketplace**
+> 🔧 Operational · 🟡 Intermediate
+
 I plugin sono pacchetti che bundlano Skills, Subagents, Hooks, MCP server, LSP server, monitor di background e setting. Installabili da marketplace ufficiali, community o custom.
+
+## Cosa e' concettualmente
+
+> Un plugin e' un **bundle di harness components**: skill + agent + hook + MCP server + LSP + monitor + settings, distribuito come unita'. E' il packaging format dell'ecosistema. Quando installi un plugin, stai abilitando un set coordinato di capabilities (tool + memoria + guardrail) tutti insieme.
+
+**Modello mentale**: come un'app del marketplace iOS — bundla codice, asset, permessi, integrazioni in un'unita' installabile.
+
+**Componente harness IMPACT**: trasversale (un plugin puo' toccare tutti i pilastri).
+
+**Per il deep-dive**: [09 — Skills](./09-skills.md), [10 — MCP](./10-mcp.md), [07 — Hooks](./07-hooks.md) per i singoli component types.
 
 > Fonti: [`/en/plugins`](https://code.claude.com/docs/en/plugins), [`/en/discover-plugins`](https://code.claude.com/docs/en/discover-plugins), [`/en/plugin-marketplaces`](https://code.claude.com/docs/en/plugin-marketplaces).
 

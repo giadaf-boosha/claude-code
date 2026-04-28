@@ -1,6 +1,19 @@
 # 12 — Agent Teams (sperimentale, da v2.1.32)
 
+> 📍 [README](../README.md) → [Estensibilita'](../README.md#estensibilita) → **12 Agent teams**
+> 🔧 Operational · 🔴 Advanced
+
 Coordina piu' istanze di Claude Code che lavorano insieme con shared task list e mailbox per messaging diretto.
+
+## Cosa e' concettualmente
+
+> Gli Agent Teams sono il livello superiore dei subagent: **agent persistenti, paralleli, comunicanti**. Ognuno e' una full Claude Code instance (full context, full tool, full settings) che pero' partecipa a una task list condivisa e puo' messaggiare gli altri via mailbox. E' l'orchestrazione multi-thread del harness.
+
+**Modello mentale**: come microservizi — ogni servizio (teammate) ha boundary chiaro, comunica via API ben definita (mailbox + task list), il sistema emerge dalla coordinazione.
+
+**Componente harness IMPACT**: Orchestration multi-thread (vs subagent single-thread).
+
+**Per il deep-dive**: [22 — Compound engineering § Scaling](./22-compound-engineering.md#categoria-3-—-scaling-parallelizzazione--automazione).
 
 > "Coordinate multiple Claude Code instances working together as a team" — [`/en/agent-teams`](https://code.claude.com/docs/en/agent-teams)
 

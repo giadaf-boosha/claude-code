@@ -1,6 +1,19 @@
 # 09 — Skills
 
+> 📍 [README](../README.md) → [Estensibilita'](../README.md#estensibilita) → **09 Skills**
+> 🔧 Operational · 🟡 Intermediate
+
 Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Agent Skills open standard](https://agentskills.io). Custom commands e skills sono **fusi**: un file in `.claude/commands/deploy.md` e uno in `.claude/skills/deploy/SKILL.md` creano entrambi `/deploy`.
+
+## Cosa e' concettualmente
+
+> Le skill sono **memoria eseguibile**. Un file markdown contiene contestualmente: regole (Intent), tool autorizzati (Authority), workflow (Control flow), parametri (Argument). Quando l'utente dice `/skill-name`, il body markdown diventa singolo messaggio nella conversation. Sono il modo nativo per estendere l'harness senza scrivere codice.
+
+**Modello mentale**: come le funzioni in una libreria Python: ne hai 1000 disponibili, ne carichi solo quelle che usi. Le skill markdown sono "funzioni" del tuo agent.
+
+**Componente harness IMPACT**: trasversale (Tool + Memory + Intent + Control flow in un file solo).
+
+**Per il deep-dive**: [00b — Context engineering § tecniche](./00b-context-engineering.md) per come le skill ottimizzano il context.
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
 

@@ -1,8 +1,11 @@
-# Claude Code — Guida (27 aprile 2026)
+# Claude Code — Guida (28 aprile 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **27 aprile 2026, 11:00 CEST**.
+> Ultimo aggiornamento: **28 aprile 2026, 12:30 CEST**.
 > Versione CLI di riferimento: **v2.1.119** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
+
+> 🆕 **Novita' aprile 2026**: 8 nuovi **capitoli concettuali** (harness, context engineering, ReAct, Authority model, memory architecture, planning strategy, compound engineering, glossario) + sistema di navigazione dedicato.
+> 👉 **Nuovo a Claude Code?** Inizia da [README-NAVIGATION.md](./README-NAVIGATION.md) per il quick start path adatto al tuo profilo (90 min beginner, 3h intermedio, 6h harness engineer).
 
 ---
 
@@ -20,6 +23,54 @@ Strumento di sviluppo AI di Anthropic che opera come agente autonomo: legge, scr
 | Slack | `/install-slack-app` |
 | Mobile | iOS app + Remote Control (Android via web) |
 | GitHub Actions / GitLab CI/CD | `/install-github-app` |
+
+---
+
+## Concetti foundation {#concetti-foundation}
+
+> Prima di tuffarti nelle feature, capisci cosa stai usando. **Claude Code e' un agent harness completo** — un'incarnazione del paradigma "Agent = LLM + Harness" formalizzato da Mitchell Hashimoto a febbraio 2026.
+
+### Mental model: il framework IMPACT
+
+```mermaid
+flowchart TD
+    USR[Utente / Task]
+    LLM{LLM Claude}
+
+    subgraph HARNESS["Harness IMPACT"]
+        I[Intent<br/>CLAUDE.md, prompt iniziale]
+        M[Memory<br/>auto-memory, plans, checkpoints]
+        P[Planning<br/>plan mode, /ultraplan]
+        A[Authority<br/>permissions, sandbox, hooks]
+        C[Control flow<br/>/loop, Monitor, hooks lifecycle]
+    end
+
+    USR -->|Task| I
+    I --> P
+    P --> LLM
+    LLM -->|Tool call| A
+    A -->|Allow / Deny / Ask| C
+    C --> M
+    M -.->|Restore on next turn| I
+    LLM -->|Output| USR
+```
+
+### 7 capitoli concettuali (📘)
+
+| Capitolo | Cosa copre |
+|---|---|
+| [📘 00 — Harness overview](./docs/00-harness-overview.md) | Cos'e' un agent harness, IMPACT framework, 8 componenti, case study |
+| [📘 00b — Context engineering](./docs/00b-context-engineering.md) | Da prompt a context: tipi, tecniche, anti-pattern |
+| [📘 04b — Authority model](./docs/04b-authority-model.md) | 4 layer di Authority: permission rules, sandbox, hooks, managed |
+| [📘 06b — Memory architecture](./docs/06b-memory-architecture.md) | 5 layer di memory: CLAUDE.md, rules, auto-memory, checkpoints, plans |
+| [📘 14b — Agent loop & ReAct](./docs/14b-agent-loop-react.md) | Pattern ReAct (Yao 2022), come Claude Code implementa il loop |
+| [📘 15b — Planning strategy](./docs/15b-planning-strategy.md) | Spettro plan→ultraplan→batch, quando salire/scendere |
+| [📘 22 — Compound engineering](./docs/22-compound-engineering.md) | Pattern moltiplicativi: optimization + resilience + scaling |
+
+E come reference:
+- [📚 23 — Glossario](./docs/23-glossario.md) — 35+ termini con cross-link
+
+> 💡 Ogni capitolo operational (`docs/01-21`) ha ora una sezione **"Cosa e' concettualmente"** che inquadra la feature nel framework IMPACT con link al deep-dive concettuale.
 
 ---
 
@@ -123,40 +174,52 @@ Strumento di sviluppo AI di Anthropic che opera come agente autonomo: legge, scr
 
 ---
 
-## Indice della guida (completo)
+## Indice della guida (completo, 29 capitoli)
 
-### Fondamenta
-1. [Snapshot prodotto aprile 2026](./docs/01-snapshot.md) — versione, modelli, surface, pricing, roadmap
-2. [CLI: installazione, comandi, flag](./docs/02-cli-installazione.md) — install, comandi, env vars, diagnostica
-3. [Slash commands](./docs/03-slash-commands.md) — 60+ comandi built-in e bundled skills
+> Legenda: 📘 Concettuale · 🔧 Operational · 🚀 Workflow · 📚 Riferimento
 
-### Workflow e modalita'
-4. [Modalita' permessi, Sandbox, Checkpoints](./docs/04-modalita-permessi.md) — default/acceptEdits/plan/auto/sandbox/bypass + rewind
-5. [Fast mode, 1M context, Opus 4.7](./docs/05-fast-mode-1m-context.md) — velocita', context window, modello premium
-6. [CLAUDE.md, rules, auto-memory](./docs/06-claude-md-memory.md) — gerarchia memoria, import, rules path-specific
+### Concetti foundation (📘)
+- [📘 00 — Harness overview](./docs/00-harness-overview.md)
+- [📘 00b — Context engineering](./docs/00b-context-engineering.md)
 
-### Estensibilita'
-7. [Hooks](./docs/07-hooks.md) — 28 eventi, 5 handler, conditional `if`, esempi
-8. [Subagents](./docs/08-subagents.md) — Explore, Plan, custom, forking
-9. [Skills](./docs/09-skills.md) — SKILL.md, allowed-tools, paths, marketplace skill
-10. [MCP — Model Context Protocol](./docs/10-mcp.md) — server, transports, channels, registry
-11. [Plugins & Marketplace](./docs/11-plugins-marketplace.md) — struttura, ufficiale + community
-12. [Agent Teams](./docs/12-agent-teams.md) — sperimentale, task list, mailbox
+### Fondamenta {#fondamenta}
+1. [🔧 01 — Snapshot prodotto](./docs/01-snapshot.md) — versione, modelli, surface, pricing, roadmap
+2. [🔧 02 — CLI installazione](./docs/02-cli-installazione.md) — install, comandi, env vars, diagnostica
+3. [🔧 03 — Slash commands](./docs/03-slash-commands.md) — 60+ comandi built-in e bundled skills
 
-### Cloud e automazione
-13. [Routines (cloud)](./docs/13-routines-cloud.md) — schedule + API + GitHub triggers
-14. [`/loop` e Monitor tool](./docs/14-loop-monitor.md) — automazione intra-sessione
-15. [Ultraplan & Ultrareview](./docs/15-ultraplan-ultrareview.md) — planning e review multi-agent in cloud
+### Workflow e modalita' {#workflow}
+4. [🔧 04 — Modalita' permessi, Sandbox, Checkpoints](./docs/04-modalita-permessi.md)
+- [📘 04b — Authority model](./docs/04b-authority-model.md) — 4 layer di Authority
+5. [🔧 05 — Fast mode, 1M context, Opus 4.7](./docs/05-fast-mode-1m-context.md)
+6. [🔧 06 — CLAUDE.md, rules, auto-memory](./docs/06-claude-md-memory.md)
+- [📘 06b — Memory architecture](./docs/06b-memory-architecture.md) — 5 layer di memory
 
-### Integrazione e produzione
-16. [Headless & Agent SDK](./docs/16-headless-agent-sdk.md) — CLI `-p`, SDK Python/TS, GitHub Actions
-17. [IDE e altre surface](./docs/17-ide-surface.md) — VS Code, JetBrains, Desktop, Web, Slack, Remote Control, Computer use
-18. [Settings & Authentication](./docs/18-settings-auth.md) — gerarchia, permission syntax, Teams/Enterprise
+### Estensibilita' {#estensibilita}
+7. [🔧 07 — Hooks](./docs/07-hooks.md) — 28 eventi, 5 handler
+8. [🔧 08 — Subagents](./docs/08-subagents.md) — Explore, Plan, custom
+9. [🔧 09 — Skills](./docs/09-skills.md) — SKILL.md, allowed-tools, paths
+10. [🔧 10 — MCP](./docs/10-mcp.md) — server, transport, channels
+11. [🔧 11 — Plugins & Marketplace](./docs/11-plugins-marketplace.md)
+12. [🔧 12 — Agent Teams](./docs/12-agent-teams.md) — sperimentale
 
-### Riferimenti
-19. [Changelog completo (feb 2025 → apr 2026)](./docs/19-changelog.md) — 7 fasi, versione per versione, post-mortem
-20. [Tips & best practices](./docs/20-tips-best-practices.md) — pattern operativi e tip dal team Anthropic
-21. [Guide per target user](./docs/21-guide-target-user.md) — 8 percorsi (beginner, indie, senior backend, frontend, DevOps, tech lead, AI/ML, legacy stack)
+### Cloud e automazione {#cloud}
+13. [🔧 13 — Routines (cloud)](./docs/13-routines-cloud.md) — schedule + API + GitHub triggers
+14. [🔧 14 — `/loop` e Monitor tool](./docs/14-loop-monitor.md)
+- [📘 14b — Agent loop & ReAct](./docs/14b-agent-loop-react.md) — pattern teorico
+15. [🔧 15 — Ultraplan & Ultrareview](./docs/15-ultraplan-ultrareview.md)
+- [📘 15b — Planning strategy](./docs/15b-planning-strategy.md) — quando pianificare
+
+### Integrazione e produzione {#integrazione}
+16. [🔧 16 — Headless & Agent SDK](./docs/16-headless-agent-sdk.md) — CLI `-p`, SDK Python/TS
+17. [🔧 17 — IDE e altre surface](./docs/17-ide-surface.md) — VS Code, JetBrains, Desktop, Web, Slack, Remote Control
+18. [🔧 18 — Settings & Authentication](./docs/18-settings-auth.md)
+
+### Riferimenti {#riferimenti}
+19. [📚 19 — Changelog completo (feb 2025 → apr 2026)](./docs/19-changelog.md) — 7 fasi, post-mortem
+20. [📚 20 — Tips & best practices](./docs/20-tips-best-practices.md)
+21. [🚀 21 — Guide per target user](./docs/21-guide-target-user.md) — 8 percorsi
+- [📘 22 — Compound engineering](./docs/22-compound-engineering.md) — pattern moltiplicativi
+- [📚 23 — Glossario](./docs/23-glossario.md) — 35+ termini con cross-link
 
 ---
 

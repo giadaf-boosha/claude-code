@@ -1,6 +1,19 @@
 # 07 — Hooks
 
+> 📍 [README](../README.md) → [Estensibilita'](../README.md#estensibilita) → **07 Hooks**
+> 🔧 Operational · 🔴 Advanced
+
 Gli hook permettono di intercettare deterministicamente il lifecycle di Claude Code: 28+ eventi, 5 tipi di handler, condizioni `if`, scope multipli.
+
+## Cosa e' concettualmente
+
+> Gli hook sono **interrupt deterministici** del lifecycle agent. Sono il modo in cui dichiari **regole non negoziabili** che il modello non puo' aggirare: il check viene eseguito da uno script (shell, HTTP, MCP tool), non dall'LLM. Layer 3 dell'Authority dell'harness.
+
+**Modello mentale**: come i `pre-commit` hook di git, ma per ogni evento del ciclo di vita dell'agent (PreToolUse, PostToolUse, Stop, Notification, ...). Deterministici per definizione.
+
+**Componente harness IMPACT**: Authority (Layer 3) + Control flow (lifecycle injection).
+
+**Per il deep-dive**: [04b — Authority model § Layer 3](./04b-authority-model.md#layer-3-—-hooks-custom-logic).
 
 > Fonte: [`/en/hooks`](https://code.claude.com/docs/en/hooks).
 

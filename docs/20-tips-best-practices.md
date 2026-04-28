@@ -1,6 +1,19 @@
 # 20 — Tips & best practices
 
+> 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **20 Tips & best practices**
+> 📚 Riferimento · 🟡 Intermediate
+
 Raccolta di pattern e tip operative dai post X del team Claude Code (Boris Cherny, Cat Wu, Noah Zweben, Thariq) e dalla community. Ogni tip cita la fonte.
+
+## Cosa e' concettualmente
+
+> I tips sono **harness pattern già validati** dal team che ha costruito Claude Code. Non sono opinioni: sono empiricismo da uso quotidiano (Boris ha aumentato output 200% interno, Anthropic ha generato 1M LOC con ~0 manual fix). Ogni tip mappa a uno o piu' componenti IMPACT.
+
+**Modello mentale**: come "Effective Java" o "Clean Architecture" — cristallizzazione di pattern emersi nell'uso reale.
+
+**Componente harness IMPACT**: trasversale (ogni tip e' un'ottimizzazione di uno o piu' componenti).
+
+**Per il deep-dive**: [22 — Compound engineering](./22-compound-engineering.md) per come comporre i tips in pattern superiori.
 
 ---
 

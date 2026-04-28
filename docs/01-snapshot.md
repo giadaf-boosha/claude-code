@@ -1,6 +1,19 @@
 # 01 — Snapshot prodotto Claude Code (aprile 2026)
 
+> 📍 [README](../README.md) → [Fondamenta](../README.md#fondamenta) → **01 Snapshot**
+> 🔧 Operational · 🟢 Beginner-friendly
+
 > Versione di riferimento: **CLI v2.1.119** (23 aprile 2026). Questo documento e' uno snapshot dello stato attuale: cosa esiste, su quali modelli gira, come ci si accede.
+
+## Cosa e' concettualmente
+
+> Lo snapshot e' la "fotografia" del prodotto: da dove sei se inizi oggi. Nel framework harness, e' la mappa di **quali componenti IMPACT sono accessibili in quale piano e su quale superficie**.
+
+**Modello mentale**: come la pagina "specs" di un'auto: motori disponibili, optional, pricing.
+
+**Componente harness IMPACT**: trasversale a tutti i pilastri (Intent / Memory / Planning / Authority / Control flow).
+
+**Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per il framework concettuale.
 
 ---
 

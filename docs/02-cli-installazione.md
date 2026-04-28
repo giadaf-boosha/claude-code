@@ -1,6 +1,19 @@
 # 02 — CLI: installazione, comandi, flag
 
+> 📍 [README](../README.md) → [Fondamenta](../README.md#fondamenta) → **02 CLI**
+> 🔧 Operational · 🟢 Beginner-friendly
+
 Reference completa CLI di Claude Code aggiornata a v2.1.119.
+
+## Cosa e' concettualmente
+
+> La CLI e' la **prima incarnazione** dell'agent harness Claude Code. Tutto cio' che vedi in VS Code, Desktop, Web e' uno strato di UX sopra lo stesso engine CLI. Imparare la CLI = imparare l'engine.
+
+**Modello mentale**: la CLI e' alla GUI dell'IDE come `git` da terminale e' a SourceTree. Stesso engine, due interfacce.
+
+**Componente harness IMPACT**: Tool layer (entry point all'harness) + Authority (flags `--permission-mode`, `--allowedTools`).
+
+**Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per capire perche' una CLI e' una scelta architetturale, non solo un'interfaccia.
 
 ---
 

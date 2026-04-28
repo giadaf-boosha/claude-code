@@ -1,6 +1,19 @@
 # 05 — Fast mode, 1M context, Opus 4.7
 
+> 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
+> 🔧 Operational · 🟡 Intermediate
+
 Tre feature legate ai modelli: il **fast mode** (Opus 4.6 piu' veloce), il **context window da 1M token GA**, e il modello premium **Opus 4.7** con effort `xhigh`.
+
+## Cosa e' concettualmente
+
+> Le tre feature gestiscono il trade-off **velocita' / qualita' / capacita'** del modello. Fast mode taglia la latenza, 1M context espande la "memoria di lavoro", Opus 4.7 amplia il reasoning. Sono leve indipendenti per dimensionare l'engine all'applicazione.
+
+**Modello mentale**: scegliere il modello e' come scegliere il motore di un'auto: cilindrata (effort), cavalli (Opus vs Sonnet), elaborazione (fast mode).
+
+**Componente harness IMPACT**: trasversale (impatta tutti i pilastri via cambio motore).
+
+**Per il deep-dive**: [00b — Context engineering](./00b-context-engineering.md) per come 1M context si combina con tecniche context.
 
 ---
 

@@ -1,6 +1,19 @@
 # 19 — Changelog completo Claude Code (feb 2025 → apr 2026)
 
+> 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
+> 📚 Riferimento · 🟢 Beginner-friendly
+
 Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (23 aprile 2026, v2.1.119+). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+
+## Cosa e' concettualmente
+
+> Il changelog non e' solo elenco di feature: e' la **traiettoria evolutiva dell'harness**. Si vede come Claude Code sia partito come CLI agentic (research preview), abbia aggiunto Plan mode (Planning), poi Hooks (Authority), poi Sub-agents (Orchestration), poi Skills (Memory eseguibile), poi Routines (Control flow cloud). Ogni release amplifica un componente IMPACT.
+
+**Modello mentale**: come la storia di Linux — ogni patch aggiunge un pezzo del sistema operativo. Qui ogni release aggiunge un pezzo dell'agent harness.
+
+**Componente harness IMPACT**: traccia evolutiva di tutti i pilastri.
+
+**Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per leggere il changelog in chiave IMPACT.
 
 > Fonti master: [GitHub CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md), [`/en/changelog`](https://code.claude.com/docs/en/changelog), [`/en/whats-new`](https://code.claude.com/docs/en/whats-new), [Anthropic news](https://www.anthropic.com/news), [Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes), [GitHub Releases](https://github.com/anthropics/claude-code/releases).
 

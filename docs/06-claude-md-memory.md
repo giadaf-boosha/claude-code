@@ -1,6 +1,19 @@
 # 06 — CLAUDE.md, rules, auto-memory
 
+> 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **06 CLAUDE.md + memory**
+> 🔧 Operational · 🟡 Intermediate
+
 Claude Code ha **due sistemi di memoria** complementari: CLAUDE.md (scritto da te) e auto-memory (scritto da Claude). Questo documento copre entrambi + il sistema rules path-specific.
+
+## Cosa e' concettualmente
+
+> CLAUDE.md e' la **memoria esplicita** dell'agent: regole e contesto che dichiari una volta e che vengono caricati ogni sessione. L'auto-memory e' la **memoria appresa**: pattern che Claude osserva nel tuo workflow e ricorda autonomamente. Insieme, fanno il pilastro Memory dell'IMPACT.
+
+**Modello mentale**: CLAUDE.md = costituzione del progetto (scritta da te, immutabile salvo modifiche esplicite); auto-memory = diario di bordo (scritto da Claude, learning ricorrente).
+
+**Componente harness IMPACT**: Memory + Intent.
+
+**Per il deep-dive**: [06b — Memory architecture](./06b-memory-architecture.md) per i 5 layer di memory + [00b — Context engineering](./00b-context-engineering.md) per le tecniche di context.
 
 ---
 

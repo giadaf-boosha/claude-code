@@ -1,6 +1,19 @@
 # 13 — Routines (cloud automation)
 
+> 📍 [README](../README.md) → [Cloud](../README.md#cloud) → **13 Routines**
+> 🔧 Operational · 🟡 Intermediate
+
 > "Put Claude Code on autopilot. Define routines that run on a schedule, trigger on API calls, or react to GitHub events."
+
+## Cosa e' concettualmente
+
+> Le routines sono l'**agent loop in cloud**: stesso pattern di `/loop` ma eseguito su infra Anthropic, senza laptop acceso. Tre trigger principali (schedule, API, GitHub event) coprono ogni caso di automazione 24/7. Sono il salto da "agent locale che gira finche' tieni aperta la sessione" a "agent cloud che lavora per te in autonomia".
+
+**Modello mentale**: come cron + GitHub Actions + webhook handler in un solo prodotto, con LLM al posto dello script.
+
+**Componente harness IMPACT**: Control flow (trigger-based) + Memory persistente cloud.
+
+**Per il deep-dive**: [14 — `/loop` & Monitor](./14-loop-monitor.md) per il loop locale + [14b — Agent loop ReAct](./14b-agent-loop-react.md) per il pattern.
 
 Lanciate **14 aprile 2026** in research preview. Eseguono su infrastruttura Anthropic, niente laptop acceso, niente sessione aperta.
 

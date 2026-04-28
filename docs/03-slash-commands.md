@@ -1,6 +1,19 @@
 # 03 — Slash commands
 
+> 📍 [README](../README.md) → [Fondamenta](../README.md#fondamenta) → **03 Slash commands**
+> 🔧 Operational · 🟢 Beginner-friendly
+
 Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
+
+## Cosa e' concettualmente
+
+> Gli slash commands sono il **vocabolario condiviso** tra utente e agent. Sono shortcut a workflow ricorrenti: ognuno e' un'intent capture pre-codificato. I bundled skills (`/loop`, `/simplify`, `/batch`, `/debug`) sono skill markdown auto-installate; i built-in (`/plan`, `/compact`, `/effort`) sono comandi nativi del CLI.
+
+**Modello mentale**: come le funzioni built-in di una shell vs gli script in `~/bin`. Stessa cosa, due classi.
+
+**Componente harness IMPACT**: Tool layer (espongono capabilities) + Intent capture (riducono ambiguita' del prompt).
+
+**Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
 ---
 

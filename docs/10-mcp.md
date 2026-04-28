@@ -1,6 +1,19 @@
 # 10 — MCP (Model Context Protocol)
 
+> 📍 [README](../README.md) → [Estensibilita'](../README.md#estensibilita) → **10 MCP**
+> 🔧 Operational · 🟡 Intermediate
+
 MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app). Donato a Linux Foundation a dicembre 2025.
+
+## Cosa e' concettualmente
+
+> MCP e' il **protocollo standard per il Tool layer**. Trasforma "ogni LLM ha la sua syntax di tool calling" in "tutti gli LLM compatibili con MCP usano server scritti una sola volta". E' lo stesso paradigma di USB: un protocollo, infinite peripheriche.
+
+**Modello mentale**: MCP = USB per LLM. Server MCP = device USB. Client MCP (Claude Code) = host USB. Plug-and-play, vendor-agnostic.
+
+**Componente harness IMPACT**: Tool layer (extensibile + standardizzato).
+
+**Per il deep-dive**: [11 — Plugins & marketplace](./11-plugins-marketplace.md) per come distribuire server MCP via plugin.
 
 > Fonte: [`/en/mcp`](https://code.claude.com/docs/en/mcp).
 

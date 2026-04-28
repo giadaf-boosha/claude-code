@@ -1,6 +1,19 @@
 # 17 — IDE e altre surface
 
+> 📍 [README](../README.md) → [Integrazione](../README.md#integrazione) → **17 IDE & surface**
+> 🔧 Operational · 🟢 Beginner-friendly
+
 VS Code, JetBrains, Desktop, Web, Slack, Channels, Remote Control. Tutti i modi di parlare a Claude Code oltre al terminale.
+
+## Cosa e' concettualmente
+
+> Le surface sono **viste differenti dello stesso harness**. CLAUDE.md, settings, skill, plugin, MCP funzionano cross-surface (configura una volta, vale ovunque). Cambia solo l'UI: terminale (CLI), inline diff (VS Code), multi-session sidebar (Desktop), cloud (Web), sincronizzazione cross-device (Remote Control).
+
+**Modello mentale**: come Gmail web vs Gmail mobile vs Mail.app — stessa mailbox, UI diverse, scelte secondo contesto.
+
+**Componente harness IMPACT**: trasversale (l'harness sta sotto tutte le surface).
+
+**Per il deep-dive**: [01 — Snapshot § 1.2 Surface](./01-snapshot.md#12-surface---dove-si-usa-claude-code).
 
 ---
 

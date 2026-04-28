@@ -1,6 +1,19 @@
 # 08 — Subagents
 
+> 📍 [README](../README.md) → [Estensibilita'](../README.md#estensibilita) → **08 Subagents**
+> 🔧 Operational · 🟡 Intermediate
+
 Subagent = AI assistant specializzato con context window proprio, system prompt custom, tool e permessi indipendenti. Quando Claude trova task matchato dalla `description`, delega.
+
+## Cosa e' concettualmente
+
+> I subagent sono **agent figli** spawnati dall'agent principale. Ognuno ha context window indipendente, tool subset, ev. modello diverso (Haiku per Explore = cheap+fast). Il main agent delega un task, riceve summary, continua. Pattern di "cognitive offloading": il main thread non si sporca con dettagli operativi.
+
+**Modello mentale**: come `fork()` in un OS — processo figlio con stato isolato, comunicazione strutturata col padre via return value.
+
+**Componente harness IMPACT**: Orchestration + Tool layer (ogni subagent e' un tool composito).
+
+**Per il deep-dive**: [12 — Agent teams](./12-agent-teams.md) per il livello successivo (multi-agent persistenti) + [00b — Context engineering § Subagent Explore](./00b-context-engineering.md).
 
 > "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions." — [`/en/sub-agents`](https://code.claude.com/docs/en/sub-agents)
 

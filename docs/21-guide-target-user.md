@@ -1,7 +1,20 @@
 # 21 — Guide per target user
 
+> 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **21 Guide per target user**
+> 🚀 Workflow · 🟢 Beginner-friendly
+
 > Percorsi autonomi per 8 profili: setup, comandi top, skill, workflow tipico, anti-pattern, casi d'uso flagship.
 > Versione di riferimento: **CLI v2.1.119** (23 apr 2026). Modello default `claude-sonnet-4-6`, premium `claude-opus-4-7`.
+
+## Cosa e' concettualmente
+
+> Le guide per target user sono **harness configurations validate per persona**: ogni profilo ha una specifica combinazione di IMPACT (quale plan, quale Authority, quale Memory, quale Control flow). Servono come scorciatoia: non devi disegnare il tuo harness da zero, parti da uno standard e adattalo.
+
+**Modello mentale**: come "Bento box" preconfezionati — ogni persona riceve un set coerente di feature, settings, comandi adatti al contesto.
+
+**Componente harness IMPACT**: trasversale (ogni persona = stack IMPACT specifico).
+
+**Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per il framework, [22 — Compound engineering](./22-compound-engineering.md) per i pattern avanzati.
 
 Indice profili:
 

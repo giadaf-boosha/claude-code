@@ -1,6 +1,19 @@
 # 18 — Settings & Authentication
 
+> 📍 [README](../README.md) → [Integrazione](../README.md#integrazione) → **18 Settings & Auth**
+> 🔧 Operational · 🟡 Intermediate
+
 Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedrock/Vertex/Foundry, OAuth).
+
+## Cosa e' concettualmente
+
+> I settings sono la **configurazione dichiarativa dell'harness**. Cinque livelli di precedenza (managed > CLI args > local project > shared project > user) permettono di stratificare regole: enterprise impone policy, team condivide convenzioni, dev override locali. La sintassi permission e' Layer 1 dell'Authority.
+
+**Modello mentale**: come la gerarchia `.gitconfig` (system > global > local > worktree).
+
+**Componente harness IMPACT**: Authority (Layer 1 + Layer 4 managed) + Intent (env vars).
+
+**Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
 ---
 

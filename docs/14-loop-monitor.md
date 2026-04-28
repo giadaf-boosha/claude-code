@@ -1,6 +1,19 @@
 # 14 — `/loop` e Monitor tool
 
+> 📍 [README](../README.md) → [Cloud](../README.md#cloud) → **14 `/loop` & Monitor**
+> 🔧 Operational · 🟡 Intermediate
+
 Due feature complementari per **automazione intra-sessione**: `/loop` esegue ripetutamente un prompt, Monitor tool guarda processi background e interrompe Claude quando emettono output rilevante. Entrambe lavorano in sessione (vs Routines che sono cloud).
+
+## Cosa e' concettualmente
+
+> `/loop` materializza il **Control flow** dell'agent: ricorsivita' deterministica (cron) o adattiva (self-pacing). Monitor tool materializza l'**Observe** dell'agent loop ReAct: invece di polling esplicito, gli eventi push svegliano Claude. Insieme, sono il loop ReAct esposto come feature.
+
+**Modello mentale**: `/loop` = `setInterval` di JS; Monitor tool = `EventEmitter` push-based.
+
+**Componente harness IMPACT**: Control flow (loop) + observation layer (Monitor).
+
+**Per il deep-dive**: [14b — Agent loop ReAct](./14b-agent-loop-react.md) per il pattern teorico, [13 — Routines](./13-routines-cloud.md) per il loop in cloud.
 
 ---
 

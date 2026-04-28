@@ -1,6 +1,19 @@
 # 15 — Ultraplan & Ultrareview
 
+> 📍 [README](../README.md) → [Cloud](../README.md#cloud) → **15 Ultraplan & Ultrareview**
+> 🔧 Operational · 🟡 Intermediate
+
 Due feature lanciate in aprile 2026 (Week 14-15) che spostano **planning** e **review** in cloud, multi-agent. Pensate per task complessi dove vuoi affidabilita' alta.
+
+## Cosa e' concettualmente
+
+> `/ultraplan` e' il **pilastro Planning portato in cloud**: il Reason esteso non sta nel terminale ma in una sessione web con browser review iterativa. `/ultrareview` e' il **pilastro Authority + Guardrails portato in cloud**: una flotta di agenti specialisti analizza la diff in parallelo e ogni finding e' verificato da agent indipendenti. Entrambi materializzano il principio "compound": piu' agent in cloud > singolo agent locale per task ad alto blast radius.
+
+**Modello mentale**: Ultraplan = think-tank in cloud; Ultrareview = team di reviewer specialisti in cloud.
+
+**Componente harness IMPACT**: Planning (Ultraplan) + Authority + Guardrails (Ultrareview).
+
+**Per il deep-dive**: [15b — Planning strategy](./15b-planning-strategy.md) per quando usare quale livello di planning.
 
 ---
 

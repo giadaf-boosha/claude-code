@@ -1,6 +1,19 @@
 # 16 — Headless & Agent SDK
 
+> 📍 [README](../README.md) → [Integrazione](../README.md#integrazione) → **16 Headless & Agent SDK**
+> 🔧 Operational · 🟡 Intermediate
+
 Per usare Claude Code in **CI/CD**, **batch**, o come **libreria** in app Python/TypeScript.
+
+## Cosa e' concettualmente
+
+> Il headless mode espone l'harness Claude Code come **componente embeddabile**: stessa engine ma senza UI interattiva, output strutturato (text/json/stream-json), modalita' bare per CI riproducibili. L'Agent SDK e' la versione "library" — si integra in app Python/TS e mantiene tutte le capabilities (hooks, MCP, subagent, skills, memory) configurabili programmaticamente.
+
+**Modello mentale**: come `npx <tool>` vs `import {tool} from 'package'` — stesso engine, due interfacce, library e CLI.
+
+**Componente harness IMPACT**: trasversale (espone tutto l'harness) + ottimizzato per riproducibilita' (`--bare`).
+
+**Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per quando usare CC vs SDK leggero.
 
 ---
 
