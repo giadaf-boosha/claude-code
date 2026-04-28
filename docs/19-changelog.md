@@ -347,6 +347,10 @@ Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.
 - `CLAUDE_CODE_HIDE_CWD` env (v2.1.119)
 - `--from-pr` accepts GitLab MR/Bitbucket PR/GHE (v2.1.119)
 - PostToolUse hooks include `duration_ms` (v2.1.119)
+- **`alwaysLoad` MCP config** (v2.1.121): bypassa tool-search deferral per server specifici — tutti i tool sempre disponibili all'avvio
+- **PostToolUse output override universale** (v2.1.121): `hookSpecificOutput.updatedToolOutput` funziona su tutti i tool, non solo MCP
+- `claude plugin prune` (v2.1.121): rimuove dipendenze orfane dei plugin
+- MCP server auto-retry 3x su errori transienti (v2.1.121)
 
 ---
 
@@ -439,6 +443,7 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 23 apr 2026 | v2.1.118 | Vim visual mode, custom themes, `mcp_tool` hooks |
 | 23 apr 2026 | v2.1.119 | `/config` persist, `prUrlTemplate`, `CLAUDE_CODE_HIDE_CWD` |
 | 24 apr 2026 | v2.1.120 | `claude ultrareview` non-interactive subcommand — [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2047882231343878309) |
+| 28 apr 2026 | v2.1.121 | `alwaysLoad` MCP config, PostToolUse output override universale, `claude plugin prune`, MCP auto-retry 3x |
 
 ---
 

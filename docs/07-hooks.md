@@ -143,6 +143,23 @@ Conditional `if:` (da v2.1.83): permette di matchare pattern fini-grained dentro
 }
 ```
 
+### PostToolUse — output override (da v2.1.121)
+
+I PostToolUse hook possono sostituire l'output restituito a Claude tramite `hookSpecificOutput.updatedToolOutput`. Prima di v2.1.121 era disponibile solo per tool MCP; ora funziona su qualsiasi tool (Bash, Edit, Write, ecc.).
+
+```json
+{
+  "hookSpecificOutput": {
+    "hookEventName": "PostToolUse",
+    "updatedToolOutput": "output trasformato o sanitizzato"
+  }
+}
+```
+
+Casi d'uso: redact token/secret nell'output Bash prima che il modello li legga, normalizzare JSON verbose, aggiungere metadata di contesto.
+
+<sub>Aggiornato 2026-04-28 via daily what's new. Fonte: [GitHub Releases v2.1.121](https://github.com/anthropics/claude-code/releases).</sub>
+
 ---
 
 ## 7.7 Scope dei hook
@@ -273,6 +290,7 @@ Slow helper warning se hook >10s. PostToolUse hooks da v2.1.119 includono `durat
 
 - Docs: [`/en/hooks`](https://code.claude.com/docs/en/hooks)
 - Tip Boris su hooks: [@bcherny](https://x.com/bcherny/status/2021701059253874861)
+- PostToolUse output override universale: v2.1.121 (28 apr 2026)
 - `mcp_tool` hook type: v2.1.118 (23 apr 2026)
 - `PreCompact`: v2.1.106 (13 apr 2026)
 - Conditional `if:`: v2.1.83 (24 mar 2026)

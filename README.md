@@ -2,19 +2,18 @@
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
 > Ultimo aggiornamento: **28 aprile 2026, 16:00 CEST**.
-> Versione CLI di riferimento: **v2.1.119** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
+> Versione CLI di riferimento: **v2.1.121** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today
+## What's new today (2026-04-28)
 
-> _Sezione popolata automaticamente dalla [routine daily](./automations/daily-whats-new/) ogni mattina alle 07:00 Europe/Rome. Storico: [archive](./docs/whats-new-archive.md)._
+> _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> **Status**: routine configurata, primo run al prossimo trigger. Fino al primo run questa sezione e' un placeholder.
-
----
+- **PostToolUse output override universale** (v2.1.121): i PostToolUse hook possono ora sostituire l'output di qualsiasi tool tramite `hookSpecificOutput.updatedToolOutput`, non solo MCP — abilita trasformazioni inline prima che Claude legga il risultato. Doc: [07 Hooks](./docs/07-hooks.md).
+- **MCP `alwaysLoad`** (v2.1.121): il campo `alwaysLoad: true` su un server MCP bypassa la tool-search deferral, rendendo tutti i tool del server sempre disponibili senza ricerca preventiva. Doc: [10 MCP](./docs/10-mcp.md).
 
 ---
 

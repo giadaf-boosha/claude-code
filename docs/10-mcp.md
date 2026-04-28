@@ -95,6 +95,26 @@ Vantaggi:
 - Riduce token consumption all'avvio
 - Permette di tenere connessi decine di server senza esplodere il context
 
+### `alwaysLoad` (da v2.1.121)
+
+Per server critici dove la deferral causa frizione — tool sempre usati o con nomi non disambiguabili dalla ricerca — `alwaysLoad: true` disabilita la deferral:
+
+```json
+{
+  "mcpServers": {
+    "my-core-server": {
+      "command": "npx",
+      "args": ["my-mcp-server"],
+      "alwaysLoad": true
+    }
+  }
+}
+```
+
+Tutti i tool del server vengono caricati all'avvio della sessione, indipendentemente dal task. Usare con parsimonia su server con molti tool: incrementa token consumption iniziale.
+
+<sub>Aggiornato 2026-04-28 via daily what's new. Fonte: [GitHub Releases v2.1.121](https://github.com/anthropics/claude-code/releases).</sub>
+
 ---
 
 ## 10.7 MCP prompts come slash commands
