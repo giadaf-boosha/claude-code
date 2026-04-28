@@ -13,6 +13,7 @@
 | **F3** Conceptual layer (8 capitoli foundation + intro + nav) | ✅ done | (28 apr 2026) |
 | **F4** Archive integration sistematica | ✅ done | (28 apr 2026) |
 | **F5-light** Quick Start + persona templates | ✅ done | (28 apr 2026) |
+| **F6** Daily What's New automation | ✅ done | (28 apr 2026) |
 | **F5-full** Open governance (CONTRIBUTING.md, license, issue templates) | ⏳ later | — |
 
 ---
@@ -194,3 +195,4 @@ Aggiungere visualizzazioni avanzate e quick start onboarding per profilo.
 | 28 apr 2026 | F3 avviata, scritto plan iniziale |
 | 28 apr 2026 | F3 completata: 8 capitoli concettuali + intro 21 doc + nav + mermaid (commit `3ec4c56`) |
 | 28 apr 2026 | F4 + F5-light completate: archive integration sistematica (Kora case + vibe-to-agentic + worktree workflow + Conductor + Ralph + Sonnet 4.5 callout + cheat sheet tips), QUICKSTART.md, 8 examples/personas/ |
+| 28 apr 2026 | F6 completata: automazione daily "what's new today" (routine cloud + GitHub Action backup) — ogni 07:00 Europe/Rome apre PR con TLDR novita' 24h |

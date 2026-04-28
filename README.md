@@ -6,6 +6,15 @@
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
+> 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
+
+## What's new today
+
+> _Sezione popolata automaticamente dalla [routine daily](./automations/daily-whats-new/) ogni mattina alle 07:00 Europe/Rome. Storico: [archive](./docs/whats-new-archive.md)._
+
+> **Status**: routine configurata, primo run al prossimo trigger. Fino al primo run questa sezione e' un placeholder.
+
+---
 
 ---
 

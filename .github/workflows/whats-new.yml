@@ -1,0 +1,96 @@
+name: Daily What's New
+
+on:
+  schedule:
+    # 05:00 UTC = 07:00 CEST (estate, mar-ott) | 06:00 CET (inverno, ott-mar)
+    # Per fuso Europe/Rome esatto sempre 07:00, usare Modalita' A (Routines cloud Claude Code)
+    - cron: '0 5 * * *'
+  workflow_dispatch:  # permette run manuale
+
+jobs:
+  whats-new:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code
+        run: |
+          curl -fsSL https://claude.ai/install.sh | bash
+          echo "$HOME/.claude/bin" >> $GITHUB_PATH
+
+      - name: Verify Claude Code
+        run: claude --version
+
+      - name: Run daily what's new routine
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          claude -p "$(cat automations/daily-whats-new/routine-prompt.md)" \
+            --bare \
+            --permission-mode acceptEdits \
+            --max-budget-usd 1.50 \
+            --max-turns 50 \
+            --output-format text \
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git *),WebFetch,WebSearch" \
+            > /tmp/whats-new-output.log 2>&1 || {
+              echo "Routine fallita, log:"
+              cat /tmp/whats-new-output.log
+              exit 1
+            }
+          echo "Output routine:"
+          cat /tmp/whats-new-output.log
+
+      - name: Configure git
+        if: success()
+        run: |
+          git config user.name "claude-code-bot"
+          git config user.email "claude-code-bot@boosha.it"
+
+      - name: Open PR with daily updates (if any)
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            DATE=$(TZ=Europe/Rome date '+%Y-%m-%d')
+            BRANCH="whats-new/${DATE}"
+            git checkout -b "${BRANCH}"
+            git add README.md docs/
+            git commit -m "feat(daily): what's new ${DATE}"
+            git push origin "${BRANCH}"
+            gh pr create \
+              --title "What's new ${DATE}" \
+              --body "Aggiornamento automatico daily dalle ultime 24h. Generato dalla GitHub Action [Daily What's New](.github/workflows/whats-new.yml). Verificare README + docs e mergiare se OK." \
+              --label "automation" \
+              --base main || echo "PR creation fallita (forse gia' aperta per oggi)"
+            echo "PR creata per ${DATE}"
+          else
+            echo "Nessuna modifica, skip PR"
+          fi
+
+      - name: Upload run log artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: whats-new-log-${{ github.run_id }}
+          path: /tmp/whats-new-output.log
+          retention-days: 7
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "::error::Daily what's new failed. Check logs."
+          # Opzionale: trigger Slack/Discord notification via webhook
