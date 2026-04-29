@@ -351,6 +351,11 @@ Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.
 - **PostToolUse output override universale** (v2.1.121): `hookSpecificOutput.updatedToolOutput` funziona su tutti i tool, non solo MCP
 - `claude plugin prune` (v2.1.121): rimuove dipendenze orfane dei plugin
 - MCP server auto-retry 3x su errori transienti (v2.1.121)
+- **Windows: PowerShell come shell senza Git Bash** (v2.1.120): quando Git for Windows non e' installato, Claude Code usa PowerShell come shell tool nativo
+- **`${CLAUDE_EFFORT}` nelle skill** (v2.1.120): le skill possono referenziare il livello di effort corrente nel proprio contenuto con `${CLAUDE_EFFORT}`
+- **`/resume` con PR URL** (v2.1.122): incollare URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) trova la sessione che ha creato quel PR
+- `ANTHROPIC_BEDROCK_SERVICE_TIER` env (v2.1.122): seleziona tier Bedrock (`default`, `flex`, `priority`)
+- Fix OAuth auth retry loop con `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1` (v2.1.123)
 
 ---
 
@@ -444,6 +449,10 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 23 apr 2026 | v2.1.119 | `/config` persist, `prUrlTemplate`, `CLAUDE_CODE_HIDE_CWD` |
 | 24 apr 2026 | v2.1.120 | `claude ultrareview` non-interactive subcommand — [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2047882231343878309) |
 | 28 apr 2026 | v2.1.121 | `alwaysLoad` MCP config, PostToolUse output override universale, `claude plugin prune`, MCP auto-retry 3x |
+| 28 apr 2026 | v2.1.122 | **`/resume` con PR URL**, `ANTHROPIC_BEDROCK_SERVICE_TIER`, fix `/branch` con timeline riavvolte |
+| 29 apr 2026 | v2.1.123 | Fix OAuth auth retry loop con `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1` |
+
+<sub>Aggiornato 2026-04-29 via daily what's new. Fonte: [changelog](https://code.claude.com/docs/en/changelog).</sub>
 
 ---
 

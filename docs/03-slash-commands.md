@@ -75,7 +75,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/remote-control` (alias `/rc`) | built-in | Espone sessione a [Remote Control](./17-ide-surface.md#remote-control) |
 | `/remote-env` | built-in | Configura env remote per `--remote` |
 | `/rename [name]` | built-in | Rinomina sessione |
-| `/resume [session]` (alias `/continue`) | built-in | Riprende sessione |
+| `/resume [session\|PR-URL]` (alias `/continue`) | built-in | Riprende sessione per ID/nome; accetta URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) per trovare la sessione che ha creato quella PR (da v2.1.122) |
 | `/review [PR]` | built-in | Code review locale (cf. `/ultrareview` per cloud) |
 | `/rewind` (alias `/checkpoint`, `/undo`) | built-in | Checkpoint rewind |
 | `/sandbox` | built-in | Toggle [sandbox mode](./04-modalita-permessi.md#sandbox) |
@@ -101,6 +101,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/web-setup` | built-in | Connect GitHub a Claude Code on the web |
 
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
+
+<sub>Aggiornato 2026-04-29 via daily what's new. Fonte: [changelog](https://code.claude.com/docs/en/changelog).</sub>
 
 ---
 

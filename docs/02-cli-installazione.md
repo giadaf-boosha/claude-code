@@ -28,7 +28,13 @@ irm https://claude.ai/install.ps1 | iex
 
 # Windows CMD
 curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+```
 
+> **Windows (da v2.1.120)**: Git Bash non e' piu' obbligatorio. Quando Git for Windows non e' installato, Claude Code usa PowerShell come shell tool nativo. Se entrambi sono presenti, Git Bash rimane preferito.
+
+<sub>Aggiornato 2026-04-29 via daily what's new. Fonte: [changelog](https://code.claude.com/docs/en/changelog).</sub>
+
+```bash
 # Homebrew (canale stabile)
 brew install --cask claude-code
 brew install --cask claude-code@latest   # canale latest

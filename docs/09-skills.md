@@ -69,7 +69,9 @@ shell: bash|powershell              # shell per !`...` blocks
 # Skill content (Markdown)
 
 Substitution: `$ARGUMENTS`, `$ARGUMENTS[0]` / `$0`, `$1`, `$name`.
-Env: `${CLAUDE_SESSION_ID}`, `${CLAUDE_SKILL_DIR}`.
+Env: `${CLAUDE_SESSION_ID}`, `${CLAUDE_SKILL_DIR}`, `${CLAUDE_EFFORT}` (livello effort corrente: `low|medium|high|xhigh|max`).
+
+<sub>Aggiornato 2026-04-29 via daily what's new. Fonte: [changelog](https://code.claude.com/docs/en/changelog).</sub>
 
 ## Dynamic context injection
 Inline: !`gh pr diff`
