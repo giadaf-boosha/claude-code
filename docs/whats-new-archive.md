@@ -11,6 +11,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-04-29
+
+- **`${CLAUDE_EFFORT}` nelle skill** (v2.1.120): il contenuto delle skill puo' ora referenziare il livello di effort corrente tramite `${CLAUDE_EFFORT}` — abilita comportamenti adattativi (istruzioni diverse a `low` vs `xhigh`). Doc: [09 Skills](../docs/09-skills.md).
+- **Windows: PowerShell senza Git Bash** (v2.1.120): Claude Code non richiede piu' Git Bash su Windows; quando assente, usa PowerShell come shell tool nativo. Doc: [02 CLI](../docs/02-cli-installazione.md).
+- **`/resume` con PR URL** (v2.1.122): incollare un URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) in `/resume` trova automaticamente la sessione che ha creato quella PR. Doc: [03 Slash commands](../docs/03-slash-commands.md).
+
+---
+
 ## 2026-04-28
 
 - **PostToolUse output override universale** (v2.1.121): i PostToolUse hook possono ora sostituire l'output di qualsiasi tool tramite `hookSpecificOutput.updatedToolOutput`, non solo MCP — abilita trasformazioni inline prima che Claude legga il risultato. Doc: [07 Hooks](../docs/07-hooks.md).
