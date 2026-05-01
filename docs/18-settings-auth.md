@@ -168,6 +168,21 @@ Shell script che ritorna API key. Refresh ogni 5 min o HTTP 401. Custom TTL: `CL
 
 > Note: `CLAUDE_CODE_OAUTH_TOKEN` NON letto in bare mode. Web sessions usano sempre subscription credentials.
 
+### OAuth paste-in-terminal (v2.1.126)
+
+In ambienti dove il browser non riesce a raggiungere `localhost` (WSL2, SSH remoto, container), `claude auth login` mostra ora un URL di autorizzazione e accetta il codice OAuth incollato direttamente nel terminale al posto del callback automatico.
+
+```bash
+claude auth login
+# → apri URL nel browser
+# → copia il codice dalla pagina di redirect
+# → incollalo nel terminale quando richiesto
+```
+
+Questa modalita' si attiva automaticamente quando il browser callback fallisce — nessuna configurazione necessaria.
+
+<sub>Aggiornato 2026-05-01 via daily what's new. Fonte: [GitHub Releases v2.1.126](https://github.com/anthropics/claude-code/releases).</sub>
+
 ### Login con subscription vs API key — quando scegliere quale
 
 La scelta tra **subscription OAuth** (Claude Pro/Max/Team/Enterprise) e **API key Anthropic Console** ha implicazioni di costo e capabilities concrete:

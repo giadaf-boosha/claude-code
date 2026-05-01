@@ -72,6 +72,9 @@ Per disabilitare auto-update: `DISABLE_AUTOUPDATER=1`. Per forzare canale: `auto
 | `claude remote-control` | Avvia server Remote Control |
 | `claude setup-token` | Genera OAuth token (1 anno) per CI |
 | `claude ultrareview [target]` | (v2.1.120) Lancia `/ultrareview` non-interattivo per CI/script |
+| `claude project purge [path]` | (v2.1.126) Cancella tutto lo stato di Claude Code per un progetto (trascrizioni, task, file history, config). Opzioni: `--dry-run`, `-y/--yes`, `-i/--interactive`, `--all` |
+
+<sub>Aggiornato 2026-05-01 via daily what's new. Fonte: [GitHub Releases v2.1.126](https://github.com/anthropics/claude-code/releases).</sub>
 
 Fonte: [`/en/cli-reference`](https://code.claude.com/docs/en/cli-reference).
 
