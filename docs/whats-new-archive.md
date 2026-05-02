@@ -11,6 +11,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-01
+
+- **`claude project purge`** (v2.1.126): nuovo subcomando elimina tutto lo stato di Claude Code per un progetto (trascrizioni, task, file history, config). Opzioni: `--dry-run`, `-i/--interactive`, `--all`. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Doc: [02 CLI](../docs/02-cli-installazione.md), [19 Changelog](../docs/19-changelog.md).
+- **OAuth paste-in-terminal** (v2.1.126): `claude auth login` accetta ora il codice OAuth incollato in terminale quando il browser non raggiunge localhost — risolve login in ambienti WSL2, SSH, container. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases). Doc: [18 Settings & Auth](../docs/18-settings-auth.md), [19 Changelog](../docs/19-changelog.md).
+
+---
+
+
 ## 2026-04-30
 
 > Nessuna novita' significativa nelle ultime 24 ore.
