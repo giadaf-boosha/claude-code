@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Fondamenta](../README.md#fondamenta) → **01 Snapshot**
 > 🔧 Operational · 🟢 Beginner-friendly
 
-> Versione di riferimento: **CLI v2.1.119** (23 aprile 2026). Questo documento e' uno snapshot dello stato attuale: cosa esiste, su quali modelli gira, come ci si accede.
+> Versione di riferimento: **CLI v2.1.132** (6 maggio 2026). Questo documento e' uno snapshot dello stato attuale: cosa esiste, su quali modelli gira, come ci si accede.
 
 ## Cosa e' concettualmente
 
@@ -21,7 +21,7 @@
 
 | Item | Valore |
 |---|---|
-| Versione CLI corrente | `v2.1.119` (23 apr 2026), range coperto 2.1.83 → 2.1.119 |
+| Versione CLI corrente | `v2.1.132` (6 mag 2026), range coperto 2.1.83 → 2.1.132 |
 | Modello di default | `claude-sonnet-4-6` |
 | Modello premium | `claude-opus-4-7` con effort `xhigh` (Max plan, da v2.1.111) |
 | Effort levels | `low`, `medium`, `high`, `xhigh`, `max` |
@@ -70,12 +70,16 @@ Annunci recenti rilevanti:
 
 | Plan | Cosa offre |
 |---|---|
-| Pro | Sonnet 4.6 + Opus 4.6, plan/auto mode, `/loop`, 5 routine scheduled/giorno, 3 free `/ultrareview` (entro 5 mag 2026) |
-| Max | Tutto di Pro + Opus 4.7 xhigh, fast mode con $50 credit, 15 routine/giorno, Remote Control |
-| Team | 25 routine/giorno, Code Review GA su PR, managed settings |
-| Enterprise | SSO, RBAC, compliance API, Claude Code Security |
+| Pro | Sonnet 4.6 + Opus 4.6, plan/auto mode, `/loop`, 5 routine scheduled/giorno — **limiti 5-ore raddoppiati**, no peak-hour limits (da 6 mag 2026) |
+| Max | Tutto di Pro + Opus 4.7 xhigh, fast mode con $50 credit, 15 routine/giorno, Remote Control — **limiti 5-ore raddoppiati**, no peak-hour limits (da 6 mag 2026) |
+| Team | 25 routine/giorno, Code Review GA su PR, managed settings — **limiti 5-ore raddoppiati** (da 6 mag 2026) |
+| Enterprise | SSO, RBAC, compliance API, Claude Code Security — **limiti 5-ore raddoppiati** (da 6 mag 2026) |
 
 Fast mode bills sempre come **extra usage** (anche con plan rimanente). 1M context GA su Opus 4.6 / Sonnet 4.6 senza multiplier (Max/Team/Enterprise automatico, Pro abilitabile). Annunciato il [13 marzo 2026](https://claude.com/blog/1m-context-ga).
+
+> **6 maggio 2026**: Anthropic raddoppia i limiti di utilizzo a 5 ore di Claude Code per tutti i piani a pagamento e rimuove i peak-hour limits per Pro e Max. La capacita' aggiuntiva proviene dall'accordo con SpaceX per il data center Colossus 1 (300 MW+, 220.000+ GPU NVIDIA). Fonte: [Anthropic blog](https://www.anthropic.com/news/higher-limits-spacex).
+
+<sub>Aggiornato 2026-05-07 via daily what's new. Fonte: [Anthropic news](https://www.anthropic.com/news/higher-limits-spacex).</sub>
 
 ---
 
@@ -93,6 +97,8 @@ Cronologia compatta (per dettaglio vedi [19-changelog.md](./19-changelog.md)):
 | 14 apr 2026 | **Routines** GA in research preview + Desktop redesign multi-session — [blog](https://claude.com/blog/introducing-routines-in-claude-code) |
 | 16 apr 2026 | Opus 4.7 + xhigh effort + `/effort` slider + `/ultrareview` GA |
 | 23 apr 2026 | v2.1.119 — Vim visual mode, custom themes, hooks `mcp_tool` |
+| 1 mag 2026 | v2.1.126 — `claude project purge`, OAuth paste-in-terminal |
+| 6 mag 2026 | **Limiti 5-ore raddoppiati** per tutti i piani; rimossi peak-hour limits Pro/Max. Accordo SpaceX. v2.1.132 — `CLAUDE_CODE_SESSION_ID`. |
 
 ---
 

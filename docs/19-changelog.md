@@ -359,6 +359,18 @@ Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.
 - Fix OAuth auth retry loop con `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1` (v2.1.123)
 - **`claude project purge [path]`** (v2.1.126, 1 mag 2026): elimina tutto lo stato di Claude Code per un progetto — trascrizioni, task, file history, config. Opzioni: `--dry-run`, `-y/--yes`, `-i/--interactive`, `--all`
 - **OAuth paste-in-terminal** (v2.1.126): `claude auth login` accetta codice OAuth incollato nel terminale — risolve login in WSL2, SSH, container
+- **`CLAUDE_CODE_SESSION_ID`** (v2.1.132, 6 mag 2026): env var passata all'ambiente dei subprocess Bash — permette a hook e script di correlare l'esecuzione alla sessione Claude Code corrente
+- **`CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1`** (v2.1.132): opt-out dal renderer fullscreen; mantiene lo scrollback nativo del terminale
+
+### 6 maggio 2026 — "Code with Claude" SF: raddoppio limiti
+
+Alla conferenza "Code with Claude" di San Francisco (6 maggio 2026), Anthropic annuncia l'accordo con SpaceX per l'accesso al data center Colossus 1 (Memphis, TN) con oltre 300 MW di capacita' e 220.000+ GPU NVIDIA. Effetto immediato su Claude Code:
+
+- **Limiti 5-ore raddoppiati** per Pro, Max, Team e seat-based Enterprise
+- **Peak-hour limits rimossi** per Pro e Max
+- **Rate limits API Opus** aumentati considerevolmente (pay-per-token)
+
+Fonte: [Anthropic blog](https://www.anthropic.com/news/higher-limits-spacex), [CNBC](https://www.cnbc.com/2026/05/06/anthropic-spacex-data-center-capacity.html).
 
 ---
 
@@ -372,7 +384,7 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 
 ---
 
-## 19.9 Tabella versione per versione (v0.2.0 → v2.1.119+)
+## 19.9 Tabella versione per versione (v0.2.0 → v2.1.132)
 
 | Data | Versione | Feature principali |
 |---|---|---|
@@ -455,8 +467,13 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 28 apr 2026 | v2.1.122 | **`/resume` con PR URL**, `ANTHROPIC_BEDROCK_SERVICE_TIER`, fix `/branch` con timeline riavvolte |
 | 29 apr 2026 | v2.1.123 | Fix OAuth auth retry loop con `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1` |
 | 1 mag 2026 | v2.1.126 | **`claude project purge`**, OAuth paste-in-terminal, model picker gateway |
+| 2–3 mag 2026 | v2.1.127–128 | `/color` random, tool count in `/mcp`, archive support `--plugin-dir`, subagent summary improvements |
+| 3 mag 2026 | v2.1.129 | `--plugin-url <url>` flag, `CLAUDE_CODE_FORCE_SYNC_OUTPUT=1`, auto-update Homebrew/WinGet, gateway model discovery opt-in |
+| 6 mag 2026 | v2.1.131 | Fix VS Code extension Windows (hardcoded build path); fix Mantle auth (header `x-api-key`) |
+| 6 mag 2026 | v2.1.132 | `CLAUDE_CODE_SESSION_ID` in Bash subprocess env, `CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1`, "Pasting..." hint clipboard, SIGINT graceful shutdown |
+| 6 mag 2026 | — | **Raddoppio limiti Claude Code**: limiti 5-ore 2x per Pro/Max/Team/Enterprise; rimossi peak-hour limits Pro e Max; aumento rate limits API Opus. Accordo Anthropic-SpaceX (Colossus 1, 300 MW+). [Anthropic blog](https://www.anthropic.com/news/higher-limits-spacex) |
 
-<sub>Aggiornato 2026-05-01 via daily what's new. Fonte: [GitHub Releases v2.1.126](https://github.com/anthropics/claude-code/releases).</sub>
+<sub>Aggiornato 2026-05-07 via daily what's new. Fonte: [GitHub Releases v2.1.132](https://github.com/anthropics/claude-code/releases), [Anthropic news](https://www.anthropic.com/news/higher-limits-spacex).</sub>
 
 ---
 
