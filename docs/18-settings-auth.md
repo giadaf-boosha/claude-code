@@ -87,6 +87,9 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 
 ### Worktree
 - `worktree.symlinkDirectories`, `worktree.sparsePaths`
+- **`worktree.baseRef`** (da v2.1.133): `"fresh"` (default) — il worktree si dirama da `origin/<default>`, garantendo uno stato pulito; `"head"` — si dirama dal `HEAD` locale corrente, utile quando si vuole portare il lavoro in corso nel worktree isolato.
+
+<sub>Aggiornato 2026-05-08 via daily what's new. Fonte: [GitHub Releases v2.1.133](https://github.com/anthropics/claude-code/releases).</sub>
 
 ### Other
 - `agent`, `autoUpdatesChannel`, `minimumVersion`, `companyAnnouncements`

@@ -290,10 +290,48 @@ Slow helper warning se hook >10s. PostToolUse hooks da v2.1.119 includono `durat
 
 - Docs: [`/en/hooks`](https://code.claude.com/docs/en/hooks)
 - Tip Boris su hooks: [@bcherny](https://x.com/bcherny/status/2021701059253874861)
+- `effort.level` + `$CLAUDE_EFFORT` nei hook: v2.1.133 (7 mag 2026)
 - PostToolUse output override universale: v2.1.121 (28 apr 2026)
 - `mcp_tool` hook type: v2.1.118 (23 apr 2026)
 - `PreCompact`: v2.1.106 (13 apr 2026)
 - Conditional `if:`: v2.1.83 (24 mar 2026)
+
+---
+
+## 7.11 Input payload (stdin)
+
+Ogni hook `command` riceve via stdin un JSON con i campi dell'evento. I campi variano per tipo di evento; questi sono comuni a tutti:
+
+```json
+{
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": { ... },
+  "effort": {
+    "level": "high"
+  }
+}
+```
+
+**`effort.level`** (da v2.1.133): stringa con il livello di effort corrente della sessione (`low` | `medium` | `high` | `xhigh` | `max`). Accessibile anche come variabile d'ambiente `$CLAUDE_EFFORT` nel processo hook.
+
+Caso d'uso tipico — linting condizionale sull'effort:
+
+```bash
+#!/bin/bash
+read -r EVENT
+EFFORT=$(echo "$EVENT" | jq -r '.effort.level // "high"')
+if [[ "$EFFORT" == "xhigh" || "$EFFORT" == "max" ]]; then
+  npm run lint:full
+else
+  npm run lint:quick
+fi
+exit 0
+```
+
+Il campo `$CLAUDE_EFFORT` e' lo stesso disponibile in [`${CLAUDE_EFFORT}` nelle skill](./09-skills.md) introdotto in v2.1.120 — ora accessibile uniformemente anche negli hook.
+
+<sub>Aggiornato 2026-05-08 via daily what's new. Fonte: [GitHub Releases v2.1.133](https://github.com/anthropics/claude-code/releases).</sub>
 
 ---
 

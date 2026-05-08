@@ -361,6 +361,8 @@ Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.
 - **OAuth paste-in-terminal** (v2.1.126): `claude auth login` accetta codice OAuth incollato nel terminale — risolve login in WSL2, SSH, container
 - **`CLAUDE_CODE_SESSION_ID`** (v2.1.132, 6 mag 2026): env var passata all'ambiente dei subprocess Bash — permette a hook e script di correlare l'esecuzione alla sessione Claude Code corrente
 - **`CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1`** (v2.1.132): opt-out dal renderer fullscreen; mantiene lo scrollback nativo del terminale
+- **Hook input `effort.level` + `$CLAUDE_EFFORT`** (v2.1.133, 7 mag 2026): ogni hook riceve il livello di effort corrente nel JSON stdin (`effort.level`) e come variabile d'ambiente `$CLAUDE_EFFORT` — abilita logica hook condizionale in base all'effort
+- **`worktree.baseRef`** (v2.1.133): nuova opzione settings (`"fresh"` | `"head"`) che controlla il branch di partenza dei worktree generati dall'harness; `"fresh"` (default) dirama da `origin/<default>`, `"head"` da HEAD locale
 
 ### 6 maggio 2026 — "Code with Claude" SF: raddoppio limiti
 
@@ -472,8 +474,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 6 mag 2026 | v2.1.131 | Fix VS Code extension Windows (hardcoded build path); fix Mantle auth (header `x-api-key`) |
 | 6 mag 2026 | v2.1.132 | `CLAUDE_CODE_SESSION_ID` in Bash subprocess env, `CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1`, "Pasting..." hint clipboard, SIGINT graceful shutdown |
 | 6 mag 2026 | — | **Raddoppio limiti Claude Code**: limiti 5-ore 2x per Pro/Max/Team/Enterprise; rimossi peak-hour limits Pro e Max; aumento rate limits API Opus. Accordo Anthropic-SpaceX (Colossus 1, 300 MW+). [Anthropic blog](https://www.anthropic.com/news/higher-limits-spacex) |
+| 7 mag 2026 | v2.1.133 | **Hook input `effort.level` + `$CLAUDE_EFFORT`**; `worktree.baseRef` (`fresh`\|`head`); `sandbox.bwrapPath`/`socatPath`; `parentSettingsBehavior` managed |
 
-<sub>Aggiornato 2026-05-07 via daily what's new. Fonte: [GitHub Releases v2.1.132](https://github.com/anthropics/claude-code/releases), [Anthropic news](https://www.anthropic.com/news/higher-limits-spacex).</sub>
+<sub>Aggiornato 2026-05-08 via daily what's new. Fonte: [GitHub Releases v2.1.133](https://github.com/anthropics/claude-code/releases).</sub>
 
 ---
 
