@@ -101,6 +101,22 @@ Disable: `disableAutoMode: "disable"` in managed settings.
 - `--enable-auto-mode` non piu' richiesto
 - `/effort` slider interattivo
 
+### Hard deny rules (v2.1.134–136, Week 19)
+
+`settings.autoMode.hard_deny` definisce una lista di azioni bloccate incondizionatamente in auto mode, indipendentemente da eventuali eccezioni "allow" configurate. A differenza di `soft_deny`, le hard deny non possono essere sovrascritte da allow rules.
+
+```json
+{
+  "autoMode": {
+    "hard_deny": ["bash:rm -rf *", "bash:git push --force"]
+  }
+}
+```
+
+Utile per garantire che operazioni distruttive non vengano mai auto-approvate indipendentemente dalla configurazione.
+
+<sub>Aggiornato 2026-05-09 via daily what's new. Fonte: [code.claude.com/docs/en/whats-new/2026-w19](https://code.claude.com/docs/en/whats-new/2026-w19).</sub>
+
 > Fonti: [`/en/auto-mode-config`](https://code.claude.com/docs/en/auto-mode-config), [Auto mode guide claudefa.st](https://claudefa.st/blog/guide/development/auto-mode).
 
 ---

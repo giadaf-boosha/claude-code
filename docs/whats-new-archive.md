@@ -11,6 +11,13 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-08
+
+- **Hook input: `effort.level` + `$CLAUDE_EFFORT`** (v2.1.133): gli hook ricevono il livello di effort corrente nel JSON stdin (`effort.level`) e come variabile d'ambiente `$CLAUDE_EFFORT` — abilita logica condizionale nei hook in base all'effort (es. linting leggero a `low`, security scan completo a `xhigh`). Fonte: [GitHub Releases v2.1.133](https://github.com/anthropics/claude-code/releases). Doc: [07 Hooks](../docs/07-hooks.md), [19 Changelog](../docs/19-changelog.md).
+- **`worktree.baseRef`** (v2.1.133): nuova opzione settings (`"fresh"` | `"head"`) controlla se i worktree generati dall'harness si diramano da `origin/<default>` (clean) o da `HEAD` locale. Fonte: [GitHub Releases v2.1.133](https://github.com/anthropics/claude-code/releases). Doc: [18 Settings & Auth](../docs/18-settings-auth.md), [19 Changelog](../docs/19-changelog.md).
+
+---
+
 ## 2026-05-07
 
 - **Limiti Claude Code raddoppiati** (annuncio 6 mag 2026, "Code with Claude" SF): Anthropic raddoppia i limiti di utilizzo a 5 ore per Pro, Max, Team e seat-based Enterprise; elimina i peak-hour limits per Pro e Max. L'accordo con SpaceX (Colossus 1, 300 MW+, 220K+ GPU NVIDIA) rende la capacita' aggiuntiva disponibile entro il mese. Fonte: [Anthropic blog](https://www.anthropic.com/news/higher-limits-spacex). Doc: [01-snapshot.md](./01-snapshot.md), [19-changelog.md](./19-changelog.md).

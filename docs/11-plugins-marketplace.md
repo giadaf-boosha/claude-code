@@ -92,6 +92,17 @@ claude plugin install formatter@your-org --scope project
 /reload-plugins                    # apply senza restart
 ```
 
+### Caricamento da archivio o URL (da v2.1.128–129)
+
+Per testare un plugin senza aggiungerlo a un marketplace, o per distribuire plugin interni da un artifact store:
+
+```bash
+claude --plugin-dir ./my-plugin.zip                    # archivio .zip locale
+claude --plugin-url https://example.com/my-plugin.zip  # scarica da URL (sessione corrente)
+```
+
+<sub>Aggiornato 2026-05-09 via daily what's new. Fonte: [code.claude.com/docs/en/whats-new/2026-w19](https://code.claude.com/docs/en/whats-new/2026-w19).</sub>
+
 ---
 
 ## 11.4 Scope di installazione
@@ -208,6 +219,7 @@ LSP ufficiali: `typescript-lsp`, `pyright-lsp`, `rust-analyzer-lsp`, `gopls-lsp`
 - Hidden features Boris (mar 2026) — [@bcherny](https://x.com/bcherny/status/2038454336355999749)
 - Plugin executables sul `PATH` di Bash tool (Week 14, v2.1.94)
 - Plugin auto-install deps (v2.1.117)
+- Plugin da `.zip` e URL (Week 19, v2.1.128–129): `--plugin-dir` accetta `.zip`, `--plugin-url` scarica da URL
 
 ---
 
