@@ -239,7 +239,7 @@ Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.
 | 22 mar 2026 | v2.1.81–82 | `--bare` flag, channel servers |
 
 ### Feature flagship della fase
-- **Remote Control GA-track**: connetti sessione locale da claude.ai/code, app iOS, app Android — [@noahzweben](https://x.com/noahzweben/status/2026371260805271615), [@_catwu](https://x.com/_catwu/status/2026421789476401182). Pro rollout: [@noahzweben](https://x.com/noahzweben/status/i/status/2027460961884639663)
+- **Remote Control GA-track**: connetti sessione locale da claude.ai/code, app iOS, app Android — [@noahzweben](https://x.com/noahzweben/status/2026371260805271615), [@_catwu](https://x.com/_catwu/status/2026421789476401182). Pro rollout: [@noahzweben](https://x.com/i/status/2027460961884639663)
 - **Code Review GA** (research preview Team/Enterprise): https://claude.com/blog/code-review — [@bcherny](https://x.com/bcherny/status/2031089411820228645), [@claudeai](https://x.com/claudeai/status/2031088171262554195)
 - **Computer use Desktop**: Claude apre app, click UI — [@claudeai](https://x.com/claudeai/status/2036195789601374705)
 - **Computer use Windows** — [@claudeai](https://x.com/claudeai/status/2039836891508261106)
