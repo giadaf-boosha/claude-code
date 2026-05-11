@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-10
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-05-09
 
 - **Plugin da `.zip` e URL** (v2.1.128–129): `--plugin-dir` accetta ora archivi `.zip` locali oltre alle directory; il nuovo flag `--plugin-url` scarica un plugin da URL per la sessione corrente — utile per testare plugin prima di pubblicarli su marketplace o distribuire plugin interni da uno store di artefatti. Fonte: [code.claude.com — Week 19](https://code.claude.com/docs/en/whats-new/2026-w19). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
