@@ -72,8 +72,12 @@ Custom: in `.claude/agents/*.md` o `~/.claude/agents/*.md` o plugin.
 ```bash
 claude --agent code-reviewer
 claude --agents '[{"name":"adhoc","tools":["Read","Bash"]}]'
-claude agents                  # lista
+claude agents                  # Agent View (lista + stato sessioni)
 ```
+
+> **Agent View** (research preview, da v2.1.139): `claude agents` non mostra piu' solo una lista statica, ma apre una vista unificata di tutte le sessioni Claude Code — in esecuzione, bloccate in attesa di input, o completate. Navigabile da CLI, e' il modo nativo di gestire sessioni multiple in parallelo ("kind of like tmux built for CC" — [@trq212](https://x.com/trq212/status/2053979505346425179)).
+
+<sub>Aggiornato 2026-05-12 via daily what's new. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases).</sub>
 
 ### Dal main agent
 Claude usa il tool **Agent** specificando `subagent_type`:
