@@ -487,16 +487,6 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 
 ---
 
-## 19.8 Post-mortem qualita' (apr 2026)
-
-> "Over the past month, some of you reported Claude Code's quality had slipped. We investigated, and published a post-mortem on the three issues we found. All are fixed in v2.1.116+ and we've reset usage limits for all subscribers." — [@ClaudeDevs](https://x.com/ClaudeDevs/status/2047371123185287223)
-
-> "The issues stemmed from Claude Code and the Agent SDK harness, which also impacted Cowork since it runs on the SDK. The models themselves didn't regress, and the Claude API was not affected." — [@ClaudeDevs](https://x.com/ClaudeDevs/status/2047371124238062069)
-
-Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
-
----
-
 ## 19.10 Note metodologiche
 
 - Le date precise di patch minori sono ricostruite incrociando GitHub releases, claudelog.com, developertoolkit.ai
