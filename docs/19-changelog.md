@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (23 aprile 2026, v2.1.119+). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (11 maggio 2026, v2.1.139). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -364,6 +364,10 @@ Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.
 - **Hook input `effort.level` + `$CLAUDE_EFFORT`** (v2.1.133, 7 mag 2026): ogni hook riceve il livello di effort corrente nel JSON stdin (`effort.level`) e come variabile d'ambiente `$CLAUDE_EFFORT` — abilita logica hook condizionale in base all'effort
 - **`worktree.baseRef`** (v2.1.133): nuova opzione settings (`"fresh"` | `"head"`) che controlla il branch di partenza dei worktree generati dall'harness; `"fresh"` (default) dirama da `origin/<default>`, `"head"` da HEAD locale
 - **`autoMode.hard_deny`** (v2.1.134–136, 8 mag 2026): nuove regole di blocco assoluto per auto mode — azioni matching vengono bloccate incondizionatamente indipendentemente da eccezioni "allow" configurate. Vedi [04 Permessi](./04-modalita-permessi.md).
+- **Agent View** (`claude agents`, research preview, v2.1.139, 11 mag 2026): vista unificata di tutte le sessioni Claude Code — in esecuzione, bloccate su input, o completate. Primo passo verso session management nativo multi-istanza. [@trq212](https://x.com/trq212/status/2053979505346425179).
+- **`/goal [condition]`** (v2.1.139): nuovo slash command che imposta una condizione di completamento; Claude lavora su piu' turni fino al raggiungimento con overlay live tempo/turni/token. Funziona in modalita' interattiva, `-p` e Remote Control. [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2053913638197416198).
+- **Hook exec form `args: string[]`** (v2.1.139): il handler `command` accetta ora `args: string[]` per eseguire il processo direttamente senza shell intermediaria — previene injection, migliora sicurezza hook.
+- **Hook `continueOnBlock`** (v2.1.139): nuova proprieta' su hook PostToolUse — il turno prosegue anche se l'hook ritorna `block`, utile per validazioni non critiche non bloccanti.
 
 ### 6 maggio 2026 — "Code with Claude" SF: raddoppio limiti
 
@@ -387,7 +391,7 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 
 ---
 
-## 19.9 Tabella versione per versione (v0.2.0 → v2.1.136)
+## 19.9 Tabella versione per versione (v0.2.0 → v2.1.139)
 
 | Data | Versione | Feature principali |
 |---|---|---|
@@ -477,8 +481,19 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 6 mag 2026 | — | **Raddoppio limiti Claude Code**: limiti 5-ore 2x per Pro/Max/Team/Enterprise; rimossi peak-hour limits Pro e Max; aumento rate limits API Opus. Accordo Anthropic-SpaceX (Colossus 1, 300 MW+). [Anthropic blog](https://www.anthropic.com/news/higher-limits-spacex) |
 | 7 mag 2026 | v2.1.133 | **Hook input `effort.level` + `$CLAUDE_EFFORT`**; `worktree.baseRef` (`fresh`\|`head`); `sandbox.bwrapPath`/`socatPath`; `parentSettingsBehavior` managed |
 | 8 mag 2026 | v2.1.134–136 | `autoMode.hard_deny` (blocco assoluto in auto mode); fix OAuth parallel sessions (401 race); fix MCP OAuth refresh token race |
+| 11 mag 2026 | v2.1.139 | **Agent View** (`claude agents`, research preview); **`/goal`** command (completamento multi-turno con overlay); hook `args: string[]` exec form (no-shell); hook `continueOnBlock` PostToolUse; `CLAUDE_PROJECT_DIR` per MCP stdio; Remote MCP reconnect retry GA |
 
-<sub>Aggiornato 2026-05-09 via daily what's new. Fonte: [code.claude.com/docs/en/whats-new/2026-w19](https://code.claude.com/docs/en/whats-new/2026-w19).</sub>
+<sub>Aggiornato 2026-05-12 via daily what's new. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases).</sub>
+
+---
+
+## 19.8 Post-mortem qualita' (apr 2026)
+
+> "Over the past month, some of you reported Claude Code's quality had slipped. We investigated, and published a post-mortem on the three issues we found. All are fixed in v2.1.116+ and we've reset usage limits for all subscribers." — [@ClaudeDevs](https://x.com/ClaudeDevs/status/2047371123185287223)
+
+> "The issues stemmed from Claude Code and the Agent SDK harness, which also impacted Cowork since it runs on the SDK. The models themselves didn't regress, and the Claude API was not affected." — [@ClaudeDevs](https://x.com/ClaudeDevs/status/2047371124238062069)
+
+Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 
 ---
 
