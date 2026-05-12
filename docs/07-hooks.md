@@ -84,6 +84,10 @@ Conditional `if:` (da v2.1.83): permette di matchare pattern fini-grained dentro
    - Input via stdin JSON (event payload)
    - Output via stdout (JSON) + exit code
    - Errori su stderr
+   - **`args: string[]`** (exec form, da v2.1.139): se presente, il comando viene eseguito direttamente senza shell intermediaria (no `sh -c`). Evita shell injection, utile per script con argomenti controllati:
+     ```json
+     { "type": "command", "args": ["/path/to/script.sh", "--flag", "value"] }
+     ```
 
 2. **`http`** — POST con JSON body verso URL
    - Header configurabili
@@ -158,7 +162,28 @@ I PostToolUse hook possono sostituire l'output restituito a Claude tramite `hook
 
 Casi d'uso: redact token/secret nell'output Bash prima che il modello li legga, normalizzare JSON verbose, aggiungere metadata di contesto.
 
-<sub>Aggiornato 2026-04-28 via daily what's new. Fonte: [GitHub Releases v2.1.121](https://github.com/anthropics/claude-code/releases).</sub>
+### PostToolUse — `continueOnBlock` (da v2.1.139)
+
+Per default, se un PostToolUse hook ritorna `decision: block`, il turno corrente si interrompe. Con `continueOnBlock: true` nella configurazione dell'hook, il turno prosegue anche dopo il rifiuto — utile per validazioni non critiche che non devono bloccare il flusso.
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [{
+          "type": "command",
+          "command": ".claude/hooks/warn-large-output.sh",
+          "continueOnBlock": true
+        }]
+      }
+    ]
+  }
+}
+```
+
+<sub>Aggiornato 2026-05-12 via daily what's new. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases).</sub>
 
 ---
 
@@ -306,7 +331,7 @@ Ogni hook `command` riceve via stdin un JSON con i campi dell'evento. I campi va
 {
   "hook_event_name": "PreToolUse",
   "tool_name": "Bash",
-  "tool_input": { ... },
+  "tool_input": { },
   "effort": {
     "level": "high"
   }

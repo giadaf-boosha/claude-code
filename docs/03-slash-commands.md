@@ -48,6 +48,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/feedback [report]` (alias `/bug`) | built-in | Submit feedback |
 | `/fewer-permission-prompts` | **Skill** | Scansiona transcript e crea allowlist read-only |
 | `/focus` | built-in | Focus view (solo ultimo prompt + risposta), fullscreen only |
+| `/goal [condition]` | built-in | Imposta una condizione di completamento; Claude lavora su piu' turni fino al raggiungimento, con overlay live tempo/turni/token. Funziona in modalita' interattiva, `-p` e Remote Control (da v2.1.139) |
 | `/heapdump` | built-in | Heap snapshot per troubleshooting memoria |
 | `/help` | built-in | Help comandi |
 | `/hooks` | built-in | View hook configurations (read-only browser) |
@@ -80,6 +81,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/rewind` (alias `/checkpoint`, `/undo`) | built-in | Checkpoint rewind |
 | `/sandbox` | built-in | Toggle [sandbox mode](./04-modalita-permessi.md#sandbox) |
 | `/schedule [description]` (alias `/routines`) | built-in | Gestione [routines](./13-routines-cloud.md) |
+| `/scroll-speed [speed]` | built-in | Regola velocita' scroll rotella mouse con anteprima live (da v2.1.139) |
 | `/security-review` | built-in | Analizza diff per security issues |
 | `/setup-bedrock` / `/setup-vertex` | built-in | Wizard provider |
 | `/simplify [focus]` | **Skill** | 3 review agent paralleli + apply fix |
@@ -102,7 +104,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
 
-<sub>Aggiornato 2026-04-29 via daily what's new. Fonte: [changelog](https://code.claude.com/docs/en/changelog).</sub>
+<sub>Aggiornato 2026-05-12 via daily what's new. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases).</sub>
 
 ---
 
