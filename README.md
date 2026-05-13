@@ -1,20 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 maggio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.139** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
+> Ultimo aggiornamento: **13 maggio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.140** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-05-12)
+## What's new today (2026-05-13)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Agent View** (`claude agents`, research preview, v2.1.139): lista unificata di tutte le sessioni Claude Code — in esecuzione, in attesa di input o completate — navigabile con un unico comando CLI. Fonte: [@trq212](https://x.com/trq212/status/2053979505346425179), [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2053913638197416198). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/goal`** (v2.1.139): nuovo slash command che imposta una condizione di completamento; Claude esegue task su piu' turni fino al raggiungimento, con overlay live di tempo/turni/token. Funziona in modalita' interattiva, `-p` e Remote Control. Fonte: [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2053913638197416198). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Hook exec form + `continueOnBlock`** (v2.1.139): `args: string[]` esegue il comando hook direttamente senza shell (previene injection); `continueOnBlock` su PostToolUse permette al turno di proseguire anche dopo un rifiuto hook. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases). Doc: [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 ---
 
@@ -294,5 +292,3 @@ E come reference:
 ## Licenza & contributi
 
 Questa repo e' una **guida didattica** mantenuta da [Boosha AI](https://boosha.it). I contenuti citano ogni fonte (docs ufficiali, post X) per consentire deep-dive autonomo.
-
-Per segnalazioni / aggiornamenti / aggiunte, apri una issue o PR.

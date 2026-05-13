@@ -11,6 +11,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-12
+
+- **Agent View** (`claude agents`, research preview, v2.1.139): lista unificata di tutte le sessioni Claude Code — in esecuzione, in attesa di input o completate — navigabile con un unico comando CLI. Fonte: [@trq212](https://x.com/trq212/status/2053979505346425179), [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2053913638197416198). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/goal`** (v2.1.139): nuovo slash command che imposta una condizione di completamento; Claude esegue task su piu' turni fino al raggiungimento, con overlay live di tempo/turni/token. Funziona in modalita' interattiva, `-p` e Remote Control. Fonte: [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2053913638197416198). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Hook exec form + `continueOnBlock`** (v2.1.139): `args: string[]` esegue il comando hook direttamente senza shell (previene injection); `continueOnBlock` su PostToolUse permette al turno di proseguire anche dopo un rifiuto hook. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases). Doc: [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-05-11
 
 > Nessuna novita' significativa nelle ultime 24 ore.
