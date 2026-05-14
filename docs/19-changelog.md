@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (11 maggio 2026, v2.1.139). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (13 maggio 2026, v2.1.141). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -482,8 +482,10 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 7 mag 2026 | v2.1.133 | **Hook input `effort.level` + `$CLAUDE_EFFORT`**; `worktree.baseRef` (`fresh`\|`head`); `sandbox.bwrapPath`/`socatPath`; `parentSettingsBehavior` managed |
 | 8 mag 2026 | v2.1.134–136 | `autoMode.hard_deny` (blocco assoluto in auto mode); fix OAuth parallel sessions (401 race); fix MCP OAuth refresh token race |
 | 11 mag 2026 | v2.1.139 | **Agent View** (`claude agents`, research preview); **`/goal`** command (completamento multi-turno con overlay); hook `args: string[]` exec form (no-shell); hook `continueOnBlock` PostToolUse; `CLAUDE_PROJECT_DIR` per MCP stdio; Remote MCP reconnect retry GA |
+| 13 mag 2026 | v2.1.141 | **Rewind "Summarize up to here"**: comprime il context accumulato mantenendo intatti i turni recenti; `claude agents --cwd <path>` filtra session list per directory; `terminalSequence` field negli hook JSON; `CLAUDE_CODE_PLUGIN_PREFER_HTTPS` per clone plugin via HTTPS; `ANTHROPIC_WORKSPACE_ID` per workload identity federation; `/feedback` include ultime 24h/7gg; spinner amber dopo 10s thinking; plugin menu keyboard shortcuts |
+| 13 mag 2026 | — | **Crediti mensili per uso programmatico** (attivi dal 15 giu 2026): i piani paid Claude ottengono un credito mensile dedicato per `claude -p`, Agent SDK, Claude Code GitHub Actions e app terze parti basate sull'Agent SDK. [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388) |
 
-<sub>Aggiornato 2026-05-12 via daily what's new. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases).</sub>
+<sub>Aggiornato 2026-05-14 via daily what's new. Fonte: [GitHub Releases v2.1.141](https://github.com/anthropics/claude-code/releases/tag/v2.1.141), [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388).</sub>
 
 ---
 

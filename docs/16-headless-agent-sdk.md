@@ -198,7 +198,24 @@ Agent SDK v0.2.111+. Errore `thinking.type.enabled` → upgrade.
 
 ---
 
-## 16.5 Risorse
+## 16.5 Crediti mensili per uso programmatico (dal 15 giu 2026)
+
+A partire dal **15 giugno 2026**, i piani paid Claude (Pro, Max, Team, Enterprise) includono un **credito mensile dedicato per uso programmatico**, separato dal credito interattivo. Copre:
+
+- `claude -p` (headless CLI)
+- **Claude Agent SDK** (Python / TypeScript)
+- **Claude Code GitHub Actions**
+- App terze parti basate sull'Agent SDK
+
+Il credito permette di usare Claude Code in pipeline CI/CD, script automatici e app embedding senza consumare il budget interattivo mensile.
+
+> Annunciato il 13 maggio 2026 da [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388).
+
+<sub>Aggiornato 2026-05-14 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388).</sub>
+
+---
+
+## 16.6 Risorse
 
 - Headless docs: https://code.claude.com/docs/en/headless
 - Agent SDK overview: https://code.claude.com/docs/en/agent-sdk/overview

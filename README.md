@@ -1,18 +1,19 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **13 maggio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.140** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
+> Ultimo aggiornamento: **14 maggio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.141** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-05-13)
+## What's new today (2026-05-14)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **Rewind "Summarize up to here"** (v2.1.141, 13 mag): il menu Rewind introduce l'opzione "Summarize up to here" che comprime il contesto accumulato mantenendo intatti i turni piu' recenti — utile per sessioni lunghe dove si vuole liberare context senza perdere il filo attivo. Fonte: [GitHub Releases v2.1.141](https://github.com/anthropics/claude-code/releases/tag/v2.1.141). Doc: [docs/00b-context-engineering.md](./docs/00b-context-engineering.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Crediti mensili dedicati per uso programmatico** (annuncio 13 mag, attivo dal 15 giu): i piani paid Claude ottengono un credito mensile dedicato per uso programmatico — copre `claude -p`, Claude Agent SDK, Claude Code GitHub Actions e app terze parti basate sull'Agent SDK. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388). Doc: [docs/16-headless-agent-sdk.md](./docs/16-headless-agent-sdk.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

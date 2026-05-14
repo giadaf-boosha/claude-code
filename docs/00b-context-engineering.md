@@ -97,8 +97,18 @@ subagent_type: "Explore"
 prompt: "Trova tutti gli endpoint REST nel monorepo e ritorna lista file:linea"
 ```
 
-### 7. `/compact`
-Comprime la conversation in summary, mantenendo solo cio' che serve. Ideale ogni 30-50 turn.
+### 7. `/compact` e Rewind "Summarize up to here"
+`/compact` comprime l'intera conversation in summary, mantenendo solo cio' che serve. Ideale ogni 30-50 turn.
+
+Da v2.1.141 (13 mag 2026) il menu **Rewind** aggiunge l'opzione **"Summarize up to here"**: comprime selettivamente il context accumulato fino al punto scelto, lasciando intatti i turni piu' recenti. Utile quando si vuole alleggerire il context di lunghe sessioni senza perdere il filo dell'ultima interazione.
+
+```
+# Flusso: menu Rewind → "Summarize up to here"
+# → context precedente compresso in summary
+# → turni recenti conservati intatti
+```
+
+<sub>Aggiornato 2026-05-14 via daily what's new. Fonte: [GitHub Releases v2.1.141](https://github.com/anthropics/claude-code/releases/tag/v2.1.141).</sub>
 
 ### 8. `--bare` mode
 Skippa auto-discovery (CLAUDE.md, MCP, plugin, skill). Ideale per CI dove vuoi context minimo riproducibile.

@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-13
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-05-12
 
 - **Agent View** (`claude agents`, research preview, v2.1.139): lista unificata di tutte le sessioni Claude Code — in esecuzione, in attesa di input o completate — navigabile con un unico comando CLI. Fonte: [@trq212](https://x.com/trq212/status/2053979505346425179), [ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2053913638197416198). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
