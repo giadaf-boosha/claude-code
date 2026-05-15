@@ -11,6 +11,13 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-14
+
+- **Rewind "Summarize up to here"** (v2.1.141, 13 mag): il menu Rewind introduce l'opzione "Summarize up to here" che comprime il contesto accumulato mantenendo intatti i turni piu' recenti — utile per sessioni lunghe dove si vuole liberare context senza perdere il filo attivo. Fonte: [GitHub Releases v2.1.141](https://github.com/anthropics/claude-code/releases/tag/v2.1.141). Doc: [docs/00b-context-engineering.md](./docs/00b-context-engineering.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Crediti mensili dedicati per uso programmatico** (annuncio 13 mag, attivo dal 15 giu): i piani paid Claude ottengono un credito mensile dedicato per uso programmatico — copre `claude -p`, Claude Agent SDK, Claude Code GitHub Actions e app terze parti basate sull'Agent SDK. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388). Doc: [docs/16-headless-agent-sdk.md](./docs/16-headless-agent-sdk.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-05-13
 
 > Nessuna novita' significativa nelle ultime 24 ore.

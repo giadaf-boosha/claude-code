@@ -1,19 +1,19 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **14 maggio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.141** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
+> Ultimo aggiornamento: **15 maggio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.142** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-05-14)
+## What's new today (2026-05-15)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Rewind "Summarize up to here"** (v2.1.141, 13 mag): il menu Rewind introduce l'opzione "Summarize up to here" che comprime il contesto accumulato mantenendo intatti i turni piu' recenti — utile per sessioni lunghe dove si vuole liberare context senza perdere il filo attivo. Fonte: [GitHub Releases v2.1.141](https://github.com/anthropics/claude-code/releases/tag/v2.1.141). Doc: [docs/00b-context-engineering.md](./docs/00b-context-engineering.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Crediti mensili dedicati per uso programmatico** (annuncio 13 mag, attivo dal 15 giu): i piani paid Claude ottengono un credito mensile dedicato per uso programmatico — copre `claude -p`, Claude Agent SDK, Claude Code GitHub Actions e app terze parti basate sull'Agent SDK. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388). Doc: [docs/16-headless-agent-sdk.md](./docs/16-headless-agent-sdk.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Fast Mode usa Opus 4.7 di default** (v2.1.142, 14 mag): Fast mode aggiorna il modello base da Opus 4.6 a Opus 4.7; chi vuole tornare a 4.6 usa `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Plugin SKILL.md root come skill** (v2.1.142, 14 mag): plugin con `SKILL.md` nella directory root vengono esposti automaticamente come skill, senza richiedere la struttura `skills/<name>/SKILL.md` — semplifica i plugin mono-skill. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
@@ -180,6 +180,7 @@ E come reference:
 | 16 apr 2026 | **Opus 4.7 + xhigh effort** + `/effort` slider + `/ultrareview` GA | [05](./docs/05-fast-mode-1m-context.md), [15](./docs/15-ultraplan-ultrareview.md) |
 | 23 apr 2026 | v2.1.119 — Vim visual mode, custom themes, hooks `mcp_tool` | [19](./docs/19-changelog.md) |
 | 11 mag 2026 | v2.1.139 — **Agent View** (`claude agents`) + **`/goal`** command + hook exec form + `continueOnBlock` | [08](./docs/08-subagents.md), [03](./docs/03-slash-commands.md), [07](./docs/07-hooks.md) |
+| 14 mag 2026 | v2.1.142 — **Fast Mode → Opus 4.7 di default** + plugin SKILL.md root come skill | [05](./docs/05-fast-mode-1m-context.md), [09](./docs/09-skills.md) |
 
 ---
 

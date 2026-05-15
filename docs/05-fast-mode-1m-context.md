@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
 > 🔧 Operational · 🟡 Intermediate
 
-Tre feature legate ai modelli: il **fast mode** (Opus 4.6 piu' veloce), il **context window da 1M token GA**, e il modello premium **Opus 4.7** con effort `xhigh`.
+Tre feature legate ai modelli: il **fast mode** (Opus 4.7 piu' veloce, da v2.1.142), il **context window da 1M token GA**, e il modello premium **Opus 4.7** con effort `xhigh`.
 
 ## Cosa e' concettualmente
 
@@ -17,14 +17,17 @@ Tre feature legate ai modelli: il **fast mode** (Opus 4.6 piu' veloce), il **con
 
 ---
 
-## 5.1 Fast mode (Opus 4.6, da v2.1.36)
+## 5.1 Fast mode (Opus 4.7 di default, da v2.1.142)
 
 ### Cosa fa
-Routing su un serving path piu' rapido di Opus 4.6 (~2.5x). Stesso modello, stessi pesi, stessa qualita'. Solo latenza ridotta. **Non** e' downgrade su Haiku/Sonnet.
+Routing su un serving path piu' rapido (~2.5x). Stesso modello, stessi pesi, stessa qualita'. Solo latenza ridotta. **Non** e' downgrade su Haiku/Sonnet.
+
+**Da v2.1.142 (14 mag 2026)**, Fast mode usa **Opus 4.7** di default. In precedenza (v2.1.36–v2.1.141) usava Opus 4.6. Per tornare al comportamento precedente: `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`.
 
 ### Annunciato
-- 7 febbraio 2026: [@claudeai](https://x.com/claudeai/status/2020207322124132504)
-- Anthropic l'ha usato internamente per accelerare la velocita' di sviluppo. [@_catwu](https://x.com/_catwu/status/2020207767479546031)
+- 7 febbraio 2026 (lancio con Opus 4.6): [@claudeai](https://x.com/claudeai/status/2020207322124132504)
+- Anthropic l'ha usato internamente per accelerare la velocita' di sviluppo: [@_catwu](https://x.com/_catwu/status/2020207767479546031)
+- 14 maggio 2026 (upgrade a Opus 4.7 di default): [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142)
 
 ### Come si attiva
 ```
@@ -43,28 +46,31 @@ Settings:
 ```
 
 ### Pricing
-- Input: **$30/MTok** (vs $15/MTok base)
-- Output: **$150/MTok** (vs $75/MTok base)
+- Input: **$30/MTok** (vs $15/MTok base Opus 4.6)
+- Output: **$150/MTok** (vs $75/MTok base Opus 4.6)
 - Bills sempre come **extra usage** (anche con plan rimanente)
+- Pricing Opus 4.7 Fast mode: non documentato pubblicamente al 15 mag 2026
 
 ### Limiti / requisiti
-- Solo **Opus 4.6** (NON disponibile su Opus 4.7)
 - Solo Anthropic API (NO Bedrock/Vertex/Foundry)
 - Extra usage abilitato (`/extra-usage`)
 - Team/Enterprise: admin enable
 - v2.1.36+
 
-### Disable
-- `CLAUDE_CODE_DISABLE_FAST_MODE=1`
+### Disable e override
+- `CLAUDE_CODE_DISABLE_FAST_MODE=1` — disabilita Fast mode completamente
+- `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1` — forza Opus 4.6 invece di Opus 4.7
 
 ### Rate-limit fallback
-Automatico a standard Opus 4.6 (icon `↯` grigia in cooldown).
+Automatico a standard (icon `↯` grigia in cooldown).
 
 ### $50 free credit (febbraio 2026)
 Anthropic ha distribuito $50 di extra usage a tutti i Pro/Max. [@_catwu](https://x.com/_catwu/status/2020221012605038985):
 > "claim the credit and toggle on extra usage... Then run `claude update && claude` and `/fast`."
 
 > Fonte: [`/en/fast-mode`](https://code.claude.com/docs/en/fast-mode).
+
+<sub>Aggiornato 2026-05-15 via daily what's new. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142).</sub>
 
 ---
 

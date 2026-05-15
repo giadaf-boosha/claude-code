@@ -40,8 +40,11 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 | User | `~/.claude/skills/<name>/SKILL.md` | Tutti progetti |
 | Project | `.claude/skills/<name>/SKILL.md` | Progetto |
 | Plugin | `<plugin>/skills/<name>/SKILL.md` | Plugin enabled |
+| Plugin root | `<plugin>/SKILL.md` | Plugin enabled (da v2.1.142) |
 
 Plugin skills usano namespace `plugin-name:skill-name`. Override: enterprise > personal > project.
+
+Da v2.1.142, un plugin con `SKILL.md` nella directory root (senza sottocartella `skills/`) viene esposto direttamente come skill — utile per plugin mono-skill che non necessitano della struttura `skills/<name>/`.
 
 ---
 
@@ -207,6 +210,9 @@ Salva in `RELEASE_NOTES.md`.
 - **Description cap 250 → 1,536 char** (v2.1.106, 13 apr 2026)
 - **Hooks in skill frontmatter** (CC 2.1.0)
 - **Plugin auto-install dependencies** (v2.1.117, 22 apr 2026)
+- **Plugin SKILL.md root come skill** (v2.1.142, 14 mag 2026): plugin con `SKILL.md` nella directory root esposto automaticamente come skill, senza richiedere la struttura `skills/<name>/`
+
+<sub>Aggiornato 2026-05-15 via daily what's new. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142).</sub>
 
 ---
 
