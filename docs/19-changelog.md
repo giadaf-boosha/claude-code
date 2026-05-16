@@ -485,8 +485,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 13 mag 2026 | v2.1.141 | **Rewind "Summarize up to here"**: comprime il context accumulato mantenendo intatti i turni recenti; `claude agents --cwd <path>` filtra session list per directory; `terminalSequence` field negli hook JSON; `CLAUDE_CODE_PLUGIN_PREFER_HTTPS` per clone plugin via HTTPS; `ANTHROPIC_WORKSPACE_ID` per workload identity federation; `/feedback` include ultime 24h/7gg; spinner amber dopo 10s thinking; plugin menu keyboard shortcuts |
 | 13 mag 2026 | — | **Crediti mensili per uso programmatico** (attivi dal 15 giu 2026): i piani paid Claude ottengono un credito mensile dedicato per `claude -p`, Agent SDK, Claude Code GitHub Actions e app terze parti basate sull'Agent SDK. [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388) |
 | 14 mag 2026 | v2.1.142 | **Fast mode → Opus 4.7 di default** (era Opus 4.6); override via `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`. **Plugin SKILL.md root come skill**: plugin con `SKILL.md` a livello root esposto automaticamente come skill. Nuovi flag `--add-dir/--settings/--mcp-config/--plugin-dir/--permission-mode/--model/--effort` per `claude agents`. LSP server visibili in `/plugin details`. |
+| 15 mag 2026 | v2.1.143 | **Plugin dependency enforcement**: `claude plugin disable` rifiuta se un plugin dipendente e' attivo (hint copy-pasteable); `claude plugin enable` forza dipendenze transitive. **`worktree.bgIsolation: "none"`**: sessioni background editano la working copy direttamente senza `EnterWorktree`. Sessioni background preservano modello ed effort dopo idle; `/bg` preserva `--mcp-config/--settings/--add-dir/--plugin-dir/--fallback-model`. PowerShell: `-ExecutionPolicy Bypass` di default (opt-out via env var). |
 
-<sub>Aggiornato 2026-05-15 via daily what's new. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142).</sub>
+<sub>Aggiornato 2026-05-16 via daily what's new. Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143).</sub>
 
 ---
 

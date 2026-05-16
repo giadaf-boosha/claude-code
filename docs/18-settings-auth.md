@@ -88,8 +88,21 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 ### Worktree
 - `worktree.symlinkDirectories`, `worktree.sparsePaths`
 - **`worktree.baseRef`** (da v2.1.133): `"fresh"` (default) — il worktree si dirama da `origin/<default>`, garantendo uno stato pulito; `"head"` — si dirama dal `HEAD` locale corrente, utile quando si vuole portare il lavoro in corso nel worktree isolato.
+- **`worktree.bgIsolation`** (da v2.1.143): controlla l'isolamento delle sessioni background rispetto al worktree.
+  - `"worktree"` (default): la sessione background opera in un worktree git dedicato via `EnterWorktree`, isolata dalla working copy principale.
+  - `"none"`: la sessione background edita la working copy direttamente, senza creare un worktree separato — utile per repository dove i worktree non sono pratici (monorepo con submodule, toolchain che non supportano working directory alternative).
 
-<sub>Aggiornato 2026-05-08 via daily what's new. Fonte: [GitHub Releases v2.1.133](https://github.com/anthropics/claude-code/releases).</sub>
+```json
+{
+  "worktree": {
+    "bgIsolation": "none"
+  }
+}
+```
+
+> **Attenzione**: con `"none"`, sessioni background concorrenti operano sulla stessa working copy. Usare solo quando il workflow garantisce serializzazione delle sessioni o quando il repo non supporta git worktree.
+
+<sub>Aggiornato 2026-05-16 via daily what's new. Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143).</sub>
 
 ### Other
 - `agent`, `autoUpdatesChannel`, `minimumVersion`, `companyAnnouncements`

@@ -92,6 +92,25 @@ claude plugin install formatter@your-org --scope project
 /reload-plugins                    # apply senza restart
 ```
 
+### Gestione dipendenze tra plugin (da v2.1.143)
+
+Quando un plugin dipende da un altro, il sistema applica la dipendenza in modo automatico:
+
+- **Disabilitazione**: `claude plugin disable <name>` rifiuta l'operazione se un altro plugin abilitato dipende dal target. L'output include un hint con il comando copy-pasteable per disabilitare l'intera catena nell'ordine corretto.
+- **Abilitazione**: `claude plugin enable <name>` forza l'abilitazione di tutte le dipendenze transitive, senza richiedere passi manuali.
+
+```bash
+# Esempio: formatter-pro dipende da base-lsp
+claude plugin disable base-lsp
+# → Errore: formatter-pro dipende da base-lsp.
+# → Per disabilitare entrambi: claude plugin disable formatter-pro && claude plugin disable base-lsp
+
+claude plugin enable formatter-pro
+# → Abilita automaticamente base-lsp (dipendenza transitiva)
+```
+
+<sub>Aggiornato 2026-05-16 via daily what's new. Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143).</sub>
+
 ### Caricamento da archivio o URL (da v2.1.128–129)
 
 Per testare un plugin senza aggiungerlo a un marketplace, o per distribuire plugin interni da un artifact store:

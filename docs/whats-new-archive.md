@@ -11,6 +11,13 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-15
+
+- **Fast Mode usa Opus 4.7 di default** (v2.1.142, 14 mag): Fast mode aggiorna il modello base da Opus 4.6 a Opus 4.7; chi vuole tornare a 4.6 usa `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Plugin SKILL.md root come skill** (v2.1.142, 14 mag): plugin con `SKILL.md` nella directory root vengono esposti automaticamente come skill, senza richiedere la struttura `skills/<name>/SKILL.md` — semplifica i plugin mono-skill. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-05-14
 
 - **Rewind "Summarize up to here"** (v2.1.141, 13 mag): il menu Rewind introduce l'opzione "Summarize up to here" che comprime il contesto accumulato mantenendo intatti i turni piu' recenti — utile per sessioni lunghe dove si vuole liberare context senza perdere il filo attivo. Fonte: [GitHub Releases v2.1.141](https://github.com/anthropics/claude-code/releases/tag/v2.1.141). Doc: [docs/00b-context-engineering.md](./docs/00b-context-engineering.md), [docs/19-changelog.md](./docs/19-changelog.md).
