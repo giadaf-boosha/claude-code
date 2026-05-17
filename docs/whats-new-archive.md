@@ -11,6 +11,13 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-16
+
+- **Plugin dependency enforcement** (v2.1.143, 15 mag): `claude plugin disable` rifiuta la disabilitazione quando un altro plugin abilitato dipende dal target, mostrando un hint copy-pasteable con la catena completa da disabilitare; `claude plugin enable` forza l'abilitazione delle dipendenze transitive. Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`worktree.bgIsolation: "none"`** (v2.1.143, 15 mag): nuova opzione settings che permette alle sessioni background di editare la working copy direttamente senza `EnterWorktree` — per repository dove i worktree git non sono pratici (monorepo con submodule, toolchain non compatibili). Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-05-15
 
 - **Fast Mode usa Opus 4.7 di default** (v2.1.142, 14 mag): Fast mode aggiorna il modello base da Opus 4.6 a Opus 4.7; chi vuole tornare a 4.6 usa `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
