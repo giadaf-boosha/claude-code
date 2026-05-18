@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-17
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-05-16
 
 - **Plugin dependency enforcement** (v2.1.143, 15 mag): `claude plugin disable` rifiuta la disabilitazione quando un altro plugin abilitato dipende dal target, mostrando un hint copy-pasteable con la catena completa da disabilitare; `claude plugin enable` forza l'abilitazione delle dipendenze transitive. Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
