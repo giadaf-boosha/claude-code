@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-18
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-05-17
 
 > Nessuna novita' significativa nelle ultime 24 ore.
