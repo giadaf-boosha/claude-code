@@ -76,8 +76,17 @@ claude agents                  # Agent View (lista + stato sessioni)
 ```
 
 > **Agent View** (research preview, da v2.1.139): `claude agents` non mostra piu' solo una lista statica, ma apre una vista unificata di tutte le sessioni Claude Code — in esecuzione, bloccate in attesa di input, o completate. Navigabile da CLI, e' il modo nativo di gestire sessioni multiple in parallelo ("kind of like tmux built for CC" — [@trq212](https://x.com/trq212/status/2053979505346425179)).
+>
+> Da v2.1.145 il flag `--json` restituisce la stessa lista in JSON su stdout — utile per scripting, integrazione con tmux-resurrect, status bar custom e qualsiasi automazione che deve interrogare lo stato delle sessioni attive:
+>
+> ```bash
+> claude agents --json          # array JSON di tutte le sessioni live
+> claude agents --json | jq '.[] | select(.status=="waiting")'
+> ```
+>
+> Il tab title mostra anche il count dei messaggi in attesa; gli span OTEL `claude_code.tool` includono ora `agent_id` e `parent_agent_id` per tracing gerarchico.
 
-<sub>Aggiornato 2026-05-12 via daily what's new. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases).</sub>
+<sub>Aggiornato 2026-05-20 via daily what's new. Fonte: [GitHub Releases v2.1.145](https://github.com/anthropics/claude-code/releases/tag/v2.1.145).</sub>
 
 ### Dal main agent
 Claude usa il tool **Agent** specificando `subagent_type`:

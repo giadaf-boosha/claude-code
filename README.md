@@ -8,11 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-05-19)
+## What's new today (2026-05-20)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **`claude agents --json`** (v2.1.145, 19 mag): il flag `--json` su `claude agents` restituisce la lista delle sessioni live in formato JSON — abilita scripting, integrazione tmux-resurrect, status bar custom e automazioni che interrogano lo stato degli agenti attivi. Fonte: [GitHub Releases v2.1.145](https://github.com/anthropics/claude-code/releases/tag/v2.1.145). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/resume` per sessioni background** (v2.1.144, 19 mag): `/resume` include ora le sessioni avviate via `claude --bg` o Agent View — appaiono nella lista con tag `bg`, chiudendo il gap tra sessioni interattive e background nella navigazione storica. Fonte: [GitHub Releases v2.1.144](https://github.com/anthropics/claude-code/releases/tag/v2.1.144). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/plugin` pre-install preview** (v2.1.145, 19 mag): le tab Discover e Browse del marketplace mostrano comandi, agenti, skill, hook e server MCP/LSP forniti da un plugin **prima** dell'installazione — permette di valutare l'impatto senza committere. Fonte: [GitHub Releases v2.1.145](https://github.com/anthropics/claude-code/releases/tag/v2.1.145). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

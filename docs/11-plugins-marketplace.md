@@ -111,6 +111,28 @@ claude plugin enable formatter-pro
 
 <sub>Aggiornato 2026-05-16 via daily what's new. Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143).</sub>
 
+### Pre-install preview (da v2.1.145)
+
+Prima di installare un plugin, le tab **Discover** e **Browse** del marketplace (`/plugin`) mostrano in anteprima tutto cio' che il plugin portera' nell'ambiente:
+
+- Slash command aggiunti
+- Agenti definiti
+- Skill disponibili
+- Hook registrati
+- Server MCP e LSP configurati
+
+Questa visibilita' permette di valutare l'impatto di un plugin — permessi, tool, surface esposta — senza committere l'installazione.
+
+```
+/plugin              # apre UI tabbed
+# → tab Discover: sfoglia marketplace con anteprima per ogni plugin
+# → tab Browse: cerca plugin; click per vedere i dettagli prima di /plugin install
+```
+
+Il campo "Last updated" e' ora visibile anche nelle tab Browse/Discover.
+
+<sub>Aggiornato 2026-05-20 via daily what's new. Fonte: [GitHub Releases v2.1.145](https://github.com/anthropics/claude-code/releases/tag/v2.1.145).</sub>
+
 ### Caricamento da archivio o URL (da v2.1.128–129)
 
 Per testare un plugin senza aggiungerlo a un marketplace, o per distribuire plugin interni da un artifact store:

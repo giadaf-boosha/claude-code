@@ -76,7 +76,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/remote-control` (alias `/rc`) | built-in | Espone sessione a [Remote Control](./17-ide-surface.md#remote-control) |
 | `/remote-env` | built-in | Configura env remote per `--remote` |
 | `/rename [name]` | built-in | Rinomina sessione |
-| `/resume [session\|PR-URL]` (alias `/continue`) | built-in | Riprende sessione per ID/nome; accetta URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) per trovare la sessione che ha creato quella PR (da v2.1.122) |
+| `/resume [session\|PR-URL]` (alias `/continue`) | built-in | Riprende sessione per ID/nome; accetta URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) per trovare la sessione che ha creato quella PR (da v2.1.122). Da v2.1.144 include anche le sessioni background avviate via `claude --bg` o Agent View (mostrate con tag `bg` nella lista) |
 | `/review [PR]` | built-in | Code review locale (cf. `/ultrareview` per cloud) |
 | `/rewind` (alias `/checkpoint`, `/undo`) | built-in | Checkpoint rewind |
 | `/sandbox` | built-in | Toggle [sandbox mode](./04-modalita-permessi.md#sandbox) |
