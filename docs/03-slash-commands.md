@@ -84,7 +84,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/scroll-speed [speed]` | built-in | Regola velocita' scroll rotella mouse con anteprima live (da v2.1.139) |
 | `/security-review` | built-in | Analizza diff per security issues |
 | `/setup-bedrock` / `/setup-vertex` | built-in | Wizard provider |
-| `/simplify [focus]` | **Skill** | 3 review agent paralleli + apply fix |
+| `/code-review [focus] [effort]` | **Skill** | 3 review agent paralleli + apply fix; `effort` opzionale (es. `high`) per modulare la profondita' dell'analisi (da v2.1.146, ex `/simplify`) |
 | `/skills` | built-in | Lista skills, `t` per sort by token |
 | `/status` | built-in | Settings → Status (version, model, account) |
 | `/statusline` | built-in | Configura status line |
@@ -104,7 +104,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
 
-<sub>Aggiornato 2026-05-12 via daily what's new. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases).</sub>
+<sub>Aggiornato 2026-05-21 via daily what's new. Fonte: [GitHub Releases v2.1.146](https://github.com/anthropics/claude-code/releases/tag/v2.1.146).</sub>
 
 ---
 
@@ -114,6 +114,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 |---|---|---|
 | `/vim` | rimosso v2.1.92 | `/config` → Editor mode (Vim ora con visual mode `v`/`V` da v2.1.118) |
 | `/pr-comments` | rimosso v2.1.91 | Chiedere a Claude direttamente sui commenti PR |
+| `/simplify` | rinominato v2.1.146 | `/code-review` |
 
 ---
 
