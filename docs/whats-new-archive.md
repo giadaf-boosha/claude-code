@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-21
+
+- **`/code-review` (ex `/simplify`)** (v2.1.146, 21 mag): `/simplify` rinominato `/code-review` con parametro effort opzionale (es. `/code-review high`) — il nuovo nome riflette meglio l'azione (3 review agent paralleli + apply fix) e allinea il comando all'interfaccia `/effort`. Il vecchio nome non e' piu' valido. Fonte: [GitHub Releases v2.1.146](https://github.com/anthropics/claude-code/releases/tag/v2.1.146). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-05-20
 
 - **`claude agents --json`** (v2.1.145, 19 mag): il flag `--json` su `claude agents` restituisce la lista delle sessioni live in formato JSON — abilita scripting, integrazione tmux-resurrect, status bar custom e automazioni che interrogano lo stato degli agenti attivi. Fonte: [GitHub Releases v2.1.145](https://github.com/anthropics/claude-code/releases/tag/v2.1.145). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).

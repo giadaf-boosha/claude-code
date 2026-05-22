@@ -85,8 +85,10 @@ claude agents                  # Agent View (lista + stato sessioni)
 > ```
 >
 > Il tab title mostra anche il count dei messaggi in attesa; gli span OTEL `claude_code.tool` includono ora `agent_id` e `parent_agent_id` per tracing gerarchico.
+>
+> **Sessioni pinnate** (da v2.1.147): `Ctrl+T` nella Agent View pinna una sessione. Le sessioni pinnate restano attive anche quando idle (non vengono terminate per inattivita') e si riavviano automaticamente per applicare gli aggiornamenti di Claude Code. Sotto pressione di memoria, vengono scaricate solo dopo le sessioni non pinnate. Utile per agent di lunga durata o sessioni di monitoring che non devono essere interrotte.
 
-<sub>Aggiornato 2026-05-20 via daily what's new. Fonte: [GitHub Releases v2.1.145](https://github.com/anthropics/claude-code/releases/tag/v2.1.145).</sub>
+<sub>Aggiornato 2026-05-22 via daily what's new. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147).</sub>
 
 ### Dal main agent
 Claude usa il tool **Agent** specificando `subagent_type`:

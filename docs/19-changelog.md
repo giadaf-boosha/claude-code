@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (13 maggio 2026, v2.1.141). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (22 maggio 2026, v2.1.148). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -489,8 +489,10 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 19 mag 2026 | v2.1.144 | **`/resume` sessioni background**: `/resume` include ora le sessioni avviate via `claude --bg` o Agent View (tag `bg` nella lista). **`/model` per-session**: cambia modello solo per la sessione corrente; `d` per impostare il default per le nuove sessioni. MCP `tools/list` paginato: ritorna tutte le pagine, non solo la prima. Elapsed duration nelle notifiche di completamento background. `/plugin` browse/discover mostra data ultimo aggiornamento. |
 | 19 mag 2026 | v2.1.145 | **`claude agents --json`**: output JSON della lista sessioni live per scripting, tmux-resurrect, status bar. **`/plugin` pre-install preview**: tab Discover/Browse mostrano comandi, agenti, skill, hook, server MCP/LSP prima dell'installazione. `agent_id` e `parent_agent_id` negli span OTEL `claude_code.tool`. Status line JSON include info GitHub repo e PR. Mouse hover/click su slash command e @-mention in fullscreen. Hook Stop/SubagentStop include `background_tasks` e `session_crons`. |
 | 21 mag 2026 | v2.1.146 | **`/simplify` → `/code-review`**: command rinominato con parametro effort opzionale (es. `/code-review high`); il vecchio nome non e' piu' valido. Auto mode non sopprime piu' `AskUserQuestion` quando esplicitamente richiesto da utente o skill. |
+| 21 mag 2026 | v2.1.147 | **`/code-review --comment`**: nuovo flag pubblica i risultati come commenti inline sulla PR GitHub corrente. **Sessioni background pinnate** (`Ctrl+T` in Agent View): restano attive idle, si riavviano automaticamente per applicare update CC, vengono scaricate per ultime sotto pressione di memoria. Auto-updater con retry su errori di rete e reporting dettagliato. Diff rendering migliorato per file grandi. |
+| 22 mag 2026 | v2.1.148 | Fix: Bash tool restituiva exit code 127 su ogni comando per alcuni utenti (regressione da v2.1.147). |
 
-<sub>Aggiornato 2026-05-21 via daily what's new. Fonte: [GitHub Releases v2.1.146](https://github.com/anthropics/claude-code/releases/tag/v2.1.146).</sub>
+<sub>Aggiornato 2026-05-22 via daily what's new. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147).</sub>
 
 ---
 

@@ -1,18 +1,19 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **21 maggio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.146** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
+> Ultimo aggiornamento: **22 maggio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.148** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-05-21)
+## What's new today (2026-05-22)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/code-review` (ex `/simplify`)** (v2.1.146, 21 mag): `/simplify` rinominato `/code-review` con parametro effort opzionale (es. `/code-review high`) — il nuovo nome riflette meglio l'azione (3 review agent paralleli + apply fix) e allinea il comando all'interfaccia `/effort`. Il vecchio nome non e' piu' valido. Fonte: [GitHub Releases v2.1.146](https://github.com/anthropics/claude-code/releases/tag/v2.1.146). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/code-review --comment`** (v2.1.147, 21 mag): il flag `--comment` su `/code-review` pubblica i risultati della review come commenti inline direttamente su GitHub PR — chiude il loop tra analisi locale e feedback remoto senza uscire dal terminale. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Sessioni background pinnate** (v2.1.147, 21 mag): le sessioni pinnate con `Ctrl+T` in `claude agents` restano attive anche quando idle e si riavviano automaticamente per applicare gli aggiornamenti di Claude Code — utile per agent di lunga durata che non devono essere interrotti da inattivita'. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

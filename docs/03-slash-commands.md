@@ -84,7 +84,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/scroll-speed [speed]` | built-in | Regola velocita' scroll rotella mouse con anteprima live (da v2.1.139) |
 | `/security-review` | built-in | Analizza diff per security issues |
 | `/setup-bedrock` / `/setup-vertex` | built-in | Wizard provider |
-| `/code-review [focus] [effort]` | **Skill** | 3 review agent paralleli + apply fix; `effort` opzionale (es. `high`) per modulare la profondita' dell'analisi (da v2.1.146, ex `/simplify`) |
+| `/code-review [focus] [effort] [--comment]` | **Skill** | 3 review agent paralleli + apply fix; `effort` opzionale (es. `high`) per modulare la profondita'; `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente (da v2.1.146, ex `/simplify`; `--comment` da v2.1.147) |
 | `/skills` | built-in | Lista skills, `t` per sort by token |
 | `/status` | built-in | Settings → Status (version, model, account) |
 | `/statusline` | built-in | Configura status line |
@@ -104,7 +104,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
 
-<sub>Aggiornato 2026-05-21 via daily what's new. Fonte: [GitHub Releases v2.1.146](https://github.com/anthropics/claude-code/releases/tag/v2.1.146).</sub>
+<sub>Aggiornato 2026-05-22 via daily what's new. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147).</sub>
 
 ---
 
