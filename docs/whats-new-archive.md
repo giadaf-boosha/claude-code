@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-23
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-05-22
 
 - **`/code-review --comment`** (v2.1.147, 21 mag): il flag `--comment` su `/code-review` pubblica i risultati della review come commenti inline direttamente su GitHub PR — chiude il loop tra analisi locale e feedback remoto senza uscire dal terminale. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
