@@ -23,7 +23,7 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 | Skill | Funzione |
 |---|---|
-| `/simplify [focus]` | 3 review agent paralleli + apply fix |
+| `/simplify [focus]` | Alias di `/code-review --fix` (da v2.1.152; era rimosso in v2.1.146, reintrodotto come alias) |
 | `/batch <instruction>` | Refactor large-scale: 5-30 unit, 1 worktree+PR per agente |
 | `/debug [description]` | Debug logging mid-session |
 | `/loop` | Re-run prompt (vedi [14](./14-loop-monitor.md)) |
@@ -60,6 +60,7 @@ arguments: [issue, branch]          # named positional args (string o list)
 disable-model-invocation: false     # se true, solo user invoke
 user-invocable: true                # se false, solo Claude invoke
 allowed-tools: "Bash(git *) Read"   # pre-approved tools (list o string)
+disallowed-tools: "Bash Write Edit" # tool rimossi dal modello durante l'esecuzione (da v2.1.152)
 model: sonnet|opus|inherit          # override modello
 effort: low|medium|high|xhigh|max   # override effort
 context: fork                       # esegue in subagent
@@ -74,7 +75,7 @@ shell: bash|powershell              # shell per !`...` blocks
 Substitution: `$ARGUMENTS`, `$ARGUMENTS[0]` / `$0`, `$1`, `$name`.
 Env: `${CLAUDE_SESSION_ID}`, `${CLAUDE_SKILL_DIR}`, `${CLAUDE_EFFORT}` (livello effort corrente: `low|medium|high|xhigh|max`).
 
-<sub>Aggiornato 2026-04-29 via daily what's new. Fonte: [changelog](https://code.claude.com/docs/en/changelog).</sub>
+<sub>Aggiornato 2026-05-27 via daily what's new. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152).</sub>
 
 ## Dynamic context injection
 Inline: !`gh pr diff`
@@ -95,13 +96,21 @@ npm --version
 
 ---
 
-## 9.5 Allowed-tools
+## 9.5 Allowed-tools e Disallowed-tools
 
-Pre-approva tool senza prompt. **Non restringe** (per restringere usa permission deny rules).
+`allowed-tools` pre-approva tool senza prompt. **Non restringe** (per restringere usa permission deny rules).
 
 ```yaml
 allowed-tools: "Bash(git *) Read(./.env) Edit"
 ```
+
+`disallowed-tools` (da v2.1.152) rimuove tool specifici dal modello per tutta la durata dell'esecuzione della skill — il modello non li vede nemmeno come opzione. Utile per isolare skill read-only o skill di analisi che non devono modificare file:
+
+```yaml
+disallowed-tools: "Bash Write Edit NotebookEdit"
+```
+
+La combinazione tipica: `allowed-tools` per pre-approvare i tool necessari, `disallowed-tools` per escludere quelli non pertinenti.
 
 Vedi sintassi permessi in [18 Settings & Auth](./18-settings-auth.md).
 
@@ -113,6 +122,8 @@ Lavorando in `packages/frontend/`, anche `packages/frontend/.claude/skills/` vie
 
 ### Live change detection
 Aggiungere/modificare/rimuovere skill in `~/.claude/skills/`, project `.claude/skills/`, o `--add-dir` directory: **effetto immediato** senza restart (hot reload, da v2.1.0).
+
+Da v2.1.152, il comando `/reload-skills` riscansiona esplicitamente tutte le directory skill nella sessione corrente — utile dopo aver installato un plugin via `claude plugin install` o copiato file SKILL.md in path non monitorati automaticamente. I `SessionStart` hook possono restituire `reloadSkills: true` per lo stesso effetto all'avvio.
 
 ---
 

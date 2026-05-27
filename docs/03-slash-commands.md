@@ -73,6 +73,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/recap` | built-in | One-line summary on demand |
 | `/release-notes` | built-in | Changelog interattivo |
 | `/reload-plugins` | built-in | Reload plugins live (no restart) |
+| `/reload-skills` | built-in | Ricarica le directory skill nella sessione corrente senza riavvio (da v2.1.152) |
 | `/remote-control` (alias `/rc`) | built-in | Espone sessione a [Remote Control](./17-ide-surface.md#remote-control) |
 | `/remote-env` | built-in | Configura env remote per `--remote` |
 | `/rename [name]` | built-in | Rinomina sessione |
@@ -84,7 +85,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/scroll-speed [speed]` | built-in | Regola velocita' scroll rotella mouse con anteprima live (da v2.1.139) |
 | `/security-review` | built-in | Analizza diff per security issues |
 | `/setup-bedrock` / `/setup-vertex` | built-in | Wizard provider |
-| `/code-review [focus] [effort] [--comment]` | **Skill** | 3 review agent paralleli + apply fix; `effort` opzionale (es. `high`) per modulare la profondita'; `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente (da v2.1.146, ex `/simplify`; `--comment` da v2.1.147) |
+| `/code-review [focus] [effort] [--comment\|--fix]` | **Skill** | 3 review agent paralleli; `effort` opzionale (es. `high`); `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente; `--fix` applica automaticamente i suggerimenti al working tree (alias: `/simplify`). (da v2.1.146; `--comment` v2.1.147; `--fix` e alias `/simplify` da v2.1.152) |
 | `/skills` | built-in | Lista skills, `t` per sort by token |
 | `/status` | built-in | Settings → Status (version, model, account) |
 | `/statusline` | built-in | Configura status line |
@@ -104,7 +105,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
 
-<sub>Aggiornato 2026-05-22 via daily what's new. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147).</sub>
+<sub>Aggiornato 2026-05-27 via daily what's new. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152).</sub>
 
 ---
 
@@ -114,7 +115,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 |---|---|---|
 | `/vim` | rimosso v2.1.92 | `/config` → Editor mode (Vim ora con visual mode `v`/`V` da v2.1.118) |
 | `/pr-comments` | rimosso v2.1.91 | Chiedere a Claude direttamente sui commenti PR |
-| `/simplify` | rinominato v2.1.146 | `/code-review` |
+| `/simplify` | alias da v2.1.152 | `/code-review --fix` (era rinominato in v2.1.146, reintrodotto come alias in v2.1.152) |
 
 ---
 

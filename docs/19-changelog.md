@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (22 maggio 2026, v2.1.148). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (27 maggio 2026, v2.1.152). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -491,8 +491,10 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 21 mag 2026 | v2.1.146 | **`/simplify` → `/code-review`**: command rinominato con parametro effort opzionale (es. `/code-review high`); il vecchio nome non e' piu' valido. Auto mode non sopprime piu' `AskUserQuestion` quando esplicitamente richiesto da utente o skill. |
 | 21 mag 2026 | v2.1.147 | **`/code-review --comment`**: nuovo flag pubblica i risultati come commenti inline sulla PR GitHub corrente. **Sessioni background pinnate** (`Ctrl+T` in Agent View): restano attive idle, si riavviano automaticamente per applicare update CC, vengono scaricate per ultime sotto pressione di memoria. Auto-updater con retry su errori di rete e reporting dettagliato. Diff rendering migliorato per file grandi. |
 | 22 mag 2026 | v2.1.148 | Fix: Bash tool restituiva exit code 127 su ogni comando per alcuni utenti (regressione da v2.1.147). |
+| 22 mag 2026 | v2.1.149 | `/usage` breakdown per categoria (skills, subagent, plugin, MCP server); `/diff` detail view scrollable con tastiera; `allowAllClaudeAiMcps` setting per Enterprise MCP cloud |
+| 27 mag 2026 | **v2.1.152** | **`/reload-skills`** built-in; **`MessageDisplay` hook event** (trasforma/nasconde messaggi assistente); `/code-review --fix` applica review al working tree + alias `/simplify`; `disallowed-tools` in frontmatter skill; `--fallback-model` auto-switch; SessionStart hook: `reloadSkills` e `sessionTitle` |
 
-<sub>Aggiornato 2026-05-22 via daily what's new. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147).</sub>
+<sub>Aggiornato 2026-05-27 via daily what's new. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152).</sub>
 
 ---
 

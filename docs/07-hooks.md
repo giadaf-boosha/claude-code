@@ -47,6 +47,7 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 | `PreCompact` (da v2.1.106) | Prima di compaction | Si' |
 | `PostCompact` | Dopo compaction | No |
 | `Elicitation` / `ElicitationResult` | MCP server input request | Si' |
+| `MessageDisplay` | Messaggio assistente prima della visualizzazione (da v2.1.152) | Si' |
 
 ---
 
@@ -183,7 +184,48 @@ Per default, se un PostToolUse hook ritorna `decision: block`, il turno corrente
 }
 ```
 
-<sub>Aggiornato 2026-05-12 via daily what's new. Fonte: [GitHub Releases v2.1.139](https://github.com/anthropics/claude-code/releases).</sub>
+### MessageDisplay (da v2.1.152)
+
+Il nuovo evento `MessageDisplay` intercetta ogni messaggio dell'assistente prima che venga visualizzato. Permette di trasformare il testo o nasconderlo completamente — utile per redact di token/segreti, formatting custom, logging selettivo.
+
+```json
+{
+  "hookSpecificOutput": {
+    "hookEventName": "MessageDisplay",
+    "suppressOutput": true
+  }
+}
+```
+
+Per trasformare il testo invece di nasconderlo, ometti `suppressOutput` e ritorna `transformedContent`:
+
+```json
+{
+  "hookSpecificOutput": {
+    "hookEventName": "MessageDisplay",
+    "transformedContent": "testo trasformato o filtrato"
+  }
+}
+```
+
+### SessionStart — `reloadSkills` e `sessionTitle` (da v2.1.152)
+
+I `SessionStart` hook possono restituire due output aggiuntivi che agiscono sulla sessione appena avviata:
+
+```json
+{
+  "hookSpecificOutput": {
+    "hookEventName": "SessionStart",
+    "reloadSkills": true,
+    "sessionTitle": "Titolo custom della sessione"
+  }
+}
+```
+
+- `reloadSkills: true`: riscansiona le directory skill nella sessione corrente — utile per SessionStart hook che installano plugin o copiano file SKILL.md prima dell'inizio della sessione (equivalente a invocare `/reload-skills`).
+- `sessionTitle`: imposta il titolo della sessione visibile in Agent View (`claude agents`) e nel tab del terminale.
+
+<sub>Aggiornato 2026-05-27 via daily what's new. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152).</sub>
 
 ---
 
