@@ -1,21 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **27 maggio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.152** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
+> Ultimo aggiornamento: **28 maggio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.153** · Modello default **Sonnet 4.6** · Premium **Opus 4.7 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-05-27)
+## What's new today (2026-05-28)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/reload-skills`** (v2.1.152, 27 mag): nuovo slash command built-in ricarica le directory skill nella sessione corrente senza riavvio — utile dopo installazione di nuovi plugin o aggiornamento di skill locali; i `SessionStart` hook possono restituire `reloadSkills: true` per lo stesso effetto via codice, e `sessionTitle` per impostare il titolo della sessione. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`MessageDisplay` hook event** (v2.1.152, 27 mag): nuovo evento hook che intercetta i messaggi dell'assistente prima della visualizzazione — permette di trasformare il testo (redact, formatting, traduzione) o nasconderlo completamente. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152). Doc: [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/code-review --fix`** (v2.1.152, 27 mag): nuovo flag applica automaticamente i suggerimenti di review (refactoring, semplificazioni, efficienze) al working tree; `/simplify` torna come alias di `/code-review --fix`, chiudendo il ciclo iniziato con la rinomina in v2.1.146. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`disallowed-tools` in frontmatter skill** (v2.1.152, 27 mag): le skill possono dichiarare nel frontmatter quali tool rimuovere dal modello durante la propria esecuzione — aumenta il focus del modello e riduce il rischio di uso accidentale di tool non pertinenti. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 ---
 
