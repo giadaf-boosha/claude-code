@@ -87,8 +87,10 @@ claude agents                  # Agent View (lista + stato sessioni)
 > Il tab title mostra anche il count dei messaggi in attesa; gli span OTEL `claude_code.tool` includono ora `agent_id` e `parent_agent_id` per tracing gerarchico.
 >
 > **Sessioni pinnate** (da v2.1.147): `Ctrl+T` nella Agent View pinna una sessione. Le sessioni pinnate restano attive anche quando idle (non vengono terminate per inattivita') e si riavviano automaticamente per applicare gli aggiornamenti di Claude Code. Sotto pressione di memoria, vengono scaricate solo dopo le sessioni non pinnate. Utile per agent di lunga durata o sessioni di monitoring che non devono essere interrotte.
+>
+> **Esecuzione comandi in background** (da v2.1.154): digitare `! <comando>` in Agent View esegue il comando shell in una nuova sessione background senza uscire dall'interfaccia — equivalente CLI: `claude --bg --exec '<comando>'`.
 
-<sub>Aggiornato 2026-05-22 via daily what's new. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147).</sub>
+<sub>Aggiornato 2026-05-29 via daily what's new. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154).</sub>
 
 ### Dal main agent
 Claude usa il tool **Agent** specificando `subagent_type`:
@@ -197,6 +199,7 @@ Tip Boris:
 5. **`context: fork` su skill** quando la skill richiede esplorazione lunga e non vuoi che inquini la conversation principale.
 6. **Skills preload nel subagent**: usa `skills: [...]` nel frontmatter per avere domain knowledge gia' caricata.
 7. **Parallel spawn** quando i task sono indipendenti: 1 messaggio con N tool call all'`Agent` tool.
+8. **`/workflows` per orchestrazione massiva**: descrivi il task in linguaggio naturale, Claude genera e lancia un workflow con decine/centinaia di agenti background — nessuna definizione manuale dei subagent richiesta (da v2.1.154).
 
 ---
 

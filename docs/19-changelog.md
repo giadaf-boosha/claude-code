@@ -493,8 +493,11 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 22 mag 2026 | v2.1.148 | Fix: Bash tool restituiva exit code 127 su ogni comando per alcuni utenti (regressione da v2.1.147). |
 | 22 mag 2026 | v2.1.149 | `/usage` breakdown per categoria (skills, subagent, plugin, MCP server); `/diff` detail view scrollable con tastiera; `allowAllClaudeAiMcps` setting per Enterprise MCP cloud |
 | 27 mag 2026 | **v2.1.152** | **`/reload-skills`** built-in; **`MessageDisplay` hook event** (trasforma/nasconde messaggi assistente); `/code-review --fix` applica review al working tree + alias `/simplify`; `disallowed-tools` in frontmatter skill; `--fallback-model` auto-switch; SessionStart hook: `reloadSkills` e `sessionTitle` |
+| 28 mag 2026 | v2.1.153 | Stabilizzazione: `skipLfs` per plugin GitHub/git; `/doctor` mostra ultimo risultato update; fix stateful MCP servers reconnect-looping (regressione v2.1.147); fix memory usage su resume sessioni |
+| 28 mag 2026 | **v2.1.154** | **Opus 4.8** come default per effort `xhigh`; **`/workflows`** per orchestrare decine/centinaia di agenti background; **`! <command>`** in Agent View per eseguire comandi in sessione background; Fast Mode su Opus 4.8 (2.5x velocita', 2x costo base); lean system prompt default per Opus 4.8; `/effort` slider rinominato "Faster"/"Smarter"; `CLAUDE_CODE_SESSION_ID` in stdio MCP subprocess |
+| 29 mag 2026 | v2.1.156 | Fix: thinking blocks Opus 4.8 venivano modificati causando errori API |
 
-<sub>Aggiornato 2026-05-27 via daily what's new. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152).</sub>
+<sub>Aggiornato 2026-05-29 via daily what's new. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154).</sub>
 
 ---
 

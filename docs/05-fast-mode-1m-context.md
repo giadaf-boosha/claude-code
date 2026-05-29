@@ -1,9 +1,9 @@
-# 05 — Fast mode, 1M context, Opus 4.7
+# 05 — Fast mode, 1M context, Opus 4.8
 
 > 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
 > 🔧 Operational · 🟡 Intermediate
 
-Tre feature legate ai modelli: il **fast mode** (Opus 4.7 piu' veloce, da v2.1.142), il **context window da 1M token GA**, e il modello premium **Opus 4.7** con effort `xhigh`.
+Quattro feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), il **context window da 1M token GA**, il modello **Opus 4.7** con effort `xhigh`, e il nuovo **Opus 4.8** come modello premium corrente (v2.1.154).
 
 ## Cosa e' concettualmente
 
@@ -17,12 +17,12 @@ Tre feature legate ai modelli: il **fast mode** (Opus 4.7 piu' veloce, da v2.1.1
 
 ---
 
-## 5.1 Fast mode (Opus 4.7 di default, da v2.1.142)
+## 5.1 Fast mode (Opus 4.8 di default, da v2.1.154)
 
 ### Cosa fa
 Routing su un serving path piu' rapido (~2.5x). Stesso modello, stessi pesi, stessa qualita'. Solo latenza ridotta. **Non** e' downgrade su Haiku/Sonnet.
 
-**Da v2.1.142 (14 mag 2026)**, Fast mode usa **Opus 4.7** di default. In precedenza (v2.1.36–v2.1.141) usava Opus 4.6. Per tornare al comportamento precedente: `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`.
+**Da v2.1.154 (28 mag 2026)**, Fast mode usa **Opus 4.8** di default. In precedenza (v2.1.142–v2.1.153) usava Opus 4.7; prima ancora (v2.1.36–v2.1.141) usava Opus 4.6. Per forzare Opus 4.6: `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`.
 
 ### Annunciato
 - 7 febbraio 2026 (lancio con Opus 4.6): [@claudeai](https://x.com/claudeai/status/2020207322124132504)
@@ -49,7 +49,7 @@ Settings:
 - Input: **$30/MTok** (vs $15/MTok base Opus 4.6)
 - Output: **$150/MTok** (vs $75/MTok base Opus 4.6)
 - Bills sempre come **extra usage** (anche con plan rimanente)
-- Pricing Opus 4.7 Fast mode: non documentato pubblicamente al 15 mag 2026
+- Pricing Opus 4.8 Fast Mode: 2x rate standard per 2.5x velocita' (piu' economico di Opus 4.7 Fast Mode)
 
 ### Limiti / requisiti
 - Solo Anthropic API (NO Bedrock/Vertex/Foundry)
@@ -59,7 +59,7 @@ Settings:
 
 ### Disable e override
 - `CLAUDE_CODE_DISABLE_FAST_MODE=1` — disabilita Fast mode completamente
-- `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1` — forza Opus 4.6 invece di Opus 4.7
+- `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1` — forza Opus 4.6 invece di Opus 4.8
 
 ### Rate-limit fallback
 Automatico a standard (icon `↯` grigia in cooldown).
@@ -70,7 +70,7 @@ Anthropic ha distribuito $50 di extra usage a tutti i Pro/Max. [@_catwu](https:/
 
 > Fonte: [`/en/fast-mode`](https://code.claude.com/docs/en/fast-mode).
 
-<sub>Aggiornato 2026-05-15 via daily what's new. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142).</sub>
+<sub>Aggiornato 2026-05-29 via daily what's new. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154).</sub>
 
 ---
 
@@ -128,15 +128,33 @@ Non documentato pubblicamente nel dettaglio (al 27 apr 2026).
 
 ---
 
-## 5.4 Quando usare cosa
+## 5.4 Opus 4.8 (da v2.1.154)
+
+### Annunciato
+v2.1.154 (28 maggio 2026). `claude-opus-4-8` diventa il modello di default per effort `xhigh` in Claude Code; Fast Mode su Opus 4.8 disponibile a 2.5x velocita', 2x costo base (piu' economico di Opus 4.7 Fast Mode).
+
+### Disponibilita'
+- Max plan (default effort `xhigh`)
+- Fast Mode: Anthropic API
+- Lean system prompt abilitato di default (tranne Haiku, Sonnet, Opus 4.7 e precedenti)
+
+### Note di migrazione
+Opus 4.7 rimane disponibile via `/model claude-opus-4-7` o `/effort` manuale. Per forzare Opus 4.6 in Fast Mode: `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`.
+
+<sub>Aggiornato 2026-05-29 via daily what's new. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154).</sub>
+
+---
+
+## 5.5 Quando usare cosa
 
 | Situazione | Scelta |
 |---|---|
-| Task complesso, vuoi ragionamento | Opus 4.7 + `xhigh` o `max` |
+| Task complesso massima qualita' | Opus 4.8 + `xhigh` o `max` |
+| Task complesso, vuoi reasoning | Opus 4.7 + `xhigh` |
 | Task tecnico, vuoi velocita' | Sonnet 4.6 (default) |
-| Iterazione fitta su Opus 4.6 | `/fast` (paghi extra usage ma 2.5x latency) |
+| Iterazione fitta veloce | `/fast` (Opus 4.8, 2.5x latency, 2x costo) |
 | Codebase enorme | 1M context (Sonnet 4.6 o Opus 4.6) |
-| Plan mode | Opus per plan + Sonnet per execution (`/model` Opus per plan mode) |
+| Plan mode | Opus 4.8 per plan + Sonnet per execution (`/model` Opus per plan mode) |
 | CI/headless | Sonnet 4.6 + `--bare` |
 
 ---

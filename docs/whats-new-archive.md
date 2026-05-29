@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-05-28
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-05-27
 
 - **`/reload-skills`** (v2.1.152, 27 mag): nuovo slash command built-in ricarica le directory skill nella sessione corrente senza riavvio — utile dopo installazione di nuovi plugin o aggiornamento di skill locali; i `SessionStart` hook possono restituire `reloadSkills: true` per lo stesso effetto via codice, e `sessionTitle` per impostare il titolo della sessione. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).

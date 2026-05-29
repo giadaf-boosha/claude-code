@@ -102,10 +102,11 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/usage` | built-in | Cost + plan usage + activity |
 | `/voice [hold\|tap\|off]` | built-in | Voice dictation (Claude.ai account) |
 | `/web-setup` | built-in | Connect GitHub a Claude Code on the web |
+| `/workflows [description]` | built-in | Crea ed esegue un workflow dinamico che orchestra decine/centinaia di agenti background; descrivi il task, Claude genera e lancia il workflow (da v2.1.154) |
 
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
 
-<sub>Aggiornato 2026-05-27 via daily what's new. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152).</sub>
+<sub>Aggiornato 2026-05-29 via daily what's new. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154).</sub>
 
 ---
 
