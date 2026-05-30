@@ -105,7 +105,8 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 <sub>Aggiornato 2026-05-16 via daily what's new. Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143).</sub>
 
 ### Other
-- `agent`, `autoUpdatesChannel`, `minimumVersion`, `companyAnnouncements`
+- **`agent`** (da v2.1.157 per dispatch): specifica l'agente di default per le sessioni dispatch; override per sessione con `--agent <name>`. Precedentemente usato solo per sessioni non-dispatch.
+- `autoUpdatesChannel`, `minimumVersion`, `companyAnnouncements`
 - `fileSuggestion`, `statusLine`, `prUrlTemplate` (v2.1.119)
 - `respectGitignore`, `feedbackSurveyRate`
 - `disableSkillShellExecution`, `disableDeepLinkRegistration`

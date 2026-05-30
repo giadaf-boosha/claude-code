@@ -144,6 +144,26 @@ claude --plugin-url https://example.com/my-plugin.zip  # scarica da URL (session
 
 <sub>Aggiornato 2026-05-09 via daily what's new. Fonte: [code.claude.com/docs/en/whats-new/2026-w19](https://code.claude.com/docs/en/whats-new/2026-w19).</sub>
 
+### Plugin locali: auto-loading e scaffolding (da v2.1.157)
+
+Da v2.1.157, qualsiasi directory plugin posizionata in `.claude/skills/<nome>/` viene caricata automaticamente all'avvio della sessione, senza richiedere registrazione nel marketplace o comando `/plugin install`. E' sufficiente creare la struttura con il manifest e il plugin diventa attivo.
+
+Per scaffoldare rapidamente un plugin con la struttura corretta:
+
+```bash
+claude plugin init my-plugin
+# → crea .claude/skills/my-plugin/ con .claude-plugin/plugin.json e struttura base pronta
+```
+
+Casi d'uso tipici:
+- Plugin interni al progetto non destinati alla distribuzione
+- Prototipazione rapida di skill + hook + MCP bundle prima della pubblicazione
+- Override locale di behavior con plugin personalizzati per il team
+
+Il plugin auto-loadato appare nella tab **Installed** di `/plugin` e rispetta tutti gli scope (project vs user) in base alla directory di destinazione (`.claude/skills/` vs `~/.claude/skills/`).
+
+<sub>Aggiornato 2026-05-30 via daily what's new. Fonte: [GitHub Releases v2.1.157](https://github.com/anthropics/claude-code/releases/tag/v2.1.157).</sub>
+
 ---
 
 ## 11.4 Scope di installazione

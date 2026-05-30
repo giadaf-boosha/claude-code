@@ -75,6 +75,12 @@ claude --agents '[{"name":"adhoc","tools":["Read","Bash"]}]'
 claude agents                  # Agent View (lista + stato sessioni)
 ```
 
+> **`agent` in `settings.json` per dispatch** (da v2.1.157): il campo `agent` in `.claude/settings.json` (o `~/.claude/settings.json`) viene ora rispettato anche per le sessioni dispatch — Claude usa l'agente configurato di default senza richiederlo esplicitamente a ogni invocazione. Override per singola sessione: `--agent <name>`.
+>
+> ```json
+> { "agent": "code-reviewer" }
+> ```
+
 > **Agent View** (research preview, da v2.1.139): `claude agents` non mostra piu' solo una lista statica, ma apre una vista unificata di tutte le sessioni Claude Code — in esecuzione, bloccate in attesa di input, o completate. Navigabile da CLI, e' il modo nativo di gestire sessioni multiple in parallelo ("kind of like tmux built for CC" — [@trq212](https://x.com/trq212/status/2053979505346425179)).
 >
 > Da v2.1.145 il flag `--json` restituisce la stessa lista in JSON su stdout — utile per scripting, integrazione con tmux-resurrect, status bar custom e qualsiasi automazione che deve interrogare lo stato delle sessioni attive:

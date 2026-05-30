@@ -46,6 +46,8 @@ Plugin skills usano namespace `plugin-name:skill-name`. Override: enterprise > p
 
 Da v2.1.142, un plugin con `SKILL.md` nella directory root (senza sottocartella `skills/`) viene esposto direttamente come skill — utile per plugin mono-skill che non necessitano della struttura `skills/<name>/`.
 
+Da v2.1.157, plugin completi (con `.claude-plugin/plugin.json`) posizionati in `.claude/skills/<nome>/` vengono caricati automaticamente senza richiedere `/plugin install` — vedi [11 — Plugins § auto-loading](./11-plugins-marketplace.md#plugin-locali-auto-loading-e-scaffolding-da-v21157).
+
 ---
 
 ## 9.3 Frontmatter completo
