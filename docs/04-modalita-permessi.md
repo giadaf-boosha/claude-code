@@ -76,7 +76,8 @@ Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permis
 
 ### Prerequisiti
 - Plan: Max, Team, Enterprise (o API + Anthropic provider)
-- Modello: Sonnet 4.6, Opus 4.6, Opus 4.7
+- Provider cloud: Bedrock, Vertex e Foundry (Opus 4.7 e Opus 4.8) con `CLAUDE_CODE_ENABLE_AUTO_MODE=1`
+- Modello: Sonnet 4.6, Opus 4.6, Opus 4.7, Opus 4.8
 
 ### Comandi
 ```bash
@@ -100,6 +101,19 @@ Disable: `disableAutoMode: "disable"` in managed settings.
 - Auto mode disponibile su Opus 4.7 per Max
 - `--enable-auto-mode` non piu' richiesto
 - `/effort` slider interattivo
+
+### Da v2.1.158 (30 mag 2026)
+
+Auto mode disponibile su **AWS Bedrock**, **Google Vertex AI** e **Azure Foundry** per Opus 4.7 e Opus 4.8. Opt-in:
+
+```bash
+export CLAUDE_CODE_ENABLE_AUTO_MODE=1
+claude --permission-mode auto
+```
+
+Prima di questa release, auto mode richiedeva il provider diretto Anthropic (claude.ai/code, Desktop, CLI via API key). Da v2.1.158 funziona anche su deployment enterprise su cloud provider.
+
+<sub>Aggiornato 2026-05-31 via daily what's new. Fonte: [GitHub Releases v2.1.158](https://github.com/anthropics/claude-code/releases/tag/v2.1.158).</sub>
 
 ### Hard deny rules (v2.1.134–136, Week 19)
 

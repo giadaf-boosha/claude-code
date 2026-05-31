@@ -497,8 +497,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 28 mag 2026 | **v2.1.154** | **Opus 4.8** come default per effort `xhigh`; **`/workflows`** per orchestrare decine/centinaia di agenti background; **`! <command>`** in Agent View per eseguire comandi in sessione background; Fast Mode su Opus 4.8 (2.5x velocita', 2x costo base); lean system prompt default per Opus 4.8; `/effort` slider rinominato "Faster"/"Smarter"; `CLAUDE_CODE_SESSION_ID` in stdio MCP subprocess |
 | 29 mag 2026 | v2.1.156 | Fix: thinking blocks Opus 4.8 venivano modificati causando errori API |
 | 29 mag 2026 | **v2.1.157** | **Plugin auto-loading** da `.claude/skills/`: plugin locali caricati senza marketplace. **`claude plugin init <name>`**: scaffolding plugin in `.claude/skills/`. **`agent` in `settings.json` per dispatch** con override `--agent <name>`. Autocomplete `/plugin`. EnterWorktree multi-switch. Telemetria `tool_parameters` con `OTEL_LOG_TOOL_DETAILS=1`. |
+| 30 mag 2026 | v2.1.158 | **Auto mode su Bedrock, Vertex e Foundry**: disponibile per Opus 4.7 e Opus 4.8 su AWS Bedrock, Google Vertex AI e Azure Foundry; opt-in con `CLAUDE_CODE_ENABLE_AUTO_MODE=1`. |
 
-<sub>Aggiornato 2026-05-30 via daily what's new. Fonte: [GitHub Releases v2.1.157](https://github.com/anthropics/claude-code/releases/tag/v2.1.157).</sub>
+<sub>Aggiornato 2026-05-31 via daily what's new. Fonte: [GitHub Releases v2.1.158](https://github.com/anthropics/claude-code/releases/tag/v2.1.158).</sub>
 
 ---
 
