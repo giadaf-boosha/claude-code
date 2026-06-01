@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (27 maggio 2026, v2.1.152). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (31 maggio 2026, v2.1.159). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -391,7 +391,7 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 
 ---
 
-## 19.9 Tabella versione per versione (v0.2.0 → v2.1.139)
+## 19.9 Tabella versione per versione (v0.2.0 → v2.1.159)
 
 | Data | Versione | Feature principali |
 |---|---|---|
@@ -481,12 +481,12 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 6 mag 2026 | — | **Raddoppio limiti Claude Code**: limiti 5-ore 2x per Pro/Max/Team/Enterprise; rimossi peak-hour limits Pro e Max; aumento rate limits API Opus. Accordo Anthropic-SpaceX (Colossus 1, 300 MW+). [Anthropic blog](https://www.anthropic.com/news/higher-limits-spacex) |
 | 7 mag 2026 | v2.1.133 | **Hook input `effort.level` + `$CLAUDE_EFFORT`**; `worktree.baseRef` (`fresh`\|`head`); `sandbox.bwrapPath`/`socatPath`; `parentSettingsBehavior` managed |
 | 8 mag 2026 | v2.1.134–136 | `autoMode.hard_deny` (blocco assoluto in auto mode); fix OAuth parallel sessions (401 race); fix MCP OAuth refresh token race |
-| 11 mag 2026 | v2.1.139 | **Agent View** (`claude agents`, research preview); **`/goal`** command (completamento multi-turno con overlay); hook `args: string[]` exec form (no-shell); hook `continueOnBlock` PostToolUse; `CLAUDE_PROJECT_DIR` per MCP stdio; Remote MCP reconnect retry GA |
+| 11 mag 2026 | v2.1.139 | **Agent View** (`claude agents`, research preview); **`/goal`** command (completamento multi-turno con overlay); **`/scroll-speed`** per regolare la velocita' di scroll del transcript; hook `args: string[]` exec form (no-shell); hook `continueOnBlock` PostToolUse; `CLAUDE_PROJECT_DIR` per MCP stdio; Remote MCP reconnect retry GA |
 | 13 mag 2026 | v2.1.141 | **Rewind "Summarize up to here"**: comprime il context accumulato mantenendo intatti i turni recenti; `claude agents --cwd <path>` filtra session list per directory; `terminalSequence` field negli hook JSON; `CLAUDE_CODE_PLUGIN_PREFER_HTTPS` per clone plugin via HTTPS; `ANTHROPIC_WORKSPACE_ID` per workload identity federation; `/feedback` include ultime 24h/7gg; spinner amber dopo 10s thinking; plugin menu keyboard shortcuts |
 | 13 mag 2026 | — | **Crediti mensili per uso programmatico** (attivi dal 15 giu 2026): i piani paid Claude ottengono un credito mensile dedicato per `claude -p`, Agent SDK, Claude Code GitHub Actions e app terze parti basate sull'Agent SDK. [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388) |
 | 14 mag 2026 | v2.1.142 | **Fast mode → Opus 4.7 di default** (era Opus 4.6); override via `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`. **Plugin SKILL.md root come skill**: plugin con `SKILL.md` a livello root esposto automaticamente come skill. Nuovi flag `--add-dir/--settings/--mcp-config/--plugin-dir/--permission-mode/--model/--effort` per `claude agents`. LSP server visibili in `/plugin details`. |
 | 15 mag 2026 | v2.1.143 | **Plugin dependency enforcement**: `claude plugin disable` rifiuta se un plugin dipendente e' attivo (hint copy-pasteable); `claude plugin enable` forza dipendenze transitive. **`worktree.bgIsolation: "none"`**: sessioni background editano la working copy direttamente senza `EnterWorktree`. Sessioni background preservano modello ed effort dopo idle; `/bg` preserva `--mcp-config/--settings/--add-dir/--plugin-dir/--fallback-model`. PowerShell: `-ExecutionPolicy Bypass` di default (opt-out via env var). |
-| 19 mag 2026 | v2.1.144 | **`/resume` sessioni background**: `/resume` include ora le sessioni avviate via `claude --bg` o Agent View (tag `bg` nella lista). **`/model` per-session**: cambia modello solo per la sessione corrente; `d` per impostare il default per le nuove sessioni. MCP `tools/list` paginato: ritorna tutte le pagine, non solo la prima. Elapsed duration nelle notifiche di completamento background. `/plugin` browse/discover mostra data ultimo aggiornamento. |
+| 19 mag 2026 | v2.1.144 | **`/usage-credits`**: nuovo comando che mostra i crediti mensili per uso programmatico (`claude -p`, Agent SDK, GitHub Actions). **`/resume` sessioni background**: `/resume` include ora le sessioni avviate via `claude --bg` o Agent View (tag `bg` nella lista). **`/model` per-session**: cambia modello solo per la sessione corrente; `d` per impostare il default per le nuove sessioni. MCP `tools/list` paginato: ritorna tutte le pagine, non solo la prima. Elapsed duration nelle notifiche di completamento background. `/plugin` browse/discover mostra data ultimo aggiornamento. |
 | 19 mag 2026 | v2.1.145 | **`claude agents --json`**: output JSON della lista sessioni live per scripting, tmux-resurrect, status bar. **`/plugin` pre-install preview**: tab Discover/Browse mostrano comandi, agenti, skill, hook, server MCP/LSP prima dell'installazione. `agent_id` e `parent_agent_id` negli span OTEL `claude_code.tool`. Status line JSON include info GitHub repo e PR. Mouse hover/click su slash command e @-mention in fullscreen. Hook Stop/SubagentStop include `background_tasks` e `session_crons`. |
 | 21 mag 2026 | v2.1.146 | **`/simplify` → `/code-review`**: command rinominato con parametro effort opzionale (es. `/code-review high`); il vecchio nome non e' piu' valido. Auto mode non sopprime piu' `AskUserQuestion` quando esplicitamente richiesto da utente o skill. |
 | 21 mag 2026 | v2.1.147 | **`/code-review --comment`**: nuovo flag pubblica i risultati come commenti inline sulla PR GitHub corrente. **Sessioni background pinnate** (`Ctrl+T` in Agent View): restano attive idle, si riavviano automaticamente per applicare update CC, vengono scaricate per ultime sotto pressione di memoria. Auto-updater con retry su errori di rete e reporting dettagliato. Diff rendering migliorato per file grandi. |
@@ -494,12 +494,13 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 22 mag 2026 | v2.1.149 | `/usage` breakdown per categoria (skills, subagent, plugin, MCP server); `/diff` detail view scrollable con tastiera; `allowAllClaudeAiMcps` setting per Enterprise MCP cloud |
 | 27 mag 2026 | **v2.1.152** | **`/reload-skills`** built-in; **`MessageDisplay` hook event** (trasforma/nasconde messaggi assistente); `/code-review --fix` applica review al working tree + alias `/simplify`; `disallowed-tools` in frontmatter skill; `--fallback-model` auto-switch; SessionStart hook: `reloadSkills` e `sessionTitle` |
 | 28 mag 2026 | v2.1.153 | Stabilizzazione: `skipLfs` per plugin GitHub/git; `/doctor` mostra ultimo risultato update; fix stateful MCP servers reconnect-looping (regressione v2.1.147); fix memory usage su resume sessioni |
-| 28 mag 2026 | **v2.1.154** | **Opus 4.8** come default per effort `xhigh`; **`/workflows`** per orchestrare decine/centinaia di agenti background; **`! <command>`** in Agent View per eseguire comandi in sessione background; Fast Mode su Opus 4.8 (2.5x velocita', 2x costo base); lean system prompt default per Opus 4.8; `/effort` slider rinominato "Faster"/"Smarter"; `CLAUDE_CODE_SESSION_ID` in stdio MCP subprocess |
+| 28 mag 2026 | **v2.1.154** | **Opus 4.8** (modello premium) come default per effort `xhigh`, con `xhigh` che diventa il nuovo `high`; **Dynamic Workflows** in research preview via **`/workflows`** per orchestrare decine/centinaia di agenti background (vedi [./24-workflows.md](./24-workflows.md)); **`! <command>`** in Agent View per eseguire comandi in sessione background; Fast Mode su Opus 4.8 (2x rate per 2.5x velocita'); lean system prompt default per Opus 4.8; `/effort` slider rinominato "Faster"/"Smarter"; `CLAUDE_CODE_SESSION_ID` in stdio MCP subprocess |
 | 29 mag 2026 | v2.1.156 | Fix: thinking blocks Opus 4.8 venivano modificati causando errori API |
 | 29 mag 2026 | **v2.1.157** | **Plugin auto-loading** da `.claude/skills/`: plugin locali caricati senza marketplace. **`claude plugin init <name>`**: scaffolding plugin in `.claude/skills/`. **`agent` in `settings.json` per dispatch** con override `--agent <name>`. Autocomplete `/plugin`. EnterWorktree multi-switch. Telemetria `tool_parameters` con `OTEL_LOG_TOOL_DETAILS=1`. |
 | 30 mag 2026 | v2.1.158 | **Auto mode su Bedrock, Vertex e Foundry**: disponibile per Opus 4.7 e Opus 4.8 su AWS Bedrock, Google Vertex AI e Azure Foundry; opt-in con `CLAUDE_CODE_ENABLE_AUTO_MODE=1`. |
+| 31 mag 2026 | **v2.1.159** | Stabilizzazione post-Opus 4.8: fix rendering thinking blocks in Fast Mode; affinamento Dynamic Workflows (`/workflows`) in research preview; correzioni minori auto mode su Bedrock/Vertex/Foundry. Ultima versione CLI rilasciata. |
 
-<sub>Aggiornato 2026-05-31 via daily what's new. Fonte: [GitHub Releases v2.1.158](https://github.com/anthropics/claude-code/releases/tag/v2.1.158).</sub>
+<sub>Aggiornato 2026-05-31 via daily what's new. Fonte: [GitHub Releases v2.1.159](https://github.com/anthropics/claude-code/releases/tag/v2.1.159).</sub>
 
 ---
 

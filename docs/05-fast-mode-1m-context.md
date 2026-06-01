@@ -3,11 +3,11 @@
 > 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
 > 🔧 Operational · 🟡 Intermediate
 
-Quattro feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), il **context window da 1M token GA**, il modello **Opus 4.7** con effort `xhigh`, e il nuovo **Opus 4.8** come modello premium corrente (v2.1.154).
+Quattro feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), e **Opus 4.8** come modello premium corrente (v2.1.154).
 
 ## Cosa e' concettualmente
 
-> Le tre feature gestiscono il trade-off **velocita' / qualita' / capacita'** del modello. Fast mode taglia la latenza, 1M context espande la "memoria di lavoro", Opus 4.7 amplia il reasoning. Sono leve indipendenti per dimensionare l'engine all'applicazione.
+> Le tre feature gestiscono il trade-off **velocita' / qualita' / capacita'** del modello. Fast mode taglia la latenza, 1M context espande la "memoria di lavoro", Opus 4.8 con effort `xhigh` amplia il reasoning. Sono leve indipendenti per dimensionare l'engine all'applicazione.
 
 **Modello mentale**: scegliere il modello e' come scegliere il motore di un'auto: cilindrata (effort), cavalli (Opus vs Sonnet), elaborazione (fast mode).
 
@@ -46,10 +46,11 @@ Settings:
 ```
 
 ### Pricing
-- Input: **$30/MTok** (vs $15/MTok base Opus 4.6)
-- Output: **$150/MTok** (vs $75/MTok base Opus 4.6)
+- Opus 4.8 standard: **$5/MTok** input, **$25/MTok** output
+- Opus 4.8 Fast Mode: **$10/MTok** input, **$50/MTok** output (2x del rate standard per ~2.5x velocita')
 - Bills sempre come **extra usage** (anche con plan rimanente)
-- Pricing Opus 4.8 Fast Mode: 2x rate standard per 2.5x velocita' (piu' economico di Opus 4.7 Fast Mode)
+- Piu' economico di Opus 4.7 Fast Mode
+- Storico Opus 4.6: $15/$75 base, $30/$150 fast
 
 ### Limiti / requisiti
 - Solo Anthropic API (NO Bedrock/Vertex/Foundry)
@@ -118,6 +119,8 @@ v2.1.111 (16 aprile 2026). `claude-opus-4-7` con effort `xhigh` (tra `high` e `m
 /effort auto                           # auto-pick
 ```
 
+Su Opus 4.8 l'effort di **default e' `high`**; `xhigh` (tra `high` e `max`) e' pensato per i task piu' duri. Oltre a questi esiste **`ultracode`** = `xhigh` + orchestrazione workflow automatica (vedi [./24-workflows.md](./24-workflows.md)).
+
 Default da v2.1.117: `high` per Pro/Max su Opus 4.6 + Sonnet 4.6.
 
 ### Pricing
@@ -131,7 +134,7 @@ Non documentato pubblicamente nel dettaglio (al 27 apr 2026).
 ## 5.4 Opus 4.8 (da v2.1.154)
 
 ### Annunciato
-v2.1.154 (28 maggio 2026). `claude-opus-4-8` diventa il modello di default per effort `xhigh` in Claude Code; Fast Mode su Opus 4.8 disponibile a 2.5x velocita', 2x costo base (piu' economico di Opus 4.7 Fast Mode).
+v2.1.154 (28 maggio 2026). `claude-opus-4-8` diventa il **modello premium corrente** in Claude Code, con effort di default `high` e `xhigh` per i task piu' duri (piu' `ultracode` = `xhigh` + orchestrazione workflow automatica, vedi [./24-workflows.md](./24-workflows.md)); Fast Mode su Opus 4.8 disponibile a ~2.5x velocita' per 2x del costo standard (piu' economico di Opus 4.7 Fast Mode).
 
 ### Disponibilita'
 - Max plan (default effort `xhigh`)
@@ -150,9 +153,10 @@ Opus 4.7 rimane disponibile via `/model claude-opus-4-7` o `/effort` manuale. Pe
 | Situazione | Scelta |
 |---|---|
 | Task complesso massima qualita' | Opus 4.8 + `xhigh` o `max` |
-| Task complesso, vuoi reasoning | Opus 4.7 + `xhigh` |
+| Task duro con workflow automatico | Opus 4.8 + `ultracode` (vedi [./24-workflows.md](./24-workflows.md)) |
+| Default ragionamento | Opus 4.8 + `high` (effort di default) |
 | Task tecnico, vuoi velocita' | Sonnet 4.6 (default) |
-| Iterazione fitta veloce | `/fast` (Opus 4.8, 2.5x latency, 2x costo) |
+| Iterazione fitta veloce | `/fast` (Opus 4.8, ~2.5x velocita', 2x costo: $10/$50 per MTok) |
 | Codebase enorme | 1M context (Sonnet 4.6 o Opus 4.6) |
 | Plan mode | Opus 4.8 per plan + Sonnet per execution (`/model` Opus per plan mode) |
 | CI/headless | Sonnet 4.6 + `--bare` |

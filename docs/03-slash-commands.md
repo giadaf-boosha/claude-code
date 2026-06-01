@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Fondamenta](../README.md#fondamenta) → **03 Slash commands**
 > 🔧 Operational · 🟢 Beginner-friendly
 
-Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
+Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.159. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
 
 ## Cosa e' concettualmente
 
@@ -37,6 +37,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/copy [N]` | built-in | Copia ultima risposta (o N-esima); `w` per write to file |
 | `/cost` (alias `/usage`, `/stats`) | built-in | Costi e utilizzo |
 | `/debug [description]` | **Skill** | Debug logging mid-session |
+| `/deep-research <domanda>` | **Skill** | Workflow bundled di ricerca: fan-out di web search da piu' angolazioni, fetch e cross-check delle fonti, voto su ogni claim, report citato con i claim non verificati gia' filtrati (richiede il WebSearch tool). Vedi [24](./24-workflows.md) |
 | `/desktop` (alias `/app`) | built-in | Continua su Desktop app (macOS/Windows) |
 | `/diff` | built-in | Diff viewer interattivo (uncommitted + per-turn) |
 | `/doctor` | built-in | Diagnostica install + `f` per fix automatico |
@@ -48,7 +49,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/feedback [report]` (alias `/bug`) | built-in | Submit feedback |
 | `/fewer-permission-prompts` | **Skill** | Scansiona transcript e crea allowlist read-only |
 | `/focus` | built-in | Focus view (solo ultimo prompt + risposta), fullscreen only |
-| `/goal [condition]` | built-in | Imposta una condizione di completamento; Claude lavora su piu' turni fino al raggiungimento, con overlay live tempo/turni/token. Funziona in modalita' interattiva, `-p` e Remote Control (da v2.1.139) |
+| `/goal [condition]` | built-in | Imposta/verifica/azzera una condizione di completamento; Claude lavora su piu' turni fino al raggiungimento, con overlay live tempo/turni/token. Funziona in modalita' interattiva, `-p` e Remote Control (da v2.1.139). Vedi [25](./25-goal.md) |
 | `/heapdump` | built-in | Heap snapshot per troubleshooting memoria |
 | `/help` | built-in | Help comandi |
 | `/hooks` | built-in | View hook configurations (read-only browser) |
@@ -102,7 +103,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al 2.1.119. Type 
 | `/usage` | built-in | Cost + plan usage + activity |
 | `/voice [hold\|tap\|off]` | built-in | Voice dictation (Claude.ai account) |
 | `/web-setup` | built-in | Connect GitHub a Claude Code on the web |
-| `/workflows [description]` | built-in | Crea ed esegue un workflow dinamico che orchestra decine/centinaia di agenti background; descrivi il task, Claude genera e lancia il workflow (da v2.1.154) |
+| `/workflows [description]` | built-in | Lista e gestisce i dynamic workflow run; crea ed esegue un workflow dinamico che orchestra decine/centinaia di agenti background; descrivi il task, Claude genera e lancia il workflow (da v2.1.154). Vedi [24](./24-workflows.md) |
 
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
 

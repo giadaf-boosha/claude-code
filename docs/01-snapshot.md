@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Fondamenta](../README.md#fondamenta) → **01 Snapshot**
 > 🔧 Operational · 🟢 Beginner-friendly
 
-> Versione di riferimento: **CLI v2.1.132** (6 maggio 2026). Questo documento e' uno snapshot dello stato attuale: cosa esiste, su quali modelli gira, come ci si accede.
+> Versione di riferimento: **CLI v2.1.159** (31 maggio 2026). Questo documento e' uno snapshot dello stato attuale: cosa esiste, su quali modelli gira, come ci si accede.
 
 ## Cosa e' concettualmente
 
@@ -13,6 +13,8 @@
 
 **Componente harness IMPACT**: trasversale a tutti i pilastri (Intent / Memory / Planning / Authority / Control flow).
 
+**Concetti/feature chiave**: [00 — Harness overview](./00-harness-overview.md) per il framework concettuale, [Dynamic Workflows](./24-workflows.md) e [/goal](./25-goal.md).
+
 **Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per il framework concettuale.
 
 ---
@@ -21,9 +23,9 @@
 
 | Item | Valore |
 |---|---|
-| Versione CLI corrente | `v2.1.132` (6 mag 2026), range coperto 2.1.83 → 2.1.132 |
+| Versione CLI corrente | `v2.1.159` (31 mag 2026), range coperto 2.1.83 → 2.1.159 |
 | Modello di default | `claude-sonnet-4-6` |
-| Modello premium | `claude-opus-4-7` con effort `xhigh` (Max plan, da v2.1.111) |
+| Modello premium | `claude-opus-4-8` con effort `xhigh` (Max plan) |
 | Effort levels | `low`, `medium`, `high`, `xhigh`, `max` |
 | Default effort Pro/Max | `high` su Opus 4.6 e Sonnet 4.6 (da v2.1.117) |
 | Fast mode | 2.5x piu' veloce di **Opus 4.6** (NON disponibile su 4.7) — $30/$150 per MTok |
@@ -71,7 +73,7 @@ Annunci recenti rilevanti:
 | Plan | Cosa offre |
 |---|---|
 | Pro | Sonnet 4.6 + Opus 4.6, plan/auto mode, `/loop`, 5 routine scheduled/giorno — **limiti 5-ore raddoppiati**, no peak-hour limits (da 6 mag 2026) |
-| Max | Tutto di Pro + Opus 4.7 xhigh, fast mode con $50 credit, 15 routine/giorno, Remote Control — **limiti 5-ore raddoppiati**, no peak-hour limits (da 6 mag 2026) |
+| Max | Tutto di Pro + Opus 4.8 xhigh, fast mode con $50 credit, 15 routine/giorno, Remote Control — **limiti 5-ore raddoppiati**, no peak-hour limits (da 6 mag 2026) |
 | Team | 25 routine/giorno, Code Review GA su PR, managed settings — **limiti 5-ore raddoppiati** (da 6 mag 2026) |
 | Enterprise | SSO, RBAC, compliance API, Claude Code Security — **limiti 5-ore raddoppiati** (da 6 mag 2026) |
 
@@ -99,6 +101,9 @@ Cronologia compatta (per dettaglio vedi [19-changelog.md](./19-changelog.md)):
 | 23 apr 2026 | v2.1.119 — Vim visual mode, custom themes, hooks `mcp_tool` |
 | 1 mag 2026 | v2.1.126 — `claude project purge`, OAuth paste-in-terminal |
 | 6 mag 2026 | **Limiti 5-ore raddoppiati** per tutti i piani; rimossi peak-hour limits Pro/Max. Accordo SpaceX. v2.1.132 — `CLAUDE_CODE_SESSION_ID`. |
+| 11 mag 2026 | `/goal` (v2.1.139) — vedi [./25-goal.md](./25-goal.md) |
+| 28 mag 2026 | **Dynamic Workflows** (v2.1.154) — vedi [./24-workflows.md](./24-workflows.md) |
+| 31 mag 2026 | v2.1.159 — versione CLI corrente; modello premium Opus 4.8 |
 
 ---
 

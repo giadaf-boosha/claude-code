@@ -106,11 +106,24 @@ Glossario alfabetico di 35+ termini che ricorrono nella guida. Per ogni termine:
 
 ## D
 
+### `/deep-research`
+**Definizione**: workflow bundled di ricerca multi-fonte: fan-out di ricerche web, fetch delle sorgenti, verifica adversariale incrociata dei claim e sintesi di un report citato.
+**Appare in**: [24](./24-workflows.md).
+**Esempio**: `/deep-research confronto tra harness agentici 2026`.
+**Correlati**: Dynamic Workflows, Subagent, `/ultraplan`.
+
 ### Dry-run
 **Definizione**: esecuzione simulata senza side-effect. Pattern di guardrail per Routines, batch operations, IaC apply.
 **Appare in**: [13](./13-routines-cloud.md), [22](./22-compound-engineering.md).
 **Esempio**: `/schedule daily at 09:00, do not merge, dry-run only`.
 **Correlati**: Plan mode, Hooks PreToolUse.
+
+### Dynamic Workflows
+**Definizione**: script JavaScript che Claude scrive ed esegue in background per orchestrare da decine fino a 1.000 subagent in parallelo; il piano vive nel codice invece che nel prompt. Research preview da v2.1.154.
+**Sinonimi**: Workflows.
+**Appare in**: [24](./24-workflows.md).
+**Esempio**: uno script che fa fan-out di 200 subagent per analizzare 200 file in parallelo e ne aggrega i risultati.
+**Correlati**: Subagent, Agent team, `/deep-research`, ultracode.
 
 ---
 
@@ -135,6 +148,12 @@ Glossario alfabetico di 35+ termini che ricorrono nella guida. Per ogni termine:
 ---
 
 ## G
+
+### `/goal`
+**Definizione**: slash command che imposta una condizione di completamento e fa lavorare Claude attraverso i turn finche' un small fast model conferma che la condizione e' soddisfatta. Da v2.1.139.
+**Appare in**: [25](./25-goal.md).
+**Esempio**: `/goal tutti i test della suite passano`.
+**Correlati**: `/loop`, Agent loop, Control flow.
 
 ### Guardrail
 **Definizione**: limite hard che l'agent non puo' aggirare. In Claude Code: sandbox OS-level, deny rules, hooks block, managed policies.
@@ -296,6 +315,12 @@ Glossario alfabetico di 35+ termini che ricorrono nella guida. Per ogni termine:
 ---
 
 ## U
+
+### ultracode
+**Definizione**: modalita' che combina reasoning effort `xhigh` con l'orchestrazione automatica dei workflow, lasciando a Claude la generazione ed esecuzione degli script di coordinamento dei subagent.
+**Appare in**: [24](./24-workflows.md).
+**Esempio**: task complesso lanciato in ultracode che genera un Dynamic Workflow per parallelizzare il lavoro.
+**Correlati**: `/effort`, Dynamic Workflows, `/ultraplan`.
 
 ### `/ultraplan`
 **Definizione**: comando che delega planning a una sessione Claude Code on the web in plan mode. Browser review iterativa.

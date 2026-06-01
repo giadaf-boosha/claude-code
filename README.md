@@ -183,7 +183,7 @@ E come reference:
 
 ---
 
-## Indice della guida (completo, 29 capitoli)
+## Indice della guida (completo, 31 capitoli)
 
 > Legenda: 📘 Concettuale · 🔧 Operational · 🚀 Workflow · 📚 Riferimento
 
@@ -229,6 +229,8 @@ E come reference:
 21. [🚀 21 — Guide per target user](./docs/21-guide-target-user.md) — 8 percorsi
 - [📘 22 — Compound engineering](./docs/22-compound-engineering.md) — pattern moltiplicativi
 - [📚 23 — Glossario](./docs/23-glossario.md) — 35+ termini con cross-link
+- [🚀 24 — Dynamic Workflows](./docs/24-workflows.md) — orchestrazione step dinamici
+- [🔧 25 — `/goal`](./docs/25-goal.md) — definizione e tracking obiettivo di sessione
 
 ---
 
