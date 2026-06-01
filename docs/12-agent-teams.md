@@ -194,3 +194,7 @@ Lead controlla active teammates first, poi shutdown ordinato. La task list riman
 ---
 
 ← [11 Plugins & Marketplace](./11-plugins-marketplace.md) · Successivo → [13 Routines (cloud)](./13-routines-cloud.md)
+
+## 12.15 Agent Teams vs Dynamic Workflows
+
+Gli Agent Teams sono coordinamento **interattivo** multi-thread: un lead Claude coordina pochi teammate persistenti, con input umano possibile a meta'. Per orchestrazione **su larga scala e ripetibile** (decine-centinaia di subagent, piano codificato in uno script, fan-out parallelo) vedi [24 — Dynamic Workflows](./24-workflows.md). Regola pratica: progetto collaborativo esplorativo -> Teams; fan-out parallelo ripetibile (audit, migrazioni) -> Workflows.
