@@ -1,18 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **1 giugno 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.159** · Modello default **Sonnet 4.6** · Premium **Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **2 giugno 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.160** · Modello default **Sonnet 4.6** · Premium **Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-01)
+## What's new today (2026-06-02)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **Protezione file sensibili shell/build-tool** (v2.1.160, 2 giu): Claude Code mostra ora un prompt di conferma prima di scrivere su file di avvio shell (`.zshenv`, `.zlogin`, `.bash_login`, `~/.config/git/`) e file di configurazione build-tool (`.npmrc`, `.yarnrc*`, `bunfig.toml`, `.bazelrc`, `.pre-commit-config.yaml`, `.devcontainer/`) — il prompt appare anche in modalita' `acceptEdits`, prevenendo modifiche accidentali a configurazioni che concedono accesso all'esecuzione di codice. Fonte: [GitHub Releases v2.1.160](https://github.com/anthropics/claude-code/releases/tag/v2.1.160). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

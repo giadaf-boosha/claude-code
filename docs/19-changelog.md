@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (31 maggio 2026, v2.1.159). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (2 giugno 2026, v2.1.160). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -498,9 +498,10 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 29 mag 2026 | v2.1.156 | Fix: thinking blocks Opus 4.8 venivano modificati causando errori API |
 | 29 mag 2026 | **v2.1.157** | **Plugin auto-loading** da `.claude/skills/`: plugin locali caricati senza marketplace. **`claude plugin init <name>`**: scaffolding plugin in `.claude/skills/`. **`agent` in `settings.json` per dispatch** con override `--agent <name>`. Autocomplete `/plugin`. EnterWorktree multi-switch. Telemetria `tool_parameters` con `OTEL_LOG_TOOL_DETAILS=1`. |
 | 30 mag 2026 | v2.1.158 | **Auto mode su Bedrock, Vertex e Foundry**: disponibile per Opus 4.7 e Opus 4.8 su AWS Bedrock, Google Vertex AI e Azure Foundry; opt-in con `CLAUDE_CODE_ENABLE_AUTO_MODE=1`. |
-| 31 mag 2026 | **v2.1.159** | Stabilizzazione post-Opus 4.8: fix rendering thinking blocks in Fast Mode; affinamento Dynamic Workflows (`/workflows`) in research preview; correzioni minori auto mode su Bedrock/Vertex/Foundry. Ultima versione CLI rilasciata. |
+| 31 mag 2026 | **v2.1.159** | Stabilizzazione post-Opus 4.8: fix rendering thinking blocks in Fast Mode; affinamento Dynamic Workflows (`/workflows`) in research preview; correzioni minori auto mode su Bedrock/Vertex/Foundry. |
+| 2 giu 2026 | **v2.1.160** | **Protezione file sensibili in `acceptEdits`**: prompt di conferma esplicita prima di scrivere su file di avvio shell (`.zshenv`, `.zlogin`, `.bash_login`, `~/.config/git/`) e file di configurazione build-tool (`.npmrc`, `.yarnrc*`, `bunfig.toml`, `.bazelrc`, `.pre-commit-config.yaml`, `.devcontainer/`). Ottimizzazione read-before-edit: `Edit` dopo `grep`/`egrep`/`fgrep` su singolo file non richiede `Read` separata. Keyword trigger Dynamic Workflows rinominata da `workflow` a `ultracode`. Auto Mode: ridotto reasoning su azioni routine per abbassare latenza classifier. Fix WSL copy-on-select (PowerShell interop), IME CJK positioning, sessioni background che perdevano chat history al ripristino. Rimosso `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE`. |
 
-<sub>Aggiornato 2026-05-31 via daily what's new. Fonte: [GitHub Releases v2.1.159](https://github.com/anthropics/claude-code/releases/tag/v2.1.159).</sub>
+<sub>Aggiornato 2026-06-02 via daily what's new. Fonte: [GitHub Releases v2.1.160](https://github.com/anthropics/claude-code/releases/tag/v2.1.160).</sub>
 
 ---
 

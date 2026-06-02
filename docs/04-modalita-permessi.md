@@ -38,6 +38,23 @@ CLI: `--permission-mode default|acceptEdits|plan|auto|dontAsk|bypassPermissions`
 
 > Fonte: [`/en/permission-modes`](https://code.claude.com/docs/en/permission-modes).
 
+### File con prompt di conferma aggiuntivo in `acceptEdits` (v2.1.160)
+
+Oltre ai protected paths, v2.1.160 introduce un prompt di conferma esplicita prima di scrivere su due categorie di file sensibili, anche quando `acceptEdits` e' attivo:
+
+**File di avvio shell** (eseguiti ad ogni nuova sessione terminale):
+- `.zshenv`, `.zlogin`, `.bash_login`
+- `~/.config/git/`
+
+**File di configurazione build-tool** (possono concedere accesso all'esecuzione di codice):
+- `.npmrc`, `.yarnrc*`, `bunfig.toml`
+- `.bazelrc`, `.pre-commit-config.yaml`
+- `.devcontainer/`
+
+La differenza rispetto ai protected paths: questi file possono comunque essere modificati, ma richiedono conferma esplicita a prescindere dal permission mode attivo. Rilevante per sessioni CI/headless con `acceptEdits` di default.
+
+<sub>Aggiornato 2026-06-02 via daily what's new. Fonte: [GitHub Releases v2.1.160](https://github.com/anthropics/claude-code/releases/tag/v2.1.160).</sub>
+
 ---
 
 ## 4.2 Plan mode
