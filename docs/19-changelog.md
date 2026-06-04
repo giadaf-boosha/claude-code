@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (2 giugno 2026, v2.1.160). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (3 giugno 2026, v2.1.162). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -500,8 +500,10 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 30 mag 2026 | v2.1.158 | **Auto mode su Bedrock, Vertex e Foundry**: disponibile per Opus 4.7 e Opus 4.8 su AWS Bedrock, Google Vertex AI e Azure Foundry; opt-in con `CLAUDE_CODE_ENABLE_AUTO_MODE=1`. |
 | 31 mag 2026 | **v2.1.159** | Stabilizzazione post-Opus 4.8: fix rendering thinking blocks in Fast Mode; affinamento Dynamic Workflows (`/workflows`) in research preview; correzioni minori auto mode su Bedrock/Vertex/Foundry. |
 | 2 giu 2026 | **v2.1.160** | **Protezione file sensibili in `acceptEdits`**: prompt di conferma esplicita prima di scrivere su file di avvio shell (`.zshenv`, `.zlogin`, `.bash_login`, `~/.config/git/`) e file di configurazione build-tool (`.npmrc`, `.yarnrc*`, `bunfig.toml`, `.bazelrc`, `.pre-commit-config.yaml`, `.devcontainer/`). Ottimizzazione read-before-edit: `Edit` dopo `grep`/`egrep`/`fgrep` su singolo file non richiede `Read` separata. Keyword trigger Dynamic Workflows rinominata da `workflow` a `ultracode`. Auto Mode: ridotto reasoning su azioni routine per abbassare latenza classifier. Fix WSL copy-on-select (PowerShell interop), IME CJK positioning, sessioni background che perdevano chat history al ripristino. Rimosso `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE`. |
+| 2 giu 2026 | v2.1.161 | OTEL: `OTEL_RESOURCE_ATTRIBUTES` inclusi come labels su metric datapoints. `claude agents` mostra `done/total` per work fanned-out. `/mcp` collassa connettori claude.ai non utilizzati. Parallel tool calls: Bash fallito non cancella piu' gli altri. Fix `forceLoginOrgUUID`/`forceLoginMethod` con provider third-party. Fix `/usage-credits` per admin Team/Enterprise. Fix subagent frontmatter MCP servers che ignoravano `--strict-mcp-config`. Fix background subagent output che corrompeva stdout. |
+| 3 giu 2026 | v2.1.162 | `claude agents --json` aggiunge campo `waitingFor` per mostrare su cosa e' bloccata una sessione. `/effort` conferma quando il livello scelto persistera' come default. Click su slash command in autocomplete riempie il prompt invece di eseguire immediatamente. Remote Control appare come pill persistente nel footer. macOS: background agents appaiono come "Claude Code" in Privacy & Security e mantengono i permessi dopo aggiornamenti. Fix WebFetch rules per domini preapprovati. Fix permission rules Windows con backslash/case-variant. Fix LSP `workspaceSymbol`. Fix startup silenzioso con config directory read-only. Fix Bash interrupt (Esc) ignorato all'inizio di un turn. |
 
-<sub>Aggiornato 2026-06-02 via daily what's new. Fonte: [GitHub Releases v2.1.160](https://github.com/anthropics/claude-code/releases/tag/v2.1.160).</sub>
+<sub>Aggiornato 2026-06-04 via daily what's new. Fonte: [GitHub Releases v2.1.162](https://github.com/anthropics/claude-code/releases/tag/v2.1.162).</sub>
 
 ---
 
