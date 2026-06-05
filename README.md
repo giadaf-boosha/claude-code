@@ -1,18 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **4 giugno 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.162** · Modello default **Sonnet 4.6** · Premium **Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **5 giugno 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.163** · Modello default **Sonnet 4.6** · Premium **Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-04)
+## What's new today (2026-06-05)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **`/plugin list`** (v2.1.163, 4 giu): nuovo sottocomando elenca i plugin installati con filtri `--enabled` e `--disabled` — permette di vedere rapidamente lo stato dell'ecosistema plugin nella sessione corrente. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Managed Settings: version enforcement** (v2.1.163, 4 giu): i campi `requiredMinimumVersion` e `requiredMaximumVersion` in `managed-settings.json` bloccano l'avvio di Claude Code se la versione installata e' fuori dal range — policy enterprise per garantire versioni stabili approvate. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Stop/SubagentStop hook: `additionalContext`** (v2.1.163, 4 giu): i hook `Stop` e `SubagentStop` possono ora restituire `hookSpecificOutput.additionalContext` per iniettare feedback e continuare il turn senza che l'output venga marcato come errore hook. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163). Doc: [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

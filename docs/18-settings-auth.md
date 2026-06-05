@@ -104,6 +104,21 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 
 <sub>Aggiornato 2026-05-16 via daily what's new. Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143).</sub>
 
+### Version enforcement (da v2.1.163 — Managed only)
+
+I campi `requiredMinimumVersion` e `requiredMaximumVersion` nel file `managed-settings.json` bloccano l'avvio di Claude Code se la versione installata e' fuori dal range specificato. Utile per team enterprise che devono garantire versioni stabili approvate o impedire l'uso di versioni troppo recenti (es. per compliance o testing controllato).
+
+```json
+{
+  "requiredMinimumVersion": "2.1.163",
+  "requiredMaximumVersion": "2.1.165"
+}
+```
+
+Claude Code mostra un messaggio esplicativo e rifiuta di avviarsi fino a che la versione non rientra nel range. I valori sono indipendenti: si puo' usare solo `requiredMinimumVersion`, solo `requiredMaximumVersion`, o entrambi.
+
+<sub>Aggiornato 2026-06-05 via daily what's new. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163).</sub>
+
 ### Other
 - **`agent`** (da v2.1.157 per dispatch): specifica l'agente di default per le sessioni dispatch; override per sessione con `--agent <name>`. Precedentemente usato solo per sessioni non-dispatch.
 - `autoUpdatesChannel`, `minimumVersion`, `companyAnnouncements`

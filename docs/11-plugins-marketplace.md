@@ -85,6 +85,7 @@ Demo plugin source: https://github.com/anthropics/claude-code/tree/main/plugins.
 # Plugin
 /plugin install plugin-name@marketplace-name
 /plugin enable / disable / uninstall plugin-name@marketplace-name
+/plugin list [--enabled|--disabled]    # elenca plugin installati, filtra per stato (da v2.1.163)
 /plugin                            # UI tabbed: Discover, Installed, Marketplaces, Errors
 
 # CLI

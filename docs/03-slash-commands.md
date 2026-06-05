@@ -68,7 +68,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.159. Type
 | `/passes` | built-in | Free week to friends (se eligible) |
 | `/permissions` (alias `/allowed-tools`) | built-in | Manage allow/ask/deny rules |
 | `/plan [description]` | built-in | Entra in plan mode (con task opzionale) |
-| `/plugin` | built-in | Gestione [plugins](./11-plugins-marketplace.md) |
+| `/plugin` | built-in | Gestione [plugins](./11-plugins-marketplace.md); `/plugin list [--enabled\|--disabled]` elenca plugin installati filtrando per stato (da v2.1.163) |
 | `/powerup` | built-in | Lessons interattive con demo animati |
 | `/privacy-settings` | built-in | Privacy (Pro/Max only) |
 | `/recap` | built-in | One-line summary on demand |

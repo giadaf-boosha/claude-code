@@ -208,6 +208,23 @@ Per trasformare il testo invece di nasconderlo, ometti `suppressOutput` e ritorn
 }
 ```
 
+### Stop / SubagentStop — `additionalContext` (da v2.1.163)
+
+I hook `Stop` e `SubagentStop` possono ora restituire `hookSpecificOutput.additionalContext` per iniettare feedback nel turn e farlo continuare, senza che l'output venga classificato come errore hook. Precedentemente questi hook potevano solo bloccare (exit 2) o non fare nulla: ora possono guidare il comportamento del modello alla fine di un turn o al termine di un subagent.
+
+```json
+{
+  "hookSpecificOutput": {
+    "hookEventName": "Stop",
+    "additionalContext": "La task non e' ancora completa: verifica che il file di test esista prima di terminare."
+  }
+}
+```
+
+Casi d'uso tipici: validazioni post-turn (es. test obbligatori prima di chiudere), checklist di completamento, istruzioni di follow-up automatiche alla fine di ogni subagent.
+
+<sub>Aggiornato 2026-06-05 via daily what's new. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163).</sub>
+
 ### SessionStart — `reloadSkills` e `sessionTitle` (da v2.1.152)
 
 I `SessionStart` hook possono restituire due output aggiuntivi che agiscono sulla sessione appena avviata:
