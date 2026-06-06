@@ -11,6 +11,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-05
+
+- **`/plugin list`** (v2.1.163, 4 giu): nuovo sottocomando elenca i plugin installati con filtri `--enabled` e `--disabled` — permette di vedere rapidamente lo stato dell'ecosistema plugin nella sessione corrente. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Managed Settings: version enforcement** (v2.1.163, 4 giu): i campi `requiredMinimumVersion` e `requiredMaximumVersion` in `managed-settings.json` bloccano l'avvio di Claude Code se la versione installata e' fuori dal range — policy enterprise per garantire versioni stabili approvate. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Stop/SubagentStop hook: `additionalContext`** (v2.1.163, 4 giu): i hook `Stop` e `SubagentStop` possono ora restituire `hookSpecificOutput.additionalContext` per iniettare feedback e continuare il turn senza che l'output venga marcato come errore hook. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163). Doc: [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-06-04
 
 > Nessuna novita' significativa nelle ultime 24 ore.

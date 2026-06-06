@@ -169,4 +169,22 @@ Il [post-mortem qualita' aprile 2026](https://x.com/ClaudeDevs/status/2047371124
 
 ---
 
+## 5.6 Thinking Token Control (da v2.1.166)
+
+Alcuni modelli — in particolare Opus 4.8 con `alwaysThinkingEnabled` — attivano il thinking di default via Claude API. Da v2.1.166 e' possibile disabilitarlo in tre modi:
+
+| Metodo | Come |
+|---|---|
+| Env var | `MAX_THINKING_TOKENS=0` |
+| Flag CLI | `--thinking disabled` |
+| Toggle per-modello | in `/model`, persistente per la sessione corrente |
+
+**Quando usarlo**: workflow dove la latenza conta piu' del reasoning (CI headless, scripting `-p`, pipeline di estrazione dati), o quando il provider terzo non supporta thinking e si vuole comportamento uniforme.
+
+**Scope**: si applica solo alla Claude API diretta. I provider third-party (Bedrock, Vertex, Azure Foundry) rimangono invariati — la configurazione thinking su quei provider e' gestita lato provider.
+
+<sub>Aggiornato 2026-06-06 via daily what's new. Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166).</sub>
+
+---
+
 ← [04 Modalita' permessi](./04-modalita-permessi.md) · Successivo → [06 CLAUDE.md e memory](./06-claude-md-memory.md)

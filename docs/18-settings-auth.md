@@ -37,7 +37,13 @@ JSON Schema: `"$schema": "https://json.schemastore.org/claude-code-settings.json
 ## 18.2 Campi principali (selezione)
 
 ### Model & effort
-- `model`, `availableModels`, `modelOverrides`, `effortLevel`
+- `model`, `availableModels`, `modelOverrides`, `effortLevel`, `fallbackModel`
+
+> **`fallbackModel`** (da v2.1.166): configura fino a 3 modelli di fallback provati in sequenza quando il modello primario e' sovraccarico o non disponibile. Il flag `--fallback-model` funziona ora anche nelle sessioni interattive (in precedenza solo in `-p`). Errori auth, rate-limit, request-size e transport vengono comunque segnalati immediatamente senza tentare il fallback.
+>
+> ```json
+> { "fallbackModel": ["claude-sonnet-4-6", "claude-haiku-4-5"] }
+> ```
 
 ### Permissions
 - `allow`, `ask`, `deny`, `additionalDirectories`, `defaultMode`
@@ -84,6 +90,13 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 - `alwaysThinkingEnabled`, `fastModePerSessionOptIn`
 - `autoMode.soft_deny`, `useAutoModeDuringPlan`
 - `defaultShell`, `outputStyle`, `language`, `voice.enabled`
+
+> **Thinking Token Control** (da v2.1.166): tre modi per disabilitare il thinking su modelli che lo abilitano di default via Claude API (es. Opus 4.8 con `alwaysThinkingEnabled`):
+> - Env var: `MAX_THINKING_TOKENS=0`
+> - Flag CLI: `--thinking disabled`
+> - Toggle per-modello in `/model` (settings persistente per sessione)
+>
+> I provider third-party (Bedrock, Vertex, Foundry) rimangono invariati — la disabilitazione si applica solo alla Claude API diretta.
 
 ### Worktree
 - `worktree.symlinkDirectories`, `worktree.sparsePaths`

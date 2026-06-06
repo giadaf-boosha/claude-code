@@ -98,6 +98,8 @@ claude agents                  # Agent View (lista + stato sessioni)
 
 <sub>Aggiornato 2026-05-29 via daily what's new. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154).</sub>
 
+> **Cross-session messaging hardening** (da v2.1.166): i messaggi inoltrati via `SendMessage` da un'altra sessione Claude non portano piu' l'autorita' dell'utente. Le sessioni riceventi rifiutano le richieste di permesso inoltrate; in auto mode vengono bloccate direttamente. Questo significa che un agente che riceve un messaggio da un altro agente non puo' eseguire azioni che richiederebbero conferma utente, anche se l'agente mittente avrebbe quell'autorita'. Il comportamento era gia' documentato come best practice; ora e' applicato dall'harness. Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166).
+
 ### Dal main agent
 Claude usa il tool **Agent** specificando `subagent_type`:
 ```json
