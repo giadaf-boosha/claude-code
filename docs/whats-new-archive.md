@@ -11,6 +11,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-06
+
+- **`fallbackModel` setting** (v2.1.166, 6 giu): il campo `fallbackModel` in `settings.json` configura fino a 3 modelli di fallback provati in sequenza quando il primario e' sovraccarico o non disponibile; `--fallback-model` funziona ora anche nelle sessioni interattive (in precedenza solo in modalita' `-p`). Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Thinking Token Control** (v2.1.166, 6 giu): `MAX_THINKING_TOKENS=0`, `--thinking disabled` e il toggle per-modello disattivano il thinking su modelli che lo abilitano di default via Claude API — per output piu' rapidi o deterministici nei workflow API. Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Cross-session messaging hardening** (v2.1.166, 6 giu): i messaggi inoltrati via `SendMessage` da altre sessioni Claude non portano piu' l'autorita' dell'utente; i ricevitori rifiutano le richieste di permesso inoltrate e auto mode le blocca — rafforza la sicurezza nei workflow multi-agente con `SendMessage`. Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
+
+---
+
 ## 2026-06-05
 
 - **`/plugin list`** (v2.1.163, 4 giu): nuovo sottocomando elenca i plugin installati con filtri `--enabled` e `--disabled` — permette di vedere rapidamente lo stato dell'ecosistema plugin nella sessione corrente. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
