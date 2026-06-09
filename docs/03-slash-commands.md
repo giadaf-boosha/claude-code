@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Fondamenta](../README.md#fondamenta) → **03 Slash commands**
 > 🔧 Operational · 🟢 Beginner-friendly
 
-Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.159. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
+Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.169. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
 
 ## Cosa e' concettualmente
 
@@ -27,6 +27,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.159. Type
 | `/batch <instruction>` | **Skill** | Refactor large-scale: 5-30 unit, 1 worktree+PR per agente |
 | `/branch [name]` (alias `/fork`) | built-in | Branch della conversazione |
 | `/btw <question>` | built-in | Side question senza inquinare la conversation |
+| `/cd <path>` | built-in | Sposta la sessione in una nuova working directory senza rompere il prompt cache (da v2.1.169) |
 | `/chrome` | built-in | Configura Claude in Chrome |
 | `/claude-api [migrate\|managed-agents-onboard]` | **Skill** | Reference Claude API + tool migration |
 | `/clear` (alias `/reset`, `/new`) | built-in | Nuova conversation, pregresso resta in `/resume` |
@@ -107,7 +108,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.159. Type
 
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
 
-<sub>Aggiornato 2026-05-29 via daily what's new. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154).</sub>
+<sub>Aggiornato 2026-06-09 via daily what's new. Fonte: [GitHub Releases v2.1.169](https://github.com/anthropics/claude-code/releases/tag/v2.1.169).</sub>
 
 ---
 

@@ -81,6 +81,7 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 ### Plugins
 - `enabledPlugins`, `extraKnownMarketplaces`
 - `strictKnownMarketplaces`, `blockedMarketplaces`, `pluginTrustMessage`
+- **`disableBundledSkills`** (da v2.1.169): `true` nasconde le skill bundled e i comandi slash built-in dal modello; env var equivalente `CLAUDE_CODE_DISABLE_BUNDLED_SKILLS=1`. Le skill custom rimangono attive — solo quelle pre-installate vengono rimosse dal context.
 
 ### MCP
 - `allowedMcpServers`, `deniedMcpServers`, `allowManagedMcpServersOnly`
@@ -116,6 +117,12 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 > **Attenzione**: con `"none"`, sessioni background concorrenti operano sulla stessa working copy. Usare solo quando il workflow garantisce serializzazione delle sessioni o quando il repo non supporta git worktree.
 
 <sub>Aggiornato 2026-05-16 via daily what's new. Fonte: [GitHub Releases v2.1.143](https://github.com/anthropics/claude-code/releases/tag/v2.1.143).</sub>
+
+### Safe Mode (da v2.1.169)
+
+Il flag `--safe-mode` e la env var `CLAUDE_CODE_SAFE_MODE=1` avviano Claude Code con tutte le customizzazioni disabilitate (CLAUDE.md, plugin, skill, hook, MCP server). Non modifica nessun file di configurazione — le customizzazioni restano in place per le sessioni normali. Vedi [4.5 Safe Mode](./04-modalita-permessi.md#safe-mode) per i dettagli.
+
+<sub>Aggiornato 2026-06-09 via daily what's new. Fonte: [GitHub Releases v2.1.169](https://github.com/anthropics/claude-code/releases/tag/v2.1.169).</sub>
 
 ### Version enforcement (da v2.1.163 — Managed only)
 

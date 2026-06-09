@@ -32,6 +32,20 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 ---
 
+### Disabilita le bundled skills (v2.1.169)
+
+Il setting `disableBundledSkills: true` (o env var `CLAUDE_CODE_DISABLE_BUNDLED_SKILLS=1`) nasconde le skill bundled e i comandi slash built-in dalla visibilita' del modello. Le skill custom rimangono attive; solo quelle pre-installate vengono rimosse dal context.
+
+```json
+{ "disableBundledSkills": true }
+```
+
+Utile in ambienti enterprise dove si vogliono esporre esclusivamente le skill custom del team, senza che il modello sia distratto da comandi built-in non pertinenti al workflow aziendale.
+
+<sub>Aggiornato 2026-06-09 via daily what's new. Fonte: [GitHub Releases v2.1.169](https://github.com/anthropics/claude-code/releases/tag/v2.1.169).</sub>
+
+---
+
 ## 9.2 Path / scope
 
 | Location | Path | Applies to |

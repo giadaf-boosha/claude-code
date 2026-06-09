@@ -218,7 +218,37 @@ Repo: https://github.com/anthropic-experimental/sandbox-runtime
 
 ---
 
-## 4.5 Checkpoints e rewind
+## 4.5 Safe Mode {#safe-mode}
+
+Safe Mode (da v2.1.169) avvia Claude Code con **tutte le customizzazioni disabilitate** per sessioni di troubleshooting isolate.
+
+### Cosa disabilita
+
+| Componente | Disabilitato in safe mode |
+|---|---|
+| `CLAUDE.md` | Si' (non viene caricato) |
+| Plugin | Si' (nessun plugin attivo) |
+| Skills | Si' (bundled e custom non disponibili) |
+| Hooks | Si' (nessun hook eseguito) |
+| MCP servers | Si' (nessun server MCP connesso) |
+
+### Attivazione
+
+```bash
+# Flag CLI
+claude --safe-mode
+
+# Env var (persistente per la sessione)
+CLAUDE_CODE_SAFE_MODE=1 claude
+```
+
+Safe Mode non modifica nessun file di configurazione: le customizzazioni restano in place per le sessioni normali. Utile per verificare se un comportamento inatteso e' causato da hook, plugin, skill o CLAUDE.md prima di fare un debug piu' specifico.
+
+<sub>Aggiornato 2026-06-09 via daily what's new. Fonte: [GitHub Releases v2.1.169](https://github.com/anthropics/claude-code/releases/tag/v2.1.169).</sub>
+
+---
+
+## 4.6 Checkpoints e rewind
 
 Claude Code traccia automaticamente edit. **NON** traccia bash file mods (`rm`, `mv`, `cp`).
 
@@ -242,7 +272,7 @@ Claude Code traccia automaticamente edit. **NON** traccia bash file mods (`rm`, 
 
 ---
 
-## 4.6 Tip operative
+## 4.7 Tip operative
 
 1. **Default a `default`**: il prompt ti protegge. Passa a `acceptEdits` solo quando sai cosa stai facendo.
 2. **Plan mode prima di refactor grosso**: Shift+Tab e descrivi obiettivo + constraints + acceptance.
