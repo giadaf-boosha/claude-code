@@ -508,7 +508,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 6 giu 2026 | v2.1.167 | Bug fixes e miglioramenti di affidabilita'. |
 | 8 giu 2026 | **v2.1.169** | **Safe Mode** (`--safe-mode` / `CLAUDE_CODE_SAFE_MODE`): avvia CC con tutte le customizzazioni disabilitate (CLAUDE.md, plugin, skill, hook, MCP) per troubleshooting isolato. **`/cd <path>`**: sposta la sessione in una nuova working directory senza rompere il prompt cache. **`disableBundledSkills`** (`CLAUDE_CODE_DISABLE_BUNDLED_SKILLS`): nasconde skill bundled e comandi built-in dal modello. `claude agents --json` include ora anche sessioni blocked/dispatched; aggiunto `--all` flag e campi `id`/`state`. Fix: policy MCP enterprise non applicate su reconnect; stall UI 30-50ms macOS; lentezza `claude -p` su Windows; Remote Control stuck su reconnect; popup Git Credential Manager Windows; footer hints assenti con statusline custom; permission prompt stale su reattach remoto. |
 
-<sub>Aggiornato 2026-06-09 via daily what's new. Fonte: [GitHub Releases v2.1.169](https://github.com/anthropics/claude-code/releases/tag/v2.1.169).</sub>
+| 9 giu 2026 | **v2.1.170** | **Claude Fable 5** (`claude-fable-5`): primo modello Mythos-class disponibile pubblicamente — prestazioni superiori a Opus 4.8, ottimizzato per reasoning profondo e agentico long-horizon. Context window 1M token, 128k output max, $10/$50 per MTok, adaptive thinking sempre attivo. Disponibile su Claude API, Bedrock, Vertex AI, Foundry. |
+
+<sub>Aggiornato 2026-06-10 via daily what's new. Fonte: [GitHub Releases v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170).</sub>
 
 ---
 

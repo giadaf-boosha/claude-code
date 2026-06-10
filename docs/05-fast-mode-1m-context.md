@@ -1,9 +1,9 @@
-# 05 — Fast mode, 1M context, Opus 4.8
+# 05 — Fast mode, 1M context, Opus 4.8, Fable 5
 
 > 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
 > 🔧 Operational · 🟡 Intermediate
 
-Quattro feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), e **Opus 4.8** come modello premium corrente (v2.1.154).
+Cinque feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Opus 4.8** come modello premium corrente (v2.1.154), e **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170).
 
 ## Cosa e' concettualmente
 
@@ -152,6 +152,7 @@ Opus 4.7 rimane disponibile via `/model claude-opus-4-7` o `/effort` manuale. Pe
 
 | Situazione | Scelta |
 |---|---|
+| Reasoning max, agentico long-horizon | Fable 5 (`/model claude-fable-5`) |
 | Task complesso massima qualita' | Opus 4.8 + `xhigh` o `max` |
 | Task duro con workflow automatico | Opus 4.8 + `ultracode` (vedi [./24-workflows.md](./24-workflows.md)) |
 | Default ragionamento | Opus 4.8 + `high` (effort di default) |
@@ -160,6 +161,40 @@ Opus 4.7 rimane disponibile via `/model claude-opus-4-7` o `/effort` manuale. Pe
 | Codebase enorme | 1M context (Sonnet 4.6 o Opus 4.6) |
 | Plan mode | Opus 4.8 per plan + Sonnet per execution (`/model` Opus per plan mode) |
 | CI/headless | Sonnet 4.6 + `--bare` |
+
+---
+
+## 5.7 Claude Fable 5 (da v2.1.170)
+
+### Annunciato
+v2.1.170 (9 giugno 2026). `claude-fable-5` e' il primo modello **Mythos-class** di Anthropic disponibile pubblicamente — prestazioni superiori a qualsiasi modello precedentemente rilasciato al pubblico, ottimizzato per reasoning profondo e lavoro agentico di lunga durata.
+
+### Come si usa in Claude Code
+```bash
+/model claude-fable-5
+```
+
+### Caratteristiche principali
+| Caratteristica | Valore |
+|---|---|
+| Model ID | `claude-fable-5` |
+| Context window | 1M token |
+| Output max per request | 128k token |
+| Pricing | $10/MTok input, $50/MTok output |
+| Thinking | Adaptive thinking sempre attivo (non disabilitabile) |
+| Raw thinking | Non restituito (solo `"summarized"` o `"omitted"`) |
+| Refusals | HTTP 200 con `stop_reason: "refusal"` (non errore) |
+
+### Disponibilita'
+Generale su Claude API, Claude Platform on AWS, Amazon Bedrock, Vertex AI e Microsoft Foundry (dal 9 giugno 2026).
+
+### Relazione con Opus 4.8
+Fable 5 supera Opus 4.8 in capacita'. Se una richiesta viene rifiutata dai classifier di sicurezza, il meccanismo `fallbackModel` puo' riservare automaticamente su Opus 4.8. Il parametro `fallbacks` nell'API gestisce questo caso lato server.
+
+### Note su `disableBundledSkills`
+Con `/model claude-fable-5` il reasoning e' sempre on — `MAX_THINKING_TOKENS=0` non ha effetto su Fable 5 (vedi sezione 5.6). Per Fable 5 usa il parametro `effort` per controllare la profondita' del thinking.
+
+<sub>Aggiornato 2026-06-10 via daily what's new. Fonte: [GitHub Releases v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170) · [Anthropic docs](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5).</sub>
 
 ---
 
