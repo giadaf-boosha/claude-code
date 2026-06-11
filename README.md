@@ -1,18 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **10 giugno 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.170** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **11 giugno 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.172** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-10)
+## What's new today (2026-06-11)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude Fable 5** (`claude-fable-5`, v2.1.170, 9 giu): primo modello Mythos-class di Anthropic disponibile pubblicamente — prestazioni superiori a qualsiasi modello precedentemente rilasciato al pubblico, ottimizzato per reasoning profondo e lavoro agentico di lunga durata. Context window 1M token, fino a 128k output per request, pricing $10/$50 per MTok (input/output), adaptive thinking sempre attivo. Disponibile su Claude API, Bedrock, Vertex AI, Foundry e Claude Code v2.1.170. Fonte: [GitHub Releases v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170) · [Anthropic docs](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Sub-agenti annidati fino a 5 livelli** (v2.1.172, 10 giu): i sub-agenti possono ora lanciare a loro volta sub-agenti, con gerarchia profonda fino a 5 livelli — ogni livello riceve un context window fresco e restituisce solo un summary al padre. Abilita l'orchestrazione di task complessi senza saturare il context del main agent. Fonte: [GitHub Releases v2.1.172](https://github.com/anthropics/claude-code/releases/tag/v2.1.172). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

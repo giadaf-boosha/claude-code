@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-10
+
+- **Claude Fable 5** (`claude-fable-5`, v2.1.170, 9 giu): primo modello Mythos-class di Anthropic disponibile pubblicamente — prestazioni superiori a qualsiasi modello precedentemente rilasciato al pubblico, ottimizzato per reasoning profondo e lavoro agentico di lunga durata. Context window 1M token, fino a 128k output per request, pricing $10/$50 per MTok (input/output), adaptive thinking sempre attivo. Disponibile su Claude API, Bedrock, Vertex AI, Foundry e Claude Code v2.1.170. Fonte: [GitHub Releases v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170) · [Anthropic docs](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-06-09
 
 - **Safe Mode** (`--safe-mode` / `CLAUDE_CODE_SAFE_MODE`, v2.1.169, 8 giu): nuovo flag di avvio disabilita tutte le customizzazioni (CLAUDE.md, plugin, skill, hook, MCP server) — pensato per troubleshooting isolato senza toccare la configurazione permanente. Fonte: [GitHub Releases v2.1.169](https://github.com/anthropics/claude-code/releases/tag/v2.1.169). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/18-settings-auth.md](./docs/18-settings-auth.md).

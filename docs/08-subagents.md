@@ -100,6 +100,17 @@ claude agents                  # Agent View (lista + stato sessioni)
 
 > **Cross-session messaging hardening** (da v2.1.166): i messaggi inoltrati via `SendMessage` da un'altra sessione Claude non portano piu' l'autorita' dell'utente. Le sessioni riceventi rifiutano le richieste di permesso inoltrate; in auto mode vengono bloccate direttamente. Questo significa che un agente che riceve un messaggio da un altro agente non puo' eseguire azioni che richiederebbero conferma utente, anche se l'agente mittente avrebbe quell'autorita'. Il comportamento era gia' documentato come best practice; ora e' applicato dall'harness. Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166).
 
+> **Sub-agenti annidati fino a 5 livelli** (da v2.1.172): un sub-agente puo' ora lanciare a sua volta altri sub-agenti, con profondita' massima di 5 livelli. Ogni livello ha il proprio context window isolato e restituisce solo un summary al livello padre — permette a task gerarchici complessi di suddividere ulteriormente il lavoro senza saturare il context dell'agente principale. Il limite di 5 livelli e' un punto di partenza configurabile (Boris Cherny ha esplicitamente richiesto feedback sulla soglia).
+>
+> ```
+> main agent (L0)
+>   └─ sub-agent A (L1)
+>        └─ sub-agent B (L2)
+>             └─ sub-agent C (L3, max L5)
+> ```
+
+<sub>Aggiornato 2026-06-11 via daily what's new. Fonte: [GitHub Releases v2.1.172](https://github.com/anthropics/claude-code/releases/tag/v2.1.172).</sub>
+
 ### Dal main agent
 Claude usa il tool **Agent** specificando `subagent_type`:
 ```json
