@@ -510,8 +510,11 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 
 | 9 giu 2026 | **v2.1.170** | **Claude Fable 5** (`claude-fable-5`): primo modello Mythos-class disponibile pubblicamente — prestazioni superiori a Opus 4.8, ottimizzato per reasoning profondo e agentico long-horizon. Context window 1M token, 128k output max, $10/$50 per MTok, adaptive thinking sempre attivo. Disponibile su Claude API, Bedrock, Vertex AI, Foundry. |
 | 10 giu 2026 | **v2.1.172** | **Sub-agenti annidati fino a 5 livelli**: un sub-agente puo' ora lanciare propri sub-agenti, con gerarchia fino a depth 5; ogni livello ha context window isolato e restituisce solo summary al padre. Plugin marketplace search bar. Bedrock region da `~/.aws` config. |
+| 11 giu 2026 | v2.1.173 | Fix: normalizzazione nomi modelli Fable 5 con suffix `[1m]`; rimosso warning spurio "sandbox dependencies missing" su Windows. |
+| 12 giu 2026 | v2.1.174 | **Usage attribution nel dialog Account & usage**: breakdowns granulari per skill, agent, plugin e server MCP; cache misses; long context. Fix `/model` picker che nascondeva la famiglia del Default model; fix Bedrock GovCloud prefix (`us-gov` anziche' `global`); fix background sessions che ereditavano variabili provider da altre sessioni. `wheelScrollAccelerationEnabled` setting per disabilitare l'accelerazione scroll in fullscreen. |
+| 12 giu 2026 | **v2.1.175** | **`enforceAvailableModels`** (managed setting): se attivo, l'allowlist `availableModels` vincola anche il Default model e user/project settings non possono espandere la lista gestita — governance enterprise strict sul modello consentito. |
 
-<sub>Aggiornato 2026-06-11 via daily what's new. Fonte: [GitHub Releases v2.1.172](https://github.com/anthropics/claude-code/releases/tag/v2.1.172).</sub>
+<sub>Aggiornato 2026-06-12 via daily what's new. Fonte: [GitHub Releases v2.1.175](https://github.com/anthropics/claude-code/releases/tag/v2.1.175).</sub>
 
 ---
 

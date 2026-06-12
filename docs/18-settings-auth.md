@@ -37,7 +37,21 @@ JSON Schema: `"$schema": "https://json.schemastore.org/claude-code-settings.json
 ## 18.2 Campi principali (selezione)
 
 ### Model & effort
-- `model`, `availableModels`, `modelOverrides`, `effortLevel`, `fallbackModel`
+- `model`, `availableModels`, `modelOverrides`, `effortLevel`, `fallbackModel`, `enforceAvailableModels`
+
+> **`enforceAvailableModels`** (da v2.1.175, solo managed settings): quando `true`, l'allowlist `availableModels` vincola anche il Default model — se il Default risolverebbe a un modello non nella lista, viene sostituito dal primo modello consentito. Inoltre, user settings e project settings non possono espandere la lista: qualsiasi modello aggiunto a livelli inferiori viene ignorato se non gia' presente in `availableModels` managed. Garantisce compliance enterprise anche in presenza di overrides locali.
+>
+> ```json
+> // managed-settings.json (sistema)
+> {
+>   "availableModels": ["claude-sonnet-4-6", "claude-haiku-4-5"],
+>   "enforceAvailableModels": true
+> }
+> ```
+>
+> Senza `enforceAvailableModels: true`, un utente con `~/.claude/settings.json` potrebbe aggiungere `claude-fable-5` ad `availableModels` e bypassare la policy. Con il flag attivo, l'aggiunta viene ignorata.
+
+<sub>Aggiornato 2026-06-12 via daily what's new. Fonte: [GitHub Releases v2.1.175](https://github.com/anthropics/claude-code/releases/tag/v2.1.175).</sub>
 
 > **`fallbackModel`** (da v2.1.166): configura fino a 3 modelli di fallback provati in sequenza quando il modello primario e' sovraccarico o non disponibile. Il flag `--fallback-model` funziona ora anche nelle sessioni interattive (in precedenza solo in `-p`). Errori auth, rate-limit, request-size e transport vengono comunque segnalati immediatamente senza tentare il fallback.
 >

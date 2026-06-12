@@ -145,6 +145,25 @@ Subagents possono mantenere auto-memory propria. Vedi [`/en/sub-agents#enable-pe
 
 ---
 
+## 8.6b Usage attribution per subagent
+
+Il comando `/usage` e il dialog "Account & usage" (VS Code) mostrano i token consumati con breakdowns granulari:
+
+| Voce | Cosa include |
+|---|---|
+| Subagents | Token di ogni sotto-agente (per `subagent_type`) |
+| Skills | Token consumati durante l'esecuzione di ogni skill |
+| Plugins | Token delle skill/agenti iniettati da plugin |
+| MCP servers | Tool call verso ogni MCP server |
+| Cache misses | Prompt cache non servita (context ricalcolato) |
+| Long context | Richieste oltre la soglia standard di context |
+
+Utile per identificare quali agenti o skill costano di piu' in un workflow agentic complesso, prima di ottimizzare il modello, ridurre il contesto, o spostare task su Haiku.
+
+<sub>Aggiornato 2026-06-12 via daily what's new. Fonte: [GitHub Releases v2.1.174](https://github.com/anthropics/claude-code/releases/tag/v2.1.174).</sub>
+
+---
+
 ## 8.7 Subagent vs Agent Teams
 
 |  | Subagents | Agent Teams |
