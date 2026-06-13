@@ -8,12 +8,11 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-12)
+## What's new today (2026-06-13)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Usage attribution per-skill/agent/plugin** (v2.1.174, 12 giu): il dialog "Account & usage" mostra ora breakdowns granulari per skill, agent, plugin e server MCP, oltre a cache misses e long context — utile per analizzare i costi nei workflow agentic complessi. Fonte: [GitHub Releases v2.1.174](https://github.com/anthropics/claude-code/releases/tag/v2.1.174). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`enforceAvailableModels`** (v2.1.175, 12 giu): nuova opzione managed settings rende strict l'allowlist `availableModels` — il Default model e' ora vincolato dalla lista gestita e user/project settings non possono espandere i modelli consentiti dall'enterprise. Fonte: [GitHub Releases v2.1.175](https://github.com/anthropics/claude-code/releases/tag/v2.1.175). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 ---
 

@@ -11,6 +11,13 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-12
+
+- **Usage attribution per-skill/agent/plugin** (v2.1.174, 12 giu): il dialog "Account & usage" mostra ora breakdowns granulari per skill, agent, plugin e server MCP, oltre a cache misses e long context — utile per analizzare i costi nei workflow agentic complessi. Fonte: [GitHub Releases v2.1.174](https://github.com/anthropics/claude-code/releases/tag/v2.1.174). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`enforceAvailableModels`** (v2.1.175, 12 giu): nuova opzione managed settings rende strict l'allowlist `availableModels` — il Default model e' ora vincolato dalla lista gestita e user/project settings non possono espandere i modelli consentiti dall'enterprise. Fonte: [GitHub Releases v2.1.175](https://github.com/anthropics/claude-code/releases/tag/v2.1.175). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-06-11
 
 - **Sub-agenti annidati fino a 5 livelli** (v2.1.172, 10 giu): i sub-agenti possono ora lanciare a loro volta sub-agenti, con gerarchia profonda fino a 5 livelli — ogni livello riceve un context window fresco e restituisce solo un summary al padre. Abilita l'orchestrazione di task complessi senza saturare il context del main agent. Fonte: [GitHub Releases v2.1.172](https://github.com/anthropics/claude-code/releases/tag/v2.1.172). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
