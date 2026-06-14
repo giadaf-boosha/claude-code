@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-13
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-06-12
 
 - **Usage attribution per-skill/agent/plugin** (v2.1.174, 12 giu): il dialog "Account & usage" mostra ora breakdowns granulari per skill, agent, plugin e server MCP, oltre a cache misses e long context — utile per analizzare i costi nei workflow agentic complessi. Fonte: [GitHub Releases v2.1.174](https://github.com/anthropics/claude-code/releases/tag/v2.1.174). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
