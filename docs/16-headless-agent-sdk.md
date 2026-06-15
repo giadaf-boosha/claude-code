@@ -198,20 +198,28 @@ Agent SDK v0.2.111+. Errore `thinking.type.enabled` → upgrade.
 
 ---
 
-## 16.5 Crediti mensili per uso programmatico (dal 15 giu 2026)
+## 16.5 Crediti mensili per uso programmatico (attivi dal 15 giu 2026)
 
-A partire dal **15 giugno 2026**, i piani paid Claude (Pro, Max, Team, Enterprise) includono un **credito mensile dedicato per uso programmatico**, separato dal credito interattivo. Copre:
+A partire dal **15 giugno 2026** (ora attivi), i piani paid Claude includono un **credito mensile dedicato per uso programmatico**, separato dal pool interattivo. Copre:
 
 - `claude -p` (headless CLI)
 - **Claude Agent SDK** (Python / TypeScript)
 - **Claude Code GitHub Actions**
 - App terze parti basate sull'Agent SDK
 
-Il credito permette di usare Claude Code in pipeline CI/CD, script automatici e app embedding senza consumare il budget interattivo mensile.
+| Piano | Credito mensile |
+|---|---|
+| Pro | $20 |
+| Max 5x | $100 |
+| Max 20x | $200 |
+| Team | $100/seat |
+| Enterprise | $200/seat |
 
-> Annunciato il 13 maggio 2026 da [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388).
+Il credito va reclamato esplicitamente dalla pagina billing. Si azzera con il ciclo di fatturazione e non e' cumulabile. Una volta esaurito, l'uso programmatico viene addebitato a tariffe API standard. Il comando `/usage-credits` mostra l'utilizzo corrente del credito nella sessione.
 
-<sub>Aggiornato 2026-05-14 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388).</sub>
+> Annunciato il 13 maggio 2026 da [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388). Effettivo dal 15 giugno 2026.
+
+<sub>Aggiornato 2026-06-15 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388).</sub>
 
 ---
 
