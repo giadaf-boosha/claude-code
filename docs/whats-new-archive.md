@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-15
+
+- **Credito programmazione attivo da oggi** (15 giu 2026): i crediti mensili dedicati per uso programmatico entrano in vigore — `claude -p`, Agent SDK, GitHub Actions e app terze parti basate sull'SDK escono dal pool interattivo e attingono a un budget separato ($20 Pro · $100 Max 5x/Team per seat · $200 Max 20x/Enterprise per seat). Il credito va reclamato, si azzera con il ciclo di fatturazione e non e' cumulabile. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388). Doc: [docs/16-headless-agent-sdk.md](./docs/16-headless-agent-sdk.md#crediti-mensili-per-uso-programmatico-attivi-dal-15-giu-2026).
+
+---
+
 ## 2026-06-14
 
 > Nessuna novita' significativa nelle ultime 24 ore.

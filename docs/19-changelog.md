@@ -516,8 +516,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 12 giu 2026 | v2.1.176 | **Session titles in conversation language**: i titoli delle sessioni vengono generati nella lingua della conversazione (configurabile via setting `language`). **`footerLinksRegexes`** setting: link badge regex-matched nel footer row, configurabile via user o managed settings. **Bedrock credential caching**: credenziali da `awsCredentialExport` cachate fino alla loro `Expiration` (prima 1h fissa). Auto mode fallback al miglior modello Opus disponibile quando il modello configurato non e' raggiungibile. |
 | 13 giu 2026 | v2.1.177 | Aggiornamento CHANGELOG.md e feed.xml (maintenance). |
 | 15 giu 2026 | — | **Credito programmatico attivo**: il budget mensile dedicato per `claude -p`, Agent SDK, GitHub Actions e app terze parti entra in vigore per tutti i piani paid. Vedi [16.5](./16-headless-agent-sdk.md#crediti-mensili-per-uso-programmatico-attivi-dal-15-giu-2026). |
+| 15 giu 2026 | **v2.1.178** | **`Tool(param:value)` in permission rules**: sintassi per filtrare per parametro del tool — es. `Agent(model:opus)` in `deny` blocca sub-agenti Opus; wildcard `*` supportato. **Nested `.claude/` directory precedence**: skill/agenti/workflow/output-style nella `.claude/` piu' vicina alla working directory prevalgono; clash di nome risolti con prefisso `<dir>:<name>`. Auto mode: subagent spawns valutati dal classifier prima del lancio. `/doctor` rinnovato (layout flat, icone status, nomi comando evidenziati). |
 
-<sub>Aggiornato 2026-06-15 via daily what's new. Fonte: [GitHub Releases v2.1.176](https://github.com/anthropics/claude-code/releases/tag/v2.1.176) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388).</sub>
+<sub>Aggiornato 2026-06-16 via daily what's new. Fonte: [GitHub Releases v2.1.178](https://github.com/anthropics/claude-code/releases/tag/v2.1.178).</sub>
 
 ---
 

@@ -180,7 +180,7 @@ Rule format: `Tool` o `Tool(specifier)`.
 | `WebFetch` | `WebFetch(domain:example.com)` |
 | `MCP` | `MCP(server)`, `MCP(server.tool)` |
 | `Skill` | `Skill(name)`, `Skill(name *)` (prefix) |
-| `Agent` | `Agent(...)` |
+| `Agent` | `Agent(model:opus)`, `Agent(model:claude-opus-*)` |
 
 ```json
 {
@@ -191,6 +191,29 @@ Rule format: `Tool` o `Tool(specifier)`.
   }
 }
 ```
+
+### Sintassi `Tool(param:value)` (da v2.1.178)
+
+Oltre al path-based specifier (`Bash(git *)`, `Read(./.env)`), le permission rules supportano ora il filtraggio per **parametro del tool**:
+
+```
+Tool(param:value)
+Tool(param:*)       # wildcard: blocca su qualsiasi valore del parametro
+```
+
+Esempio pratico: bloccare sub-agenti che usano Opus (utile per contenere i costi in team):
+
+```json
+{
+  "permissions": {
+    "deny": ["Agent(model:claude-opus-4-8)", "Agent(model:claude-opus-*)"]
+  }
+}
+```
+
+Il parametro `model` di `Agent` corrisponde al campo `model` passato al tool Agent. Il wildcard `*` funziona come suffix match. Combinabile con le deny normali nella stessa lista.
+
+<sub>Aggiornato 2026-06-16 via daily what's new. Fonte: [GitHub Releases v2.1.178](https://github.com/anthropics/claude-code/releases/tag/v2.1.178).</sub>
 
 ---
 

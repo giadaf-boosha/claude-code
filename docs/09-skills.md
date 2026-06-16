@@ -136,10 +136,30 @@ Vedi sintassi permessi in [18 Settings & Auth](./18-settings-auth.md).
 
 Lavorando in `packages/frontend/`, anche `packages/frontend/.claude/skills/` viene caricato (monorepo support).
 
+### Precedenza e clash resolution (da v2.1.178)
+
+Quando esiste piu' di una directory `.claude/` nella gerarchia (tipico nei monorepo), valgono le seguenti regole:
+
+- **Skill**: la skill nella directory `.claude/skills/` piu' vicina alla working directory ha la precedenza. In caso di clash di nome tra una skill di progetto e una annidata, quella annidata e' disponibile con il prefisso `<dir>:<name>` (es. `packages/frontend:deploy`) — entrambe restano attive, nessuna sovrascrive l'altra.
+- **Agenti, workflow, output-style**: come per le skill, la definizione nella `.claude/` piu' vicina alla working directory vince. Quando salvi un workflow a livello progetto (`/workflow save`), Claude Code punta alla `.claude/workflows/` piu' vicina gia' esistente.
+
+```
+repo/
+├── .claude/skills/deploy/SKILL.md        # "/deploy"
+├── packages/
+│   └── frontend/
+│       └── .claude/skills/deploy/SKILL.md  # "packages/frontend:deploy"
+└── ...
+```
+
+Il clash resolution tramite `<dir>:<name>` evita di dover rinominare skill in ogni pacchetto del monorepo.
+
 ### Live change detection
 Aggiungere/modificare/rimuovere skill in `~/.claude/skills/`, project `.claude/skills/`, o `--add-dir` directory: **effetto immediato** senza restart (hot reload, da v2.1.0).
 
 Da v2.1.152, il comando `/reload-skills` riscansiona esplicitamente tutte le directory skill nella sessione corrente — utile dopo aver installato un plugin via `claude plugin install` o copiato file SKILL.md in path non monitorati automaticamente. I `SessionStart` hook possono restituire `reloadSkills: true` per lo stesso effetto all'avvio.
+
+<sub>Aggiornato 2026-06-16 via daily what's new. Fonte: [GitHub Releases v2.1.178](https://github.com/anthropics/claude-code/releases/tag/v2.1.178).</sub>
 
 ---
 
