@@ -129,8 +129,21 @@ claude-code/
 ├── posts/                       Post X di riferimento (Boris, Cat, Noah, Thariq, ...)
 ├── _research/                   Dossier di ricerca (~10 file)
 ├── archive/                     Snapshot pre-feb 2026
+├── examples/                    Template .claude/ per 8 persona
+├── live/                        Materiale demo per live/talk (vedi § 5b)
 └── skills/                      76 skill curate (raccolta originale)
 ```
+
+### 5b. Deliverable: materiale live 17 giugno 2026
+
+`live/2026-06-17-live-claude-code/` raccoglie il materiale demo per lo slot di Giada Franceschini (Boosha AI) alla live del 17 giugno 2026 (slot 19:00-19:30, 20 min demo + 10 min Q&A, pubblico misto dev/non-dev).
+
+| Pacchetto | Cosa mostra |
+|---|---|
+| `01-marketing-multiagente/` | Team marketing AI a 5 subagent (`.claude/agents/`) che si passano il lavoro in catena da un solo prompt orchestratore; demo su Boosha AI + output di fallback + runbook timed |
+| `02-ai-operating-system/` | Claude Code come "AI OS" a laptop spento: routine cloud `morning-brief` (branch + PR, mai push diretto su main), setup `/schedule`, controllo da telefono + output di fallback + runbook timed |
+
+> Eccezione redazionale: i contenuti `live/` sono materiale didattico/operativo per talk, non reference tecnica; non seguono il format breadcrumb/footer dei `docs/01-21`, pur rispettando le convenzioni di lingua e accenti (§ 6).
 
 ---
 

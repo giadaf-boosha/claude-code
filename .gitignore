@@ -3,3 +3,7 @@ notion-raw/
 *.output
 .DS_Store
 .playwright-mcp/
+
+# Eccezione: i subagent demo della live sono materiale deliverable (non config locale), vanno versionati
+!live/2026-06-17-live-claude-code/01-marketing-multiagente/.claude/
+!live/2026-06-17-live-claude-code/01-marketing-multiagente/.claude/**

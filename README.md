@@ -278,6 +278,10 @@ E come reference:
 
 [`examples/personas/`](./examples/personas/) contiene 8 cartelle template `.claude/` (CLAUDE.md + settings.json + skill + hook esempio) configurate per le 8 persona di [docs/21](./docs/21-guide-target-user.md). Copia la cartella della tua persona nel tuo progetto come punto di partenza.
 
+## Live
+
+[`live/2026-06-17-live-claude-code/`](./live/2026-06-17-live-claude-code/) contiene il materiale demo dello slot Boosha AI alla live del 17 giugno 2026: due casi d'uso pronti per il palco — [team marketing AI multi-agente](./live/2026-06-17-live-claude-code/01-marketing-multiagente/) (5 subagent in catena da un solo prompt) e [Claude Code come AI Operating System](./live/2026-06-17-live-claude-code/02-ai-operating-system/) (routine cloud a laptop spento, controllo da telefono). Ogni caso ha prompt, runbook timed e output di fallback.
+
 ---
 
 ## Risorse ufficiali

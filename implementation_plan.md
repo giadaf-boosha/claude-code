@@ -14,6 +14,7 @@
 | **F4** Archive integration sistematica | ✅ done | (28 apr 2026) |
 | **F5-light** Quick Start + persona templates | ✅ done | (28 apr 2026) |
 | **F6** Daily What's New automation | ✅ done | (28 apr 2026) |
+| **F7** Materiale live 17 giu 2026 (2 demo: marketing multi-agente + AI Operating System) | ✅ done | (17 giu 2026) |
 | **F5-full** Open governance (CONTRIBUTING.md, license, issue templates) | ⏳ later | — |
 
 ---
@@ -176,6 +177,25 @@ Aggiungere visualizzazioni avanzate e quick start onboarding per profilo.
 
 ---
 
+## Fase 7 — Materiale live 17 giugno 2026 (done)
+
+### Obiettivo
+
+Preparare il materiale operativo per lo slot Boosha AI alla live su Claude Code del 17 giugno 2026 (19:00-19:30): due casi d'uso pronti per il palco, eseguibili e con fallback.
+
+### Cosa fatto
+
+- `live/2026-06-17-live-claude-code/` con indice (agenda, timing 20 min, checklist pre-live, bozza risposta mail organizzatore).
+- `01-marketing-multiagente/`: 5 subagent in `.claude/agents/` + `prompt-orchestratore.md` (catena con handoff via file su Boosha AI) + README + runbook timed + `output-esempio/campagna-boosha-esempio.md` (fallback).
+- `02-ai-operating-system/`: `routine-prompt.md` (routine cloud `morning-brief`, branch + PR, mai push su main) + `setup-routine.md` (`/schedule`, `/web-setup`, controllo da telefono) + README + runbook timed + `output-esempio/brief-esempio.md` (fallback).
+- Addendum a `README.md` (sez. Live), `spec.md` (§ 5b); eccezione `.gitignore` per versionare i subagent demo.
+
+### Stato
+
+✅ done — pronto per la live del 17 giu 2026.
+
+---
+
 ## Fase 5 — Open governance (later)
 
 - [ ] `CONTRIBUTING.md` (linee guida contributi)
@@ -196,3 +216,4 @@ Aggiungere visualizzazioni avanzate e quick start onboarding per profilo.
 | 28 apr 2026 | F3 completata: 8 capitoli concettuali + intro 21 doc + nav + mermaid (commit `3ec4c56`) |
 | 28 apr 2026 | F4 + F5-light completate: archive integration sistematica (Kora case + vibe-to-agentic + worktree workflow + Conductor + Ralph + Sonnet 4.5 callout + cheat sheet tips), QUICKSTART.md, 8 examples/personas/ |
 | 28 apr 2026 | F6 completata: automazione daily "what's new today" (routine cloud + GitHub Action backup) — ogni 07:00 Europe/Rome apre PR con TLDR novita' 24h |
+| 17 giu 2026 | F7 completata: materiale live 17 giu (2 demo — marketing multi-agente + AI Operating System) + addendum a README.md (sez. Live), spec.md (§ 5b), `.gitignore` (eccezione subagent demo) |
