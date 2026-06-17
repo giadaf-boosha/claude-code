@@ -1,6 +1,6 @@
-# Campagna Boosha AI — OUTPUT DI ESEMPIO DELLA DEMO
+# Campagna Boosha AI — ESEMPIO DI OUTPUT
 
-> **AVVISO**: questo e' un output di ESEMPIO, pre-generato come fallback per la live. Riproduce cosa produrrebbe la catena dei 5 subagent partendo dal prompt orchestratore. I competitor citati sono categorie plausibili di mercato (ipotesi da validare, non ricerca live), e TUTTI i numeri sono proiezioni / benchmark di settore dichiarati come stime, NON risultati reali di Boosha AI. Nessun dato cliente, fatturato o metrica storica reale e' presente.
+> **AVVISO**: esempio di output prodotto dalla catena dei 5 agent (da non citare come dato verificato). Riproduce cosa produce la catena dei 5 subagent partendo dal prompt orchestratore. I competitor citati sono categorie plausibili di mercato (ipotesi da validare, non ricerca live), e TUTTI i numeri sono proiezioni / benchmark di settore dichiarati come stime, NON risultati reali di Boosha AI. Nessun dato cliente, fatturato o metrica storica reale e' presente.
 
 ---
 

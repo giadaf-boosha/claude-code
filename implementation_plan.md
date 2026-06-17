@@ -185,10 +185,11 @@ Preparare il materiale operativo per lo slot Boosha AI alla live su Claude Code 
 
 ### Cosa fatto
 
-- `live/2026-06-17-live-claude-code/` con indice (agenda, timing 20 min, checklist pre-live, bozza risposta mail organizzatore).
-- `01-marketing-multiagente/`: 5 subagent in `.claude/agents/` + `prompt-orchestratore.md` (catena con handoff via file su Boosha AI) + README + runbook timed + `output-esempio/campagna-boosha-esempio.md` (fallback).
-- `02-ai-operating-system/`: `routine-prompt.md` (routine cloud `morning-brief`, branch + PR, mai push su main) + `setup-routine.md` (`/schedule`, `/web-setup`, controllo da telefono) + README + runbook timed + `output-esempio/brief-esempio.md` (fallback).
-- Addendum a `README.md` (sez. Live), `spec.md` (§ 5b); eccezione `.gitignore` per versionare i subagent demo.
+- `live/2026-06-17-live-claude-code/` con indice user-facing dei due casi d'uso.
+- `01-marketing-multiagente/`: 5 subagent in `.claude/agents/` + `prompt-orchestratore.md` (catena con handoff via file su Boosha AI) + README guida + `output-esempio/campagna-boosha-esempio.md`.
+- `02-ai-operating-system/`: `routine-prompt.md` (routine cloud `morning-brief`, branch + PR, mai push su main) + `setup-routine.md` (`/schedule`, `/web-setup`, controllo da telefono) + README guida + `output-esempio/brief-esempio.md`.
+- Addendum a `README.md` (sez. Live), `spec.md` (§ 5b); eccezione `.gitignore` per versionare i subagent.
+- Refactor user-facing: materiale ripulito da contenuti "da palco" (runbook, checklist, agenda, mail) per essere condivisibile direttamente con gli utenti.
 
 ### Stato
 
@@ -217,3 +218,4 @@ Preparare il materiale operativo per lo slot Boosha AI alla live su Claude Code 
 | 28 apr 2026 | F4 + F5-light completate: archive integration sistematica (Kora case + vibe-to-agentic + worktree workflow + Conductor + Ralph + Sonnet 4.5 callout + cheat sheet tips), QUICKSTART.md, 8 examples/personas/ |
 | 28 apr 2026 | F6 completata: automazione daily "what's new today" (routine cloud + GitHub Action backup) — ogni 07:00 Europe/Rome apre PR con TLDR novita' 24h |
 | 17 giu 2026 | F7 completata: materiale live 17 giu (2 demo — marketing multi-agente + AI Operating System) + addendum a README.md (sez. Live), spec.md (§ 5b), `.gitignore` (eccezione subagent demo) |
+| 17 giu 2026 | F7 refactor user-facing: materiale live ripulito da contenuti "da palco" (eliminati i 2 runbook-demo.md, rimossi checklist/agenda/timing/mail/talking-points), 3 README riscritti come guide; rename branch/label routine `live-demo-brief` -> `morning-brief` |

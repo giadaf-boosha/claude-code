@@ -61,6 +61,6 @@ Al termine, stampa un riepilogo finale con: i 5 file prodotti in `output/`, la v
 - Tempo tipico: 4-7 minuti per l'intera catena (la ricerca web e' lo step piu' lento).
 - Se vuoi rilanciare solo un anello, apri di nuovo `claude` e chiedi: "rilancia il subagent hook-generator leggendo output/02-brief-campagna.md".
 - I file in `output/` sono sovrascritti a ogni run: salva una copia se vuoi conservare un risultato.
-- Fallback se la live va lunga: mostra `output-esempio/campagna-boosha-esempio.md` invece di attendere la catena.
+- Se vuoi un esempio gia' pronto senza eseguire la catena, vedi [`output-esempio/campagna-boosha-esempio.md`](./output-esempio/campagna-boosha-esempio.md).
 
-← [README del caso](./README.md) · [runbook demo](./runbook-demo.md)
+← [README del caso](./README.md)

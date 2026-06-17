@@ -1,103 +1,39 @@
-# Live Claude Code — 17 giugno 2026
+# Due casi d'uso pratici di Claude Code
 
-> Materiale per lo slot di **Giada Franceschini** (Boosha AI) alla live del **17 giugno 2026, 18:00-20:00 (ora italiana)**. Slot personale: **19:00-19:30** (20 min di demo + 10 min Q&A). Focus esclusivo su **Claude Code**, pubblico misto (dev e non-dev). Questo file e' l'indice del materiale e contiene anche il testo di risposta da inviare all'organizzatore.
-
-## Contesto evento
-
-| Voce | Dettaglio |
-|---|---|
-| Data | 17 giugno 2026 |
-| Orario evento | 18:00-20:00 (Europe/Rome) |
-| Slot Giada | 19:00-19:30 |
-| Struttura slot | 20 min demo + 10 min Q&A |
-| Tema | Claude Code (solo Claude Code, niente altri prodotti) |
-| Pubblico | Misto: sviluppatori e non-sviluppatori |
-| Speaker | Giada Franceschini — Boosha AI |
-
-## Agenda dei 20 minuti
-
-> Due demo, da mostrare **in quest'ordine**: prima il caso concreto e tangibile (team marketing multi-agente), poi la visione di piattaforma (AI Operating System). Si parte dal "cosa fa per me oggi" e si chiude con il "dove sta andando".
-
-1. **Apertura** (~1 min) — chi sono, cosa e' Claude Code in una frase, cosa vedremo.
-2. **Caso 1 — Team marketing AI multi-agente** (~8-9 min) — vedi [`01-marketing-multiagente/`](./01-marketing-multiagente/).
-3. **Caso 2 — Claude Code come AI Operating System** (~8-9 min) — vedi [`02-ai-operating-system/`](./02-ai-operating-system/).
-4. **Chiusura + ponte al Q&A** (~1-2 min, buffer) — sintesi dei due livelli (assistente oggi / piattaforma domani), invito alle domande.
-5. **Q&A** (10 min, fuori dai 20 di demo).
+> Qui trovi due casi d'uso reali di **Claude Code**, completi di prompt pronti da copiare e file da riutilizzare: un team marketing AI multi-agente e Claude Code usato come "AI Operating System". Materiale nato per la live Boosha AI del 17 giugno 2026, riutilizzabile da chiunque (dev e non-dev) per replicare i due scenari in autonomia.
 
 ## I due casi d'uso
 
 | Caso | Cartella | Sintesi (1 riga) |
 |---|---|---|
-| 1 — Team marketing AI multi-agente | [`01-marketing-multiagente/`](./01-marketing-multiagente/) | Claude Code orchestra piu' agent specializzati che producono contenuti marketing per Boosha AI in parallelo, come un team. |
-| 2 — Claude Code come AI Operating System | [`02-ai-operating-system/`](./02-ai-operating-system/) | Routine cloud che girano a laptop spento, governate dal telefono: Claude Code come sistema operativo per il lavoro, non solo come assistente di coding. |
+| 1 — Team marketing AI multi-agente | [`01-marketing-multiagente/`](./01-marketing-multiagente/) | Da un solo prompt, 5 subagent specializzati si passano il lavoro in catena e producono una campagna marketing completa per Boosha AI. |
+| 2 — Claude Code come AI Operating System | [`02-ai-operating-system/`](./02-ai-operating-system/) | Una routine cloud gira a laptop spento, la lanci e la monitori dal telefono, e al risveglio trovi il risultato pronto come PR. |
 
-### Ordine e razionale
+### Caso 1 — Team marketing AI multi-agente
 
-- **Prima il Caso 1**: e' visivamente leggibile anche per chi non scrive codice (output marketing concreto), aggancia subito il pubblico misto e mostra il multi-agente "dal vivo".
-- **Poi il Caso 2**: alza lo sguardo dalla singola sessione alla piattaforma (cloud, async, mobile). Chiude con la visione e prepara naturalmente il Q&A.
+Lanci **un solo prompt** e Claude Code orchestra **5 subagent specializzati** che si passano il lavoro in sequenza: ricerca competitor -> brief di campagna -> hook -> copy ads -> KPI/report. Ogni agent legge l'output di quello precedente e scrive il proprio file, senza intervento manuale, producendo 5 deliverable concatenati = una campagna marketing pronta da rivedere. Impari a costruire una pipeline multi-agente reale, leggibile anche se non scrivi codice, e porti a casa il prompt orchestratore e gli output di esempio gia' pronti.
 
-## Timing dei 20 minuti
+### Caso 2 — Claude Code come AI Operating System
 
-| Blocco | Durata | Note |
-|---|---|---|
-| Apertura | 1 min | Hook + una frase su cosa e' Claude Code |
-| Caso 1 — marketing multi-agente | 8-9 min | Demo live, output visibile |
-| Caso 2 — AI Operating System | 8-9 min | Routine cloud + controllo da telefono |
-| Chiusura + buffer | 1-2 min | Recupero se una demo sfora; ponte al Q&A |
-| **Totale demo** | **20 min** | Q&A separato, 10 min |
+Una **routine cloud** schedulata gira ogni mattina sull'infrastruttura Anthropic **a laptop spento**, senza sessione aperta: ricerca le novita' AI/marketing delle ultime 24h, genera un "morning brief" e lo consegna come **Pull Request** pronta per la review. La lanci e la monitori **dal telefono**, e al risveglio trovi il lavoro gia' fatto. Impari a spostare il focus da "assistente di coding che uso mentre lavoro" a "sistema operativo per il lavoro che lavora per me in autonomia 24/7", con boundary di sicurezza espliciti (scrive solo in `output/`, mai push diretto su `main`).
 
-> **Nota timing**: il buffer di 1-2 min e' la prima cosa da sacrificare se una demo va lunga. Tenere un cronometro visibile. Se il Caso 1 sfora oltre i 10 min, tagliare la parte di setup e mostrare solo l'output gia' generato.
+## Come usare questo materiale
 
-## Checklist pre-live
+**Prerequisiti**:
 
-### Da testare PRIMA (il giorno prima e 30 min prima)
+- **Caso 1**: Claude Code installato e una sessione `claude` avviabile dal terminale. Funziona su qualsiasi piano.
+- **Caso 2**: oltre a Claude Code, un piano **Pro/Max/Team/Enterprise** (web access plan, non API-only), perche' le routine cloud girano sull'infrastruttura Anthropic.
 
-- [ ] Eseguire un dry-run completo di entrambe le demo end-to-end, cronometrato.
-- [ ] Verificare connessione internet stabile + piano B (hotspot da telefono).
-- [ ] Caso 1: confermare che gli agent partano e producano output entro il timing previsto; avere un output gia' generato come fallback.
-- [ ] Caso 2: confermare che la routine cloud sia gia' schedulata e che l'ultimo run sia visibile da telefono (`/schedule list`).
-- [ ] Verificare login/autenticazione attivi (sessione Claude Code, accesso GitHub via `/web-setup` se serve al Caso 2).
-- [ ] Controllare il budget usage (`/extra-usage`) per non esaurire le routine durante la live.
-- [ ] Silenziare notifiche di sistema, chat e mail; modalita' non disturbare.
+**Come procedere**: entra nella cartella del caso che ti interessa e segui il suo `README.md`. Ogni caso e' self-contained e contiene la mappa file esatta, i prompt pronti da copiare, i boundary di sicurezza, i costi e il troubleshooting.
 
-### Da aprire PRIMA di salire (finestra/tab pronti)
-
-- [ ] Terminale nella cartella [`01-marketing-multiagente/`](./01-marketing-multiagente/) con sessione Claude Code pronta.
-- [ ] Telefono con app/interfaccia per mostrare la routine cloud del Caso 2 (laptop spento o messo da parte per l'effetto "AI Operating System").
-- [ ] Questo README aperto come traccia/scaletta.
-- [ ] Font del terminale ingrandito per leggibilita' in proiezione.
-- [ ] Output di fallback di entrambe le demo aperto in un tab, pronto se una demo fallisce live.
-
-## Risposta alla mail
-
-> Testo pronto da inviare all'organizzatore per dichiarare i due task scelti ed evitare sovrapposizioni con gli altri ospiti. Copiare e incollare; sostituire `[Nome organizzatore]` con il nome reale.
-
----
-
-Oggetto: Live 17 giugno — i miei due task (slot 19:00-19:30)
-
-Ciao [Nome organizzatore],
-
-confermo la mia presenza per lo slot delle 19:00-19:30 del 17 giugno. Per evitare sovrapposizioni con gli altri ospiti, ti anticipo i due task che mostrero', entrambi 100% su Claude Code:
-
-1. **Team marketing AI multi-agente** — Claude Code che orchestra piu' agent specializzati in parallelo per produrre contenuti marketing reali (caso Boosha AI). L'idea e' far vedere il multi-agente "dal vivo", in modo leggibile anche per chi non scrive codice.
-
-2. **Claude Code come AI Operating System** — routine cloud che girano a laptop spento, governate dal telefono. Sposto il focus da "assistente di coding" a "sistema operativo per il lavoro", chiudendo sulla visione di piattaforma.
-
-Struttura prevista: ~20 min di demo (circa 8-9 min a caso, con un piccolo buffer) + 10 min di Q&A.
-
-Se qualcuno degli altri ospiti tratta gli stessi temi (multi-agente o routine/automazioni cloud), fammelo sapere: ho margine per ridurre uno dei due casi o cambiare angolo, cosi' non ci sovrapponiamo.
-
-Grazie e a presto,
-Giada Franceschini — Boosha AI
-
----
+- Caso 1 -> [`01-marketing-multiagente/`](./01-marketing-multiagente/)
+- Caso 2 -> [`02-ai-operating-system/`](./02-ai-operating-system/)
 
 ## File in questa cartella
 
 | File | Cosa |
 |---|---|
-| [`README.md`](./README.md) | Questo file — indice live, agenda, timing, checklist e risposta mail |
+| [`README.md`](./README.md) | Questo file — pagina di benvenuto ai due casi d'uso |
 | [`01-marketing-multiagente/`](./01-marketing-multiagente/) | Caso 1 — team marketing AI multi-agente per Boosha AI |
 | [`02-ai-operating-system/`](./02-ai-operating-system/) | Caso 2 — Claude Code come AI Operating System (routine cloud, controllo da telefono) |
 
@@ -107,4 +43,4 @@ Giada Franceschini — Boosha AI
 - [automations/daily-whats-new/](../../automations/daily-whats-new/) (esempio reale di routine cloud nella repo)
 - [README master](../../README.md)
 
-← [examples/](../../examples/) · [README master](../../README.md)
+← [live/](../) · [README master](../../README.md)

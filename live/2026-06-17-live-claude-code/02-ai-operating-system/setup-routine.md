@@ -1,6 +1,6 @@
-# Setup routine: Morning Brief (live demo)
+# Setup routine: Morning Brief
 
-> Istruzioni passo-passo per attivare la routine cloud `morning-brief`: collega GitHub, crea la routine daily 07:00 Europe/Rome, verifica, fai run-now per la demo, mettila in pausa. Tutti i comandi sono quelli reali documentati in [`docs/13`](../../../docs/13-routines-cloud.md) e [`docs/17`](../../../docs/17-ide-surface.md).
+> Istruzioni passo-passo per attivare la routine cloud `morning-brief`: collega GitHub, crea la routine daily 07:00 Europe/Rome, verifica, fai un run-now di test, mettila in pausa. Tutti i comandi sono quelli reali documentati in [`docs/13`](../../../docs/13-routines-cloud.md) e [`docs/17`](../../../docs/17-ide-surface.md).
 
 ## Prerequisiti
 
@@ -49,7 +49,7 @@ In alternativa, lancia `/schedule` senza argomenti per aprire il wizard interatt
 
 Mostra le routine attive con il loro nome. Annota il **nome** assegnato alla routine (es. `morning-brief`) — serve per run-now e pause.
 
-## Step 4 — Run-now per la demo (test manuale)
+## Step 4 — Run-now manuale (test)
 
 ```
 /schedule run <name>
@@ -61,7 +61,7 @@ esempio:
 /schedule run morning-brief
 ```
 
-`Run now` esegue subito la routine senza aspettare le 07:00. Utile per la demo live e per testare prima di fidarsi dello schedule. **Run now NON conta verso il daily cap** (ma si' verso l'usage della subscription) — docs/13 § 13.9.
+`Run now` esegue subito la routine senza aspettare le 07:00. Utile per testare prima di fidarti dello schedule. **Run now NON conta verso il daily cap** (ma si' verso l'usage della subscription) — docs/13 § 13.9.
 
 ## Step 5 — Mettere in pausa
 
@@ -73,7 +73,7 @@ Da CLI i file automation del repo usano anche:
 /schedule pause <name>
 ```
 
-> Cautela: `/schedule pause` e' usato nei file automation del repo ma **non compare** nella lista subcommands ufficiale di docs/13 (`list`, `update`, `run <name>`). Se da CLI non risponde, usa il toggle Pause/Resume dalla UI web o mobile. Verifica con `/schedule --help` prima di affidartici in live.
+> Cautela: `/schedule pause` e' usato nei file automation del repo ma **non compare** nella lista subcommands ufficiale di docs/13 (`list`, `update`, `run <name>`). Se da CLI non risponde, usa il toggle Pause/Resume dalla UI web o mobile. Verifica con `/schedule --help` prima di affidartici.
 
 ---
 
@@ -134,7 +134,6 @@ Cap giornaliero su **scheduled trigger** (docs/13 § 13.9):
 - [docs/13 — Routines cloud](../../../docs/13-routines-cloud.md) — trigger, subcommands, quota, run management
 - [docs/17 — IDE surface](../../../docs/17-ide-surface.md) — Remote Control, mobile, push notification
 - [`routine-prompt.md`](./routine-prompt.md) — il prompt da incollare
-- [`runbook-demo.md`](./runbook-demo.md) — copione della demo live
 
 ---
 

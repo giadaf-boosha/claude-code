@@ -280,7 +280,7 @@ E come reference:
 
 ## Live
 
-[`live/2026-06-17-live-claude-code/`](./live/2026-06-17-live-claude-code/) contiene il materiale demo dello slot Boosha AI alla live del 17 giugno 2026: due casi d'uso pronti per il palco — [team marketing AI multi-agente](./live/2026-06-17-live-claude-code/01-marketing-multiagente/) (5 subagent in catena da un solo prompt) e [Claude Code come AI Operating System](./live/2026-06-17-live-claude-code/02-ai-operating-system/) (routine cloud a laptop spento, controllo da telefono). Ogni caso ha prompt, runbook timed e output di fallback.
+[`live/2026-06-17-live-claude-code/`](./live/2026-06-17-live-claude-code/) raccoglie due casi d'uso pratici di Claude Code (materiale nato per la live Boosha AI del 17 giugno 2026, riutilizzabile da chiunque): [team marketing AI multi-agente](./live/2026-06-17-live-claude-code/01-marketing-multiagente/) (5 subagent in catena da un solo prompt) e [Claude Code come AI Operating System](./live/2026-06-17-live-claude-code/02-ai-operating-system/) (routine cloud a laptop spento, controllo da telefono). Ogni caso ha una guida passo-passo, prompt pronti da copiare e output di esempio.
 
 ---
 

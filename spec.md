@@ -140,8 +140,8 @@ claude-code/
 
 | Pacchetto | Cosa mostra |
 |---|---|
-| `01-marketing-multiagente/` | Team marketing AI a 5 subagent (`.claude/agents/`) che si passano il lavoro in catena da un solo prompt orchestratore; demo su Boosha AI + output di fallback + runbook timed |
-| `02-ai-operating-system/` | Claude Code come "AI OS" a laptop spento: routine cloud `morning-brief` (branch + PR, mai push diretto su main), setup `/schedule`, controllo da telefono + output di fallback + runbook timed |
+| `01-marketing-multiagente/` | Team marketing AI a 5 subagent (`.claude/agents/`) che si passano il lavoro in catena da un solo prompt orchestratore; esempio su Boosha AI + output di esempio |
+| `02-ai-operating-system/` | Claude Code come "AI OS" a laptop spento: routine cloud `morning-brief` (branch + PR, mai push diretto su main), setup `/schedule`, controllo da telefono + output di esempio |
 
 > Eccezione redazionale: i contenuti `live/` sono materiale didattico/operativo per talk, non reference tecnica; non seguono il format breadcrumb/footer dei `docs/01-21`, pur rispettando le convenzioni di lingua e accenti (§ 6).
 

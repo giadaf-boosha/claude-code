@@ -1,4 +1,4 @@
-# Prompt routine: Morning Brief (live demo)
+# Prompt routine: Morning Brief
 
 > Questo e' il prompt da incollare quando Claude Code chiede "What should this routine do?". E' self-contained: contiene tutti gli step, le fonti, l'output atteso e i safety boundary.
 
@@ -87,20 +87,20 @@ Esegui in shell:
 
 ```bash
 DATE=$(TZ=Europe/Rome date '+%Y-%m-%d')
-BRANCH="live-demo-brief/${DATE}"
+BRANCH="morning-brief/${DATE}"
 OUT="live/2026-06-17-live-claude-code/02-ai-operating-system/output/brief-${DATE}.md"
 
 git status --porcelain                    # secondo check: se non clean (a parte il file output), ABORT e logga
 git checkout -b "${BRANCH}"
 git add "${OUT}"
-git commit -m "feat(live-brief): morning brief ${DATE}"
+git commit -m "feat(morning-brief): brief ${DATE}"
 git push origin "${BRANCH}"
 
 gh pr create \
   --title "Morning Brief ${DATE}" \
   --body "Digest automatico AI/marketing delle ultime 24h.
 
-Generato dalla routine \`morning-brief\` (live demo caso 2, [README](https://github.com/giadaf-boosha/claude-code/tree/main/live/2026-06-17-live-claude-code/02-ai-operating-system)).
+Generato dalla routine \`morning-brief\` (caso 2, [README](https://github.com/giadaf-boosha/claude-code/tree/main/live/2026-06-17-live-claude-code/02-ai-operating-system)).
 
 Verificare:
 - [ ] File output/brief-${DATE}.md presente e leggibile
@@ -108,12 +108,12 @@ Verificare:
 - [ ] Nessun file fuori da output/ toccato
 
 Auto-merge non attivo per default. Mergiare manualmente se OK." \
-  --label "automation,live-demo-brief" \
+  --label "automation,morning-brief" \
   --base main
 ```
 
 **Vincoli operativi (safety boundary del repo)**:
-- **MAI push diretto su `main`** — sempre branch `live-demo-brief/YYYY-MM-DD` + PR
+- **MAI push diretto su `main`** — sempre branch `morning-brief/YYYY-MM-DD` + PR
 - Niente `--force` mai
 - Branch nuovo per ogni run (data nel nome)
 - Se `git push` del branch fallisce: NON rilanciare, logga e termina
@@ -143,7 +143,7 @@ Auto-merge non attivo per default. Mergiare manualmente se OK." \
 
 ## Done
 
-Output finale: 1 PR aperta su `giadaf-boosha/claude-code` con label `automation,live-demo-brief`, in attesa di review/merge umana.
+Output finale: 1 PR aperta su `giadaf-boosha/claude-code` con label `automation,morning-brief`, in attesa di review/merge umana.
 
 Logga al termine:
 - Numero voci generate

@@ -1,6 +1,6 @@
 # Morning Brief — 2026-06-16 (ESEMPIO)
 
-> ESEMPIO statico, NON generato dalla routine. Serve come fallback durante la live e come riferimento del formato di output. Il file reale che la routine produce vive in [`../output/brief-YYYY-MM-DD.md`](../output/), uno nuovo al giorno. I link e i numeri qui sotto sono realistici ma da non citare come fonte verificata.
+> Esempio statico del tipo di output prodotto dalla routine (da non citare come dato verificato). Serve come riferimento del formato di output. Il file reale che la routine produce vive in [`../output/brief-YYYY-MM-DD.md`](../output/), uno nuovo al giorno. I link e i numeri qui sotto sono realistici ma da non citare come fonte verificata.
 
 ## In sintesi
 
