@@ -15,6 +15,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per il framework completo.
 
+> **2026-06-17 (auto-update)**: v2.1.179 corregge un bug critico su Linux — glob `denyRead`/`allowRead` su directory tree grandi produceva una descrizione del Bash tool enorme rendendo la sessione inutilizzabile. Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.1 Permission modes

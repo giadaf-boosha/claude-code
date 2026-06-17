@@ -12,7 +12,13 @@
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.179** (16 giu): fix mid-stream connection drops — risposta parziale ora preservata, spinner non si blocca su "running tool". Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **Fix WSL2 scroll** (v2.1.179, 16 giu): ripristinato scrolling con rotella del mouse in WSL2 su Windows Terminal e VS Code — regressione introdotta in v2.1.172. Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **Fix sandbox glob Linux** (v2.1.179, 16 giu): glob `denyRead`/`allowRead` su directory tree grandi non produce piu' descrizione del Bash tool enorme che rende la sessione inutilizzabile su Linux. Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179). Vedi [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md).
+- **Fix sessioni remote background** (v2.1.179, 16 giu): i task in background non appaiono piu' bloccati come "still running" tra i turn nelle sessioni remote. Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179). Vedi [docs/08-subagents.md](./docs/08-subagents.md).
+- **Fix UI subagent** (v2.1.179, 16 giu): Ctrl+O mostra ora la trascrizione del subagent quando lo si visualizza; click su prompt input restituisce il focus dal pannello subagent/footer; welcome screen mostra max 1 banner promo per sessione. Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179). Vedi [docs/08-subagents.md](./docs/08-subagents.md).
+- **Fix feedback survey** (v2.1.179, 16 giu): il sondaggio di feedback non cattura piu' una risposta a singola cifra come rating sessione immediatamente dopo il completamento di un turno. Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179).
+- **Miglioramento plugin loading** (v2.1.179, 16 giu): prestazioni di caricamento plugin migliorate nelle sessioni remote. Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
