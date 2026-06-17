@@ -517,8 +517,11 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 13 giu 2026 | v2.1.177 | Aggiornamento CHANGELOG.md e feed.xml (maintenance). |
 | 15 giu 2026 | — | **Credito programmatico attivo**: il budget mensile dedicato per `claude -p`, Agent SDK, GitHub Actions e app terze parti entra in vigore per tutti i piani paid. Vedi [16.5](./16-headless-agent-sdk.md#crediti-mensili-per-uso-programmatico-attivi-dal-15-giu-2026). |
 | 15 giu 2026 | **v2.1.178** | **`Tool(param:value)` in permission rules**: sintassi per filtrare per parametro del tool — es. `Agent(model:opus)` in `deny` blocca sub-agenti Opus; wildcard `*` supportato. **Nested `.claude/` directory precedence**: skill/agenti/workflow/output-style nella `.claude/` piu' vicina alla working directory prevalgono; clash di nome risolti con prefisso `<dir>:<name>`. Auto mode: subagent spawns valutati dal classifier prima del lancio. `/doctor` rinnovato (layout flat, icone status, nomi comando evidenziati). |
+| 16 giu 2026 | **v2.1.179** | Fix mid-stream connection drops (risposta parziale preservata, spinner non bloccato su "running tool"); fix scroll rotella WSL2 su Windows Terminal/VS Code (regressione v2.1.172); fix glob `denyRead`/`allowRead` su directory tree grandi che rendeva descrizione Bash tool enorme e sessione inutilizzabile su Linux; fix feedback survey (risposta a singola cifra non catturata come rating sessione); fix welcome screen (max 1 banner promo per sessione); fix Ctrl+O transcript subagent; fix focus click su prompt input da pannello subagent/footer; fix background tasks remote bloccati come "still running" tra i turn; miglioramento plugin loading performance in sessioni remote. |
 
-<sub>Aggiornato 2026-06-16 via daily what's new. Fonte: [GitHub Releases v2.1.178](https://github.com/anthropics/claude-code/releases/tag/v2.1.178).</sub>
+> **2026-06-17 (auto-update)**: v2.1.179 porta 9 fix — i piu' impattanti: mid-stream connection drops preservano ora la risposta parziale; scroll WSL2 ripristinato (regressione 2.1.172); glob denyRead/allowRead non blocca piu' le sessioni Linux su repo grandi. Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179). Vedi anche README "What's new today" del giorno.
+
+<sub>Aggiornato 2026-06-17 via daily what's new. Fonte: [GitHub Releases v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179).</sub>
 
 ---
 
