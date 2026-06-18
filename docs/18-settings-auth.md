@@ -36,6 +36,20 @@ JSON Schema: `"$schema": "https://json.schemastore.org/claude-code-settings.json
 
 ## 18.2 Campi principali (selezione)
 
+### Impostazione inline con `/config` (da v2.1.181)
+
+La sintassi `/config key=value` imposta qualsiasi campo di `settings.json` direttamente dal prompt, senza aprire file o riavviare la sessione. Funziona in modalita' interattiva, con `-p` e in Remote Control.
+
+```
+/config thinking=false        # disabilita il thinking per la sessione corrente
+/config model=claude-fable-5  # cambia modello inline
+/config effortLevel=high      # abbassa effort
+```
+
+La modifica e' persistente nella sessione (non viene scritta su disco a meno che il campo non sia gia' in `settings.json`). `/config` senza argomenti apre la UI settings interattiva.
+
+<sub>Aggiornato 2026-06-18 via daily what's new. Fonte: [GitHub Releases v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181).</sub>
+
 ### Model & effort
 - `model`, `availableModels`, `modelOverrides`, `effortLevel`, `fallbackModel`, `enforceAvailableModels`
 
@@ -84,6 +98,9 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 - `editorMode`, `prefersReducedMotion`
 - `spinnerTipsEnabled`, `spinnerVerbs`, `terminalProgressBarEnabled`
 - `awaySummaryEnabled`
+- **`CLAUDE_CLIENT_PRESENCE_FILE`** (env var, da v2.1.181): punta a un file marker; finche' il file esiste, le push notification verso il mobile vengono soppresse — utile per chi ha Claude Code aperto sia in terminale che su mobile e non vuole duplicare le notifiche.
+
+<sub>Aggiornato 2026-06-18 via daily what's new. Fonte: [GitHub Releases v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181).</sub>
 
 ### Memory
 - `autoMemoryEnabled`, `autoMemoryDirectory`, `cleanupPeriodDays`, `plansDirectory`
