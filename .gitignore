@@ -7,3 +7,7 @@ notion-raw/
 # Eccezione: i subagent demo della live sono materiale deliverable (non config locale), vanno versionati
 !live/2026-06-17-live-claude-code/01-marketing-multiagente/.claude/
 !live/2026-06-17-live-claude-code/01-marketing-multiagente/.claude/**
+# ...ma non i .DS_Store ne' la cartella output/ runtime (artefatti, non deliverable)
+live/2026-06-17-live-claude-code/01-marketing-multiagente/.claude/**/.DS_Store
+live/2026-06-17-live-claude-code/01-marketing-multiagente/.claude/.DS_Store
+live/2026-06-17-live-claude-code/01-marketing-multiagente/output/
