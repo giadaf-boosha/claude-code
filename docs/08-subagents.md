@@ -5,6 +5,8 @@
 
 Subagent = AI assistant specializzato con context window proprio, system prompt custom, tool e permessi indipendenti. Quando Claude trova task matchato dalla `description`, delega.
 
+> **2026-06-18 (auto-update)**: il subagent panel (visualizzazione sessioni sub-agente attive) si nasconde automaticamente dopo 30s di inattivita', ha uno scroll cap a 5 righe e mostra keyboard hints nel footer. Risolto anche il bug per cui i sub-agenti foreground potevano spawnare catene non delimitate ignorando il limite di 5 livelli (v2.1.181). Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > I subagent sono **agent figli** spawnati dall'agent principale. Ognuno ha context window indipendente, tool subset, ev. modello diverso (Haiku per Explore = cheap+fast). Il main agent delega un task, riceve summary, continua. Pattern di "cognitive offloading": il main thread non si sporca con dettagli operativi.

@@ -5,6 +5,8 @@
 
 Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.169. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
 
+> **2026-06-18 (auto-update)**: `/config` supporta ora la sintassi `key=value` per settare qualsiasi impostazione direttamente dal prompt — funziona in interattivo, `-p` e Remote Control (es. `/config model=claude-fable-5`). Aggiunto il nuovo comando `/design` per creare, editare e sincronizzare progetti Claude Design senza lasciare il terminale (v2.1.181). Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Gli slash commands sono il **vocabolario condiviso** tra utente e agent. Sono shortcut a workflow ricorrenti: ognuno e' un'intent capture pre-codificato. I bundled skills (`/loop`, `/simplify`, `/batch`, `/debug`) sono skill markdown auto-installate; i built-in (`/plan`, `/compact`, `/effort`) sono comandi nativi del CLI.
@@ -33,12 +35,13 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.169. Type
 | `/clear` (alias `/reset`, `/new`) | built-in | Nuova conversation, pregresso resta in `/resume` |
 | `/color [color\|default]` | built-in | Colore prompt bar (sync claude.ai con Remote Control) |
 | `/compact [instructions]` | built-in | Comprime context |
-| `/config` (alias `/settings`) | built-in | UI settings |
+| `/config [key=value]` (alias `/settings`) | built-in | UI settings; con `key=value` setta qualsiasi impostazione direttamente dal prompt (interattivo, `-p`, Remote Control) — es. `/config model=claude-fable-5` (da v2.1.181) |
 | `/context` | built-in | Visualizza uso context window |
 | `/copy [N]` | built-in | Copia ultima risposta (o N-esima); `w` per write to file |
 | `/cost` (alias `/usage`, `/stats`) | built-in | Costi e utilizzo |
 | `/debug [description]` | **Skill** | Debug logging mid-session |
 | `/deep-research <domanda>` | **Skill** | Workflow bundled di ricerca: fan-out di web search da piu' angolazioni, fetch e cross-check delle fonti, voto su ogni claim, report citato con i claim non verificati gia' filtrati (richiede il WebSearch tool). Vedi [24](./24-workflows.md) |
+| `/design [create\|edit\|sync]` | built-in | Crea, edita e sincronizza progetti Claude Design dal terminale senza screenshot o rebuild; hand-off bidirezionale Claude Code ↔ Claude Design (da v2.1.181) |
 | `/desktop` (alias `/app`) | built-in | Continua su Desktop app (macOS/Windows) |
 | `/diff` | built-in | Diff viewer interattivo (uncommitted + per-turn) |
 | `/doctor` | built-in | Diagnostica install + `f` per fix automatico |

@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (6 giugno 2026, v2.1.166). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (17 giugno 2026, v2.1.181). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -517,8 +517,10 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 13 giu 2026 | v2.1.177 | Aggiornamento CHANGELOG.md e feed.xml (maintenance). |
 | 15 giu 2026 | — | **Credito programmatico attivo**: il budget mensile dedicato per `claude -p`, Agent SDK, GitHub Actions e app terze parti entra in vigore per tutti i piani paid. Vedi [16.5](./16-headless-agent-sdk.md#crediti-mensili-per-uso-programmatico-attivi-dal-15-giu-2026). |
 | 15 giu 2026 | **v2.1.178** | **`Tool(param:value)` in permission rules**: sintassi per filtrare per parametro del tool — es. `Agent(model:opus)` in `deny` blocca sub-agenti Opus; wildcard `*` supportato. **Nested `.claude/` directory precedence**: skill/agenti/workflow/output-style nella `.claude/` piu' vicina alla working directory prevalgono; clash di nome risolti con prefisso `<dir>:<name>`. Auto mode: subagent spawns valutati dal classifier prima del lancio. `/doctor` rinnovato (layout flat, icone status, nomi comando evidenziati). |
+| 16 giu 2026 | v2.1.179 | Fix: drop connessione mid-stream (risposta parziale ora preservata); scrolling mouse-wheel WSL2 sotto Windows Terminal e VS Code; sandbox `denyRead`/`allowRead` glob su directory tree estesi su Linux; feedback survey catturava risposte a una cifra come rating sessione; banner promozionali multipli in welcome screen; Ctrl+O non mostrava transcript subagente; background tasks sessioni remote apparivano stuck; performance plugin loading in remote sessions. |
+| 17 giu 2026 | **v2.1.181** | **`/config key=value`**: sintassi diretta per settare qualsiasi impostazione dal prompt (interattivo, `-p`, Remote Control). **`sandbox.allowAppleEvents`**: opt-in per permettere Apple Events ai comandi sandboxed su macOS. **`CLAUDE_CLIENT_PRESENCE_FILE`**: nuova env var — quando il file esiste, sopprime push notification mobile (per evitare notifiche se gia' alla macchina). **Bun 1.4**: runtime bundled aggiornato. **Streaming paragrafi**: testo lungo in streaming riga per riga (non piu' attesa del primo line break). **Subagent panel**: auto-hide dopo 30s, scroll cap 5 righe, keyboard hints nel footer. **MCP OAuth**: browser page restyled, auto-close su successo. **Fullscreen URL**: richiede Cmd+click (macOS) / Ctrl+click per aprire. **27+ bug fix** tra cui: Write/Edit produceva file 0-byte o troncati su network drive e cloud-synced; TUI macOS freezava all'avvio con Spotlight in re-indicizzazione; sessioni idle perdevano history durante pulizia 30gg; sub-agenti foreground spawnano catene non delimitate (ora rispetta limite 5 livelli); `/recap` e fork usavano modello precedente dopo model switch; AWS credential refresh eseguiva refresh ogni minuto; prompt caching su `ANTHROPIC_BASE_URL` custom e Foundry; `/stats` mostrava date un giorno prima in timezone UTC-negative. |
 
-<sub>Aggiornato 2026-06-16 via daily what's new. Fonte: [GitHub Releases v2.1.178](https://github.com/anthropics/claude-code/releases/tag/v2.1.178).</sub>
+<sub>Aggiornato 2026-06-18 via daily what's new. Fonte: [changelog](https://code.claude.com/docs/en/changelog).</sub>
 
 ---
 

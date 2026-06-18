@@ -5,6 +5,8 @@
 
 Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedrock/Vertex/Foundry, OAuth).
 
+> **2026-06-18 (auto-update)**: aggiunto `sandbox.allowAppleEvents` (opt-in, macOS) per permettere ai comandi sandboxed di inviare Apple Events. Nuova env var `CLAUDE_CLIENT_PRESENCE_FILE`: quando il file esiste, sopprime le push notification mobile — utile se si e' gia' alla macchina. Risolto prompt caching su `ANTHROPIC_BASE_URL` custom e Foundry (v2.1.181). Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > I settings sono la **configurazione dichiarativa dell'harness**. Cinque livelli di precedenza (managed > CLI args > local project > shared project > user) permettono di stratificare regole: enterprise impone policy, team condivide convenzioni, dev override locali. La sintassi permission e' Layer 1 dell'Authority.

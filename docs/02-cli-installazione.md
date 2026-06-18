@@ -5,6 +5,8 @@
 
 Reference completa CLI di Claude Code aggiornata a v2.1.119.
 
+> **2026-06-18 (auto-update)**: nuova env var `CLAUDE_CLIENT_PRESENCE_FILE` (v2.1.181) — quando il file specificato esiste sul filesystem, Claude Code sopprime le push notification mobile verso il telefono; rimuoverlo ripristina le notifiche. Utile in script di login/logout di scrivania. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > La CLI e' la **prima incarnazione** dell'agent harness Claude Code. Tutto cio' che vedi in VS Code, Desktop, Web e' uno strato di UX sopra lo stesso engine CLI. Imparare la CLI = imparare l'engine.
