@@ -71,6 +71,9 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 ### Attribution (commit/PR)
 - `attribution.commit` (false per `Co-Authored-By` removal)
 - `attribution.pr`
+- `attribution.sessionUrl` (da v2.1.183): se `false`, omette il link sessione claude.ai da commit e PR nelle sessioni web e Remote Control — utile per policy aziendali di privacy sui log di commit.
+
+> **2026-06-19 (auto-update)**: v2.1.183 introduce `attribution.sessionUrl` per omettere il link alla sessione claude.ai nei commit/PR generati in sessioni web e Remote Control. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Vedi anche README "What's new today" del giorno.
 
 ### Plugins
 - `enabledPlugins`, `extraKnownMarketplaces`

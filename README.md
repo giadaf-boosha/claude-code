@@ -8,11 +8,20 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-04)
+## What's new today (2026-06-19)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.183** (19 giu): sicurezza auto mode rafforzata — `git reset --hard`, `checkout -- .`, `clean -fd`, `stash drop` bloccati se non esplicitamente richiesti; blocco analogo per `terraform/pulumi/cdk destroy`; `git commit --amend` bloccato se il commit non e' dell'agente nella sessione corrente. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`attribution.sessionUrl`** (v2.1.183): nuova impostazione omette il link sessione claude.ai da commit e PR nelle sessioni web e Remote Control — utile per policy aziendali di privacy sui log di commit. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **`/config --help`** (v2.1.183): elenca tutti gli shorthand key disponibili per `/config key=value`; Esc ora salva e chiude il pannello invece di annullare. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md).
+- **Artifacts in Claude Code** (18 giu, Team/Enterprise): le sessioni generano pagine live interattive condivisibili — PR walkthrough, dashboard, diagrammi — che si aggiornano automaticamente allo stesso URL con versioning completo. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067672094209675373) · [claude.com/blog](https://claude.com/blog/artifacts-in-claude-code). Doc: n/a.
+- **Design Sync (`/design-sync`)**: sincronizzazione bidirezionale Claude Code ↔ Claude Design — pull del design system nel repo per sviluppare su componenti reali, o push di componenti costruiti nel canvas di Claude Design. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067391951725629941). Doc: n/a.
+- **Fix thinking blocks silenziosi** (v2.1.183): i turni non si completano piu' silenziosamente mostrando solo un thinking block — Claude ora riprova automaticamente una volta prima di terminare. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Doc: n/a.
+- **Fix WebSearch in subagenti** (v2.1.183): corretto il ritorno di risultati vuoti dal tool WebSearch quando invocato all'interno di subagenti. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
+- **Fix TUI Windows Terminal** (v2.1.183): risolti i corruption in fullscreen mode sotto carico di subagenti annidati: statusline a meta' schermo, spinner duplicati, testo unito. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Doc: n/a.
+- **Fix background tasks tmux** (v2.1.183): risolti launch falliti di tmux teammates con shell rc lenta, task uccisi al termine del turno teammate, e trigger schedulati trattati come input da tastiera. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Doc: n/a.
+- **Fix MCP headless auth** (v2.1.183): risolto il problema dove stub di autenticazione MCP venivano esposti ai modelli in modalita' headless/SDK. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Doc: [docs/10-mcp.md](./docs/10-mcp.md).
 
 ---
 

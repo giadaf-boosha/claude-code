@@ -83,6 +83,8 @@ Da agosto 2025: Opus 4.x per plan + Sonnet per execution. [@_catwu](https://x.co
 
 ## 4.3 Auto mode (research preview, da v2.1.83)
 
+> **2026-06-19 (auto-update)**: v2.1.183 rafforza la sicurezza in auto mode — `git reset --hard`, `checkout -- .`, `clean -fd`, `stash drop` e `git commit --amend` (se il commit non e' dell'agente) sono ora bloccati quando non esplicitamente richiesti; stesso blocco per `terraform/pulumi/cdk destroy` a meno che lo stack specifico non sia stato richiesto. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Vedi anche README "What's new today" del giorno.
+
 Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permissions`: un classifier separato decide cosa Claude puo' fare senza chiedere.
 
 ### Caratteristiche

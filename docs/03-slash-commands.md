@@ -32,7 +32,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.159. Type
 | `/clear` (alias `/reset`, `/new`) | built-in | Nuova conversation, pregresso resta in `/resume` |
 | `/color [color\|default]` | built-in | Colore prompt bar (sync claude.ai con Remote Control) |
 | `/compact [instructions]` | built-in | Comprime context |
-| `/config` (alias `/settings`) | built-in | UI settings |
+| `/config [key=value]` (alias `/settings`) | built-in | UI settings; `/config --help` elenca tutti gli shorthand key disponibili (da v2.1.183); Esc salva e chiude il pannello (era: annulla) |
 | `/context` | built-in | Visualizza uso context window |
 | `/copy [N]` | built-in | Copia ultima risposta (o N-esima); `w` per write to file |
 | `/cost` (alias `/usage`, `/stats`) | built-in | Costi e utilizzo |
