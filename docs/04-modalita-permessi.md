@@ -150,6 +150,26 @@ Utile per garantire che operazioni distruttive non vengano mai auto-approvate in
 
 > Fonti: [`/en/auto-mode-config`](https://code.claude.com/docs/en/auto-mode-config), [Auto mode guide claudefa.st](https://claudefa.st/blog/guide/development/auto-mode).
 
+### Blocco comandi distruttivi in auto mode (v2.1.183)
+
+Da v2.1.183 (19 giu 2026), auto mode blocca automaticamente una serie di azioni distruttive quando **non esplicitamente richieste** dall'utente nel prompt corrente:
+
+**Git distruttivo:**
+- `git reset --hard`
+- `git checkout -- .`
+- `git clean -fd`
+- `git stash drop`
+- `git commit --amend` (quando il commit originale non e' stato creato dall'agente)
+
+**Infra destroy:**
+- `terraform destroy`
+- `pulumi destroy`
+- `cdk destroy`
+
+Il blocco e' contestuale: se il task dichiarato esplicitamente nel turno e' "resetta il repo allo stato pulito", `git reset --hard` viene permesso. Complementa le regole `autoMode.hard_deny` configurabili manualmente (che bloccano incondizionatamente, indipendentemente dal contesto del prompt).
+
+<sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183).</sub>
+
 ---
 
 ## 4.4 Sandbox mode {#sandbox}

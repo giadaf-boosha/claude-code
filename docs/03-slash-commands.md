@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Fondamenta](../README.md#fondamenta) → **03 Slash commands**
 > 🔧 Operational · 🟢 Beginner-friendly
 
-Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.181. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
+Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
 
 ## Cosa e' concettualmente
 
@@ -39,6 +39,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.181. Type
 | `/cost` (alias `/usage`, `/stats`) | built-in | Costi e utilizzo |
 | `/debug [description]` | **Skill** | Debug logging mid-session |
 | `/deep-research <domanda>` | **Skill** | Workflow bundled di ricerca: fan-out di web search da piu' angolazioni, fetch e cross-check delle fonti, voto su ogni claim, report citato con i claim non verificati gia' filtrati (richiede il WebSearch tool). Vedi [24](./24-workflows.md) |
+| `/design-sync [pull\|push]` | built-in | Sync bidirezionale tra Claude Code e Claude Design: `pull` importa il design system nel repo (componenti, font, colori) per buildare con i componenti reali; `push` esporta il codice prodotto verso il canvas Claude Design. Richiede accesso a Claude Design (da 19 giu 2026). |
 | `/desktop` (alias `/app`) | built-in | Continua su Desktop app (macOS/Windows) |
 | `/diff` | built-in | Diff viewer interattivo (uncommitted + per-turn) |
 | `/doctor` | built-in | Diagnostica install + `f` per fix automatico |
@@ -108,7 +109,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.181. Type
 
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
 
-<sub>Aggiornato 2026-06-18 via daily what's new. Fonte: [GitHub Releases v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181).</sub>
+<sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067391951725629941).</sub>
 
 ---
 
