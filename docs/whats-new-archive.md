@@ -11,6 +11,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-19
+
+- **Artifacts in Claude Code** (beta, Team & Enterprise, 19 giu): Claude trasforma il lavoro di sessione in pagine web condivise — PR walkthrough, dashboard di progetto — aggiornate in tempo reale mentre la sessione continua. Condivisibili via link privato al team. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067672094209675373) · [@claudeai](https://x.com/claudeai/status/2067671912038240487). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/design-sync`** (19 giu): nuovo slash command per sync bidirezionale tra Claude Code e Claude Design — pull del design system nel repo per buildare su componenti reali, push del codice verso il canvas Design per continuare l'editing. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067391951725629941). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Auto mode safety** (v2.1.183, 19 giu): auto mode blocca ora automaticamente comandi git distruttivi (`git reset --hard`, `git checkout -- .`, `git clean -fd`, `git stash drop`, `git commit --amend` non richiesto) e destroy di infra (`terraform destroy`, `pulumi destroy`, `cdk destroy`) quando non esplicitamente richiesti nel prompt corrente. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-06-18
 
 - **`/config key=value`** (v2.1.181, 17 giu): la sintassi `/config key=value` imposta qualsiasi setting direttamente dal prompt senza modificare `settings.json` — es. `/config thinking=false` disabilita il thinking per la sessione corrente. Funziona in modalita' interattiva, con `-p` e in Remote Control. Fonte: [GitHub Releases v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/18-settings-auth.md](./docs/18-settings-auth.md).
@@ -197,26 +205,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 ## 2026-05-21
 
 - **`/code-review` (ex `/simplify`)** (v2.1.146, 21 mag): `/simplify` rinominato `/code-review` con parametro effort opzionale (es. `/code-review high`) — il nuovo nome riflette meglio l'azione (3 review agent paralleli + apply fix) e allinea il comando all'interfaccia `/effort`. Il vecchio nome non e' piu' valido. Fonte: [GitHub Releases v2.1.146](https://github.com/anthropics/claude-code/releases/tag/v2.1.146). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-05-20
-
-- **`claude agents --json`** (v2.1.145, 19 mag): il flag `--json` su `claude agents` restituisce la lista delle sessioni live in formato JSON — abilita scripting, integrazione tmux-resurrect, status bar custom e automazioni che interrogano lo stato degli agenti attivi. Fonte: [GitHub Releases v2.1.145](https://github.com/anthropics/claude-code/releases/tag/v2.1.145). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/resume` per sessioni background** (v2.1.144, 19 mag): `/resume` include ora le sessioni avviate via `claude --bg` o Agent View — appaiono nella lista con tag `bg`, chiudendo il gap tra sessioni interattive e background nella navigazione storica. Fonte: [GitHub Releases v2.1.144](https://github.com/anthropics/claude-code/releases/tag/v2.1.144). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/plugin` pre-install preview** (v2.1.145, 19 mag): le tab Discover e Browse del marketplace mostrano comandi, agenti, skill, hook e server MCP/LSP forniti da un plugin prima dell'installazione — permette di valutare l'impatto senza committere. Fonte: [GitHub Releases v2.1.145](https://github.com/anthropics/claude-code/releases/tag/v2.1.145). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-05-19
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-05-18
-
-> Nessuna novita' significativa nelle ultime 24 ore.
 
 ---
 
