@@ -12,7 +12,8 @@
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.185** (20 giu): stream-stall hint API aggiornato in "Waiting for API response · will retry in …" e trigger da 10s a 20s — riduce i falsi allarmi durante operazioni lente. Fonte: [GitHub Releases v2.1.185](https://github.com/anthropics/claude-code/releases/tag/v2.1.185). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **@bcherny: Claude Code decifra la Lineare A** (20 giu): Boris Cherny mostra come Claude Code sia stato usato per decifrare la Lineare A, scrittura cretese di 3500 anni fa — caso d'uso non-coding inatteso. Fonte: [@bcherny](https://x.com/bcherny/status/2068064304503660962). Vedi n/a.
 
 ---
 
