@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-20
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-06-19
 
 - **Artifacts in Claude Code** (beta, Team & Enterprise, 19 giu): Claude trasforma il lavoro di sessione in pagine web condivise — PR walkthrough, dashboard di progetto — aggiornate in tempo reale mentre la sessione continua. Condivisibili via link privato al team. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067672094209675373) · [@claudeai](https://x.com/claudeai/status/2067671912038240487). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
@@ -199,12 +205,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 - **`/code-review --comment`** (v2.1.147, 21 mag): il flag `--comment` su `/code-review` pubblica i risultati della review come commenti inline direttamente su GitHub PR — chiude il loop tra analisi locale e feedback remoto senza uscire dal terminale. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **Sessioni background pinnate** (v2.1.147, 21 mag): le sessioni pinnate con `Ctrl+T` in `claude agents` restano attive anche quando idle e si riavviano automaticamente per applicare gli aggiornamenti di Claude Code — utile per agent di lunga durata che non devono essere interrotti da inattivita'. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-05-21
-
-- **`/code-review` (ex `/simplify`)** (v2.1.146, 21 mag): `/simplify` rinominato `/code-review` con parametro effort opzionale (es. `/code-review high`) — il nuovo nome riflette meglio l'azione (3 review agent paralleli + apply fix) e allinea il comando all'interfaccia `/effort`. Il vecchio nome non e' piu' valido. Fonte: [GitHub Releases v2.1.146](https://github.com/anthropics/claude-code/releases/tag/v2.1.146). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

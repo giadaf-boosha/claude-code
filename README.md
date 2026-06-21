@@ -1,18 +1,19 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **20 giugno 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.183** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **21 giugno 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.185** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-20)
+## What's new today (2026-06-21)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.185** (20 giu): stream-stall hint API aggiornato in "Waiting for API response · will retry in …" e trigger da 10s a 20s — riduce i falsi allarmi durante operazioni lente. Fonte: [GitHub Releases v2.1.185](https://github.com/anthropics/claude-code/releases/tag/v2.1.185). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **@bcherny: Claude Code decifra la Lineare A** (20 giu): Boris Cherny mostra come Claude Code sia stato usato per decifrare la Lineare A, scrittura cretese di 3500 anni fa — caso d'uso non-coding inatteso. Fonte: [@bcherny](https://x.com/bcherny/status/2068064304503660962). Vedi n/a.
 
 ---
 
