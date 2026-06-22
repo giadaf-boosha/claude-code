@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (17 giugno 2026, v2.1.181). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (20 giugno 2026, v2.1.185). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -519,8 +519,12 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 15 giu 2026 | **v2.1.178** | **`Tool(param:value)` in permission rules**: sintassi per filtrare per parametro del tool — es. `Agent(model:opus)` in `deny` blocca sub-agenti Opus; wildcard `*` supportato. **Nested `.claude/` directory precedence**: skill/agenti/workflow/output-style nella `.claude/` piu' vicina alla working directory prevalgono; clash di nome risolti con prefisso `<dir>:<name>`. Auto mode: subagent spawns valutati dal classifier prima del lancio. `/doctor` rinnovato (layout flat, icone status, nomi comando evidenziati). |
 | 17 giu 2026 | **v2.1.181** | **`/config key=value`**: imposta qualsiasi setting direttamente dal prompt senza modificare files (es. `/config thinking=false`) — funziona in interactive, `-p`, Remote Control. **`CLAUDE_CLIENT_PRESENCE_FILE`** (env var): sopprime push notification mobile finche' il file marker esiste. `sandbox.allowAppleEvents` opt-in per Apple Events su macOS. Streaming paragrafi lunghi riga-per-riga. Auto-retry su drop connessione mid-thinking. Subagent panel: idle auto-hide 30s, cap 5 righe con scroll hints. MCP OAuth page allineata allo stile CC. URL in fullscreen: richiede Cmd+click (macOS)/Ctrl+click. Bun runtime 1.4. |
 | 19 giu 2026 | **v2.1.183** | **Artifacts** (beta Team/Enterprise): pagine web interattive generate da sessione, condivisibili via link privato al team — PR walkthrough, dashboard di progetto, visualizzazioni codice — aggiornate in tempo reale. **`/design-sync [pull\|push]`**: sync bidirezionale Claude Code ↔ Claude Design (pull design system nel repo, push codice verso canvas Design). **Auto mode safety**: blocco automatico comandi distruttivi non richiesti (`git reset --hard`, `git checkout -- .`, `git clean -fd`, `git stash drop`, `git commit --amend`, `terraform/pulumi/cdk destroy`). **`/config --help`**: lista tutti gli shorthand disponibili. **`attribution.sessionUrl`**: omette link sessione claude.ai da commit e PR (web/Remote Control). Rimosso "setup issues" dallo startup — usa `/doctor`. |
+| 20 giu 2026 | **v2.1.185** | **Stream-stall hint aggiornato**: il messaggio di stallo ora legge "Waiting for API response · will retry in …" (era "No response from API · Retrying in …"); il trigger si attiva dopo 20s di silenzio invece di 10s — meno allarmistico per latenze API normali. |
+| 22 giu 2026 | — | **Scadenza free access Fable 5**: ultimo giorno di `claude-fable-5` incluso gratuitamente su piani Pro/Max/Team/Enterprise. Da domani (23 giu) richiede usage credits. Nota: accesso sospeso dal 12 giu per direttiva US export control — Anthropic lavora per ripristino. Fonte: [Anthropic statement](https://www.anthropic.com/news/fable-mythos-access). |
 
-<sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067672094209675373).</sub>
+> **2026-06-22 (auto-update)**: v2.1.185 (20 giu) introduce stream-stall hint rinominato e trigger a 20s. Contestualmente, il governo USA ha emesso (12 giu) una direttiva di export control che sospende l'accesso mondiale a Fable 5 e Mythos 5 — ancora in vigore al 22 giu. Scade oggi (22 giu) anche il free access Fable 5 su piani subscription. Fonte: [GitHub Releases v2.1.185](https://github.com/anthropics/claude-code/releases/tag/v2.1.185) · [Anthropic statement](https://www.anthropic.com/news/fable-mythos-access). Vedi anche README "What's new today" del giorno.
+
+<sub>Aggiornato 2026-06-22 via daily what's new. Fonte: [GitHub Releases v2.1.185](https://github.com/anthropics/claude-code/releases/tag/v2.1.185) · [Anthropic statement](https://www.anthropic.com/news/fable-mythos-access).</sub>
 
 ---
 
