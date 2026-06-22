@@ -196,6 +196,8 @@ Con `/model claude-fable-5` il reasoning e' sempre on — `MAX_THINKING_TOKENS=0
 
 <sub>Aggiornato 2026-06-10 via daily what's new. Fonte: [GitHub Releases v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170) · [Anthropic docs](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5).</sub>
 
+> **2026-06-22 (auto-update)**: accesso a Fable 5 sospeso dal 12 giu per direttiva US export control (national security) — Anthropic sta lavorando per ripristinare. Contemporaneamente, oggi (22 giu) scade il free access su piani Pro/Max/Team/Enterprise: da domani (23 giu) richiedera' usage credits ($10/$50 per MTok). Opus 4.7/4.8 e Sonnet 4.6 non sono interessati dalla sospensione. Fonte: [Anthropic statement](https://www.anthropic.com/news/fable-mythos-access). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 5.5 Rapporto con il post-mortem aprile 2026

@@ -207,13 +207,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
-## 2026-05-22
-
-- **`/code-review --comment`** (v2.1.147, 21 mag): il flag `--comment` su `/code-review` pubblica i risultati della review come commenti inline direttamente su GitHub PR — chiude il loop tra analisi locale e feedback remoto senza uscire dal terminale. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Sessioni background pinnate** (v2.1.147, 21 mag): le sessioni pinnate con `Ctrl+T` in `claude agents` restano attive anche quando idle e si riavviano automaticamente per applicare gli aggiornamenti di Claude Code — utile per agent di lunga durata che non devono essere interrotti da inattivita'. Fonte: [GitHub Releases v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
 ## Come consultare la storia completa
 
 ```bash

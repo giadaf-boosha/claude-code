@@ -12,7 +12,9 @@
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **[annuncio] Scadenza free access Fable 5 (OGGI)**: ultimo giorno di `claude-fable-5` incluso gratuitamente sui piani Pro/Max/Team/Enterprise. Da domani (23 giu) richiede usage credits ($10 input / $50 output per MTok). Nota: l'accesso e' sospeso dal 12 giu per direttiva US export control — la scadenza rimane in vigore per quando l'accesso sara' ripristinato. Fonte: [ghacks](https://www.ghacks.net/2026/06/10/anthropic-releases-claude-fable-5-to-pro-max-and-enterprise-users-free-until-june-22/). Vedi [docs/05 § 5.7](./docs/05-fast-mode-1m-context.md).
+- **[annuncio] Sospensione Fable 5 e Mythos 5 (dal 12 giu, ancora in corso)**: il governo USA ha emesso una direttiva di export control che sospende l'accesso mondiale a Fable 5 e Mythos 5 — inclusi utenti non-US e dipendenti Anthropic con cittadinanza straniera. Anthropic ha pubblicato un comunicato e sta lavorando per ripristinare l'accesso. Opus 4.7/4.8 e Sonnet 4.6 non sono interessati. Fonte: [Anthropic statement](https://www.anthropic.com/news/fable-mythos-access) · [@AnthropicAI](https://x.com/AnthropicAI/status/2065597531644743999). Vedi [docs/05 § 5.7](./docs/05-fast-mode-1m-context.md) e [docs/19](./docs/19-changelog.md).
+- **[fix] v2.1.185 (20 giu, non coperta ieri)**: stream-stall hint rinominato in "Waiting for API response · will retry in …" (era "No response from API · Retrying in …"), trigger ritardato da 10s a 20s — meno allarmistico per latenze API normali. Fonte: [GitHub Releases v2.1.185](https://github.com/anthropics/claude-code/releases/tag/v2.1.185). Vedi [docs/19](./docs/19-changelog.md).
 
 ---
 
