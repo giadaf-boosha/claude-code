@@ -17,6 +17,8 @@ MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app).
 
 > Fonte: [`/en/mcp`](https://code.claude.com/docs/en/mcp).
 
+> **2026-06-23 (auto-update)**: `claude mcp login <name>` e `claude mcp logout <name>` (v2.1.186) autenticano un server MCP direttamente da CLI — avviano il flusso OAuth e salvano il token senza passare dall'UI `/mcp`. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 10.1 Configurazione base

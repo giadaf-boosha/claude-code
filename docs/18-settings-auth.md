@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-06-23 (auto-update)**: `respondToBashCommands` (v2.1.186) e' un nuovo setting che controlla se i comandi bash lanciati con `!` nel prompt scatenano una risposta automatica di Claude. Stesso rilascio aggiunge opzione AWS credentials refresh in `/login` per sessioni Bedrock con token a breve scadenza. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)

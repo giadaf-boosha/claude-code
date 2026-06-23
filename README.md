@@ -8,11 +8,20 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-22)
+## What's new today (2026-06-23)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.186** (22 giu): release principale con MCP auth CLI, `respondToBashCommands`, Skills in `/plugin` Installed, fix streaming post-wake, fix feature-gated tools bypass. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **`claude mcp login/logout <name>`** (v2.1.186): autenticazione MCP da riga di comando — avvia flusso OAuth e salva il token senza aprire la UI `/mcp`. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi [docs/10-mcp.md](./docs/10-mcp.md).
+- **`respondToBashCommands`** (v2.1.186): i comandi bash con `!` scatenano ora risposta automatica di Claude, configurabile tramite il nuovo setting `respondToBashCommands`. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Skills in `/plugin` Installed** (v2.1.186): sezione dedicata alle skill nel tab Installed di `/plugin`, separata da MCP server, agenti e workflow. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi [docs/09-skills.md](./docs/09-skills.md).
+- **`teammateMode: "iterm2"`** (v2.1.186): nuovo valore per `teammateMode` nei team di agenti — lancia i teammate in split pane iTerm2, avvisa se `it2` CLI non e' trovato. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi [docs/12-agent-teams.md](./docs/12-agent-teams.md).
+- **AWS credentials refresh in `/login`** (v2.1.186): nuova opzione in `/login` per forzare il refresh delle credenziali AWS — utile per sessioni Bedrock con token a breve scadenza. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **`/review <pr>` = `/code-review medium`** (v2.1.186): il comando `/review <pr>` usa ora lo stesso motore di `/code-review medium`, allineando qualita' e effort della review. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi [docs/03-slash-commands.md](./docs/03-slash-commands.md).
+- **Skill frontmatter kebab/snake/camelCase** (v2.1.186): i campi del frontmatter accettano le tre varianti (`my-field`, `my_field`, `myField`) — compatibilita' automatica con plugin a convenzioni diverse. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi [docs/09-skills.md](./docs/09-skills.md).
+- **Fix streaming post-wake** (v2.1.186): risolto il bug per cui le richieste streaming fallivano dopo il wake della macchina — colpiva sessioni background attive su laptop. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186).
+- **Fix feature-gated tools bypass** (v2.1.186): corretto bypass che permetteva a sub-agenti di usare tool riservati a feature gate disattivate. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Vedi [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md).
 
 ---
 
