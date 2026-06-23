@@ -53,10 +53,17 @@ MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app).
 ```bash
 claude mcp add <name>            # CLI wizard
 claude mcp serve                 # gestione
+claude mcp login <name>          # autentica server MCP da CLI (senza /mcp interattivo)
+claude mcp login <name> --no-browser  # per sessioni SSH headless (token via stdin)
+claude mcp logout <name>         # rimuove credenziali salvate per il server
 /mcp                              # UI interattiva (in sessione) + OAuth
 --mcp-config <file-or-json>       # ripetibile
 --strict-mcp-config               # solo server elencati
 ```
+
+`claude mcp login/logout` (introdotti in v2.1.186) semplificano i workflow CI/CD e SSH dove aprire il browser per il flusso OAuth non e' praticabile. Equivalenti funzionali del flusso "Authorize" nel menu `/mcp`, ma invocabili da script o prima ancora di aprire una sessione.
+
+<sub>Aggiornato 2026-06-23 via daily what's new. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186).</sub>
 
 ---
 

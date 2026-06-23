@@ -53,6 +53,20 @@ Pattern: chain in natural language, oppure subagent paralleli per indipendenti.
 ### 8. Monitor tool + dev server
 > "you'll need to explicitly prompt Claude Code to use it, but the Monitor Tool is super powerful. e.g. 'start my dev server and use the MonitorTool to observe for errors'" — [@trq212](https://x.com/trq212/status/2042335178388103559)
 
+### 11. Bash `!` per analisi interattiva dell'output (da v2.1.186)
+
+Dal prompt, qualsiasi comando prefissato con `!` viene eseguito e Claude risponde automaticamente all'output senza che tu debba chiedere esplicitamente l'analisi:
+
+```
+! git log --oneline -20
+! npm test -- --reporter=json
+! curl -s https://api.example.com/health
+```
+
+Claude legge l'output e prosegue il ragionamento — utile per loop di debug rapidi o per far leggere log a Claude senza un turno extra. Per tornare al comportamento precedente (solo contesto, nessuna risposta automatica), aggiungi `"respondToBashCommands": false` in `settings.json`.
+
+<sub>Aggiornato 2026-06-23 via daily what's new. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186).</sub>
+
 ### 9. Plan mode prima di refactor grossi
 > "New in Claude Code: Plan mode. Review implementation plans before making changes. Perfect for complex changes where you want to nail the approach before diving in." — [@_catwu](https://x.com/_catwu/status/1932857816131547453)
 
