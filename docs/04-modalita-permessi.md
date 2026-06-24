@@ -15,6 +15,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per il framework completo.
 
+> **2026-06-24 (auto-update)**: v2.1.187 aggiunge `sandbox.credentials` — impostazione che blocca nei comandi sandboxed l'accesso a file credenziali (`.aws/credentials`, `.ssh/`, `~/.npmrc`, ecc.) e variabili d'ambiente segrete; hardening critico per workflow CI/agentic. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.1 Permission modes

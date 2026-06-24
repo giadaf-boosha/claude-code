@@ -17,6 +17,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 > "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions." — [`/en/sub-agents`](https://code.claude.com/docs/en/sub-agents)
 
+> **2026-06-24 (auto-update)**: v2.1.187 risolve il loop infinito di `StructuredOutput` nei workflow — il modello non puo' piu' richiamare lo stesso tool dopo una chiamata riuscita, bloccando hang in pipeline con `agent({schema})`. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.1 Dove vivono

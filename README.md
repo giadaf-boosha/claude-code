@@ -1,19 +1,27 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **23 giugno 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.186** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **24 giugno 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.187** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-23)
+## What's new today (2026-06-24)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`claude mcp login/logout <name>`** (v2.1.186, 22 giu): nuovi comandi CLI per autenticare e deautenticare server MCP senza aprire il menu interattivo `/mcp`; `--no-browser` supporta flussi SSH headless. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Doc: [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Bash `!` auto-response** (v2.1.186, 22 giu): i comandi `!<bash>` nel prompt triggherano ora una risposta automatica di Claude sull'output — prima era necessario esplicitare la richiesta. Disabilita con `"respondToBashCommands": false` in `settings.json`. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Doc: [docs/20-tips-best-practices.md](./docs/20-tips-best-practices.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.187** (23 giu): release con `sandbox.credentials` per bloccare accesso a credenziali nei comandi sandboxed, restrizioni modello org nel picker, mouse support nei menu fullscreen e 10+ bug fix. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Claude Tag** (23 giu, research preview Team/Enterprise): nuovo prodotto Anthropic — agente AI sempre attivo in Slack, segue le conversazioni del canale, accumula contesto team e interviene proattivamente; multiplayer (un Claude per canale). Il team CC interno usa Claude Tag per scrivere il 65% del proprio codice. Fonte: [Anthropic news](https://www.anthropic.com/news/introducing-claude-tag), [@ClaudeDevs](https://x.com/ClaudeDevs/status/2069468900216234010). Doc: n/a.
+- **`sandbox.credentials`** (v2.1.187): impostazione per bloccare nei comandi sandboxed l'accesso a file credenziali (`.aws`, `.ssh`, `~/.npmrc`, ecc.) e variabili d'ambiente segrete — hardening sicurezza CI/agentic. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Org model restrictions** (v2.1.187): restrizioni di modello org appaiono nel picker con messaggio "restricted by your organization's settings" — enforcement enterprise su `--model`/`/model`/`ANTHROPIC_MODEL`. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Mouse nei menu fullscreen** (v2.1.187): clic del mouse nei menu di selezione (permission prompts, `/model`, `/config`) in modalita' fullscreen. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md).
+- **Fix `--resume` no-model-turn** (v2.1.187): risolto "No conversation found" quando `claude -p` non produceva turni del modello (es. solo tool calls senza risposta testuale). Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/16-headless-agent-sdk.md](./docs/16-headless-agent-sdk.md).
+- **Fix StructuredOutput loop** (v2.1.187): il modello non puo' piu' richiamare `StructuredOutput` in loop dopo una chiamata riuscita — blocca hang in workflow con `agent({schema})`. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
+- **Fix MCP remote timeout** (v2.1.187): tool call MCP remote non si bloccano piu' per 5+ minuti; abortiscono con errore configurabile via `CLAUDE_CODE_MCP_TOOL_IDLE_TIMEOUT`. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/10-mcp.md](./docs/10-mcp.md).
+- **`/btw` arrow navigation + `/install-github-app`** (v2.1.187): navigazione ←/→ tra suggerimenti `/btw`; setup workflow GitHub Actions ora opzionale in `/install-github-app`. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md).
+- **Fix Remote + VSCode + CJK** (v2.1.187): sessioni Remote Control avviano 2.7s piu' velocemente; VSCode non si blocca piu' su resume di sessioni grandi; fix mojibake su testo Korean/CJK in certi terminali. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: n/a.
 
 ---
 

@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-06-24 (auto-update)**: v2.1.187 introduce restrizioni di modello configurabili a livello org — appaiono nel picker con messaggio "restricted by your organization's settings" e si applicano a `--model`, `/model` e `ANTHROPIC_MODEL`; enforcement enterprise senza override locale. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)
