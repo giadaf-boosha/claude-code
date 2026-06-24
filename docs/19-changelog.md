@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (17 giugno 2026, v2.1.181). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (23 giugno 2026, v2.1.187). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -521,8 +521,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 19 giu 2026 | **v2.1.183** | **Artifacts** (beta Team/Enterprise): pagine web interattive generate da sessione, condivisibili via link privato al team — PR walkthrough, dashboard di progetto, visualizzazioni codice — aggiornate in tempo reale. **`/design-sync [pull\|push]`**: sync bidirezionale Claude Code ↔ Claude Design (pull design system nel repo, push codice verso canvas Design). **Auto mode safety**: blocco automatico comandi distruttivi non richiesti (`git reset --hard`, `git checkout -- .`, `git clean -fd`, `git stash drop`, `git commit --amend`, `terraform/pulumi/cdk destroy`). **`/config --help`**: lista tutti gli shorthand disponibili. **`attribution.sessionUrl`**: omette link sessione claude.ai da commit e PR (web/Remote Control). Rimosso "setup issues" dallo startup — usa `/doctor`. |
 | 20 giu 2026 | v2.1.185 | Stream-stall hint rinominato "Waiting for API response · will retry in …" (era "No response from API…"); soglia silenziosa da 10s a 20s. |
 | 22 giu 2026 | **v2.1.186** | **`claude mcp login <name>` / `claude mcp logout <name>`**: autenticazione server MCP da CLI senza menu interattivo `/mcp`; `--no-browser` per flussi SSH headless. **Bash `!` auto-response**: comandi `!<bash>` triggherano risposta automatica di Claude sull'output (`"respondToBashCommands": false` per comportamento precedente). Skills section nella tab Installed di `/plugin`. Workflow status filter (`f` in `/workflows`). `teammateMode: "iterm2"`. 18+ bug fix (streaming post-sleep, sub-agent scroll, Chrome tab isolation, `Agent(type)` deny rules, strikethrough rendering). |
+| 23 giu 2026 | v2.1.187 | **`sandbox.credentials`**: blocca comandi sandboxati dalla lettura di file di credenziali e variabili d'ambiente segrete — isolamento multi-tenant. Restrizioni modello organizzazione visibili nel model picker e via `--model`/`/model`/`ANTHROPIC_MODEL`. Mouse click in menu fullscreen (permission prompts, `/model`, `/config`). Navigazione ←/→ in `/btw`. `CLAUDE_CODE_MCP_TOOL_IDLE_TIMEOUT` per timeout tool MCP remoti configurabile. Bug fix: `--resume` su run senza model turn; `agent({schema})` StructuredOutput loop; Remote Control lag ridotto ~2.7s; mojibake CJK su terminali paste-per-byte. |
 
-<sub>Aggiornato 2026-06-23 via daily what's new. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186).</sub>
+<sub>Aggiornato 2026-06-24 via daily what's new. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187).</sub>
 
 ---
 

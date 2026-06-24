@@ -89,6 +89,16 @@ La modifica e' persistente nella sessione (non viene scritta su disco a meno che
 ### Sandbox
 Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 
+> **`sandbox.credentials`** (da v2.1.187): quando `true`, i comandi eseguiti in ambiente sandboxato non possono leggere file di credenziali (`.env`, `~/.ssh/*`, token file, credential store) ne' variabili d'ambiente marcate come segrete. Utile in ambienti multi-tenant o pipeline CI/CD condivise dove il codice non deve accedere alle credenziali host.
+>
+> ```json
+> { "sandbox": { "credentials": true } }
+> ```
+>
+> La restrizione si applica solo ai comandi che girano dentro la sandbox; Claude Code stesso non e' limitato nell'accesso ai propri file di configurazione.
+
+<sub>Aggiornato 2026-06-24 via daily what's new. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187).</sub>
+
 ### Hooks
 - `hooks`, `disableAllHooks`, `allowManagedHooksOnly`
 - `allowedHttpHookUrls`, `httpHookAllowedEnvVars`
