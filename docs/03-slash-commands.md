@@ -82,7 +82,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/rename [name]` | built-in | Rinomina sessione |
 | `/resume [session\|PR-URL]` (alias `/continue`) | built-in | Riprende sessione per ID/nome; accetta URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) per trovare la sessione che ha creato quella PR (da v2.1.122). Da v2.1.144 include anche le sessioni background avviate via `claude --bg` o Agent View (mostrate con tag `bg` nella lista) |
 | `/review [PR]` | built-in | Code review locale (cf. `/ultrareview` per cloud) |
-| `/rewind` (alias `/checkpoint`, `/undo`) | built-in | Checkpoint rewind |
+| `/rewind` (alias `/checkpoint`, `/undo`) | built-in | Checkpoint rewind; da v2.1.191 recupera anche il context azzerato da `/clear` |
 | `/sandbox` | built-in | Toggle [sandbox mode](./04-modalita-permessi.md#sandbox) |
 | `/schedule [description]` (alias `/routines`) | built-in | Gestione [routines](./13-routines-cloud.md) |
 | `/scroll-speed [speed]` | built-in | Regola velocita' scroll rotella mouse con anteprima live (da v2.1.139) |

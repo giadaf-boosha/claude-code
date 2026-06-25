@@ -283,12 +283,18 @@ Claude Code traccia automaticamente edit. **NON** traccia bash file mods (`rm`, 
 - **Summarize from here** (compatta da quel punto in avanti, simile a `/compact` targeted)
 - **Never mind**
 
+### Recupero post-`/clear` (da v2.1.191)
+
+Da v2.1.191, `/rewind` recupera anche il context di conversazione azzerato da un `/clear` — in precedenza `/clear` era irreversibile nella sessione corrente. Nel menu Esc Esc i punti precedenti al `/clear` appaiono ora come checkpoint selezionabili come tutti gli altri.
+
 ### Persistenza
 - Cross-session
 - Cleanup default: 30 giorni (`cleanupPeriodDays`)
 - Non sostituisce git
 
 > Fonte: [`/en/checkpointing`](https://code.claude.com/docs/en/checkpointing).
+
+<sub>Aggiornato 2026-06-25 via daily what's new. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191).</sub>
 
 ---
 
