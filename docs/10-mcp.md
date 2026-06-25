@@ -195,6 +195,10 @@ Esempio: server GitHub remoto, Linear, Asana, Notion, Atlassian.
 
 ---
 
+> **2026-06-25 (auto-update)**: da v2.1.191 la reliability MCP migliora su tre fronti: (1) capability discovery ritenta errori di rete transitori con backoff breve prima di segnalare il server non disponibile; (2) MCP OAuth ritenta discovery e token request dopo errori di rete transitori; (3) errori HTTP 404 mostrano ora l'URL del server nel messaggio di errore per facilitare il debug. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi anche README "What's new today" del giorno.
+
+---
+
 ## 10.12 Tips operative
 
 1. **MCP > custom CLI tool** quando il tool serve a piu' Claude Code session.

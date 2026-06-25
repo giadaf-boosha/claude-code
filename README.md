@@ -1,18 +1,27 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **24 giugno 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.187** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **25 giugno 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.191** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-24)
+## What's new today (2026-06-25)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`sandbox.credentials`** (v2.1.187, 23 giu): nuova opzione sandbox blocca i comandi eseguiti in ambiente sandboxato dalla lettura di file di credenziali e variabili d'ambiente segrete — rafforza l'isolamento in deploy multi-tenant e pipeline CI/CD condivise. Configurabile in `settings.json`. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.191** (24 giu): `/rewind` supporta ora il resume da prima dell'ultimo `/clear` — recupera il contesto della sessione senza perdere il lavoro precedente. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi [docs/03-slash-commands.md](./docs/03-slash-commands.md) e [docs/19-changelog.md](./docs/19-changelog.md).
+- **CPU streaming -37%** (v2.1.191, 24 giu): coalescing degli aggiornamenti di testo a 100ms riduce il consumo CPU durante le risposte in streaming; ridotto anche il memory growth nelle sessioni lunghe da terminal output cache. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **Fix hook comma matchers** (v2.1.191, 24 giu): gli hook con matcher separati da virgola (es. `"Bash,PowerShell"`) non si attivavano silenziosamente — ora funzionano correttamente. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi [docs/07-hooks.md](./docs/07-hooks.md).
+- **Fix background agents stop** (v2.1.191, 24 giu): fermare un agent dal task panel e' ora permanente — prima il background agent si rigenerava dopo essere stato fermato. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi [docs/08-subagents.md](./docs/08-subagents.md).
+- **MCP retry logic** (v2.1.191, 24 giu): capability discovery ritenta errori di rete transitori con backoff breve; MCP OAuth ritenta discovery e token request; errori HTTP 404 mostrano ora l'URL del server. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi [docs/10-mcp.md](./docs/10-mcp.md).
+- **Fix `/permissions` Recently-denied** (v2.1.191, 24 giu): approvare una negazione nella tab "Recently-denied" ora persiste alla chiusura del panel. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md).
+- **Sandbox network memory** (v2.1.191, 24 giu): il dialog di permessi di rete sandbox ricorda ora gli host approvati per tutta la durata della sessione — niente piu' conferme ripetute per lo stesso host. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **ClaudeDevs: Claude Tag scrive il 65% del codice** (24 giu): il team CC usa Claude Tag internamente per la maggior parte del codice di produzione, incluso il codice che ha costruito Claude Tag stesso. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2069468900216234010). n/a.
+- **Cat Wu: 6 flow di Claude Tag** (24 giu): @_catwu pubblica 6 pattern di customizzazione Claude Tag per diversi casi d'uso, validati con utenti interni e design partner. Fonte: [@_catwu](https://x.com/_catwu/status/2069486403696869555). n/a.
+- **Thariq: best practices Claude Tag** (24 giu): @trq212 condivide le sue best practice per Claude Tag come nuova forma d'agente per team che integrano Claude nei flussi Slack. Fonte: [@trq212](https://x.com/trq212/status/2069474335656694003). n/a.
 
 ---
 

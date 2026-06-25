@@ -290,6 +290,8 @@ Claude Code traccia automaticamente edit. **NON** traccia bash file mods (`rm`, 
 
 > Fonte: [`/en/checkpointing`](https://code.claude.com/docs/en/checkpointing).
 
+> **2026-06-25 (auto-update)**: da v2.1.191 `/rewind` supporta il resume da prima dell'ultimo `/clear` — e' ora possibile recuperare il contesto della sessione cancellato con `/clear` senza perdere il lavoro accumulato. La tab "Recently-denied" nel panel `/permissions` persiste ora le approvazioni alla chiusura. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.7 Tip operative

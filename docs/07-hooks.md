@@ -110,6 +110,8 @@ Conditional `if:` (da v2.1.83): permette di matchare pattern fini-grained dentro
 - Solo `[A-Za-z0-9_|]` → exact o list (`Bash`, `Edit|Write`)
 - Altri caratteri → JS regex (`^Notebook`, `mcp__memory__.*`)
 
+> **2026-06-25 (auto-update)**: da v2.1.191 gli hook con matcher separati da virgola (es. `"Bash,PowerShell"`) non si attivavano silenziosamente — ora la virgola non e' un separatore valido nella sintassi matcher; usare `|` per le liste (es. `"Bash|PowerShell"`). Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 7.5 Exit codes (handler `command`)

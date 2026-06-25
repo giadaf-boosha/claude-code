@@ -97,7 +97,9 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 >
 > La restrizione si applica solo ai comandi che girano dentro la sandbox; Claude Code stesso non e' limitato nell'accesso ai propri file di configurazione.
 
-<sub>Aggiornato 2026-06-24 via daily what's new. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187).</sub>
+> **2026-06-25 (auto-update)**: da v2.1.191 il dialog di permessi di rete sandbox ricorda gli host approvati con "Yes" per tutta la durata della sessione — prima ogni nuovo tentativo verso lo stesso host richiedeva una nuova conferma. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Vedi anche README "What's new today" del giorno.
+
+<sub>Aggiornato 2026-06-25 via daily what's new. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191).</sub>
 
 ### Hooks
 - `hooks`, `disableAllHooks`, `allowManagedHooksOnly`
