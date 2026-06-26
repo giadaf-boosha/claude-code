@@ -8,11 +8,20 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-25)
+## What's new today (2026-06-26)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/rewind` post-`/clear`** (v2.1.191, 24 giu): `/rewind` recupera ora la conversazione anche da prima di un `/clear` — in precedenza il context azzerato era irrecuperabile nella sessione corrente. Rilasciato insieme a un miglioramento prestazioni streaming del ~37% via coalescing degli aggiornamenti testo a 100ms. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.193** (release, 25 giu): nuova versione con 5 feature e 8+ fix — `autoMode.classifyAllShell`, OTEL response event, autocomplete path bash mode, MCP auth warning, memory reaping shell background. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **`autoMode.classifyAllShell`** (feature, v2.1.193): nuova opzione instrada TUTTI i comandi Bash/PowerShell attraverso il classificatore auto-mode, non solo i pattern "arbitrary-code-execution". Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/04-modalita-permessi.md § 4.3](./docs/04-modalita-permessi.md).
+- **OTEL `claude_code.assistant_response`** (feature, v2.1.193): evento OpenTelemetry con testo risposta modello; redatto default, attiva con `OTEL_LOG_ASSISTANT_RESPONSES=true`. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Autocomplete path in bash mode** (feature, v2.1.193): digitando `!` in bash mode Claude Code suggerisce ora completamenti live dei percorsi file. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/20-tips-best-practices.md](./docs/20-tips-best-practices.md).
+- **MCP auth startup warning** (feature, v2.1.193): avviso visivo all'avvio quando un server MCP richiede autenticazione — riduce confusione su server silenziosamente non connessi. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/10-mcp.md](./docs/10-mcp.md).
+- **Background shell memory reaping** (feature, v2.1.193): memoria rilasciata automaticamente per processi shell background inattivi; `CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1` per disabilitare. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Fix: backgrounding spurious cancel** (fix, v2.1.193): eliminato il falso warning "N background tasks would be abandoned" al background di una sessione. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/12-agent-teams.md](./docs/12-agent-teams.md).
+- **Fix: pinned agents re-prompt post-update** (fix, v2.1.193): agenti pinned non vengono piu' re-promptati dopo ogni auto-update di Claude Code. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/12-agent-teams.md](./docs/12-agent-teams.md).
+- **Fix: MCP headersHelper 401/403 reconnect** (fix, v2.1.193): `headersHelper` auth esegue ora reconnect automatico su 401/403 invece di bloccarsi silenziosamente. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/10-mcp.md](./docs/10-mcp.md).
+- **Fix: stale UI post-`/login`** (fix, v2.1.193): `/model` e altre UI filtrate da client-data mostrano ora stato aggiornato correttamente dopo `/login`. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/03-slash-commands.md](./docs/03-slash-commands.md).
 
 ---
 

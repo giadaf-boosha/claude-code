@@ -40,6 +40,8 @@ Il lead crea il team via `TeamCreate`, spawna teammates via `Agent` tool con `te
 
 ---
 
+> **2026-06-26 (auto-update)**: due fix v2.1.193 (25 giu) per background agents — **(1) Backgrounding spurious cancel**: risolto bug per cui spostare una sessione in background generava erroneamente il warning "N background tasks would be abandoned", bloccando l'operazione. **(2) Pinned agents re-prompt post-update**: gli agenti pinned non vengono piu' re-promptati automaticamente dopo ogni auto-update di Claude Code — comportamento che interrompeva sessioni longrunning. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193). Vedi anche README "What's new today" del giorno.
+
 ## 12.3 Componenti
 
 | Componente | Funzione |

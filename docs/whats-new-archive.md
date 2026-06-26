@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-25
+
+- **`/rewind` post-`/clear`** (v2.1.191, 24 giu): `/rewind` recupera ora la conversazione anche da prima di un `/clear` — in precedenza il context azzerato era irrecuperabile nella sessione corrente. Rilasciato insieme a un miglioramento prestazioni streaming del ~37% via coalescing degli aggiornamenti testo a 100ms. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-06-24
 
 - **`sandbox.credentials`** (v2.1.187, 23 giu): nuova opzione sandbox blocca i comandi eseguiti in ambiente sandboxato dalla lettura di file di credenziali e variabili d'ambiente segrete — rafforza l'isolamento in deploy multi-tenant e pipeline CI/CD condivise. Configurabile in `settings.json`. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
@@ -199,12 +205,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 - **`MessageDisplay` hook event** (v2.1.152, 27 mag): nuovo evento hook che intercetta i messaggi dell'assistente prima della visualizzazione — permette di trasformare il testo (redact, formatting, traduzione) o nasconderlo completamente. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152). Doc: [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **`/code-review --fix`** (v2.1.152, 27 mag): nuovo flag applica automaticamente i suggerimenti di review (refactoring, semplificazioni, efficienze) al working tree; `/simplify` torna come alias di `/code-review --fix`, chiudendo il ciclo iniziato con la rinomina in v2.1.146. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **`disallowed-tools` in frontmatter skill** (v2.1.152, 27 mag): le skill possono dichiarare nel frontmatter quali tool rimuovere dal modello durante la propria esecuzione — aumenta il focus del modello e riduce il rischio di uso accidentale di tool non pertinenti. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-05-26
-
-> Nessuna novita' significativa nelle ultime 24 ore.
 
 ---
 

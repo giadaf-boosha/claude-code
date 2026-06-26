@@ -86,6 +86,8 @@ La modifica e' persistente nella sessione (non viene scritta su disco a meno che
 - `apiKeyHelper`, `awsCredentialExport`, `awsAuthRefresh`
 - `otelHeadersHelper`, `forceLoginMethod`, `forceLoginOrgUUID`
 
+> **2026-06-26 (auto-update)**: due novita' v2.1.193 (25 giu) in questa area — **(1) `OTEL_LOG_ASSISTANT_RESPONSES`**: nuovo evento OpenTelemetry `claude_code.assistant_response` emette il testo della risposta del modello nel trace; redatto per default, attivabile con `OTEL_LOG_ASSISTANT_RESPONSES=true` in `settings.env`. **(2) Background shell memory reaping**: Claude Code rilascia automaticamente la memoria dei comandi shell background inattivi; disabilitabile con `CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1`. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193). Vedi anche README "What's new today" del giorno.
+
 ### Sandbox
 Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 

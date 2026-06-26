@@ -170,6 +170,8 @@ Il blocco e' contestuale: se il task dichiarato esplicitamente nel turno e' "res
 
 <sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183).</sub>
 
+> **2026-06-26 (auto-update)**: `autoMode.classifyAllShell` (v2.1.193, 25 giu) — nuova opzione booleana in `settings.autoMode` che instrada TUTTI i comandi Bash/PowerShell attraverso il classificatore auto-mode, non solo quelli con pattern "arbitrary-code-execution". Aumenta la copertura del classifier anche su comandi shell "normali" che potrebbero essere distruttivi in contesto. Abilita con `"autoMode": { "classifyAllShell": true }`. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.4 Sandbox mode {#sandbox}

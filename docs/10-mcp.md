@@ -65,6 +65,8 @@ claude mcp logout <name>         # rimuove credenziali salvate per il server
 
 <sub>Aggiornato 2026-06-23 via daily what's new. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186).</sub>
 
+> **2026-06-26 (auto-update)**: due fix v2.1.193 (25 giu) in questa area — **(1) MCP auth startup warning**: Claude Code mostra ora un avviso visivo all'avvio quando un server MCP e' configurato ma richiede autenticazione non ancora completata — riduce la confusione su tool "fantasma" silenziosamente non connessi. **(2) `headersHelper` 401/403 reconnect**: il meccanismo `otelHeadersHelper`/`headersHelper` per auth MCP esegue ora reconnect automatico su risposta 401 o 403, invece di bloccarsi e richiedere un riavvio manuale. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 10.4 Scope settings

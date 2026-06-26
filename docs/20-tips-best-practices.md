@@ -67,6 +67,8 @@ Claude legge l'output e prosegue il ragionamento — utile per loop di debug rap
 
 <sub>Aggiornato 2026-06-23 via daily what's new. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186).</sub>
 
+> **2026-06-26 (auto-update)**: `!` bash mode file autocomplete (v2.1.193, 25 giu) — digitando `!` seguito da un percorso parziale, Claude Code mostra ora completamenti live dei percorsi file, come nei completamenti tab di un terminale avanzato. Riduce errori di digitazione su path lunghi nei comandi `!`. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193). Vedi anche README "What's new today" del giorno.
+
 ### 9. Plan mode prima di refactor grossi
 > "New in Claude Code: Plan mode. Review implementation plans before making changes. Perfect for complex changes where you want to nail the approach before diving in." — [@_catwu](https://x.com/_catwu/status/1932857816131547453)
 
