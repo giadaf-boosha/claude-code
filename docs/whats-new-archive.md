@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-25
+
+- **`/rewind` post-`/clear`** (v2.1.191, 24 giu): `/rewind` recupera ora la conversazione anche da prima di un `/clear` — in precedenza il context azzerato era irrecuperabile nella sessione corrente. Rilasciato insieme a un miglioramento prestazioni streaming del ~37% via coalescing degli aggiornamenti testo a 100ms. Fonte: [GitHub Releases v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-06-24
 
 - **`sandbox.credentials`** (v2.1.187, 23 giu): nuova opzione sandbox blocca i comandi eseguiti in ambiente sandboxato dalla lettura di file di credenziali e variabili d'ambiente segrete — rafforza l'isolamento in deploy multi-tenant e pipeline CI/CD condivise. Configurabile in `settings.json`. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).

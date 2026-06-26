@@ -170,6 +170,29 @@ Il blocco e' contestuale: se il task dichiarato esplicitamente nel turno e' "res
 
 <sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183).</sub>
 
+### `autoMode.classifyAllShell` e denial reasons (v2.1.193)
+
+Da v2.1.193 (25 giu 2026), due aggiunte al sistema auto mode:
+
+**`autoMode.classifyAllShell`**: instrada **tutti** i comandi Bash e PowerShell attraverso il classificatore auto mode, non solo i pattern riconosciuti come arbitrary-code-execution. Utile in ambienti dove si vuole una supervisione piu' granulare su ogni shell invocation.
+
+```json
+{
+  "autoMode": {
+    "classifyAllShell": true
+  }
+}
+```
+
+**Denial reasons trasparenti**: quando auto mode blocca un'azione, la motivazione viene ora scritta in tre posti:
+- **Transcript**: riga visibile nella conversazione
+- **Toast**: notifica momentanea nell'interfaccia
+- **`/permissions` → "Recently denied"**: tab consultabile per capire pattern di blocco nel tempo
+
+Utile per diagnosticare perche' un comando specifico viene fermato e affinare le regole `allow`/`deny` o `hard_deny` di conseguenza.
+
+<sub>Aggiornato 2026-06-26 via daily what's new. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193).</sub>
+
 ---
 
 ## 4.4 Sandbox mode {#sandbox}

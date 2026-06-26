@@ -227,3 +227,60 @@ Claude genera il link privato. La pagina rimane sincronizzata con l'avanzamento 
 > Boris Cherny: "They are a game changer for how I work with Claude." — [@bcherny](https://x.com/bcherny/status/2067700226669060207)
 
 <sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067672094209675373).</sub>
+
+---
+
+## 12.17 Claude Tag — Claude Code reso multiplayer in Slack (beta, 25 giu 2026)
+
+**Claude Tag** e' l'evoluzione di Claude Code verso il lavoro di squadra: si integra in Slack come team member condiviso, disponibile in tutti i canali a cui gli si concede accesso.
+
+### Modello di funzionamento
+
+Invece di istanze private per ogni sviluppatore, Claude Tag e' **un singolo agente condiviso per canale**: quando qualcuno tagga `@Claude`, l'interazione e' visibile a tutto il team, chiunque puo' continuare il thread e il contesto si accumula attraverso le conversazioni.
+
+```
+@Claude refactora il modulo AuthService per supportare OAuth2
+```
+
+Claude risponde nel thread, pianifica i passi, esegue il lavoro usando gli strumenti configurati (codebase, CI, issue tracker) e posta il risultato nel thread Slack.
+
+### Caratteristiche chiave
+
+| Aspetto | Dettaglio |
+|---|---|
+| **Multiplayer** | Un solo @Claude per canale, interazioni visibili a tutto il team |
+| **Async** | Deleghi il task e torni quando e' pronto — non serve restare in sessione |
+| **Proattivo** | Puo' pianificare task futuri e notificare il canale al completamento |
+| **Memoria contestuale** | Ricorda informazioni rilevanti dai canali in cui opera |
+| **Modello** | Opus 4.8 (modello piu' capace disponibile pubblicamente) |
+
+### Prerequisiti e disponibilita'
+
+- **Beta**: Claude Enterprise e Team plan
+- **Piattaforma di lancio**: Slack
+- Espansione ad altre piattaforme prevista in futuro
+- Admins: finestra di configurazione prima della migrazione automatica
+
+### Configurazione
+
+Gli amministratori workspace Slack concedono a Claude Tag l'accesso ai canali selezionati e collegano gli strumenti (codebase via Routines/MCP, CI, issue tracker). Non serve un token API per singolo sviluppatore.
+
+### Contesto interno Anthropic
+
+La versione interna di Claude Tag genera il **65% del codice del product team Anthropic**, inclusa gran parte del codice di Claude Tag stesso — uso intenso in produzione prima del rilascio beta.
+
+> "Claude Tag is an evolution of Claude Code, made more proactive and built to work with a full team. It's now one of the main ways we get things done at Anthropic." — [@claudeai](https://x.com/claudeai/status/2069468694552461375)
+
+> "Claude Code is still the fastest way to do solo, synchronous work. Claude Tag is Claude Code made multiplayer, async, and proactive across your whole team." — [@ClaudeDevs](https://x.com/ClaudeDevs/status/2069468913264644419)
+
+### Confronto con Agent Teams (12.1–12.14)
+
+| | Agent Teams | Claude Tag |
+|---|---|---|
+| **Surface** | Terminale / CLI | Slack |
+| **Coordinamento** | Lead Claude + teammates Claude | @Claude come membro Slack |
+| **Visibilita'** | Sessione privata del dev | Canale condiviso con tutto il team |
+| **Setup** | `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` | Admin workspace Slack |
+| **Use case** | Orchestrazione complessa in-session | Collaborazione team async su task ricorrenti |
+
+<sub>Aggiornato 2026-06-26 via daily what's new. Fonte: [@claudeai](https://x.com/claudeai/status/2069468694552461375) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2069468913264644419) · [Anthropic blog](https://www.anthropic.com/news/introducing-claude-tag).</sub>
