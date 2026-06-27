@@ -19,6 +19,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 ---
 
+> **2026-06-27 (auto-update)**: v2.1.195 risolve tre bug critici sui background agents — jobs non scompaiono piu' da `claude agents` dopo update a versione nuova, daemon irraggiungibili quando il control socket non partiva, e schermo bianco di 5 sec al riapertura di un task in crash. Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). Vedi anche README "What's new today" del giorno.
+
 ## 8.1 Dove vivono
 
 | Scope | Path | Applies to |

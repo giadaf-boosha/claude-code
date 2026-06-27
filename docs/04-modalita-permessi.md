@@ -17,6 +17,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 ---
 
+> **2026-06-27 (auto-update)**: fix critico v2.1.195 — hook matcher con identificatori con trattini (es. `code-reviewer`, `mcp__brave-search`) usano ora exact-match invece di substring-match. Prima qualsiasi nome contenente la stringa veniva matchato per errore. Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). Vedi anche README "What's new today" del giorno.
+
 ## 4.1 Permission modes
 
 Cycle: `Shift+Tab` → `default` → `acceptEdits` → `plan`.

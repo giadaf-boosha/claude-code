@@ -17,6 +17,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 ---
 
+> **2026-06-27 (auto-update)**: v2.1.195 introduce `CLAUDE_CODE_DISABLE_MOUSE_CLICKS` — env var che disabilita click, drag e hover del mouse in modalita' fullscreen mantenendo lo scroll con wheel. Utile per chi usa tmux, screen o altri multiplexer terminale. Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). Vedi anche README "What's new today" del giorno.
+
 ## 18.1 Settings precedence (top to bottom)
 
 1. **Managed** (cannot override): server-distributed, plist/registry, system `managed-settings.json`

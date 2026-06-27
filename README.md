@@ -8,12 +8,17 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-26)
+## What's new today (2026-06-27)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude Tag** (beta, 25 giu): Claude Code diventa multiplayer — si integra in Slack come team member condiviso per Enterprise e Team plan. Chiunque nel canale puo' taggare @Claude, delegargli task e seguirne il lavoro in thread. Gira su Opus 4.8; la versione interna genera gia' il 65% del codice del product team Anthropic. Fonte: [@claudeai](https://x.com/claudeai/status/2069468694552461375) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2069468913264644419). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`autoMode.classifyAllShell`** (v2.1.193, 25 giu): nuova setting instrada TUTTI i comandi Bash/PowerShell attraverso il classificatore auto mode — non solo i pattern arbitrary-code-execution. Le denial reasons vengono ora scritte nel transcript, nel toast di blocco e nel tab "Recently denied" di `/permissions`. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.195** (26 giu): fix critico — hook matcher con identificatori con trattini (es. `code-reviewer`, `mcp__brave-search`) usano ora exact-match invece di substring-match; in precedenza triggeravano su qualsiasi nome che contenesse la stringa. Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). Vedi [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md) e [docs/19-changelog.md](./docs/19-changelog.md).
+- **`CLAUDE_CODE_DISABLE_MOUSE_CLICKS`** (v2.1.195, 26 giu): nuova env var disabilita click, drag e hover del mouse in modalita' fullscreen mantenendo lo scroll con wheel — utile per chi lavora in tmux/screen o multiplexer terminale. Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). Vedi [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Background agents: fix multipli** (v2.1.195, 26 giu): jobs non scompaiono piu' da `claude agents` dopo update a versione nuova, daemon background sempre raggiungibili, nessuno schermo bianco (5 sec) su task in crash. Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). Vedi [docs/08-subagents.md](./docs/08-subagents.md).
+- **Voice dictation auto-submit CJK/Thai** (v2.1.195, 26 giu): corretto auto-submit che non scattava mai per lingue senza spazi (giapponese, cinese, thai). Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). n/a.
+- **Voice mode Linux diagnostica** (v2.1.195, 26 giu): distingue ora "nessun microfono rilevato" da "SoX non installato" — messaggio piu' preciso per chi usa voice mode su Linux. Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). n/a.
+- **Remote session provisioning checklist** (v2.1.195, 26 giu): startup di sessioni remote mostra ora checklist di provisioning mentre il container si avvia — visibilita' immediata sul progresso del boot. Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). n/a.
+- **Plugin consent/Enable-Disable** (v2.1.195, 26 giu): plugin abilitati solo da `.claude/settings.json` non richiedono piu' consenso esplicito ad ogni caricamento; `/plugin` Enable/Disable funziona ora quando `name` in `plugin.json` differisce dal nome nel marketplace. Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). n/a.
 
 ---
 
