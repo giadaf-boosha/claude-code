@@ -12,7 +12,8 @@
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.195** (26 giu, release - recupero): aggiunge `CLAUDE_CODE_DISABLE_MOUSE_CLICKS` per disabilitare click/drag in fullscreen, fix hook matchers con trattino (ora exact-match; usa `mcp__brave-search__.*` per wildcard), fix voice dictation macOS su sessioni lunghe e lingue senza spazi (giapponese, cinese, thai). Fonte: [GitHub Releases v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **Mythos 5 accesso parzialmente ripristinato** (27 giu, annuncio): governo US revoca parzialmente l'export control su Claude Mythos 5 (blocco dal 12 giu) — accesso concesso a ~100 istituzioni US di infrastruttura critica. Fable 5 rimane bloccato. Nessun impatto su utenti standard e non-US. Fonte: [Fortune](https://fortune.com/2026/06/27/anthropic-mythos-5-ai-model-us-commerce-department-clearance-fable/) · [Semafor](https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
