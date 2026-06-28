@@ -11,6 +11,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-27
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-06-26
 
 - **Claude Tag** (beta, 25 giu): Claude Code diventa multiplayer — si integra in Slack come team member condiviso per Enterprise e Team plan. Chiunque nel canale puo' taggare @Claude, delegargli task e seguirne il lavoro in thread. Gira su Opus 4.8; la versione interna genera gia' il 65% del codice del product team Anthropic. Fonte: [@claudeai](https://x.com/claudeai/status/2069468694552461375) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2069468913264644419). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
@@ -197,12 +203,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 - **Opus 4.8** (v2.1.154, 28 mag): nuovo modello flagship disponibile in Claude Code come default per task `xhigh`; Fast Mode su Opus 4.8 gira a 2.5x la velocita' standard a 2x il costo base. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **`/workflows`** (v2.1.154, 28 mag): nuovo slash command per creare e orchestrare workflow dinamici con decine o centinaia di agenti background — descrivi il task, Claude genera il workflow ed esegue gli agenti in parallelo. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **`! <command>` in `claude agents`** (v2.1.154, 28 mag): digitare `! <comando>` in Agent View esegue il comando shell direttamente in una sessione background — equivalente a `claude --bg --exec '<comando>'` senza uscire dall'interfaccia di gestione sessioni. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
-
----
-
-## 2026-05-28
-
-> Nessuna novita' significativa nelle ultime 24 ore.
 
 ---
 
