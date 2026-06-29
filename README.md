@@ -1,18 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **28 giugno 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **29 giugno 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.195** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-28)
+## What's new today (2026-06-29)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **Post Boris Cherny — 5 archetipi di team nell'era AI** (29 giu): Boris Cherny (creator di Claude Code) descrive in un thread 5 archetipi emergenti nei team AI-native: Prototyper (genera idee, la maggior parte non shippano), Builder (porta in produzione), Sweeper (pulisce/ottimizza/unshipa), Grower (itera sul PMF), Maintainer (scala sistemi maturi). I ruoli non sono legati alla job function: designer e DS possono essere Builder quanto un engineer. Fonte: [@bcherny](https://x.com/bcherny/status/2071379474277613732). Dove in repo: n/a.
 
 ---
 
