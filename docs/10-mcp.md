@@ -77,6 +77,10 @@ claude mcp logout <name>         # rimuove credenziali salvate per il server
 | `allowedMcpServers` / `deniedMcpServers` | Allow/deny rules |
 | `allowManagedMcpServersOnly` | Enterprise: solo server policy |
 
+> **Sicurezza `.mcp.json` auto-approvati** (da v2.1.196): `claude mcp list`/`get` non avvia piu' server elencati in `.mcp.json` che un repository ha auto-approvato tramite un `.claude/settings.json` committato. I workspace non affidabili mostrano `⏠ Pending approval` invece di avviare i server direttamente. Per approvare esplicitamente un server da repo di terze parti, usare `enabledMcpjsonServers` in `.claude/settings.local.json` (gitignored) anziche' affidarsi all'auto-approvazione da settings committati.
+
+<sub>Aggiornato 2026-06-30 via daily what's new. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196).</sub>
+
 ---
 
 ## 10.5 MCP Registry ufficiale

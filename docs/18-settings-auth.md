@@ -73,6 +73,10 @@ La modifica e' persistente nella sessione (non viene scritta su disco a meno che
 > { "fallbackModel": ["claude-sonnet-4-6", "claude-haiku-4-5"] }
 > ```
 
+> **Modello default organizzativo** (da v2.1.196): gli amministratori impostano il modello Claude predefinito per tutta l'organizzazione dalla console di amministrazione. Quando nessun override personale e' selezionato, il selettore `/model` mostra "Org default" (o "Role default" se il ruolo ha un proprio default). I setting locali (`model` in `settings.json`) sovrascrivono sempre l'org default per la sessione del singolo utente.
+
+<sub>Aggiornato 2026-06-30 via daily what's new. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196).</sub>
+
 ### Permissions
 - `allow`, `ask`, `deny`, `additionalDirectories`, `defaultMode`
 - `disableBypassPermissionsMode`, `disableAutoMode`
