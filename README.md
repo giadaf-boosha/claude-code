@@ -1,18 +1,27 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **29 giugno 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.195** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **30 giugno 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.196** · Modello default **Sonnet 4.6** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-06-29)
+## What's new today (2026-06-30)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **[release] CLI v2.1.196** (29 giu): modelli di default per organizzazione configurabili dall'admin in org console, visualizzati come "Org default" o "Role default" in `/model`. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **[feature] Session names leggibili** (v2.1.196): le sessioni ottengono nomi cliccabili generati automaticamente all'avvio — semplifica la navigazione tra sessioni multiple in `claude agents`. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/08-subagents.md](./docs/08-subagents.md).
+- **[feature] Allegati cliccabili** (v2.1.196): Cmd/Ctrl-click su un file allegato in chat apre il file in Finder/Explorer senza uscire dalla sessione. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/20-tips-best-practices.md](./docs/20-tips-best-practices.md).
+- **[fix] Security MCP** (v2.1.196): `claude mcp list` e `claude mcp get` non avviano piu' server da file `.mcp.json` non fidati — riduce la superficie di attacco in repo condivisi e fork di terzi. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/10-mcp.md](./docs/10-mcp.md).
+- **[feature] /code-review -25% token** (v2.1.196): il workflow `/code-review` riduce il consumo di token del ~25% — piu' review nel budget mensile a parita' di qualita' analisi. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/09-skills.md](./docs/09-skills.md).
+- **[feature] Stream watchdog default** (v2.1.196): idle stream watchdog abilitato di default per tutti i provider (Bedrock, Vertex AI, Foundry) — riduce gli stalli in sessioni lunghe su cloud. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **[fix] Remote Control solo Anthropic** (v2.1.196): Remote Control disabilitato per host non-Anthropic — riduce il rischio di relay non autorizzato su deployment custom. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **[fix] PowerShell git** (v2.1.196): `git diff` e `git grep` in PowerShell non vengono piu' segnalati come errori quando escono con codice 1 — comportamento allineato a Bash. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **[fix] claude agents panel** (v2.1.196): multipli fix al pannello agenti — focus tastiera, tipi subagente, stato sessione; Agents view si apre ora con singolo tasto `←`. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/08-subagents.md](./docs/08-subagents.md).
+- **[fix] Session recovery** (v2.1.196): sessioni remote si riprendono automaticamente dopo restart mid-turn; sessioni spostate con `/cd` non riappaiono nella directory precedente in `/resume`. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

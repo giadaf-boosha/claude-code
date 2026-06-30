@@ -19,6 +19,10 @@ MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app).
 
 ---
 
+> **2026-06-30 (auto-update)**: v2.1.196 rafforza la sicurezza MCP — `claude mcp list` e `claude mcp get` non avviano piu' server da file `.mcp.json` non fidati (fork o repo condivisi), riducendo la superficie di attacco in ambienti multi-utente. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi anche README "What's new today" del giorno.
+
+---
+
 ## 10.1 Configurazione base
 
 ```json

@@ -17,6 +17,10 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 ---
 
+> **2026-06-30 (auto-update)**: v2.1.196 introduce Organization default models — gli admin fissano il modello di default per l'org dalla org console; gli utenti lo vedono come "Org default" o "Role default" in `/model`. Sempre in v2.1.196, Remote Control viene disabilitato per host non-Anthropic per ridurre la superficie di attacco su deployment custom. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Vedi anche README "What's new today" del giorno.
+
+---
+
 ## 18.1 Settings precedence (top to bottom)
 
 1. **Managed** (cannot override): server-distributed, plist/registry, system `managed-settings.json`
