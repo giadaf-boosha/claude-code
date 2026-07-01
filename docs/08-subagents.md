@@ -17,6 +17,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 > "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions." — [`/en/sub-agents`](https://code.claude.com/docs/en/sub-agents)
 
+> **2026-07-01 (auto-update)**: Boris Cherny annuncia che nella prossima versione i sub-agenti gireranno in background per default — si continua a conversare con Claude mentre lavorano; per il comportamento foreground e' sufficiente un'istruzione esplicita. Fonte: [@bcherny](https://x.com/bcherny/status/2071647677591466098). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.1 Dove vivono

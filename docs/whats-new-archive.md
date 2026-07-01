@@ -11,6 +11,13 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
+## 2026-06-30
+
+- **Modello default organizzativo** (v2.1.196, 29 giu): gli amministratori configurano il modello Claude di default per tutta l'organizzazione dalla console — in `/model` compare "Org default" o "Role default" quando nessun override personale e' attivo. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Sicurezza MCP: auto-approvazione `.mcp.json`** (v2.1.196, 29 giu): `claude mcp list`/`get` non avvia piu' server da `.mcp.json` che un repo ha auto-approvato via `.claude/settings.json` committato — workspace non affidabili mostrano `⏠ Pending approval`. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196). Doc: [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-06-29
 
 > Nessuna novita' significativa nelle ultime 24 ore.

@@ -15,6 +15,8 @@ VS Code, JetBrains, Desktop, Web, Slack, Channels, Remote Control. Tutti i modi 
 
 **Per il deep-dive**: [01 — Snapshot § 1.2 Surface](./01-snapshot.md#12-surface---dove-si-usa-claude-code).
 
+> **2026-07-01 (auto-update)**: Claude Desktop approda su Linux in beta (Ubuntu e Debian) — desktop nativo di prima classe con Claude Code, Cowork e chat su tutti i piani a pagamento, al pari di macOS e Windows. Fonte: [@bcherny](https://x.com/bcherny/status/2072000214634742243) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2071988881717871065). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 17.1 VS Code

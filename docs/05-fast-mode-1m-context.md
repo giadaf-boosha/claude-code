@@ -15,6 +15,8 @@ Cinque feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1
 
 **Per il deep-dive**: [00b — Context engineering](./00b-context-engineering.md) per come 1M context si combina con tecniche context.
 
+> **2026-07-01 (auto-update)**: con v2.1.197 Claude Sonnet 5 diventa il modello default in Claude Code — context window nativo 1M token e pricing promozionale $2/$10 per MTok fino al 31 agosto 2026. Aggiornare con `claude update`. Fonte: [GitHub Releases v2.1.197](https://github.com/anthropics/claude-code/releases/tag/v2.1.197). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 5.1 Fast mode (Opus 4.8 di default, da v2.1.154)
