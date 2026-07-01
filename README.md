@@ -299,3 +299,14 @@ E come reference:
 ## Licenza & contributi
 
 Questa repo e' una **guida didattica** mantenuta da [Boosha AI](https://boosha.it). I contenuti citano ogni fonte (docs ufficiali, post X) per consentire deep-dive autonomo.
+
+---
+
+## Risorse Claude (modelli, prompting, workflow)
+
+- 🖼️ [How to choose Claude model & effort](./how-to-choose-claude-model-and-effort.png) — guida visuale alla scelta di modello + effort
+- 📝 [claude-notes.md](./claude-notes.md) — TL;DR su Sonnet 5, Fable 5 e Dynamic Workflows
+
+**Link di riferimento:**
+- Redeploying Claude Fable 5 — <https://www.anthropic.com/news/redeploying-fable-5>
+- Prompting Claude Sonnet 5 — <https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5>
