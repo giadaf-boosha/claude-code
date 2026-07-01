@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (23 giugno 2026, v2.1.187). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (30 giugno 2026, v2.1.197). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -391,7 +391,7 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 
 ---
 
-## 19.9 Tabella versione per versione (v0.2.0 → v2.1.196)
+## 19.9 Tabella versione per versione (v0.2.0 → v2.1.197)
 
 | Data | Versione | Feature principali |
 |---|---|---|
@@ -528,8 +528,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 25 giu 2026 | **v2.1.193** | **`autoMode.classifyAllShell`**: nuova setting instrada tutti i comandi Bash/PowerShell attraverso il classificatore auto mode (non solo arbitrary-code-execution patterns). **Auto mode denial reasons** nel transcript, nel toast e nel tab "Recently denied" di `/permissions`. Live file path autocomplete in bash mode (`!`). Startup notice per MCP server che richiedono autenticazione. Memory-pressure reaping automatico per background shell idle (`CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1` per disabilitare). `claude_code.assistant_response` OTEL log event (redatto di default; `OTEL_LOG_ASSISTANT_RESPONSES=1` per abilitare). Plugin auto-rename da `renames` map marketplace. Fix: `/model` e UI client-data-gated mostravano stato stale dopo `/login`; backgrounding cancellava spuriamente; background agents re-prompting dopo auto-update; phantom subagent "general-purpose (resumed)". |
 | 26 giu 2026 | v2.1.195 | `CLAUDE_CODE_DISABLE_MOUSE_CLICKS`: disabilita click/drag/hover mouse in fullscreen mantenendo lo scroll. Hook matchers: identificatori con trattini (es. `code-reviewer`, `mcp__brave-search`) ora exact-match invece di substring-match. Plugin da `.claude/settings.json` non richiedono piu' consenso esplicito di installazione. Provisioning checklist per Remote session startup. Bug fix voice dictation macOS e lingue senza spazi (giapponese, cinese, thai); crash background tasks; background agents re-prompting post auto-update. |
 | 29 giu 2026 | **v2.1.196** | **Modello default organizzativo**: admin configurano il modello predefinito per tutta l'org dalla console (mostrato come "Org default" o "Role default" in `/model`). **Sicurezza MCP**: `claude mcp list`/`get` non avvia piu' server da `.mcp.json` auto-approvati via settings committati; workspace non affidabili mostrano `⏠ Pending approval`. **Background jobs sopravvivono a restart sessione** (incluso Windows: shell background trasferite anziche' terminate). `/code-review`: 5 finder consolidati in 1, -25% utilizzo token. Streaming idle watchdog abilitato di default per tutti i provider (ritenta dopo 5 min senza risposta; `CLAUDE_ENABLE_STREAM_WATCHDOG=0` per disabilitare). Nomi sessioni leggibili all'avvio. File allegati in chat cliccabili (Cmd/Ctrl-click rivela in Finder/Explorer). Auto-resume sessioni Remote interrotte da restart server. |
+| 30 giu 2026 | **v2.1.197** | **Claude Sonnet 5 — nuovo modello default**: `claude-sonnet-5` sostituisce Sonnet 4.6 come modello di default per Free e Pro. Context window 1M token nativa, 128k output max. Pricing promozionale $2/$10 per MTok fino al 31 ago 2026 (poi $3/$15). Performance: 43.7% Pass@1 su APEX-SWE (#3 dopo Fable 5 e Opus 4.8). |
 
-<sub>Aggiornato 2026-06-30 via daily what's new. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196).</sub>
+<sub>Aggiornato 2026-07-01 via daily what's new. Fonte: [GitHub Releases v2.1.197](https://github.com/anthropics/claude-code/releases/tag/v2.1.197).</sub>
 
 ---
 

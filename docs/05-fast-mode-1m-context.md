@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
 > 🔧 Operational · 🟡 Intermediate
 
-Cinque feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Opus 4.8** come modello premium corrente (v2.1.154), e **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170).
+Feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Opus 4.8** come modello premium corrente (v2.1.154), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), e **Claude Sonnet 5** come nuovo modello di default (v2.1.197, 30 giu 2026).
 
 ## Cosa e' concettualmente
 
@@ -78,15 +78,16 @@ Anthropic ha distribuito $50 di extra usage a tutti i Pro/Max. [@_catwu](https:/
 ## 5.2 1M context window (GA)
 
 ### Cosa cambia
-Contesto da 1M token GA per **Opus 4.6** e **Sonnet 4.6** a pricing standard (no multiplier). Sonnet 4.6: $3/$15 per MTok anche su 900K-token request.
+Contesto da 1M token GA per **Opus 4.6**, **Sonnet 4.6** e (nativo) **Sonnet 5** a pricing standard (no multiplier). Sonnet 4.6: $3/$15 per MTok anche su 900K-token request. **Sonnet 5** espone 1M token come context window nativa (non richiede flag aggiuntivi).
 
 ### Annunciato
 - 13 marzo 2026: [blog Anthropic](https://claude.com/blog/1m-context-ga)
+- 30 giugno 2026: Sonnet 5 con 1M context nativo di default
 
 ### Disponibilita'
 | Plan | Comportamento |
 |---|---|
-| Pro | Va abilitato esplicitamente |
+| Pro | Va abilitato esplicitamente (Sonnet 4.6); nativo con Sonnet 5 |
 | Max | Upgrade automatico, no flag |
 | Team / Enterprise | Upgrade automatico |
 
@@ -156,11 +157,12 @@ Opus 4.7 rimane disponibile via `/model claude-opus-4-7` o `/effort` manuale. Pe
 | Task complesso massima qualita' | Opus 4.8 + `xhigh` o `max` |
 | Task duro con workflow automatico | Opus 4.8 + `ultracode` (vedi [./24-workflows.md](./24-workflows.md)) |
 | Default ragionamento | Opus 4.8 + `high` (effort di default) |
-| Task tecnico, vuoi velocita' | Sonnet 4.6 (default) |
+| Task tecnico, velocita', codebase grande | Sonnet 5 (default da v2.1.197, 1M context nativo) |
+| Task tecnico, pinned su modello precedente | Sonnet 4.6 (`/model claude-sonnet-4-6`) |
 | Iterazione fitta veloce | `/fast` (Opus 4.8, ~2.5x velocita', 2x costo: $10/$50 per MTok) |
-| Codebase enorme | 1M context (Sonnet 4.6 o Opus 4.6) |
-| Plan mode | Opus 4.8 per plan + Sonnet per execution (`/model` Opus per plan mode) |
-| CI/headless | Sonnet 4.6 + `--bare` |
+| Codebase enorme | 1M context (Sonnet 5 nativo, o Sonnet 4.6 / Opus 4.6) |
+| Plan mode | Opus 4.8 per plan + Sonnet 5 per execution (`/model` Opus per plan mode) |
+| CI/headless | Sonnet 5 + `--bare` |
 
 ---
 
@@ -195,6 +197,39 @@ Fable 5 supera Opus 4.8 in capacita'. Se una richiesta viene rifiutata dai class
 Con `/model claude-fable-5` il reasoning e' sempre on — `MAX_THINKING_TOKENS=0` non ha effetto su Fable 5 (vedi sezione 5.6). Per Fable 5 usa il parametro `effort` per controllare la profondita' del thinking.
 
 <sub>Aggiornato 2026-06-10 via daily what's new. Fonte: [GitHub Releases v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170) · [Anthropic docs](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5).</sub>
+
+---
+
+## 5.8 Claude Sonnet 5 — nuovo modello default (da v2.1.197)
+
+### Annunciato
+v2.1.197 (30 giugno 2026). `claude-sonnet-5` diventa il **modello di default** in Claude Code per Free e Pro, sostituendo Sonnet 4.6. Disponibile anche su Max, Team e Enterprise.
+
+### Come si usa in Claude Code
+```bash
+# default automatico da v2.1.197 — nessuna configurazione necessaria
+/model claude-sonnet-5    # se si vuole esplicitare
+/model claude-sonnet-4-6  # per tornare al predecessore
+```
+
+### Caratteristiche principali
+| Caratteristica | Valore |
+|---|---|
+| Model ID | `claude-sonnet-5` |
+| Context window | 1M token (nativo, senza flag aggiuntivi) |
+| Output max per request | 128k token |
+| Pricing promozionale | $2/MTok input, $10/MTok output (fino al 31 ago 2026) |
+| Pricing standard | $3/MTok input, $15/MTok output (dal 1 set 2026) |
+| Thinking | Adaptive thinking (stessa configurazione di Sonnet 4.6) |
+| APEX-SWE | 43.7% Pass@1 (#3 dopo Opus 4.8 e Fable 5) |
+
+### Disponibilita'
+Generale su Claude API, Claude Platform, Amazon Bedrock, Vertex AI e Microsoft Foundry (dal 30 giugno 2026).
+
+### Aggiornamento da Sonnet 4.6
+`claude update` porta alla v2.1.197. Sonnet 4.6 rimane selezionabile via `/model claude-sonnet-4-6` o `ANTHROPIC_MODEL=claude-sonnet-4-6`.
+
+<sub>Aggiornato 2026-07-01 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072018504392601762) · [GitHub Releases v2.1.197](https://github.com/anthropics/claude-code/releases/tag/v2.1.197).</sub>
 
 ---
 
