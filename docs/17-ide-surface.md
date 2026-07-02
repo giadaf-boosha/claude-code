@@ -228,6 +228,37 @@ Vedi [10 MCP § 10.8 Channels](./10-mcp.md#10.8-channels-research-preview).
 
 ---
 
+## 17.11 Claude in Chrome (GA, da v2.1.198)
+
+**Claude in Chrome** diventa generally available con v2.1.198: accesso browser-native alle sessioni e agli agenti Claude Code, senza installazione di estensioni aggiuntive o configurazione MCP manuale.
+
+### Cosa offre
+
+- Apri qualsiasi sessione Claude Code attiva direttamente dal browser
+- Interagisci con gli agenti in Agent View senza aprire il terminale
+- Usa `@browser` in VS Code per far leggere a Claude la pagina web corrente (da v1.0.36+, ora GA)
+- Accesso a Remote Control cross-device via browser su dispositivi senza app iOS/Android
+
+### Come si attiva
+
+```bash
+# In una sessione Claude Code attiva
+/remote-control          # attiva il canale Remote Control
+# poi apri claude.ai/code dal browser — la sessione appare automaticamente
+```
+
+La Chrome extension ([chromewebstore.google.com](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn)) era gia' disponibile come `@browser` mention in VS Code; con il GA diventa surface ufficiale di prima classe con Agent View completa.
+
+### Differenza rispetto a Remote Control
+
+Remote Control (17.6) sincronizza la sessione CLI verso dispositivi mobili. Claude in Chrome e' la versione browser-first: nessun terminale aperto necessario, nessuna app da installare.
+
+> Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198) · [@ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2072425697629343845).
+
+<sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
+
+---
+
 ## 17.12 Ecosystem: tool esterni e GUI di terze parti
 
 Oltre alle surface ufficiali Anthropic (CLI, Desktop, VS Code, JetBrains, Web, Slack, Mobile), esistono **tool esterni** che integrano Claude Code in modi specifici. Non sono parte del core ma vale la pena conoscerli.

@@ -164,6 +164,24 @@ Utile per identificare quali agenti o skill costano di piu' in un workflow agent
 
 ---
 
+## 8.6c Background agents — auto-delivery (da v2.1.198)
+
+Gli agenti background che lavorano in un git worktree possono ora chiudere il loop di delivery in modo completamente automatico: al termine dell'elaborazione, l'agente esegue commit, push e apre una draft PR senza intervento manuale.
+
+**Come funziona**:
+1. L'agente background riceve il task e opera in un worktree isolato
+2. Al completamento, verifica se ci sono modifiche staged/committabili
+3. Esegue commit con messaggio generato automaticamente
+4. Push sul remote e apre una draft PR
+
+**Configurazione**: abilitato di default per agenti background con `isolation: "worktree"` quando il progetto ha un remote git configurato. Per disabilitare: `"bgAutoDeliver": false` in `settings.json`.
+
+**Quando usarlo**: task delegati (code review fix, refactor specifici, generazione test) dove vuoi trovare una PR pronta senza dover poi fare commit manualmente.
+
+<sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
+
+---
+
 ## 8.7 Subagent vs Agent Teams
 
 |  | Subagents | Agent Teams |

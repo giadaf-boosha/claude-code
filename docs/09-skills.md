@@ -29,6 +29,9 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 | `/loop` | Re-run prompt (vedi [14](./14-loop-monitor.md)) |
 | `/claude-api` | Reference API + tool migration |
 | `/fewer-permission-prompts` | Scansiona transcript e crea allowlist read-only |
+| `/dataviz` | Progettazione grafici, chart e dashboard — validatore tavolozza colori integrato e linee guida accessibilita' per output coerenti in light/dark mode (da v2.1.198) |
+
+<sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
 
 ---
 
