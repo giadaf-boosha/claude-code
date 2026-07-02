@@ -37,6 +37,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 | `StopFailure` | Turn ends per API error | No |
 | `Notification` | Notifica Claude Code | No |
 | `SubagentStart` / `SubagentStop` | Subagent spawn / finish | Stop=Si' |
+
+> **2026-07-02 (auto-update)**: v2.1.198 aggiunge due nuovi payload all'evento `Notification` per le sessioni `claude agents` in background: `agent_needs_input` (l'agente attende input utente) e `agent_completed` (l'agente ha terminato il lavoro). Permette di reagire da hook senza polling. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Vedi anche README "What's new today" del giorno.
 | `TaskCreated` / `TaskCompleted` | Task list events | Si' |
 | `TeammateIdle` | Teammate sta per idle (Agent Teams) | Si' |
 | `InstructionsLoaded` | CLAUDE.md / rules caricati | No |

@@ -24,7 +24,10 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 | Skill | Funzione |
 |---|---|
 | `/simplify [focus]` | Alias di `/code-review --fix` (da v2.1.152; era rimosso in v2.1.146, reintrodotto come alias) |
+| `/dataviz` | Design grafici, chart e dashboard con validatore palette colori eseguibile (da v2.1.198) |
 | `/batch <instruction>` | Refactor large-scale: 5-30 unit, 1 worktree+PR per agente |
+
+> **2026-07-02 (auto-update)**: v2.1.198 aggiunge `/dataviz` come skill bundled — guida alla progettazione di grafici e dashboard con un validatore di palette colori eseguibile. La skill e' disponibile senza installazione dal marketplace. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Vedi anche README "What's new today" del giorno.
 | `/debug [description]` | Debug logging mid-session |
 | `/loop` | Re-run prompt (vedi [14](./14-loop-monitor.md)) |
 | `/claude-api` | Reference API + tool migration |

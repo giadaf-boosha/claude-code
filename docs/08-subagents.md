@@ -17,6 +17,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 > "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions." — [`/en/sub-agents`](https://code.claude.com/docs/en/sub-agents)
 
+> **2026-07-02 (auto-update)**: v2.1.198 introduce due miglioramenti al modello di ereditarieta' dei subagenti: (1) l'agente Explore built-in eredita ora il modello della sessione principale (capped a opus) invece di girare sempre su haiku; (2) subagenti e compattazione del context ereditano la configurazione extended thinking della sessione padre, migliorando la qualita' dei task delegati su reasoning complesso. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.1 Dove vivono

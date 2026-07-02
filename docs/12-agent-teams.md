@@ -17,6 +17,8 @@ Coordina piu' istanze di Claude Code che lavorano insieme con shared task list e
 
 > "Coordinate multiple Claude Code instances working together as a team" — [`/en/agent-teams`](https://code.claude.com/docs/en/agent-teams)
 
+> **2026-07-02 (auto-update)**: v2.1.198 introduce due miglioramenti per `claude agents`: (1) gli agenti in background lanciati da `claude agents` ora auto-committano, pushano e aprono una draft PR al completamento del lavoro in un worktree senza chiedere conferma; (2) un teammate che fallisce per errore API ora segnala "failed" al lead e si riattiva automaticamente quando il lead gli invia un messaggio. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 12.1 Enable

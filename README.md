@@ -1,18 +1,27 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **1 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.197** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **2 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.198** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-01)
+## What's new today (2026-07-02)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude Sonnet 5 — nuovo modello default** (v2.1.197, 30 giu): `claude-sonnet-5` sostituisce Sonnet 4.6 come modello di default in Claude Code per Free e Pro. Finestra di contesto nativa da 1M token, 128k output max. Pricing promozionale $2/$10 per MTok fino al 31 agosto (poi $3/$15). Performance: #3 su APEX-SWE (43.7% Pass@1). Aggiornare con `claude update`. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072018504392601762). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.198** (1 lug): release con 25+ fix e feature — la piu' ricca degli ultimi 7 giorni. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/19-changelog.md](./docs/19-changelog.md).
+- **Claude in Chrome GA** (1 lug): Claude in Chrome esce dalla beta e diventa generalmente disponibile su tutti i piani. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).
+- **Hook `Notification` per agenti in background** (1 lug): nuovi eventi `agent_needs_input` e `agent_completed` permettono di intercettare via hook quando un agente `claude agents` attende input o termina. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/07-hooks.md](./docs/07-hooks.md).
+- **Skill `/dataviz` bundled** (1 lug): nuova skill integrata per design grafici e dashboard con validatore palette colori eseguibile incluso. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/09-skills.md](./docs/09-skills.md).
+- **Claude Platform on AWS (`anthropicAws`)** (1 lug): aggiunto come provider upstream nel gateway; risposte model-not-found avanzano nella catena di failover invece di bloccarsi. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Background agents auto-commit e draft PR** (1 lug): agenti lanciati da `claude agents` ora committano, pushano e aprono draft PR al completamento del lavoro in un worktree — senza fermarsi per chiedere conferma. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md).
+- **Explore agent eredita modello sessione** (1 lug): l'agente Explore built-in eredita il modello della sessione principale (capped a opus), non piu' bloccato su haiku di default. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
+- **Subagenti ereditano extended thinking** (1 lug): subagenti e compattazione del context ereditano la configurazione extended thinking della sessione padre — migliora la qualita' dei task delegati. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
+- **Retry automatico su ECONNRESET** (1 lug): interruzioni transienti di rete a meta' risposta (ECONNRESET e simili) ora ritentano con backoff invece di abortire il turno. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).
+- **Fix agent teams + `/diff` panel** (1 lug): teammate che fallisce per errore API ora segnala "failed" al lead e si riattiva su messaggio; `/diff` panel ora si aggiorna su cambio branch o commit esterno. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md).
 
 ---
 
