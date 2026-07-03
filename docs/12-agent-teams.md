@@ -220,13 +220,13 @@ Create a PR walkthrough artifact for this session.
 Claude genera il link privato. La pagina rimane sincronizzata con l'avanzamento della sessione finche' la sessione e' attiva.
 
 ### Disponibilita'
-- **Beta**: Team ed Enterprise plan
-- Non disponibile su Pro/Max/Free al lancio (19 giu 2026)
+- **Beta**: Pro, Max, Team, Enterprise — dal 2 lug 2026 esteso a Pro e Max (al lancio solo Team/Enterprise)
+- Non disponibile su Free
 
 > Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067672094209675373) · [@claudeai](https://x.com/claudeai/status/2067671912038240487).
 > Boris Cherny: "They are a game changer for how I work with Claude." — [@bcherny](https://x.com/bcherny/status/2067700226669060207)
 
-<sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067672094209675373).</sub>
+<sub>Aggiornato 2026-07-03 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072770790114914317).</sub>
 
 ---
 

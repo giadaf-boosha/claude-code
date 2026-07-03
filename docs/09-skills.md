@@ -164,6 +164,21 @@ Da v2.1.152, il comando `/reload-skills` riscansiona esplicitamente tutte le dir
 
 <sub>Aggiornato 2026-06-16 via daily what's new. Fonte: [GitHub Releases v2.1.178](https://github.com/anthropics/claude-code/releases/tag/v2.1.178).</sub>
 
+### Invocazione in cascata (stacked, da v2.1.199)
+
+Da v2.1.199, e' possibile invocare piu' skill contemporaneamente in una singola riga inserendo piu' slash-command come prefissi:
+
+    /skill-a /skill-b /skill-c do XYZ
+
+Il runtime carica tutte le skill che compaiono come prefissi (fino a 5 in sequenza); il testo dopo l'ultima skill diventa il prompt. Claude riceve tutti i contesti caricati. Casi d'uso tipici:
+
+    /deep-research /dataviz analizza le metriche di performance del Q2 e genera un grafico
+    /code-review /claude-api controlla la compatibilita' dell'implementazione con l'API corrente
+
+Non richiede modifiche al frontmatter ne' configurazione aggiuntiva.
+
+<sub>Aggiornato 2026-07-03 via daily what's new. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199).</sub>
+
 ---
 
 ## 9.7 Subagent + skills

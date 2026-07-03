@@ -142,6 +142,16 @@ Stesso per `.claude/commands/<name>.md` (legacy, ancora supportato).
 
 I plugin namespace i loro comandi: `/<plugin>:<name>`.
 
+### Invocazione multipla (stacked, da v2.1.199)
+
+Piu' skill possono essere impilate sulla stessa riga come prefissi (fino a 5); il runtime le carica tutte prima di passare il prompt rimanente a Claude:
+
+    /skill-a /skill-b testo del prompt
+
+Utile per combinare skill senza modificare il frontmatter. Vedi [09 Skills § Invocazione in cascata](./09-skills.md).
+
+<sub>Aggiornato 2026-07-03 via daily what's new. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199).</sub>
+
 ---
 
 ## 3.5 Fonti / annunci
