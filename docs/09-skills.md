@@ -113,6 +113,8 @@ npm --version
 - Auto-compaction: re-attaches most recent invocation di ogni skill (5K token cap each, 25K total budget)
 - Per skill di grandi dimensioni dopo molte invocations, considera re-invoke dopo `/compact`
 
+> **2026-07-03 (auto-update)**: stacked slash-skill invocations (da v2.1.199) — e' ora possibile invocare fino a 5 skill in sequenza con `/skill-a /skill-b do XYZ`: tutte le skill elencate prima degli argomenti vengono caricate nell'ordine specificato, non solo la prima. Utile per pipeline di skill componibili (es. `/code-review /strict-mode review this PR`). Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 9.5 Allowed-tools e Disallowed-tools

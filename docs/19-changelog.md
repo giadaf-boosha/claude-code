@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (30 giugno 2026, v2.1.197). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (2 luglio 2026, v2.1.199). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -530,8 +530,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 29 giu 2026 | **v2.1.196** | **Modello default organizzativo**: admin configurano il modello predefinito per tutta l'org dalla console (mostrato come "Org default" o "Role default" in `/model`). **Sicurezza MCP**: `claude mcp list`/`get` non avvia piu' server da `.mcp.json` auto-approvati via settings committati; workspace non affidabili mostrano `⏠ Pending approval`. **Background jobs sopravvivono a restart sessione** (incluso Windows: shell background trasferite anziche' terminate). `/code-review`: 5 finder consolidati in 1, -25% utilizzo token. Streaming idle watchdog abilitato di default per tutti i provider (ritenta dopo 5 min senza risposta; `CLAUDE_ENABLE_STREAM_WATCHDOG=0` per disabilitare). Nomi sessioni leggibili all'avvio. File allegati in chat cliccabili (Cmd/Ctrl-click rivela in Finder/Explorer). Auto-resume sessioni Remote interrotte da restart server. |
 | 30 giu 2026 | **v2.1.197** | **Claude Sonnet 5 — nuovo modello default**: `claude-sonnet-5` sostituisce Sonnet 4.6 come modello di default per Free e Pro. Context window 1M token nativa, 128k output max. Pricing promozionale $2/$10 per MTok fino al 31 ago 2026 (poi $3/$15). Performance: 43.7% Pass@1 su APEX-SWE (#3 dopo Fable 5 e Opus 4.8). |
 | 1 lug 2026 | **v2.1.198** | **Claude in Chrome GA**: accesso browser-native alle sessioni e agli agenti senza installazione aggiuntiva. **Background agents auto-delivery**: al termine del lavoro in worktree, commit + push + apertura draft PR automatici. **`/dataviz` skill built-in**: progettazione grafici e dashboard con validatore tavolozza colori e linee guida accessibilita'. Hook `Notification`: sottotipi `agent_needs_input` e `agent_completed`. Explore agent eredita il modello della sessione principale. Extended thinking ereditato da subagent e compaction. |
+| 2 lug 2026 | **v2.1.199** | **Stacked slash skills**: `/skill-a /skill-b do XYZ` carica fino a 5 skill in sequenza (non solo la prima). **SSL/TLS fail-fast**: errori certificato (proxy TLS, cert scaduti, `NODE_EXTRA_CA_CERTS`) falliscono immediatamente con guida actionable. **Streaming mid-error**: risposte parziali conservate con notice di incompletezza. **Subagent reliability**: subagenti interrotti da rate limit/errori server restituiscono lavoro parziale al parent. **Fix daemon Linux**: no piu' auto-kill processi figli dopo shutdown non pulito. **Fix macOS background**: risolto "Could not switch to audit session"; fix race `claude stop` da respawn. **Progress indicators**: non si bloccano piu' su comandi lunghi; diagnostica su macchine memory-starved. **`CLAUDE_CODE_RETRY_WATCHDOG` → 300**: retry default per errori transienti non-capacity. **UI Agent View**: idle subagent collapse in righe espandibili; PR link formato `#N`. |
 
-<sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
+<sub>Aggiornato 2026-07-03 via daily what's new. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199).</sub>
 
 ---
 

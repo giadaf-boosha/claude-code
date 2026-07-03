@@ -1,20 +1,27 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **2 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.197** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **3 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.199** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-02)
+## What's new today (2026-07-03)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude in Chrome GA** (v2.1.198, 1 lug): accesso browser-native alle sessioni e agli agenti Claude Code senza installazione aggiuntiva — la Chrome extension diventa surface di prima classe con Agent View completa. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198) · [@ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2072425697629343845). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Background agents auto-delivery** (v2.1.198, 1 lug): gli agenti background al termine del lavoro in worktree eseguono automaticamente commit, push e aprono una draft PR — chiude il loop delivery senza intervento manuale. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/dataviz` skill built-in** (v2.1.198, 1 lug): nuovo skill bundled per progettazione grafici, chart e dashboard — include validatore tavolozza colori e linee guida accessibilita' per output coerenti in light e dark mode. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.199 — Stacked slash skills**: `/skill-a /skill-b do XYZ` carica fino a 5 skill in sequenza invece della sola prima — abilita pipeline di skill componibili. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.199 — SSL/TLS fail-fast**: errori certificato (proxy TLS, cert scaduti, `NODE_EXTRA_CA_CERTS`) falliscono immediatamente con guida actionable invece di consumare i tentativi di retry. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199).
+- **CLI v2.1.199 — Streaming mid-error**: risposte parziali da API conservate in caso di errore mid-stream, con notice di incompletezza al posto del silenzio. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199).
+- **CLI v2.1.199 — Subagent reliability**: subagenti interrotti da rate limit o errori server restituiscono il lavoro parziale al parent agent anziche' perdere il risultato. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.199 — Fix daemon Linux**: il daemon Linux non termina piu' i propri processi figli dopo uno shutdown non pulito. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
+- **CLI v2.1.199 — Fix macOS background**: risolto errore "Could not switch to audit session" per gli agenti background; fix race condition `claude stop` annullato da respawn automatico. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
+- **CLI v2.1.199 — Progress indicators**: indicatori di avanzamento non si bloccano piu' durante comandi lunghi; diagnostica helper su macchine con poca memoria disponibile. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199).
+- **CLI v2.1.199 — Retry watchdog 300x**: `CLAUDE_CODE_RETRY_WATCHDOG` alza il contatore retry default a 300 per errori transienti non-capacity (es. 429 rate limit). Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199).
+- **CLI v2.1.199 — UI Agent View**: subagenti idle si comprimono in righe espandibili; PR link in `claude agents` in formato `#N` bare; fix comportamento `/model` e `/fast` a agent view aperta. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199).
+- **@ClaudeCodeLog** — preview v2.1.199 su X con tag `#cccnext` prima del rilascio: canale da seguire per annunci anticipati sulle prossime release. Fonte: [@ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2072737175402102981).
 
 ---
 

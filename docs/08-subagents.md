@@ -178,6 +178,8 @@ Gli agenti background che lavorano in un git worktree possono ora chiudere il lo
 
 **Quando usarlo**: task delegati (code review fix, refactor specifici, generazione test) dove vuoi trovare una PR pronta senza dover poi fare commit manualmente.
 
+> **2026-07-03 (auto-update)**: reliability fix background agents (v2.1.199) — risolti tre problemi critici: (1) daemon Linux non termina piu' i processi figli dopo shutdown non pulito; (2) fix macOS "Could not switch to audit session" che impediva l'avvio degli agenti background; (3) fix race condition per cui `claude stop` veniva annullato dal respawn automatico. Subagenti interrotti da rate limit o errori server ora restituiscono il lavoro parziale al parent agent. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Vedi anche README "What's new today" del giorno.
+
 <sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
 
 ---
