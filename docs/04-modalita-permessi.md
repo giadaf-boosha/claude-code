@@ -19,18 +19,24 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 ## 4.1 Permission modes
 
-Cycle: `Shift+Tab` → `default` → `acceptEdits` → `plan`.
+Cycle: `Shift+Tab` → `manual` → `acceptEdits` → `plan`.
+
+> **v2.1.200 (3 lug 2026)**: il mode precedentemente chiamato `default` e' stato rinominato `manual` in tutta la UI (CLI, VS Code, JetBrains). Comportamento invariato — solo letture auto-approvate. Aggiornare eventuali script che passavano `--permission-mode default` in `--permission-mode manual`.
 
 | Mode | Run senza prompt | Use case |
 |---|---|---|
-| `default` | Solo reads | Sensitive work |
+| `manual` | Solo reads | Sensitive work (ex `default`, rinominato v2.1.200) |
 | `acceptEdits` | Reads + file edits + filesystem cmd (mkdir, touch, mv, cp, rm, rmdir, sed) entro working dir | Iterazione |
 | `plan` | Solo reads | Esplora prima di modificare |
 | `auto` | Tutto + classifier | Long task (richiede Max/Team/Enterprise/API + Anthropic provider + Sonnet 4.6 / Opus 4.6 / 4.7) |
 | `dontAsk` | Solo pre-approved tools + read-only Bash | CI |
 | `bypassPermissions` | Tutto eccetto protected paths | Container/VM isolated |
 
-CLI: `--permission-mode default|acceptEdits|plan|auto|dontAsk|bypassPermissions`.
+CLI: `--permission-mode manual|acceptEdits|plan|auto|dontAsk|bypassPermissions`.
+
+> **`AskUserQuestion` (v2.1.200)**: i dialog non auto-continuano piu' dopo timeout idle — richiedono risposta esplicita. Per le sessioni background che si affidavano all'auto-continue: `/config` per riattivarla o strutturare il task per evitare pause.
+
+<sub>Aggiornato 2026-07-04 via daily what's new. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200).</sub>
 
 ### Protected paths (mai auto-approved)
 - Directories: `.git`, `.vscode`, `.idea`, `.husky`, `.claude` (eccetto `.claude/commands`, `.claude/agents`, `.claude/skills`, `.claude/worktrees`)

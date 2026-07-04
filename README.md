@@ -1,19 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **3 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.199** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **4 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.201** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-03)
+## What's new today (2026-07-04)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Stacked slash-skill invocations** (v2.1.199, 2 lug): `/skill-a /skill-b do XYZ` carica fino a 5 skill in cascata da un unico prompt — composizione skill senza configurazione aggiuntiva o modifica del frontmatter. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Artifacts su Pro e Max** (2 lug): Artifacts in Claude Code estesi a Pro e Max — le pagine web condivisibili da sessione ora disponibili per tutti i piani paid, non solo Team/Enterprise. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072770790114914317). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Permission mode default → `manual`** (v2.1.200, 3 lug): il permission mode attivo all'avvio e' rinominato da `default` a `manual` in CLI, VS Code e JetBrains — comportamento invariato (solo letture auto-approvate), label piu' descrittiva. Contestualmente `AskUserQuestion` non auto-continua piu' dopo timeout idle; per riattivarla: `/config`. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200) · [@ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2073091434123591872). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

@@ -9,6 +9,11 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-07-03
+
+- **Stacked slash-skill invocations** (v2.1.199, 2 lug): `/skill-a /skill-b do XYZ` carica fino a 5 skill in cascata da un unico prompt — composizione skill senza configurazione aggiuntiva o modifica del frontmatter. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Artifacts su Pro e Max** (2 lug): Artifacts in Claude Code estesi a Pro e Max — le pagine web condivisibili da sessione ora disponibili per tutti i piani paid, non solo Team/Enterprise. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072770790114914317). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
 ---
 
 ## 2026-07-02

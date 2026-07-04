@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (30 giugno 2026, v2.1.197). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (3 luglio 2026, v2.1.201). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -532,8 +532,10 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 1 lug 2026 | **v2.1.198** | **Claude in Chrome GA**: accesso browser-native alle sessioni e agli agenti senza installazione aggiuntiva. **Background agents auto-delivery**: al termine del lavoro in worktree, commit + push + apertura draft PR automatici. **`/dataviz` skill built-in**: progettazione grafici e dashboard con validatore tavolozza colori e linee guida accessibilita'. Hook `Notification`: sottotipi `agent_needs_input` e `agent_completed`. Explore agent eredita il modello della sessione principale. Extended thinking ereditato da subagent e compaction. |
 | 2 lug 2026 | **v2.1.199** | **Stacked slash-skill invocations**: `/skill-a /skill-b do XYZ` carica fino a 5 skill in cascata da un unico prompt — composizione senza modifiche al frontmatter. SSL: fallimento immediato con hint correttivo (no retry burn). Streaming: risposte parziali conservate su errori mid-stream. Subagent: lavoro parziale restituito al parent su rate limit; daemon Linux fix self-termination ~50s. Auto-retry 429 transient. `CLAUDE_CODE_RETRY_WATCHDOG` rimuove cap 15 retry per sessioni unattended. |
 | 2 lug 2026 | — | **Artifacts esteso a Pro e Max**: Artifacts in Claude Code (pagine web condivisibili da sessione) ora disponibili su Pro e Max — prima solo Team/Enterprise. [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072770790114914317). |
+| 3 lug 2026 | **v2.1.200** | **Permission mode rinominato `manual`**: il mode `default` diventa `manual` in CLI, VS Code e JetBrains (comportamento invariato — solo reads auto). `AskUserQuestion` no auto-continue by default; opt-in via `/config`. Accessibilita': screen reader migliorato, nested tables come "Header: value". Fix: sessioni background interrotte da sleep/wake, subagent tagliati da rate limit, flicker tmux 3.4+. |
+| 3 lug 2026 | v2.1.201 | Fix: sessioni Sonnet 5 non usano piu' mid-conversation system role per harness reminders. |
 
-<sub>Aggiornato 2026-07-03 via daily what's new. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199).</sub>
+<sub>Aggiornato 2026-07-04 via daily what's new. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200).</sub>
 
 ---
 
