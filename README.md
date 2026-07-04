@@ -1,19 +1,23 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **3 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.199** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **4 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.201** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-03)
+## What's new today (2026-07-04)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Stacked slash-skill invocations** (v2.1.199, 2 lug): `/skill-a /skill-b do XYZ` carica fino a 5 skill in cascata da un unico prompt — composizione skill senza configurazione aggiuntiva o modifica del frontmatter. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Artifacts su Pro e Max** (2 lug): Artifacts in Claude Code estesi a Pro e Max — le pagine web condivisibili da sessione ora disponibili per tutti i piani paid, non solo Team/Enterprise. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072770790114914317). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Permission mode default → "Manual"** (v2.1.200, 3 lug): breaking change — in CLI, VS Code e JetBrains il mode di default cambia da `default` a `manual`; chi dipendeva dal vecchio comportamento aggiorna `settings.json` con `"defaultMode": "default"`. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **AskUserQuestion senza auto-continue** (v2.1.200, 3 lug): i dialog `AskUserQuestion` non si chiudono piu' automaticamente a idle — comportamento opt-in configurabile via `/config`. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Fix sessioni background e daemon** (v2.1.200, 3 lug): risolti stop silenzioso dopo sleep/wake, mancato riavvio agente con `daemon.lock` stale, subagenti rate-limited che restituivano risultato vuoto, roster corruption degli agent background. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
+- **Fix crash MCP config e plugin worktree** (v2.1.200, 3 lug): crash startup con `disabledMcpServers`/`enabledMcpServers` non-array in `.claude.json`; plugin scoped-project ora funzionano correttamente da git worktree. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200). Doc: [docs/10-mcp.md](./docs/10-mcp.md).
+- **Accessibilita' screen reader migliorata** (v2.1.200, 3 lug): glyph decorativi nascosti, simboli transcript come label brevi, tabelle annidate come `Header: value`, fix tracking focus `/mcp` e fix voice dictation. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200).
+- **Sonnet 5: rimosso system role mid-conversazione** (v2.1.201, 3 lug): le sessioni Sonnet 5 non iniettano piu' il system role a meta' conversazione per i reminder harness — riduce interferenze nei prompt lunghi. Fonte: [GitHub Releases v2.1.201](https://github.com/anthropics/claude-code/releases/tag/v2.1.201). Doc: [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

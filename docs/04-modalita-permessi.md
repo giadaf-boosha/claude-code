@@ -19,6 +19,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 ## 4.1 Permission modes
 
+> **2026-07-04 (auto-update)**: v2.1.200 cambia il permission mode di default da `default` a `manual` in CLI, VS Code e JetBrains. Chi dipendeva dal vecchio comportamento imposta `"defaultMode": "default"` in `settings.json` o usa `--permission-mode default`. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200). Vedi anche README "What's new today" del giorno.
+
 Cycle: `Shift+Tab` → `default` → `acceptEdits` → `plan`.
 
 | Mode | Run senza prompt | Use case |

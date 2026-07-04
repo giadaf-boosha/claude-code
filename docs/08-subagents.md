@@ -7,6 +7,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 ## Cosa e' concettualmente
 
+> **2026-07-04 (auto-update)**: v2.1.200 risolve piu' bug su sessioni e agenti background: stop silenzioso dopo sleep/wake, mancato riavvio con `daemon.lock` stale, subagenti troncati da rate limit che restituivano risultato vuoto anziche' errore pulito, roster corruption. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200). Vedi anche README "What's new today" del giorno.
+
 > I subagent sono **agent figli** spawnati dall'agent principale. Ognuno ha context window indipendente, tool subset, ev. modello diverso (Haiku per Explore = cheap+fast). Il main agent delega un task, riceve summary, continua. Pattern di "cognitive offloading": il main thread non si sporca con dettagli operativi.
 
 **Modello mentale**: come `fork()` in un OS — processo figlio con stato isolato, comunicazione strutturata col padre via return value.

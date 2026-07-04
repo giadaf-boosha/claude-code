@@ -7,6 +7,8 @@ MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app).
 
 ## Cosa e' concettualmente
 
+> **2026-07-04 (auto-update)**: v2.1.200 risolve un crash al startup quando `disabledMcpServers` o `enabledMcpServers` in `.claude.json` sono impostati a un valore non-array. Risolto anche il mancato caricamento di plugin scoped-project da git worktree. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200). Vedi anche README "What's new today" del giorno.
+
 > MCP e' il **protocollo standard per il Tool layer**. Trasforma "ogni LLM ha la sua syntax di tool calling" in "tutti gli LLM compatibili con MCP usano server scritti una sola volta". E' lo stesso paradigma di USB: un protocollo, infinite peripheriche.
 
 **Modello mentale**: MCP = USB per LLM. Server MCP = device USB. Client MCP (Claude Code) = host USB. Plug-and-play, vendor-agnostic.
