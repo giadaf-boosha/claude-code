@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-07-04
+
+- **Permission mode default → `manual`** (v2.1.200, 3 lug): il permission mode attivo all'avvio e' rinominato da `default` a `manual` in CLI, VS Code e JetBrains — comportamento invariato (solo letture auto-approvate), label piu' descrittiva. Contestualmente `AskUserQuestion` non auto-continua piu' dopo timeout idle; per riattivarla: `/config`. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200) · [@ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2073091434123591872). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-07-03
 
 - **Stacked slash-skill invocations** (v2.1.199, 2 lug): `/skill-a /skill-b do XYZ` carica fino a 5 skill in cascata da un unico prompt — composizione skill senza configurazione aggiuntiva o modifica del frontmatter. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
@@ -189,58 +195,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 - **`fallbackModel` setting** (v2.1.166, 6 giu): il campo `fallbackModel` in `settings.json` configura fino a 3 modelli di fallback provati in sequenza quando il primario e' sovraccarico o non disponibile; `--fallback-model` funziona ora anche nelle sessioni interattive (in precedenza solo in modalita' `-p`). Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **Thinking Token Control** (v2.1.166, 6 giu): `MAX_THINKING_TOKENS=0`, `--thinking disabled` e il toggle per-modello disattivano il thinking su modelli che lo abilitano di default via Claude API — per output piu' rapidi o deterministici nei workflow API. Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/18-settings-auth.md](./docs/18-settings-auth.md).
 - **Cross-session messaging hardening** (v2.1.166, 6 giu): i messaggi inoltrati via `SendMessage` da altre sessioni Claude non portano piu' l'autorita' dell'utente; i ricevitori rifiutano le richieste di permesso inoltrate e auto mode le blocca — rafforza la sicurezza nei workflow multi-agente con `SendMessage`. Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
-
----
-
-## 2026-06-05
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-06-04
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-06-03
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-06-02
-
-- **Protezione file sensibili shell/build-tool** (v2.1.160, 2 giu): Claude Code mostra ora un prompt di conferma prima di scrivere su file di avvio shell (`.zshenv`, `.zlogin`, `.bash_login`, `~/.config/git/`) e file di configurazione build-tool (`.npmrc`, `.yarnrc*`, `bunfig.toml`, `.bazelrc`, `.pre-commit-config.yaml`, `.devcontainer/`) — il prompt appare anche in modalita' `acceptEdits`, prevenendo modifiche accidentali a configurazioni che concedono accesso all'esecuzione di codice. Fonte: [GitHub Releases v2.1.160](https://github.com/anthropics/claude-code/releases/tag/v2.1.160). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-06-01
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-05-31
-
-- **Auto mode su Bedrock, Vertex e Foundry** (v2.1.158, 30 mag): la modalita' auto — il classifier che sostituisce le permission prompt con safety check automatici — diventa disponibile su AWS Bedrock, Google Vertex AI e Azure Foundry per Opus 4.7 e Opus 4.8; opt-in con `CLAUDE_CODE_ENABLE_AUTO_MODE=1`. Fonte: [GitHub Releases v2.1.158](https://github.com/anthropics/claude-code/releases/tag/v2.1.158). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-05-30
-
-- **Plugin auto-loading** (v2.1.157, 29 mag): i plugin in `.claude/skills/<nome>/` vengono caricati automaticamente senza passare per il marketplace — niente piu' `/plugin install` per plugin locali e custom. Fonte: [GitHub Releases v2.1.157](https://github.com/anthropics/claude-code/releases/tag/v2.1.157). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/09-skills.md](./docs/09-skills.md).
-- **`claude plugin init <name>`** (v2.1.157, 29 mag): nuovo comando CLI scaffolda un plugin in `.claude/skills/<nome>/` con struttura e manifest pronti — abbassa la barriera alla creazione di plugin locali senza configurazione manuale. Fonte: [GitHub Releases v2.1.157](https://github.com/anthropics/claude-code/releases/tag/v2.1.157). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md).
-- **Campo `agent` in `settings.json` per dispatch** (v2.1.157, 29 mag): il campo `agent` viene ora rispettato per le sessioni dispatch con override per sessione via `--agent <name>` — permette di fissare l'agente di default senza modificare ogni invocazione. Fonte: [GitHub Releases v2.1.157](https://github.com/anthropics/claude-code/releases/tag/v2.1.157). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/18-settings-auth.md](./docs/18-settings-auth.md).
-
----
-
-## 2026-05-29
-
-- **Opus 4.8** (v2.1.154, 28 mag): nuovo modello flagship disponibile in Claude Code come default per task `xhigh`; Fast Mode su Opus 4.8 gira a 2.5x la velocita' standard a 2x il costo base. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/workflows`** (v2.1.154, 28 mag): nuovo slash command per creare e orchestrare workflow dinamici con decine o centinaia di agenti background — descrivi il task, Claude genera il workflow ed esegue gli agenti in parallelo. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`! <command>` in `claude agents`** (v2.1.154, 28 mag): digitare `! <comando>` in Agent View esegue il comando shell direttamente in una sessione background — equivalente a `claude --bg --exec '<comando>'` senza uscire dall'interfaccia di gestione sessioni. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154). Doc: [docs/08-subagents.md](./docs/08-subagents.md).
 
 ---
 

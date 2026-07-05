@@ -1,18 +1,19 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **4 luglio 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **5 luglio 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.201** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-04)
+## What's new today (2026-07-05)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Permission mode default → `manual`** (v2.1.200, 3 lug): il permission mode attivo all'avvio e' rinominato da `default` a `manual` in CLI, VS Code e JetBrains — comportamento invariato (solo letture auto-approvate), label piu' descrittiva. Contestualmente `AskUserQuestion` non auto-continua piu' dopo timeout idle; per riattivarla: `/config`. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200) · [@ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2073091434123591872). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.201** (fix, 3 lug): sessioni `claude-sonnet-5` non usano piu' mid-conversation system role per i reminder dell'harness — riduce contaminazione del context in sessioni lunghe. Fonte: [GitHub Releases v2.1.201](https://github.com/anthropics/claude-code/releases/tag/v2.1.201). Doc: [docs/19-changelog.md](./docs/19-changelog.md).
+- **Fable 5 — accesso incluso scade il 7 luglio** (annuncio): tutti i paid plan con usage incluso possono usare Fable 5 fino al 7 luglio (50% del weekly limit) — poi solo usage credits. Ultimi 2 giorni. Fonte: [@claudeai](https://x.com/claudeai/status/2072402639644766602). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md).
 
 ---
 

@@ -535,7 +535,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 3 lug 2026 | **v2.1.200** | **Permission mode rinominato `manual`**: il mode `default` diventa `manual` in CLI, VS Code e JetBrains (comportamento invariato — solo reads auto). `AskUserQuestion` no auto-continue by default; opt-in via `/config`. Accessibilita': screen reader migliorato, nested tables come "Header: value". Fix: sessioni background interrotte da sleep/wake, subagent tagliati da rate limit, flicker tmux 3.4+. |
 | 3 lug 2026 | v2.1.201 | Fix: sessioni Sonnet 5 non usano piu' mid-conversation system role per harness reminders. |
 
-<sub>Aggiornato 2026-07-04 via daily what's new. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200).</sub>
+> **2026-07-05 (auto-update)**: v2.1.201 (3 lug) — sessioni `claude-sonnet-5` non usano piu' system role mid-conversation per i reminder dell'harness. Ultima versione CLI certificata: v2.1.201. Fonte: [GitHub Releases v2.1.201](https://github.com/anthropics/claude-code/releases/tag/v2.1.201). Vedi anche README "What's new today" del giorno.
+
+<sub>Aggiornato 2026-07-05 via daily what's new. Fonte: [GitHub Releases v2.1.201](https://github.com/anthropics/claude-code/releases/tag/v2.1.201).</sub>
 
 ---
 

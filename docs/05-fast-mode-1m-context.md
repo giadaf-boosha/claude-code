@@ -196,7 +196,9 @@ Fable 5 supera Opus 4.8 in capacita'. Se una richiesta viene rifiutata dai class
 ### Note su `disableBundledSkills`
 Con `/model claude-fable-5` il reasoning e' sempre on — `MAX_THINKING_TOKENS=0` non ha effetto su Fable 5 (vedi sezione 5.6). Per Fable 5 usa il parametro `effort` per controllare la profondita' del thinking.
 
-<sub>Aggiornato 2026-06-10 via daily what's new. Fonte: [GitHub Releases v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170) · [Anthropic docs](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5).</sub>
+> **2026-07-05 (auto-update)**: Fable 5 e' accessibile fino al **7 luglio 2026** a tutti i paid plan con usage incluso (50% del weekly limit) — dopo quella data si continua solo acquistando usage credits. Fonte: [@claudeai](https://x.com/claudeai/status/2072402639644766602). Vedi anche README "What's new today" del giorno.
+
+<sub>Aggiornato 2026-07-05 via daily what's new. Fonte: [GitHub Releases v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170) · [Anthropic docs](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5).</sub>
 
 ---
 
