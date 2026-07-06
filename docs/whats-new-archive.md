@@ -204,12 +204,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 ---
 
-## 2026-06-05
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
 ## Come consultare la storia completa
 
 ```bash
