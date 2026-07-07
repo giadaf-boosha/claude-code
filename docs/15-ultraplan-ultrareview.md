@@ -89,6 +89,8 @@ Lanciato **Week 14** (v2.1.86, 30 mar 2026), GA con Opus 4.7 (v2.1.111, 16 apr 2
 | Cost | Plan usage | Free runs (3 Pro/Max → 5 mag 2026), poi $5-$20 extra usage |
 | Best for | Iteration | Pre-merge confidence |
 
+> Da v2.1.202 (6 lug 2026) `/review <pr>` e' tornato esplicitamente single-pass dopo una parentesi multi-pass — per una review multi-agente su una PR (senza passare dal cloud di `/ultrareview`) usa `/code-review <level> <pr#>`, che gira in locale con piu' finder in parallelo. Vedi [03 Slash commands](./03-slash-commands.md#31-tabella-completa).
+
 ### Sintassi
 
 ```bash
@@ -144,6 +146,8 @@ claude ultrareview [target] --json            # raw output JSON
 - [@claudeai](https://x.com/claudeai/status/2044785266590622185): "the new /ultrareview command runs a dedicated review session that reads through your changes and flags what a careful reviewer would catch."
 
 > Fonte: [`/en/ultrareview`](https://code.claude.com/docs/en/ultrareview).
+
+<sub>Aggiornato 2026-07-07 via daily what's new (§ `/review` vs `/ultrareview`). Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202).</sub>
 
 ---
 

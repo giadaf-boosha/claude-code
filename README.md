@@ -8,11 +8,12 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-06)
+## What's new today (2026-07-07)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **Dynamic workflow size**: nuova impostazione in `/config` che controlla quanti agent Claude usa nei dynamic workflow che scrive (small/medium/large). Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Doc: [docs/24-workflows.md](./docs/24-workflows.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/review` torna single-pass**: `/review <pr>` esegue di nuovo una review a singolo passaggio; per multi-agent review su una PR si usa `/code-review <level> <pr#>` (v2.1.202, 6 lug). Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/15-ultraplan-ultrareview.md](./docs/15-ultraplan-ultrareview.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

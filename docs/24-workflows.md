@@ -150,9 +150,11 @@ Un run spawna molti agent → puo' consumare molti piu' token della stessa cosa 
 
 ---
 
-## 24.7 Disponibilita' e disattivazione
+## 24.7 Disponibilita', dimensione e disattivazione
 
 Disponibili in: CLI, Desktop app, IDE extensions, [non-interactive mode](./16-headless-agent-sdk.md) (`claude -p`), Agent SDK. Su tutti i piani a pagamento, con accesso API Anthropic, e su Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry. **Su Pro** vanno attivati dalla riga *Dynamic workflows* in `/config`.
+
+La riga **Dynamic workflow size** in `/config` (da v2.1.202, 6 lug 2026) controlla quanti agent Claude tende a usare quando scrive un workflow per il tuo task: `small` per fan-out ridotti e costo contenuto, `medium` (default) per il compromesso storico, `large` per audit/migrazioni su scala che beneficiano di piu' worker paralleli anche a costo di piu' token. E' un default orientativo, non un tetto: lo script puo' comunque restare entro i vincoli di §24.6 (16 agent concorrenti, 1.000 agent totali per run).
 
 Per disattivarli (per te):
 - Toggle *Dynamic workflows* off in `/config` (persiste)
@@ -203,5 +205,7 @@ angles (data model, API surface, migration path), then weigh them and recommend 
 | Caso ideale | Fan-out parallelo ripetibile, audit, migrazioni | Progetto collaborativo lungo, ricerca esplorativa |
 
 ---
+
+<sub>Aggiornato 2026-07-07 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202).</sub>
 
 ← [23 Glossario](./23-glossario.md) · Successivo → [25 /goal](./25-goal.md)

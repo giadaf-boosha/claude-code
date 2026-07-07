@@ -81,14 +81,14 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/remote-env` | built-in | Configura env remote per `--remote` |
 | `/rename [name]` | built-in | Rinomina sessione |
 | `/resume [session\|PR-URL]` (alias `/continue`) | built-in | Riprende sessione per ID/nome; accetta URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) per trovare la sessione che ha creato quella PR (da v2.1.122). Da v2.1.144 include anche le sessioni background avviate via `claude --bg` o Agent View (mostrate con tag `bg` nella lista) |
-| `/review [PR]` | built-in | Code review locale (cf. `/ultrareview` per cloud) |
+| `/review [PR]` | built-in | Code review locale single-pass, anche su una PR (cf. `/ultrareview` per cloud); per multi-agent review su una PR usa `/code-review <level> <pr#>` — ripristinato single-pass da v2.1.202, 6 lug 2026, dopo una parentesi multi-pass |
 | `/rewind` (alias `/checkpoint`, `/undo`) | built-in | Checkpoint rewind; da v2.1.191 recupera anche il context azzerato da `/clear` |
 | `/sandbox` | built-in | Toggle [sandbox mode](./04-modalita-permessi.md#sandbox) |
 | `/schedule [description]` (alias `/routines`) | built-in | Gestione [routines](./13-routines-cloud.md) |
 | `/scroll-speed [speed]` | built-in | Regola velocita' scroll rotella mouse con anteprima live (da v2.1.139) |
 | `/security-review` | built-in | Analizza diff per security issues |
 | `/setup-bedrock` / `/setup-vertex` | built-in | Wizard provider |
-| `/code-review [focus] [effort] [--comment\|--fix]` | **Skill** | 3 review agent paralleli; `effort` opzionale (es. `high`); `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente; `--fix` applica automaticamente i suggerimenti al working tree (alias: `/simplify`). (da v2.1.146; `--comment` v2.1.147; `--fix` e alias `/simplify` da v2.1.152) |
+| `/code-review [level] [focus] [effort] [--comment\|--fix] [pr#]` | **Skill** | Review multi-agente (piu' finder in parallelo); `level` regola l'ampiezza (es. `low`/`medium`/`high`); `effort` opzionale (es. `high`); `pr#` per puntare a una PR GitHub — e' la via consigliata per multi-agent review su PR ora che `/review <pr>` e' tornato single-pass (v2.1.202); `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente; `--fix` applica automaticamente i suggerimenti al working tree (alias: `/simplify`). (da v2.1.146; `--comment` v2.1.147; `--fix` e alias `/simplify` da v2.1.152) |
 | `/skills` | built-in | Lista skills, `t` per sort by token |
 | `/status` | built-in | Settings → Status (version, model, account) |
 | `/statusline` | built-in | Configura status line |
@@ -110,6 +110,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 > Fonte: [`/en/commands`](https://code.claude.com/docs/en/commands).
 
 <sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067391951725629941).</sub>
+<sub>Aggiornato 2026-07-07 via daily what's new (righe `/review`, `/code-review`). Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202).</sub>
 
 ---
 
