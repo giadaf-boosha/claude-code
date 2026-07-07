@@ -18,6 +18,8 @@ Lanciati il **28 maggio 2026** con Opus 4.8, in **research preview**. Richiedono
 
 > Fonti: [`/en/workflows`](https://code.claude.com/docs/en/workflows), [blog Anthropic — Introducing dynamic workflows](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code), [changelog v2.1.154](https://code.claude.com/docs/en/changelog).
 
+> **2026-07-07 (auto-update)**: nuova setting "Dynamic workflow size" in `/config` (v2.1.202, 6 lug) regola quanto grandi Claude tende a fare i workflow (small/medium/large agent count) — linea guida advisory, non un cap imposto. Aggiunti anche attributi OTel `workflow.run_id`/`workflow.name` per ricostruire l'attivita' di un run dai dati di telemetria. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 24.1 Quando usare un workflow (vs subagent vs skill)

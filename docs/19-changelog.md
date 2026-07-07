@@ -534,8 +534,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 2 lug 2026 | — | **Artifacts esteso a Pro e Max**: Artifacts in Claude Code (pagine web condivisibili da sessione) ora disponibili su Pro e Max — prima solo Team/Enterprise. [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072770790114914317). |
 | 3 lug 2026 | **v2.1.200** | **Permission mode rinominato `manual`**: il mode `default` diventa `manual` in CLI, VS Code e JetBrains (comportamento invariato — solo reads auto). `AskUserQuestion` no auto-continue by default; opt-in via `/config`. Accessibilita': screen reader migliorato, nested tables come "Header: value". Fix: sessioni background interrotte da sleep/wake, subagent tagliati da rate limit, flicker tmux 3.4+. |
 | 3 lug 2026 | v2.1.201 | Fix: sessioni Sonnet 5 non usano piu' mid-conversation system role per harness reminders. |
+| 6 lug 2026 | **v2.1.202** | **"Dynamic workflow size" in `/config`**: regola quanto grandi Claude tende a fare i workflow dinamici (small/medium/large agent count, solo advisory). Attributi OTel `workflow.run_id`/`workflow.name` per telemetria workflow. **`/review <pr>` torna single-pass veloce**; `/code-review <level> <pr#>` resta il comando per la review multi-agente a effort configurabile. 15+ fix di affidabilita': crash Ctrl+R history search, `/rename` su sessioni background revertito dopo restart, handshake mTLS transitori durante rotazione certificati, comandi e allegati Remote Control persi, resume lento/memory-heavy con molti git worktree, retry illimitato voice dictation su errore microfono, skill ricaricate che duplicavano le istruzioni in context, download installer/updater che abortivano su drop di rete. |
 
-<sub>Aggiornato 2026-07-04 via daily what's new. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200).</sub>
+<sub>Aggiornato 2026-07-07 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202).</sub>
 
 ---
 

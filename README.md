@@ -8,11 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-06)
+## What's new today (2026-07-07)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.202** (6 lug): nuova setting **"Dynamic workflow size"** in `/config` — regola quanto grandi Claude tende a fare i dynamic workflow (small/medium/large agent count, solo advisory, non un cap imposto). Aggiunti attributi OTel `workflow.run_id`/`workflow.name` per ricostruire l'attivita' di un run dai dati di telemetria. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Vedi [docs/24 § Workflows](./docs/24-workflows.md) e [docs/19 § Changelog](./docs/19-changelog.md).
+- **CLI v2.1.202**: `/review <pr>` torna a essere una **review veloce single-pass**; per la review multi-agente a effort configurabile resta `/code-review <level> <pr#>`. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Vedi [docs/03 § Tabella completa](./docs/03-slash-commands.md).
+- **CLI v2.1.202**: bundle di 15+ fix di affidabilita' — crash Ctrl+R history search, `/rename` su sessioni background revertito dopo restart, comandi/allegati Remote Control persi, resume lento con molti git worktree, retry illimitato voice dictation su errore microfono, skill ricaricate che duplicavano le istruzioni in context, download installer che abortivano su drop di rete. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Vedi [docs/19 § Changelog](./docs/19-changelog.md).
 
 ---
 
