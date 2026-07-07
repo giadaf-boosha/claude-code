@@ -111,6 +111,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 <sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067391951725629941).</sub>
 
+> **2026-07-07 (auto-update)**: `/review [PR]` (v2.1.202, 6 lug) torna a essere una review veloce single-pass; per la review multi-agente con effort configurabile usa `/code-review <level> [PR]`. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.2 Comandi rimossi / migrati

@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-07-06
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-07-05
 
 > Nessuna novita' significativa nelle ultime 24 ore.
