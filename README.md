@@ -8,11 +8,15 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-06)
+## What's new today (2026-07-08)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.204** (release, 8 lug): hotfix per gli eventi hook che non venivano trasmessi durante gli hook `SessionStart` nelle sessioni headless — evitava che i worker remoti fossero terminati come inattivi a meta' hook. Fonte: [GitHub Releases v2.1.204](https://github.com/anthropics/claude-code/releases/tag/v2.1.204). Vedi [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.203** (release, 7 lug): batch di fix per le sessioni background — risolve lo stallo di 15-20s all'apertura su macOS, le sessioni bloccate per token daemon stale, il drop di `ANTHROPIC_BASE_URL`/`PATH`, i problemi di worktree isolation, e introduce un toggle VS Code per abilitare Remote Control su tutte le sessioni. Fonte: [GitHub Releases v2.1.203](https://github.com/anthropics/claude-code/releases/tag/v2.1.203). Vedi [docs/08-subagents.md](./docs/08-subagents.md), [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Claude Code e Cowork arrivano al governo** (annuncio, 7 lug): beta pubblica in Claude for Government Desktop, ambiente FedRAMP High — governance per dipartimento, limiti di spesa e audit log tamper-evident per il processo ATO. Fonte: [blog Anthropic](https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government). Vedi [docs/18-settings-auth.md](./docs/18-settings-auth.md).
+- **Claude Cowork su mobile e web** (annuncio, 7 lug): sessioni e file seguono l'utente su ogni device, lavoro in background senza device online, task pianificati, Chat e Cowork condividono un'unica home su web/desktop. Beta in rollout dal piano Max, limiti raddoppiati fino al 5 agosto. Fonte: [blog Anthropic](https://claude.com/blog/cowork-web-mobile) · [@claudeai](https://x.com/claudeai/status/2074525815820169320). Vedi [docs/17-ide-surface.md](./docs/17-ide-surface.md).
+- **Fable 5 esteso su tutti i piani paid fino al 12 luglio** (post X, 7 lug): l'accesso a Claude Fable 5 su tutti i piani a pagamento, in scadenza il 7 luglio, viene prorogato al 12 luglio — resta il tetto del 50% dell'utilizzo settimanale, oltre il quale si attinge ai crediti di utilizzo. Fonte: [@claudeai](https://x.com/claudeai/status/2074548242386178258). Vedi [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md).
 
 ---
 

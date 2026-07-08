@@ -327,6 +327,8 @@ La scelta tra **subscription OAuth** (Claude Pro/Max/Team/Enterprise) e **API ke
 
 ## 18.6 Claude for Teams / Enterprise
 
+> **2026-07-08 (auto-update)**: Claude Code e Claude Cowork entrano in beta pubblica su Claude for Government Desktop, ambiente FedRAMP High — governance per dipartimento, spending limit e audit log tamper-evident per il processo ATO. Fonte: [blog Anthropic](https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government). Vedi anche README "What's new today" del giorno.
+
 | Feature | Teams | Enterprise |
 |---|---|---|
 | Self-service | ✓ | |

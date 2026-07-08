@@ -178,6 +178,8 @@ claude --rc [name]                   # alias
 
 > Fonte: [`/en/remote-control`](https://code.claude.com/docs/en/remote-control).
 
+> **2026-07-08 (auto-update)**: CLI v2.1.203 aggiunge in VS Code un toggle Settings "Enable Remote Control for all sessions". Fonte: [GitHub Releases v2.1.203](https://github.com/anthropics/claude-code/releases/tag/v2.1.203). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 17.7 Computer use {#computer-use}
@@ -220,6 +222,8 @@ Vedi [10 MCP § 10.8 Channels](./10-mcp.md#10.8-channels-research-preview).
 ---
 
 ## 17.10 Mobile (iOS app + Android via web)
+
+> **2026-07-08 (auto-update)**: Claude Cowork si espande a mobile e web (beta, dal piano Max): sessioni e file seguono l'utente su ogni device, lavoro in background senza device online, task pianificati; limiti raddoppiati fino al 5 agosto. Fonte: [blog Anthropic](https://claude.com/blog/cowork-web-mobile). Vedi anche README "What's new today" del giorno.
 
 - iOS app: download da App Store
 - Android: via mobile web (claude.ai/code)

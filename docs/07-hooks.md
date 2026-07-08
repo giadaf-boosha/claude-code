@@ -17,6 +17,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 > Fonte: [`/en/hooks`](https://code.claude.com/docs/en/hooks).
 
+> **2026-07-08 (auto-update)**: CLI v2.1.204 corregge un bug per cui gli eventi hook non venivano trasmessi durante `SessionStart` nelle sessioni headless, causando idle-reap dei worker remoti a meta' hook. Fonte: [GitHub Releases v2.1.204](https://github.com/anthropics/claude-code/releases/tag/v2.1.204). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 7.1 Eventi supportati (28+)

@@ -17,6 +17,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 > "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions." — [`/en/sub-agents`](https://code.claude.com/docs/en/sub-agents)
 
+> **2026-07-08 (auto-update)**: CLI v2.1.203 risolve un batch di bug sulle sessioni background — token daemon stale che le bloccava permanentemente (ora auto-recovery), `claude agents` che fermava silenziosamente subagent in corso, `PATH`/`ANTHROPIC_BASE_URL` stale ereditati dal daemon. Fonte: [GitHub Releases v2.1.203](https://github.com/anthropics/claude-code/releases/tag/v2.1.203). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.1 Dove vivono
