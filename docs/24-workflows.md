@@ -129,6 +129,10 @@ Il runtime esegue lo script in un ambiente isolato, separato dalla conversazione
 | Fino a **16 agent concorrenti** (meno su macchine con pochi core CPU) | Limita l'uso di risorse locali |
 | **1.000 agent totali per run** | Previene loop runaway |
 
+### Calibrare la dimensione del run
+
+Da **v2.1.202** `/config` espone **Dynamic workflow size**: small / medium / large, una linea guida indicativa su quanti agent Claude tende a usare quando scrive uno script — non un tetto imposto dal runtime (i vincoli restano quelli della tabella sopra). Utile per orientare Claude verso run piu' snelli su task semplici o verso fan-out piu' ampi quando la codebase o la ricerca lo richiedono, senza doverlo specificare ogni volta nel prompt. La stessa release aggiunge gli attributi OpenTelemetry `workflow.run_id` e `workflow.name` agli agent spawnati da un workflow, per ricostruire l'attivita' di un run dai dati OTel.
+
 ### Controllo della progress view (`/workflows`)
 
 | Tasto | Azione |
@@ -205,3 +209,5 @@ angles (data model, API surface, migration path), then weigh them and recommend 
 ---
 
 ← [23 Glossario](./23-glossario.md) · Successivo → [25 /goal](./25-goal.md)
+
+<sub>Aggiornato 2026-07-08 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202).</sub>

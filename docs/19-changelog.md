@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (3 luglio 2026, v2.1.201). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (8 luglio 2026, v2.1.204). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -534,8 +534,11 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 2 lug 2026 | — | **Artifacts esteso a Pro e Max**: Artifacts in Claude Code (pagine web condivisibili da sessione) ora disponibili su Pro e Max — prima solo Team/Enterprise. [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072770790114914317). |
 | 3 lug 2026 | **v2.1.200** | **Permission mode rinominato `manual`**: il mode `default` diventa `manual` in CLI, VS Code e JetBrains (comportamento invariato — solo reads auto). `AskUserQuestion` no auto-continue by default; opt-in via `/config`. Accessibilita': screen reader migliorato, nested tables come "Header: value". Fix: sessioni background interrotte da sleep/wake, subagent tagliati da rate limit, flicker tmux 3.4+. |
 | 3 lug 2026 | v2.1.201 | Fix: sessioni Sonnet 5 non usano piu' mid-conversation system role per harness reminders. |
+| 6 lug 2026 | **v2.1.202** | **Dynamic workflow size** in `/config`: linea guida small/medium/large su quanti agent Claude tende a usare in un [dynamic workflow](./24-workflows.md) (indicativa, non un tetto). Attributi OpenTelemetry `workflow.run_id`/`workflow.name` sugli agent spawnati da workflow. `/review <PR>` torna a single-pass veloce (multi-agent resta su `/code-review <level> <PR#>`). Fix: crash ricerca history Ctrl+R, `/rename` su sessioni background revertito al restart job, handshake mTLS durante rotazione certificati, comandi da Remote Control falliti in sessioni interattive, allegati Remote Control senza caption scartati silenziosamente, skill ricaricate che duplicavano le istruzioni nel context. |
+| 7 lug 2026 | v2.1.203 | Warning di scadenza login prima che interrompa le sessioni background. Badge grigio ⏠ in footer per il permission mode manual. Working directory di sessione esposte a MCP `roots/list` con change notification. Fix: falso rilevamento low-memory su macOS (regressione v2.1.196), sessioni background bloccate in modo permanente, PATH stale su Windows per background agent, worktree annidati, auto-upgrade daemon che uccideva sessioni. |
+| 8 lug 2026 | v2.1.204 | Fix: eventi hook non streammati durante `SessionStart` in sessioni headless, poteva causare idle-reap dei remote worker a meta' hook. |
 
-<sub>Aggiornato 2026-07-04 via daily what's new. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200).</sub>
+<sub>Aggiornato 2026-07-08 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202) · [v2.1.203](https://github.com/anthropics/claude-code/releases/tag/v2.1.203) · [v2.1.204](https://github.com/anthropics/claude-code/releases/tag/v2.1.204).</sub>
 
 ---
 
