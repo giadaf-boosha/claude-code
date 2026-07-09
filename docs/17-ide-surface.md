@@ -60,6 +60,20 @@ Estensione: `vscode:extension/anthropic.claude-code`. Requires VS Code 1.98.0+.
 | `allowDangerouslySkipPermissions` | false | |
 | `claudeProcessWrapper` | "" | Script che wrappa il process |
 
+### Multi-chat sessions (VS Code 1.128, 8 lug 2026)
+
+Una sessione Claude puo' ora contenere piu' **chat correlate** (Agents window), invece di una sola conversazione lineare:
+
+- **Fork**: parti da un turno precedente per esplorare un approccio alternativo senza perdere il ramo originale
+- **Peer chats**: conversazioni indipendenti raggruppate sotto lo stesso ombrello di sessione, per confrontare piu' soluzioni in parallelo
+- **Turni concorrenti**: invia lavoro a piu' chat contemporaneamente; ognuna mantiene history, titolo e model selection propri (persistenti al restart)
+- **Subagent come peer chat read-only**: quando la sessione spawna sub-agenti, il loro transcript appare come chat peer di sola lettura (nascosta dalla tab strip finche' non la apri dal menu Conversations, dal chip "running subagents" o dalla pill inline nel transcript padre)
+- I peer chat restano raggruppati sotto la sessione Claude e non compaiono come sessioni top-level separate
+
+Utile per lo stesso pattern di [Subagents](./08-subagents.md) e [Agent Teams](./12-agent-teams.md) ma dentro un'unica finestra VS Code, senza aprire terminali multipli. Fonte: [VS Code 1.128 release notes](https://code.visualstudio.com/updates/v1_128).
+
+<sub>Aggiornato 2026-07-09 via daily what's new. Fonte: [VS Code 1.128](https://code.visualstudio.com/updates/v1_128).</sub>
+
 ### URI handler
 
 ```
