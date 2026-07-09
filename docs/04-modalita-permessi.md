@@ -91,6 +91,8 @@ Da agosto 2025: Opus 4.x per plan + Sonnet per execution. [@_catwu](https://x.co
 
 Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permissions`: un classifier separato decide cosa Claude puo' fare senza chiedere.
 
+> **2026-07-09 (auto-update)**: v2.1.205 aggiunge una regola auto mode che blocca la manomissione dei file di transcript di sessione, e un prompt di conferma prima di eseguire `rm -rf` su variabili non risolte. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Vedi anche README "What's new today" del giorno.
+
 ### Caratteristiche
 - Classifier model review actions (separato dal main model)
 - Boundaries dichiarate in conversation rispettate (ma non rules permanenti)

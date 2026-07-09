@@ -111,6 +111,8 @@ claude agents                  # Agent View (lista + stato sessioni)
 
 <sub>Aggiornato 2026-06-11 via daily what's new. Fonte: [GitHub Releases v2.1.172](https://github.com/anthropics/claude-code/releases/tag/v2.1.172).</sub>
 
+> **2026-07-09 (auto-update)**: v2.1.205 fa linkare in `claude agents` la PR quando una sessione la edita/mergia/commenta/pusha; righe con stato colorato e headline generata dal classifier. Fix: stato "needs input"/"working" che sfarfallava per gli agent in background dopo un resume, e sessioni mostrate come "failed"/"completed" dopo un `SendMessage` di ripresa. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Vedi anche README "What's new today" del giorno.
+
 ### Dal main agent
 Claude usa il tool **Agent** specificando `subagent_type`:
 ```json

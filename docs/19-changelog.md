@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (8 luglio 2026, v2.1.204). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (8 luglio 2026, v2.1.205). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -537,8 +537,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 6 lug 2026 | **v2.1.202** | **Dynamic workflow size** in `/config`: linea guida small/medium/large su quanti agent Claude tende a usare in un [dynamic workflow](./24-workflows.md) (indicativa, non un tetto). Attributi OpenTelemetry `workflow.run_id`/`workflow.name` sugli agent spawnati da workflow. `/review <PR>` torna a single-pass veloce (multi-agent resta su `/code-review <level> <PR#>`). Fix: crash ricerca history Ctrl+R, `/rename` su sessioni background revertito al restart job, handshake mTLS durante rotazione certificati, comandi da Remote Control falliti in sessioni interattive, allegati Remote Control senza caption scartati silenziosamente, skill ricaricate che duplicavano le istruzioni nel context. |
 | 7 lug 2026 | v2.1.203 | Warning di scadenza login prima che interrompa le sessioni background. Badge grigio ⏠ in footer per il permission mode manual. Working directory di sessione esposte a MCP `roots/list` con change notification. Fix: falso rilevamento low-memory su macOS (regressione v2.1.196), sessioni background bloccate in modo permanente, PATH stale su Windows per background agent, worktree annidati, auto-upgrade daemon che uccideva sessioni. |
 | 8 lug 2026 | v2.1.204 | Fix: eventi hook non streammati durante `SessionStart` in sessioni headless, poteva causare idle-reap dei remote worker a meta' hook. |
+| 8 lug 2026 | **v2.1.205** | **Auto mode**: nuova regola blocca la manomissione dei file di transcript di sessione; prompt di conferma prima di eseguire `rm -rf` su variabili non risolte. **`/doctor`** diventa un checkup completo del setup (diagnosi + fix automatico); **`/checkup`** e' il nuovo alias. **Agent view**: sessioni che editano/mergiano/commentano/pushano su una PR esistente ora linkano la PR in `claude agents`; righe con stato colorato e headline generata dal classifier. Fix: messaggi persi al limite `--max-turns`, stato "needs input"/"working" instabile per agent in background dopo resume, cancellazione file fuori worktree su Windows (junction/symlink NTFS), `claude mcp add-from-claude-desktop` bloccato con nomi server non supportati, crash plugin LSP che impediva ad altri server validi di gestire la stessa estensione, crash Windows su directory di lancio rimossa/lockata/smontata, crash file watcher durante scan directory. Download auto-update ora in streaming su disco (picco memoria -400MB). |
 
-<sub>Aggiornato 2026-07-08 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202) · [v2.1.203](https://github.com/anthropics/claude-code/releases/tag/v2.1.203) · [v2.1.204](https://github.com/anthropics/claude-code/releases/tag/v2.1.204).</sub>
+<sub>Aggiornato 2026-07-09 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202) · [v2.1.203](https://github.com/anthropics/claude-code/releases/tag/v2.1.203) · [v2.1.204](https://github.com/anthropics/claude-code/releases/tag/v2.1.204) · [v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205).</sub>
 
 ---
 

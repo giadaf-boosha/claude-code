@@ -112,6 +112,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 <sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067391951725629941).</sub>
 <sub>Aggiornato 2026-07-08 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202).</sub>
 
+> **2026-07-09 (auto-update)**: v2.1.205 trasforma `/doctor` in un checkup completo del setup, con diagnosi e fix automatico; `/checkup` e' il nuovo alias. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.2 Comandi rimossi / migrati
