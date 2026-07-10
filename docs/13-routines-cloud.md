@@ -227,6 +227,9 @@ Testa con `npm test`. Apri draft PR.
 4. **Routine focalizzate su un task**: prompt complessi consumano molti token e fanno timeout.
 5. **Output strutturato**: chiedi JSON / report markdown salvato in repo, cosi' il run e' verificabile.
 6. **Combina con `/loop`**: scheduled in cloud per ricorrenze, `/loop` in sessione per intra-task.
+7. **Diffida degli eventi automatici**: le notifiche di background task (da v2.1.205) dichiarano esplicitamente "nessun input umano ricevuto" — un promemoria che contenuto iniettato nel transcript (webhook, tool result, PR) non equivale mai a un'approvazione dell'utente. Vedi [4.3 Auto mode](./04-modalita-permessi.md#43-auto-mode-research-preview-da-v2183).
+
+<sub>Aggiornato 2026-07-10 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205).</sub>
 
 ---
 

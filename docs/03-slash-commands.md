@@ -42,7 +42,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/design-sync [pull\|push]` | built-in | Sync bidirezionale tra Claude Code e Claude Design: `pull` importa il design system nel repo (componenti, font, colori) per buildare con i componenti reali; `push` esporta il codice prodotto verso il canvas Claude Design. Richiede accesso a Claude Design (da 19 giu 2026). |
 | `/desktop` (alias `/app`) | built-in | Continua su Desktop app (macOS/Windows) |
 | `/diff` | built-in | Diff viewer interattivo (uncommitted + per-turn) |
-| `/doctor` | built-in | Diagnostica install + `f` per fix automatico |
+| `/doctor` (alias `/checkup`) | built-in | Full setup checkup (da v2.1.205): oltre a diagnosi install/auth/connettivita', ripulisce skill/MCP/plugin inutilizzati, deduplica e spezza `CLAUDE.md` bloated, disabilita hook lenti, abilita auto mode e pre-approva comandi read-only spesso negati — conferma richiesta prima di ogni fix (`f`) |
 | `/effort [level\|auto]` | built-in | Imposta effort, slider interattivo, applica subito |
 | `/exit` (alias `/quit`) | built-in | Esci CLI |
 | `/export [filename]` | built-in | Esporta conversation come testo |

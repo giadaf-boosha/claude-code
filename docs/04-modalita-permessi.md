@@ -199,6 +199,17 @@ Utile per diagnosticare perche' un comando specifico viene fermato e affinare le
 
 <sub>Aggiornato 2026-06-26 via daily what's new. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193).</sub>
 
+### Blocco tampering transcript e notifiche background esplicite (v2.1.205)
+
+Da v2.1.205 (8 lug 2026), due protezioni pensate per sessioni autonome/background dove nessun umano legge ogni turno in tempo reale:
+
+- **Auto mode blocca la modifica dei file di transcript** della sessione corrente — impedisce che un agente (o contenuto ostile iniettato via tool result) alteri lo storico della conversazione per far apparire un'azione come gia' approvata.
+- **Le notifiche di background task dichiarano ora esplicitamente "nessun input umano e' stato ricevuto"** dall'ultimo messaggio genuino dell'utente. Serve a impedire che testo iniettato nel transcript (da un tool result, una PR, un webhook) venga scambiato per una conferma o un'approvazione reale — lo stesso principio che governa i [system-reminder nei task automatici](./13-routines-cloud.md).
+
+Complementa il blocco comandi distruttivi (v2.1.183) e le denial reasons trasparenti (v2.1.193): insieme coprono sia i comandi pericolosi sia i tentativi di manipolare il registro della sessione stessa.
+
+<sub>Aggiornato 2026-07-10 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205).</sub>
+
 ---
 
 ## 4.4 Sandbox mode {#sandbox}

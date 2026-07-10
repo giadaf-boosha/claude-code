@@ -8,11 +8,12 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-08)
+## What's new today (2026-07-10)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Dynamic workflow size** in `/config` (v2.1.202, 6 lug): linea guida small/medium/large su quanti agent Claude tende a usare quando scrive un [dynamic workflow](./docs/24-workflows.md) — indicativa, non un tetto imposto dal runtime. Stessa release: attributi OpenTelemetry `workflow.run_id`/`workflow.name` per ricostruire l'attivita' di un run, e `/review <PR>` torna a single-pass veloce (multi-agent resta su `/code-review <level> <PR#>`). Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Doc: [docs/24-workflows.md](./docs/24-workflows.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/doctor` diventa full setup checkup** (alias `/checkup`, v2.1.205, 8 lug): oltre alla diagnosi di install/auth/connettivita', ora ripulisce skill/MCP/plugin inutilizzati, deduplica e spezza `CLAUDE.md` troppo grandi, disabilita hook lenti, abilita auto mode e pre-approva comandi read-only spesso negati — con conferma prima di ogni fix. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Auto mode blocca tampering sui file di transcript e le notifiche background dichiarano "nessun input umano ricevuto"** (v2.1.205, 8 lug): protezione contro contenuto iniettato nel transcript (webhook, tool result, PR) che venga letto come conferma/approvazione dell'utente durante sessioni autonome. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/13-routines-cloud.md](./docs/13-routines-cloud.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

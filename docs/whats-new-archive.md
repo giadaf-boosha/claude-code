@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-07-08
+
+- **Dynamic workflow size** in `/config` (v2.1.202, 6 lug): linea guida small/medium/large su quanti agent Claude tende a usare quando scrive un [dynamic workflow](./24-workflows.md) — indicativa, non un tetto imposto dal runtime. Stessa release: attributi OpenTelemetry `workflow.run_id`/`workflow.name` per ricostruire l'attivita' di un run, e `/review <PR>` torna a single-pass veloce (multi-agent resta su `/code-review <level> <PR#>`). Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Doc: [24-workflows.md](./24-workflows.md), [03-slash-commands.md](./03-slash-commands.md), [19-changelog.md](./19-changelog.md).
+
+---
+
 ## 2026-07-06
 
 > Nessuna novita' significativa nelle ultime 24 ore.
@@ -191,12 +197,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 ---
 
 ## 2026-06-08
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-06-07
 
 > Nessuna novita' significativa nelle ultime 24 ore.
 
