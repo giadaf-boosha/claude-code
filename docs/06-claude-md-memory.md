@@ -19,6 +19,8 @@ Claude Code ha **due sistemi di memoria** complementari: CLAUDE.md (scritto da t
 
 ## 6.1 Confronto
 
+> **2026-07-10 (auto-update)**: nuovo check `/doctor` (v2.1.206) propone di sfoltire i `CLAUDE.md` versionati, tagliando i contenuti che Claude puo' gia' derivare dalla codebase. Fonte: [GitHub Releases v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206). Vedi anche README "What's new today" del giorno.
+
 |  | CLAUDE.md | Auto-memory |
 |---|---|---|
 | Chi scrive | Tu (a mano o via `/init`) | Claude (al volo durante sessioni) |

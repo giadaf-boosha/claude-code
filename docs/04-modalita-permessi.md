@@ -23,6 +23,8 @@ Cycle: `Shift+Tab` → `manual` → `acceptEdits` → `plan`.
 
 > **v2.1.200 (3 lug 2026)**: il mode precedentemente chiamato `default` e' stato rinominato `manual` in tutta la UI (CLI, VS Code, JetBrains). Comportamento invariato — solo letture auto-approvate. Aggiornare eventuali script che passavano `--permission-mode default` in `--permission-mode manual`.
 
+> **2026-07-10 (auto-update)**: auto mode (v2.1.205) blocca ora il tampering dei file di transcript di sessione e chiede conferma prima di un `rm -rf` su una variabile non risolvibile dal contesto. Le notifiche dei background task dichiarano ora esplicitamente "nessun input umano ricevuto", per prevenire l'esecuzione di approvazioni fabbricate nel transcript. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Vedi anche README "What's new today" del giorno.
+
 | Mode | Run senza prompt | Use case |
 |---|---|---|
 | `manual` | Solo reads | Sensitive work (ex `default`, rinominato v2.1.200) |

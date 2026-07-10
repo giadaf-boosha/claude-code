@@ -21,6 +21,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 ## 8.1 Dove vivono
 
+> **2026-07-10 (auto-update)**: i background agent (v2.1.206) si auto-aggiornano in background subito dopo un update del CLI, evitando l'upgrade lento al riattacco di una sessione stale. Fonte: [GitHub Releases v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206). Vedi anche README "What's new today" del giorno.
+
 | Scope | Path | Applies to |
 |---|---|---|
 | Enterprise | Managed settings | Tutti gli utenti dell'org |
