@@ -19,6 +19,8 @@ Reference completa CLI di Claude Code aggiornata a v2.1.119.
 
 ## 2.1 Installazione
 
+> **2026-07-10 (auto-update)**: l'auto-update del binario (v2.1.205) ora streamma il download su disco invece di bufferizzarlo in memoria, tagliando di ~400MB il picco di memoria dell'updater. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Vedi anche README "What's new today" del giorno.
+
 ```bash
 # macOS / Linux / WSL
 curl -fsSL https://claude.ai/install.sh | bash

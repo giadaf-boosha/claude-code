@@ -19,6 +19,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 ## 3.1 Tabella completa
 
+> **2026-07-10 (auto-update)**: v2.1.205/206 aggiungono suggerimenti di percorso a `/cd`, un check `/doctor` per sfoltire i `CLAUDE.md` versionati, auto-push su `remote.pushDefault` in `/commit-push-pr`, e `/doctor` diventa full setup checkup (alias `/checkup`). `/code-review` migliora la qualita' dei finding su claude-opus-4-8. Fonte: [GitHub Releases v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206) · [v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Vedi anche README "What's new today" del giorno.
+
 | Comando | Tipo | Funzione |
 |---|---|---|
 | `/add-dir <path>` | built-in | Aggiunge working directory file-access |
