@@ -15,6 +15,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
+> **2026-07-11 (auto-update)**: da v2.1.206 `/cd` suggerisce i path delle directory come `/add-dir`, `/commit-push-pr` auto-allowa il `git push` verso il remote di push configurato e `/login` supporta gli endpoint gateway pubblici Anthropic. `/security-review` guadagna un'integrazione GitHub Actions ufficiale per revisioni di sicurezza automatiche sulle PR. Fonte: [GitHub Releases v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206) · [Anthropic blog](https://www.anthropic.com/news/automate-security-reviews-with-claude-code). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.1 Tabella completa
