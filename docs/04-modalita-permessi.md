@@ -91,6 +91,8 @@ Da agosto 2025: Opus 4.x per plan + Sonnet per execution. [@_catwu](https://x.co
 
 Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permissions`: un classifier separato decide cosa Claude puo' fare senza chiedere.
 
+> **2026-07-11 (auto-update)**: da v2.1.207 auto mode e' disponibile su Bedrock, Vertex AI e Foundry **senza** l'opt-in `CLAUDE_CODE_ENABLE_AUTO_MODE` (disattivabile via `disableAutoMode`); da v2.1.205 una nuova rule blocca il tampering dei file di transcript della sessione. Fonte: [GitHub Releases v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207) · [v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Vedi anche README "What's new today" del giorno.
+
 ### Caratteristiche
 - Classifier model review actions (separato dal main model)
 - Boundaries dichiarate in conversation rispettate (ma non rules permanenti)

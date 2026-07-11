@@ -260,6 +260,8 @@ Da v2.1.111: read-only bash glob + `cd <project-dir> &&` no prompt.
 
 ## 18.5 Authentication
 
+> **2026-07-11 (auto-update)**: da v2.1.207 Bedrock, Vertex AI e Claude Platform su AWS passano a **Opus 4.8** come modello default (prima Opus 4.7). Fonte: [GitHub Releases v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207). Vedi anche README "What's new today" del giorno.
+
 ### Storage
 - macOS: Keychain (encrypted)
 - Linux/Windows: `~/.claude/.credentials.json` (mode 0600 / user profile ACLs)
