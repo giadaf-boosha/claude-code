@@ -111,6 +111,11 @@ Da Week 13: Claude apre app native, click UI, verifica. Vedi [17.7 Computer use]
 
 > Annuncio Claude Code in Desktop: [@_catwu](https://x.com/_catwu/status/2008628736409956395)
 
+### In-app browser (Week 28, 6-10 lug 2026)
+Desktop ha ora un browser integrato: Claude apre documentazione, design o qualsiasi sito esterno e legge, clicca, interagisce con le pagine — stessa modalita' gia' usata per le preview del dev server locale. Sandboxato e configurabile: si sceglie se le sessioni di navigazione persistono tra un task e l'altro, e classificatori di sicurezza rivedono le azioni compiute su siti esterni prima di eseguirle. Utile per task che richiedono di consultare docs esterne, verificare un design su Figma/Linear, o controllare rendering cross-browser senza uscire dalla sessione.
+
+<sub>Aggiornato 2026-07-11 via daily what's new. Fonte: [Week 28 digest](https://code.claude.com/docs/en/whats-new/2026-w28).</sub>
+
 ---
 
 ## 17.4 Web (`/en/claude-code-on-the-web`)
