@@ -42,7 +42,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/design-sync [pull\|push]` | built-in | Sync bidirezionale tra Claude Code e Claude Design: `pull` importa il design system nel repo (componenti, font, colori) per buildare con i componenti reali; `push` esporta il codice prodotto verso il canvas Claude Design. Richiede accesso a Claude Design (da 19 giu 2026). |
 | `/desktop` (alias `/app`) | built-in | Continua su Desktop app (macOS/Windows) |
 | `/diff` | built-in | Diff viewer interattivo (uncommitted + per-turn) |
-| `/doctor` | built-in | Diagnostica install + `f` per fix automatico |
+| `/doctor` (alias `/checkup`) | built-in | Diagnostica install + `f` per fix automatico. Da v2.1.205 e' un setup checkup completo: propone skill/MCP/plugin inutilizzati da rimuovere (in base al costo di context), deduplica `CLAUDE.md` locali contro le versioni committate e segnala hook lenti — riporta prima i risultati, chiede conferma prima di modificare |
 | `/effort [level\|auto]` | built-in | Imposta effort, slider interattivo, applica subito |
 | `/exit` (alias `/quit`) | built-in | Esci CLI |
 | `/export [filename]` | built-in | Esporta conversation come testo |
@@ -111,6 +111,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 <sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067391951725629941).</sub>
 <sub>Aggiornato 2026-07-08 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202).</sub>
+<sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205).</sub>
 
 ---
 

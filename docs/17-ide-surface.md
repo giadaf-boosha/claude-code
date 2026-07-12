@@ -111,6 +111,21 @@ Da Week 13: Claude apre app native, click UI, verifica. Vedi [17.7 Computer use]
 
 > Annuncio Claude Code in Desktop: [@_catwu](https://x.com/_catwu/status/2008628736409956395)
 
+### Browser in-app (10 lug 2026)
+
+Claude Code su Desktop include ora un browser integrato, sandboxato: Claude apre documentazione, design o qualsiasi sito esterno, legge la pagina, clicca ed interagisce — stesso modello gia' usato per i dev server locali, ma esteso al web pubblico. Elimina il copia-incolla di link tra browser esterno e sessione.
+
+- **Attivazione**: `Ctrl+Shift+B` (Windows) / `Cmd+Shift+B` (macOS)
+- **Sessioni**: persistenza configurabile — utile per login (incluso OAuth Google) che devono sopravvivere tra un task e l'altro
+- **Permessi per-sito**: al primo accesso a un dominio, Claude chiede `Allow once` / `Always allow` / `Deny`, coerente col resto del modello di permission
+- **Isolamento**: il browser gira sandboxato, separato dal browser di sistema dell'utente
+
+Nome MCP server riservato lato client: `Claude Browser` (insieme a `Claude Preview`) — i server MCP configurati dall'utente non possono registrarsi sotto questi nomi.
+
+> Annuncio: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279)
+
+<sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279).</sub>
+
 ---
 
 ## 17.4 Web (`/en/claude-code-on-the-web`)

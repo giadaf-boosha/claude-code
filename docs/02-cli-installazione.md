@@ -183,7 +183,9 @@ claude auth status         # stato auth
 claude --debug "api,hooks" # debug categorie
 ```
 
-`/doctor` ha modalita' "fix automatico" attivabile con `f`. `/heapdump` per troubleshooting memoria.
+`/doctor` (alias `/checkup` da v2.1.205) ha modalita' "fix automatico" attivabile con `f`; il checkup completo propone anche la rimozione di skill/MCP/plugin inutilizzati e la deduplica dei `CLAUDE.md` locali contro le versioni committate — riporta sempre i risultati prima di chiedere conferma. `/heapdump` per troubleshooting memoria.
+
+<sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205).</sub>
 
 ---
 
