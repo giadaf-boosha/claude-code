@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (8 luglio 2026, v2.1.204). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (11 luglio 2026, v2.1.207). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -537,8 +537,11 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 6 lug 2026 | **v2.1.202** | **Dynamic workflow size** in `/config`: linea guida small/medium/large su quanti agent Claude tende a usare in un [dynamic workflow](./24-workflows.md) (indicativa, non un tetto). Attributi OpenTelemetry `workflow.run_id`/`workflow.name` sugli agent spawnati da workflow. `/review <PR>` torna a single-pass veloce (multi-agent resta su `/code-review <level> <PR#>`). Fix: crash ricerca history Ctrl+R, `/rename` su sessioni background revertito al restart job, handshake mTLS durante rotazione certificati, comandi da Remote Control falliti in sessioni interattive, allegati Remote Control senza caption scartati silenziosamente, skill ricaricate che duplicavano le istruzioni nel context. |
 | 7 lug 2026 | v2.1.203 | Warning di scadenza login prima che interrompa le sessioni background. Badge grigio ⏠ in footer per il permission mode manual. Working directory di sessione esposte a MCP `roots/list` con change notification. Fix: falso rilevamento low-memory su macOS (regressione v2.1.196), sessioni background bloccate in modo permanente, PATH stale su Windows per background agent, worktree annidati, auto-upgrade daemon che uccideva sessioni. |
 | 8 lug 2026 | v2.1.204 | Fix: eventi hook non streammati durante `SessionStart` in sessioni headless, poteva causare idle-reap dei remote worker a meta' hook. |
+| 8 lug 2026 | **v2.1.205** | Auto mode rule blocca il tampering dei file di transcript di sessione e chiede conferma prima di un `rm -rf` su variabili non risolte. Auto-update ora scrive su disco in streaming invece di bufferizzare (-400 MB memoria). Fix: `--json-schema` produceva output non strutturato senza errore su schema invalidi; rimozione worktree su Windows cancellava file fuori dal worktree; sessioni background mostravano stato errato dopo resume; MCP init di un server bloccava l'inizializzazione di altri server validi. |
+| 10 lug 2026 | **v2.1.206** | **`/doctor`** diventa un checkup completo che diagnostica e puo' correggere i problemi trovati (alias **`/checkup`**). Suggerimenti path per `/cd`. `/commit-push-pr` auto-approva il push verso il remote configurato. Fix: errori di login scaduto con messaggi fuorvianti; MCP server che ignoravano `request_timeout_ms` per-server; server MCP OAuth che richiedevano ri-autenticazione manuale. Migliorata l'accuratezza del picker `/model` e la qualita' dei finding di `/code-review` su Opus 4.8. |
+| 11 lug 2026 | **v2.1.207** | **Auto mode su Bedrock, Vertex AI e Foundry senza opt-in**: non serve piu' `CLAUDE_CODE_ENABLE_AUTO_MODE=1` (disabilitabile con `disableAutoMode` nei settings). Bedrock/Vertex/Claude Platform su AWS passano a **Opus 4.8** come modello default. Fix: freeze del terminale e lag sui tasti con liste/tabelle/code block molto lunghi in streaming; falsi warning di prompt-injection su update di sistema benigni; auto-updater che sovrascriveva script di launcher custom in `~/.local/bin/claude`; dialog di consenso sicurezza mancante su settings managed remoti in run non interattivi (`-p`, SDK). |
 
-<sub>Aggiornato 2026-07-08 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202) · [v2.1.203](https://github.com/anthropics/claude-code/releases/tag/v2.1.203) · [v2.1.204](https://github.com/anthropics/claude-code/releases/tag/v2.1.204).</sub>
+<sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205) · [v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206) · [v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207).</sub>
 
 ---
 

@@ -138,6 +138,8 @@ Prima di questa release, auto mode richiedeva il provider diretto Anthropic (cla
 
 <sub>Aggiornato 2026-05-31 via daily what's new. Fonte: [GitHub Releases v2.1.158](https://github.com/anthropics/claude-code/releases/tag/v2.1.158).</sub>
 
+> **2026-07-12 (auto-update)**: da v2.1.207 auto mode su Bedrock, Vertex AI e Foundry non richiede piu' l'opt-in `CLAUDE_CODE_ENABLE_AUTO_MODE=1` (disabilitabile con `disableAutoMode` nei settings). Fonte: [GitHub Releases v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207). Vedi anche README "What's new today" del giorno.
+
 ### Hard deny rules (v2.1.134–136, Week 19)
 
 `settings.autoMode.hard_deny` definisce una lista di azioni bloccate incondizionatamente in auto mode, indipendentemente da eventuali eccezioni "allow" configurate. A differenza di `soft_deny`, le hard deny non possono essere sovrascritte da allow rules.

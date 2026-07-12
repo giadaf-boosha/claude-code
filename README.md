@@ -8,11 +8,12 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-08)
+## What's new today (2026-07-12)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Dynamic workflow size** in `/config` (v2.1.202, 6 lug): linea guida small/medium/large su quanti agent Claude tende a usare quando scrive un [dynamic workflow](./docs/24-workflows.md) — indicativa, non un tetto imposto dal runtime. Stessa release: attributi OpenTelemetry `workflow.run_id`/`workflow.name` per ricostruire l'attivita' di un run, e `/review <PR>` torna a single-pass veloce (multi-agent resta su `/code-review <level> <PR#>`). Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Doc: [docs/24-workflows.md](./docs/24-workflows.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.207** (11 lug): auto mode su Bedrock, Vertex AI e Foundry non richiede piu' l'opt-in `CLAUDE_CODE_ENABLE_AUTO_MODE=1` (disabilitabile via `disableAutoMode`); Bedrock/Vertex/Claude Platform su AWS passano a Opus 4.8 come modello default. Fix: freeze terminale su liste/tabelle molto lunghe in streaming, falsi warning prompt-injection, auto-updater che sovrascriveva launcher custom. Fonte: [GitHub Releases v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207). Vedi [docs/04-modalita-permessi.md § Auto mode](./docs/04-modalita-permessi.md) e [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/doctor` diventa `/checkup`** (v2.1.206, 10 lug): checkup completo che diagnostica e puo' correggere in autonomia — skill/MCP/plugin inutilizzati, dedup `CLAUDE.md` locale vs versionato, hook lenti; chiede conferma prima di modificare qualsiasi cosa. Fonte: [@bcherny](https://x.com/bcherny/status/2074997570317779038) · [GitHub Releases v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206). Vedi [docs/03-slash-commands.md § 3.1](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

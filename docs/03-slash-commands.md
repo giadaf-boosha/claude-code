@@ -17,6 +17,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 ---
 
+> **2026-07-12 (auto-update)**: da v2.1.206 `/doctor` diventa un checkup completo che diagnostica e puo' correggere i problemi (alias `/checkup`) — skill/MCP/plugin inutilizzati, dedup `CLAUDE.md`, hook lenti. Fonte: [@bcherny](https://x.com/bcherny/status/2074997570317779038) · [GitHub Releases v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206). Vedi anche README "What's new today" del giorno.
+
 ## 3.1 Tabella completa
 
 | Comando | Tipo | Funzione |
