@@ -190,6 +190,8 @@ v2.1.170 (9 giugno 2026). `claude-fable-5` e' il primo modello **Mythos-class** 
 ### Disponibilita'
 Generale su Claude API, Claude Platform on AWS, Amazon Bedrock, Vertex AI e Microsoft Foundry (dal 9 giugno 2026).
 
+> **2026-07-13 (auto-update)**: terza proroga dell'accesso a Fable 5 incluso nei piani paid (Pro/Max/Team/Enterprise a seat) senza usage credit, ora fino al 19 luglio 2026 — stessa scadenza per i limiti settimanali di Claude Code alzati del 50%. Fonte: [@claudeai](https://x.com/claudeai/status/2076351399999557669). Vedi anche README "What's new today" del giorno.
+
 ### Relazione con Opus 4.8
 Fable 5 supera Opus 4.8 in capacita'. Se una richiesta viene rifiutata dai classifier di sicurezza, il meccanismo `fallbackModel` puo' riservare automaticamente su Opus 4.8. Il parametro `fallbacks` nell'API gestisce questo caso lato server.
 

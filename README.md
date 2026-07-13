@@ -8,12 +8,11 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-12)
+## What's new today (2026-07-13)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Browser in-app su Desktop**: Claude Code su Desktop apre un browser integrato, sandboxato, con cui Claude legge documentazione, design e siti esterni, clicca ed interagisce come gia' fa coi dev server locali — sessioni persistenti opzionali, permessi per-sito (Allow once / Always / Deny). Scorciatoia `Ctrl+Shift+B` (Windows) / `Cmd+Shift+B` (macOS). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/checkup`** (v2.1.205, 8 lug): nuovo alias di `/doctor` che diventa un vero setup checkup — diagnostica e propone fix per skill/MCP/plugin inutilizzati (in base al costo di context), deduplica `CLAUDE.md` locali contro le versioni committate e segnala hook lenti; riporta i risultati e chiede conferma prima di modificare nulla. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/02-cli-installazione.md](./docs/02-cli-installazione.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Fable 5 incluso nei piani paid + limiti settimanali CC +50%, estesi al 19 lug**: Anthropic proroga per la terza volta l'accesso a Claude Fable 5 senza usage credit su Pro/Max/Team/Enterprise a seat, e mantiene i limiti settimanali di Claude Code alzati del 50% — entrambi validi fino al 19 luglio 2026, 23:59:59 PT. Fonte: [@claudeai](https://x.com/claudeai/status/2076351399999557669). Doc: [docs/05-fast-mode-1m-context.md § 5.7](./docs/05-fast-mode-1m-context.md).
 
 ---
 
