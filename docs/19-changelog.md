@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (11 luglio 2026, v2.1.207). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (14 luglio 2026, v2.1.208). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -541,8 +541,11 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 9 lug 2026 | v2.1.206 | Directory path suggestion su `/cd` (come `/add-dir`). `/doctor`/`/checkup`: check per il trimming dei `CLAUDE.md` committati. `/commit-push-pr` auto-allow su `git push` verso il remote configurato (non solo `origin`). `EnterWorktree` chiede conferma prima di entrare in un worktree fuori da `.claude/worktrees/`. Background agent aggiornati subito dopo l'update, non al primo attach. Fix: `/model`, MCP timeout per-server, OAuth MCP re-auth, `claude rm`/`claude agents` roster desync. |
 | 10 lug 2026 | — | **Browser in-app su Desktop**: Claude Code su Desktop apre un browser integrato sandboxato — Claude legge documentazione, design e siti esterni, clicca ed interagisce come coi dev server locali. Sessioni persistenti opzionali, permessi per-sito (Allow once / Always / Deny), scorciatoia `Ctrl+Shift+B` / `Cmd+Shift+B`. [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279). Vedi [17.3 Desktop app](./17-ide-surface.md#173-desktop-app-endesktop). |
 | 11 lug 2026 | v2.1.207 | Auto mode disponibile senza opt-in `CLAUDE_CODE_ENABLE_AUTO_MODE` su Bedrock/Vertex/Foundry (`disableAutoMode` per disattivare). Bedrock/Vertex/Claude Platform su AWS passano a Opus 4.8 come default. Fix shell-injection: `${user_config.*}` non piu' interpolato in hook/monitor/MCP headersHelper shell-form. Fix: freeze terminale su risposte molto lunghe, consenso remote settings non mostrato in run non interattivi, falsi warning prompt-injection su aggiornamenti di sistema. |
+| 14 lug 2026 | **v2.1.208** | **Screen reader mode**: rendering plain-text opt-in (`claude --ax-screen-reader`, `CLAUDE_AX_SCREEN_READER=1` o `"axScreenReader": true`). **`vimInsertModeRemaps`**: mappa sequenze insert-mode a due tasti (es. `jj` → Escape) in vim mode. **`CLAUDE_CODE_PROCESS_WRAPPER`**: agent view e background service instradano ogni self-spawn attraverso un eseguibile wrapper richiesto da launcher aziendali. Mouse-click su multi-select menu e righe "Other" in fullscreen. Giro affidabilita' importante: transcript di sessione fino a 79x piu' leggeri in sessioni edit-heavy, tool round fino a 7x piu' veloci con molti server MCP, chiusi diversi memory leak (stderr MCP stdio, documenti LSP, hook async, cache lettura file), fix crash su GOAWAY HTTP/2 e falso reset del context window dopo auto-update. |
 
 <sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205) · [v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206) · [v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279).</sub>
+
+<sub>Aggiornato 2026-07-14 via daily what's new. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208).</sub>
 
 ---
 

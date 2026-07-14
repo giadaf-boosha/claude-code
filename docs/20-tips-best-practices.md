@@ -324,6 +324,8 @@ Estratte dalla cheat sheet community [bhancockio/claude-code-cheat-sheet](https:
 - **`Ctrl+T`**: apre il pannello Tasks/todos correnti senza interrompere il flusso.
 - **`Ctrl+O`**: apre il pannello Thinking per vedere il ragionamento extended thinking in tempo reale.
 - **Vim mode avanzato**: oltre a `i/a/o`, supportati `dw/de/db/dd/D` (delete), `cw/ce/cb/cc/C` (change), `.` (ripeti ultima azione). Attivazione globale: `claude config set -g vimMode true`. Visual mode `v`/`V` da v2.1.118.
+
+  > **2026-07-14 (auto-update)**: nuova setting **`vimInsertModeRemaps`** mappa sequenze insert-mode a due tasti (es. `jj` → Escape) in vim mode, senza plugin esterni. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi anche README "What's new today" del giorno.
 - **Output style "Explanatory"** combinato con `Ctrl+O`: vedi sia il "perche'" stilistico sia il thinking grezzo — ottimo per onboarding su codebase nuove.
 - **Custom keybindings VS Code/Cursor** per terminale: `Cmd+Shift+C` apre nuovo terminale come tab editor, `Cmd+Shift+R` rinomina, `Cmd+Shift+[ / ]` naviga tra terminali. Config in `keybindings.json`.
 

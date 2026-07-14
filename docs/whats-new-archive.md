@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-07-13
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-07-12
 
 - **Browser in-app su Desktop**: Claude Code su Desktop apre un browser integrato, sandboxato, con cui Claude legge documentazione, design e siti esterni, clicca ed interagisce come gia' fa coi dev server locali — sessioni persistenti opzionali, permessi per-sito (Allow once / Always / Deny). Scorciatoia `Ctrl+Shift+B` (Windows) / `Cmd+Shift+B` (macOS). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279). Doc: [docs/17-ide-surface.md](./17-ide-surface.md), [docs/19-changelog.md](./19-changelog.md).

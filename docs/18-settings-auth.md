@@ -116,6 +116,8 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 
 <sub>Aggiornato 2026-06-18 via daily what's new. Fonte: [GitHub Releases v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181).</sub>
 
+> **2026-07-14 (auto-update)**: nuovo **screen reader mode** — rendering plain-text opt-in per utenti di screen reader. Attivazione: flag `claude --ax-screen-reader`, env var `CLAUDE_AX_SCREEN_READER=1` o `"axScreenReader": true` in settings. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi anche README "What's new today" del giorno.
+
 ### Memory
 - `autoMemoryEnabled`, `autoMemoryDirectory`, `cleanupPeriodDays`, `plansDirectory`
 
@@ -143,6 +145,8 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 > - Toggle per-modello in `/model` (settings persistente per sessione)
 >
 > I provider third-party (Bedrock, Vertex, Foundry) rimangono invariati — la disabilitazione si applica solo alla Claude API diretta.
+
+> **2026-07-14 (auto-update)**: nuova env var **`CLAUDE_CODE_PROCESS_WRAPPER`** — agent view e background service instradano ogni self-spawn di Claude Code attraverso un eseguibile wrapper richiesto, per rispettare launcher aziendali (compliance enterprise su processi figli). Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi anche README "What's new today" del giorno.
 
 ### Worktree
 - `worktree.symlinkDirectories`, `worktree.sparsePaths`

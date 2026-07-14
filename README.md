@@ -1,18 +1,21 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **13 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.207** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **14 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.208** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-13)
+## What's new today (2026-07-14)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.208** introduce lo **screen reader mode** nativo (`claude --ax-screen-reader` / `axScreenReader`), rendering plain-text opt-in per utenti di screen reader. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi [docs/18 § TUI/display](./docs/18-settings-auth.md) e [docs/19 § changelog](./docs/19-changelog.md).
+- **`vimInsertModeRemaps`** (v2.1.208): nuova setting mappa sequenze insert-mode a due tasti (es. `jj` → Escape) in vim mode, senza plugin esterni. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi [docs/20 § Vim mode avanzato](./docs/20-tips-best-practices.md).
+- **`CLAUDE_CODE_PROCESS_WRAPPER`** (v2.1.208): agent view e background service instradano ogni self-spawn attraverso un eseguibile wrapper richiesto — supporto per launcher aziendali. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi [docs/18 § Advanced](./docs/18-settings-auth.md).
+- **Giro affidabilita' v2.1.208**: transcript di sessione fino a 79x piu' leggeri in sessioni edit-heavy, tool round fino a 7x piu' veloci con molti server MCP, chiusi diversi memory leak (MCP stdio, documenti LSP, hook async), fix crash su GOAWAY HTTP/2 e falso reset del context window dopo auto-update. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi [docs/19 § changelog](./docs/19-changelog.md).
 
 ---
 
