@@ -142,6 +142,9 @@ Fonte: [`/en/cli-reference`](https://code.claude.com/docs/en/cli-reference).
 - `--chrome` / `--no-chrome`
 - `--verbose` / `--version`, `-v`
 
+### Accessibilita' (da v2.1.208)
+- `--ax-screen-reader` — rendering plain-text ottimizzato per tecnologie assistive (alias `CLAUDE_AX_SCREEN_READER=1` o `"axScreenReader": true` in `settings.json`); vedi [17.13](./17-ide-surface.md#1713-accessibilita--screen-reader-mode-v21208)
+
 > Per la lista esaustiva: [`/en/cli-reference`](https://code.claude.com/docs/en/cli-reference).
 
 ---
@@ -171,6 +174,10 @@ Fonte: [`/en/cli-reference`](https://code.claude.com/docs/en/cli-reference).
 | `SLASH_COMMAND_TOOL_CHAR_BUDGET` | Cap char per skill (default 1% context, fallback 8000) |
 | `ENABLE_PROMPT_CACHING_1H` | Opt-in 1h TTL cache (v2.1.108) |
 | `FORCE_PROMPT_CACHING_5M` | Override TTL a 5m |
+| `CLAUDE_AX_SCREEN_READER=1` | Screen reader mode: rendering plain-text (v2.1.208) |
+| `CLAUDE_CODE_PROCESS_WRAPPER` | Eseguibile richiesto per ogni self-spawn CC (launcher aziendali, v2.1.208) |
+
+<sub>Aggiornato 2026-07-15 via daily what's new. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208).</sub>
 
 ---
 

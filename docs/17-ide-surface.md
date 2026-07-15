@@ -313,6 +313,28 @@ Oltre alle surface ufficiali Anthropic (CLI, Desktop, VS Code, JetBrains, Web, S
 
 ---
 
+## 17.13 Accessibilita' — screen reader mode (v2.1.208)
+
+Da v2.1.208 la CLI supporta uno **screen reader mode** opt-in: rendering plain-text pensato per essere letto da tecnologie assistive invece del layout a riquadri/colori pensato per terminali visuali.
+
+**Attivazione** (una delle tre):
+```bash
+claude --ax-screen-reader
+```
+```bash
+export CLAUDE_AX_SCREEN_READER=1
+```
+```json
+// settings.json
+{ "axScreenReader": true }
+```
+
+Stessa release: `vimInsertModeRemaps` mappa sequenze a due tasti in modalita' insert di Vim mode (es. `jj` → Escape, utile su tastiere/dispositivi assistivi dove `Esc` e' scomodo da raggiungere) e `CLAUDE_CODE_PROCESS_WRAPPER` fa rilanciare ogni self-spawn di Claude Code (agent view, background service) attraverso un eseguibile wrapper richiesto da launcher aziendali.
+
+<sub>Aggiornato 2026-07-15 via daily what's new. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208).</sub>
+
+---
+
 ## 17.11 Fonti aggregate
 
 - VS Code: [`/en/vs-code`](https://code.claude.com/docs/en/vs-code)
