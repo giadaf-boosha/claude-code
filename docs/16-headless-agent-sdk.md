@@ -15,6 +15,8 @@ Per usare Claude Code in **CI/CD**, **batch**, o come **libreria** in app Python
 
 **Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per quando usare CC vs SDK leggero.
 
+> **2026-07-15 (auto-update)**: v2.1.208 riduce fino a 7x l'overhead per tool call nelle sessioni print/SDK con molti server MCP (cache del tool-pool assembly) e riduce i transcript fino a 79x nelle sessioni edit-heavy. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 16.1 CLI Headless (`-p`)

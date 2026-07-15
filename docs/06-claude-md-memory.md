@@ -110,6 +110,8 @@ Cosa caricare e' deciso dal motore di context engineering, non da te (vedi anche
 ### Cosa fa
 Claude scrive memorie persistenti (file markdown) in `~/.claude/projects/<project-key>/memory/`. Il file index e' `MEMORY.md`. Le prime 200 righe (cap 25KB) sono caricate **automaticamente** ogni sessione di quel progetto. Topic file (`debugging.md`, `architecture.md`) sono lazy-loaded on demand.
 
+> **2026-07-15 (auto-update)**: v2.1.210 fa si' che le scritture di memoria che eccedono il limite di lettura di `MEMORY.md` producano un errore esplicito invece di un troncamento silenzioso. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210). Vedi anche README "What's new today" del giorno.
+
 ### Locations
 ```
 ~/.claude/projects/<sanitized-cwd>/memory/

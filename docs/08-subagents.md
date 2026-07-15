@@ -180,6 +180,8 @@ Gli agenti background che lavorano in un git worktree possono ora chiudere il lo
 
 <sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
 
+> **2026-07-15 (auto-update)**: v2.1.210 corregge i subagent con `isolation: 'worktree'` che potevano eseguire comandi git-mutanti sul repo principale invece che sul proprio worktree isolato. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.7 Subagent vs Agent Teams
