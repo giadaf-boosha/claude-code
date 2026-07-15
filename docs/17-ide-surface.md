@@ -15,6 +15,8 @@ VS Code, JetBrains, Desktop, Web, Slack, Channels, Remote Control. Tutti i modi 
 
 **Per il deep-dive**: [01 — Snapshot § 1.2 Surface](./01-snapshot.md#12-surface---dove-si-usa-claude-code).
 
+> **2026-07-15 (auto-update)**: v2.1.208 aggiunge lo screen reader mode opt-in (`claude --ax-screen-reader` / `CLAUDE_AX_SCREEN_READER=1` / `axScreenReader` in settings) — rendering plain-text per screen reader. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 17.1 VS Code

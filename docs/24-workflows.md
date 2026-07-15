@@ -80,6 +80,8 @@ Ultracode combina effort `xhigh` con orchestrazione automatica dei workflow: Cla
 
 Una singola richiesta puo' diventare piu' workflow in fila (uno per capire il codice, uno per la modifica, uno per verificarla). Vale per **ogni** task della sessione → piu' token e piu' tempo. Dura per la sessione corrente e si resetta a nuova sessione; torna indietro con `/effort high`. Disponibile solo su modelli che supportano effort `xhigh`.
 
+> **2026-07-15 (auto-update)**: v2.1.210 corregge un bug per cui la keyword `ultracode` poteva attivarsi su input non generati da un umano (webhook, commenti PR relayati) — mitigazione contro trigger involontari di workflow multi-agente. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 24.4 Approvazione del piano prima del run

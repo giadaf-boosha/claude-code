@@ -1,18 +1,22 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **14 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.207** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **15 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.210** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-14)
+## What's new today (2026-07-15)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.208** (14 lug): rilascia lo **screen reader mode** (`claude --ax-screen-reader` / `CLAUDE_AX_SCREEN_READER=1`), `vimInsertModeRemaps` per vim mode e `CLAUDE_CODE_PROCESS_WRAPPER` per launcher aziendali; migliora le performance fino a **7x** nei tool round di sessioni print/SDK con molti server MCP e riduce i transcript fino a **79x** nelle sessioni edit-heavy. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi [docs/17 § Surface](./docs/17-ide-surface.md), [docs/16 § Headless/SDK](./docs/16-headless-agent-sdk.md), [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.209** (14 lug, hotfix): risolve il blocco di `/model` e altri dialog nelle sessioni background di `claude agents`, regressione della release precedente. Fonte: [GitHub Releases v2.1.209](https://github.com/anthropics/claude-code/releases/tag/v2.1.209). Vedi [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.210** (14 lug): aggiunge warning di avvio per le regole permission `Write(path)`, `NotebookEdit(path)` e `Glob(path)`; il classifier di auto mode usa ora **Sonnet 5 di default per sessioni esterne**. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210). Vedi [docs/04 § 4.3 Auto mode](./docs/04-modalita-permessi.md), [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.210**: corregge la keyword `ultracode` che poteva attivarsi su input non generati da un umano (webhook, commenti PR relayati) — mitigazione contro trigger involontari di workflow multi-agente. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210). Vedi [docs/24 § B](./docs/24-workflows.md), [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.210**: risolve i subagent con `isolation: 'worktree'` che potevano eseguire comandi git-mutanti sul repo principale invece che sul proprio worktree isolato; le scritture di memoria oltre il limite di lettura di `MEMORY.md` producono ora un errore esplicito invece di un troncamento silenzioso. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210). Vedi [docs/08 § 8.6c](./docs/08-subagents.md), [docs/06 § 6.5](./docs/06-claude-md-memory.md), [docs/19 § 19.9](./docs/19-changelog.md).
 
 ---
 
