@@ -326,6 +326,9 @@ Estratte dalla cheat sheet community [bhancockio/claude-code-cheat-sheet](https:
 - **Vim mode avanzato**: oltre a `i/a/o`, supportati `dw/de/db/dd/D` (delete), `cw/ce/cb/cc/C` (change), `.` (ripeti ultima azione). Attivazione globale: `claude config set -g vimMode true`. Visual mode `v`/`V` da v2.1.118.
 - **Output style "Explanatory"** combinato con `Ctrl+O`: vedi sia il "perche'" stilistico sia il thinking grezzo — ottimo per onboarding su codebase nuove.
 - **Custom keybindings VS Code/Cursor** per terminale: `Cmd+Shift+C` apre nuovo terminale come tab editor, `Cmd+Shift+R` rinomina, `Cmd+Shift+[ / ]` naviga tra terminali. Config in `keybindings.json`.
+- **Screen reader mode** (`claude --ax-screen-reader`, v2.1.208): rendering plain-text opt-in per utenti screen reader (anche `CLAUDE_AX_SCREEN_READER=1` o setting `axScreenReader`). **`vimInsertModeRemaps`** (v2.1.208): mappa sequenze insert-mode come `jj` a Escape in vim mode.
+
+> **2026-07-16 (auto-update)**: v2.1.208 aggiunge screen reader mode e `vimInsertModeRemaps`, oltre a round di tool fino a 7x piu' veloci con molti server MCP e transcript ridotti fino a 79x in sessioni edit-heavy. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi anche README "What's new today" del giorno.
 
 ---
 
