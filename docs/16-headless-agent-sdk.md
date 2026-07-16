@@ -43,6 +43,8 @@ Requires `ANTHROPIC_API_KEY` o `apiKeyHelper` (NON legge `CLAUDE_CODE_OAUTH_TOKE
 - `system/plugin_install` (sotto `CLAUDE_CODE_SYNC_PLUGIN_INSTALL`)
 - `stream_event` (text deltas)
 
+> **2026-07-16 (auto-update)**: nuovo flag `--forward-subagent-text` (+ env var `CLAUDE_CODE_FORWARD_SUBAGENT_TEXT`, v2.1.211) include testo e thinking dei subagent nello stream-json output, prima visibile solo il risultato finale. Fonte: [GitHub Releases v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211). Vedi anche README "What's new today" del giorno.
+
 ### Structured outputs
 
 ```bash

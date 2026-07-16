@@ -38,6 +38,8 @@ CLI: `--permission-mode manual|acceptEdits|plan|auto|dontAsk|bypassPermissions`.
 
 <sub>Aggiornato 2026-07-04 via daily what's new. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200).</sub>
 
+> **2026-07-16 (auto-update)**: v2.1.210 — le regole permesso "always allow" si salvano ora a livello di repository root (persistono tra worktree e sessioni); auto mode usa Sonnet 5 come classifier di default per sessioni esterne. v2.1.211 — auto mode non sovrascrive piu' la decisione `ask` di un hook PreToolUse su Bash non sandboxato, e i permission preview inoltrati a chat esterne neutralizzano ora caratteri bidirectional-override/zero-width/look-alike che potevano alterare visivamente il messaggio di approvazione. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210) · [v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211). Vedi anche README "What's new today" del giorno.
+
 ### Protected paths (mai auto-approved)
 - Directories: `.git`, `.vscode`, `.idea`, `.husky`, `.claude` (eccetto `.claude/commands`, `.claude/agents`, `.claude/skills`, `.claude/worktrees`)
 - Files: `.gitconfig`, `.gitmodules`, `.bashrc`, `.zshrc`, `.profile`, `.ripgreprc`, `.mcp.json`, `.claude.json`
