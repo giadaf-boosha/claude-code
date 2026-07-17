@@ -5,6 +5,8 @@
 
 Gli hook permettono di intercettare deterministicamente il lifecycle di Claude Code: 28+ eventi, 5 tipi di handler, condizioni `if`, scope multipli.
 
+> **2026-07-17 (auto-update)**: fix di sicurezza in v2.1.211 — un hook `PreToolUse` con decisione `ask` su Bash non sandboxato ora blocca sempre con un prompt; l'auto mode non puo' piu' scavalcare la decisione dell'hook. Fonte: [release v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Gli hook sono **interrupt deterministici** del lifecycle agent. Sono il modo in cui dichiari **regole non negoziabili** che il modello non puo' aggirare: il check viene eseguito da uno script (shell, HTTP, MCP tool), non dall'LLM. Layer 3 dell'Authority dell'harness.

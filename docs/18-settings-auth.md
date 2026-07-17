@@ -5,6 +5,8 @@
 
 Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedrock/Vertex/Foundry, OAuth).
 
+> **2026-07-17 (auto-update)**: v2.1.208 aggiunge la screen reader mode (`claude --ax-screen-reader` o setting) con rendering plain-text, e la env var `CLAUDE_CODE_PROCESS_WRAPPER` per requisiti di launcher aziendali attorno al processo CLI. Fonte: [release v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > I settings sono la **configurazione dichiarativa dell'harness**. Cinque livelli di precedenza (managed > CLI args > local project > shared project > user) permettono di stratificare regole: enterprise impone policy, team condivide convenzioni, dev override locali. La sintassi permission e' Layer 1 dell'Authority.

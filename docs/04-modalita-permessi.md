@@ -5,6 +5,8 @@
 
 Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoint per il rollback. Questo documento li copre tutti.
 
+> **2026-07-17 (auto-update)**: fix di sicurezza in v2.1.212 — plan mode non esegue piu' comandi Bash che modificano file (`touch`, `rm`) senza prompt di permesso ne' callback `canUseTool` SDK. In v2.1.211, un hook `PreToolUse` con decisione `ask` su Bash non sandboxato blocca sempre: l'auto mode non lo scavalca piu'. Fonte: [release v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212) · [v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Le modalita' permessi sono il **Layer 1** dell'Authority dell'harness: dichiari cosa l'agent puo' fare a runtime. La sandbox e' il **Layer 2** (OS-level). I checkpoint sono il **layer State**: snapshot per recovery deterministico.

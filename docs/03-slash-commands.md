@@ -5,6 +5,8 @@
 
 Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
 
+> **2026-07-17 (auto-update)**: `/fork` (v2.1.212) clona la conversazione in una sessione background dedicata mantenendo il lavoro corrente; il subagent in-session che lanciava prima diventa `/subtask`. `/resume` apre un picker anche per sessioni cancellate. Fonte: [release v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Gli slash commands sono il **vocabolario condiviso** tra utente e agent. Sono shortcut a workflow ricorrenti: ognuno e' un'intent capture pre-codificato. I bundled skills (`/loop`, `/simplify`, `/batch`, `/debug`) sono skill markdown auto-installate; i built-in (`/plan`, `/compact`, `/effort`) sono comandi nativi del CLI.
