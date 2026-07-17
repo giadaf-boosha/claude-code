@@ -1,18 +1,21 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **14 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.207** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **17 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.212** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-14)
+## What's new today (2026-07-17)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
+> _Nota: le run daily del 15 e 16 luglio non risultano eseguite — questo aggiornamento recupera anche le versioni CLI rilasciate in quei giorni._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.212** (17 lug, priorita' MAX): `/fork` clona la conversazione in una sessione background dedicata mantenendo il lavoro corrente — il subagent in-session che lanciava prima diventa `/subtask`. Nuovi limiti per sessione su WebSearch e spawn subagenti (default 200, reset con `/clear`). Tool call MCP oltre 2 minuti passano automaticamente in background. `/resume` apre un picker anche per sessioni cancellate. **Fix di sicurezza**: plan mode non esegue piu' comandi Bash che modificano file (`touch`, `rm`) senza permesso. Fonte: [release v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212). Vedi [docs/03 § Slash commands](./docs/03-slash-commands.md), [docs/08 § Subagents](./docs/08-subagents.md), [docs/04 § Permessi](./docs/04-modalita-permessi.md), [docs/10 § MCP](./docs/10-mcp.md), [docs/19 § Changelog](./docs/19-changelog.md).
+- **CLI v2.1.211** (15 lug, priorita' alta): nuovo flag `--forward-subagent-text` per includere testo/thinking dei subagent nello stream-json. **Fix di sicurezza**: le permission preview inoltrate in chat neutralizzano ora caratteri bidirezionali/zero-width/look-alike usati per falsificare visivamente il prompt di approvazione. Un hook `PreToolUse` con decisione `ask` su Bash non sandboxato blocca sempre, l'auto mode non lo scavalca piu'. Fonte: [release v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211). Vedi [docs/04 § Permessi](./docs/04-modalita-permessi.md), [docs/07 § Hooks](./docs/07-hooks.md), [docs/19 § Changelog](./docs/19-changelog.md).
+- **CLI v2.1.208–210** (14 lug, priorita' alta): **screen reader mode** (`claude --ax-screen-reader`) con rendering plain-text; `vimInsertModeRemaps` per sequenze come `jj` → Escape; nuova env var `CLAUDE_CODE_PROCESS_WRAPPER` per launcher aziendali; contatore tempo trascorso live nei tool summary collassati; fix subagent isolati che leggevano comandi dal repo del parent anziche' dal proprio worktree. Fonte: [release v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208) · [v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210). Vedi [docs/18 § Settings](./docs/18-settings-auth.md), [docs/08 § Subagents](./docs/08-subagents.md), [docs/19 § Changelog](./docs/19-changelog.md).
 
 ---
 
