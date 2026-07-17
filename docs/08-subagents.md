@@ -133,9 +133,12 @@ Skill con `context: fork` + `agent: Explore` → il body della skill diventa tas
 |---|---|
 | `claude --continue --fork-session` | Resume + branching senza perdere session originale |
 | `claude --resume X --fork-session` | Stesso ma con session ID specifico |
-| `CLAUDE_CODE_FORK_SUBAGENT=1` + `/fork` | Spawn come subagent |
+| `/subtask` | Spawn di un subagent **nella sessione corrente** — comportamento in-session che fino a v2.1.211 era quello di `/fork` |
+| `/fork` | Da v2.1.212: copia l'intera conversazione in una **nuova sessione background** (riga propria in `claude agents`), non piu' un subagent in-sessione — continui a lavorare in primo piano mentre la copia procede per conto suo |
 
-Da v2.1.117: forked subagents su external builds (`CLAUDE_CODE_FORK_SUBAGENT=1`).
+Da v2.1.117: forked subagents su external builds (`CLAUDE_CODE_FORK_SUBAGENT=1`). Il redesign di v2.1.212 separa i due casi d'uso che prima condividevano `/fork`: esplorazione parallela in background (`/fork`, ora una sessione a se stante che sopravvive anche se chiudi il terminale) vs. delega di un sotto-task nella conversazione attiva (`/subtask`, l'equivalente dell'Agent tool invocato dal prompt).
+
+<sub>Aggiornato 2026-07-17 via daily what's new. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212).</sub>
 
 ---
 
