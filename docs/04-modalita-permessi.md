@@ -36,6 +36,8 @@ CLI: `--permission-mode manual|acceptEdits|plan|auto|dontAsk|bypassPermissions`.
 
 > **`AskUserQuestion` (v2.1.200)**: i dialog non auto-continuano piu' dopo timeout idle — richiedono risposta esplicita. Per le sessioni background che si affidavano all'auto-continue: `/config` per riattivarla o strutturare il task per evitare pause.
 
+> **2026-07-18 (auto-update)**: v2.1.214 chiude un permission-check bypass su PowerShell 5.1 e rende piu' severi i controlli Bash (comandi oltre 10.000 caratteri, redirect di file descriptor); v2.1.211 neutralizza caratteri bidirezionali/zero-width nelle anteprime permessi che potevano falsificare il prompt di approvazione. Fonte: [GitHub Releases v2.1.214](https://github.com/anthropics/claude-code/releases/tag/v2.1.214), [v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211). Vedi anche README "What's new today" del giorno.
+
 <sub>Aggiornato 2026-07-04 via daily what's new. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200).</sub>
 
 ### Protected paths (mai auto-approved)

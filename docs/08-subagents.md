@@ -17,6 +17,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 > "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions." — [`/en/sub-agents`](https://code.claude.com/docs/en/sub-agents)
 
+> **2026-07-18 (auto-update)**: v2.1.212 cambia `/fork`, che ora copia la conversazione in una nuova sessione background invece di lanciare un subagente in-sessione (comportamento spostato su `/subtask`); aggiunge un cap di 200 subagent spawn/sessione (`CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION`). v2.1.210 corregge i subagenti `isolation: 'worktree'` che potevano eseguire comandi git sul repo principale invece che sul proprio worktree. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212), [v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.1 Dove vivono

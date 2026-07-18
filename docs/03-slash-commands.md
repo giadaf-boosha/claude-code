@@ -15,6 +15,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
+> **2026-07-18 (auto-update)**: v2.1.212 cambia il comportamento di `/fork`, che ora copia la conversazione in una nuova sessione background (riga propria in `claude agents`) invece di lanciare un subagente in-sessione — il vecchio comportamento e' ora `/subtask`. `/resume` in agent view apre inoltre un picker di sessioni passate, incluse quelle eliminate dalla lista. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.1 Tabella completa

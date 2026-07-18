@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-07-18 (auto-update)**: v2.1.208 introduce la screen reader mode opt-in (`claude --ax-screen-reader`, env `CLAUDE_AX_SCREEN_READER=1`, o setting `"axScreenReader": true`) con rendering plain-text per utenti screen reader. Fonte: [GitHub Releases v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)
