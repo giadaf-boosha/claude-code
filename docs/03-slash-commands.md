@@ -25,7 +25,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/agents` | built-in | Gestione [subagents](./08-subagents.md) |
 | `/autofix-pr [prompt]` | built-in | Spawn web session che watcha la PR e pusha fix su CI failure / review comment (richiede `gh`) |
 | `/batch <instruction>` | **Skill** | Refactor large-scale: 5-30 unit, 1 worktree+PR per agente |
-| `/branch [name]` (alias `/fork`) | built-in | Branch della conversazione |
+| `/branch [name]` (alias `/fork`) | built-in | Copia la conversazione in una nuova **sessione background** (riga separata in `claude agents`), lasciando libero il thread principale — non spawna piu' un subagent in-sessione (quel comportamento e' ora `/subtask`, da v2.1.212) |
 | `/btw <question>` | built-in | Side question senza inquinare la conversation |
 | `/cd <path>` | built-in | Sposta la sessione in una nuova working directory senza rompere il prompt cache (da v2.1.169) |
 | `/chrome` | built-in | Configura Claude in Chrome |
@@ -80,7 +80,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/remote-control` (alias `/rc`) | built-in | Espone sessione a [Remote Control](./17-ide-surface.md#remote-control) |
 | `/remote-env` | built-in | Configura env remote per `--remote` |
 | `/rename [name]` | built-in | Rinomina sessione |
-| `/resume [session\|PR-URL]` (alias `/continue`) | built-in | Riprende sessione per ID/nome; accetta URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) per trovare la sessione che ha creato quella PR (da v2.1.122). Da v2.1.144 include anche le sessioni background avviate via `claude --bg` o Agent View (mostrate con tag `bg` nella lista) |
+| `/resume [session\|PR-URL]` (alias `/continue`) | built-in | Riprende sessione per ID/nome; accetta URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) per trovare la sessione che ha creato quella PR (da v2.1.122). Da v2.1.144 include anche le sessioni background avviate via `claude --bg` o Agent View (mostrate con tag `bg` nella lista). Da v2.1.212 apre un picker delle sessioni passate, incluse quelle cancellate |
 | `/review [PR]` | built-in | Code review locale single-pass veloce (cf. `/ultrareview` per cloud, `/code-review` per multi-agent). Da v2.1.202 riportato a single-pass dopo una parentesi multi-agente: per la review a 3 agent paralleli usa `/code-review <level> <PR#>` |
 | `/rewind` (alias `/checkpoint`, `/undo`) | built-in | Checkpoint rewind; da v2.1.191 recupera anche il context azzerato da `/clear` |
 | `/sandbox` | built-in | Toggle [sandbox mode](./04-modalita-permessi.md#sandbox) |
@@ -93,6 +93,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/status` | built-in | Settings → Status (version, model, account) |
 | `/statusline` | built-in | Configura status line |
 | `/stickers` | built-in | Order stickers |
+| `/subtask <instruction>` | built-in | Spawna un subagent dentro la sessione corrente (comportamento ex `/fork`, da v2.1.212) — vedi [08 Subagents](./08-subagents.md#85-forking-di-sessione) |
 | `/tasks` (alias `/bashes`) | built-in | Background tasks (incluse cron, ultraplan, ultrareview) |
 | `/team-onboarding` | built-in | Genera onboarding guide da usage history |
 | `/teleport` (alias `/tp`) | built-in | Pull web session nel terminale |
@@ -112,6 +113,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 <sub>Aggiornato 2026-06-19 via daily what's new. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067391951725629941).</sub>
 <sub>Aggiornato 2026-07-08 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202).</sub>
 <sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205).</sub>
+<sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212).</sub>
 
 ---
 

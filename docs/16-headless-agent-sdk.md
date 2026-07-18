@@ -120,7 +120,7 @@ asyncio.run(main())
 
 ### Capabilities
 
-- **Built-in tools**: Read, Write, Edit, Bash, Monitor, Glob, Grep, WebSearch, WebFetch, AskUserQuestion
+- **Built-in tools**: Read, Write, Edit, Bash, Monitor, Glob, Grep, WebSearch, WebFetch, AskUserQuestion, EndConversation (da v2.1.214 — vedi [04 Modalita' permessi](./04-modalita-permessi.md#end-conversation))
 - **Hooks**: callback functions (PreToolUse, PostToolUse, Stop, SessionStart/End, UserPromptSubmit, ecc.)
 - **Subagents**: option `agents:` + Agent tool
 - **MCP**: option `mcpServers:`, full registry

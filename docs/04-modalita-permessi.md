@@ -297,6 +297,16 @@ Safe Mode non modifica nessun file di configurazione: le customizzazioni restano
 
 ---
 
+## 4.5b Tool `EndConversation` {#end-conversation}
+
+Da v2.1.214, Claude ha accesso a un tool primitivo built-in — **`EndConversation`** — pensato per i casi limite in cui la conversazione stessa e' l'attacco: utenti fortemente abusivi o tentativi di jailbreak ripetuti dopo un rifiuto. Invece di continuare a rispondere o affidarsi solo al giudizio del modello, Claude puo' chiamare esplicitamente il tool per terminare la sessione.
+
+E' complementare, non sostitutivo, agli altri layer di Authority (permission rules, sandbox, hooks): quei layer limitano *cosa* Claude puo' fare sul sistema, `EndConversation` limita *quanto a lungo* Claude resta impegnato in un'interazione dannosa. Disponibile anche via Agent SDK (vedi [16 — Headless / Agent SDK](./16-headless-agent-sdk.md#capabilities)).
+
+<sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.214](https://github.com/anthropics/claude-code/releases/tag/v2.1.214).</sub>
+
+---
+
 ## 4.6 Checkpoints e rewind
 
 Claude Code traccia automaticamente edit. **NON** traccia bash file mods (`rm`, `mv`, `cp`).
