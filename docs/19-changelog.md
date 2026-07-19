@@ -3,7 +3,9 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (18 luglio 2026, v2.1.214). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (19 luglio 2026, v2.1.215). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+
+> **2026-07-19 (auto-update)**: v2.1.215 rimuove l'auto-invocazione delle skill `/verify` e `/code-review` — ora vanno richiamate esplicitamente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Vedi anche README "What's new today" del giorno.
 
 ## Cosa e' concettualmente
 
@@ -545,9 +547,11 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 15 lug 2026 | v2.1.211 | Flag `--forward-subagent-text` + env `CLAUDE_CODE_FORWARD_SUBAGENT_TEXT` per output `stream-json`. Hardening dell'Agent tool contro prompt injection indiretta. Fix: permission preview inoltrate a canali chat non neutralizzavano caratteri bidirectional-override, auto mode che scavalcava la decisione `ask` degli hook PreToolUse su Bash non-sandboxato, sessioni parallele disconnesse simultaneamente dopo sleep/wake. |
 | 17 lug 2026 | **v2.1.212** | **`/fork` → sessione background + `/subtask`**: `/fork` copia ora l'intera conversazione in una nuova sessione background (riga propria in `claude agents`) invece di spawnare un subagent in-sessione — quel comportamento e' il nuovo `/subtask`. Aggiunti tetti di sicurezza per-sessione: WebSearch (default 200, `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`) e subagent spawn (default 200, `CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION`); chiamate MCP oltre 2 minuti passano automaticamente in background. `claude auto-mode reset` per ripristinare la config auto mode di default. `/resume` mostra un picker delle sessioni passate, incluse quelle cancellate. Fix: plan mode che eseguiva comandi Bash file-modifying senza prompt di permesso. |
 | 18 lug 2026 | **v2.1.214** | **Tool `EndConversation`**: nuovo tool primitivo che permette a Claude di terminare autonomamente conversazioni con utenti fortemente abusivi o tentativi di jailbreak ripetuti. Aggiunto heartbeat periodico di progresso per tool call di lunga durata e timestamp ISO `modified` nel frontmatter dei memory file. Fix di sicurezza: regole di permesso a singolo segmento tipo `Edit(src/**)` che auto-approvavano scritture in directory annidate ovunque nel repo (ora solo `<cwd>/dir`), bypass dei permission check su Windows PowerShell 5.1, comandi Bash oltre 10.000 caratteri che bypassavano il prompt di conferma. |
+| 19 lug 2026 | **v2.1.215** | Claude non esegue piu' in autonomia le skill `/verify` e `/code-review` — vanno richiamate esplicitamente quando servono. |
 
 <sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205) · [v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206) · [v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279).</sub>
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210) · [v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211) · [v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212) · [v2.1.214](https://github.com/anthropics/claude-code/releases/tag/v2.1.214).</sub>
+<sub>Aggiornato 2026-07-19 via daily what's new. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215).</sub>
 
 ---
 
