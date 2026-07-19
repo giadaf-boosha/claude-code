@@ -30,8 +30,15 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 | `/claude-api` | Reference API + tool migration |
 | `/fewer-permission-prompts` | Scansiona transcript e crea allowlist read-only |
 | `/dataviz` | Progettazione grafici, chart e dashboard — validatore tavolozza colori integrato e linee guida accessibilita' per output coerenti in light/dark mode (da v2.1.198) |
+| `/verify` | Esercita end-to-end il flusso toccato da una modifica e osserva il comportamento reale, invece di fermarsi a test/typecheck |
 
 <sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
+
+### Invocazione manuale per `/verify` e `/code-review` (da v2.1.215)
+
+Fino a v2.1.214, Claude poteva decidere da solo di lanciare `/verify` o `/code-review` a fine task, senza che l'utente lo chiedesse esplicitamente. Da v2.1.215 questo comportamento e' disattivato: entrambe le skill vanno invocate esplicitamente (`/verify`, `/code-review [focus] [effort]`) quando si vuole che girino — Claude non le esegue piu' di propria iniziativa nel mezzo di un task. La modifica riduce le review "a sorpresa" non richieste e lascia all'utente il controllo su quando spendere il turno in verifica. Vedi anche [03 Slash commands](./03-slash-commands.md#31-tabella-completa) per la tabella comandi.
+
+<sub>Aggiornato 2026-07-19 via daily what's new. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215).</sub>
 
 ---
 
