@@ -171,6 +171,8 @@ Opus 4.7 rimane disponibile via `/model claude-opus-4-7` o `/effort` manuale. Pe
 ### Annunciato
 v2.1.170 (9 giugno 2026). `claude-fable-5` e' il primo modello **Mythos-class** di Anthropic disponibile pubblicamente — prestazioni superiori a qualsiasi modello precedentemente rilasciato al pubblico, ottimizzato per reasoning profondo e lavoro agentico di lunga durata.
 
+> **2026-07-20 (auto-update)**: Fable 5 diventa permanente su Max e Team Premium (50% dei limiti di utilizzo); Pro e Team Standard restano su crediti a consumo con un credito una tantum di $100. Fonte: [@claudeai](https://x.com/claudeai/status/2078302415804379218). Vedi anche README "What's new today" del giorno.
+
 ### Come si usa in Claude Code
 ```bash
 /model claude-fable-5
