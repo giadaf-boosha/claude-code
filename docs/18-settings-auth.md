@@ -323,6 +323,8 @@ La scelta tra **subscription OAuth** (Claude Pro/Max/Team/Enterprise) e **API ke
 
 > Fonte: [`/en/authentication`](https://code.claude.com/docs/en/authentication).
 
+> **2026-07-20 (auto-update)**: i limiti settimanali di utilizzo Claude Code restano innalzati del 50% fino al 19 agosto per tutti gli utenti Pro, Max, Team e Enterprise seat-based. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2078511173759324328). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.6 Claude for Teams / Enterprise

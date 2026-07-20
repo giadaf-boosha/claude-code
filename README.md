@@ -1,18 +1,19 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **19 luglio 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **20 luglio 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.215** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-19)
+## What's new today (2026-07-20)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Claude Fable 5 diventa permanente su Max e Team Premium** (dal 20 lug): Fable 5 entra stabilmente nei piani Max e Team Premium al 50% dei limiti di utilizzo, dopo mesi di rollout progressivo per capacita' limitata. Pro e Team Standard restano su crediti a consumo, con un credito una tantum di $100. Fonte: [@claudeai](https://x.com/claudeai/status/2078302415804379218) · [@trq212](https://x.com/trq212/status/2078514180051906864). Vedi [docs/05 § 5.7 Claude Fable 5](./docs/05-fast-mode-1m-context.md).
+- **Limiti settimanali Claude Code +50% estesi fino al 19 agosto**: Anthropic mantiene i limiti di utilizzo settimanali innalzati del 50% per tutti gli utenti Pro, Max, Team e Enterprise seat-based, prorogando l'estensione precedente. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2078511173759324328). Vedi [docs/18 § Login con subscription](./docs/18-settings-auth.md).
 
 ---
 
