@@ -263,6 +263,8 @@ Repo: https://github.com/anthropic-experimental/sandbox-runtime
 - v2.1.113-v2.1.117 (17-22 apr): tightening bash sandbox + security checks. Possibili leggermente piu' prompt su edge case.
 - v2.1.113: `sandbox.network.deniedDomains` aggiunto
 
+> **2026-07-21 (auto-update)**: nuova opzione `sandbox.filesystem.disabled` (v2.1.216, 20 lug) disattiva l'isolamento filesystem mantenendo invariato il controllo egress di rete. Fonte: [GitHub Releases v2.1.216](https://github.com/anthropics/claude-code/releases/tag/v2.1.216). Vedi anche README "What's new today" del giorno.
+
 > Fonti: [`/en/sandboxing`](https://code.claude.com/docs/en/sandboxing), [Engineering blog](https://www.anthropic.com/engineering/claude-code-sandboxing).
 
 ---

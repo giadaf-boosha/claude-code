@@ -1,18 +1,19 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **19 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.215** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **21 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.216** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-19)
+## What's new today (2026-07-21)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.216** (20 lug, 22:14 UTC): introduce `sandbox.filesystem.disabled` e risolve un rallentamento quadratico nelle sessioni lunghe, con fix su worktree/git, riautenticazione MCP e auto mode dopo scadenza OAuth. Fonte: [GitHub Releases v2.1.216](https://github.com/anthropics/claude-code/releases/tag/v2.1.216). Vedi [docs/04 § Sandbox](./docs/04-modalita-permessi.md), [docs/19 § Changelog](./docs/19-changelog.md).
+- **Limiti settimanali +50% estesi al 19 agosto e Fable 5 su tutti i piani paid**: Claude Code mantiene i rate limit maggiorati del 50% per Pro/Max/Team/Enterprise fino al 19 agosto; Fable 5 entra stabilmente in Max e Team Premium al 50% dei limiti dal 20 luglio (Pro/Team Standard via crediti + $100 una tantum). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2078511173759324328), [@claudeai](https://x.com/claudeai/status/2078302415804379218). Vedi [docs/18 § Piani e rate limit](./docs/18-settings-auth.md).
 
 ---
 
