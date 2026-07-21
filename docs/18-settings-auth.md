@@ -321,6 +321,8 @@ La scelta tra **subscription OAuth** (Claude Pro/Max/Team/Enterprise) e **API ke
 
 > **Regola pratica**: subscription per uso interattivo locale quotidiano, API key per automazione / pipeline / agent SDK in produzione.
 
+> **2026-07-21 (auto-update)**: i limiti settimanali +50% restano attivi fino al 19 agosto per Pro/Max/Team/Enterprise; Fable 5 entra stabilmente in Max e Team Premium al 50% dei limiti dal 20 luglio (Pro/Team Standard via crediti + $100 una tantum). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2078511173759324328). Vedi anche README "What's new today" del giorno.
+
 > Fonte: [`/en/authentication`](https://code.claude.com/docs/en/authentication).
 
 ---
