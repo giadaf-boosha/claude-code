@@ -100,7 +100,7 @@ claude agents                  # Agent View (lista + stato sessioni)
 
 > **Cross-session messaging hardening** (da v2.1.166): i messaggi inoltrati via `SendMessage` da un'altra sessione Claude non portano piu' l'autorita' dell'utente. Le sessioni riceventi rifiutano le richieste di permesso inoltrate; in auto mode vengono bloccate direttamente. Questo significa che un agente che riceve un messaggio da un altro agente non puo' eseguire azioni che richiederebbero conferma utente, anche se l'agente mittente avrebbe quell'autorita'. Il comportamento era gia' documentato come best practice; ora e' applicato dall'harness. Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166).
 
-> **Sub-agenti annidati fino a 5 livelli** (da v2.1.172): un sub-agente puo' ora lanciare a sua volta altri sub-agenti, con profondita' massima di 5 livelli. Ogni livello ha il proprio context window isolato e restituisce solo un summary al livello padre — permette a task gerarchici complessi di suddividere ulteriormente il lavoro senza saturare il context dell'agente principale. Il limite di 5 livelli e' un punto di partenza configurabile (Boris Cherny ha esplicitamente richiesto feedback sulla soglia).
+> **Sub-agenti annidati fino a 5 livelli** (da v2.1.172, superato da v2.1.217 — vedi sotto): un sub-agente poteva lanciare a sua volta altri sub-agenti, con profondita' massima di 5 livelli. Ogni livello aveva il proprio context window isolato e restituiva solo un summary al livello padre — permetteva a task gerarchici complessi di suddividere ulteriormente il lavoro senza saturare il context dell'agente principale.
 >
 > ```
 > main agent (L0)
@@ -110,6 +110,10 @@ claude agents                  # Agent View (lista + stato sessioni)
 > ```
 
 <sub>Aggiornato 2026-06-11 via daily what's new. Fonte: [GitHub Releases v2.1.172](https://github.com/anthropics/claude-code/releases/tag/v2.1.172).</sub>
+
+> **Nesting disattivato di default** (da v2.1.217, 21 lug 2026): i sub-agenti **non spawnano piu' automaticamente altri sub-agenti annidati** — il comportamento sopra (fino a 5 livelli) non e' piu' il default. Per riabilitare la profondita' di nesting: `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH`. Stessa release: **tetto di concorrenza** sui subagent lanciati in parallelo, default 20 (`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`), per evitare che un singolo messaggio faccia fan-out incontrollato di agenti.
+
+<sub>Aggiornato 2026-07-22 via daily what's new. Fonte: [GitHub Releases v2.1.217](https://github.com/anthropics/claude-code/releases/tag/v2.1.217).</sub>
 
 ### Dal main agent
 Claude usa il tool **Agent** specificando `subagent_type`:

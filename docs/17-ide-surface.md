@@ -126,6 +126,22 @@ Nome MCP server riservato lato client: `Claude Browser` (insieme a `Claude Previ
 
 <sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279).</sub>
 
+### iOS Simulator pane (beta, 21 lug 2026)
+
+Claude Code Desktop apre un pannello **iOS Simulator** accanto alla conversazione ogni volta che Claude builda, installa, lancia o verifica un'app iOS — nessun comando o setting da attivare, si apre da solo quando serve. Ogni sessione ha un simulator indipendente (fino a 4 device per sessione), e la vista segue la sessione attiva nella sidebar.
+
+- **Come funziona**: il pannello pilota il simulator direttamente (non serve computer use, ne' i permessi macOS Accessibility/Screen Recording) — Claude installa l'app, ci tocca dentro e legge lo schermo per verificare da solo le modifiche fatte
+- **Controllo condiviso**: tap/swipe cliccando sullo schermo, tasti hardware (`Cmd+Shift+H` Home, `Cmd+L` Lock, rotazione con `Cmd+Right Arrow`), screenshot (`Cmd+S`) e screen recording (`Cmd+R`) salvati sul Desktop
+- **Permessi**: consenso one-time per device (non per sessione) al primo utilizzo; l'apertura di URL sul device e la build (`xcodebuild`) seguono invece il permission mode della sessione. Disattivabile via `disableMobileSimulatorTools` managed setting
+- **Requisiti**: Claude Desktop v1.24012.0+, macOS, Xcode con piattaforma iOS installata. Solo sessioni locali (non disponibile in cloud/SSH session, che girano su una macchina senza accesso ai simulator del tuo Mac)
+- **Piani**: Pro, Max, Team (non disponibile su Enterprise). Supporto Android simulator annunciato come "in lavorazione"
+
+Da CLI (non Desktop), Claude raggiunge invece l'iOS Simulator via [computer use](#computer-use) tradizionale, pilotando lo schermo come farebbe un utente con mouse e tastiera.
+
+> Fonte: [docs ufficiali](https://code.claude.com/docs/en/desktop-ios-simulator) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2079674432038248611)
+
+<sub>Aggiornato 2026-07-22 via daily what's new. Fonte: [docs ufficiali](https://code.claude.com/docs/en/desktop-ios-simulator) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2079674432038248611).</sub>
+
 ---
 
 ## 17.4 Web (`/en/claude-code-on-the-web`)

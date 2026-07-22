@@ -1,18 +1,19 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **19 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.215** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **22 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.217** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-19)
+## What's new today (2026-07-22)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **iOS Simulator in Claude Code Desktop** (beta, 21 lug): nuovo pannello che affianca la conversazione e mostra l'app iOS in esecuzione nel Simulator Apple — Claude builda, installa, lancia e verifica l'app leggendo lo schermo dal vivo, senza bisogno di computer use ne' dei permessi macOS Accessibility/Screen Recording. Richiede Xcode con piattaforma iOS; disponibile su Pro/Max/Team (non Enterprise), solo sessioni locali su macOS. Fonte: [docs ufficiali](https://code.claude.com/docs/en/desktop-ios-simulator) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2079674432038248611). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Subagent: nesting disattivato di default + tetto di concorrenza** (v2.1.217, 21 lug): i sub-agenti non spawnano piu' automaticamente altri sub-agenti annidati (fino a 5 livelli era il default da v2.1.172) — riattivabile con `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH`. Aggiunto anche un tetto ai subagent concorrenti (default 20, `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`) per evitare fan-out incontrollato da un singolo messaggio. Fonte: [GitHub Releases v2.1.217](https://github.com/anthropics/claude-code/releases/tag/v2.1.217). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
