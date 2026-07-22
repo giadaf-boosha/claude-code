@@ -101,7 +101,10 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 >
 > La restrizione si applica solo ai comandi che girano dentro la sandbox; Claude Code stesso non e' limitato nell'accesso ai propri file di configurazione.
 
+> **2026-07-22 (auto-update)**: nuova opzione `sandbox.filesystem.disabled` (da v2.1.216) disattiva l'isolamento filesystem del sandbox mantenendo attivo il controllo dell'egress di rete. Fonte: [GitHub Releases v2.1.216](https://github.com/anthropics/claude-code/releases/tag/v2.1.216). Vedi anche README "What's new today" del giorno.
+
 <sub>Aggiornato 2026-06-24 via daily what's new. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187).</sub>
+<sub>Aggiornato 2026-07-22 via daily what's new. Fonte: [GitHub Releases v2.1.216](https://github.com/anthropics/claude-code/releases/tag/v2.1.216).</sub>
 
 ### Hooks
 - `hooks`, `disableAllHooks`, `allowManagedHooksOnly`
