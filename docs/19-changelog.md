@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (18 luglio 2026, v2.1.214). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (22 luglio 2026, v2.1.218). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -546,10 +546,14 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 17 lug 2026 | **v2.1.212** | **`/fork` → sessione background + `/subtask`**: `/fork` copia ora l'intera conversazione in una nuova sessione background (riga propria in `claude agents`) invece di spawnare un subagent in-sessione — quel comportamento e' il nuovo `/subtask`. Aggiunti tetti di sicurezza per-sessione: WebSearch (default 200, `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`) e subagent spawn (default 200, `CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION`); chiamate MCP oltre 2 minuti passano automaticamente in background. `claude auto-mode reset` per ripristinare la config auto mode di default. `/resume` mostra un picker delle sessioni passate, incluse quelle cancellate. Fix: plan mode che eseguiva comandi Bash file-modifying senza prompt di permesso. |
 | 18 lug 2026 | **v2.1.214** | **Tool `EndConversation`**: nuovo tool primitivo che permette a Claude di terminare autonomamente conversazioni con utenti fortemente abusivi o tentativi di jailbreak ripetuti. Aggiunto heartbeat periodico di progresso per tool call di lunga durata e timestamp ISO `modified` nel frontmatter dei memory file. Fix di sicurezza: regole di permesso a singolo segmento tipo `Edit(src/**)` che auto-approvavano scritture in directory annidate ovunque nel repo (ora solo `<cwd>/dir`), bypass dei permission check su Windows PowerShell 5.1, comandi Bash oltre 10.000 caratteri che bypassavano il prompt di conferma. |
 | 19 lug 2026 | v2.1.215 | Claude non lancia piu' in autonomia le skill `/verify` e `/code-review` durante il normale flusso di lavoro — vanno invocate esplicitamente quando servono. |
+| 20 lug 2026 | v2.1.216 | **`sandbox.filesystem.disabled`**: nuova setting salta l'isolamento filesystem mantenendo attivo il controllo egress di rete. Fix: rallentamento nella normalizzazione messaggi su sessioni lunghe (costo quadratico coi turni), scadenza token OAuth in auto mode. |
+| 21 lug 2026 | **v2.1.217** | **Tetto di default a 20 subagent concorrenti per sessione**. Autocomplete emoji shortcode (es. `:heart:` → ❤️). Fix: memory leak negli output tool MCP, auto-update fallito su Windows, impostazioni mTLS/OAuth aziendali ignorate, cutoff dell'annuncio screen reader all'avvio. |
+| 22 lug 2026 | **v2.1.218** | **`/code-review` gira come subagent in background**: la review non riempie piu' la conversazione principale e mantiene le invocazioni a comandi slash concatenati come target. Annunci screen reader per cancellazioni di parola/riga in `--ax-screen-reader`. `claude agents --json`: sessioni in attesa di sandbox/MCP-input/managed-settings mostrano "Needs input" invece di "Working". Fix: path Windows con segmenti `\u`-prefixed corrotti in caratteri CJK negli input dei tool. |
 
 <sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205) · [v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206) · [v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279).</sub>
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210) · [v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211) · [v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212) · [v2.1.214](https://github.com/anthropics/claude-code/releases/tag/v2.1.214).</sub>
 <sub>Aggiornato 2026-07-19 via daily what's new. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215).</sub>
+<sub>Aggiornato 2026-07-23 via daily what's new. Fonte: [GitHub Releases v2.1.216](https://github.com/anthropics/claude-code/releases/tag/v2.1.216) · [v2.1.217](https://github.com/anthropics/claude-code/releases/tag/v2.1.217) · [v2.1.218](https://github.com/anthropics/claude-code/releases/tag/v2.1.218).</sub>
 
 ---
 
