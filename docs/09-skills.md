@@ -42,6 +42,14 @@ Fino a v2.1.214, Claude poteva decidere da solo di lanciare `/verify` o `/code-r
 
 ---
 
+### `context: fork` in background (da v2.1.218) {#context-fork-in-background-da-v2218}
+
+Da v2.1.218 le skill con `context: fork` (vedi [9.3 Frontmatter completo](#93-frontmatter-completo)) girano in background di default invece che in-linea nella conversazione principale — stesso trattamento gia' riservato ai subagent spawnati da `/fork`. `/code-review` e' il primo caso pratico: la review a 3 agent paralleli non riempie piu' il thread principale mentre gira, e il risultato torna quando e' pronto. Per una singola skill si puo' tornare al comportamento in-linea con `background: false` nel frontmatter. Stessa release: `/deep-research` smette di auto-invocarsi e parte solo su richiesta esplicita. Vedi anche [08 Subagents § Cap subagent concorrenti](./08-subagents.md#cap-subagent-concorrenti-da-v2217).
+
+<sub>Aggiornato 2026-07-23 via daily what's new. Fonte: [GitHub Releases v2.1.218](https://github.com/anthropics/claude-code/releases/tag/v2.1.218).</sub>
+
+---
+
 ### Disabilita le bundled skills (v2.1.169)
 
 Il setting `disableBundledSkills: true` (o env var `CLAUDE_CODE_DISABLE_BUNDLED_SKILLS=1`) nasconde le skill bundled e i comandi slash built-in dalla visibilita' del modello. Le skill custom rimangono attive; solo quelle pre-installate vengono rimosse dal context.

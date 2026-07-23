@@ -142,6 +142,14 @@ Da v2.1.117: forked subagents su external builds (`CLAUDE_CODE_FORK_SUBAGENT=1`)
 
 ---
 
+### Cap subagent concorrenti (da v2.1.217) {#cap-subagent-concorrenti-da-v2217}
+
+Da v2.1.217 un nuovo tetto per-messaggio limita a **20 i subagent in esecuzione simultanea** (default, override con `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`), per evitare che un singolo prompt faccia fan-out incontrollato di agent paralleli. Stessa release: i subagent non spawnano piu' automaticamente subagent annidati — per abilitare nesting piu' profondo serve `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` — e `--max-budget-usd` ora ferma anche i subagent background gia' in esecuzione quando il tetto di spesa viene raggiunto, non solo i nuovi spawn. Questi limiti si aggiungono ai tetti WebSearch/subagent-spawn per-sessione introdotti in v2.1.212 (vedi sopra); insieme, `/code-review` e le altre skill con `context: fork` girano ora in background di default (v2.1.218, vedi [09 Skills](./09-skills.md#context-fork-in-background-da-v2218)).
+
+<sub>Aggiornato 2026-07-23 via daily what's new. Fonte: [GitHub Releases v2.1.217](https://github.com/anthropics/claude-code/releases/tag/v2.1.217).</sub>
+
+---
+
 ## 8.6 Persistent memory
 
 Subagents possono mantenere auto-memory propria. Vedi [`/en/sub-agents#enable-persistent-memory`](https://code.claude.com/docs/en/sub-agents#enable-persistent-memory).
