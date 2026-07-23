@@ -277,6 +277,8 @@ Salva in `RELEASE_NOTES.md`.
 
 ## 9.12 Annunci e changelog rilevanti
 
+> **2026-07-23 (auto-update)**: `/code-review` (v2.1.218, 22 lug) gira ora come subagent in background invece di occupare la conversazione principale, mantenendo come target le invocazioni a comandi slash concatenati. Fonte: [GitHub Releases v2.1.218](https://github.com/anthropics/claude-code/releases/tag/v2.1.218). Vedi anche README "What's new today" del giorno.
+
 - **Hot reload Skills + custom agent support + invoke con `/`** (CC 2.1.0, dic 2025) — [@bcherny](https://x.com/bcherny/status/2009072293826453669)
 - **`/simplify` e `/batch`** (mar 2026) — [@bcherny](https://x.com/bcherny/status/2027534984534544489)
 - **Description cap 250 → 1,536 char** (v2.1.106, 13 apr 2026)

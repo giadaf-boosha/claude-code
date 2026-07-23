@@ -96,6 +96,8 @@ claude agents                  # Agent View (lista + stato sessioni)
 >
 > **Esecuzione comandi in background** (da v2.1.154): digitare `! <comando>` in Agent View esegue il comando shell in una nuova sessione background senza uscire dall'interfaccia — equivalente CLI: `claude --bg --exec '<comando>'`.
 
+> **2026-07-23 (auto-update)**: v2.1.217 (21 lug) introduce un tetto di default a 20 subagent concorrenti per sessione. Fonte: [GitHub Releases v2.1.217](https://github.com/anthropics/claude-code/releases/tag/v2.1.217). Vedi anche README "What's new today" del giorno.
+
 <sub>Aggiornato 2026-05-29 via daily what's new. Fonte: [GitHub Releases v2.1.154](https://github.com/anthropics/claude-code/releases/tag/v2.1.154).</sub>
 
 > **Cross-session messaging hardening** (da v2.1.166): i messaggi inoltrati via `SendMessage` da un'altra sessione Claude non portano piu' l'autorita' dell'utente. Le sessioni riceventi rifiutano le richieste di permesso inoltrate; in auto mode vengono bloccate direttamente. Questo significa che un agente che riceve un messaggio da un altro agente non puo' eseguire azioni che richiederebbero conferma utente, anche se l'agente mittente avrebbe quell'autorita'. Il comportamento era gia' documentato come best practice; ora e' applicato dall'harness. Fonte: [GitHub Releases v2.1.166](https://github.com/anthropics/claude-code/releases/tag/v2.1.166).

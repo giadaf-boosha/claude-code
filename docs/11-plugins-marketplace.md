@@ -277,6 +277,8 @@ LSP ufficiali: `typescript-lsp`, `pyright-lsp`, `rust-analyzer-lsp`, `gopls-lsp`
 
 ## 11.11 Annunci rilevanti
 
+> **2026-07-23 (auto-update)**: **Claude Security plugin per Claude Code (beta)** — nuovo plugin ufficiale che scansiona vulnerabilita' nei cambi di codice prima del commit o sull'intera codebase, distinto dal plugin `security-guidance` gia' disponibile da maggio 2026. Fonte: [Claude blog](https://claude.com/blog/claude-security-public-beta) · [@claudeai](https://x.com/claudeai/status/2079990597973057691). Vedi anche README "What's new today" del giorno.
+
 - **Customizability** (feb 2026): "hooks, plugins, LSPs, MCPs, skills, effort, custom agents, status lines, output styles" — [@bcherny](https://x.com/bcherny/status/2021699851499798911)
 - Hidden features Boris (mar 2026) — [@bcherny](https://x.com/bcherny/status/2038454336355999749)
 - Plugin executables sul `PATH` di Bash tool (Week 14, v2.1.94)

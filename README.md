@@ -8,11 +8,14 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-19)
+## What's new today (2026-07-23)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.218** (22 lug): `/code-review` gira ora come subagent in background e non riempie piu' la conversazione principale; fix corruzione path Windows con segmenti `\u`-prefixed; agent view segnala "Needs input" per sessioni in attesa di sandbox/MCP/settings. Fonte: [GitHub Releases v2.1.218](https://github.com/anthropics/claude-code/releases/tag/v2.1.218). Doc: [docs/09-skills.md](./docs/09-skills.md#912-annunci-e-changelog-rilevanti), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.217** (21 lug): tetto di default a 20 subagent concorrenti per sessione, autocomplete emoji shortcode (`:heart:` → ❤️), fix memory leak negli output tool MCP, fix handshake mTLS/OAuth aziendale ignorati. Fonte: [GitHub Releases v2.1.217](https://github.com/anthropics/claude-code/releases/tag/v2.1.217). Doc: [docs/08-subagents.md](./docs/08-subagents.md#84-spawn--interazione), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Claude Security plugin per Claude Code (beta)**: nuovo plugin ufficiale scansiona vulnerabilita' nei cambi di codice prima del commit o sull'intera codebase, distinto dal plugin `security-guidance` gia' disponibile da maggio. Fonte: [Claude blog](https://claude.com/blog/claude-security-public-beta) · [@claudeai](https://x.com/claudeai/status/2079990597973057691). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md#1111-annunci-rilevanti).
+- **Limiti settimanali +50% prorogati fino al 19 agosto**: confermata l'estensione dell'aumento limiti gia' attivo per Pro, Max, Team e Enterprise a seat. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2078511173759324328).
 
 ---
 
