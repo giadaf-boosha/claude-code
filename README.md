@@ -1,18 +1,24 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **19 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.215** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **24 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.218** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-19)
+## What's new today (2026-07-24)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.218** (22 lug): `/code-review` gira ora come subagent in background — non riempie piu' la conversazione. Fix path Windows con segmenti `\u` corrotti in caratteri CJK, `agent view` mostra "Needs input" per `/mcp`/`/install-github-app` in sessioni background senza client collegato. Fonte: [GitHub Releases v2.1.218](https://github.com/anthropics/claude-code/releases/tag/v2.1.218). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.217** (21 lug): tetto di concorrenza subagent default 20 (`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`), i subagent non spawnano piu' subagent annidati by default, autocomplete emoji shortcode nel prompt (`:heart:` → ❤️), fix `--max-budget-usd` che non fermava i subagent in background al raggiungimento del cap. Fonte: [GitHub Releases v2.1.217](https://github.com/anthropics/claude-code/releases/tag/v2.1.217). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.216** (20 lug): nuova `sandbox.filesystem.disabled` per disattivare l'isolamento filesystem mantenendo il controllo egress di rete, fix rallentamento quadratico nella normalizzazione messaggi delle sessioni lunghe, vari fix worktree/git isolation e riautenticazione MCP. Fonte: [GitHub Releases v2.1.216](https://github.com/anthropics/claude-code/releases/tag/v2.1.216). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Claude Security plugin (beta)**: nuovo plugin ufficiale aggiunge il comando `/claude-security` — scansiona le modifiche non committate, un diff di branch/PR/commit o l'intero repo per vulnerabilita' (injection, auth bypass, memory corruption), con verifica avversariale dei risultati e generazione di patch file. Fonte: [Claude Security](https://claude.com/product/claude-security). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md).
+- **Limiti settimanali +50% estesi al 19 agosto + Fable 5 permanente su Max/Team Premium**: proroga dei limiti settimanali Claude Code per Pro/Max/Team/Enterprise seat-based; Fable 5 incluso stabilmente su Max e Team Premium (50% dei limiti), Pro/Team Standard restano su crediti. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2078511173759324328) · [@claudeai](https://x.com/claudeai/status/2078302415804379218). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md).
+
+> ⚠️ **Nota operativa**: questa PR consolida il gap 2026-07-19 → 2026-07-24, perche' nessuna delle PR daily precedenti (#36–#39, dal 20 al 23 luglio) risulta ancora mergiata su `main` — il repo ha attualmente **~15 PR "What's new" aperte** in coda (#25–#39). Consigliato: mergiare questa (la piu' recente e completa) e chiudere le precedenti come superseded, oppure valutare auto-merge per la label `automation,daily-whats-new` cosi' che `main` resti allineato giorno per giorno.
 
 ---
 

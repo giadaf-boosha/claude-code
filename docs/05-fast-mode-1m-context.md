@@ -168,6 +168,8 @@ Opus 4.7 rimane disponibile via `/model claude-opus-4-7` o `/effort` manuale. Pe
 
 ## 5.7 Claude Fable 5 (da v2.1.170)
 
+> **2026-07-24 (auto-update)**: limiti settimanali Claude Code +50% estesi al 19 agosto per Pro/Max/Team/Enterprise seat-based; Fable 5 incluso stabilmente su Max e Team Premium (50% dei limiti), Pro/Team Standard restano su crediti. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2078511173759324328). Vedi anche README "What's new today" del giorno.
+
 ### Annunciato
 v2.1.170 (9 giugno 2026). `claude-fable-5` e' il primo modello **Mythos-class** di Anthropic disponibile pubblicamente — prestazioni superiori a qualsiasi modello precedentemente rilasciato al pubblico, ottimizzato per reasoning profondo e lavoro agentico di lunga durata.
 
