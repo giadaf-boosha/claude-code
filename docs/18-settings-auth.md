@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-07-24 (auto-update)**: nuova `sandbox.filesystem.disabled` (v2.1.216, 20 lug) salta l'isolamento filesystem del sandbox mantenendo il controllo dell'egress di rete. Fonte: [GitHub Releases v2.1.216](https://github.com/anthropics/claude-code/releases/tag/v2.1.216). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)

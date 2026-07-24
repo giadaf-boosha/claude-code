@@ -81,7 +81,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/remote-env` | built-in | Configura env remote per `--remote` |
 | `/rename [name]` | built-in | Rinomina sessione |
 | `/resume [session\|PR-URL]` (alias `/continue`) | built-in | Riprende sessione per ID/nome; accetta URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) per trovare la sessione che ha creato quella PR (da v2.1.122). Da v2.1.144 include anche le sessioni background avviate via `claude --bg` o Agent View (mostrate con tag `bg` nella lista). Da v2.1.212 apre un picker delle sessioni passate, incluse quelle cancellate |
-| `/review [PR]` | built-in | Code review locale single-pass veloce (cf. `/ultrareview` per cloud, `/code-review` per multi-agent). Da v2.1.202 riportato a single-pass dopo una parentesi multi-agente: per la review a 3 agent paralleli usa `/code-review <level> <PR#>` |
+| `/review [PR]` | built-in | Code review locale single-pass veloce (cf. `/ultrareview` per cloud, `/code-review` per multi-agent). Da v2.1.202 riportato a single-pass dopo una parentesi multi-agente: per la review a 3 agent paralleli usa `/code-review <level> <PR#>`. Da v2.1.218 `/code-review` gira come subagent in background, senza riempire la conversazione principale |
 | `/rewind` (alias `/checkpoint`, `/undo`) | built-in | Checkpoint rewind; da v2.1.191 recupera anche il context azzerato da `/clear` |
 | `/sandbox` | built-in | Toggle [sandbox mode](./04-modalita-permessi.md#sandbox) |
 | `/schedule [description]` (alias `/routines`) | built-in | Gestione [routines](./13-routines-cloud.md) |
