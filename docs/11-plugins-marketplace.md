@@ -66,6 +66,7 @@ Se `version` e' omesso, viene usato il commit SHA (ogni commit = nuova versione)
 2. **External integrations**: `github`, `gitlab`, `atlassian`, `asana`, `linear`, `notion`, `figma`, `vercel`, `firebase`, `supabase`, `slack`, `sentry`.
 3. **Development workflows**: `commit-commands`, `pr-review-toolkit`, `agent-sdk-dev`, `plugin-dev`.
 4. **Output styles**: `explanatory-output-style`, `learning-output-style`.
+5. **Security**: `claude-security` — scansione multi-agente delle vulnerabilita' (vedi § 11.3bis piu' sotto).
 
 Demo plugin source: https://github.com/anthropics/claude-code/tree/main/plugins.
 
@@ -92,6 +93,27 @@ Demo plugin source: https://github.com/anthropics/claude-code/tree/main/plugins.
 claude plugin install formatter@your-org --scope project
 /reload-plugins                    # apply senza restart
 ```
+
+### 11.3bis Claude Security — scan multi-agente delle vulnerabilita' (da 22 lug 2026)
+
+Plugin ufficiale in beta pubblica che esegue, dentro una sessione Claude Code, una scansione di sicurezza multi-agente: un team di agenti mappa l'architettura del repo, costruisce un threat model, cerca vulnerabilita' (injection, bypass di autenticazione, memory corruption, logic error) e fa verificare ogni finding da un agente indipendente da chi l'ha trovato, prima di scriverlo nel report. E' il layer "deep scan on demand" accanto al [security guidance plugin](https://code.claude.com/docs/en/security-guidance) (review in-sessione mentre Claude scrive), a `/security-review` (single-pass sul branch corrente) e a Code Review (multi-agent su PR, Team/Enterprise).
+
+```bash
+# Installazione
+/plugin install claude-security@claude-plugins-official
+/reload-plugins
+
+# Uso: apre un menu con Scan codebase / Scan changes / Suggest patches
+/claude-security
+/claude-security scan my branch      # solo il diff del branch corrente
+/claude-security scan commit abc1234 # singolo commit
+```
+
+Richiede Claude Code v2.1.154+ (dynamic workflows), `python3` 3.9.6+ sul `PATH`, e git per gli scan di diff/PR/commit (uno scan completo funziona anche fuori da un repo versionato). Ogni scan scrive i risultati in una directory `CLAUDE-SECURITY-<timestamp>/` con report Markdown, JSONL machine-readable e uno stamp della revisione scansionata; la directory ha un proprio `.gitignore` cosi' un `git add` accidentale non la include nel commit. Le patch proposte finiscono in `patches/F<n>.patch`, ciascuna gia' revisionata da un agente indipendente, e **non vengono mai applicate in automatico** — vanno accettate a mano con `git apply` o chiedendo a Claude di aprirle come PR separata.
+
+<sub>Aggiornato 2026-07-24 via daily what's new. Fonte: [Claude Code Docs — Claude Security](https://code.claude.com/docs/en/claude-security) · [@claudeai](https://x.com/claudeai/status/2079990597973057691).</sub>
+
+---
 
 ### Gestione dipendenze tra plugin (da v2.1.143)
 

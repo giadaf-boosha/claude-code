@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Fondamenta](../README.md#fondamenta) → **03 Slash commands**
 > 🔧 Operational · 🟢 Beginner-friendly
 
-Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); altri = built-in CLI.
+Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type `/` in sessione per vederli filtrati. Convenzione: **[Skill]** = bundled skill (prompt-based, anche auto-invocabile da Claude); **[Plugin]** = comando aggiunto da un plugin ufficiale non bundled (richiede `/plugin install`); altri = built-in CLI.
 
 ## Cosa e' concettualmente
 
@@ -30,6 +30,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/cd <path>` | built-in | Sposta la sessione in una nuova working directory senza rompere il prompt cache (da v2.1.169) |
 | `/chrome` | built-in | Configura Claude in Chrome |
 | `/claude-api [migrate\|managed-agents-onboard]` | **Skill** | Reference Claude API + tool migration |
+| `/claude-security [scan\|suggest patches]` | **Plugin** (`claude-security`) | Scan multi-agente delle vulnerabilita' del repo o di un diff/PR/commit, poi genera patch revisionabili con `git apply` — mai applicate in automatico (da 22 lug 2026). Vedi [11 § 11.3bis](./11-plugins-marketplace.md) |
 | `/clear` (alias `/reset`, `/new`) | built-in | Nuova conversation, pregresso resta in `/resume` |
 | `/color [color\|default]` | built-in | Colore prompt bar (sync claude.ai con Remote Control) |
 | `/compact [instructions]` | built-in | Comprime context |
