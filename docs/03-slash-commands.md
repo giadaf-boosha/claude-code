@@ -88,7 +88,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/scroll-speed [speed]` | built-in | Regola velocita' scroll rotella mouse con anteprima live (da v2.1.139) |
 | `/security-review` | built-in | Analizza diff per security issues |
 | `/setup-bedrock` / `/setup-vertex` | built-in | Wizard provider |
-| `/code-review [focus] [effort] [--comment\|--fix]` | **Skill** | 3 review agent paralleli; `effort` opzionale (es. `high`); `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente; `--fix` applica automaticamente i suggerimenti al working tree (alias: `/simplify`). (da v2.1.146; `--comment` v2.1.147; `--fix` e alias `/simplify` da v2.1.152). Da v2.1.215 non piu' auto-invocata a fine task: va lanciata esplicitamente (idem per la skill `/verify`, vedi [09 Skills](./09-skills.md#invocazione-manuale-per-verify-e-code-review-da-v2115)) |
+| `/code-review [focus] [effort] [--comment\|--fix]` | **Skill** | 3 review agent paralleli; `effort` opzionale (es. `high`); `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente; `--fix` applica automaticamente i suggerimenti al working tree (alias: `/simplify`). (da v2.1.146; `--comment` v2.1.147; `--fix` e alias `/simplify` da v2.1.152). Da v2.1.215 non piu' auto-invocata a fine task: va lanciata esplicitamente (idem per la skill `/verify`, vedi [09 Skills](./09-skills.md#invocazione-manuale-per-verify-e-code-review-da-v2115)). Da v2.1.218 gira come **subagent in background**: la review non riempie piu' la conversazione principale e resta disponibile come target anche per slash command impilati |
 | `/skills` | built-in | Lista skills, `t` per sort by token |
 | `/status` | built-in | Settings → Status (version, model, account) |
 | `/statusline` | built-in | Configura status line |
@@ -125,6 +125,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/vim` | rimosso v2.1.92 | `/config` → Editor mode (Vim ora con visual mode `v`/`V` da v2.1.118) |
 | `/pr-comments` | rimosso v2.1.91 | Chiedere a Claude direttamente sui commenti PR |
 | `/simplify` | alias da v2.1.152 | `/code-review --fix` (era rinominato in v2.1.146, reintrodotto come alias in v2.1.152) |
+
+<sub>Aggiornato 2026-07-25 via daily what's new. Fonte: [GitHub Releases v2.1.218](https://github.com/anthropics/claude-code/releases/tag/v2.1.218).</sub>
 
 ---
 
