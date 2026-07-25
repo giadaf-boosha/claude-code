@@ -111,6 +111,8 @@ claude agents                  # Agent View (lista + stato sessioni)
 
 <sub>Aggiornato 2026-06-11 via daily what's new. Fonte: [GitHub Releases v2.1.172](https://github.com/anthropics/claude-code/releases/tag/v2.1.172).</sub>
 
+> **2026-07-25 (auto-update)**: v2.1.219 alza a profondita' 3 (era 1) il tetto di default per lo spawn di subagent annidati; `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1` per tornare al vecchio comportamento. Fonte: [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Vedi anche README "What's new today" del giorno.
+
 ### Dal main agent
 Claude usa il tool **Agent** specificando `subagent_type`:
 ```json

@@ -8,11 +8,15 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-19)
+## What's new today (2026-07-25)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Claude Opus 5**: nuovo modello Opus di punta, si avvicina a Fable 5 a meta' prezzo, 1M context, nuovo SOTA su coding agentico (Frontier-Bench v0.1, 43.3%), stesso pricing di Opus 4.8 ($5/$25 Mtok). Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.219** (24 lug): integra Opus 5 come modello Opus default, aggiunge `sandbox.network.strictAllowlist`, hook `DirectoryAdded`, forwarding subagent annidati in stream-json, `workflowSizeGuideline`, e alza a 3 (era 1) la profondita' default per subagent annidati. Fonte: [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Doc: [docs/19-changelog.md](./docs/19-changelog.md), [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/08-subagents.md](./docs/08-subagents.md).
+- **CLI v2.1.220** (25 lug): bug fix e miglioramenti di affidabilita', dettagli non specificati nel changelog ufficiale. Fonte: [GitHub Releases v2.1.220](https://github.com/anthropics/claude-code/releases/tag/v2.1.220). Doc: [docs/19-changelog.md](./docs/19-changelog.md).
+- **Thariq**: il team rimuove circa l'80% del system prompt di Claude Code per i modelli piu' recenti, condivide cosa hanno imparato su come scrivere system prompt, skill e CLAUDE.md per questi modelli. Fonte: [@trq212](https://x.com/trq212/status/2080710971228918066). Doc: [docs/06-claude-md-memory.md](./docs/06-claude-md-memory.md), [docs/09-skills.md](./docs/09-skills.md).
+- **ClaudeDevs**: conferma il rollout di Opus 5 in Claude Code — nuovo SOTA su agentic coding (Frontier-Bench v0.1 43.3%, oltre il doppio di Opus 4.8), il modello Opus piu' allineato finora. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2080703243722854516). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

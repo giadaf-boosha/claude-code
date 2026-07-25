@@ -17,6 +17,8 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
 
+> **2026-07-25 (auto-update)**: il team rimuove circa l'80% del system prompt di Claude Code per i modelli piu' recenti (inclusa Opus 5) — skill e CLAUDE.md pesano di piu' nel design del comportamento dell'agente. Fonte: [@trq212](https://x.com/trq212/status/2080710971228918066). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 9.1 Bundled skills (sempre disponibili)
