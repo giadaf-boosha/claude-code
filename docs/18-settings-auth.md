@@ -103,6 +103,8 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 
 <sub>Aggiornato 2026-06-24 via daily what's new. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187).</sub>
 
+> **2026-07-25 (auto-update)**: nuovo `sandbox.network.strictAllowlist` (v2.1.219) nega, senza prompt, l'accesso agli host non presenti nell'allowlist per i comandi eseguiti in sandbox. Fonte: [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Vedi anche README "What's new today" del giorno.
+
 ### Hooks
 - `hooks`, `disableAllHooks`, `allowManagedHooksOnly`
 - `allowedHttpHookUrls`, `httpHookAllowedEnvVars`

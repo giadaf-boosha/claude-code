@@ -104,6 +104,9 @@ Cronologia compatta (per dettaglio vedi [19-changelog.md](./19-changelog.md)):
 | 11 mag 2026 | `/goal` (v2.1.139) — vedi [./25-goal.md](./25-goal.md) |
 | 28 mag 2026 | **Dynamic Workflows** (v2.1.154) — vedi [./24-workflows.md](./24-workflows.md) |
 | 31 mag 2026 | v2.1.159 — versione CLI corrente; modello premium Opus 4.8 |
+| 24 lug 2026 | **Claude Opus 5** GA — nuovo modello Opus di punta (1M context, SOTA coding agentico), sostituisce Opus 4.8 come default su Max / piu' forte su Pro, stesso pricing — [blog](https://www.anthropic.com/news/claude-opus-5) |
+
+> **2026-07-25 (auto-update)**: Claude Opus 5 e' live, si avvicina a Fable 5 a meta' prezzo e diventa il nuovo default Opus su Max (piu' forte su Pro). Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5). Vedi anche README "What's new today" del giorno.
 
 ---
 
