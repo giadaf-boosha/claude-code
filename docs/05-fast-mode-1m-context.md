@@ -17,6 +17,8 @@ Feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), 
 
 ---
 
+> **2026-07-26 (auto-update)**: Anthropic rilascia **Claude Opus 5** (24 lug), disponibile subito in Claude Code — vicino alla frontier intelligence di Fable 5 a meta' prezzo ($5/$25 per Mtok), fast mode ~2.5x, 1M context di default. Con v2.1.219 diventa il modello Opus di default in Claude Code. Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5). Vedi anche README "What's new today" del giorno.
+
 ## 5.1 Fast mode (Opus 4.8 di default, da v2.1.154)
 
 ### Cosa fa

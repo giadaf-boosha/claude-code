@@ -19,6 +19,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 ---
 
+> **2026-07-26 (auto-update)**: v2.1.219 (24 lug) aggiunge il nuovo hook **`DirectoryAdded`**, che fire dopo `/add-dir` o dopo il control request SDK `register_repo_root`. Fonte: [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Vedi anche README "What's new today" del giorno.
+
 ## 7.1 Eventi supportati (28+)
 
 | Evento | Quando fire | Bloccabile? |

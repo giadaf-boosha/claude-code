@@ -19,6 +19,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 ---
 
+> **2026-07-26 (auto-update)**: v2.1.219 (24 lug) porta la profondita' di default per subagent annidati a **3** (era 1) — `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1` per disattivare la nesting. Fonte: [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Vedi anche README "What's new today" del giorno.
+
 ## 8.1 Dove vivono
 
 | Scope | Path | Applies to |

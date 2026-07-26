@@ -17,6 +17,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 ---
 
+> **2026-07-26 (auto-update)**: v2.1.219 (24 lug) introduce `sandbox.network.strictAllowlist`, nuova setting che nega ai comandi sandboxati l'accesso a host non allowlisted senza chiedere conferma all'utente. Fonte: [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Vedi anche README "What's new today" del giorno.
+
 ## 18.1 Settings precedence (top to bottom)
 
 1. **Managed** (cannot override): server-distributed, plist/registry, system `managed-settings.json`

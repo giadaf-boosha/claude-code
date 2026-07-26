@@ -17,6 +17,8 @@ Claude Code ha **due sistemi di memoria** complementari: CLAUDE.md (scritto da t
 
 ---
 
+> **2026-07-26 (auto-update)**: Thariq (team CC) racconta come il team abbia rimosso circa l'80% del system prompt storico di Claude Code per i modelli piu' recenti, cambiando approccio a scrittura di system prompt, skill e CLAUDE.md. Fonte: [@trq212](https://x.com/trq212/status/2080710971228918066). Vedi anche README "What's new today" del giorno.
+
 ## 6.1 Confronto
 
 |  | CLAUDE.md | Auto-memory |

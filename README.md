@@ -1,18 +1,23 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **19 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.215** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **26 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.220** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5 + xhigh** (Max plan).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-19)
+## What's new today (2026-07-26)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Claude Opus 5** (24 lug): Anthropic rilascia il nuovo modello Opus-class — vicino alla frontier intelligence di Fable 5 a meta' prezzo ($5/$25 per Mtok, invariato rispetto a Opus 4.8), fast mode a ~2.5x, context 1M token di default. Diventa il modello di default su Claude Max. Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5) · [@claudeai](https://x.com/claudeai/status/2080699495453528290). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.219** (24 lug): Claude Code adotta Opus 5 come modello Opus di default, aggiunge la setting `sandbox.network.strictAllowlist` (nega host non allowlisted senza chiedere conferma), il nuovo hook `DirectoryAdded` (fire dopo `/add-dir`/`register_repo_root`) e porta i subagent annidati a profondita' 3 di default (era 1). Fonte: [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/07-hooks.md](./docs/07-hooks.md), [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.220** (25 lug): release di soli fix di stabilita' e affidabilita', nessuna feature nuova. Fonte: [GitHub Releases v2.1.220](https://github.com/anthropics/claude-code/releases/tag/v2.1.220). Doc: [docs/19-changelog.md](./docs/19-changelog.md).
+- **Thariq**: il team rimuove circa l'80% del system prompt storico di Claude Code per i modelli piu' recenti, cambiando approccio a come si scrivono system prompt, skill e CLAUDE.md per loro. Fonte: [@trq212](https://x.com/trq212/status/2080710971228918066). Doc: [docs/06-claude-md-memory.md](./docs/06-claude-md-memory.md).
+
+> _Nota: gap di una settimana dall'ultimo aggiornamento tracciato (19 lug); questa entry copre le novita' piu' recenti disponibili alle fonti (24-25 lug), non un giorno pieno di 24h._
 
 ---
 
