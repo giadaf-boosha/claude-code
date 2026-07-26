@@ -1,9 +1,9 @@
-# 05 — Fast mode, 1M context, Opus 4.8, Fable 5
+# 05 — Fast mode, 1M context, Opus 5, Fable 5
 
 > 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
 > 🔧 Operational · 🟡 Intermediate
 
-Feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Opus 4.8** come modello premium corrente (v2.1.154), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), e **Claude Sonnet 5** come nuovo modello di default (v2.1.197, 30 giu 2026).
+Feature legate ai modelli: il **fast mode** (Opus 5 e Opus 4.8 di default, da v2.1.219), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Claude Opus 5** come nuovo modello premium (v2.1.219, 24 lug 2026), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), e **Claude Sonnet 5** come modello di default (v2.1.197, 30 giu 2026).
 
 ## Cosa e' concettualmente
 
@@ -23,6 +23,8 @@ Feature legate ai modelli: il **fast mode** (Opus 4.8 di default, da v2.1.154), 
 Routing su un serving path piu' rapido (~2.5x). Stesso modello, stessi pesi, stessa qualita'. Solo latenza ridotta. **Non** e' downgrade su Haiku/Sonnet.
 
 **Da v2.1.154 (28 mag 2026)**, Fast mode usa **Opus 4.8** di default. In precedenza (v2.1.142–v2.1.153) usava Opus 4.7; prima ancora (v2.1.36–v2.1.141) usava Opus 4.6. Per forzare Opus 4.6: `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`.
+
+**Da v2.1.219 (24 lug 2026)**, Opus 4.7 e' stato rimosso da Fast mode: `/fast` copre ora **Opus 5** e Opus 4.8 (vedi [5.9](#59-claude-opus-5-da-v21219)).
 
 ### Annunciato
 - 7 febbraio 2026 (lancio con Opus 4.6): [@claudeai](https://x.com/claudeai/status/2020207322124132504)
@@ -154,9 +156,10 @@ Opus 4.7 rimane disponibile via `/model claude-opus-4-7` o `/effort` manuale. Pe
 | Situazione | Scelta |
 |---|---|
 | Reasoning max, agentico long-horizon | Fable 5 (`/model claude-fable-5`) |
-| Task complesso massima qualita' | Opus 4.8 + `xhigh` o `max` |
-| Task duro con workflow automatico | Opus 4.8 + `ultracode` (vedi [./24-workflows.md](./24-workflows.md)) |
-| Default ragionamento | Opus 4.8 + `high` (effort di default) |
+| Task complesso massima qualita', premium default Max | Opus 5 (`/model claude-opus-5`) + effort `high` (vedi [5.9](#59-claude-opus-5-da-v21219)) |
+| Task complesso, pinned su modello precedente | Opus 4.8 + `xhigh` o `max` |
+| Task duro con workflow automatico | Opus 5 o Opus 4.8 + `ultracode` (vedi [./24-workflows.md](./24-workflows.md)) |
+| Default ragionamento | Opus 5 + `high` (effort di default) |
 | Task tecnico, velocita', codebase grande | Sonnet 5 (default da v2.1.197, 1M context nativo) |
 | Task tecnico, pinned su modello precedente | Sonnet 4.6 (`/model claude-sonnet-4-6`) |
 | Iterazione fitta veloce | `/fast` (Opus 4.8, ~2.5x velocita', 2x costo: $10/$50 per MTok) |
@@ -230,6 +233,36 @@ Generale su Claude API, Claude Platform, Amazon Bedrock, Vertex AI e Microsoft F
 `claude update` porta alla v2.1.197. Sonnet 4.6 rimane selezionabile via `/model claude-sonnet-4-6` o `ANTHROPIC_MODEL=claude-sonnet-4-6`.
 
 <sub>Aggiornato 2026-07-01 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072018504392601762) · [GitHub Releases v2.1.197](https://github.com/anthropics/claude-code/releases/tag/v2.1.197).</sub>
+
+---
+
+## 5.9 Claude Opus 5 (da v2.1.219)
+
+### Annunciato
+v2.1.219 (24 luglio 2026). `claude-opus-5` diventa il **nuovo modello Opus premium** in Claude Code — Anthropic lo descrive come vicino alla frontiera di Fable 5 su gran parte dei benchmark, a meta' del prezzo. Diventa il modello di default su **Max** e il piu' forte disponibile su **Pro**.
+
+### Come si usa in Claude Code
+```bash
+/model claude-opus-5      # esplicito
+/effort low|medium|high   # bilancia costo/capacita' su Opus 5
+```
+
+### Caratteristiche principali
+| Caratteristica | Valore |
+|---|---|
+| Model ID | `claude-opus-5` |
+| Context window | 1M token |
+| Output max per request | 128k token |
+| Pricing standard | $5/MTok input, $25/MTok output (invariato vs Opus 4.8) |
+| Pricing Fast Mode | $10/MTok input, $50/MTok output |
+| Thinking | On di default |
+| Effort toggle | `low` / `medium` / `high` per bilanciare costo e capacita' del task |
+| Sicurezza | Modello Anthropic meno "prompt-injectable" ad oggi (probe + red teaming); combinato con Auto Mode in Claude Code riduce ulteriormente il tasso di successo degli attacchi |
+
+### Relazione con Opus 4.8 e Fast mode
+Opus 4.7 e' stato rimosso da Fast mode: da v2.1.219 `/fast` copre **Opus 5** e Opus 4.8 (vedi [5.1](#51-fast-mode-opus-48-di-default-da-v21154)). Opus 4.8 resta disponibile via `/model claude-opus-4-8` per chi vuole restare pinned sul modello precedente.
+
+<sub>Aggiornato 2026-07-26 via daily what's new. Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5) · [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219).</sub>
 
 ---
 

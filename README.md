@@ -1,18 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **19 luglio 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.215** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 4.8 + xhigh** (Max plan).
+> Ultimo aggiornamento: **26 luglio 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.220** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-19)
+## What's new today (2026-07-26)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Claude Opus 5** (v2.1.219, 24 lug): nuovo modello Opus, si avvicina a Fable 5 su molti benchmark a meta' del prezzo (stesso pricing di Opus 4.8, $5/$25 per MTok standard). Diventa il modello premium di default su Max e il piu' forte disponibile su Pro; effort toggle low/medium/high per bilanciare costo e capacita', 1M context nativo, modello meno "prompt-injectable" ad oggi. Sostituisce Opus 4.7 in fast mode (`/fast` ora copre Opus 5 e Opus 4.8). Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5) · [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
@@ -180,6 +180,7 @@ E come reference:
 | 23 apr 2026 | v2.1.119 — Vim visual mode, custom themes, hooks `mcp_tool` | [19](./docs/19-changelog.md) |
 | 11 mag 2026 | v2.1.139 — **Agent View** (`claude agents`) + **`/goal`** command + hook exec form + `continueOnBlock` | [08](./docs/08-subagents.md), [03](./docs/03-slash-commands.md), [07](./docs/07-hooks.md) |
 | 14 mag 2026 | v2.1.142 — **Fast Mode → Opus 4.7 di default** + plugin SKILL.md root come skill | [05](./docs/05-fast-mode-1m-context.md), [09](./docs/09-skills.md) |
+| 24 lug 2026 | v2.1.219 — **Claude Opus 5**, nuovo modello premium default su Max, effort toggle low/medium/high, sostituisce Opus 4.7 in fast mode | [05](./docs/05-fast-mode-1m-context.md), [01](./docs/01-snapshot.md) |
 
 ---
 

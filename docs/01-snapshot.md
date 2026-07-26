@@ -25,7 +25,7 @@
 |---|---|
 | Versione CLI corrente | `v2.1.159` (31 mag 2026), range coperto 2.1.83 → 2.1.159 |
 | Modello di default | `claude-sonnet-4-6` |
-| Modello premium | `claude-opus-4-8` con effort `xhigh` (Max plan) |
+| Modello premium | `claude-opus-5` (Max plan; sostituisce `claude-opus-4-8` come default premium da v2.1.219, 24 lug 2026) — vedi [05.9](./05-fast-mode-1m-context.md#59-claude-opus-5-da-v21219) |
 | Effort levels | `low`, `medium`, `high`, `xhigh`, `max` |
 | Default effort Pro/Max | `high` su Opus 4.6 e Sonnet 4.6 (da v2.1.117) |
 | Fast mode | 2.5x piu' veloce di **Opus 4.6** (NON disponibile su 4.7) — $30/$150 per MTok |
@@ -104,6 +104,9 @@ Cronologia compatta (per dettaglio vedi [19-changelog.md](./19-changelog.md)):
 | 11 mag 2026 | `/goal` (v2.1.139) — vedi [./25-goal.md](./25-goal.md) |
 | 28 mag 2026 | **Dynamic Workflows** (v2.1.154) — vedi [./24-workflows.md](./24-workflows.md) |
 | 31 mag 2026 | v2.1.159 — versione CLI corrente; modello premium Opus 4.8 |
+| 24 lug 2026 | v2.1.219 — **Claude Opus 5**, nuovo modello premium default su Max, effort toggle low/medium/high — vedi [./05-fast-mode-1m-context.md#59-claude-opus-5-da-v21219](./05-fast-mode-1m-context.md#59-claude-opus-5-da-v21219) |
+
+<sub>Aggiornato 2026-07-26 via daily what's new. Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5) · [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219).</sub>
 
 ---
 
