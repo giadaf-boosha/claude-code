@@ -8,11 +8,11 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-26)
+## What's new today (2026-07-27)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude Opus 5** (v2.1.219, 24 lug): nuovo modello Opus, si avvicina a Fable 5 su molti benchmark a meta' del prezzo (stesso pricing di Opus 4.8, $5/$25 per MTok standard). Diventa il modello premium di default su Max e il piu' forte disponibile su Pro; effort toggle low/medium/high per bilanciare costo e capacita', 1M context nativo, modello meno "prompt-injectable" ad oggi. Sostituisce Opus 4.7 in fast mode (`/fast` ora copre Opus 5 e Opus 4.8). Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5) · [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 ---
 
