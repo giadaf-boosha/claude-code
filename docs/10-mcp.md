@@ -48,6 +48,21 @@ MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app).
 
 ---
 
+## 10.2b Spec MCP 2026-07-28 (core stateless)
+
+Il 28 luglio 2026 e' uscita la spec **MCP 2026-07-28**, il maggior aggiornamento del protocollo dal lancio: il layer protocollare passa da un modello **bidirezionale stateful** a **request/response stateless**. Concretamente:
+
+- Sparisce l'header `Mcp-Session-Id`: ogni request e' autosufficiente e puo' essere gestita da **qualsiasi istanza** del server, non serve piu' affinita' di sessione.
+- I server remoti possono girare su infrastruttura **serverless/edge** invece di dover mantenere processo e stato tra una request e l'altra.
+- **OAuth/OIDC rafforzati** per l'autorizzazione dei server remoti (vedi [10.11](#1011-oauth-per-server-remoti)).
+- **Extension versionate** per Apps e Tasks, per far evolvere queste superfici senza rompere i client esistenti.
+
+Il supporto e' in rollout sui prodotti Claude, incluso Claude Code — i server `http`/`sse` esistenti restano compatibili, la migrazione riguarda soprattutto chi implementa server MCP. Da tenere distinto dagli **MCP tunnels** (research preview da maggio 2026): quelli risolvono l'accesso a server dentro reti private via connessione outbound-only, non riguardano lo stato del protocollo.
+
+<sub>Aggiornato 2026-07-29 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude).</sub>
+
+---
+
 ## 10.3 Comandi
 
 ```bash
