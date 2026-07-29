@@ -1,18 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **28 luglio 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **29 luglio 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.220** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-28)
+## What's new today (2026-07-29)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **MCP 2026-07-28**: pubblicata la nuova versione della spec Model Context Protocol, il maggior aggiornamento dal lancio del protocollo — core stateless (request/response al posto del bidirezionale stateful, server deployabili su serverless/edge), OAuth/OIDC piu' robusti, ed estensioni di prima classe **MCP Apps** (UI server-rendered in iframe sandboxato), **Tasks** (operazioni long-running/async) e **Server Cards** (capability discovery). Claude adotta il nuovo standard nei prossimi rollout. Tipo: annuncio. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude) · [MCP spec blog](https://blog.modelcontextprotocol.io/posts/2026-07-28/) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2082164248697069935). Vedi [docs/10 § MCP](./docs/10-mcp.md).
 
 ---
 
