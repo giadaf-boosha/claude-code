@@ -17,6 +17,8 @@ MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app).
 
 > Fonte: [`/en/mcp`](https://code.claude.com/docs/en/mcp).
 
+> **2026-07-29 (auto-update)**: pubblicata la spec **MCP 2026-07-28**, il maggior aggiornamento dal lancio del protocollo — core stateless (request/response, server deployabili su serverless/edge), OAuth/OIDC piu' robusti, estensioni **MCP Apps**, **Tasks** e **Server Cards**. Claude adotta il nuovo standard nei prossimi rollout. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 10.1 Configurazione base
