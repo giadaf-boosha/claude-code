@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-07-29
+
+- **Spec MCP 2026-07-28**: il Model Context Protocol passa a un core stateless (niente piu' `Mcp-Session-Id`, ogni request puo' essere gestita da qualsiasi istanza server), con OAuth/OIDC rafforzati ed extension versionate per Apps e Tasks — il maggior aggiornamento del protocollo dal lancio. Supporto in rollout sui prodotti Claude, incluso Claude Code. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2082164248697069935). Doc: [docs/10-mcp.md](./10-mcp.md), [docs/19-changelog.md](./19-changelog.md).
+
+---
+
 ## 2026-07-28
 
 > Nessuna novita' significativa nelle ultime 24 ore.
@@ -192,12 +198,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 ## 2026-06-15
 
 - **Credito programmazione attivo da oggi** (15 giu 2026): i crediti mensili dedicati per uso programmatico entrano in vigore — `claude -p`, Agent SDK, GitHub Actions e app terze parti basate sull'SDK escono dal pool interattivo e attingono a un budget separato ($20 Pro · $100 Max 5x/Team per seat · $200 Max 20x/Enterprise per seat). Il credito va reclamato, si azzera con il ciclo di fatturazione e non e' cumulabile. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2054610152817619388). Doc: [docs/16-headless-agent-sdk.md](./docs/16-headless-agent-sdk.md#crediti-mensili-per-uso-programmatico-attivi-dal-15-giu-2026).
-
----
-
-## 2026-06-14
-
-> Nessuna novita' significativa nelle ultime 24 ore.
 
 ---
 
