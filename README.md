@@ -8,11 +8,11 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-29)
+## What's new today (2026-07-31)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Spec MCP 2026-07-28**: il Model Context Protocol passa a un core stateless (niente piu' `Mcp-Session-Id`, ogni request puo' essere gestita da qualsiasi istanza server), con OAuth/OIDC rafforzati ed extension versionate per Apps e Tasks — il maggior aggiornamento del protocollo dal lancio. Supporto in rollout sui prodotti Claude, incluso Claude Code. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2082164248697069935). Doc: [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 ---
 
