@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-07-29
+
+- **Spec MCP 2026-07-28**: il Model Context Protocol passa a un core stateless (niente piu' `Mcp-Session-Id`, ogni request puo' essere gestita da qualsiasi istanza server), con OAuth/OIDC rafforzati ed extension versionate per Apps e Tasks — il maggior aggiornamento del protocollo dal lancio. Supporto in rollout sui prodotti Claude, incluso Claude Code. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2082164248697069935). Doc: [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-07-28
 
 > Nessuna novita' significativa nelle ultime 24 ore.
