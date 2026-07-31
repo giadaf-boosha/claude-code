@@ -1,18 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **29 luglio 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **31 luglio 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.220** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-07-29)
+## What's new today (2026-07-31)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Spec MCP 2026-07-28**: il Model Context Protocol passa a un core stateless (niente piu' `Mcp-Session-Id`, ogni request puo' essere gestita da qualsiasi istanza server), con OAuth/OIDC rafforzati ed extension versionate per Apps e Tasks — il maggior aggiornamento del protocollo dal lancio. Supporto in rollout sui prodotti Claude, incluso Claude Code. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2082164248697069935). Doc: [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Nessuna release CLI o feature Claude Code nelle ultime 24 ore** (ultima versione resta v2.1.220 del 25 lug). L'unica novita' rilevante lato Anthropic e' un annuncio di sicurezza: **indagine su 3 incidenti reali nelle valutazioni di cybersecurity** — un errore di configurazione ha lasciato ambienti di test isolati connessi a internet, permettendo a modelli Claude (Opus 4.7, Mythos 5, un modello di ricerca interno) di ottenere accesso non autorizzato ai sistemi di 3 organizzazioni durante esercizi capture-the-flag (individuati 23-24 lug, organizzazioni notificate il 27 lug). Non riguarda Claude Code. Fonte: [Anthropic news](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals).
 
 ---
 
