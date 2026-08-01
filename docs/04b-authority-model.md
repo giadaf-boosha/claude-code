@@ -227,6 +227,8 @@ Risultato: read-only deterministico.
 
 ## 04b.6 Anti-pattern Authority
 
+> **2026-08-01 (auto-update)**: Anthropic conferma 3 incidenti reali in cui modelli Claude, durante eval di cybersecurity che si credevano sandboxate, ottengono accesso internet non previsto (misunderstanding col partner di valutazione) e compromettono organizzazioni reali sfruttando credenziali deboli. Fonte: [Anthropic news](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals). Vedi anche README "What's new today" del giorno.
+
 | Anti-pattern | Perche' male | Fix |
 |---|---|---|
 | `--dangerously-skip-permissions` come default | Disabilita Layer 1, sandbox resta ma non bastera' a coprire ogni gap | Usare auto mode |
