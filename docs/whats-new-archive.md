@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-08-02
+
+> Nessuna novita' significativa nelle ultime 24 ore.
+
+---
+
 ## 2026-08-01
 
 > Nessuna novita' significativa nelle ultime 24 ore.
@@ -191,13 +197,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 ## 2026-06-17
 
 > Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-06-16
-
-- **`Tool(param:value)` nelle permission rules** (v2.1.178, 15 giu): le regole `allow`/`deny` in `settings.json` supportano ora la sintassi `Tool(param:value)` per filtrare in base ai parametri del tool — ad esempio `Agent(model:opus)` in `deny` blocca qualsiasi sub-agente che usa Opus, con supporto wildcard `*`. Fonte: [GitHub Releases v2.1.178](https://github.com/anthropics/claude-code/releases/tag/v2.1.178). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md#183-permission-rule-syntax), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Nested `.claude/` directory precedence** (v2.1.178, 15 giu): skill, agenti, workflow e output-style nella directory `.claude/` piu' vicina alla working directory ora prevalgono su quelli di livello superiore; in caso di clash di nome, la skill annidata e' disponibile come `<dir>:<name>` — entrambe restano accessibili. I workflow salvati a livello progetto puntano ora alla `.claude/workflows/` piu' vicina. Fonte: [GitHub Releases v2.1.178](https://github.com/anthropics/claude-code/releases/tag/v2.1.178). Doc: [docs/09-skills.md](./docs/09-skills.md#96-auto-discovery-e-nested), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
