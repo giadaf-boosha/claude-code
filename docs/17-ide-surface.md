@@ -34,6 +34,12 @@ Estensione: `vscode:extension/anthropic.claude-code`. Requires VS Code 1.98.0+.
 - `@browser` con [Claude in Chrome extension](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn) (v1.0.36+)
 - Built-in `ide` MCP server (`mcp__ide__getDiagnostics`, `mcp__ide__executeCode` con Quick Pick confirmation per Jupyter)
 
+### Focus view (da v2.1.221)
+
+Toggle nel chat-menu (`Ctrl+Alt+F`, o comando "Claude Code: Toggle Focus view") che nasconde l'attivita' dettagliata dei tool dietro un riassunto per-turno espandibile, con indicatore live del tool in corso. Utile per seguire un task lungo senza scrollare tra ogni singola chiamata Read/Edit/Bash: il riassunto resta collassato finche' non lo apri manualmente.
+
+<sub>Aggiornato 2026-08-04 via daily what's new. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221).</sub>
+
 ### Permission modes UI
 
 - **Ask before edits** (`default`)

@@ -249,6 +249,22 @@ Paths merge across scopes (managed > project > user).
 }
 ```
 
+### Credential file masking (da v2.1.221)
+
+Nuovo `mode: "mask"` per i file di credenziali dentro la sandbox, su **Linux/WSL**. I comandi sandboxati leggono una copia "sentinel" del file (l'intero contenuto, o solo gli span catturati da una regex `extract`) mentre il proxy della sandbox sostituisce il valore reale solo in uscita (egress). Il segreto non e' mai visibile in chiaro dentro il sandbox — riduce il rischio che finisca in log o output di comandi. Su **macOS** questo mode non e' disponibile e ricade automaticamente su `deny`.
+
+```json
+{
+  "sandbox": {
+    "filesystem": {
+      "credentials": {
+        "~/.aws/credentials": { "mode": "mask" }
+      }
+    }
+  }
+}
+```
+
 ### Altre opzioni
 - `allowUnixSockets`, `allowMachLookup`, `allowLocalBinding`
 - `allowUnsandboxedCommands: false` per blockare escape hatch
