@@ -8,11 +8,11 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-03)
+## What's new today (2026-08-04)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.221** introduce Focus view su VS Code (`Ctrl+Alt+F`, nasconde l'attivita' dei tool dietro un riepilogo per turno con indicatore live), mascheramento credenziali sandbox su Linux/WSL (`mode: "mask"`) e sessioni background che ora fanno commit/push in autonomia per preservare il lavoro (draft PR solo quando il task lo richiede). Fix a permission-check Bash/PowerShell e Vim mode. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Vedi [docs/19 § Fase 7](./docs/19-changelog.md), [docs/17 § VS Code](./docs/17-ide-surface.md), [docs/08 § 8.6c](./docs/08-subagents.md).
 
 ---
 

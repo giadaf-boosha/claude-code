@@ -169,6 +169,8 @@ Utile per identificare quali agenti o skill costano di piu' in un workflow agent
 
 ## 8.6c Background agents — auto-delivery (da v2.1.198)
 
+> **2026-08-04 (auto-update)**: da v2.1.221 le sessioni background fanno commit e push in autonomia per preservare il lavoro, aprendo una draft PR solo quando il task lo richiede effettivamente (non piu' sempre). Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Vedi anche README "What's new today" del giorno.
+
 Gli agenti background che lavorano in un git worktree possono ora chiudere il loop di delivery in modo completamente automatico: al termine dell'elaborazione, l'agente esegue commit, push e apre una draft PR senza intervento manuale.
 
 **Come funziona**:
