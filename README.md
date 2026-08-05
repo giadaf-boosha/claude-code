@@ -8,11 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-03)
+## What's new today (2026-08-05)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **Rimosso `/ultraplan`** (v2.1.222, 4 ago): Claude Code rimuove il comando che spostava il planning su una sessione cloud di Claude Code on the web — il pattern "plan locally, execute remotely" perde lo step cloud dedicato; restano plan mode locale e `/ultrareview` (ancora attivo) per la review pre-merge. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222). Doc: [docs/15-ultraplan-ultrareview.md](./docs/15-ultraplan-ultrareview.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/15b-planning-strategy.md](./docs/15b-planning-strategy.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Focus view** (v2.1.221, 4 ago): nuovo toggle (`Ctrl+Alt+F`) che nasconde l'attivita' dei tool dietro un riepilogo per-turno collassabile, con indicatore live del tool in esecuzione. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Sandbox credential masking** (v2.1.221, 4 ago): nuovo `mode: "mask"` per i file di credenziali in sandbox su Linux/WSL — i comandi sandboxed leggono una copia sentinella, il proxy sostituisce il valore reale solo in uscita; su macOS ricade su `deny`. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

@@ -23,6 +23,7 @@ Estensione: `vscode:extension/anthropic.claude-code`. Requires VS Code 1.98.0+.
 
 ### Features GUI
 
+- **Focus view** (`Ctrl+Alt+F` o comando "Claude Code: Toggle Focus view", da v2.1.221): nasconde l'attivita' dei tool dietro un riepilogo per-turno collassabile, con indicatore live del tool in esecuzione — utile su task lunghi dove il rumore dei tool call distrae dalla conversazione.
 - Inline diff con permission prompt
 - @-mentions con file:line ranges (`Option+K` / `Alt+K`)
 - Plan review (markdown editor con inline comments)
@@ -59,6 +60,8 @@ Estensione: `vscode:extension/anthropic.claude-code`. Requires VS Code 1.98.0+.
 | `disableLoginPrompt` | false | |
 | `allowDangerouslySkipPermissions` | false | |
 | `claudeProcessWrapper` | "" | Script che wrappa il process |
+
+<sub>Aggiornato 2026-08-05 via daily what's new. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221).</sub>
 
 ### URI handler
 

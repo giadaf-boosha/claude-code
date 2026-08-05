@@ -5,6 +5,8 @@
 
 Due feature lanciate in aprile 2026 (Week 14-15) che spostano **planning** e **review** in cloud, multi-agent. Pensate per task complessi dove vuoi affidabilita' alta.
 
+> ⚠️ **Aggiornamento 4 agosto 2026 (v2.1.222)**: `/ultraplan` e' stato **rimosso** da Claude Code. La sezione [15.1](#151-ultraplan-rimosso-da-v21222-4-agosto-2026) resta come riferimento storico. Per il planning oggi restano plan mode locale (vedi [15b](./15b-planning-strategy.md)) e `/ultrareview`, che e' **ancora attivo**, per la review pre-merge.
+
 ## Cosa e' concettualmente
 
 > `/ultraplan` e' il **pilastro Planning portato in cloud**: il Reason esteso non sta nel terminale ma in una sessione web con browser review iterativa. `/ultrareview` e' il **pilastro Authority + Guardrails portato in cloud**: una flotta di agenti specialisti analizza la diff in parallelo e ogni finding e' verificato da agent indipendenti. Entrambi materializzano il principio "compound": piu' agent in cloud > singolo agent locale per task ad alto blast radius.
@@ -17,9 +19,11 @@ Due feature lanciate in aprile 2026 (Week 14-15) che spostano **planning** e **r
 
 ---
 
-## 15.1 `/ultraplan` (research preview, da v2.1.91)
+## 15.1 `/ultraplan` (rimosso da v2.1.222, 4 agosto 2026)
 
 > "Hands a planning task from your local CLI to a Claude Code on the web session running in plan mode."
+
+> **Rimosso** in v2.1.222 (4 ago 2026), insieme a una serie di fix di sicurezza sulla stessa release — nessuna nota di sostituzione ufficiale nel changelog. Il contenuto sotto resta come riferimento storico su come funzionava dal lancio (research preview, v2.1.91, 6 apr 2026) fino alla rimozione.
 
 Lanciato **Week 15** (6-10 aprile 2026). Sposta la fase di planning complessa dal terminale locale al cloud, dove Claude lavora con risorse maggiori e puoi rivedere/commentare il piano nel browser prima di eseguirlo.
 
@@ -162,6 +166,10 @@ Pattern "**plan locally, execute remotely**" che il team Claude Code usa interna
 8. Merge
 ```
 
+> Step 3 (`/ultraplan`) non e' piu' disponibile da v2.1.222 (4 ago 2026): il flusso oggi va da plan mode locale (step 2) direttamente a implementazione (step 5); `/ultrareview` resta lo step cloud pre-merge.
+
+<sub>Aggiornato 2026-08-05 via daily what's new. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222).</sub>
+
 ---
 
 ## 15.4 Code Review (PR agents) - feature correlata
@@ -178,7 +186,7 @@ E' attivabile via Claude GitHub App per Team/Enterprise. Differenze:
 
 ## 15.5 Tips operative
 
-1. **`/ultraplan` per refactor cross-file**: il browser review e' superiore a leggere markdown 800-righe nel terminale.
+1. ~~`/ultraplan` per refactor cross-file~~ — rimosso da v2.1.222 (4 ago 2026); per refactor cross-file oggi conviene plan mode locale con markdown lungo, o splittare il lavoro con `/batch`.
 2. **`/ultrareview` solo pre-merge**: non per micro-feedback iterativo (per quello c'e' `/review`).
 3. **`/extra-usage` check** prima di lanciare ultrareview a pagamento.
 4. **Combina con `/plan` locale**: usa plan mode per scoping veloce, ultraplan se serve depth.

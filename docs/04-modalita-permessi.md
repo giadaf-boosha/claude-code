@@ -249,6 +249,20 @@ Paths merge across scopes (managed > project > user).
 }
 ```
 
+### Credential masking (`mode: "mask"`, da v2.1.221)
+Estende `sandbox.credentials` (v2.1.187): invece di bloccare del tutto la lettura dei file di credenziali, i comandi sandboxed possono leggere una copia sentinella (l'intero file, o solo gli span catturati da una regex `extract`) mentre il proxy sandbox sostituisce il valore reale solo in uscita (egress). Disponibile su **Linux/WSL**; su **macOS** il masking ricade su `deny` (nessun proxy egress nel Seatbelt sandbox).
+```json
+{
+  "sandbox": {
+    "credentials": {
+      "mode": "mask"
+    }
+  }
+}
+```
+
+<sub>Aggiornato 2026-08-05 via daily what's new. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221).</sub>
+
 ### Altre opzioni
 - `allowUnixSockets`, `allowMachLookup`, `allowLocalBinding`
 - `allowUnsandboxedCommands: false` per blockare escape hatch

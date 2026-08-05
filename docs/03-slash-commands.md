@@ -94,13 +94,13 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/statusline` | built-in | Configura status line |
 | `/stickers` | built-in | Order stickers |
 | `/subtask <instruction>` | built-in | Spawna un subagent dentro la sessione corrente (comportamento ex `/fork`, da v2.1.212) — vedi [08 Subagents](./08-subagents.md#85-forking-di-sessione) |
-| `/tasks` (alias `/bashes`) | built-in | Background tasks (incluse cron, ultraplan, ultrareview) |
+| `/tasks` (alias `/bashes`) | built-in | Background tasks (incluse cron, ultrareview) |
 | `/team-onboarding` | built-in | Genera onboarding guide da usage history |
 | `/teleport` (alias `/tp`) | built-in | Pull web session nel terminale |
 | `/terminal-setup` | built-in | Keybindings shell (VS Code/Cursor/Windsurf/Alacritty/Zed) |
 | `/theme` | built-in | Color theme + custom themes da `~/.claude/themes/` |
 | `/tui [default\|fullscreen]` | built-in | Renderer TUI (fullscreen flicker-free da v2.1.110) |
-| `/ultraplan <prompt>` | built-in | [Plan in cloud](./15-ultraplan-ultrareview.md), review browser, execute remote o local |
+| ~~`/ultraplan <prompt>`~~ | rimosso v2.1.222 | [Plan in cloud](./15-ultraplan-ultrareview.md#151-ultraplan-rimosso-da-v21222-4-agosto-2026) — rimosso il 4 ago 2026, riferimento storico |
 | `/ultrareview [PR]` | built-in | [Multi-agent cloud code review](./15-ultraplan-ultrareview.md) (3 free runs Pro/Max → 5 mag 2026) |
 | `/upgrade` | built-in | Upgrade plan |
 | `/usage` | built-in | Cost + plan usage + activity |

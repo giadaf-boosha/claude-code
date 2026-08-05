@@ -5,6 +5,8 @@
 
 > **Tesi del capitolo**: il pilastro **Planning** del framework IMPACT non e' "preparare un piano dettagliato sempre". E' decidere **quando pianificare e quanto**, in funzione della complessita' e del costo di errore. Claude Code offre 4 livelli di planning in spettro continuo: zero plan → plan mode → `/ultraplan` → `/batch`. Sapere quando salire/scendere lo spettro vale piu' di sapere come usare ognuno.
 
+> ⚠️ **Aggiornamento 4 agosto 2026 (v2.1.222)**: il livello 2 (`/ultraplan`) descritto sotto e' stato **rimosso** da Claude Code. Resta come riferimento storico — vedi [15.1](./15-ultraplan-ultrareview.md#151-ultraplan-rimosso-da-v21222-4-agosto-2026). Lo spettro planning oggi salta da plan mode locale (livello 1) a `/batch` (livello 3) per il fan-out massivo.
+
 ---
 
 ## 15b.1 Perche' "Planning" e' un componente IMPACT a se'
@@ -46,7 +48,7 @@ flowchart LR
 |---|---|---|---|---|
 | 0 — Zero plan | (nessuno) | 0 min | Sonnet 4.6 | Bug fix, edit isolato, prototyping |
 | 1 — Plan mode locale | `Shift+Tab` o `/plan [task]` | 1-5 min | Opus per Reason | Cross-file ma 1 feature, durata 30min-2h |
-| 2 — Ultraplan cloud | `/ultraplan <prompt>` | 10-30 min | Opus 4.7 xhigh | Refactor cross-modulo, design feature complessa, durata 1-3 giorni |
+| 2 — Ultraplan cloud (rimosso v2.1.222) | ~~`/ultraplan <prompt>`~~ | 10-30 min | Opus 4.7 xhigh | Refactor cross-modulo, design feature complessa, durata 1-3 giorni |
 | 3 — Batch | `/batch <instruction>` | Plan + interview | Subagent worktree array | Migrazione 100+ unit, code-mod massivo |
 
 ---

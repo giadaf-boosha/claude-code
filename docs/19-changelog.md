@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (18 luglio 2026, v2.1.214). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (4 agosto 2026, v2.1.222). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -552,7 +552,10 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 24 lug 2026 | **v2.1.219** | **Claude Opus 5**: nuovo modello Opus premium, default su Max, effort toggle low/medium/high, sostituisce Opus 4.7 in Fast mode (ora Opus 5 + Opus 4.8) — vedi [05.9](./05-fast-mode-1m-context.md#59-claude-opus-5-da-v21219). **Subagent annidati fino a depth 3** di default (era 1). `sandbox.network.strictAllowlist`: nega host non in allowlist senza prompt. Nuovo hook `DirectoryAdded` dopo `/add-dir`. `workflowSizeGuideline` in settings; dynamic workflow default a medium (<15 agent). |
 | 25 lug 2026 | v2.1.220 | Bug fix e miglioramenti di affidabilita'. |
 | 28 lug 2026 | **spec MCP 2026-07-28** | **Core MCP stateless**: il protocollo passa da bidirezionale stateful a request/response — sparisce `Mcp-Session-Id`, i server remoti possono girare su infrastruttura serverless/edge. OAuth/OIDC rafforzati, extension versionate per Apps e Tasks. Rollout in corso sui prodotti Claude, incluso Claude Code — vedi [10.2b](./10-mcp.md#102b-spec-mcp-2026-07-28-core-stateless). |
+| 4 ago 2026 | **v2.1.221** | **Focus view** (`Ctrl+Alt+F`): nasconde l'attivita' dei tool dietro un riepilogo per-turno collassabile — vedi [17.1](./17-ide-surface.md#171-vs-code). **Sandbox credential masking** (`sandbox.credentials.mode: "mask"`, Linux/WSL): comandi sandboxed leggono una copia sentinella delle credenziali, il proxy sostituisce il valore reale solo in uscita — vedi [4.4](./04-modalita-permessi.md#44-sandbox-mode). Fix: bypass permission check zsh `[[ ]]` e PowerShell con virgolette, WebSearch a effort xhigh/max. |
+| 4 ago 2026 | **v2.1.222** | **Rimosso `/ultraplan`** — vedi [15.1](./15-ultraplan-ultrareview.md#151-ultraplan-rimosso-da-v21222-4-agosto-2026). Fix di sicurezza: worktree isolation bypass su git distruttivo, PreToolUse auto-allow bypass nei background task, `/usage` overattribution a server MCP. Auto mode valuta ora anche i messaggi `SendMessage` verso altre sessioni prima del dispatch. |
 
+<sub>Aggiornato 2026-08-05 via daily what's new. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221) · [v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222).</sub>
 <sub>Aggiornato 2026-07-29 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude).</sub>
 <sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205) · [v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206) · [v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279).</sub>
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210) · [v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211) · [v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212) · [v2.1.214](https://github.com/anthropics/claude-code/releases/tag/v2.1.214).</sub>
