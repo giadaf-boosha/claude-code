@@ -5,6 +5,8 @@
 
 Due feature lanciate in aprile 2026 (Week 14-15) che spostano **planning** e **review** in cloud, multi-agent. Pensate per task complessi dove vuoi affidabilita' alta.
 
+> **2026-08-05 (auto-update)**: `/ultraplan` viene **rimossa** in v2.1.222 (4 ago) — la sezione 15.1 sotto descrive quindi una feature non piu' disponibile. `/ultrareview` (15.2) non e' impattata. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > `/ultraplan` e' il **pilastro Planning portato in cloud**: il Reason esteso non sta nel terminale ma in una sessione web con browser review iterativa. `/ultrareview` e' il **pilastro Authority + Guardrails portato in cloud**: una flotta di agenti specialisti analizza la diff in parallelo e ogni finding e' verificato da agent indipendenti. Entrambi materializzano il principio "compound": piu' agent in cloud > singolo agent locale per task ad alto blast radius.

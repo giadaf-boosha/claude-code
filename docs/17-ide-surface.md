@@ -21,6 +21,8 @@ VS Code, JetBrains, Desktop, Web, Slack, Channels, Remote Control. Tutti i modi 
 
 Estensione: `vscode:extension/anthropic.claude-code`. Requires VS Code 1.98.0+.
 
+> **2026-08-05 (auto-update)**: v2.1.221 (4 ago) aggiunge **Focus view** — toggle `Ctrl+Alt+F` che nasconde l'attivita' dei tool dietro un riepilogo espandibile per turno con indicatore live del tool in corso. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Vedi anche README "What's new today" del giorno.
+
 ### Features GUI
 
 - Inline diff con permission prompt

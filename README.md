@@ -8,11 +8,12 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-03)
+## What's new today (2026-08-05)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.222** (4 ago) rimuove la feature **`/ultraplan`** e corregge un bug di isolamento worktree che permetteva a sessioni/subagent sandboxati di eseguire comandi git distruttivi contro il checkout principale. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222). Vedi [docs/15 § 15.1](./docs/15-ultraplan-ultrareview.md) e [docs/19 § changelog](./docs/19-changelog.md).
+- **CLI v2.1.221** (4 ago) introduce **Focus view** su VS Code (`Ctrl+Alt+F`, nasconde l'attivita' dei tool dietro un riepilogo per turno) e la modalita' `mode: "mask"` per i file di credenziali sandbox su Linux/WSL. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Vedi [docs/17 § 17.1](./docs/17-ide-surface.md) e [docs/04 § 4.4](./docs/04-modalita-permessi.md).
 
 ---
 
