@@ -205,6 +205,8 @@ Utile per diagnosticare perche' un comando specifico viene fermato e affinare le
 
 OS-level enforcement su Bash e child processes. Filesystem isolation + network isolation. Riduce permission prompt dell'~84% in uso interno Anthropic.
 
+> **2026-08-05 (auto-update)**: v2.1.221 (4 ago) aggiunge `mode: "mask"` per i file di credenziali sandbox su Linux/WSL — i comandi sandboxati leggono una copia sentinella mentre il proxy sostituisce il valore reale in uscita (su macOS fallback a `deny`). Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Vedi anche README "What's new today" del giorno.
+
 ### Piattaforme
 - **macOS**: Seatbelt (out of the box)
 - **Linux/WSL2**: bubblewrap + socat (`apt-get install bubblewrap socat`). WSL1 NON supportato.
