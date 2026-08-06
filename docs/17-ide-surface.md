@@ -33,6 +33,7 @@ Estensione: `vscode:extension/anthropic.claude-code`. Requires VS Code 1.98.0+.
 - `/plugins` UI graphical
 - `@browser` con [Claude in Chrome extension](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn) (v1.0.36+)
 - Built-in `ide` MCP server (`mcp__ide__getDiagnostics`, `mcp__ide__executeCode` con Quick Pick confirmation per Jupyter)
+- **Focus view** (da v2.1.221): toggle dal chat-menu (o comando "Claude Code: Toggle Focus view") che nasconde l'attivita' dei tool dietro un riassunto per-turno espandibile, con indicatore live del tool in esecuzione — utile per seguire sessioni lunghe senza scroll continuo. Scorciatoia `Ctrl+Alt+F`. Non va confuso col comando CLI `/focus` (mostra solo ultimo prompt/risposta in fullscreen, vedi [03](./03-slash-commands.md))
 
 ### Permission modes UI
 
@@ -325,5 +326,7 @@ Oltre alle surface ufficiali Anthropic (CLI, Desktop, VS Code, JetBrains, Web, S
 - GitHub Actions: [`/en/github-actions`](https://code.claude.com/docs/en/github-actions)
 
 ---
+
+<sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221).</sub>
 
 ← [16 Headless & Agent SDK](./16-headless-agent-sdk.md) · Successivo → [18 Settings & Auth](./18-settings-auth.md)

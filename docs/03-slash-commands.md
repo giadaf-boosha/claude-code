@@ -81,7 +81,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/remote-env` | built-in | Configura env remote per `--remote` |
 | `/rename [name]` | built-in | Rinomina sessione |
 | `/resume [session\|PR-URL]` (alias `/continue`) | built-in | Riprende sessione per ID/nome; accetta URL di PR (GitHub, GitHub Enterprise, GitLab, Bitbucket) per trovare la sessione che ha creato quella PR (da v2.1.122). Da v2.1.144 include anche le sessioni background avviate via `claude --bg` o Agent View (mostrate con tag `bg` nella lista). Da v2.1.212 apre un picker delle sessioni passate, incluse quelle cancellate |
-| `/review [PR]` | built-in | Code review locale single-pass veloce (cf. `/ultrareview` per cloud, `/code-review` per multi-agent). Da v2.1.202 riportato a single-pass dopo una parentesi multi-agente: per la review a 3 agent paralleli usa `/code-review <level> <PR#>` |
+| `/review [PR]` | built-in | Da v2.1.223 e' tornato ad essere **alias di `/code-review`**: `/review` revisiona il diff corrente o una PR (`/code-review <level> <pr#>`), `/code-review ultra` per la deep review cloud. Senza effort level riusa l'ultimo digitato. Inverte la scelta v2.1.202 (single-pass separato) |
 | `/rewind` (alias `/checkpoint`, `/undo`) | built-in | Checkpoint rewind; da v2.1.191 recupera anche il context azzerato da `/clear` |
 | `/sandbox` | built-in | Toggle [sandbox mode](./04-modalita-permessi.md#sandbox) |
 | `/schedule [description]` (alias `/routines`) | built-in | Gestione [routines](./13-routines-cloud.md) |
@@ -100,7 +100,6 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/terminal-setup` | built-in | Keybindings shell (VS Code/Cursor/Windsurf/Alacritty/Zed) |
 | `/theme` | built-in | Color theme + custom themes da `~/.claude/themes/` |
 | `/tui [default\|fullscreen]` | built-in | Renderer TUI (fullscreen flicker-free da v2.1.110) |
-| `/ultraplan <prompt>` | built-in | [Plan in cloud](./15-ultraplan-ultrareview.md), review browser, execute remote o local |
 | `/ultrareview [PR]` | built-in | [Multi-agent cloud code review](./15-ultraplan-ultrareview.md) (3 free runs Pro/Max → 5 mag 2026) |
 | `/upgrade` | built-in | Upgrade plan |
 | `/usage` | built-in | Cost + plan usage + activity |
@@ -115,6 +114,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 <sub>Aggiornato 2026-07-12 via daily what's new. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205).</sub>
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212).</sub>
 <sub>Aggiornato 2026-07-19 via daily what's new. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215).</sub>
+<sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222) · [v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223).</sub>
 
 ---
 
@@ -125,6 +125,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/vim` | rimosso v2.1.92 | `/config` → Editor mode (Vim ora con visual mode `v`/`V` da v2.1.118) |
 | `/pr-comments` | rimosso v2.1.91 | Chiedere a Claude direttamente sui commenti PR |
 | `/simplify` | alias da v2.1.152 | `/code-review --fix` (era rinominato in v2.1.146, reintrodotto come alias in v2.1.152) |
+| `/ultraplan` | **rimosso v2.1.222** | Nessun sostituto diretto — planning in cloud non piu' disponibile come comando dedicato; usare `/plan` locale o `/schedule` per routine cloud. Vedi [15.1](./15-ultraplan-ultrareview.md#151-ultraplan-rimosso-da-v21222) |
 
 ---
 

@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Cloud](../README.md#cloud) → **15 Ultraplan & Ultrareview**
 > 🔧 Operational · 🟡 Intermediate
 
-Due feature lanciate in aprile 2026 (Week 14-15) che spostano **planning** e **review** in cloud, multi-agent. Pensate per task complessi dove vuoi affidabilita' alta.
+Due feature lanciate in aprile 2026 (Week 14-15) che spostavano **planning** e **review** in cloud, multi-agent. `/ultraplan` e' stato **rimosso in v2.1.222** (4 ago 2026, senza sostituto diretto); `/ultrareview` resta attivo e in sviluppo. Il capitolo resta come riferimento storico per `/ultraplan` e come reference operativa per `/ultrareview`.
 
 ## Cosa e' concettualmente
 
@@ -17,7 +17,9 @@ Due feature lanciate in aprile 2026 (Week 14-15) che spostano **planning** e **r
 
 ---
 
-## 15.1 `/ultraplan` (research preview, da v2.1.91)
+## 15.1 `/ultraplan` — rimosso da v2.1.222
+
+> ⚠️ **Rimosso**: la release v2.1.222 (4 ago 2026) ha eliminato il comando `/ultraplan` e la feature di planning in cloud descritta in questa sezione. Il changelog ufficiale lista solo "Removed ultraplan feature", senza motivazione ne' sostituto dedicato indicato. Per planning resta `/plan` (locale) o, per orchestrazione cloud generica, `/schedule`/routines ([13](./13-routines-cloud.md)). La sezione sotto e' mantenuta come riferimento storico.
 
 > "Hands a planning task from your local CLI to a Claude Code on the web session running in plan mode."
 
@@ -193,5 +195,7 @@ E' attivabile via Claude GitHub App per Team/Enterprise. Differenze:
 - `/ultrareview`: PR triviale, change cosmetic, scarse risorse (paghi).
 
 ---
+
+<sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222).</sub>
 
 ← [14 Loop & Monitor](./14-loop-monitor.md) · Successivo → [16 Headless & Agent SDK](./16-headless-agent-sdk.md)
