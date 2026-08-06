@@ -5,6 +5,8 @@
 
 > "Put Claude Code on autopilot. Define routines that run on a schedule, trigger on API calls, or react to GitHub events."
 
+> **2026-08-06 (auto-update)**: v2.1.223 aggiunge un hint `/teleport` nelle sessioni cloud che mostra come continuare in locale con `claude --teleport <session id>`. Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Le routines sono l'**agent loop in cloud**: stesso pattern di `/loop` ma eseguito su infra Anthropic, senza laptop acceso. Tre trigger principali (schedule, API, GitHub event) coprono ogni caso di automazione 24/7. Sono il salto da "agent locale che gira finche' tieni aperta la sessione" a "agent cloud che lavora per te in autonomia".

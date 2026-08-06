@@ -5,6 +5,8 @@
 
 I plugin sono pacchetti che bundlano Skills, Subagents, Hooks, MCP server, LSP server, monitor di background e setting. Installabili da marketplace ufficiali, community o custom.
 
+> **2026-08-06 (auto-update)**: v2.1.223 aggiunge wildcard `"owner/*"` a `strictKnownMarketplaces`/`blockedMarketplaces` per consentire o bloccare tutti i repo marketplace di un'org GitHub in un colpo solo. Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Un plugin e' un **bundle di harness components**: skill + agent + hook + MCP server + LSP + monitor + settings, distribuito come unita'. E' il packaging format dell'ecosistema. Quando installi un plugin, stai abilitando un set coordinato di capabilities (tool + memoria + guardrail) tutti insieme.

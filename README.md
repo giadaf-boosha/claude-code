@@ -8,11 +8,15 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-03)
+## What's new today (2026-08-06)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.223** (6 ago) — fix di sicurezza: chiude un bypass dei permessi Bash con comandi crafted e uno con padding tab/Unicode invisibile nei prompt di conferma; aggiunge wildcard `owner/*` per marketplace plugin org-wide e l'hint `/teleport` nelle sessioni cloud. Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Vedi [docs/04 § Permessi](./docs/04-modalita-permessi.md), [docs/11 § Marketplace](./docs/11-plugins-marketplace.md), [docs/13 § Routines](./docs/13-routines-cloud.md), [docs/19 § Changelog](./docs/19-changelog.md).
+- **`/review` diventa alias di `/code-review`** (v2.1.223, 6 ago): riusa l'ultimo effort level digitato, `/code-review ultra` per la deep cloud review. Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Vedi [docs/03 § Tabella comandi](./docs/03-slash-commands.md).
+- **Auto-compact 1M context ridefinito** (v2.1.223, 6 ago): `CLAUDE_CODE_DISABLE_1M_CONTEXT` copre ora ogni modello con finestra nativa 1M (non piu' una lista fissa); nuovo warning quando l'auto-compact non tiene la sessione sotto 200K. Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Vedi [docs/05 § Fast mode](./docs/05-fast-mode-1m-context.md).
+- **CLI v2.1.222** (4 ago) — rimuove la feature **Ultraplan** (era in research preview da v2.1.91): planning cloud multi-agent non piu' disponibile. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222). Vedi [docs/15 § Ultraplan](./docs/15-ultraplan-ultrareview.md), [docs/19 § Changelog](./docs/19-changelog.md).
+- **Fix sicurezza worktree isolation** (v2.1.222, 4 ago): chiude un bug che permetteva a sessioni/subagent isolati in worktree di eseguire comandi git distruttivi contro il checkout principale; chiuso anche un bypass degli hook `PreToolUse` auto-allow nei task background. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222). Vedi [docs/04 § Permessi](./docs/04-modalita-permessi.md).
 
 ---
 

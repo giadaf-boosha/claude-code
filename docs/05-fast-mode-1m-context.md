@@ -5,6 +5,8 @@
 
 Feature legate ai modelli: il **fast mode** (Opus 5 e Opus 4.8 di default, da v2.1.219), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Claude Opus 5** come nuovo modello premium (v2.1.219, 24 lug 2026), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), e **Claude Sonnet 5** come modello di default (v2.1.197, 30 giu 2026).
 
+> **2026-08-06 (auto-update)**: v2.1.223 estende `CLAUDE_CODE_DISABLE_1M_CONTEXT` a ogni modello con finestra nativa 1M (non piu' una lista fissa) e aggiunge un warning se l'auto-compact non tiene la sessione dentro 200K. Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Le tre feature gestiscono il trade-off **velocita' / qualita' / capacita'** del modello. Fast mode taglia la latenza, 1M context espande la "memoria di lavoro", Opus 4.8 con effort `xhigh` amplia il reasoning. Sono leve indipendenti per dimensionare l'engine all'applicazione.

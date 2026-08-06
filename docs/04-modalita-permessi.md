@@ -5,6 +5,8 @@
 
 Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoint per il rollback. Questo documento li copre tutti.
 
+> **2026-08-06 (auto-update)**: v2.1.222/v2.1.223 chiudono piu' bypass dei permessi — comandi Bash crafted, padding tab/Unicode nei prompt di conferma, isolamento worktree contro comandi git distruttivi, hook `PreToolUse` auto-allow nei task background. Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Le modalita' permessi sono il **Layer 1** dell'Authority dell'harness: dichiari cosa l'agent puo' fare a runtime. La sandbox e' il **Layer 2** (OS-level). I checkpoint sono il **layer State**: snapshot per recovery deterministico.
