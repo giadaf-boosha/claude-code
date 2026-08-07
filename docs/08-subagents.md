@@ -136,9 +136,10 @@ Skill con `context: fork` + `agent: Explore` → il body della skill diventa tas
 | `/fork` (alias `/branch`) | Da v2.1.212: copia l'intera conversazione in una **nuova sessione background**, con riga propria in `claude agents` — il thread principale resta libero |
 | `/subtask <instruction>` | Da v2.1.212: spawna un subagent **dentro** la sessione corrente — e' il comportamento che `/fork` aveva prima di v2.1.212 |
 
-Da v2.1.117: forked subagents su external builds (`CLAUDE_CODE_FORK_SUBAGENT=1`). Da v2.1.212 la distinzione e' esplicita nel nome del comando: `/fork` = nuova sessione indipendente, `/subtask` = subagent figlio nella sessione corrente. La stessa release ha introdotto tetti di sicurezza per-sessione (default, override via env var): fino a 200 chiamate WebSearch (`CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`) e fino a 200 spawn di subagent (`CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION`), pensati per fermare loop di ricerca o delega fuori controllo.
+Da v2.1.117: forked subagents su external builds (`CLAUDE_CODE_FORK_SUBAGENT=1`). Da v2.1.212 la distinzione e' esplicita nel nome del comando: `/fork` = nuova sessione indipendente, `/subtask` = subagent figlio nella sessione corrente. La stessa release ha introdotto tetti di sicurezza per-sessione (default, override via env var): fino a 200 chiamate WebSearch (`CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`) e — fino a v2.1.224 — fino a 200 spawn di subagent (`CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION`), pensati per fermare loop di ricerca o delega fuori controllo. Da v2.1.224 il tetto sugli spawn di subagent e' stato rimosso: le sessioni lunghe non si bloccano piu' per esaurimento del contatore, restano invece attivi i limiti di concorrenza (`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`, default 20) e di profondita' di annidamento (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH`).
 
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212).</sub>
+<sub>Aggiornato 2026-08-07 via daily what's new. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224).</sub>
 
 ---
 

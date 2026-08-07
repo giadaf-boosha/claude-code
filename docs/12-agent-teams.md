@@ -284,3 +284,23 @@ La versione interna di Claude Tag genera il **65% del codice del product team An
 | **Use case** | Orchestrazione complessa in-session | Collaborazione team async su task ricorrenti |
 
 <sub>Aggiornato 2026-06-26 via daily what's new. Fonte: [@claudeai](https://x.com/claudeai/status/2069468694552461375) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2069468913264644419) · [Anthropic blog](https://www.anthropic.com/news/introducing-claude-tag).</sub>
+
+---
+
+## 12.18 Cross-session messaging (da v2.1.224)
+
+Fino a v2.1.223 `SendMessage` e `ListAgents` (vedi [12.5](#125-workflow-tipico)) collegavano solo lead e teammate **dentro lo stesso team**. Da v2.1.224 il meccanismo si generalizza: qualsiasi sessione Claude Code puo' scambiare messaggi con qualsiasi altra sessione che trova, senza dover far parte di un Agent Team.
+
+`ListAgents` elenca ora, oltre ai subagent in-process spawnati dalla sessione corrente:
+- altre sessioni Claude Code locali sulla stessa macchina (macOS e Linux);
+- sessioni cloud dell'utente;
+- sessioni bridge Remote Control raggiunte (reply-only: rispondibili solo dopo che hanno scritto per prime).
+
+```
+# Da una sessione terminale, contatta un'altra sessione locale per nome
+SendMessage({ to: "nome-sessione", message: "..." })
+```
+
+Due impostazioni nuove regolano la ricezione: `crossSessionInbound` decide se i messaggi in arrivo verso sessioni con permessi bypassati restano in attesa di approvazione o si consegnano subito, `dialogExpiry` imposta per quanto tempo una richiesta di approvazione resta valida prima di scadere. Utile per coordinare sessioni indipendenti (es. una sessione che segue un deploy che avvisa quella che sta scrivendo la release note) senza dover costruire un intero Agent Team per uno scambio occasionale. Vedi anche [08 Subagents](./08-subagents.md) per il rimosso tetto di 200 spawn per sessione, introdotto nella stessa release.
+
+<sub>Aggiornato 2026-08-07 via daily what's new. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224).</sub>

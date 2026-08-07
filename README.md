@@ -1,20 +1,19 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **6 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.223** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **7 agosto 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.224** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-06)
+## What's new today (2026-08-07)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Rimosso `/ultraplan`** (v2.1.222, 4 ago): il planning in cloud lanciato ad aprile 2026 e' stato eliminato dal CLI senza sostituto dedicato — resta `/plan` locale o le routine (`/schedule`) per orchestrazione cloud. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222). Doc: [docs/15-ultraplan-ultrareview.md](./docs/15-ultraplan-ultrareview.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/review` torna alias di `/code-review`** (v2.1.223, 6 ago): revisiona il diff corrente o una PR (`/code-review <level> <pr#>`), `/code-review ultra` per la deep review cloud — inverte la separazione single-pass introdotta a luglio (v2.1.202). Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Focus view in VS Code** (v2.1.221, 4 ago): toggle `Ctrl+Alt+F` che nasconde l'attivita' dei tool dietro un riassunto per-turno espandibile, con indicatore live del tool in esecuzione. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Cross-session `SendMessage`** (v2.1.224, 7 ago): le sessioni Claude Code — locali o cloud — possono ora scambiarsi messaggi tra loro, individuandosi a vicenda con `ListAgents`, su macOS e Linux; generalizza ad ogni sessione indipendente il pattern lead/teammate finora riservato ad Agent Teams. Stessa release: rimosso il tetto di 200 subagent spawnabili per sessione (restano i limiti di concorrenza e depth). Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`claude self-hosted-runner`** (v2.1.224, 7 ago): nuovo comando CLI per far girare le sessioni web/mobile/desktop di Claude Code su macchine o container proprietari (Team/Enterprise). Stessa release: installazione plugin da marketplace via archivio `.zip` su HTTPS con pinning SHA-256 opzionale, senza passare da git/npm. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224). Doc: [docs/02-cli-installazione.md](./docs/02-cli-installazione.md), [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

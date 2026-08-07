@@ -143,7 +143,10 @@ claude --plugin-dir ./my-plugin.zip                    # archivio .zip locale
 claude --plugin-url https://example.com/my-plugin.zip  # scarica da URL (sessione corrente)
 ```
 
+Queste due flag valgono solo per la sessione corrente. Da v2.1.224, `/plugin marketplace add` accetta anche un **archive source**: un `.zip` servito via HTTPS che diventa un marketplace registrato in modo permanente, senza passare da git o npm — utile per distribuire plugin interni quando il repo non e' su un host git raggiungibile. Il source supporta il pinning opzionale via hash SHA-256, cosi' un update dell'archivio a monte non cambia silenziosamente cosa viene installato finche' l'hash pinnato non viene aggiornato esplicitamente.
+
 <sub>Aggiornato 2026-05-09 via daily what's new. Fonte: [code.claude.com/docs/en/whats-new/2026-w19](https://code.claude.com/docs/en/whats-new/2026-w19).</sub>
+<sub>Aggiornato 2026-08-07 via daily what's new. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224).</sub>
 
 ### Plugin locali: auto-loading e scaffolding (da v2.1.157)
 
@@ -282,6 +285,7 @@ LSP ufficiali: `typescript-lsp`, `pyright-lsp`, `rust-analyzer-lsp`, `gopls-lsp`
 - Plugin executables sul `PATH` di Bash tool (Week 14, v2.1.94)
 - Plugin auto-install deps (v2.1.117)
 - Plugin da `.zip` e URL (Week 19, v2.1.128–129): `--plugin-dir` accetta `.zip`, `--plugin-url` scarica da URL
+- Archive source per marketplace (v2.1.224): `/plugin marketplace add` accetta un `.zip` via HTTPS come source permanente, con pinning SHA-256 opzionale — vedi [11.3](#113-comandi-plugin)
 
 ---
 

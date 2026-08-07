@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-08-06
+
+- **Rimosso `/ultraplan`** (v2.1.222, 4 ago): il planning in cloud lanciato ad aprile 2026 e' stato eliminato dal CLI senza sostituto dedicato — resta `/plan` locale o le routine (`/schedule`) per orchestrazione cloud. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222). Doc: [docs/15-ultraplan-ultrareview.md](./15-ultraplan-ultrareview.md), [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
+- **`/review` torna alias di `/code-review`** (v2.1.223, 6 ago): revisiona il diff corrente o una PR (`/code-review <level> <pr#>`), `/code-review ultra` per la deep review cloud — inverte la separazione single-pass introdotta a luglio (v2.1.202). Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Doc: [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
+- **Focus view in VS Code** (v2.1.221, 4 ago): toggle `Ctrl+Alt+F` che nasconde l'attivita' dei tool dietro un riassunto per-turno espandibile, con indicatore live del tool in esecuzione. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Doc: [docs/17-ide-surface.md](./17-ide-surface.md), [docs/19-changelog.md](./19-changelog.md).
+
+---
+
 ## 2026-08-03
 
 > Nessuna novita' significativa nelle ultime 24 ore.
@@ -190,13 +198,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 - **Artifacts in Claude Code** (beta, Team & Enterprise, 19 giu): Claude trasforma il lavoro di sessione in pagine web condivise — PR walkthrough, dashboard di progetto — aggiornate in tempo reale mentre la sessione continua. Condivisibili via link privato al team. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067672094209675373) · [@claudeai](https://x.com/claudeai/status/2067671912038240487). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **`/design-sync`** (19 giu): nuovo slash command per sync bidirezionale tra Claude Code e Claude Design — pull del design system nel repo per buildare su componenti reali, push del codice verso il canvas Design per continuare l'editing. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2067391951725629941). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **Auto mode safety** (v2.1.183, 19 giu): auto mode blocca ora automaticamente comandi git distruttivi (`git reset --hard`, `git checkout -- .`, `git clean -fd`, `git stash drop`, `git commit --amend` non richiesto) e destroy di infra (`terraform destroy`, `pulumi destroy`, `cdk destroy`) quando non esplicitamente richiesti nel prompt corrente. Fonte: [GitHub Releases v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-06-18
-
-- **`/config key=value`** (v2.1.181, 17 giu): la sintassi `/config key=value` imposta qualsiasi setting direttamente dal prompt senza modificare `settings.json` — es. `/config thinking=false` disabilita il thinking per la sessione corrente. Funziona in modalita' interattiva, con `-p` e in Remote Control. Fonte: [GitHub Releases v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/18-settings-auth.md](./docs/18-settings-auth.md).
-- **`CLAUDE_CLIENT_PRESENCE_FILE`** (v2.1.181, 17 giu): nuova env var punta a un marker file per silenziare le push notification mobile mentre si e' alla macchina — utile per chi usa Claude Code sia da desktop che da mobile. Fonte: [GitHub Releases v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md).
 
 ---
 
