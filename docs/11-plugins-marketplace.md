@@ -5,6 +5,8 @@
 
 I plugin sono pacchetti che bundlano Skills, Subagents, Hooks, MCP server, LSP server, monitor di background e setting. Installabili da marketplace ufficiali, community o custom.
 
+> **2026-08-07 (auto-update)**: nuovo plugin source `archive` (v2.1.224) installa plugin da uno zip via HTTPS senza git o npm, con pinning opzionale SHA-256. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Un plugin e' un **bundle di harness components**: skill + agent + hook + MCP server + LSP + monitor + settings, distribuito come unita'. E' il packaging format dell'ecosistema. Quando installi un plugin, stai abilitando un set coordinato di capabilities (tool + memoria + guardrail) tutti insieme.

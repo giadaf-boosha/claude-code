@@ -5,6 +5,8 @@
 
 Coordina piu' istanze di Claude Code che lavorano insieme con shared task list e mailbox per messaging diretto.
 
+> **2026-08-07 (auto-update)**: nuovo cross-session `SendMessage`/`ListAgents` (v2.1.224, macOS/Linux) — le sessioni si scambiano messaggi tra loro; `crossSessionInbound` trattiene per approvazione i messaggi verso sessioni a permessi bypassati. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Gli Agent Teams sono il livello superiore dei subagent: **agent persistenti, paralleli, comunicanti**. Ognuno e' una full Claude Code instance (full context, full tool, full settings) che pero' partecipa a una task list condivisa e puo' messaggiare gli altri via mailbox. E' l'orchestrazione multi-thread del harness.

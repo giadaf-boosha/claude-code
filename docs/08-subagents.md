@@ -5,6 +5,8 @@
 
 Subagent = AI assistant specializzato con context window proprio, system prompt custom, tool e permessi indipendenti. Quando Claude trova task matchato dalla `description`, delega.
 
+> **2026-08-07 (auto-update)**: rimosso il tetto di 200 subagent per sessione (v2.1.224) — le sessioni long-running non rifiutano piu' nuovi agent per il limite totale di spawn (restano invariati i limiti di concorrenza e profondita'). Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > I subagent sono **agent figli** spawnati dall'agent principale. Ognuno ha context window indipendente, tool subset, ev. modello diverso (Haiku per Explore = cheap+fast). Il main agent delega un task, riceve summary, continua. Pattern di "cognitive offloading": il main thread non si sporca con dettagli operativi.

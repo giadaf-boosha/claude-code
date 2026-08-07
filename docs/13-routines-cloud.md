@@ -5,6 +5,8 @@
 
 > "Put Claude Code on autopilot. Define routines that run on a schedule, trigger on API calls, or react to GitHub events."
 
+> **2026-08-07 (auto-update)**: `claude self-hosted-runner` (v2.1.224, Team/Enterprise) trasforma macchine o container proprietari in ambienti dove far girare sessioni Claude Code web, mobile e desktop. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Le routines sono l'**agent loop in cloud**: stesso pattern di `/loop` ma eseguito su infra Anthropic, senza laptop acceso. Tre trigger principali (schedule, API, GitHub event) coprono ogni caso di automazione 24/7. Sono il salto da "agent locale che gira finche' tieni aperta la sessione" a "agent cloud che lavora per te in autonomia".

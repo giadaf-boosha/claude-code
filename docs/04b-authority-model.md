@@ -17,6 +17,8 @@ Senza Authority esplicita, un agent e' una mina vagante:
 
 L'Authority **dichiarativa** trasforma "sperare che l'LLM si comporti bene" in "il sistema **non puo'** comportarsi male".
 
+> **2026-08-07 (auto-update)**: sandbox credential masking JWT (`decode: "jwt"`) e AWS SigV4 (`awsPairs`/`sigv4`) (v2.1.224); fix sicurezza su regole `denyRead` con trailing slash bypassabili e dettagli di violazione sandbox ora visibili nei risultati Bash. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224). Vedi anche README "What's new today" del giorno.
+
 Mappa IMPACT:
 - **Intent**: cosa vuoi ottenere (CLAUDE.md)
 - **Memory**: cosa l'agent ricorda
