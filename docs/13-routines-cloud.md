@@ -135,6 +135,24 @@ Custom env via web before routine creation.
 
 ---
 
+## 13.7b Self-hosted runner (beta, da v2.1.224, 7 ago 2026)
+
+Alternativa agli ambienti cloud gestiti da Anthropic: con `claude self-hosted-runner` le sessioni web, mobile e desktop girano su macchine o container controllati dal team (Team ed Enterprise, disattivato di default), con accesso alla rete interna, tooling custom e controlli di compliance che l'ambiente cloud non puo' offrire.
+
+```bash
+claude self-hosted-runner        # avvia un runner sulla macchina/container corrente
+```
+
+Due modalita' di runner:
+- **Fixed**: un numero fisso di runner resta sempre attivo, le sessioni vengono distribuite tra loro.
+- **On-demand**: un orchestratore osserva le sessioni in coda, avvia un runner quando arrivano e lo ferma a lavoro finito — la capacita' segue la domanda invece di restare fissa.
+
+Due sessioni dentro lo stesso container self-hosted possono usare anche il [cross-session messaging](./17-ide-surface.md#remote-control) tra loro; una sessione dentro il container e una sull'host restano isolate (filesystem separati).
+
+> Fonte: [Anthropic blog](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute) · [`/en/self-hosted-environments`](https://code.claude.com/docs/en/self-hosted-environments).
+
+---
+
 ## 13.8 Run management
 
 | Azione | Come |
@@ -254,3 +272,7 @@ Testa con `npm test`. Apri draft PR.
 ## 13.10 Routines vs /goal: quale scheduling
 
 Le routine girano **senza sessione aperta** (schedule/API/GitHub event sul cloud Anthropic). Per tenere viva la **sessione corrente** finche' una condizione e' soddisfatta, usa invece [25 — /goal](./25-goal.md), che dopo ogni turno fa valutare la condizione a un modello terzo. In sintesi: lavoro che deve girare quando non sei al computer -> Routine; lavoro che deve completarsi adesso fino a una condizione -> /goal. Vedi anche "Compare scheduling options" nella doc ufficiale.
+
+---
+
+<sub>Aggiornato 2026-08-08 via daily what's new. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224).</sub>

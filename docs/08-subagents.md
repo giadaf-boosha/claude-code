@@ -197,6 +197,8 @@ Gli agenti background che lavorano in un git worktree possono ora chiudere il lo
 
 Approfondimento Agent Teams: [12](./12-agent-teams.md).
 
+Il tool `SendMessage` usato per la comunicazione teammate-to-teammate qui sopra e' lo stesso che, da v2.1.224 (7 ago 2026), permette anche a **sessioni Claude Code indipendenti** (non subagent, non teammate della stessa sessione) di scambiarsi messaggi — sulla stessa macchina, tra macchine diverse o verso il web via Remote Control. Claude scopre le sessioni raggiungibili con `ListAgents`. Vedi [17.6 — Cross-session messaging](./17-ide-surface.md#remote-control) per i dettagli.
+
 ---
 
 ## 8.8 Esempi pratici
@@ -268,5 +270,7 @@ Tip Boris:
 - Skill chaining tip: [@bcherny](https://x.com/bcherny/status/2006170607092670691)
 
 ---
+
+<sub>Aggiornato 2026-08-08 via daily what's new. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224).</sub>
 
 ← [07 Hooks](./07-hooks.md) · Successivo → [09 Skills](./09-skills.md)

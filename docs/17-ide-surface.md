@@ -194,6 +194,22 @@ claude --rc [name]                   # alias
 
 > Fonte: [`/en/remote-control`](https://code.claude.com/docs/en/remote-control).
 
+### Cross-session messaging (`SendMessage` + `ListAgents`, da v2.1.224, 7 ago 2026)
+
+Le sessioni Claude Code indipendenti — non subagent, non teammate di un [agent team](./12-agent-teams.md) — possono ora scambiarsi messaggi tra loro senza che tu debba copincollare tra terminali. Claude usa due tool: `ListAgents` per scoprire quali sessioni puo' raggiungere (anche via `/list-agents` o `/peers`), `SendMessage` per consegnare un messaggio a una di loro per nome. Un messaggio e' solo testo scritto da un Claude per l'altro — mai cronologia o file; per portare l'intero contesto serve invece il [resume/fork di sessione](./08-subagents.md#85-forking-di-sessione).
+
+Dove gira l'altra sessione cambia come viaggia il messaggio:
+
+| Dove | Come viaggia | Cosa puo' inviare la sessione locale |
+|---|---|---|
+| Stessa macchina | Socket per-sessione locale, mai via server Anthropic | Nuovi messaggi e risposte |
+| Altra tua macchina | Via server Anthropic, sulla connessione Remote Control della macchina destinataria | Solo risposte |
+| Claude Code on the web | Via server Anthropic, diretto alla sessione cloud | Solo risposte |
+
+Disponibile solo su macOS e Linux (inclusa WSL2), non su Windows nativo; non disponibile su Bedrock, Claude Platform AWS, Google Cloud Agent Platform o Microsoft Foundry. La ricezione si controlla con il setting `crossSessionInbound` (`accept`/`hold`/`refuse`); `isolatePeerMachines: true` forza l'approvazione esplicita prima che una risposta lasci la macchina, anche in `bypassPermissions`. Un messaggio in arrivo non puo' mai approvare permessi al posto tuo, ne' modificare `CLAUDE.md` o i settings.
+
+> Fonte: [`/en/cross-session-messaging`](https://code.claude.com/docs/en/cross-session-messaging).
+
 ---
 
 ## 17.7 Computer use {#computer-use}
@@ -328,5 +344,6 @@ Oltre alle surface ufficiali Anthropic (CLI, Desktop, VS Code, JetBrains, Web, S
 ---
 
 <sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221).</sub>
+<sub>Aggiornato 2026-08-08 via daily what's new. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224).</sub>
 
 ← [16 Headless & Agent SDK](./16-headless-agent-sdk.md) · Successivo → [18 Settings & Auth](./18-settings-auth.md)
