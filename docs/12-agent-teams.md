@@ -17,6 +17,8 @@ Coordina piu' istanze di Claude Code che lavorano insieme con shared task list e
 
 > "Coordinate multiple Claude Code instances working together as a team" — [`/en/agent-teams`](https://code.claude.com/docs/en/agent-teams)
 
+> **2026-08-08 (auto-update)**: nuovo cross-session messaging (v2.1.224, macOS/Linux) — `ListAgents` scopre le altre sessioni Claude Code, `SendMessage` invia loro un riassunto (non history o file) che riprendono a meta' task. Da v2.1.225 raggiunge anche sessioni Remote Control su altre macchine chiamandole per nome. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2085817074816070014). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 12.1 Enable

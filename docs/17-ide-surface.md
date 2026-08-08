@@ -165,6 +165,8 @@ Mention `@Claude` in canale o thread con bug report → Claude apre PR. Integraz
 
 Lanciato **feb 2026** (research preview Max), GA mar 2026 ([@_catwu](https://x.com/_catwu/status/2026421789476401182)).
 
+> **2026-08-08 (auto-update)**: fix affidabilita' (v2.1.225) — risolto un bug che sovrascriveva un `CLAUDE_CODE_OAUTH_TOKEN` long-lived con un token short-lived (rompeva le sessioni headless), fallimenti MCP OAuth su macOS per timeout del keychain, e il fold del Focus view VS Code che nascondeva la to-do list. Fonte: [GitHub Releases v2.1.225](https://github.com/anthropics/claude-code/releases/tag/v2.1.225). Vedi anche README "What's new today" del giorno.
+
 ### Cosa fa
 Collega la sessione locale a `claude.ai/code`, app iOS e Android. Conversazione sincronizzata cross-device.
 

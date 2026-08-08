@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-08-08 (auto-update)**: `claude self-hosted-runner` (v2.1.224, beta pubblica Team/Enterprise) fa girare le sessioni web/mobile/desktop sull'infrastruttura del team invece che su quella gestita da Anthropic. v2.1.225 aggiunge gateway spend-limit (tetto, orario reset, messaggio operatore nel warning) e trust prompt per `claude agents` su directory non fidate. Fonte: [Anthropic blog](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)
