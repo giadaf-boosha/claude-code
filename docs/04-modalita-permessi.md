@@ -205,6 +205,8 @@ Utile per diagnosticare perche' un comando specifico viene fermato e affinare le
 
 OS-level enforcement su Bash e child processes. Filesystem isolation + network isolation. Riduce permission prompt dell'~84% in uso interno Anthropic.
 
+> **2026-08-08 (auto-update)**: fix sicurezza (v2.1.224) — le regole `denyRead`/`denyWrite` con trailing slash (es. `~/.aws/`) erano silenziosamente bypassabili su Linux e macOS, ora bloccate correttamente. Stessa release: rimosso il tetto di 200 subagent per sessione. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224). Vedi anche README "What's new today" del giorno.
+
 ### Piattaforme
 - **macOS**: Seatbelt (out of the box)
 - **Linux/WSL2**: bubblewrap + socat (`apt-get install bubblewrap socat`). WSL1 NON supportato.
