@@ -1,19 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **8 agosto 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **9 agosto 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.226** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-08)
+## What's new today (2026-08-09)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Ambienti self-hosted per Claude Code** (v2.1.224, 7 ago): beta pubblica di `claude self-hosted-runner` — le sessioni web/mobile/desktop possono girare sull'infrastruttura del team (fixed o on-demand) invece che su quella cloud Anthropic, per Team ed Enterprise. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224) · [Anthropic blog](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute). Doc: [docs/13-routines-cloud.md](./docs/13-routines-cloud.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Cross-session messaging (`SendMessage` + `ListAgents`)** (v2.1.224, 7 ago): le sessioni Claude Code indipendenti possono ora scambiarsi messaggi tra loro — sulla stessa macchina via socket locale, su macchine diverse o sul web tramite Remote Control (solo risposta cross-machine). Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224) · [docs ufficiale](https://code.claude.com/docs/en/cross-session-messaging). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 ---
 
