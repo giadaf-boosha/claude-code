@@ -8,12 +8,11 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-08)
+## What's new today (2026-08-10)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Ambienti self-hosted per Claude Code** (v2.1.224, 7 ago): beta pubblica di `claude self-hosted-runner` — le sessioni web/mobile/desktop possono girare sull'infrastruttura del team (fixed o on-demand) invece che su quella cloud Anthropic, per Team ed Enterprise. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224) · [Anthropic blog](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute). Doc: [docs/13-routines-cloud.md](./docs/13-routines-cloud.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Cross-session messaging (`SendMessage` + `ListAgents`)** (v2.1.224, 7 ago): le sessioni Claude Code indipendenti possono ora scambiarsi messaggi tra loro — sulla stessa macchina via socket locale, su macchine diverse o sul web tramite Remote Control (solo risposta cross-machine). Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224) · [docs ufficiale](https://code.claude.com/docs/en/cross-session-messaging). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Auto mode diventa il default** (annuncio 7 ago, in vigore dal 14 ago): per i piani Pro, Max e Team le nuove sessioni partono in auto mode invece che in modalita' manuale — un classifier separato valuta ogni azione e blocca solo quelle irreversibili, distruttive o fuori ambiente, chiedendo conferma li'. Nei test su 1.053 tester paganti l'auto mode ha bloccato l'89% dei comandi pericolosi contro il 13,6% (in calo al ~5% dopo 50 prompt) dell'approvazione manuale umana. Enterprise e API restano opt-in, estensione prevista nel mese successivo. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2085794862608318627) · [TechCrunch](https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/). Vedi [docs/04-modalita-permessi.md § 4.3](./docs/04-modalita-permessi.md#43-auto-mode-research-preview-da-v2183), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
