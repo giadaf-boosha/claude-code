@@ -91,6 +91,8 @@ Da agosto 2025: Opus 4.x per plan + Sonnet per execution. [@_catwu](https://x.co
 
 Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permissions`: un classifier separato decide cosa Claude puo' fare senza chiedere.
 
+> **2026-08-10 (auto-update)**: dal 14 agosto auto mode diventa il permission mode di default per le nuove sessioni su Pro, Max e Team (Enterprise/API restano opt-in). Test su 1.053 tester: 89% comandi pericolosi bloccati vs 13,6% con approvazione manuale. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code). Vedi anche README "What's new today" del giorno.
+
 ### Caratteristiche
 - Classifier model review actions (separato dal main model)
 - Boundaries dichiarate in conversation rispettate (ma non rules permanenti)
