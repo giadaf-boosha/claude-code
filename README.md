@@ -1,19 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **8 agosto 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **10 agosto 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.226** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-08)
+## What's new today (2026-08-10)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Ambienti self-hosted per Claude Code** (v2.1.224, 7 ago): beta pubblica di `claude self-hosted-runner` — le sessioni web/mobile/desktop possono girare sull'infrastruttura del team (fixed o on-demand) invece che su quella cloud Anthropic, per Team ed Enterprise. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224) · [Anthropic blog](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute). Doc: [docs/13-routines-cloud.md](./docs/13-routines-cloud.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Cross-session messaging (`SendMessage` + `ListAgents`)** (v2.1.224, 7 ago): le sessioni Claude Code indipendenti possono ora scambiarsi messaggi tra loro — sulla stessa macchina via socket locale, su macchine diverse o sul web tramite Remote Control (solo risposta cross-machine). Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224) · [docs ufficiale](https://code.claude.com/docs/en/cross-session-messaging). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Auto mode diventa default per Pro, Max e Team** (annuncio 9 ago, effettivo dal 14 ago): le nuove sessioni su questi piani partiranno in auto mode invece che in `manual` — il classifier ha bloccato l'89% delle azioni pericolose nei test interni contro il 13,6% della revisione manuale (1.053 tester paganti). Enterprise, API e i provider cloud (Bedrock, Vertex, Foundry) restano opt-in per ora. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2085794862608318627) · [docs ufficiale](https://code.claude.com/docs/en/auto-mode-config). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
@@ -182,6 +181,7 @@ E come reference:
 | 11 mag 2026 | v2.1.139 — **Agent View** (`claude agents`) + **`/goal`** command + hook exec form + `continueOnBlock` | [08](./docs/08-subagents.md), [03](./docs/03-slash-commands.md), [07](./docs/07-hooks.md) |
 | 14 mag 2026 | v2.1.142 — **Fast Mode → Opus 4.7 di default** + plugin SKILL.md root come skill | [05](./docs/05-fast-mode-1m-context.md), [09](./docs/09-skills.md) |
 | 24 lug 2026 | v2.1.219 — **Claude Opus 5**, nuovo modello premium default su Max, effort toggle low/medium/high, sostituisce Opus 4.7 in fast mode | [05](./docs/05-fast-mode-1m-context.md), [01](./docs/01-snapshot.md) |
+| 9 ago 2026 | **Auto mode diventa default** per Pro/Max/Team dal 14 ago — 89% delle azioni pericolose bloccate nei test vs 13,6% della revisione manuale | [04](./docs/04-modalita-permessi.md) |
 
 ---
 

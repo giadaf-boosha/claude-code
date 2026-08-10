@@ -28,7 +28,7 @@ Cycle: `Shift+Tab` → `manual` → `acceptEdits` → `plan`.
 | `manual` | Solo reads | Sensitive work (ex `default`, rinominato v2.1.200) |
 | `acceptEdits` | Reads + file edits + filesystem cmd (mkdir, touch, mv, cp, rm, rmdir, sed) entro working dir | Iterazione |
 | `plan` | Solo reads | Esplora prima di modificare |
-| `auto` | Tutto + classifier | Long task (richiede Max/Team/Enterprise/API + Anthropic provider + Sonnet 4.6 / Opus 4.6 / 4.7) |
+| `auto` | Tutto + classifier | **Default su Pro/Max/Team dal 14 ago 2026** (v. [4.3](#43-auto-mode-da-v2183-default-promaxteam-da-14-ago-2026)); richiede Max/Team/Enterprise/Pro/API + Anthropic provider + Sonnet 4.6+ / Opus 4.6+ |
 | `dontAsk` | Solo pre-approved tools + read-only Bash | CI |
 | `bypassPermissions` | Tutto eccetto protected paths | Container/VM isolated |
 
@@ -87,9 +87,22 @@ Da agosto 2025: Opus 4.x per plan + Sonnet per execution. [@_catwu](https://x.co
 
 ---
 
-## 4.3 Auto mode (research preview, da v2.1.83)
+## 4.3 Auto mode (da v2.1.83, default Pro/Max/Team da 14 ago 2026)
 
 Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permissions`: un classifier separato decide cosa Claude puo' fare senza chiedere.
+
+### Diventa il permission mode di default (da 14 ago 2026)
+
+Dal **14 agosto 2026**, `auto` sostituisce `manual` come permission mode di partenza per le nuove sessioni su Pro, Max e Team — non serve piu' attivarlo esplicitamente con `--permission-mode auto` o Shift+Tab. Un default impostato manualmente dall'utente resta valido finche' non si accetta il prompt di switch one-time mostrato una tantum; un default gestito a livello organizzativo non viene toccato. Enterprise, API diretta, Bedrock, Vertex AI, Foundry e le sessioni [Claude apps gateway](./17-ide-surface.md) restano opt-in per ora — Anthropic prevede di renderlo default anche li' nelle settimane successive, insieme alla rimozione del sovrapprezzo per l'overhead del classifier.
+
+La decisione si appoggia su dati di un test interno con 1.053 tester paganti: il classifier ha intercettato l'**89%** delle azioni potenzialmente dannose, contro il **13,6%** della sola revisione manuale — Anthropic attribuisce il divario alla "approval fatigue" (il 97% dei prompt di conferma viene approvato per riflesso). La release aggiunge anche uno screening contro prompt injection e regole `hard_deny` personalizzabili per bloccare in modo permanente categorie di azioni (es. tentativi di esfiltrazione dati).
+
+```bash
+# tornare a manual dopo il passaggio a default
+claude --permission-mode manual
+```
+
+<sub>Aggiornato 2026-08-10 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2085794862608318627) · [code.claude.com/docs/en/auto-mode-config](https://code.claude.com/docs/en/auto-mode-config).</sub>
 
 ### Caratteristiche
 - Classifier model review actions (separato dal main model)
