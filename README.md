@@ -1,18 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **10 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.226** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **11 agosto 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.227** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-10)
+## What's new today (2026-08-11)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Auto mode diventa default per Pro, Max e Team** (annuncio 9 ago, effettivo dal 14 ago): le nuove sessioni su questi piani partiranno in auto mode invece che in `manual` — il classifier ha bloccato l'89% delle azioni pericolose nei test interni contro il 13,6% della revisione manuale (1.053 tester paganti). Enterprise, API e i provider cloud (Bedrock, Vertex, Foundry) restano opt-in per ora. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2085794862608318627) · [docs ufficiale](https://code.claude.com/docs/en/auto-mode-config). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. L'unica release (v2.1.227, 10 ago) contiene solo bug fix e rifiniture minori di UI, sotto la soglia editoriale. Prossimo aggiornamento domani 07:00.
 
 ---
 
