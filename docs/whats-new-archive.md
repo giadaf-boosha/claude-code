@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-08-10
+
+- **Auto mode diventa default per Pro, Max e Team** (annuncio 9 ago, effettivo dal 14 ago): le nuove sessioni su questi piani partiranno in auto mode invece che in `manual` — il classifier ha bloccato l'89% delle azioni pericolose nei test interni contro il 13,6% della revisione manuale (1.053 tester paganti). Enterprise, API e i provider cloud (Bedrock, Vertex, Foundry) restano opt-in per ora. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2085794862608318627) · [docs ufficiale](https://code.claude.com/docs/en/auto-mode-config). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+
+---
+
 ## 2026-08-08
 
 - **Ambienti self-hosted per Claude Code** (v2.1.224, 7 ago): beta pubblica di `claude self-hosted-runner` — le sessioni web/mobile/desktop possono girare sull'infrastruttura del team (fixed o on-demand) invece che su quella cloud Anthropic, per Team ed Enterprise. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224) · [Anthropic blog](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute). Doc: [docs/13-routines-cloud.md](./13-routines-cloud.md), [docs/19-changelog.md](./19-changelog.md).
@@ -189,12 +195,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 ---
 
 ## 2026-06-21
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-06-20
 
 > Nessuna novita' significativa nelle ultime 24 ore.
 

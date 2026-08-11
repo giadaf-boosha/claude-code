@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (8 agosto 2026, v2.1.226). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (10 agosto 2026, v2.1.227). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -559,7 +559,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 8 ago 2026 | v2.1.225 | Warning di spesa gateway con dettaglio limite/reset. Prompt di trust workspace per `claude agents` su cartelle non fidate. Fix: token 401 transitori su replacement OAuth, MCP OAuth su macOS dopo timeout keychain, cronologia Remote Control rotta dopo compaction, messaggi cross-session rimasti in coda senza scadenza in sessioni headless. |
 | 8 ago 2026 | v2.1.226 | Bug fix e miglioramenti di affidabilita'. |
 | 9 ago 2026 | — | **Auto mode diventa default** per Pro, Max e Team dal 14 agosto: sostituisce `manual` come permission mode di partenza per le nuove sessioni. Il classifier ha bloccato l'89% delle azioni pericolose in test interni (1.053 tester paganti) contro il 13,6% della revisione manuale. Enterprise, API e provider cloud (Bedrock/Vertex/Foundry) restano opt-in — vedi [4.3](./04-modalita-permessi.md#43-auto-mode-da-v2183-default-promaxteam-da-14-ago-2026). |
+| 10 ago 2026 | v2.1.227 | Fix: prompt di upgrade Fable mostrato erroneamente a utenti Max con token di login scaduto, ogni comando Bash fallito sotto `claude-code-action` con `allowed_non_write_users` su runner GitHub-hosted, `/tui` che ripristinava conversazioni riavvolte prima del primo messaggio. Menu slash-command: evidenzia solo la riga selezionata, match in grassetto, glifi emoji/accentati preservati. Performance: meno stall dell'event loop su suggerimenti file-not-found e controlli dimensione at-mention. |
 
+<sub>Aggiornato 2026-08-11 via daily what's new. Fonte: [GitHub Releases v2.1.227](https://github.com/anthropics/claude-code/releases/tag/v2.1.227).</sub>
 <sub>Aggiornato 2026-08-10 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2085794862608318627) · [code.claude.com/docs/en/auto-mode-config](https://code.claude.com/docs/en/auto-mode-config).</sub>
 <sub>Aggiornato 2026-08-08 via daily what's new. Fonte: [GitHub Releases v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224) · [v2.1.225](https://github.com/anthropics/claude-code/releases/tag/v2.1.225) · [v2.1.226](https://github.com/anthropics/claude-code/releases/tag/v2.1.226) · [Anthropic blog](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute).</sub>
 <sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221) · [v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222) · [v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223).</sub>
