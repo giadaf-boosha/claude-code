@@ -8,11 +8,11 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-11)
+## What's new today (2026-08-12)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. L'unica release (v2.1.227, 10 ago) contiene solo bug fix e rifiniture minori di UI, sotto la soglia editoriale. Prossimo aggiornamento domani 07:00.
+> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.227 e v2.1.228, 10-11 ago) contengono solo bug fix e hardening, sotto la soglia editoriale. Prossimo aggiornamento domani 07:00.
 
 ---
 
