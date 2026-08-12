@@ -277,6 +277,8 @@ Salva in `RELEASE_NOTES.md`.
 
 ## 9.12 Annunci e changelog rilevanti
 
+> **2026-08-12 (auto-update)**: v2.1.228 sana una superficie di attacco reale delle skill sincronizzate da claude.ai — non oscurano piu' comandi locali/prompt MCP, hanno descrizioni sanificate, e il body non esegue piu' `!` ne' espande `@` sulla macchina locale. Fonte: [GitHub Releases v2.1.228](https://github.com/anthropics/claude-code/releases/tag/v2.1.228). Vedi anche README "What's new today" del giorno.
+
 - **Hot reload Skills + custom agent support + invoke con `/`** (CC 2.1.0, dic 2025) — [@bcherny](https://x.com/bcherny/status/2009072293826453669)
 - **`/simplify` e `/batch`** (mar 2026) — [@bcherny](https://x.com/bcherny/status/2027534984534544489)
 - **Description cap 250 → 1,536 char** (v2.1.106, 13 apr 2026)

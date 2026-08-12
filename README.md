@@ -1,18 +1,22 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **11 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.227** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **12 agosto 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.228** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-11)
+## What's new today (2026-08-12)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. L'unica release (v2.1.227, 10 ago) contiene solo bug fix e rifiniture minori di UI, sotto la soglia editoriale. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.228** (release, 11 ago): sana una superficie di attacco reale nelle skill sincronizzate da claude.ai — non oscurano piu' comandi locali/prompt MCP (i locali hanno precedenza), descrizioni sanificate, e il body non esegue piu' `!` ne' espande `@` sulla macchina locale. Fonte: [GitHub Releases v2.1.228](https://github.com/anthropics/claude-code/releases/tag/v2.1.228) · [@ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2087274049709707404). Vedi [docs/09 § 9.12](./docs/09-skills.md#912-annunci-e-changelog-rilevanti) e [docs/19 § changelog](./docs/19-changelog.md).
+- **CLI v2.1.228** (release, 11 ago): 18 fix totali — redraw bloccato su layout error interne, `git`/Git Bash non trovato su Windows se lanciato da cartella padre dell'installazione, `/tui` che tornava a modello precedente dopo `/model`, leak titolo/history in Remote Control `/resume`, Write tool ora allinea i modelli piu' recenti alle regole dell'Edit tool (sovrascrittura senza lettura in sessione). Fonte: [GitHub Releases v2.1.228](https://github.com/anthropics/claude-code/releases/tag/v2.1.228). Vedi [docs/19 § changelog](./docs/19-changelog.md).
+- **Compliance API estesa a Cowork e Claude Code** (beta Enterprise, 11 ago): copertura desktop/web/mobile/CLI con la Compliance Access Key gia' in uso, nessuna integrazione separata da costruire. Fonte: [Compliance API docs](https://support.claude.com/en/articles/13015708-access-the-compliance-api). Vedi [docs/18 § 18.6](./docs/18-settings-auth.md#186-claude-for-teams--enterprise).
+
+> Nota: fetch diretto di anthropic.com e claude.com bloccato dal proxy di rete della sessione; ricerca completata via WebSearch/GitHub releases/X. Nessun post team odierno rilevato su @bcherny/@_catwu/@noahzweben/@trq212/@alistaiir oltre a quanto sopra.
 
 ---
 

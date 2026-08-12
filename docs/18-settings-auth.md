@@ -327,6 +327,8 @@ La scelta tra **subscription OAuth** (Claude Pro/Max/Team/Enterprise) e **API ke
 
 ## 18.6 Claude for Teams / Enterprise
 
+> **2026-08-12 (auto-update)**: la Compliance API si estende a Claude Cowork e Claude Code (desktop, web, mobile, CLI), beta per Claude Enterprise — stessa Compliance Access Key gia' in uso, nessuna integrazione separata da costruire. Fonte: [Compliance API docs](https://support.claude.com/en/articles/13015708-access-the-compliance-api). Vedi anche README "What's new today" del giorno.
+
 | Feature | Teams | Enterprise |
 |---|---|---|
 | Self-service | ✓ | |
