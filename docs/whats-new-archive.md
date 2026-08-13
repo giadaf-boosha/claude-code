@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-08-12
+
+> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.227 e v2.1.228, 10-11 ago) contengono solo bug fix e hardening, sotto la soglia editoriale.
+
+---
+
 ## 2026-08-11
 
 > Nessuna novita' significativa nelle ultime 24 ore. L'unica release (v2.1.227, 10 ago) contiene solo bug fix e rifiniture minori di UI, sotto la soglia editoriale.
