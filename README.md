@@ -1,18 +1,21 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **11 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.227** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **13 agosto 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.229** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-12)
+## What's new today (2026-08-13)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.227 e v2.1.228, 10-11 ago) contengono solo bug fix e hardening, sotto la soglia editoriale. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.229** (12 ago): il marketplace plugin supporta nuove sorgenti `command` — un comando locale (es. l'IDE) stampa la directory del plugin, ri-risolta ad ogni sessione e applicata senza restart (`mode: "link"` la usa al posto del path fisso). Fonte: [GitHub Releases v2.1.229](https://github.com/anthropics/claude-code/releases/tag/v2.1.229). Vedi [docs/11 § 11.3](./docs/11-plugins-marketplace.md#113-comandi-plugin) e [docs/19 § Fase 7](./docs/19-changelog.md).
+- **VS Code**: nuovi gruppi di sessioni nella sidebar — tasto destro per creare/rinominare/eliminare un gruppo, Cmd/Ctrl- o Shift-click per spostare piu' sessioni insieme (v2.1.229). Fonte: [GitHub Releases v2.1.229](https://github.com/anthropics/claude-code/releases/tag/v2.1.229). Vedi [docs/17 § 17.1](./docs/17-ide-surface.md#171-vs-code).
+- **Self-hosted runner**: gli hook Claude Code possono ora essere forniti dal server anche nelle sessioni self-hosted, allineando il comportamento agli ambienti cloud gestiti (v2.1.229). Fonte: [GitHub Releases v2.1.229](https://github.com/anthropics/claude-code/releases/tag/v2.1.229). Vedi [docs/13 § 13.7b](./docs/13-routines-cloud.md#137b-self-hosted-runner-beta-da-v21224-7-ago-2026).
+- **Fix**: il workflow "Claude Code Review" aveva smesso di pubblicare le review sulle pull request GitHub — corretto in v2.1.229, insieme a un fix su `/model` che rifiutava Sonnet/Opus 1M per gli abbonati claude.ai e a un fix OAuth MCP con authorization server che richiedono `127.0.0.1` invece di `localhost`. Fonte: [GitHub Releases v2.1.229](https://github.com/anthropics/claude-code/releases/tag/v2.1.229). Vedi [docs/19 § Fase 7](./docs/19-changelog.md).
 
 ---
 

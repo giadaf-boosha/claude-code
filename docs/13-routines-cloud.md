@@ -139,6 +139,8 @@ Custom env via web before routine creation.
 
 Alternativa agli ambienti cloud gestiti da Anthropic: con `claude self-hosted-runner` le sessioni web, mobile e desktop girano su macchine o container controllati dal team (Team ed Enterprise, disattivato di default), con accesso alla rete interna, tooling custom e controlli di compliance che l'ambiente cloud non puo' offrire.
 
+> **2026-08-13 (auto-update)**: da v2.1.229 gli hook Claude Code possono essere forniti dal server anche nelle sessioni self-hosted, allineando il comportamento agli ambienti managed. Fonte: [GitHub Releases v2.1.229](https://github.com/anthropics/claude-code/releases/tag/v2.1.229). Vedi anche README "What's new today" del giorno.
+
 ```bash
 claude self-hosted-runner        # avvia un runner sulla macchina/container corrente
 ```

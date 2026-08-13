@@ -73,6 +73,8 @@ Demo plugin source: https://github.com/anthropics/claude-code/tree/main/plugins.
 
 ## 11.3 Comandi plugin
 
+> **2026-08-13 (auto-update)**: nuove sorgenti `command` nel marketplace — un comando locale (es. l'IDE) stampa la directory del plugin, ri-risolta ad ogni sessione senza restart (`mode: "link"` la usa al posto del path fisso). Fonte: [GitHub Releases v2.1.229](https://github.com/anthropics/claude-code/releases/tag/v2.1.229). Vedi anche README "What's new today" del giorno.
+
 ```bash
 # Marketplace
 /plugin marketplace add anthropics/claude-code

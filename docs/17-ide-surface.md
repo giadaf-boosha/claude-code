@@ -21,6 +21,8 @@ VS Code, JetBrains, Desktop, Web, Slack, Channels, Remote Control. Tutti i modi 
 
 Estensione: `vscode:extension/anthropic.claude-code`. Requires VS Code 1.98.0+.
 
+> **2026-08-13 (auto-update)**: nuovi gruppi di sessioni nella sidebar (v2.1.229) — tasto destro per creare/rinominare/eliminare un gruppo, Cmd/Ctrl- o Shift-click per spostare piu' sessioni insieme. Fonte: [GitHub Releases v2.1.229](https://github.com/anthropics/claude-code/releases/tag/v2.1.229). Vedi anche README "What's new today" del giorno.
+
 ### Features GUI
 
 - Inline diff con permission prompt
