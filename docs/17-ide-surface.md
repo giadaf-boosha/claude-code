@@ -196,6 +196,8 @@ claude --rc [name]                   # alias
 
 ### Cross-session messaging (`SendMessage` + `ListAgents`, da v2.1.224, 7 ago 2026)
 
+> **2026-08-14 (auto-update)**: da v2.1.232, digitare `@` nel prompt referenzia un'altra sessione Claude per nome — Claude instrada poi il messaggio con `SendMessage`. `SendMessage` consegna direttamente a un nome che combacia con un'unica sessione live, senza piu' chiedere conferma con un ref. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Vedi anche README "What's new today" del giorno.
+
 Le sessioni Claude Code indipendenti — non subagent, non teammate di un [agent team](./12-agent-teams.md) — possono ora scambiarsi messaggi tra loro senza che tu debba copincollare tra terminali. Claude usa due tool: `ListAgents` per scoprire quali sessioni puo' raggiungere (anche via `/list-agents` o `/peers`), `SendMessage` per consegnare un messaggio a una di loro per nome. Un messaggio e' solo testo scritto da un Claude per l'altro — mai cronologia o file; per portare l'intero contesto serve invece il [resume/fork di sessione](./08-subagents.md#85-forking-di-sessione).
 
 Dove gira l'altra sessione cambia come viaggia il messaggio:

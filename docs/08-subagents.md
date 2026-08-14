@@ -129,6 +129,8 @@ Skill con `context: fork` + `agent: Explore` → il body della skill diventa tas
 
 ## 8.5 Forking di sessione
 
+> **2026-08-14 (auto-update)**: da v2.1.232 il subagent forking e' on by default — un subagent con `subagent_type: "fork"` eredita l'intera conversazione e la prompt cache del padre, e gli spawn non-teammate nelle sessioni interattive girano in background di default. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Vedi anche README "What's new today" del giorno.
+
 | Comando | Effetto |
 |---|---|
 | `claude --continue --fork-session` | Resume + branching senza perdere session originale |

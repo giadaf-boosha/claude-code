@@ -327,6 +327,8 @@ La scelta tra **subscription OAuth** (Claude Pro/Max/Team/Enterprise) e **API ke
 
 ## 18.6 Claude for Teams / Enterprise
 
+> **2026-08-14 (auto-update)**: la Compliance API si estende (beta) a Cowork e a Claude Code su CLI e desktop app — nuovi endpoint restituiscono un transcript unificato server-side per sessione (prompt, risposte, attivita' tool), in aggiunta a quanto gia' disponibile per Claude chat. Esclusi per ora Claude Code sul web, Claude Platform, Bedrock/Vertex/Foundry. Fonte: [Anthropic blog](https://claude.com/blog/compliance-api-cowork-and-claude-code). Vedi anche README "What's new today" del giorno.
+
 | Feature | Teams | Enterprise |
 |---|---|---|
 | Self-service | ✓ | |

@@ -56,6 +56,8 @@ Se `version` e' omesso, viene usato il commit SHA (ogni commit = nuova versione)
 
 ## 11.2 Marketplace ufficiale
 
+> **2026-08-14 (auto-update)**: da v2.1.232 i marketplace supportano anche host GitLab — URL `gitlab.com` (incluse subgroup annidate) si clonano come `github.com`. Aggiunta redazione dei token GitLab (`glrt-`, `gloas-`, `glptt-`, `glagent-`, `glimt-`, `glsoat-`, `glcbt-`, `glft-`, `glffct-`, `glpat-`, `gldt-`). Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Vedi anche README "What's new today" del giorno.
+
 - **`claude-plugins-official`** — auto-disponibile, ~101 plugin (mar 2026)
 - Browse: https://claude.com/plugins
 - Submit: https://claude.ai/settings/plugins/submit
