@@ -1,18 +1,23 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **11 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.227** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **14 agosto 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.232** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-12)
+## What's new today (2026-08-14)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.227 e v2.1.228, 10-11 ago) contengono solo bug fix e hardening, sotto la soglia editoriale. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.232** (13 ago): subagent forking on by default — un subagent `subagent_type: "fork"` eredita l'intera conversazione e la prompt cache, e gli spawn non-teammate in sessioni interattive girano in background di default. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Vedi [docs/08 § 8.5](./docs/08-subagents.md#85-forking-di-sessione), [docs/19 § changelog](./docs/19-changelog.md).
+- **`@`-mention cross-session** (v2.1.232, 13 ago): digitare `@` nel prompt referenzia un'altra sessione Claude per nome, instradata via `SendMessage`. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Vedi [docs/17 § Remote Control](./docs/17-ide-surface.md#remote-control).
+- **GitLab nei plugin marketplace** (v2.1.232, 13 ago): URL `gitlab.com` (incluse subgroup annidate) si clonano come `github.com`, con redazione dei token GitLab. Fonte: [GitHub Releases](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Vedi [docs/11 § 11.2](./docs/11-plugins-marketplace.md).
+- **Fix minori** (v2.1.228-231, 11-13 ago): redraw sessioni interattive, discovery Git Bash su Windows, marketplace `command` source dinamico, redirect OAuth MCP Slack, e altri fix sicurezza sotto la soglia editoriale. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog). Vedi [docs/19 § changelog](./docs/19-changelog.md).
+- **Auto mode diventa default oggi** (14 ago, gia' annunciato 9 ago): le nuove sessioni Pro/Max/Team partono ora in `auto` invece che in `manual`. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code). Vedi [docs/04 § 4.3](./docs/04-modalita-permessi.md#43-auto-mode-da-v2183-default-promaxteam-da-14-ago-2026).
+- **Compliance API estesa a Cowork e Claude Code** (blog Anthropic, 11 ago, beta Enterprise): nuovi endpoint restituiscono un transcript unificato per sessione su CLI e desktop app (non ancora web/Bedrock/Vertex/Foundry). Fonte: [Anthropic blog](https://claude.com/blog/compliance-api-cowork-and-claude-code). Vedi [docs/18 § 18.6](./docs/18-settings-auth.md#186-claude-for-teams--enterprise).
 
 ---
 
