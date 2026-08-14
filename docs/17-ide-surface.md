@@ -208,7 +208,11 @@ Dove gira l'altra sessione cambia come viaggia il messaggio:
 
 Disponibile solo su macOS e Linux (inclusa WSL2), non su Windows nativo; non disponibile su Bedrock, Claude Platform AWS, Google Cloud Agent Platform o Microsoft Foundry. La ricezione si controlla con il setting `crossSessionInbound` (`accept`/`hold`/`refuse`); `isolatePeerMachines: true` forza l'approvazione esplicita prima che una risposta lasci la macchina, anche in `bypassPermissions`. Un messaggio in arrivo non puo' mai approvare permessi al posto tuo, ne' modificare `CLAUDE.md` o i settings.
 
+Da v2.1.232 (13 ago 2026) non serve piu' invocare `SendMessage` a parole: digitare `@nome-sessione` nel prompt basta perche' Claude riconosca il riferimento e recapiti il messaggio da solo. Se il nome digitato corrisponde a una sola sessione viva, `SendMessage` consegna subito senza chiedere conferma con un ref; con nomi ambigui resta il flusso di conferma precedente. La stessa release rende univoci i nomi delle sessioni interattive sulla stessa macchina: avviarne o rinominarne una con un nome gia' in uso da un'altra sessione viva produce automaticamente una variante `nome-parola-parola`, segnalata a video. In `/config` sono comparse le righe "Dialog expiry" e "Messages from your other sessions" per gestire scadenza dialoghi e ricezione cross-session dallo stesso pannello.
+
 > Fonte: [`/en/cross-session-messaging`](https://code.claude.com/docs/en/cross-session-messaging).
+
+<sub>Aggiornato 2026-08-14 via daily what's new. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232).</sub>
 
 ---
 

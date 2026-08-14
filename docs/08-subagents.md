@@ -138,6 +138,10 @@ Skill con `context: fork` + `agent: Explore` → il body della skill diventa tas
 
 Da v2.1.117: forked subagents su external builds (`CLAUDE_CODE_FORK_SUBAGENT=1`). Da v2.1.212 la distinzione e' esplicita nel nome del comando: `/fork` = nuova sessione indipendente, `/subtask` = subagent figlio nella sessione corrente. La stessa release ha introdotto tetti di sicurezza per-sessione (default, override via env var): fino a 200 chiamate WebSearch (`CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`) e fino a 200 spawn di subagent (`CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION`), pensati per fermare loop di ricerca o delega fuori controllo.
 
+Da v2.1.232 (13 ago 2026) il forking dei subagent e' **on by default**: un subagent lanciato con `subagent_type: "fork"` eredita ora conversazione e prompt cache completi della sessione padre, invece di ripartire da zero. La stessa release cambia anche il default di esecuzione — gli spawn di agent non-teammate in sessioni interattive girano ora in background invece che in foreground, coerente con il comportamento gia' standard nelle sessioni headless.
+
+<sub>Aggiornato 2026-08-14 via daily what's new. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232).</sub>
+
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212).</sub>
 
 ---

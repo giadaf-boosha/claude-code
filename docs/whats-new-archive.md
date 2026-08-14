@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-08-12
+
+> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.227 e v2.1.228, 10-11 ago) contengono solo bug fix e hardening, sotto la soglia editoriale.
+
+---
+
 ## 2026-08-11
 
 > Nessuna novita' significativa nelle ultime 24 ore. L'unica release (v2.1.227, 10 ago) contiene solo bug fix e rifiniture minori di UI, sotto la soglia editoriale.
@@ -191,12 +197,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 - **`claude mcp login/logout <name>`** (v2.1.186, 22 giu): nuovi comandi CLI per autenticare e deautenticare server MCP senza aprire il menu interattivo `/mcp`; `--no-browser` supporta flussi SSH headless. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Doc: [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **Bash `!` auto-response** (v2.1.186, 22 giu): i comandi `!<bash>` nel prompt triggherano ora una risposta automatica di Claude sull'output — prima era necessario esplicitare la richiesta. Disabilita con `"respondToBashCommands": false` in `settings.json`. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Doc: [docs/20-tips-best-practices.md](./docs/20-tips-best-practices.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-06-22
-
-> Nessuna novita' significativa nelle ultime 24 ore.
 
 ---
 
