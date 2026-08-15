@@ -128,6 +128,9 @@ Fonte: [`/en/cli-reference`](https://code.claude.com/docs/en/cli-reference).
 - `--ide` — connect automatico IDE all'avvio
 
 ### Worktree / tmux
+
+> **2026-08-15 (auto-update)**: `--worktree` e la vista `claude agents` accettano ora URL di merge request GitLab (mostrate come `!N`), non solo PR GitHub (v2.1.233). Fonte: [GitHub Releases v2.1.233](https://github.com/anthropics/claude-code/releases/tag/v2.1.233). Vedi anche README "What's new today" del giorno.
+
 - `--worktree`, `-w [name]` — worktree isolato in `<repo>/.claude/worktrees/<name>`
 - `--tmux[=classic]` — crea tmux session per worktree
 - `--teammate-mode auto|in-process|tmux` — display mode agent teams (sperimentale)

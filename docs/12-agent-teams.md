@@ -101,6 +101,9 @@ Storage:
 - `addBlocks: ["3"]` — questo task blocca il task 3
 
 ### Note
+
+> **2026-08-15 (auto-update)**: da v2.1.233 i tool di task-tracking (`TaskCreate`/`TaskUpdate`/`TaskList`/`TodoWrite`) sono disattivati di default sui modelli piu' recenti (Opus 4.8+, Sonnet 5+). Si riattivano con `CLAUDE_CODE_ENABLE_TODO_TOOLS=1`. Fonte: [GitHub Releases v2.1.233](https://github.com/anthropics/claude-code/releases/tag/v2.1.233). Vedi anche README "What's new today" del giorno.
+
 - `TodoWrite` esiste solo in non-interactive mode + Agent SDK
 - Tasks possono accumularsi nel tempo, fai cleanup periodico
 
