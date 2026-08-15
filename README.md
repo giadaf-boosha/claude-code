@@ -8,12 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-14)
+## What's new today (2026-08-15)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Cross-session messaging: mention diretto con `@`** (v2.1.232, 13 ago): digitare `@nome-sessione` nel prompt basta a raggiungere un'altra sessione Claude Code — Claude usa `SendMessage` in automatico, senza bisogno di invocare esplicitamente il tool; se il nome e' univoco tra le sessioni vive, il messaggio parte subito senza conferma. Nomi duplicati sulla stessa macchina ricevono ora una variante automatica `nome-parola-parola`. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Subagent forking di default** (v2.1.232, 13 ago): i subagent `subagent_type: "fork"` ereditano ora conversazione e prompt cache completi dalla sessione padre; gli agent non-teammate spawnati in sessioni interattive girano di default in background invece che in foreground. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.233** (14 ago): supporto URL merge request GitLab nel flag `--worktree` e nella vista `claude agents` (mostrate come `!N`); nuovo limite opzionale di memoria cgroup per i comandi Bash su Linux (`CLAUDE_CODE_TOOL_MEMORY_LIMIT`); risolto un bug che teneva al 100% un core CPU sulle sessioni idle Linux con sandboxing attivo; risolta una regressione Windows che bloccava l'auto mode su normali comandi Bash con redirect. Fonte: [GitHub Releases v2.1.233](https://github.com/anthropics/claude-code/releases/tag/v2.1.233). Vedi [docs/02 § Worktree/tmux](./docs/02-cli-installazione.md) e [docs/19 § Fase 7](./docs/19-changelog.md).
+- **Tool di task-tracking disattivati di default sui modelli piu' recenti** (v2.1.233, 14 ago): `TaskCreate`/`TaskUpdate`/`TaskList`/`TodoWrite` non sono piu' disponibili by default su Opus 4.8+ e Sonnet 5+ — si riattivano con `CLAUDE_CODE_ENABLE_TODO_TOOLS=1`. Fonte: [GitHub Releases v2.1.233](https://github.com/anthropics/claude-code/releases/tag/v2.1.233). Vedi [docs/12 § 12.6 Task list](./docs/12-agent-teams.md).
+- **Auto mode default effettivo da oggi** per Pro/Max/Team (annunciato il 9 ago, vedi [archive 2026-08-10](./docs/whats-new-archive.md#2026-08-10)): le nuove sessioni su questi piani partono ora davvero in auto mode invece che in `manual`. Nessuna novita' rispetto a quanto gia' documentato in [docs/04 § 4.3](./docs/04-modalita-permessi.md).
 
 ---
 
