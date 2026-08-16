@@ -93,6 +93,8 @@ Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permis
 
 ### Diventa il permission mode di default (da 14 ago 2026)
 
+> **2026-08-16 (auto-update)**: v2.1.233 (14 ago) risolve un loop di conferme ripetute in auto mode su Windows per comandi `cd` e redirect ordinari — capitava proprio nel giorno in cui auto mode e' diventato default. Fonte: [GitHub Releases v2.1.233](https://github.com/anthropics/claude-code/releases/tag/v2.1.233). Vedi anche README "What's new today" del giorno.
+
 Dal **14 agosto 2026**, `auto` sostituisce `manual` come permission mode di partenza per le nuove sessioni su Pro, Max e Team — non serve piu' attivarlo esplicitamente con `--permission-mode auto` o Shift+Tab. Un default impostato manualmente dall'utente resta valido finche' non si accetta il prompt di switch one-time mostrato una tantum; un default gestito a livello organizzativo non viene toccato. Enterprise, API diretta, Bedrock, Vertex AI, Foundry e le sessioni [Claude apps gateway](./17-ide-surface.md) restano opt-in per ora — Anthropic prevede di renderlo default anche li' nelle settimane successive, insieme alla rimozione del sovrapprezzo per l'overhead del classifier.
 
 La decisione si appoggia su dati di un test interno con 1.053 tester paganti: il classifier ha intercettato l'**89%** delle azioni potenzialmente dannose, contro il **13,6%** della sola revisione manuale — Anthropic attribuisce il divario alla "approval fatigue" (il 97% dei prompt di conferma viene approvato per riflesso). La release aggiunge anche uno screening contro prompt injection e regole `hard_deny` personalizzabili per bloccare in modo permanente categorie di azioni (es. tentativi di esfiltrazione dati).
