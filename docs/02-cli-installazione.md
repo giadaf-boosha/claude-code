@@ -82,6 +82,8 @@ Fonte: [`/en/cli-reference`](https://code.claude.com/docs/en/cli-reference).
 
 ## 2.3 Flag CLI selezionati (al 2.1.119)
 
+> **2026-08-17 (auto-update)**: da v2.1.233 (14 ago), `--worktree`/`-w` accetta anche un URL merge request GitLab come sorgente branch, oltre al nome locale. Fonte: [GitHub Releases v2.1.233](https://github.com/anthropics/claude-code/releases/tag/v2.1.233). Vedi anche README "What's new today" del giorno.
+
 ### Modello e effort
 - `--model claude-sonnet-4-6` — alias `sonnet`/`opus` o full ID
 - `--effort low|medium|high|xhigh|max` — effort level (session-only)

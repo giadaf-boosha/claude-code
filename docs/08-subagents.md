@@ -56,6 +56,8 @@ You are an expert code reviewer focusing on...
 
 ## 8.3 Subagents built-in
 
+> **2026-08-17 (auto-update)**: da v2.1.233 (14 ago), i tool di task-tracking (`TodoWrite`, `TaskCreate/Get/Update/List`) sono disattivati di default su Opus 4.8, Sonnet 5, Fable 5 e modelli successivi — si riattivano con `CLAUDE_CODE_ENABLE_TODO_TOOLS=1`. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 | Nome | Funzione | Tool disponibili |
 |---|---|---|
 | `Explore` | Codebase exploration read-only | Glob, Grep, LS, Read, NotebookRead, WebFetch, TodoWrite, WebSearch (no Edit/Write) |
