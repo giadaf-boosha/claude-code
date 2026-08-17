@@ -8,12 +8,11 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-14)
+## What's new today (2026-08-17)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Cross-session messaging: mention diretto con `@`** (v2.1.232, 13 ago): digitare `@nome-sessione` nel prompt basta a raggiungere un'altra sessione Claude Code — Claude usa `SendMessage` in automatico, senza bisogno di invocare esplicitamente il tool; se il nome e' univoco tra le sessioni vive, il messaggio parte subito senza conferma. Nomi duplicati sulla stessa macchina ricevono ora una variante automatica `nome-parola-parola`. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Subagent forking di default** (v2.1.232, 13 ago): i subagent `subagent_type: "fork"` ereditano ora conversazione e prompt cache completi dalla sessione padre; gli agent non-teammate spawnati in sessioni interattive girano di default in background invece che in foreground. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. L'unica release nel periodo (v2.1.233, 14 ago) contiene solo settings/fix incrementali (supporto merge request GitLab su `--worktree`, memory cgroup opzionale per il tool Bash, rimozione dei tool todo su Opus 4.8/Sonnet 5+), sotto la soglia editoriale. Prossimo aggiornamento domani 07:00.
 
 ---
 
