@@ -10,6 +10,8 @@ Il comando `/goal` imposta una **condizione di completamento** e Claude continua
 
 **Modello mentale**: come un `while (!condizione) { lavora() }` dove la condizione e' valutata in linguaggio naturale da un giudice indipendente leggendo cio' che Claude ha gia' mostrato.
 
+> **2026-08-18 (auto-update)**: da v2.1.234 (17 ago) `/goal` si autopulisce con un avviso quando un turno muore per errore irrecuperabile (auth revocata, credito esaurito, context overflow), invece di restare armato. Se un task in background tiene il goal in attesa per 30+ minuti, Claude ora fa un check-in (`CLAUDE_CODE_GOAL_CHECKIN_MINUTES=0` per disattivare). Fonte: [GitHub Releases v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234). Vedi anche README "What's new today" del giorno.
+
 **Componente harness IMPACT**: Control flow (loop turn-based con evaluator) + Memory (goal restored on resume).
 
 **Per il deep-dive**: [14 — `/loop` & Monitor](./14-loop-monitor.md) (loop a intervallo di tempo) e [07 — Hooks](./07-hooks.md) (Stop hook custom).

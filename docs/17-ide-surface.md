@@ -168,6 +168,8 @@ Lanciato **feb 2026** (research preview Max), GA mar 2026 ([@_catwu](https://x.c
 ### Cosa fa
 Collega la sessione locale a `claude.ai/code`, app iOS e Android. Conversazione sincronizzata cross-device.
 
+> **2026-08-18 (auto-update)**: da v2.1.234 (17 ago) l'effort scelto su telefono o claude.ai/code si applica anche alle sessioni ospitate da terminale, Desktop e VS Code — la sessione pubblica il proprio effort level ai client connessi. Fonte: [GitHub Releases v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234). Vedi anche README "What's new today" del giorno.
+
 ### Trigger
 ```bash
 /remote-control                      # in sessione (CLI)
