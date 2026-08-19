@@ -8,11 +8,12 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-18)
+## What's new today (2026-08-19)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.233 e v2.1.234, 14-17 ago) contengono solo fix, hardening di sicurezza e feature minori (badge merge request GitLab, auto-continuazione sessione al reset dei limiti d'uso, keybinding di selezione), sotto la soglia editoriale.
+- **Limiti settimanali Claude Code +50% estesi al 31 agosto**: Anthropic proroga l'aumento del 50% dei limiti settimanali (Pro, Max, Team, Enterprise a seat) oltre la scadenza del 19 agosto, con l'obiettivo dichiarato di renderlo permanente — segnala pero' possibile capacita' tesa nelle prossime settimane. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2089798442306711646).
+- **CLI v2.1.235** (18 ago): solo fix (cache language server, allineamento liste markdown, highlight prompt multi-riga, Shift+Tab nei permission prompt) e una feature minore — setting opzionale `spellcheck` che sottolinea errori di battitura nel prompt input. Sotto la soglia editoriale. Fonte: [GitHub Releases v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

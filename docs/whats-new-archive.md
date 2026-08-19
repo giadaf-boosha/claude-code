@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-08-18
+
+> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.233 e v2.1.234, 14-17 ago) contengono solo fix, hardening di sicurezza e feature minori (badge merge request GitLab, auto-continuazione sessione al reset dei limiti d'uso, keybinding di selezione), sotto la soglia editoriale.
+
+---
+
 ## 2026-08-14
 
 - **Cross-session messaging: mention diretto con `@`** (v2.1.232, 13 ago): digitare `@nome-sessione` nel prompt basta a raggiungere un'altra sessione Claude Code — Claude usa `SendMessage` in automatico, senza bisogno di invocare esplicitamente il tool; se il nome e' univoco tra le sessioni vive, il messaggio parte subito senza conferma. Nomi duplicati sulla stessa macchina ricevono ora una variante automatica `nome-parola-parola`. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Doc: [docs/17-ide-surface.md](./17-ide-surface.md), [docs/19-changelog.md](./19-changelog.md).
@@ -197,13 +203,6 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 ## 2026-06-24
 
 - **`sandbox.credentials`** (v2.1.187, 23 giu): nuova opzione sandbox blocca i comandi eseguiti in ambiente sandboxato dalla lettura di file di credenziali e variabili d'ambiente segrete — rafforza l'isolamento in deploy multi-tenant e pipeline CI/CD condivise. Configurabile in `settings.json`. Fonte: [GitHub Releases v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-06-23
-
-- **`claude mcp login/logout <name>`** (v2.1.186, 22 giu): nuovi comandi CLI per autenticare e deautenticare server MCP senza aprire il menu interattivo `/mcp`; `--no-browser` supporta flussi SSH headless. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Doc: [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Bash `!` auto-response** (v2.1.186, 22 giu): i comandi `!<bash>` nel prompt triggherano ora una risposta automatica di Claude sull'output — prima era necessario esplicitare la richiesta. Disabilita con `"respondToBashCommands": false` in `settings.json`. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186). Doc: [docs/20-tips-best-practices.md](./docs/20-tips-best-practices.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
