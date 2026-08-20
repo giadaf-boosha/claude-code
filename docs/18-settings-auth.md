@@ -137,6 +137,8 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 - `autoMode.soft_deny`, `useAutoModeDuringPlan`
 - `defaultShell`, `outputStyle`, `language`, `voice.enabled`
 
+> **2026-08-20 (auto-update)**: nuovo output style built-in **"Concise"** (v2.1.237, 20 ago) — Claude va dritto ai risultati, saltando preamboli e narrazione, a parita' di qualita' del lavoro; si seleziona da `/config` → Output style. Setting `spellcheck` (v2.1.235, 18 ago) sottolinea parole errate nel prompt via `aspell`/`hunspell`/`ispell`. Fonte: [GitHub Releases v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237) · [v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235). Vedi anche README "What's new today" del giorno.
+
 > **Thinking Token Control** (da v2.1.166): tre modi per disabilitare il thinking su modelli che lo abilitano di default via Claude API (es. Opus 4.8 con `alwaysThinkingEnabled`):
 > - Env var: `MAX_THINKING_TOKENS=0`
 > - Flag CLI: `--thinking disabled`

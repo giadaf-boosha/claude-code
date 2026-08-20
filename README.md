@@ -8,11 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-18)
+## What's new today (2026-08-20)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.233 e v2.1.234, 14-17 ago) contengono solo fix, hardening di sicurezza e feature minori (badge merge request GitLab, auto-continuazione sessione al reset dei limiti d'uso, keybinding di selezione), sotto la soglia editoriale.
+- **CLI v2.1.237** introduce l'output style built-in **"Concise"**: Claude va dritto ai risultati, saltando preamboli e narrazione, mantenendo la stessa qualita' di lavoro. Si attiva da `/config` → Output style. Fix: prompt caching rotto per sessioni con LLM gateway o base URL custom. Fonte: [GitHub Releases v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237). Vedi [docs/18 § Advanced settings](./docs/18-settings-auth.md) e [docs/19 § Changelog](./docs/19-changelog.md).
+- **CLI v2.1.236** aggiunge la env var **`ANTHROPIC_DEFAULT_MODEL`** (modello di partenza delle nuove sessioni, un `/model` esplicito la sovrascrive e persiste al restart — a differenza di `ANTHROPIC_MODEL`) e **`notify_when_idle`** su `SendMessage` cross-session (un avviso one-shot quando un'altra sessione locale torna idle, macOS/Linux, no polling). Fonte: [GitHub Releases v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236). Vedi [docs/05 § Aggiornamento modello](./docs/05-fast-mode-1m-context.md) e [docs/17 § Cross-session messaging](./docs/17-ide-surface.md#remote-control).
+- **CLI v2.1.235** aggiunge il setting opzionale **`spellcheck`** (sottolinea parole errate nel prompt via `aspell`/`hunspell`/`ispell`) — release altrimenti solo fix (cache prompt, rendering markdown, permission prompt). Fonte: [GitHub Releases v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235). Vedi [docs/18 § Advanced settings](./docs/18-settings-auth.md).
 
 ---
 

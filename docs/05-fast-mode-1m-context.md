@@ -232,6 +232,8 @@ Generale su Claude API, Claude Platform, Amazon Bedrock, Vertex AI e Microsoft F
 ### Aggiornamento da Sonnet 4.6
 `claude update` porta alla v2.1.197. Sonnet 4.6 rimane selezionabile via `/model claude-sonnet-4-6` o `ANTHROPIC_MODEL=claude-sonnet-4-6`.
 
+> **2026-08-20 (auto-update)**: nuova env var **`ANTHROPIC_DEFAULT_MODEL`** (v2.1.236, 19 ago) fissa il modello di partenza delle nuove sessioni — a differenza di `ANTHROPIC_MODEL`, un `/model` scelto a mano lo sovrascrive e persiste al restart invece di essere riazzerato. Fonte: [GitHub Releases v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236). Vedi anche README "What's new today" del giorno.
+
 <sub>Aggiornato 2026-07-01 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072018504392601762) · [GitHub Releases v2.1.197](https://github.com/anthropics/claude-code/releases/tag/v2.1.197).</sub>
 
 ---
