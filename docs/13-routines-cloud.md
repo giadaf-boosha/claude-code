@@ -151,6 +151,8 @@ Due sessioni dentro lo stesso container self-hosted possono usare anche il [cros
 
 > Fonte: [Anthropic blog](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute) · [`/en/self-hosted-environments`](https://code.claude.com/docs/en/self-hosted-environments).
 
+> **2026-08-21 (auto-update)**: v2.1.238 aggiunge `claude self-hosted-runner --defer-shutdown-max-min <minuti>` — su SIGTERM il runner continua a servire le sessioni gia' agganciate prima di fermarsi, invece di terminarle subito. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 13.8 Run management

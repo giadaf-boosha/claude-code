@@ -86,6 +86,8 @@ La modifica e' persistente nella sessione (non viene scritta su disco a meno che
 { "env": { "KEY": "value" } }
 ```
 
+> **2026-08-21 (auto-update)**: v2.1.236 aggiunge la env var `ANTHROPIC_DEFAULT_MODEL` — imposta il modello di default per le nuove sessioni, sovrascritta da scelte esplicite `/model`. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ### Auth
 - `apiKeyHelper`, `awsCredentialExport`, `awsAuthRefresh`
 - `otelHeadersHelper`, `forceLoginMethod`, `forceLoginOrgUUID`
@@ -112,6 +114,9 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 - `editorMode`, `prefersReducedMotion`
 - `spinnerTipsEnabled`, `spinnerVerbs`, `terminalProgressBarEnabled`
 - `awaySummaryEnabled`
+- **`keybindingFlavor`** (da v2.1.238): con `"readline"`, Ctrl+W cancella all'indietro fino allo spazio bianco precedente (comportamento in stile Bash).
+
+> **2026-08-21 (auto-update)**: v2.1.237 introduce l'output style integrato **"Concise"** — Claude va dritto al risultato, saltando preamboli e narrazione — selezionabile da `/config` → Output style o `outputStyle: "Concise"` in settings.json. Fonte: [changelog](https://code.claude.com/docs/en/changelog) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2090245922685063634). Vedi anche README "What's new today" del giorno.
 - **`CLAUDE_CLIENT_PRESENCE_FILE`** (env var, da v2.1.181): punta a un file marker; finche' il file esiste, le push notification verso il mobile vengono soppresse — utile per chi ha Claude Code aperto sia in terminale che su mobile e non vuole duplicare le notifiche.
 
 <sub>Aggiornato 2026-06-18 via daily what's new. Fonte: [GitHub Releases v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181).</sub>

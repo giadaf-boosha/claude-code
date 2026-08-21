@@ -8,11 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-18)
+## What's new today (2026-08-21)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.233 e v2.1.234, 14-17 ago) contengono solo fix, hardening di sicurezza e feature minori (badge merge request GitLab, auto-continuazione sessione al reset dei limiti d'uso, keybinding di selezione), sotto la soglia editoriale.
+- **CLI v2.1.236** (19 ago) aggiunge la env var `ANTHROPIC_DEFAULT_MODEL` (modello di default per nuove sessioni, sovrascrivibile da `/model`) e `notify_when_idle` al cross-session messaging; rafforza le regole wildcard read-deny della sandbox su macOS. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/18 § Env](./docs/18-settings-auth.md) e [docs/19 § Fase Aug](./docs/19-changelog.md).
+- **CLI v2.1.237** (20 ago) introduce l'output style integrato **"Concise"** (Claude va dritto al risultato, salta preamboli e narrazione) selezionabile da `/config`; corregge il prompt caching per sessioni via LLM gateway o base URL custom. Fonte: [changelog](https://code.claude.com/docs/en/changelog) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2090245922685063634). Vedi [docs/18 § TUI/display](./docs/18-settings-auth.md) e [docs/19](./docs/19-changelog.md).
+- **CLI v2.1.238** (20 ago) aggiunge `keybindingFlavor: "readline"`, `claude self-hosted-runner --defer-shutdown-max-min` e il supporto proxy authorization (`--proxy-authorization-command`/`-file`); corregge una memory leak nelle sessioni interattive lunghe. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi [docs/13 § 13.7b](./docs/13-routines-cloud.md) e [docs/19](./docs/19-changelog.md).
 
 ---
 
