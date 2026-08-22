@@ -8,11 +8,15 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-18)
+## What's new today (2026-08-22)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.233 e v2.1.234, 14-17 ago) contengono solo fix, hardening di sicurezza e feature minori (badge merge request GitLab, auto-continuazione sessione al reset dei limiti d'uso, keybinding di selezione), sotto la soglia editoriale.
+- **CLI v2.1.239 — costi e data residency**: le stime di costo (`/cost`, status line, `--max-budget-usd`) includono ora il premio 1,1× per inferenza solo-USA sui workspace a data residency. Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi [docs/18-settings-auth.md § 18](./docs/18-settings-auth.md) e [docs/19 § Changelog](./docs/19-changelog.md).
+- **CLI v2.1.239 — `/claude-api upgrade`**: nuovo comando migra i progetti Python dal pacchetto `anthropic` 0.x alla 1.x (i timeout passano da `httpx.Timeout` a `anthropic.Timeout`). Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi [docs/16-headless-agent-sdk.md § SDK Python](./docs/16-headless-agent-sdk.md) e [docs/19 § Changelog](./docs/19-changelog.md).
+- **CLI v2.1.239 — plugin sync su cloud**: nelle sessioni cloud i plugin sincronizzati da claude.ai appaiono come `nome@synced`, gestibili con `claude plugin enable/disable` e non sovrascrivono mai un plugin locale con lo stesso nome. Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi [docs/11-plugins-marketplace.md § 11.1](./docs/11-plugins-marketplace.md) e [docs/19 § Changelog](./docs/19-changelog.md).
+- **CLI v2.1.239 — Alpine/musl**: le build musl caricano ora nativamente paste immagini, clipboard e cattura audio, prima bloccati perche' i binari musl venivano rifiutati dal runtime glibc. Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi [docs/02-cli-installazione.md § 2.1](./docs/02-cli-installazione.md) e [docs/19 § Changelog](./docs/19-changelog.md).
+- **CLI v2.1.239 — fix pack**: corregge streaming Bedrock dietro proxy, hang all'avvio con SSO Bedrock, pause di ~5s su Edit/Write nel terminale JetBrains, form MCP elicitation tagliati in fullscreen, titoli sessione persi oltre 64KB, testo spurio da movimento mouse in fullscreen. Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi [docs/19 § Changelog](./docs/19-changelog.md).
 
 ---
 

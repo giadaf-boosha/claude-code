@@ -52,6 +52,8 @@ my-plugin/
 
 Se `version` e' omesso, viene usato il commit SHA (ogni commit = nuova versione). Specifica `version` per controllo update.
 
+> **2026-08-22 (auto-update)**: da v2.1.239 nelle sessioni cloud i plugin sincronizzati da claude.ai appaiono come `nome@synced`, gestibili con `claude plugin enable/disable <name>@synced` e non sovrascrivono mai un plugin locale con lo stesso nome. Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 11.2 Marketplace ufficiale
