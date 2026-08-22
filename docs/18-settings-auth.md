@@ -401,6 +401,8 @@ Vedi [02 CLI § 2.4](./02-cli-installazione.md#2.4-variabili-d-ambiente-principa
 }
 ```
 
+> **2026-08-22 (auto-update)**: da v2.1.239 le stime di costo (`/cost`, status line, `--max-budget-usd`) includono il premio 1,1× per inferenza solo-USA sui workspace a data residency (Bedrock/Vertex/Foundry esclusi). Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi anche README "What's new today" del giorno.
+
 ### D. CI con bare mode
 
 ```bash

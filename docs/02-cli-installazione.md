@@ -34,6 +34,8 @@ curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del in
 
 <sub>Aggiornato 2026-04-29 via daily what's new. Fonte: [changelog](https://code.claude.com/docs/en/changelog).</sub>
 
+> **2026-08-22 (auto-update)**: da v2.1.239 le build Alpine/musl caricano nativamente gli add-on di paste immagini, clipboard e cattura audio, prima bloccati perche' i binari musl venivano rifiutati dal runtime glibc. Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi anche README "What's new today" del giorno.
+
 ```bash
 # Homebrew (canale stabile)
 brew install --cask claude-code

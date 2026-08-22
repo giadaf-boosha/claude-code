@@ -118,6 +118,8 @@ async def main():
 asyncio.run(main())
 ```
 
+> **2026-08-22 (auto-update)**: da v2.1.239 il comando `/claude-api upgrade` migra i progetti Python che usano il pacchetto `anthropic` dalla 0.x alla 1.x (i timeout passano da `httpx.Timeout` a `anthropic.Timeout`). Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi anche README "What's new today" del giorno.
+
 ### Capabilities
 
 - **Built-in tools**: Read, Write, Edit, Bash, Monitor, Glob, Grep, WebSearch, WebFetch, AskUserQuestion, EndConversation (da v2.1.214 — vedi [04 Modalita' permessi](./04-modalita-permessi.md#end-conversation))
