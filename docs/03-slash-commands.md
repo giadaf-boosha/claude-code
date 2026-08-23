@@ -39,6 +39,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/cost` (alias `/usage`, `/stats`) | built-in | Costi e utilizzo |
 | `/debug [description]` | **Skill** | Debug logging mid-session |
 | `/deep-research <domanda>` | **Skill** | Workflow bundled di ricerca: fan-out di web search da piu' angolazioni, fetch e cross-check delle fonti, voto su ogni claim, report citato con i claim non verificati gia' filtrati (richiede il WebSearch tool). Vedi [24](./24-workflows.md) |
+| `/design [brief]` | **Skill** | **Research preview** (da v2.1.239, 21 ago 2026): porta il workflow ad artboard di Claude Design dentro CLI e Desktop, basato su artifacts. Descrivi cosa vuoi progettare, Claude legge la codebase per matchare lo stile UI e pubblica un canvas di artboard modificabili in un link; scegli un artboard, modificalo e fai implementare quello scelto. Pro/Max/Team/Enterprise. |
 | `/design-sync [pull\|push]` | built-in | Sync bidirezionale tra Claude Code e Claude Design: `pull` importa il design system nel repo (componenti, font, colori) per buildare con i componenti reali; `push` esporta il codice prodotto verso il canvas Claude Design. Richiede accesso a Claude Design (da 19 giu 2026). |
 | `/desktop` (alias `/app`) | built-in | Continua su Desktop app (macOS/Windows) |
 | `/diff` | built-in | Diff viewer interattivo (uncommitted + per-turn) |
@@ -115,6 +116,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212).</sub>
 <sub>Aggiornato 2026-07-19 via daily what's new. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215).</sub>
 <sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222) · [v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223).</sub>
+<sub>Aggiornato 2026-08-23 via daily what's new. Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2089471692762673408).</sub>
 
 ---
 
@@ -168,6 +170,7 @@ Utile per combinare skill senza modificare il frontmatter. Vedi [09 Skills § In
 - Routines / `/schedule`: [@claudeai](https://x.com/claudeai/status/2044095086460309790)
 - Remote Control: [@_catwu](https://x.com/_catwu/status/2026421789476401182)
 - `/simplify` e `/batch`: [@bcherny](https://x.com/bcherny/status/2027534984534544489)
+- `/design`: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2089471692762673408), [nate parrott](https://x.com/nateparrott/status/2089470636796059754)
 - `/loop` + `/schedule` (tip Boris): [@bcherny](https://x.com/bcherny/status/2038454341884154269)
 
 ---

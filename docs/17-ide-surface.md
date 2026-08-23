@@ -192,6 +192,12 @@ claude --rc [name]                   # alias
 ### Remote Control in VSCode
 [@noahzweben](https://x.com/noahzweben/status/2034452278971932695): "Remote Control in VSCode" + drop VSCode (mar 2026).
 
+### Esce da research preview + device card (da v2.1.239, 21 ago 2026)
+
+Qualsiasi macchina con `claude remote-control` attivo compare ora come **device card** in cima al tab Code dell'app mobile Claude — tap sulla card per scegliere una directory e avviare li' una nuova sessione, senza dover prima aprire una sessione dal terminale. Contestualmente Remote Control esce definitivamente da research preview. Fonte: [`/en/whats-new/2026-w34`](https://code.claude.com/docs/en/whats-new/2026-w34).
+
+<sub>Aggiornato 2026-08-23 via daily what's new. Fonte: [code.claude.com/docs/en/whats-new/2026-w34](https://code.claude.com/docs/en/whats-new/2026-w34).</sub>
+
 > Fonte: [`/en/remote-control`](https://code.claude.com/docs/en/remote-control).
 
 ### Cross-session messaging (`SendMessage` + `ListAgents`, da v2.1.224, 7 ago 2026)

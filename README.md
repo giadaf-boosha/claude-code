@@ -8,11 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-18)
+## What's new today (2026-08-23)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.233 e v2.1.234, 14-17 ago) contengono solo fix, hardening di sicurezza e feature minori (badge merge request GitLab, auto-continuazione sessione al reset dei limiti d'uso, keybinding di selezione), sotto la soglia editoriale.
+- **`/design`** (research preview, v2.1.239): nuovo comando che porta il workflow ad artboard di Claude Design dentro CLI e Desktop, basato su artifacts — descrivi un brief, Claude pubblica un canvas di mockup modificabili, scegli e fai implementare. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2089471692762673408). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Concise output style** (v2.1.237): nuovo stile di risposta built-in — Claude apre col risultato e salta preamboli/narrazione, con dettaglio completo su richiesta. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2090245922685063634). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Remote Control esce da research preview** (v2.1.239): ogni macchina con `claude remote-control` attivo compare come device card nel tab Code dell'app mobile, da cui avviare una sessione al volo. Fonte: [whats-new 2026-w34](https://code.claude.com/docs/en/whats-new/2026-w34). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
