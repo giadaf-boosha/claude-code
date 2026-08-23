@@ -137,6 +137,10 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 - `autoMode.soft_deny`, `useAutoModeDuringPlan`
 - `defaultShell`, `outputStyle`, `language`, `voice.enabled`
 
+> **Output style `Concise`** (da v2.1.237, 19 ago 2026): stile built-in che fa aprire Claude col risultato, saltando preamboli e narrazione — stesso livello di completezza dello stile Default quando chiedi un dettaglio in piu'; error report, warning di sicurezza e conferme di azioni distruttive restano invariati. Si attiva da `/config` → Output style oppure impostando `"outputStyle": "Concise"` in `settings.json`; effettivo dal prossimo `/clear` o nuova sessione. Descritto da Boris Cherny come soluzione ponte in attesa di un fix piu' strutturale. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2090245922685063634).
+>
+> <sub>Aggiornato 2026-08-23 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2090245922685063634).</sub>
+
 > **Thinking Token Control** (da v2.1.166): tre modi per disabilitare il thinking su modelli che lo abilitano di default via Claude API (es. Opus 4.8 con `alwaysThinkingEnabled`):
 > - Env var: `MAX_THINKING_TOKENS=0`
 > - Flag CLI: `--thinking disabled`
