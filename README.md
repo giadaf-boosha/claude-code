@@ -8,11 +8,19 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-18)
+## What's new today (2026-08-24)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.233 e v2.1.234, 14-17 ago) contengono solo fix, hardening di sicurezza e feature minori (badge merge request GitLab, auto-continuazione sessione al reset dei limiti d'uso, keybinding di selezione), sotto la soglia editoriale.
+- **CLI v2.1.239** rilascia `/claude-api upgrade` per migrare progetti Python dall'SDK `anthropic` 0.x a 1.x; stima costi (`/cost`, statusline, `--max-budget-usd`) include ora il premio 1.1× US-only-inference per workspace data-residency; fullscreen renderer esteso a Bedrock/Vertex/Foundry. Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239). Vedi [docs/16 § 16.4](./docs/16-headless-agent-sdk.md) e [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.237** introduce l'output style built-in **"Concise"**: Claude va dritto al risultato, saltando preamboli e narrazione a parita' di lavoro svolto. Fonte: [GitHub Releases v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237). Vedi [docs/20 § 20.1](./docs/20-tips-best-practices.md) e [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.236** aggiunge la env var `ANTHROPIC_DEFAULT_MODEL` per il modello di default delle nuove sessioni (un pick esplicito da `/model` prevale e persiste). Fonte: [GitHub Releases v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236). Vedi [docs/18 § Model & effort](./docs/18-settings-auth.md) e [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.236** aggiunge `notify_when_idle` a `SendMessage` cross-session: un avviso one-shot da un'altra sessione locale quando torna idle, senza polling (macOS/Linux). Fonte: [GitHub Releases v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236). Vedi [docs/17 § Cross-session messaging](./docs/17-ide-surface.md) e [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.238** introduce `keybindingFlavor: "readline"` (keybinding stile Bash per la modifica di parola nel prompt) e `headersHelper` sulle marketplace URL per header HTTP dinamici. Fonte: [GitHub Releases v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238). Vedi [docs/18 § TUI/display](./docs/18-settings-auth.md) e [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.235** aggiunge il setting opzionale `spellcheck`, che corregge i refusi nel prompt appoggiandosi a un binario locale `aspell`/`hunspell`/`ispell`. Fonte: [GitHub Releases v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235). Vedi [docs/18 § TUI/display](./docs/18-settings-auth.md) e [docs/19 § 19.9](./docs/19-changelog.md).
+- **CLI v2.1.240 e v2.1.241** (22-23 ago) contengono solo fix e hardening di affidabilita', sotto la soglia editoriale. Fonte: [GitHub Releases v2.1.240](https://github.com/anthropics/claude-code/releases/tag/v2.1.240) · [v2.1.241](https://github.com/anthropics/claude-code/releases/tag/v2.1.241). n/a.
+
+> Nota: la routine non girava dal 18 ago (gap 19-23 ago non coperto giorno per giorno); questa edizione riepiloga le versioni CLI rilasciate nel frattempo. Nessun annuncio ufficiale Anthropic blog/X rilevante individuato in questa finestra oltre alle release CLI sopra.
 
 ---
 

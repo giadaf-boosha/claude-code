@@ -77,6 +77,10 @@ La modifica e' persistente nella sessione (non viene scritta su disco a meno che
 
 <sub>Aggiornato 2026-06-30 via daily what's new. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196).</sub>
 
+> **`ANTHROPIC_DEFAULT_MODEL`** (env var, da v2.1.236, 19 ago 2026): imposta il modello su cui partono le nuove sessioni; un pick esplicito da `/model` sovrascrive il default e persiste tra i riavvii.
+
+<sub>Aggiornato 2026-08-24 via daily what's new. Fonte: [GitHub Releases v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236).</sub>
+
 ### Permissions
 - `allow`, `ask`, `deny`, `additionalDirectories`, `defaultMode`
 - `disableBypassPermissionsMode`, `disableAutoMode`
@@ -115,6 +119,10 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 - **`CLAUDE_CLIENT_PRESENCE_FILE`** (env var, da v2.1.181): punta a un file marker; finche' il file esiste, le push notification verso il mobile vengono soppresse — utile per chi ha Claude Code aperto sia in terminale che su mobile e non vuole duplicare le notifiche.
 
 <sub>Aggiornato 2026-06-18 via daily what's new. Fonte: [GitHub Releases v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181).</sub>
+
+> **`keybindingFlavor: "readline"`** (da v2.1.238, 20 ago 2026): applica keybinding stile Bash per la modifica di parola nel prompt (Alt+F, Ctrl+→, Alt+D). **`spellcheck`** (setting opzionale, da v2.1.235, 18 ago 2026): corregge i refusi nel prompt appoggiandosi a un binario locale `aspell`, `hunspell` o `ispell`.
+
+<sub>Aggiornato 2026-08-24 via daily what's new. Fonte: [GitHub Releases v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238) · [v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235).</sub>
 
 ### Memory
 - `autoMemoryEnabled`, `autoMemoryDirectory`, `cleanupPeriodDays`, `plansDirectory`

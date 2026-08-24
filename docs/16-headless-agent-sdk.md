@@ -195,6 +195,11 @@ Agent SDK v0.2.111+. Errore `thinking.type.enabled` → upgrade.
 5. **MCP server da CI**: usa `--mcp-config` con file dedicato in repo, `--strict-mcp-config` per riproducibilita'.
 6. **Stream-json per pipeline real-time**: utile per dashboards.
 7. **Distributed tracing**: `TRACEPARENT`, `TRACESTATE`, `OTEL_LOG_RAW_API_BODIES` (v2.1.110, v2.1.111).
+8. **`/claude-api upgrade`** (v2.1.239, 21 ago 2026): migra progetti Python dall'SDK `anthropic` 0.x a 1.x.
+
+> `--max-budget-usd`, `/cost` e la statusline includono da v2.1.239 (21 ago 2026) il premio 1.1× US-only-inference per i workspace data-residency.
+
+<sub>Aggiornato 2026-08-24 via daily what's new. Fonte: [GitHub Releases v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239).</sub>
 
 ---
 

@@ -212,7 +212,10 @@ Da v2.1.232 (13 ago 2026) non serve piu' invocare `SendMessage` a parole: digita
 
 > Fonte: [`/en/cross-session-messaging`](https://code.claude.com/docs/en/cross-session-messaging).
 
+**`notify_when_idle`** (v2.1.236, 19 ago 2026): opzione one-shot di `SendMessage` che chiede a un'altra sessione sulla stessa macchina di avvisare quando torna idle — niente polling, un solo avviso, disponibile su macOS e Linux.
+
 <sub>Aggiornato 2026-08-14 via daily what's new. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232).</sub>
+<sub>Aggiornato 2026-08-24 via daily what's new. Fonte: [GitHub Releases v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236).</sub>
 
 ---
 

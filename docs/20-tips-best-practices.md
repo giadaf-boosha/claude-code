@@ -39,6 +39,10 @@ Vedi [07 Hooks § esempi](./07-hooks.md#7.8-esempi-pratici).
 
 Tip: per imparare codice nuovo o stack sconosciuto, attiva l'output style "Explanatory".
 
+Nuovo output style built-in **"Concise"** (da v2.1.237, 20 ago 2026): Claude va dritto al risultato, saltando preamboli e narrazione a parita' di lavoro svolto — si attiva da `/config` → Output style.
+
+<sub>Aggiornato 2026-08-24 via daily what's new. Fonte: [GitHub Releases v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237).</sub>
+
 ### 5. Skill chaining
 > "Yes, just ask claude to invoke skill 1, then skill 2, then skill 3, in natural language. Or ask it to use parallel subagents to invoke the skills in parallel." — [@bcherny](https://x.com/bcherny/status/2006170607092670691)
 
