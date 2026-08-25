@@ -39,6 +39,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/cost` (alias `/usage`, `/stats`) | built-in | Costi e utilizzo |
 | `/debug [description]` | **Skill** | Debug logging mid-session |
 | `/deep-research <domanda>` | **Skill** | Workflow bundled di ricerca: fan-out di web search da piu' angolazioni, fetch e cross-check delle fonti, voto su ogni claim, report citato con i claim non verificati gia' filtrati (richiede il WebSearch tool). Vedi [24](./24-workflows.md) |
+| `/design <brief>` | **Skill** | Research preview: porta il workflow ad artboard di Claude Design dentro CLI e Desktop, costruito su Artifacts. Dato un brief, Claude pubblica un canvas con piu' artboard editabili per la UI richiesta; l'utente ne sceglie una, la aggiusta, e Claude la implementa nel codice. Disponibile su Pro/Max/Team/Enterprise, richiede v2.1.233+. Non va confuso con `/design-sync` sotto, che sincronizza design system gia' esistenti invece di generarne di nuovi (da v2.1.233-239, annuncio [Week 34 digest](https://code.claude.com/docs/en/whats-new/2026-w34)) |
 | `/design-sync [pull\|push]` | built-in | Sync bidirezionale tra Claude Code e Claude Design: `pull` importa il design system nel repo (componenti, font, colori) per buildare con i componenti reali; `push` esporta il codice prodotto verso il canvas Claude Design. Richiede accesso a Claude Design (da 19 giu 2026). |
 | `/desktop` (alias `/app`) | built-in | Continua su Desktop app (macOS/Windows) |
 | `/diff` | built-in | Diff viewer interattivo (uncommitted + per-turn) |
@@ -115,6 +116,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212).</sub>
 <sub>Aggiornato 2026-07-19 via daily what's new. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215).</sub>
 <sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222) · [v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223).</sub>
+<sub>Aggiornato 2026-08-25 via daily what's new. Fonte: [Week 34 whats-new digest](https://code.claude.com/docs/en/whats-new/2026-w34).</sub>
 
 ---
 

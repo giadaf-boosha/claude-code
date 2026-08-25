@@ -31,8 +31,10 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 | `/fewer-permission-prompts` | Scansiona transcript e crea allowlist read-only |
 | `/dataviz` | Progettazione grafici, chart e dashboard — validatore tavolozza colori integrato e linee guida accessibilita' per output coerenti in light/dark mode (da v2.1.198) |
 | `/verify` | Esercita end-to-end il flusso toccato da una modifica e osserva il comportamento reale, invece di fermarsi a test/typecheck |
+| `/design <brief>` | Research preview: draft di UI come canvas di artboard editabili (basato su Artifacts), a partire da un brief testuale; l'utente sceglie un artboard e Claude lo implementa nel codice. Vedi [03 Slash commands](./03-slash-commands.md#31-tabella-completa) (da v2.1.233+) |
 
 <sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
+<sub>Aggiornato 2026-08-25 via daily what's new. Fonte: [Week 34 whats-new digest](https://code.claude.com/docs/en/whats-new/2026-w34).</sub>
 
 ### Invocazione manuale per `/verify` e `/code-review` (da v2.1.215)
 

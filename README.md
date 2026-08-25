@@ -1,18 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **24 agosto 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **25 agosto 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.241** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-24)
+## What's new today (2026-08-25)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le release piu' recenti (v2.1.235-v2.1.241, 18-23 ago) restano sotto la soglia editoriale: solo settings minori (output style built-in "Concise", env var `ANTHROPIC_DEFAULT_MODEL`, `spellcheck` opzionale, `keybindingFlavor`, shutdown graduale per self-hosted runner), fix di affidabilita' e sicurezza. Nessun annuncio Anthropic rilevante nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+Nessuna release nuova nelle ultime 24 ore (l'ultima resta v2.1.241, 23 ago). Un recupero editoriale dal digest settimanale ufficiale:
+
+- **`/design`**: nuovo comando (research preview) che porta il workflow ad artboard di Claude Design in CLI e Claude Code Desktop, costruito su Artifacts — da un brief testuale Claude pubblica un canvas di artboard editabili, l'utente ne sceglie una e Claude la implementa nel codice. Disponibile da v2.1.233 (17-21 ago) ma mai segnalato dalle release notes puntuali, ripescato oggi dal digest settimanale. Da non confondere con `/design-sync`, gia' documentato, che sincronizza design system esistenti. Fonte: [Week 34 whats-new digest](https://code.claude.com/docs/en/whats-new/2026-w34). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
@@ -182,6 +184,7 @@ E come reference:
 | 14 mag 2026 | v2.1.142 — **Fast Mode → Opus 4.7 di default** + plugin SKILL.md root come skill | [05](./docs/05-fast-mode-1m-context.md), [09](./docs/09-skills.md) |
 | 24 lug 2026 | v2.1.219 — **Claude Opus 5**, nuovo modello premium default su Max, effort toggle low/medium/high, sostituisce Opus 4.7 in fast mode | [05](./docs/05-fast-mode-1m-context.md), [01](./docs/01-snapshot.md) |
 | 9 ago 2026 | **Auto mode diventa default** per Pro/Max/Team dal 14 ago — 89% delle azioni pericolose bloccate nei test vs 13,6% della revisione manuale | [04](./docs/04-modalita-permessi.md) |
+| 17-21 ago 2026 (w34) | **`/design`** (research preview): workflow ad artboard di Claude Design in CLI/Desktop, costruito su Artifacts | [03](./docs/03-slash-commands.md), [09](./docs/09-skills.md) |
 
 ---
 
