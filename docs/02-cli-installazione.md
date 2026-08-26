@@ -15,6 +15,8 @@ Reference completa CLI di Claude Code aggiornata a v2.1.119.
 
 **Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per capire perche' una CLI e' una scelta architetturale, non solo un'interfaccia.
 
+> **2026-08-26 (auto-update)**: v2.1.245 corregge un crash all'avvio su distro Linux con glibc 2.44 (Arch Linux, CachyOS, Fedora Rawhide). Fonte: [GitHub Releases v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 2.1 Installazione

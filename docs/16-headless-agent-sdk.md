@@ -15,6 +15,8 @@ Per usare Claude Code in **CI/CD**, **batch**, o come **libreria** in app Python
 
 **Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per quando usare CC vs SDK leggero.
 
+> **2026-08-26 (auto-update)**: le sessioni non interattive (`-p`, SDK, cloud) continuano ora automaticamente una risposta interrotta a meta' stream da errore server, perdita di connessione o stallo, invece di terminare con un errore (v2.1.246). Fonte: [GitHub Releases v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 16.1 CLI Headless (`-p`)

@@ -15,6 +15,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
+> **2026-08-26 (auto-update)**: `/usage` aggiunge il breakdown **Loops** (run count, token totali, token per run, ultimo run); `/cd` applica subito le impostazioni di progetto (hook, server MCP, skill, agent) della nuova directory invece di aspettare `--resume` (v2.1.243/v2.1.246). Fonte: [GitHub Releases v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.1 Tabella completa

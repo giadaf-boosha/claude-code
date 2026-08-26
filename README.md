@@ -1,18 +1,26 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **24 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.241** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **26 agosto 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.246** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-24)
+## What's new today (2026-08-26)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le release piu' recenti (v2.1.235-v2.1.241, 18-23 ago) restano sotto la soglia editoriale: solo settings minori (output style built-in "Concise", env var `ANTHROPIC_DEFAULT_MODEL`, `spellcheck` opzionale, `keybindingFlavor`, shutdown graduale per self-hosted runner), fix di affidabilita' e sicurezza. Nessun annuncio Anthropic rilevante nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.246** (25 ago): nuovo tab **Auto mode** in `/permissions` per vedere/modificare le regole del classifier, con deadline dei controlli di sicurezza scalata sulla dimensione del prompt; warning all'avvio per regole Bash con wildcard prima del subcommand (es. `Bash(git * main)`). Fonte: [GitHub Releases v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246). Vedi [docs/04 § 4.3](./docs/04-modalita-permessi.md) e [docs/19 § Changelog](./docs/19-changelog.md).
+- **CLI v2.1.246**: `/cd` applica subito impostazioni di progetto, hook, server MCP, skill e agent della nuova directory, invece di aspettare `--resume`. Fonte: [GitHub Releases v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246). Vedi [docs/03 § 3.1](./docs/03-slash-commands.md).
+- **CLI v2.1.246**: subagent fermato al limite `maxTurns` segnala ora l'output come parziale, con hint a continuarlo via `SendMessage`, invece di apparire concluso. Fonte: [GitHub Releases v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246). Vedi [docs/08](./docs/08-subagents.md).
+- **CLI v2.1.246**: sessioni non interattive (`-p`, SDK, cloud) continuano automaticamente una risposta interrotta a meta' stream da errore server, perdita di connessione o stallo. Fonte: [GitHub Releases v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246). Vedi [docs/16 § 16.1](./docs/16-headless-agent-sdk.md).
+- **CLI v2.1.243** (24 ago): `/usage` aggiunge il breakdown **Loops** (run count, token totali, token per run, ultimo run). Fonte: [GitHub Releases v2.1.243](https://github.com/anthropics/claude-code/releases/tag/v2.1.243). Vedi [docs/03 § 3.1](./docs/03-slash-commands.md).
+- **CLI v2.1.243**: nuovi setting `modelPicker` (cura i modelli selezionabili) e `modelPricing` (tariffe custom a livello org). Fonte: [GitHub Releases v2.1.243](https://github.com/anthropics/claude-code/releases/tag/v2.1.243). Vedi [docs/18 § 18.2](./docs/18-settings-auth.md).
+- **CLI v2.1.243**: nuovi setting `promptCacheTtl`/`subagentPromptCacheTtl` per la durata della prompt cache. Fonte: [GitHub Releases v2.1.243](https://github.com/anthropics/claude-code/releases/tag/v2.1.243). Vedi [docs/18 § 18.2](./docs/18-settings-auth.md).
+- **CLI v2.1.243**: `/login` supporta ora il sign-in keyless. Fonte: [GitHub Releases v2.1.243](https://github.com/anthropics/claude-code/releases/tag/v2.1.243). Vedi [docs/18 § 18.5](./docs/18-settings-auth.md).
+- **CLI v2.1.245** (25 ago): fix crash all'avvio su distro Linux con glibc 2.44 (Arch Linux, CachyOS, Fedora Rawhide). Fonte: [GitHub Releases v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245). Vedi [docs/02 § 2.5](./docs/02-cli-installazione.md).
 
 ---
 

@@ -17,6 +17,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 > "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions." — [`/en/sub-agents`](https://code.claude.com/docs/en/sub-agents)
 
+> **2026-08-26 (auto-update)**: un subagent che si ferma al limite `maxTurns` ora segnala l'output come parziale, con un hint a continuarlo via `SendMessage`, invece di apparire concluso (v2.1.246). Fonte: [GitHub Releases v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.1 Dove vivono

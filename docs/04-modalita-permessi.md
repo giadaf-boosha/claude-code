@@ -15,6 +15,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per il framework completo.
 
+> **2026-08-26 (auto-update)**: nuovo tab **Auto mode** in `/permissions` per vedere/modificare le regole del classifier, con deadline dei controlli di sicurezza scalata sulla dimensione del prompt; warning all'avvio per regole Bash con wildcard prima del subcommand, es. `Bash(git * main)` (v2.1.246). Fonte: [GitHub Releases v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.1 Permission modes

@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-08-26 (auto-update)**: nuovi setting `modelPicker` (cura i modelli selezionabili in sessione) e `modelPricing` (tariffe custom a livello org), `promptCacheTtl`/`subagentPromptCacheTtl` (durata prompt cache), sign-in keyless sotto `/login` (v2.1.243). Fonte: [GitHub Releases v2.1.243](https://github.com/anthropics/claude-code/releases/tag/v2.1.243). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)
