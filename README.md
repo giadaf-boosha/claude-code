@@ -1,18 +1,24 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **26 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.246** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **27 agosto 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.247** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-26)
+## What's new today (2026-08-27)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Il digest ufficiale settimanale resta fermo alla Week 34 (17-21 ago, gia' coperta: `/design`, output style "Concise", device card Remote Control, `ANTHROPIC_DEFAULT_MODEL`). Le release piu' recenti (v2.1.243, v2.1.245, v2.1.246, 24-25 ago) restano sotto la soglia editoriale: settings minori (tab classificatore auto mode in `/permissions`, breakdown loop in `/usage`, `modelPicker`, TTL prompt cache configurabile) e fix (crash glibc 2.44 su Linux, rallentamenti transcript). Nessun annuncio Anthropic rilevante nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.247** (26 ago) rilascia il tool **`SendFeedback`**: quando qualcosa va storto in sessione, Claude redige da solo un feedback report da rivedere e inviare via `/feedback` (disattivabile col setting `feedbackDrafts`). Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi [docs/03 § 3.1 Tabella completa](./docs/03-slash-commands.md#31-tabella-completa) e [docs/19 § Tabella versione per versione](./docs/19-changelog.md).
+- **`/claude-api cost-optimize`**: nuova modalita' che profila la spesa API di un progetto esistente e propone leve di costo (caching, token hygiene, batch, effort, scelta modello) una alla volta. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi [docs/03 § 3.1](./docs/03-slash-commands.md#31-tabella-completa) e [docs/09 § Skill bundled](./docs/09-skills.md).
+- **Skill `/claude-api` estesa con Admin API**: copertura membri org, invite, workspace, API key, rate limit report, workload identity federation, CMEK. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi [docs/09-skills.md](./docs/09-skills.md).
+- **Sonnet 5 usa tutta la finestra 1M prima di comprimere**: soglia di auto-compact alzata da ~934K a ~967K token sulla context window nativa. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi [docs/05 § 5.2 1M context window](./docs/05-fast-mode-1m-context.md#52-1m-context-window-ga).
+- **Messaggi cross-session collassati di default**: la preview arriva come riga singola (`Message from @<sender>: <prima riga>`), `Ctrl+O` espande il corpo completo. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi [docs/17 § 17.6 Remote Control](./docs/17-ide-surface.md#remote-control).
+- **Tip sui prompt di permesso Bash**: appare ora una scorciatoia a un tasto ("Yes, and switch to auto mode") per passare direttamente ad auto mode dal prompt stesso. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md).
+- **Fix rilevanti v2.1.247**: sub-agent che ora ripartono sul fallback model chain dopo un 404 al primo tentativo invece di morire; hook/agent con output di errore molto grande non wedgiano piu' la sessione su "Prompt is too long". Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 

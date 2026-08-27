@@ -213,6 +213,7 @@ Da v2.1.232 (13 ago 2026) non serve piu' invocare `SendMessage` a parole: digita
 > Fonte: [`/en/cross-session-messaging`](https://code.claude.com/docs/en/cross-session-messaging).
 
 <sub>Aggiornato 2026-08-14 via daily what's new. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232).</sub>
+<sub>Aggiornato 2026-08-27 via daily what's new (v2.1.247): i messaggi cross-session in arrivo collassano ora di default a una preview di una riga (`Message from @<sender>: <prima riga>`), `Ctrl+O` espande il corpo completo. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi anche README "What's new today" del giorno.</sub>
 
 ---
 

@@ -33,6 +33,7 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 | `/verify` | Esercita end-to-end il flusso toccato da una modifica e osserva il comportamento reale, invece di fermarsi a test/typecheck |
 
 <sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
+<sub>Aggiornato 2026-08-27 via daily what's new (v2.1.247): skill `/claude-api` estesa con copertura Admin API (membri org, invite, workspace, API key, rate limit report, workload identity federation, CMEK) e nuova modalita' `cost-optimize` per profilare la spesa API. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi anche README "What's new today" del giorno.</sub>
 
 ### Invocazione manuale per `/verify` e `/code-review` (da v2.1.215)
 
