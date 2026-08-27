@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (25 agosto 2026, v2.1.246). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (26 agosto 2026, v2.1.247). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -576,6 +576,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 24 ago 2026 | v2.1.243 | Breakdown per loop in `/usage` (run count, token, ultima esecuzione). Setting `modelPicker` per curare la selezione modelli con etichette custom. TTL prompt cache configurabile per mantenere cache di 1 ora sulle conversazioni principali. Setting `modelPricing` per tariffe contrattuali org nei display costo. Sign-in keyless in `/login` per org senza supporto API key. Riga "Skipped sources" in `/status` per i managed settings non applicati. Fix: MCP server remoti in sessioni non interattive ora si riconnettono o segnalano fallimento esplicito, auto mode dopo compaction. |
 | 25 ago 2026 | v2.1.245 | Fix critico: crash all'avvio su distro Linux con glibc 2.44 (Arch, CachyOS, Fedora Rawhide). |
 | 25 ago 2026 | v2.1.246 | Tab dedicato al classificatore auto mode in `/permissions` (regole visibili e modificabili). Warning all'avvio per regole Bash wildcard che matchano opzioni prima del subcommand. Durata del turno mostrata accanto all'orario di completamento. Fix: rallentamento severo del transcript su righe singole molto lunghe (stringhe base64), scrolling erratico in fullscreen dopo resize del terminale, sessioni in background che non si aprivano dopo 45s con directory di partenza cancellata. |
+| 26 ago 2026 | v2.1.247 | Tool `SendFeedback` per bozze di segnalazione problemi (disattivabile via setting `feedbackDrafts`). Comando `/claude-api cost-optimize` per profilare la spesa API e lavorare sulle leve di costo (caching, batch, effort, scelta modello). Copertura Admin API nella skill `/claude-api` (membri org, inviti, workspace, API key, report rate limit). Personalizzazione spinner tip via `spinnerTipsOverride`. Finestra di auto-compact di Sonnet 5 estesa al contesto 1M completo. Fix: sequenze rapide freccia+Invio che agivano sulla riga sbagliata, sub-agent bloccati sul fallback model chain dopo 404 alla prima chiamata, sandbox Bash che cancellava symlink gestiti da dotfile. |
+
+<sub>Aggiornato 2026-08-27 via daily what's new. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247) · [CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) · [code.claude.com/docs/en/changelog](https://code.claude.com/docs/en/changelog). Nessuna voce editoriale: solo settings minori, un tool di supporto (feedback drafting) e fix, sotto soglia rispetto ai benchmark (routines, `/loop`, Monitor tool). Nessun annuncio Anthropic rilevante nelle ultime 24 ore.</sub>
 
 <sub>Aggiornato 2026-08-26 via daily what's new. Fonte: [GitHub Releases v2.1.243](https://github.com/anthropics/claude-code/releases/tag/v2.1.243) · [v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245) · [v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246) · [CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) · [whats-new Week 34](https://code.claude.com/docs/en/whats-new). Nessuna voce editoriale: solo settings minori e fix, sotto soglia. Digest ufficiale settimanale fermo alla Week 34 (17-21 ago), gia' coperta.</sub>
 
