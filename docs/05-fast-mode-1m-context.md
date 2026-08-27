@@ -104,6 +104,8 @@ Da v2.1.106: token counts ≥1M mostrati come "1.5m" invece che "1500000".
 
 > Fonte: [`/en/build-with-claude/context-windows`](https://platform.claude.com/docs/en/build-with-claude/context-windows).
 
+<sub>Aggiornato 2026-08-27 via daily what's new (v2.1.247): la soglia di auto-compact di Sonnet 5 sulla finestra 1M sale da ~934K a ~967K token, cosi' le sessioni usano tutta la context window nativa prima di comprimere. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi anche README "What's new today" del giorno.</sub>
+
 ---
 
 ## 5.3 Opus 4.7 + effort `xhigh`
