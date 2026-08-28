@@ -15,6 +15,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per il framework completo.
 
+> **2026-08-28 (auto-update)**: nuovo flag `--restricted` (o `CLAUDE_CODE_RESTRICTED=1`, v2.1.248): rimuove i tool che eseguono comandi/codice e `WebFetch` (a meno che non siano nominati in `--tools`), rifiuta `bypassPermissions` e ignora i settings utente/progetto/locali. Fonte: [GitHub Releases v2.1.248](https://github.com/anthropics/claude-code/releases/tag/v2.1.248). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.1 Permission modes

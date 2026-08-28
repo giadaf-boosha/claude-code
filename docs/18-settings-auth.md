@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-08-28 (auto-update)**: v2.1.248 aggiunge `/usage-credits` per organizzazioni Enterprise (AWS Marketplace, self-serve, trial) per richiedere piu' usage limit dall'admin, ed `experimental.cacheTtl` (`"5m"`/`"1h"`) nel frontmatter agent per un TTL di prompt cache per-agent. Fonte: [GitHub Releases v2.1.248](https://github.com/anthropics/claude-code/releases/tag/v2.1.248). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)

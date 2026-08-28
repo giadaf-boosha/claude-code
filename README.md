@@ -1,8 +1,8 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **26 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.246** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **28 agosto 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.250** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
@@ -12,7 +12,15 @@
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Le release piu' recenti (v2.1.247, v2.1.248, v2.1.250, 26-28 ago) restano sotto la soglia editoriale: tool `SendFeedback` per bozze di feedback da `/feedback`, `/claude-api cost-optimize` per profilare la spesa API, nuovo flag `--restricted` per sessioni lock-down (rimuove i tool che eseguono comandi/codice e `WebFetch`, rifiuta `bypassPermissions`, ignora i settings utente/progetto), cross-session messaging esteso a Bedrock/Vertex/Foundry, fix di sicurezza (`/ultrareview` non carica piu' file tipo `.env`/`.tfvars`/backup di credenziali). Nessun annuncio Anthropic rilevante su Claude Code nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+> Nessuna novita' editoriale sul CLI nelle ultime 24 ore. Le release piu' recenti (v2.1.247, v2.1.248, v2.1.250, 26-28 ago) restano sotto la soglia editoriale: tool `SendFeedback` per bozze di feedback da `/feedback`, `/claude-api cost-optimize` per profilare la spesa API, nuovo flag `--restricted` per sessioni lock-down (rimuove i tool che eseguono comandi/codice e `WebFetch`, rifiuta `bypassPermissions`, ignora i settings utente/progetto), cross-session messaging esteso a Bedrock/Vertex/Foundry, fix di sicurezza (`/ultrareview` non carica piu' file tipo `.env`/`.tfvars`/backup di credenziali). Dettagli in [docs/19-changelog.md](./docs/19-changelog.md).
+
+Trovati pero' 3 annunci ufficiali sul blog Anthropic non ancora coperti:
+
+- **Blog Anthropic**: "Claude's memory works everywhere, and you decide what's in it" (25 ago) — la memoria di Claude si sincronizza su tutte le superfici (app, Code, API) con controlli espliciti su cosa viene ricordato. Fonte: [claude.com/blog](https://claude.com/blog). Vedi [docs/06b-memory-architecture.md](./docs/06b-memory-architecture.md).
+- **Blog Anthropic**: "Claude in Chrome is generally available" (26 ago) — conferma ufficiale della GA gia' shippata in Claude Code con v2.1.198 (2 luglio), nessuna novita' tecnica aggiuntiva. Fonte: [claude.com/blog](https://claude.com/blog). Vedi [docs/17 § 17.11](./docs/17-ide-surface.md) (gia' documentato).
+- **Blog Anthropic**: "Claude gets its own browser in Cowork" (26 ago) — Cowork (prodotto separato da Claude Code) integra un browser nativo per i suoi agenti. Fonte: [claude.com/blog](https://claude.com/blog). Dove: n/a, fuori perimetro di questa guida.
+
+Prossimo aggiornamento domani 07:00.
 
 ---
 

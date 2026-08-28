@@ -17,6 +17,8 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
 
+> **2026-08-28 (auto-update)**: v2.1.247 aggiunge `/claude-api cost-optimize`, una modalita' della skill `/claude-api` che profila la spesa API di un progetto esistente e propone leve di costo (caching, token hygiene, batch, effort, scelta modello) una alla volta. Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 9.1 Bundled skills (sempre disponibili)
