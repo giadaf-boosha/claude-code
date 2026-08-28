@@ -5,6 +5,8 @@
 
 > **Tesi del capitolo**: l'LLM e' amnesico per default — ogni nuova sessione ricomincia da zero. Un harness completo deve **dare al modello una memoria stratificata**: cosa ricorda sempre (CLAUDE.md), cosa apprende (auto-memory), cosa snapshotta per ripristino (checkpoints), cosa condivide col team (`.claude/rules/`). Capire i layer e quando usarli e' la differenza tra agent che impara e agent che ripete gli stessi errori.
 
+> **2026-08-28 (auto-update)**: post ufficiale Anthropic "Claude's memory works everywhere, and you decide what's in it" (25 ago) — la memoria di Claude si sincronizza ora su tutte le superfici (app, Code, API) con controlli espliciti su cosa viene ricordato. Fonte: [claude.com/blog](https://claude.com/blog). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 06b.1 Perche' "Memory" e' un componente IMPACT

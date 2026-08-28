@@ -15,6 +15,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
+> **2026-08-28 (auto-update)**: v2.1.247 aggiunge il tool `SendFeedback` — quando qualcosa va storto in sessione, Claude prepara un report di feedback da rivedere e inviare con `/feedback` (disattivabile con il setting `feedbackDrafts`). Fonte: [GitHub Releases v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.1 Tabella completa
