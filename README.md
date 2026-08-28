@@ -8,11 +8,11 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-26)
+## What's new today (2026-08-28)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Il digest ufficiale settimanale resta fermo alla Week 34 (17-21 ago, gia' coperta: `/design`, output style "Concise", device card Remote Control, `ANTHROPIC_DEFAULT_MODEL`). Le release piu' recenti (v2.1.243, v2.1.245, v2.1.246, 24-25 ago) restano sotto la soglia editoriale: settings minori (tab classificatore auto mode in `/permissions`, breakdown loop in `/usage`, `modelPicker`, TTL prompt cache configurabile) e fix (crash glibc 2.44 su Linux, rallentamenti transcript). Nessun annuncio Anthropic rilevante nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+> Nessuna novita' significativa nelle ultime 24 ore. Le release piu' recenti (v2.1.247, v2.1.248, v2.1.250, 26-28 ago) restano sotto la soglia editoriale: tool `SendFeedback` per bozze di feedback da `/feedback`, `/claude-api cost-optimize` per profilare la spesa API, nuovo flag `--restricted` per sessioni lock-down (rimuove i tool che eseguono comandi/codice e `WebFetch`, rifiuta `bypassPermissions`, ignora i settings utente/progetto), cross-session messaging esteso a Bedrock/Vertex/Foundry, fix di sicurezza (`/ultrareview` non carica piu' file tipo `.env`/`.tfvars`/backup di credenziali). Nessun annuncio Anthropic rilevante su Claude Code nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 ---
 
