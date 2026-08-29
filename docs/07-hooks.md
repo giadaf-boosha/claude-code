@@ -17,6 +17,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 > Fonte: [`/en/hooks`](https://code.claude.com/docs/en/hooks).
 
+> **2026-08-29 (auto-update)**: v2.1.251 aggiunge gli eventi `PreModelSwitch`/`PostModelSwitch` (bloccano, confermano o annotano un cambio modello). I `SessionStart` hook di resume ricevono ora anche la staleness della sessione e il costo stimato di re-cache. Fonte: [CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 7.1 Eventi supportati (28+)

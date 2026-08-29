@@ -124,6 +124,8 @@ v2.1.111 (16 aprile 2026). `claude-opus-4-7` con effort `xhigh` (tra `high` e `m
 
 Su Opus 4.8 l'effort di **default e' `high`**; `xhigh` (tra `high` e `max`) e' pensato per i task piu' duri. Oltre a questi esiste **`ultracode`** = `xhigh` + orchestrazione workflow automatica (vedi [./24-workflows.md](./24-workflows.md)).
 
+> **2026-08-29 (auto-update)**: v2.1.251 fa si' che `/effort` salvi un default per-modello (cambiando modello resta la sua impostazione) e risolve il fallimento di Opus 5 con effort xhigh/max e thinking disattivato (ora scende automaticamente a `high` invece di errore). Fonte: [CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md). Vedi anche README "What's new today" del giorno.
+
 Default da v2.1.117: `high` per Pro/Max su Opus 4.6 + Sonnet 4.6.
 
 ### Pricing
