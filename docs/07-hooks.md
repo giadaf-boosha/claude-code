@@ -19,7 +19,7 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 ---
 
-## 7.1 Eventi supportati (28+)
+## 7.1 Eventi supportati (30+)
 
 | Evento | Quando fire | Bloccabile? |
 |---|---|---|
@@ -48,6 +48,7 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 | `PostCompact` | Dopo compaction | No |
 | `Elicitation` / `ElicitationResult` | MCP server input request | Si' |
 | `MessageDisplay` | Messaggio assistente prima della visualizzazione (da v2.1.152) | Si' |
+| `PreModelSwitch` / `PostModelSwitch` (da v2.1.251) | Prima/dopo un cambio di modello a runtime | Pre=Si' |
 
 ---
 
@@ -242,7 +243,27 @@ I `SessionStart` hook possono restituire due output aggiuntivi che agiscono sull
 - `reloadSkills: true`: riscansiona le directory skill nella sessione corrente — utile per SessionStart hook che installano plugin o copiano file SKILL.md prima dell'inizio della sessione (equivalente a invocare `/reload-skills`).
 - `sessionTitle`: imposta il titolo della sessione visibile in Agent View (`claude agents`) e nel tab del terminale.
 
+Da v2.1.251, i `SessionStart` hook di tipo resume ricevono in input anche la staleness della sessione (da quanto e' inattiva) e una stima del costo di re-cache (token di prompt cache da ricaricare) — utile per script che decidono se avvisare l'utente o proporre un `/compact` prima di riprendere una sessione molto vecchia.
+
 <sub>Aggiornato 2026-05-27 via daily what's new. Fonte: [GitHub Releases v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152).</sub>
+
+### PreModelSwitch / PostModelSwitch (da v2.1.251)
+
+Due nuovi hook event attorno ai cambi di modello a runtime: passaggio automatico dell'auto mode a un modello di fallback, uso di `/model`, o switch avviato da script/hook. `PreModelSwitch` puo' bloccare il cambio o chiederne conferma restituendo `decision: "block"`; `PostModelSwitch` riceve il cambio gia' avvenuto e serve a osservarlo (annotare la sessione, loggare il motivo su un canale esterno).
+
+```json
+{
+  "hookSpecificOutput": {
+    "hookEventName": "PreModelSwitch",
+    "decision": "block",
+    "reason": "Downgrade a Haiku non consentito su questo repo: usa /effort invece."
+  }
+}
+```
+
+Casi d'uso tipici: bloccare downgrade di modello non autorizzati su repo sensibili, notificare un canale Slack quando l'auto mode passa a un modello di fallback, tenere un audit trail dei cambi modello per motivi di costo o compliance.
+
+<sub>Aggiornato 2026-08-29 via daily what's new. Fonte: [GitHub Releases v2.1.251](https://github.com/anthropics/claude-code/releases/tag/v2.1.251).</sub>
 
 ---
 
