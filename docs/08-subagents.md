@@ -17,6 +17,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 > "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions." — [`/en/sub-agents`](https://code.claude.com/docs/en/sub-agents)
 
+> **2026-08-29 (auto-update)**: v2.1.251 cambia `CLAUDE_CODE_SUBAGENT_MODEL` da override assoluto a default: il `model:` di un agent definition o un modello passato esplicitamente allo spawn ora prevalgono sulla env var. Fonte: [CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.1 Dove vivono

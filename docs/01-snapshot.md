@@ -17,6 +17,8 @@
 
 **Per il deep-dive**: [00 — Harness overview](./00-harness-overview.md) per il framework concettuale.
 
+> **2026-08-29 (auto-update)**: v2.1.251 porta il modello default delle subscription Enterprise seat-based a Opus 5, allineandole agli altri piani premium (Max, Team Premium). Fonte: [CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 1.1 Versioni e modelli

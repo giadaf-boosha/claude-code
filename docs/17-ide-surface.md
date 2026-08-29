@@ -168,6 +168,8 @@ Lanciato **feb 2026** (research preview Max), GA mar 2026 ([@_catwu](https://x.c
 ### Cosa fa
 Collega la sessione locale a `claude.ai/code`, app iOS e Android. Conversazione sincronizzata cross-device.
 
+> **2026-08-29 (auto-update)**: v2.1.251 aggiunge il live streaming dei tool call e risultati di un subagent in foreground verso i client Remote Control (i subagent in background restano a solo stato). Fonte: [CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md). Vedi anche README "What's new today" del giorno.
+
 ### Trigger
 ```bash
 /remote-control                      # in sessione (CLI)

@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-08-29 (auto-update)**: v2.1.251 aggiunge una spend limit bar in `/usage` (campo status line `rate_limits.spend_limit`, per chi lavora dietro un Claude apps gateway) e metriche prompt-cache per sessione in `/cost` (hit ratio, miss, warm/cold). I settings gestiti che toccano TLS/proxy/credenziali della sandbox richiedono ora approvazione esplicita prima di applicarsi. Fonte: [CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)
