@@ -8,13 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-29)
+## What's new today (2026-08-31)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Hook `PreModelSwitch`/`PostModelSwitch`** (v2.1.251, 28 ago): due nuovi eventi hook bloccano, confermano o annotano un cambio di modello a runtime (fallback auto mode, `/model`, switch programmatico); i `SessionStart` di tipo resume ricevono ora anche staleness della sessione e stima del costo di re-cache. Fonte: [GitHub Releases v2.1.251](https://github.com/anthropics/claude-code/releases/tag/v2.1.251). Doc: [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **ClaudeDevs: limiti settimanali +25% permanente dal 14 settembre** (30 ago): dal 14 settembre i limiti settimanali standard salgono permanentemente del 25% (Pro/Max/Team/Enterprise a seat), sostituendo il boost temporaneo del 50% attivo dall'estate — di fatto -17% rispetto ai limiti gonfiati di oggi. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266). Vedi [docs/01 § 1.4 Pricing](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Il resto della release v2.1.251 (streaming live dei tool call subagent verso Remote Control, spend limit bar in `/usage`, metriche prompt-cache per-sessione in `/cost`, ampi fix di sicurezza sui tool file) resta sotto la soglia editoriale. Nessun annuncio Anthropic dedicato su Claude Code nelle ultime 24 ore.
+Nessuna nuova versione CLI dalle ultime 24 ore (ultima resta v2.1.251, 28 ago). Nessun altro annuncio Anthropic o post team dedicato su Claude Code nelle ultime 24 ore.
 
 ---
 
