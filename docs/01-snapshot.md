@@ -70,6 +70,8 @@ Annunci recenti rilevanti:
 
 ## 1.4 Pricing (semplificato)
 
+> **2026-08-31 (auto-update)**: dal 14 settembre i limiti settimanali standard salgono permanentemente del 25% per Pro/Max/Team/Enterprise a seat, sostituendo il boost temporaneo del 50% attivo dall'estate (di fatto -17% rispetto a oggi). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266). Vedi anche README "What's new today" del giorno.
+
 | Plan | Cosa offre |
 |---|---|
 | Pro | Sonnet 4.6 + Opus 4.6, plan/auto mode, `/loop`, 5 routine scheduled/giorno — **limiti 5-ore raddoppiati**, no peak-hour limits (da 6 mag 2026) |
