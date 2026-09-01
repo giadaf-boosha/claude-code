@@ -1,20 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **29 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.251** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **1 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.252** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-29)
+## What's new today (2026-09-01)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Hook `PreModelSwitch`/`PostModelSwitch`** (v2.1.251, 28 ago): due nuovi eventi hook bloccano, confermano o annotano un cambio di modello a runtime (fallback auto mode, `/model`, switch programmatico); i `SessionStart` di tipo resume ricevono ora anche staleness della sessione e stima del costo di re-cache. Fonte: [GitHub Releases v2.1.251](https://github.com/anthropics/claude-code/releases/tag/v2.1.251). Doc: [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
-Il resto della release v2.1.251 (streaming live dei tool call subagent verso Remote Control, spend limit bar in `/usage`, metriche prompt-cache per-sessione in `/cost`, ampi fix di sicurezza sui tool file) resta sotto la soglia editoriale. Nessun annuncio Anthropic dedicato su Claude Code nelle ultime 24 ore.
+> Nessuna novita' significativa nelle ultime 24 ore. L'unica release (v2.1.252, 31 ago) contiene solo fix (comandi Bash falliti su alcuni Mac, "always allow" non salvato senza `.claude/settings.local.json`, stalli di Remote Control su connessioni degradate, overflow del limite richieste API su output di errore molto voluminosi), sotto la soglia editoriale. Nessun annuncio Anthropic o post team dedicato su Claude Code nelle ultime 24 ore.
 
 ---
 
