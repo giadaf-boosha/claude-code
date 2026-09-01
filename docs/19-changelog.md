@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Riferimenti](../README.md#riferimenti) → **19 Changelog**
 > 📚 Riferimento · 🟢 Beginner-friendly
 
-Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (28 agosto 2026, v2.1.251). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
+Cronologia completa di Claude Code dalla research preview (24 febbraio 2025, v0.2.0) all'ultima versione (31 agosto 2026, v2.1.252). 7 fasi storiche + tabella versione per versione + post-mortem aprile 2026.
 
 ## Cosa e' concettualmente
 
@@ -580,6 +580,9 @@ Vedi anche [@bcherny](https://x.com/bcherny/status/2047375800945783056).
 | 27-28 ago 2026 | **v2.1.248** | **Flag `--restricted`** (o `CLAUDE_CODE_RESTRICTED=1`): nuova modalita' lock-down che rimuove i tool built-in di esecuzione comandi/codice e `WebFetch` (salvo elenco esplicito in `--tools`), confina i tool file alla working directory, rifiuta `bypassPermissions` e ignora i settings utente/progetto/locali — pensata per sessioni CI o contesti non fidati. `experimental.cacheTtl` nel frontmatter agent per il TTL della prompt cache per-agente. Cross-session messaging (`SendMessage`/`ListAgents`) esteso a sessioni sulla stessa macchina su Bedrock, Vertex e Foundry. Fix sicurezza: `/ultrareview` non carica piu' su cloud file tipo `.env`/`.tfvars` non committati o backup/copie temporanee di credenziali (`key.pem.tmp`, `id_rsa.swo`). Fix: cache miss orario nelle sessioni lunghe dopo refresh OAuth, sessioni Desktop/Cowork cancellate dopo 30 giorni (nuovo `desktopSessionCleanupPeriodDays`). |
 | 28 ago 2026 | v2.1.250 | Bug fix e miglioramenti di affidabilita'. |
 | 28 ago 2026 | **v2.1.251** | **Hook `PreModelSwitch`/`PostModelSwitch`**: bloccano, confermano o annotano un cambio di modello a runtime — vedi [7.6](./07-hooks.md#premodelswitch--postmodelswitch-da-v21251). `SessionStart` di tipo resume riceve ora anche staleness della sessione e stima del costo di re-cache. Streaming live dei tool call di un subagent in foreground verso Remote Control. Spend limit bar in `/usage` e riga prompt-cache per-sessione in `/cost`. Ampi fix di sicurezza sui tool file (symlink post-permesso), path dei comandi plugin, path del Workflow tool e regole `Read(...)` su Glob/Grep. |
+| 31 ago 2026 | v2.1.252 | Bug fix e miglioramenti di affidabilita' (Bash "task output swap refused" su alcuni Mac, "always allow" non salvato in progetti senza `.claude/settings.local.json`, sessioni Remote Control bloccate su connessioni degradate, notifiche task in background con output di errore troppo grande). |
+
+<sub>Aggiornato 2026-09-01 via daily what's new. Fonte: [GitHub Releases v2.1.252](https://github.com/anthropics/claude-code/releases/tag/v2.1.252) · [CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md). Nessuna voce editoriale: v2.1.252 e' solo bug fix, nessuna release, annuncio Anthropic o post team con sostanza tecnica nelle ultime 24-72 ore (incluso il gap 30-31 ago non coperto dalla routine precedente).</sub>
 
 <sub>Aggiornato 2026-08-29 via daily what's new. Fonte: [GitHub Releases v2.1.251](https://github.com/anthropics/claude-code/releases/tag/v2.1.251). Unica voce editoriale del giorno: i nuovi hook di model switch (feature di sistema, hook system). Il resto della release (streaming Remote Control, spend limit bar, metriche prompt-cache, fix di sicurezza) resta sotto soglia. Nessun annuncio Anthropic o post team dedicato nelle ultime 24 ore.</sub>
 
