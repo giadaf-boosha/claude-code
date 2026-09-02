@@ -212,6 +212,12 @@ Utile per diagnosticare perche' un comando specifico viene fermato e affinare le
 
 <sub>Aggiornato 2026-06-26 via daily what's new. Fonte: [GitHub Releases v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193).</sub>
 
+### Regola "Containment Escape" (v2.1.257)
+
+Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento: fetch di credenziali dal metadata endpoint del cloud provider, tentativi di egress evasion e reach cross-tenant non vengono piu' auto-approvati di default. Il classificatore li blocca a meno che l'ambiente non li dichiari esplicitamente attesi (per esempio un task che richiede legittimamente di leggere il metadata service). Si affianca al Blocco comandi distruttivi (v2.1.183) e a `autoMode.classifyAllShell` (v2.1.193) come ulteriore livello del sistema di contenimento di auto mode.
+
+<sub>Aggiornato 2026-09-02 via daily what's new. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257).</sub>
+
 ---
 
 ## 4.4 Sandbox mode {#sandbox}

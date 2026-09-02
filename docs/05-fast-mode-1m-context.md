@@ -201,6 +201,18 @@ Con `/model claude-fable-5` il reasoning e' sempre on — `MAX_THINKING_TOKENS=0
 
 <sub>Aggiornato 2026-06-10 via daily what's new. Fonte: [GitHub Releases v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170) · [Anthropic docs](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5).</sub>
 
+### Fable 5.1 — nuovo modello Fable di default (da v2.1.257)
+
+Dal 1 settembre 2026 (v2.1.257), `claude-fable-5-1` sostituisce Fable 5 come modello Fable di default in Claude Code e sulla Claude Platform. Stesso pricing di Fable 5 ($10/MTok input, $50/MTok output), ma cache read tagliate del 75% ($0.25/MTok contro $1/MTok). Rispetto al predecessore arriva piu' lontano in un task lungo prima di aver bisogno di input, segnala meglio quando e' bloccato, e ha uno stile di scrittura piu' naturale.
+
+```bash
+/model claude-fable-5-1
+```
+
+Nei gateway (Claude apps gateway, deployment di terze parti) non ancora aggiornati per Fable 5.1, gli alias `fable` e `best` continuano a risolvere su Fable 5 fino all'aggiornamento del gateway; selezionare `claude-fable-5-1` esplicitamente in `/model` per usare la nuova versione.
+
+<sub>Aggiornato 2026-09-02 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2094851229734277228) · [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257).</sub>
+
 ---
 
 ## 5.8 Claude Sonnet 5 — nuovo modello default (da v2.1.197)
