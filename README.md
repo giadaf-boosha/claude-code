@@ -1,20 +1,23 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **29 agosto 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.251** · Modello default **Sonnet 5** · Premium **Fable 5 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **2 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.258** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-08-29)
+## What's new today (2026-09-02)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Hook `PreModelSwitch`/`PostModelSwitch`** (v2.1.251, 28 ago): due nuovi eventi hook bloccano, confermano o annotano un cambio di modello a runtime (fallback auto mode, `/model`, switch programmatico); i `SessionStart` di tipo resume ricevono ora anche staleness della sessione e stima del costo di re-cache. Fonte: [GitHub Releases v2.1.251](https://github.com/anthropics/claude-code/releases/tag/v2.1.251). Doc: [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
-Il resto della release v2.1.251 (streaming live dei tool call subagent verso Remote Control, spend limit bar in `/usage`, metriche prompt-cache per-sessione in `/cost`, ampi fix di sicurezza sui tool file) resta sotto la soglia editoriale. Nessun annuncio Anthropic dedicato su Claude Code nelle ultime 24 ore.
+- **Claude Fable 5.1** (annuncio 1 set, CLI v2.1.257): nuovo modello Fable, sostituisce Fable 5 come default — stesso pricing $10/$50 per MTok, cache read -75% ($1 → $0.25/MTok), su Terminal-Bench 4.0 in Claude Code segna 55.8% (Fable 5: 42%, Opus 5: 52.3%). Fonte: [@claudeai](https://x.com/claudeai/status/2094848572143407483) · [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Vedi [docs/05 § 5.7](./docs/05-fast-mode-1m-context.md#57-claude-fable-5-da-v21170), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Auto mode: regola "Containment Escape"** (v2.1.257, 1 set): blocca in automatico i tentativi di fetch di credenziali da endpoint di cloud metadata e i tentativi di "cross-tenant reach" durante l'esecuzione autonoma. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Vedi [docs/04 § 4.3](./docs/04-modalita-permessi.md#43-auto-mode-da-v2183-default-promaxteam-da-14-ago-2026), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`CLAUDE_CODE_SUBAGENT_MODEL_FORCE`** (v2.1.257, 1 set): nuova env var per forzare un modello unico su tutti i subagent di una sessione, sovrascrivendo il campo `model` del frontmatter. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Vedi [docs/08 § 8.2](./docs/08-subagents.md#82-frontmatter-completo), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Fix v2.1.258** (1 set): risolta la regressione che impediva l'avvio di Claude Code su macOS 12 Monterey (introdotta in v2.1.255); risolto l'errore "user messages must have non-empty content" su sessioni remote/schedulate quando una permission re-approval ripetuta non veniva applicata. Fonte: [GitHub Releases v2.1.258](https://github.com/anthropics/claude-code/releases/tag/v2.1.258). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **Boris Cherny (@bcherny)**: definisce Fable 5.1 il miglior modello Anthropic per coding, data analysis, computer use, design, presentazioni e agentic work di lunga durata; segnala anche tono di scrittura piu' naturale e forte calo dei falsi positivi dei classifier di sicurezza. Fonte: [@bcherny](https://x.com/bcherny/status/2094864060609376748). n/a.
+- **@ClaudeDevs**: Fable 5.1 e' gia' disponibile ovunque in Claude Code e sulla piattaforma Claude, con lo stesso pricing di Fable 5; regge piu' a lungo un task complesso prima di chiedere input ed e' piu' esplicito quando si blocca. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2094851229734277228). n/a.
 
 ---
 

@@ -52,6 +52,8 @@ hooks:                         # hook scoped al subagent
 You are an expert code reviewer focusing on...
 ```
 
+> **2026-09-02 (auto-update)**: CLI v2.1.257 introduce la env var **`CLAUDE_CODE_SUBAGENT_MODEL_FORCE`** per applicare in modo consistente un modello a tutti i subagent di una sessione, sovrascrivendo il campo `model` del frontmatter. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.3 Subagents built-in
