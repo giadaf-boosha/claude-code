@@ -104,6 +104,8 @@ claude --permission-mode manual
 
 <sub>Aggiornato 2026-08-10 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2085794862608318627) · [code.claude.com/docs/en/auto-mode-config](https://code.claude.com/docs/en/auto-mode-config).</sub>
 
+> **2026-09-02 (auto-update)**: CLI v2.1.257 aggiunge la regola **Containment Escape** all'auto mode — blocca in automatico i tentativi di fetch di credenziali da endpoint di cloud metadata e i tentativi di "cross-tenant reach" durante l'esecuzione autonoma. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Vedi anche README "What's new today" del giorno.
+
 ### Caratteristiche
 - Classifier model review actions (separato dal main model)
 - Boundaries dichiarate in conversation rispettate (ma non rules permanenti)
