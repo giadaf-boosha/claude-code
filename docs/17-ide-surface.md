@@ -251,6 +251,8 @@ Vedi [10 MCP § 10.8 Channels](./10-mcp.md#10.8-channels-research-preview).
 
 ## 17.9 GitHub Actions / GitLab CI/CD
 
+> **2026-09-03 (auto-update)**: v2.1.259 riconosce i comandi `glab mr create/merge/close/reopen/note/update` — le merge request GitLab appaiono ora come badge `MR !N` nel riepilogo collassato del tool, alla pari delle PR GitHub. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259). Vedi anche README "What's new today" del giorno.
+
 `/install-github-app` per setup. Vedi anche [16 Headless](./16-headless-agent-sdk.md#16.3-github-actions-ci) per pipeline esempi.
 
 ---
