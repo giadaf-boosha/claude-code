@@ -96,6 +96,23 @@ claude mcp logout <name>         # rimuove credenziali salvate per il server
 
 <sub>Aggiornato 2026-06-30 via daily what's new. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196).</sub>
 
+### `managedMcpServers` — deploy via settings gestiti (da v2.1.259)
+
+Fino a v2.1.258 l'unico modo per imporre un set fisso di server MCP a tutta l'organizzazione era il file `managed-mcp.json`, distribuito via MDM/GPO su ogni macchina. Da v2.1.259 lo stesso risultato si ottiene con il setting `managedMcpServers`, consegnabile come qualsiasi altro [managed setting](./18-settings-auth.md) (server-managed settings, `managed-settings.json`, profilo MDM) — niente piu' deploy file per file:
+
+```json
+{
+  "managedMcpServers": {
+    "github": { "type": "http", "url": "https://api.githubcopilot.com/mcp/" },
+    "sentry": { "type": "http", "url": "https://mcp.sentry.dev/mcp" }
+  }
+}
+```
+
+Stessa forma delle entry di `.mcp.json`, ma solo transport remoti: le entry che specificano un `command` da eseguire (server stdio) vengono ignorate per non introdurre esecuzione di codice arbitrario da un canale di settings. Si combina con `allowedMcpServers`/`deniedMcpServers`/`allowManagedMcpServersOnly` (tabella sopra) per i pattern piu' granulari (catalogo approvato, denylist) quando il controllo esclusivo di `managed-mcp.json` e' eccessivo.
+
+<sub>Aggiornato 2026-09-03 via daily what's new. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259) · [docs managed-mcp](https://code.claude.com/docs/en/managed-mcp).</sub>
+
 ---
 
 ## 10.5 MCP Registry ufficiale
