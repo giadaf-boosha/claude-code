@@ -327,6 +327,8 @@ La scelta tra **subscription OAuth** (Claude Pro/Max/Team/Enterprise) e **API ke
 
 ## 18.6 Claude for Teams / Enterprise
 
+> **2026-09-03 (auto-update)**: Anthropic annuncia **Enterprise Frontier Safeguards (EFS)**, nuova offerta enterprise che combina zero data retention con rilevamento automatico di misuso — i dati restano nel cloud del cliente invece che di Anthropic; rollout a fasi da autunno 2026, nel frattempo zero data retention su Fable 5/5.1. Fonte: [Anthropic news](https://www.anthropic.com/news/enterprise-frontier-safeguards). Vedi anche README "What's new today" del giorno.
+
 | Feature | Teams | Enterprise |
 |---|---|---|
 | Self-service | ✓ | |

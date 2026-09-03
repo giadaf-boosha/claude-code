@@ -73,6 +73,8 @@ Demo plugin source: https://github.com/anthropics/claude-code/tree/main/plugins.
 
 ## 11.3 Comandi plugin
 
+> **2026-09-03 (auto-update)**: `claude plugin validate` supporta ora `--json` (v2.1.259) per report di validazione plugin in formato machine-readable, comodo da integrare nella CI di un marketplace plugin. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259). Vedi anche README "What's new today" del giorno.
+
 ```bash
 # Marketplace
 /plugin marketplace add anthropics/claude-code
@@ -276,6 +278,8 @@ LSP ufficiali: `typescript-lsp`, `pyright-lsp`, `rust-analyzer-lsp`, `gopls-lsp`
 ---
 
 ## 11.11 Annunci rilevanti
+
+> **2026-09-03 (auto-update)**: Anthropic apre come open source **Claude Commerce Agents**, un blueprint per agenti shopping/merchant con implementazioni di riferimento su retail, travel, telecom ed entertainment — include un plugin Claude Code dedicato che costruisce l'agente sul backend del team. Fonte: [Anthropic blog](https://claude.com/blog/claude-for-commerce-agents) · [GitHub anthropics/commerce-agents](https://github.com/anthropics/commerce-agents). Vedi anche README "What's new today" del giorno.
 
 - **Customizability** (feb 2026): "hooks, plugins, LSPs, MCPs, skills, effort, custom agents, status lines, output styles" — [@bcherny](https://x.com/bcherny/status/2021699851499798911)
 - Hidden features Boris (mar 2026) — [@bcherny](https://x.com/bcherny/status/2038454336355999749)
