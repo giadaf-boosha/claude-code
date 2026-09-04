@@ -15,6 +15,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
+> **2026-09-04 (auto-update)**: nuovo `/diff` (v2.1.260) apre un pannello diff affiancato in modalita' fullscreen con le modifiche non committate, aggiornato live mentre Claude edita. Fonte: [GitHub Releases v2.1.260](https://github.com/anthropics/claude-code/releases/tag/v2.1.260). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.1 Tabella completa
