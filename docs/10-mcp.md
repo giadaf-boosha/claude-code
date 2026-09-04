@@ -84,6 +84,8 @@ claude mcp logout <name>         # rimuove credenziali salvate per il server
 
 ## 10.4 Scope settings
 
+> **2026-09-04 (auto-update)**: nuovo setting `managedMcpServers` (v2.1.259) — le organizzazioni possono fornire server MCP HTTP/SSE a tutti gli utenti senza che ognuno li configuri localmente. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259). Vedi anche README "What's new today" del giorno.
+
 | Campo | Effetto |
 |---|---|
 | `enabledMcpjsonServers` | Whitelist server da `.mcp.json` |

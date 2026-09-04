@@ -17,6 +17,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 > Fonte: [`/en/hooks`](https://code.claude.com/docs/en/hooks).
 
+> **2026-09-04 (auto-update)**: Boris Cherny mostra un'anteprima pubblica di "Function Hooks", un nuovo meccanismo per rendere Claude Code "molto piu' estendibile" — non ancora shippato, richiesta esplicita di feedback community prima del rilascio. Fonte: [@bcherny](https://x.com/bcherny/status/2095590515765060076). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 7.1 Eventi supportati (30+)

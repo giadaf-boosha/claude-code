@@ -19,6 +19,8 @@ Per usare Claude Code in **CI/CD**, **batch**, o come **libreria** in app Python
 
 ## 16.1 CLI Headless (`-p`)
 
+> **2026-09-04 (auto-update)**: nuovo flag `--permission-prompts none` (v2.1.259) — nega automaticamente i permission prompt invece di bloccare la sessione su host headless unattended, dove non c'e' un umano a rispondere. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259). Vedi anche README "What's new today" del giorno.
+
 ```bash
 claude -p "Find and fix the bug in auth.ts" --allowedTools "Read,Edit,Bash"
 ```

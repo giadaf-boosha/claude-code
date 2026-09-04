@@ -1,21 +1,25 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **2 settembre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.258** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **4 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.260** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-02)
+## What's new today (2026-09-04)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude Fable 5.1 diventa il modello Fable di default** (v2.1.257, 1 set): stesso pricing di Fable 5 ($10/$50 per MTok) ma cache read tagliate del 75% ($0.25/MTok); arriva piu' lontano in task lunghi prima di richiedere input, segnala meglio quando e' bloccato, stile di scrittura piu' naturale. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2094851229734277228) · [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Regola "Containment Escape" in auto mode** (v2.1.257, 1 set): auto mode non auto-approva piu' fetch di credenziali da metadata cloud, tentativi di egress evasion o cross-tenant reach, a meno che l'ambiente non li dichiari espliciti come attesi. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/diff`: pannello diff affiancato in modalita' fullscreen** (v2.1.260, 3 set): mostra le modifiche non committate mentre Claude edita, aggiornato live. Fonte: [GitHub Releases v2.1.260](https://github.com/anthropics/claude-code/releases/tag/v2.1.260). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Diagnostica prompt cache in `/cost` e status line** (v2.1.260, 3 set): segnala le cause probabili di un cache miss direttamente nel comando `/cost` e nel campo `prompt_cache` della status line. Fonte: [GitHub Releases v2.1.260](https://github.com/anthropics/claude-code/releases/tag/v2.1.260). Doc: [docs/19-changelog.md](./docs/19-changelog.md).
+- **`managedMcpServers`: MCP server gestiti a livello organizzazione** (v2.1.259, 2 set): gli admin possono fornire server MCP HTTP/SSE a tutti gli utenti dell'org senza configurazione locale. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259). Doc: [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`--permission-prompts none` per host headless unattended** (v2.1.259, 2 set): nega automaticamente i permission prompt invece di bloccare la sessione quando non c'e' un umano a rispondere. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259). Doc: [docs/16-headless-agent-sdk.md](./docs/16-headless-agent-sdk.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Riconoscimento merge request GitLab (`glab mr`)** (v2.1.259, 2 set): i comandi `glab mr` sono riconosciuti nei tool summary e mostrano il badge `MR !N`, sullo stile del badge PR GitHub gia' esistente. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Boris Cherny: anteprima "Function Hooks"** (3 set): primo assaggio pubblico di un nuovo meccanismo per rendere Claude Code "molto piu' estendibile" via hook; richiesta esplicita di feedback alla community prima dello shipping. Fonte: [@bcherny](https://x.com/bcherny/status/2095590515765060076). Doc: [docs/07-hooks.md](./docs/07-hooks.md).
 
-Il resto delle release v2.1.252/257/258 (25-1 set: fix estesi su Remote Control, VS Code, sandbox e permessi, `CLAUDE_CODE_SUBAGENT_MODEL_FORCE`, settings `timeZone`/`timeFormat`) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore.
+Il resto della release v2.1.260 (fix estesi su regole permessi/sandbox con parentesi, auto-approvazione zsh in Bash, model discovery Bedrock dietro CA aziendali) e v2.1.259 (fix su sessioni concorrenti, cache invalidation su refresh OAuth, MCP in sessioni cloud) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore; digest ufficiale settimanale fermo alla Week 34 (17-21 ago), gia' coperta.
 
 ---
 
