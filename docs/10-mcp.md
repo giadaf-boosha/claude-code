@@ -91,10 +91,14 @@ claude mcp logout <name>         # rimuove credenziali salvate per il server
 | `enableAllProjectMcpServers` | Abilita tutti i server progetto |
 | `allowedMcpServers` / `deniedMcpServers` | Allow/deny rules |
 | `allowManagedMcpServersOnly` | Enterprise: solo server policy |
+| `managedMcpServers` (da v2.1.259) | Managed setting: elenco di server MCP HTTP/SSE forniti centralmente dall'organizzazione a tutti gli utenti |
 
 > **Sicurezza `.mcp.json` auto-approvati** (da v2.1.196): `claude mcp list`/`get` non avvia piu' server elencati in `.mcp.json` che un repository ha auto-approvato tramite un `.claude/settings.json` committato. I workspace non affidabili mostrano `⏠ Pending approval` invece di avviare i server direttamente. Per approvare esplicitamente un server da repo di terze parti, usare `enabledMcpjsonServers` in `.claude/settings.local.json` (gitignored) anziche' affidarsi all'auto-approvazione da settings committati.
 
+> **MCP server centralizzati via `managedMcpServers`** (da v2.1.259, 2 set 2026): a differenza di `allowManagedMcpServersOnly` (che *limita* gli utenti ai soli server da policy), `managedMcpServers` *fornisce* direttamente la configurazione HTTP/SSE dei server dell'organizzazione — gli utenti li ricevono gia' pronti all'uso, senza dover editare `.mcp.json` o scope settings locali. Pensato per rollout enterprise di server interni (data platform, ticketing, deploy) su tutta l'org.
+
 <sub>Aggiornato 2026-06-30 via daily what's new. Fonte: [GitHub Releases v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196).</sub>
+<sub>Aggiornato 2026-09-04 via daily what's new. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259).</sub>
 
 ---
 

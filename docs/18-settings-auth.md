@@ -131,6 +131,9 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 ### MCP
 - `allowedMcpServers`, `deniedMcpServers`, `allowManagedMcpServersOnly`
 - `enableAllProjectMcpServers`, `enabledMcpjsonServers`, `disabledMcpjsonServers`
+- **`managedMcpServers`** (da v2.1.259, managed settings): fornisce server MCP HTTP/SSE dell'organizzazione a tutti gli utenti senza configurazione locale — vedi [10.4](./10-mcp.md#104-scope-settings)
+
+<sub>Aggiornato 2026-09-04 via daily what's new. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259).</sub>
 
 ### Advanced
 - `alwaysThinkingEnabled`, `fastModePerSessionOptIn`
