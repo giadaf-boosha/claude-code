@@ -15,6 +15,8 @@ VS Code, JetBrains, Desktop, Web, Slack, Channels, Remote Control. Tutti i modi 
 
 **Per il deep-dive**: [01 — Snapshot § 1.2 Surface](./01-snapshot.md#12-surface---dove-si-usa-claude-code).
 
+> **2026-09-05 (auto-update)**: pannello diff `/diff` (v2.1.260) si apre accanto alla conversazione in fullscreen mode e mostra le modifiche non committate mentre Claude edita. Fonte: [GitHub Releases v2.1.260](https://github.com/anthropics/claude-code/releases/tag/v2.1.260). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 17.1 VS Code
