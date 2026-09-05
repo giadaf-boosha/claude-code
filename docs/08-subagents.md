@@ -17,6 +17,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 > "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions." — [`/en/sub-agents`](https://code.claude.com/docs/en/sub-agents)
 
+> **2026-09-05 (auto-update)**: `--append-subagent-system-prompt-file` (v2.1.261) legge il system prompt del subagent da file, per prompt troppo lunghi da passare da riga di comando. Fonte: [GitHub Releases v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 8.1 Dove vivono

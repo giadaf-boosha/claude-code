@@ -18,6 +18,8 @@ Lanciati il **28 maggio 2026** con Opus 4.8, in **research preview**. Richiedono
 
 > Fonti: [`/en/workflows`](https://code.claude.com/docs/en/workflows), [blog Anthropic — Introducing dynamic workflows](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code), [changelog v2.1.154](https://code.claude.com/docs/en/changelog).
 
+> **2026-09-05 (auto-update)**: overhead di context del Workflow tool ridotto da ~5.7k a ~1k token per run (v2.1.260). Fonte: [GitHub Releases v2.1.260](https://github.com/anthropics/claude-code/releases/tag/v2.1.260). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 24.1 Quando usare un workflow (vs subagent vs skill)

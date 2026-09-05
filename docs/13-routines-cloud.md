@@ -19,6 +19,8 @@ Lanciate **14 aprile 2026** in research preview. Eseguono su infrastruttura Anth
 
 > Fonti: [blog Anthropic](https://claude.com/blog/introducing-routines-in-claude-code), [`/en/routines`](https://code.claude.com/docs/en/routines), [`/en/web-scheduled-tasks`](https://code.claude.com/docs/en/web-scheduled-tasks). Annuncio: [@claudeai](https://x.com/claudeai/status/2044095086460309790).
 
+> **2026-09-05 (auto-update)**: le routine cloud riconoscono ora anche le merge request GitLab nel formato `MR !N` (v2.1.259), non solo le PR GitHub. Fonte: [GitHub Releases v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 13.1 Cosa cambia rispetto a `/loop` e Desktop scheduled
