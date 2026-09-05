@@ -42,6 +42,20 @@ Fino a v2.1.214, Claude poteva decidere da solo di lanciare `/verify` o `/code-r
 
 ---
 
+### `/skill-doctor`: individuare le skill inutilizzate (da v2.1.261)
+
+Accumulare skill custom e plugin ha un costo silenzioso: ogni `SKILL.md` caricato pesa sul context anche quando Claude non lo invoca mai durante la sessione. `/skill-doctor` fa un checkup delle skill effettivamente attive — bundled, custom e da plugin — e riporta quali risultano caricate ma mai usate, insieme al loro costo di context stimato in token. E' pensato come complemento di `/skills` (che elenca tutto cio' che e' disponibile, ordinabile per token con `t`): mentre `/skills` fotografa l'inventario, `/skill-doctor` fotografa l'utilizzo reale e suggerisce cosa rimuovere.
+
+```
+/skill-doctor
+```
+
+Utile prima di un cleanup del proprio `.claude/skills/` o quando una sessione sembra piu' lenta del solito ad avviarsi: spesso la causa e' un accumulo di skill mai invocate che restano comunque nel prompt iniziale.
+
+<sub>Aggiornato 2026-09-05 via daily what's new. Fonte: [GitHub Releases v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261).</sub>
+
+---
+
 ### Disabilita le bundled skills (v2.1.169)
 
 Il setting `disableBundledSkills: true` (o env var `CLAUDE_CODE_DISABLE_BUNDLED_SKILLS=1`) nasconde le skill bundled e i comandi slash built-in dalla visibilita' del modello. Le skill custom rimangono attive; solo quelle pre-installate vengono rimosse dal context.

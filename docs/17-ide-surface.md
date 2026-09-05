@@ -239,6 +239,20 @@ Server computer-use va abilitato. Al primo accesso a un'app, prompt nel terminal
 
 > Fonte: [`/en/whats-new/2026-w14`](https://code.claude.com/docs/en/whats-new/2026-w14).
 
+### Computer use in background (da 2 set 2026)
+
+> "Claude can now use your computer in the background in Claude Cowork and Claude Code. Give it something to do on your desktop and Claude clicks, types, and opens apps just like you would, while you work on something else." — [@claudeai](https://x.com/claudeai/status/2095226833293685100)
+
+Fino a questo aggiornamento, il computer use richiedeva lo schermo libero: Claude prendeva il controllo di mouse e tastiera e l'utente doveva aspettare. Da inizio settembre 2026 puo' girare **in background**, senza commandeering dello schermo attivo — utile per lanciare un task sul desktop e continuare a lavorare su un'altra finestra nel frattempo.
+
+- **Dentro Cowork**, l'ordine di priorita' resta: connector nativi (Gmail, Google Drive, Microsoft 365, Slack) → browser integrato o Chrome → controllo diretto dello schermo, usato solo quando non esiste un percorso via connector o browser.
+- **Disponibilita'**: solo macOS, solo piani Pro e Max.
+- **Attivazione**: toggle manuale in Settings → General → Desktop app, off di default.
+
+> Fonte: [Claude Help Center — Let Claude use your computer in Cowork](https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork).
+
+<sub>Aggiornato 2026-09-05 via daily what's new. Fonte: [@claudeai](https://x.com/claudeai/status/2095226833293685100).</sub>
+
 ---
 
 ## 17.8 Channels (research preview)

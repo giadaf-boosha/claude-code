@@ -88,6 +88,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/scroll-speed [speed]` | built-in | Regola velocita' scroll rotella mouse con anteprima live (da v2.1.139) |
 | `/security-review` | built-in | Analizza diff per security issues |
 | `/setup-bedrock` / `/setup-vertex` | built-in | Wizard provider |
+| `/skill-doctor` | built-in | Individua le skill caricate ma mai invocate nella sessione e il loro costo di context, per ripulire il setup (da v2.1.261) |
 | `/code-review [focus] [effort] [--comment\|--fix]` | **Skill** | 3 review agent paralleli; `effort` opzionale (es. `high`); `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente; `--fix` applica automaticamente i suggerimenti al working tree (alias: `/simplify`). (da v2.1.146; `--comment` v2.1.147; `--fix` e alias `/simplify` da v2.1.152). Da v2.1.215 non piu' auto-invocata a fine task: va lanciata esplicitamente (idem per la skill `/verify`, vedi [09 Skills](./09-skills.md#invocazione-manuale-per-verify-e-code-review-da-v2115)) |
 | `/skills` | built-in | Lista skills, `t` per sort by token |
 | `/status` | built-in | Settings → Status (version, model, account) |
