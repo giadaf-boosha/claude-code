@@ -108,6 +108,8 @@ Da v2.1.106: token counts ≥1M mostrati come "1.5m" invece che "1500000".
 
 ## 5.3 Opus 4.7 + effort `xhigh`
 
+> **2026-09-07 (auto-update)**: su Fable 5.1 e Opus 5, cambiare effort level a meta' conversazione non forza piu' il ricalcolo completo della prompt cache (3-4 set) — gia' live sull'API, arrivato su Claude Code entro un giorno dall'annuncio. Fonte: [@trq212](https://x.com/trq212/status/2095367584489038044). Vedi anche README "What's new today" del giorno.
+
 ### Annunciato
 v2.1.111 (16 aprile 2026). `claude-opus-4-7` con effort `xhigh` (tra `high` e `max`).
 

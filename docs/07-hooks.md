@@ -17,6 +17,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 > Fonte: [`/en/hooks`](https://code.claude.com/docs/en/hooks).
 
+> **2026-09-07 (auto-update)**: anteprima **Function Hooks** (3 set, non ancora rilasciata): plugin come funzioni TypeScript stile Express/Koa che intercettano e modificano in profondita' il comportamento di Claude Code, incluso il rendering dei componenti UI; runtime gia' presente dietro flag in v2.1.260. Fonte: [@bcherny](https://x.com/bcherny/status/2095590515765060076) · [GitHub Issue #91870](https://github.com/anthropics/claude-code/issues/91870). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 7.1 Eventi supportati (30+)
