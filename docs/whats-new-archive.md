@@ -9,6 +9,12 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-09-06
+
+> Nessuna novita' editorialmente significativa nelle ultime 24 ore. Unico rilascio: **v2.1.263** (6 set), solo bug fix e miglioramenti di affidabilita' senza dettagli pubblici aggiuntivi (vedi [docs/19-changelog.md](./19-changelog.md)). Nessun annuncio Anthropic blog e nessun post rilevante dai team Claude Code nella finestra delle 24 ore.
+
+---
+
 ## 2026-09-05
 
 - **Computer use in background** in Claude Cowork e Claude Code (2 set): Claude clicca, digita e apre app sul desktop senza prendere il controllo dello schermo, cosi' l'utente continua a lavorare su altro nel frattempo; dentro Cowork la priorita' resta ai connector nativi (Gmail, Drive, Microsoft 365, Slack) e al browser, il controllo diretto dello schermo interviene solo come ultima risorsa. Solo macOS, piani Pro e Max, toggle manuale in Settings → General → Desktop app (off di default). Fonte: [@claudeai](https://x.com/claudeai/status/2095226833293685100). Doc: [docs/17-ide-surface.md](./17-ide-surface.md), [docs/19-changelog.md](./19-changelog.md).

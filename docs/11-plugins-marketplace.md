@@ -277,6 +277,8 @@ LSP ufficiali: `typescript-lsp`, `pyright-lsp`, `rust-analyzer-lsp`, `gopls-lsp`
 
 ## 11.11 Annunci rilevanti
 
+> **2026-09-07 (auto-update)**: anteprima **Function Hooks** (3 set, non ancora rilasciata): nuovo formato di plugin — funzioni TypeScript stile Express/Koa che intercettano il comportamento di Claude Code, con controlli granulari lato admin. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2095572891941351550) · [GitHub Issue #91870](https://github.com/anthropics/claude-code/issues/91870). Vedi anche README "What's new today" del giorno.
+
 - **Customizability** (feb 2026): "hooks, plugins, LSPs, MCPs, skills, effort, custom agents, status lines, output styles" — [@bcherny](https://x.com/bcherny/status/2021699851499798911)
 - Hidden features Boris (mar 2026) — [@bcherny](https://x.com/bcherny/status/2038454336355999749)
 - Plugin executables sul `PATH` di Bash tool (Week 14, v2.1.94)
