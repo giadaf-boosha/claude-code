@@ -15,6 +15,8 @@ VS Code, JetBrains, Desktop, Web, Slack, Channels, Remote Control. Tutti i modi 
 
 **Per il deep-dive**: [01 — Snapshot § 1.2 Surface](./01-snapshot.md#12-surface---dove-si-usa-claude-code).
 
+> **2026-09-09 (auto-update)**: v2.1.265 aggiunge in VS Code l'archiviazione automatica delle sessioni inattive, con periodo configurabile (default 14 giorni). Fonte: [GitHub Releases v2.1.265](https://github.com/anthropics/claude-code/releases/tag/v2.1.265). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 17.1 VS Code
