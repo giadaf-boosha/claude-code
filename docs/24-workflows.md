@@ -18,6 +18,8 @@ Lanciati il **28 maggio 2026** con Opus 4.8, in **research preview**. Richiedono
 
 > Fonti: [`/en/workflows`](https://code.claude.com/docs/en/workflows), [blog Anthropic — Introducing dynamic workflows](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code), [changelog v2.1.154](https://code.claude.com/docs/en/changelog).
 
+> **2026-09-09 (auto-update)**: v2.1.265 migliora il dettaglio agent di `/workflows` — ogni tool call segna lo stato (in corso/fallita/completata), appare la task list del subagent, Invio espande input/output. Fonte: [GitHub Releases v2.1.265](https://github.com/anthropics/claude-code/releases/tag/v2.1.265). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 24.1 Quando usare un workflow (vs subagent vs skill)

@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-09-09 (auto-update)**: v2.1.266 risolve una regressione di v2.1.265 che rompeva le richieste nelle configurazioni LLM-gateway/proxy con `CLAUDE_CODE_USE_GATEWAY` impostata insieme a API key, `apiKeyHelper` o auth header custom. Fonte: [GitHub Releases v2.1.266](https://github.com/anthropics/claude-code/releases/tag/v2.1.266). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)

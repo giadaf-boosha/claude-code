@@ -9,6 +9,15 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-09-05
+
+- **Computer use in background** in Claude Cowork e Claude Code (2 set): Claude clicca, digita e apre app sul desktop senza prendere il controllo dello schermo, cosi' l'utente continua a lavorare su altro nel frattempo; dentro Cowork la priorita' resta ai connector nativi (Gmail, Drive, Microsoft 365, Slack) e al browser, il controllo diretto dello schermo interviene solo come ultima risorsa. Solo macOS, piani Pro e Max, toggle manuale in Settings → General → Desktop app (off di default). Fonte: [@claudeai](https://x.com/claudeai/status/2095226833293685100). Doc: [docs/17-ide-surface.md](./17-ide-surface.md), [docs/19-changelog.md](./19-changelog.md).
+- **`/skill-doctor`** (v2.1.261, 4 set): nuovo comando diagnostico che individua le skill caricate ma mai invocate e il loro costo di context, per ripulire il setup senza doverlo fare a occhio. Fonte: [GitHub Releases v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261). Doc: [docs/09-skills.md](./09-skills.md), [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
+
+Il resto delle release v2.1.259/260/261 (2-4 set: `managedMcpServers` per MCP gestiti da org, `--permission-prompts none` per host headless unattended, diff panel fullscreen via `/diff`, settings `bashOutputMaxChars`/`taskOutputMaxChars`, fix su prompt cache e Remote Control) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore.
+
+---
+
 ## 2026-09-02
 
 - **Claude Fable 5.1 diventa il modello Fable di default** (v2.1.257, 1 set): stesso pricing di Fable 5 ($10/$50 per MTok) ma cache read tagliate del 75% ($0.25/MTok); arriva piu' lontano in task lunghi prima di richiedere input, segnala meglio quando e' bloccato, stile di scrittura piu' naturale. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2094851229734277228) · [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Doc: [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/19-changelog.md](./19-changelog.md).
