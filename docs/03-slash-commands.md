@@ -29,7 +29,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/btw <question>` | built-in | Side question senza inquinare la conversation |
 | `/cd <path>` | built-in | Sposta la sessione in una nuova working directory senza rompere il prompt cache (da v2.1.169) |
 | `/chrome` | built-in | Configura Claude in Chrome |
-| `/claude-api [migrate\|managed-agents-onboard]` | **Skill** | Reference Claude API + tool migration |
+| `/claude-api [migrate\|managed-agents-onboard\|upgrade\|cost-optimize\|hillclimb\|prompt-audit]` | **Skill** | Reference Claude API + tool migration; `upgrade` migra da SDK `anthropic` 0.x a 1.x (da v2.1.239); `cost-optimize` profila la spesa e lavora su caching/batch/effort/modello (da v2.1.247); `hillclimb` ottimizza iterativamente modello, effort e prompt su train/test set; `prompt-audit` rimuove anti-pattern da prompt e tool description (entrambi da blog Anthropic, 8 set 2026) |
 | `/clear` (alias `/reset`, `/new`) | built-in | Nuova conversation, pregresso resta in `/resume` |
 | `/color [color\|default]` | built-in | Colore prompt bar (sync claude.ai con Remote Control) |
 | `/compact [instructions]` | built-in | Comprime context |
@@ -116,6 +116,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212).</sub>
 <sub>Aggiornato 2026-07-19 via daily what's new. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215).</sub>
 <sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222) · [v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223).</sub>
+<sub>Aggiornato 2026-09-09 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform).</sub>
 
 ---
 

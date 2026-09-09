@@ -8,14 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-05)
+## What's new today (2026-09-09)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Computer use in background** in Claude Cowork e Claude Code (2 set): Claude clicca, digita e apre app sul desktop senza prendere il controllo dello schermo, cosi' l'utente continua a lavorare su altro nel frattempo; dentro Cowork la priorita' resta ai connector nativi (Gmail, Drive, Microsoft 365, Slack) e al browser, il controllo diretto dello schermo interviene solo come ultima risorsa. Solo macOS, piani Pro e Max, toggle manuale in Settings → General → Desktop app (off di default). Fonte: [@claudeai](https://x.com/claudeai/status/2095226833293685100). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/skill-doctor`** (v2.1.261, 4 set): nuovo comando diagnostico che individua le skill caricate ma mai invocate e il loro costo di context, per ripulire il setup senza doverlo fare a occhio. Fonte: [GitHub Releases v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`/claude-api hillclimb` e `/claude-api prompt-audit`**: due nuovi sotto-comandi della skill `/claude-api` per ottimizzare costo e accuratezza — `hillclimb` itera su modello, effort e prompt confrontando train/test set, `prompt-audit` rimuove anti-pattern da prompt e tool description (+14,6% risparmio di costo, +5,3% accuratezza nei test citati). Fonte: [Anthropic blog](https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Il resto delle release v2.1.259/260/261 (2-4 set: `managedMcpServers` per MCP gestiti da org, `--permission-prompts none` per host headless unattended, diff panel fullscreen via `/diff`, settings `bashOutputMaxChars`/`taskOutputMaxChars`, fix su prompt cache e Remote Control) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore.
+Le release v2.1.263/265/266 (6-8 set: telemetria `user.email`/`user.groups`, `--plugin-dir` multi-plugin, cap 1 GB sui tool result su disco, archiviazione automatica sessioni VS Code, fix di una regressione su `CLAUDE_CODE_USE_GATEWAY`) restano sotto la soglia editoriale. Nessun post team dedicato su X nelle ultime 24 ore.
 
 ---
 
