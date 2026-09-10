@@ -145,6 +145,8 @@ claude --plugin-url https://example.com/my-plugin.zip  # scarica da URL (session
 
 <sub>Aggiornato 2026-05-09 via daily what's new. Fonte: [code.claude.com/docs/en/whats-new/2026-w19](https://code.claude.com/docs/en/whats-new/2026-w19).</sub>
 
+> **2026-09-10 (auto-update)**: `--plugin-dir` accetta ora anche una cartella con piu' plugin — ogni sottocartella con un manifest viene caricata, incluse quelle aggiunte o rimosse a runtime (v2.1.265). Fonte: [GitHub Releases v2.1.265](https://github.com/anthropics/claude-code/releases/tag/v2.1.265). Vedi anche README "What's new today" del giorno.
+
 ### Plugin locali: auto-loading e scaffolding (da v2.1.157)
 
 Da v2.1.157, qualsiasi directory plugin posizionata in `.claude/skills/<nome>/` viene caricata automaticamente all'avvio della sessione, senza richiedere registrazione nel marketplace o comando `/plugin install`. E' sufficiente creare la struttura con il manifest e il plugin diventa attivo.

@@ -1,21 +1,22 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **5 settembre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.261** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **10 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.267** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-05)
+## What's new today (2026-09-10)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Computer use in background** in Claude Cowork e Claude Code (2 set): Claude clicca, digita e apre app sul desktop senza prendere il controllo dello schermo, cosi' l'utente continua a lavorare su altro nel frattempo; dentro Cowork la priorita' resta ai connector nativi (Gmail, Drive, Microsoft 365, Slack) e al browser, il controllo diretto dello schermo interviene solo come ultima risorsa. Solo macOS, piani Pro e Max, toggle manuale in Settings → General → Desktop app (off di default). Fonte: [@claudeai](https://x.com/claudeai/status/2095226833293685100). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/skill-doctor`** (v2.1.261, 4 set): nuovo comando diagnostico che individua le skill caricate ma mai invocate e il loro costo di context, per ripulire il setup senza doverlo fare a occhio. Fonte: [GitHub Releases v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`v2.1.267`** (9 set): nuovo setting `maxEffortLevel` mette un tetto all'effort level su tutti i provider (incluso Bedrock, Vertex e Foundry) — l'utente puo' sempre scegliere un livello piu' basso, ma non puo' superare il tetto; arriva anche `--system-prompt-snapshot off` per rigenerare il system prompt ad ogni richiesta invece di riusare quello registrato in conversazione, utile mentre si itera sul testo del prompt. Fonte: [GitHub Releases v2.1.267](https://github.com/anthropics/claude-code/releases/tag/v2.1.267). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Avviso deprecazione config managed legacy** (10 set): Claude Code mostra da oggi un avviso in-app quando la configurazione dell'organizzazione usa spelling deprecati (es. `inferenceGatewayHeaders` → `inferenceCustomHeaders`), con un dialog di dettaglio per ciascun campo, il suo sostituto e la scadenza fissata al 7 ottobre 2026 ore 12:00 PT; nuovo flag `disableConfigDeprecationWarnings` per nascondere il primo avviso (l'ultimo promemoria a 24h dalla scadenza resta comunque visibile). Fonte: [code.claude.com/docs/en/changelog](https://code.claude.com/docs/en/changelog). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`v2.1.265`** (8 set): `--plugin-dir` accetta ora anche una cartella con piu' plugin (ogni sottocartella con un manifest viene caricata, incluse quelle aggiunte o rimosse a runtime); nuovo tetto di 1 GB sui tool results salvati su disco, con il troncamento segnalato nell'anteprima in conversazione. Fonte: [GitHub Releases v2.1.265](https://github.com/anthropics/claude-code/releases/tag/v2.1.265). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Il resto delle release v2.1.259/260/261 (2-4 set: `managedMcpServers` per MCP gestiti da org, `--permission-prompts none` per host headless unattended, diff panel fullscreen via `/diff`, settings `bashOutputMaxChars`/`taskOutputMaxChars`, fix su prompt cache e Remote Control) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore.
+Il resto delle release v2.1.263/265/266/267 (6-9 set: fix e miglioramenti di affidabilita', telemetria `user.email`/`user.groups` per Claude apps gateway, fix regressione gateway/proxy `CLAUDE_CODE_USE_GATEWAY`, ampi fix su prompt cache, VS Code e Remote Control) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore.
 
 ---
 
