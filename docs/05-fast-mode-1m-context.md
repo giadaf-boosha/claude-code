@@ -126,6 +126,8 @@ Su Opus 4.8 l'effort di **default e' `high`**; `xhigh` (tra `high` e `max`) e' p
 
 Default da v2.1.117: `high` per Pro/Max su Opus 4.6 + Sonnet 4.6.
 
+> **2026-09-10 (auto-update)**: nuovo setting `maxEffortLevel` (v2.1.267) mette un tetto configurabile all'effort level valido su tutti i provider, incluso Bedrock/Vertex/Foundry — l'utente sceglie sempre un livello piu' basso, ma non puo' superare il tetto. Vedi anche [18.2 § Model & effort](./18-settings-auth.md#model--effort). Fonte: [GitHub Releases v2.1.267](https://github.com/anthropics/claude-code/releases/tag/v2.1.267). Vedi anche README "What's new today" del giorno.
+
 ### Pricing
 Non documentato pubblicamente nel dettaglio (al 27 apr 2026).
 

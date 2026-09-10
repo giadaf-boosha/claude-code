@@ -53,6 +53,8 @@ La modifica e' persistente nella sessione (non viene scritta su disco a meno che
 ### Model & effort
 - `model`, `availableModels`, `modelOverrides`, `effortLevel`, `fallbackModel`, `enforceAvailableModels`
 
+> **2026-09-10 (auto-update)**: nuovo `maxEffortLevel` (top-level o per modello sotto `modelSettings`, da v2.1.267) mette un tetto all'effort level su tutti i provider incluso Bedrock/Vertex/Foundry — l'utente puo' scegliere un livello piu' basso ma non superare il tetto. Fonte: [GitHub Releases v2.1.267](https://github.com/anthropics/claude-code/releases/tag/v2.1.267). Vedi anche README "What's new today" del giorno.
+
 > **`enforceAvailableModels`** (da v2.1.175, solo managed settings): quando `true`, l'allowlist `availableModels` vincola anche il Default model — se il Default risolverebbe a un modello non nella lista, viene sostituito dal primo modello consentito. Inoltre, user settings e project settings non possono espandere la lista: qualsiasi modello aggiunto a livelli inferiori viene ignorato se non gia' presente in `availableModels` managed. Garantisce compliance enterprise anche in presenza di overrides locali.
 >
 > ```json
@@ -185,6 +187,9 @@ Claude Code mostra un messaggio esplicativo e rifiuta di avviarsi fino a che la 
 <sub>Aggiornato 2026-06-05 via daily what's new. Fonte: [GitHub Releases v2.1.163](https://github.com/anthropics/claude-code/releases/tag/v2.1.163).</sub>
 
 ### Other
+
+> **2026-09-10 (auto-update)**: da oggi un avviso in-app segnala quando la configurazione managed dell'organizzazione usa spelling deprecati (es. `inferenceGatewayHeaders` → `inferenceCustomHeaders`), con dialog di dettaglio per campo/sostituto/scadenza (7 ottobre 2026, ore 12:00 PT); nuovo `disableConfigDeprecationWarnings` nasconde il primo avviso (l'ultimo promemoria a 24h dalla scadenza resta visibile). Fonte: [code.claude.com/docs/en/changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 - **`agent`** (da v2.1.157 per dispatch): specifica l'agente di default per le sessioni dispatch; override per sessione con `--agent <name>`. Precedentemente usato solo per sessioni non-dispatch.
 - `autoUpdatesChannel`, `minimumVersion`, `companyAnnouncements`
 - `fileSuggestion`, `statusLine`, `prUrlTemplate` (v2.1.119)
