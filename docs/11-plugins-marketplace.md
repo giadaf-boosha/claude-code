@@ -136,6 +136,8 @@ Il campo "Last updated" e' ora visibile anche nelle tab Browse/Discover.
 
 ### Caricamento da archivio o URL (da v2.1.128–129)
 
+> **2026-09-11 (auto-update)**: v2.1.265 (8 set) estende `--plugin-dir` per accettare anche cartelle intere di plugin, non solo un singolo plugin o `.zip`; introdotto anche un tetto di 1 GB sui risultati dei tool salvati su disco. Fonte: [GitHub Releases v2.1.265](https://github.com/anthropics/claude-code/releases/tag/v2.1.265). Vedi anche README "What's new today" del giorno.
+
 Per testare un plugin senza aggiungerlo a un marketplace, o per distribuire plugin interni da un artifact store:
 
 ```bash
