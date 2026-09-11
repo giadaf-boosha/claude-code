@@ -108,6 +108,8 @@ Da v2.1.106: token counts ≥1M mostrati come "1.5m" invece che "1500000".
 
 ## 5.3 Opus 4.7 + effort `xhigh`
 
+> **2026-09-11 (auto-update)**: v2.1.267 (9 set) aggiunge il setting `maxEffortLevel` (globale o per modello): impone un tetto massimo di effort su tutti i provider inclusi Bedrock/Vertex/Foundry, restando comunque libero l'utente di scegliere un livello piu' basso. Fonte: [GitHub Releases v2.1.267](https://github.com/anthropics/claude-code/releases/tag/v2.1.267). Vedi anche README "What's new today" del giorno.
+
 ### Annunciato
 v2.1.111 (16 aprile 2026). `claude-opus-4-7` con effort `xhigh` (tra `high` e `max`).
 

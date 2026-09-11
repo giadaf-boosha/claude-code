@@ -137,6 +137,8 @@ Custom env via web before routine creation.
 
 ## 13.7b Self-hosted runner (beta, da v2.1.224, 7 ago 2026)
 
+> **2026-09-11 (auto-update)**: v2.1.268 (10 set) porta il pricing del Claude apps gateway ai client autenticati (stesse tariffe dell'API diretta via managed settings, `/cost` allineato). v2.1.266 (8 set) e' un fix critico: `CLAUDE_CODE_USE_GATEWAY` non forza piu' il sign-in al gateway se combinata con API key/header custom. Fonte: [v2.1.268](https://github.com/anthropics/claude-code/releases/tag/v2.1.268) · [v2.1.266](https://github.com/anthropics/claude-code/releases/tag/v2.1.266). Vedi anche README "What's new today" del giorno.
+
 Alternativa agli ambienti cloud gestiti da Anthropic: con `claude self-hosted-runner` le sessioni web, mobile e desktop girano su macchine o container controllati dal team (Team ed Enterprise, disattivato di default), con accesso alla rete interna, tooling custom e controlli di compliance che l'ambiente cloud non puo' offrire.
 
 ```bash
