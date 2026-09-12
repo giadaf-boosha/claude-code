@@ -17,6 +17,8 @@ I plugin sono pacchetti che bundlano Skills, Subagents, Hooks, MCP server, LSP s
 
 > Fonti: [`/en/plugins`](https://code.claude.com/docs/en/plugins), [`/en/discover-plugins`](https://code.claude.com/docs/en/discover-plugins), [`/en/plugin-marketplaces`](https://code.claude.com/docs/en/plugin-marketplaces).
 
+> **2026-09-12 (auto-update)**: nuovo comando `claude plugin eval` (v2.1.269) esegue la eval suite di un plugin contro una baseline "senza plugin" con 6 tipi di grader, con report JSON+HTML — un CI gate per verificare che le skill di un plugin si attivino ancora dopo un edit o un cambio modello. Fonte: [MarkTechPost](https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 11.1 Struttura di un plugin
