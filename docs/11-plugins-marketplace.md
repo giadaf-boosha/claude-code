@@ -165,6 +165,24 @@ Il plugin auto-loadato appare nella tab **Installed** di `/plugin` e rispetta tu
 
 <sub>Aggiornato 2026-05-30 via daily what's new. Fonte: [GitHub Releases v2.1.157](https://github.com/anthropics/claude-code/releases/tag/v2.1.157).</sub>
 
+### `claude plugin eval`: testare un plugin con risultati riproducibili (da v2.1.269)
+
+Da v2.1.269, gli autori di plugin non devono piu' verificare a mano se una skill o un agente si comporta come previsto: `claude plugin eval` esegue la eval suite del plugin contro Claude Code e restituisce un risultato con punteggio, riproducibile, in due formati.
+
+```bash
+claude plugin eval ./my-plugin              # esegue la suite, report leggibile a schermo
+claude plugin eval ./my-plugin --json        # output JSON (CI, script)
+claude plugin eval ./my-plugin --html report.html   # report HTML navigabile
+claude plugin eval --help                    # opzioni complete
+```
+
+Casi d'uso tipici:
+- Regressioni su skill/agent dopo una modifica al `SKILL.md` o al prompt
+- Confronto tra versioni di un plugin prima di pubblicare un aggiornamento sul marketplace
+- Gate di CI per plugin interni: eval come step prima del merge
+
+<sub>Aggiornato 2026-09-12 via daily what's new. Fonte: [GitHub Releases v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269).</sub>
+
 ---
 
 ## 11.4 Scope di installazione
@@ -282,6 +300,7 @@ LSP ufficiali: `typescript-lsp`, `pyright-lsp`, `rust-analyzer-lsp`, `gopls-lsp`
 - Plugin executables sul `PATH` di Bash tool (Week 14, v2.1.94)
 - Plugin auto-install deps (v2.1.117)
 - Plugin da `.zip` e URL (Week 19, v2.1.128–129): `--plugin-dir` accetta `.zip`, `--plugin-url` scarica da URL
+- `claude plugin eval` (v2.1.269, 11 set 2026): eval suite con report JSON/HTML — vedi [11.3](#113-comandi-plugin)
 
 ---
 

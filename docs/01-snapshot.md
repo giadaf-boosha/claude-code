@@ -81,6 +81,10 @@ Fast mode bills sempre come **extra usage** (anche con plan rimanente). 1M conte
 
 > **6 maggio 2026**: Anthropic raddoppia i limiti di utilizzo a 5 ore di Claude Code per tutti i piani a pagamento e rimuove i peak-hour limits per Pro e Max. La capacita' aggiuntiva proviene dall'accordo con SpaceX per il data center Colossus 1 (300 MW+, 220.000+ GPU NVIDIA). Fonte: [Anthropic blog](https://www.anthropic.com/news/higher-limits-spacex).
 
+> **14 settembre 2026**: i limiti *settimanali* (non quelli a 5 ore sopra) cambiano registro: il bonus temporaneo del +50% attivo da mesi su Pro, Max, Team ed Enterprise a seat viene sostituito da un aumento *permanente* del +25% sul limite standard. Chi sta usando il bonus del +50% oggi vede quindi la propria capacita' netta scendere del 17% dal 14 settembre, anche se la comunicazione la inquadra come un "aumento". Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266).
+
+<sub>Aggiornato 2026-09-12 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266).</sub>
+
 <sub>Aggiornato 2026-05-07 via daily what's new. Fonte: [Anthropic news](https://www.anthropic.com/news/higher-limits-spacex).</sub>
 
 ---
@@ -105,6 +109,10 @@ Cronologia compatta (per dettaglio vedi [19-changelog.md](./19-changelog.md)):
 | 28 mag 2026 | **Dynamic Workflows** (v2.1.154) — vedi [./24-workflows.md](./24-workflows.md) |
 | 31 mag 2026 | v2.1.159 — versione CLI corrente; modello premium Opus 4.8 |
 | 24 lug 2026 | v2.1.219 — **Claude Opus 5**, nuovo modello premium default su Max, effort toggle low/medium/high — vedi [./05-fast-mode-1m-context.md#59-claude-opus-5-da-v21219](./05-fast-mode-1m-context.md#59-claude-opus-5-da-v21219) |
+| 11 set 2026 | v2.1.269 — **`claude plugin eval`**, eval suite plugin con report JSON/HTML — vedi [11 — Plugins & Marketplace](./11-plugins-marketplace.md#claude-plugin-eval-testare-un-plugin-con-risultati-riproducibili-da-v21269) |
+| 14 set 2026 | **Limiti settimanali**: bonus temporaneo +50% sostituito da aumento permanente +25% — netto -17% per chi usa il bonus oggi (vedi [1.4](#14-pricing-semplificato)) |
+
+<sub>Aggiornato 2026-09-12 via daily what's new. Fonte: [GitHub Releases v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266).</sub>
 
 <sub>Aggiornato 2026-07-26 via daily what's new. Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5) · [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219).</sub>
 
