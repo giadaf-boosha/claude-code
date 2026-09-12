@@ -17,6 +17,8 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
 
+> **2026-09-12 (auto-update)**: `claude plugin eval` (v2.1.269) valuta una skill/plugin con report riproducibili JSON+HTML, confrontando l'output con una baseline "senza plugin" su 6 tipi di grader — pensato come CI gate per verificare che una skill continui ad attivarsi dopo un edit o un cambio modello. Fonte: [GitHub Releases v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 9.1 Bundled skills (sempre disponibili)

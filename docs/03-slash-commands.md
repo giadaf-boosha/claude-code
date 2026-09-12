@@ -15,6 +15,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
+> **2026-09-12 (auto-update)**: v2.1.269 introduce `/output-style [nome]` per elencare e cambiare output style, e il nuovo `/focus` per una vista essenziale del turno (solo prompt, riassunto one-line, risposta). Fonte: [GitHub Releases v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.1 Tabella completa
