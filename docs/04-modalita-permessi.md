@@ -15,6 +15,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per il framework completo.
 
+> **2026-09-13 (auto-update)**: fix di regressione in v2.1.270 — i comandi Bash git read-only (`git status`, `git log`, ecc.) avevano ripreso a chiedere permesso invece di auto-approvarsi dopo che una sessione girava da un po' (bug introdotto in v2.1.269). Fonte: [GitHub Releases v2.1.270](https://github.com/anthropics/claude-code/releases/tag/v2.1.270). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.1 Permission modes
