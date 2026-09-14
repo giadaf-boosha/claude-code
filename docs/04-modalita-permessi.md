@@ -32,6 +32,8 @@ Cycle: `Shift+Tab` → `manual` → `acceptEdits` → `plan`.
 | `dontAsk` | Solo pre-approved tools + read-only Bash | CI |
 | `bypassPermissions` | Tutto eccetto protected paths | Container/VM isolated |
 
+> **2026-09-14 (auto-update)**: v2.1.270 corregge una regressione di v2.1.269 che rifaceva chiedere permesso per i comandi Bash `git` di sola lettura durante sessioni lunghe — l'auto-approvazione attesa e' ripristinata. Fonte: [GitHub Releases v2.1.270](https://github.com/anthropics/claude-code/releases/tag/v2.1.270). Vedi anche README "What's new today" del giorno.
+
 CLI: `--permission-mode manual|acceptEdits|plan|auto|dontAsk|bypassPermissions`.
 
 > **`AskUserQuestion` (v2.1.200)**: i dialog non auto-continuano piu' dopo timeout idle — richiedono risposta esplicita. Per le sessioni background che si affidavano all'auto-continue: `/config` per riattivarla o strutturare il task per evitare pause.
