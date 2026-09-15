@@ -218,6 +218,14 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 
 <sub>Aggiornato 2026-09-02 via daily what's new. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257).</sub>
 
+### Sandbox: `allowed_domains` per-comando in auto mode (v2.1.271)
+
+Da v2.1.271 (14 set 2026), Bash, PowerShell e Monitor in auto mode passano al classificatore un `allowed_domains` calcolato per **il singolo comando**, non piu' un allowlist di rete valida per l'intera sessione. In pratica ogni invocazione viene rivista e l'host esterno che le serve viene aperto solo per quella chiamata — un comando successivo che tocca lo stesso dominio viene rivalutato da zero. Riduce la superficie di un host "sbloccato una volta, disponibile per sempre" nello stesso modo in cui la Containment Escape rule (v2.1.257) ha chiuso l'auto-approvazione del metadata endpoint cloud: entrambe restringono cosa il classifier considera "gia' approvato" col passare della sessione.
+
+Si affianca al Blocco comandi distruttivi (v2.1.183), a `autoMode.classifyAllShell` (v2.1.193) e alla Containment Escape rule (v2.1.257) come ulteriore livello del sistema di contenimento di auto mode.
+
+<sub>Aggiornato 2026-09-15 via daily what's new. Fonte: [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271).</sub>
+
 ---
 
 ## 4.4 Sandbox mode {#sandbox}

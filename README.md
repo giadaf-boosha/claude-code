@@ -1,21 +1,21 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 settembre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.269** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **15 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.272** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-12)
+## What's new today (2026-09-15)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`claude plugin eval`** (v2.1.269, 11 set): nuovo comando CLI che esegue la suite di eval di un plugin contro Claude Code e restituisce un risultato riproducibile con punteggio, in formato JSON e HTML — porta un framework di test formale agli autori di plugin/skill. Fonte: [GitHub Releases v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Limiti settimanali: +25% permanente dal 14 set, ma e' un calo del 17% rispetto al bonus attuale**: Anthropic sostituisce il bonus temporaneo del +50% (in vigore da mesi) con un aumento permanente del +25% sui limiti settimanali standard di Pro, Max, Team e Enterprise a seat — per chi sta usando il bonus oggi la capacita' netta scende del 17% dal 14 settembre. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Sandbox: `allowed_domains` per-comando in auto mode** (v2.1.271, 14 set): Bash, PowerShell e Monitor in auto mode ora dichiarano gli host consentiti comando per comando — invece di un allowlist di rete valida per l'intera sessione, il classifier rivede e apre l'host solo per quella singola invocazione. Fonte: [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Subagent hand-back review** (v2.1.271, 14 set): in auto mode i subagent non chiudono piu' il turno con una semplice review dell'ultimo messaggio — riportano il risultato al chiamante tramite una call dedicata di "hand-back", passata al safety classifier prima di essere accettata. Fonte: [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Il resto delle release v2.1.265-269 (8-11 set: gateway pricing/`gatewayInternalNetworks`, `maxEffortLevel`, `/output-style` cross-surface, agent map e dialog hook/permessi in VS Code, `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS`, fix su WebFetch timeout e sessioni cloud) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore; digest ufficiale settimanale ancora fermo alla Week 34 (17-21 ago).
+Il resto della release v2.1.271 (14 set: fast mode esteso alle sessioni Remote, mouse support in `/config`, `omitClaudeMd` per agenti, Markdown come artifact stilizzati, watch limit artifact a 10, decine di fix) e la v2.1.272 (15 set, solo bug fix) restano sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore; digest ufficiale settimanale ancora fermo alla Week 34 (17-21 ago).
 
 ---
 

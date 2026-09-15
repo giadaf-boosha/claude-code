@@ -187,6 +187,16 @@ Gli agenti background che lavorano in un git worktree possono ora chiudere il lo
 
 <sub>Aggiornato 2026-07-02 via daily what's new. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198).</sub>
 
+## 8.6d Subagent hand-back mechanism (da v2.1.271)
+
+Da v2.1.271 (14 set 2026), in [auto mode](./04-modalita-permessi.md#43-auto-mode-da-v2183-default-promaxteam-da-14-ago-2026) un subagent non chiude piu' il proprio turno lasciando che il chiamante rilegga l'ultimo messaggio per capire cosa e' successo. Riporta invece il risultato tramite una call dedicata di "hand-back", che passa dal [safety classifier di auto mode](./04b-authority-model.md#04b4-auto-mode-vs-authority) prima di essere accettata dal main agent.
+
+**Perche' conta**: la sola review dell'ultimo messaggio lasciava un varco — un subagent compromesso o mal istruito poteva far filtrare istruzioni o dati non graditi semplicemente scrivendoli nel messaggio finale, senza passare da alcun controllo. Con l'hand-back review, lo stesso classifier che sorveglia le azioni dentro la sessione del subagent sorveglia anche il confine di ritorno verso il chiamante.
+
+**Cosa cambia in pratica**: nessuna azione richiesta lato utente o config — il comportamento e' interno all'orchestrazione di auto mode e si applica a subagent custom, plugin e built-in indistintamente.
+
+<sub>Aggiornato 2026-09-15 via daily what's new. Fonte: [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271).</sub>
+
 ---
 
 ## 8.7 Subagent vs Agent Teams
