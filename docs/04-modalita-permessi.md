@@ -91,6 +91,8 @@ Da agosto 2025: Opus 4.x per plan + Sonnet per execution. [@_catwu](https://x.co
 
 Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permissions`: un classifier separato decide cosa Claude puo' fare senza chiedere.
 
+> **2026-09-15 (auto-update)**: nuovo `allowed_domains` per-comando su Bash, PowerShell e Monitor in auto mode, con sandboxing degli accessi di rete per singolo comando (v2.1.271, 14 set). Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ### Diventa il permission mode di default (da 14 ago 2026)
 
 Dal **14 agosto 2026**, `auto` sostituisce `manual` come permission mode di partenza per le nuove sessioni su Pro, Max e Team — non serve piu' attivarlo esplicitamente con `--permission-mode auto` o Shift+Tab. Un default impostato manualmente dall'utente resta valido finche' non si accetta il prompt di switch one-time mostrato una tantum; un default gestito a livello organizzativo non viene toccato. Enterprise, API diretta, Bedrock, Vertex AI, Foundry e le sessioni [Claude apps gateway](./17-ide-surface.md) restano opt-in per ora — Anthropic prevede di renderlo default anche li' nelle settimane successive, insieme alla rimozione del sovrapprezzo per l'overhead del classifier.

@@ -5,6 +5,8 @@
 
 Subagent = AI assistant specializzato con context window proprio, system prompt custom, tool e permessi indipendenti. Quando Claude trova task matchato dalla `description`, delega.
 
+> **2026-09-15 (auto-update)**: nuovo campo `omitClaudeMd` nel frontmatter agent e in `--agents` JSON per far girare un subagent senza ereditare il CLAUDE.md del progetto (v2.1.271, 14 set). Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > I subagent sono **agent figli** spawnati dall'agent principale. Ognuno ha context window indipendente, tool subset, ev. modello diverso (Haiku per Explore = cheap+fast). Il main agent delega un task, riceve summary, continua. Pattern di "cognitive offloading": il main thread non si sporca con dettagli operativi.

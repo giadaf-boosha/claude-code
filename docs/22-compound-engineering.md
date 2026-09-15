@@ -5,6 +5,8 @@
 
 > **Tesi del capitolo**: "compound engineering" e' il livello di pratica successivo a context engineering: comporre **pattern architetturali** sopra l'harness — caching + idempotenza + parallelizzazione + verification — per ottenere risultati che il singolo prompt o la singola feature non potrebbero. E' qui che la curva di apprendimento si appiattisce: non impari piu' "come si usa X", impari "come X si compone con Y per risolvere classe di problemi Z".
 
+> **2026-09-15 (auto-update)**: post Anthropic su come il coding agentico mette sotto stress la CI interna — 8x codice spedito a trimestre vs 2021-2025 (80% scritto da Claude), job CI cresciuti 25x in 6 mesi, riscalato il servizio di test impact analysis per non farlo diventare il collo di bottiglia. Fonte: [Anthropic blog](https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 22.1 Da prompt a compound
