@@ -8,14 +8,14 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-12)
+## What's new today (2026-09-15)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`claude plugin eval`** (v2.1.269, 11 set): nuovo comando CLI che esegue la suite di eval di un plugin contro Claude Code e restituisce un risultato riproducibile con punteggio, in formato JSON e HTML — porta un framework di test formale agli autori di plugin/skill. Fonte: [GitHub Releases v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Limiti settimanali: +25% permanente dal 14 set, ma e' un calo del 17% rispetto al bonus attuale**: Anthropic sostituisce il bonus temporaneo del +50% (in vigore da mesi) con un aumento permanente del +25% sui limiti settimanali standard di Pro, Max, Team e Enterprise a seat — per chi sta usando il bonus oggi la capacita' netta scende del 17% dal 14 settembre. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.271** (14 set): fast mode arriva nelle sessioni Claude Code Remote (cloud e self-hosted runner); nuovo `allowed_domains` per-comando su Bash, PowerShell e Monitor in auto mode con sandboxing; `omitClaudeMd` in agent frontmatter e `--agents` JSON per far girare subagent senza ereditare CLAUDE.md. Fonte: [changelog](https://code.claude.com/docs/en/changelog) · [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271). Vedi [docs/05 § Fast mode](./docs/05-fast-mode-1m-context.md), [docs/04 § 4.3 Auto mode](./docs/04-modalita-permessi.md), [docs/08 § Subagents](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Blog Anthropic — CI sotto stress dal coding agentico** (14 set): gli ingegneri Anthropic spediscono 8x il codice per trimestre rispetto al periodo 2021-2025 (l'80% scritto da Claude), i job CI sono cresciuti 25x in 6 mesi; il post descrive come hanno riscalato il servizio di test impact analysis per non farlo diventare il nuovo collo di bottiglia. Fonte: [Anthropic blog](https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic). Vedi [docs/22 § Compound engineering](./docs/22-compound-engineering.md).
 
-Il resto delle release v2.1.265-269 (8-11 set: gateway pricing/`gatewayInternalNetworks`, `maxEffortLevel`, `/output-style` cross-surface, agent map e dialog hook/permessi in VS Code, `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS`, fix su WebFetch timeout e sessioni cloud) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore; digest ufficiale settimanale ancora fermo alla Week 34 (17-21 ago).
+**CLI v2.1.270** (12 set) e **v2.1.272** (15 set) portano solo fix di affidabilita' (rispettivamente: regressione sui comandi git read-only che chiedevano permesso dopo sessioni lunghe; fix generici). Nessun altro annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore oltre a quello sopra.
 
 ---
 
