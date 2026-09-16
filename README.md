@@ -1,21 +1,22 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 settembre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.269** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **16 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.273** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-12)
+## What's new today (2026-09-16)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **`claude plugin eval`** (v2.1.269, 11 set): nuovo comando CLI che esegue la suite di eval di un plugin contro Claude Code e restituisce un risultato riproducibile con punteggio, in formato JSON e HTML — porta un framework di test formale agli autori di plugin/skill. Fonte: [GitHub Releases v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Limiti settimanali: +25% permanente dal 14 set, ma e' un calo del 17% rispetto al bonus attuale**: Anthropic sostituisce il bonus temporaneo del +50% (in vigore da mesi) con un aumento permanente del +25% sui limiti settimanali standard di Pro, Max, Team e Enterprise a seat — per chi sta usando il bonus oggi la capacita' netta scende del 17% dal 14 settembre. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **v2.1.271** (14 set): il **fast mode** arriva anche nelle sessioni **Claude Code Remote** (cloud e self-hosted runner); l'**auto mode** ottiene `allowed_domains` per-comando su Bash/PowerShell/Monitor, per aprire l'accesso di rete solo agli host che un comando dichiara di usare; nuovo `omitClaudeMd` per far girare i subagent senza CLAUDE.md ereditato. Fonte: [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **v2.1.273** (15 set): notifiche di **disconnessione MCP** con riconnessione automatica segnalata via `/mcp`; nuovi header opzionali per gateway LLM (`x-claude-code-request-class` e affini, opt-in con `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1`); le sessioni avviate con `--remote-control` possono ora fare **fork** per girare in background sul proprio computer. Fonte: [GitHub Releases v2.1.273](https://github.com/anthropics/claude-code/releases/tag/v2.1.273). Doc: [docs/10-mcp.md](./docs/10-mcp.md), [docs/13-routines-cloud.md](./docs/13-routines-cloud.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Blog Anthropic — "Agentic coding is straining CI"** (14 set): Anthropic racconta come i job CI interni sono cresciuti **25x in 6 mesi** (Claude scrive l'80% del codice del team), e come hanno dovuto riprogettare il servizio di test impact analysis dopo tre patch che reggevano sempre meno (70 giorni, poi 29, poi meno di uno). Fonte: [claude.com/blog](https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic). Dove in repo: n/a (racconto ingegneristico interno, nessun capitolo diretto).
 
-Il resto delle release v2.1.265-269 (8-11 set: gateway pricing/`gatewayInternalNetworks`, `maxEffortLevel`, `/output-style` cross-surface, agent map e dialog hook/permessi in VS Code, `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS`, fix su WebFetch timeout e sessioni cloud) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore; digest ufficiale settimanale ancora fermo alla Week 34 (17-21 ago).
+Il resto delle release v2.1.270/272 (12 e 15 set: fix di una regressione sui permessi Bash per comandi git read-only, e un giro di bug fix/affidabilita' senza feature nuove) resta sotto la soglia editoriale. Nessun post X nuovo e rilevante nelle ultime 24 ore dai team account monitorati (@bcherny, @_catwu, @noahzweben, @trq212, @claudeai, @ClaudeDevs, @alistaiir, @ClaudeCodeLog — verificato via ricerca mirata); digest ufficiale settimanale fermo alla Week 37 (7-11 set, gia' coperta il 12 set).
 
 ---
 
