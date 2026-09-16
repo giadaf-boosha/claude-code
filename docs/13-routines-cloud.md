@@ -5,6 +5,8 @@
 
 > "Put Claude Code on autopilot. Define routines that run on a schedule, trigger on API calls, or react to GitHub events."
 
+> **2026-09-16 (auto-update)**: da v2.1.273 (15 set) le sessioni avviate con `--remote-control`/`/remote-control` possono fare fork per girare in background sul proprio computer, invece che restare legate al dispositivo che le ha aperte. Fonte: [GitHub Releases v2.1.273](https://github.com/anthropics/claude-code/releases/tag/v2.1.273). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Le routines sono l'**agent loop in cloud**: stesso pattern di `/loop` ma eseguito su infra Anthropic, senza laptop acceso. Tre trigger principali (schedule, API, GitHub event) coprono ogni caso di automazione 24/7. Sono il salto da "agent locale che gira finche' tieni aperta la sessione" a "agent cloud che lavora per te in autonomia".

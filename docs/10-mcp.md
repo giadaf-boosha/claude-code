@@ -5,6 +5,8 @@
 
 MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app). Donato a Linux Foundation a dicembre 2025.
 
+> **2026-09-16 (auto-update)**: da v2.1.273 (15 set) Claude Code segnala le disconnessioni di un server MCP e gestisce la riconnessione automatica, con lo stato visibile da `/mcp`. Fonte: [GitHub Releases v2.1.273](https://github.com/anthropics/claude-code/releases/tag/v2.1.273). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > MCP e' il **protocollo standard per il Tool layer**. Trasforma "ogni LLM ha la sua syntax di tool calling" in "tutti gli LLM compatibili con MCP usano server scritti una sola volta". E' lo stesso paradigma di USB: un protocollo, infinite peripheriche.

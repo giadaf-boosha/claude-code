@@ -5,6 +5,8 @@
 
 Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoint per il rollback. Questo documento li copre tutti.
 
+> **2026-09-16 (auto-update)**: da v2.1.271 (14 set) l'auto mode supporta `allowed_domains` per-comando su Bash, PowerShell e Monitor — gli host che un comando dichiara di usare vengono aperti solo per quel comando, tutti gli altri restano negati. Fonte: [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271). Vedi anche README "What's new today" del giorno.
+
 ## Cosa e' concettualmente
 
 > Le modalita' permessi sono il **Layer 1** dell'Authority dell'harness: dichiari cosa l'agent puo' fare a runtime. La sandbox e' il **Layer 2** (OS-level). I checkpoint sono il **layer State**: snapshot per recovery deterministico.
