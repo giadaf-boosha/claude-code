@@ -224,6 +224,8 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 
 OS-level enforcement su Bash e child processes. Filesystem isolation + network isolation. Riduce permission prompt dell'~84% in uso interno Anthropic.
 
+> **2026-09-17 (auto-update)**: da v2.1.271, `allowed_domains` per-comando su Bash, PowerShell e Monitor in auto mode con sandboxing rivede gli host necessari a un comando insieme al comando stesso e li apre solo per quella invocazione — gli altri host restano bloccati. Fonte: [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271). Vedi anche README "What's new today" del giorno.
+
 ### Piattaforme
 - **macOS**: Seatbelt (out of the box)
 - **Linux/WSL2**: bubblewrap + socat (`apt-get install bubblewrap socat`). WSL1 NON supportato.

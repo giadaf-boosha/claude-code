@@ -15,6 +15,8 @@ Feature legate ai modelli: il **fast mode** (Opus 5 e Opus 4.8 di default, da v2
 
 **Per il deep-dive**: [00b — Context engineering](./00b-context-engineering.md) per come 1M context si combina con tecniche context.
 
+> **2026-09-17 (auto-update)**: da v2.1.271, fast mode e' disponibile anche nelle sessioni **Remote** (cloud e self-hosted runner) — si applica il setting fast mode dell'host o `/fast` digitato in sessione, dove l'organizzazione lo consente. Fonte: [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 5.1 Fast mode (Opus 4.8 di default, da v2.1.154)

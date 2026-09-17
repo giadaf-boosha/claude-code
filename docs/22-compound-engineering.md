@@ -18,6 +18,8 @@
 
 > Termine attribuito a Dan Shipper (Every) e adottato dal team Claude Code (Boris cita "Compounding Engineering" — vedi [@bcherny](https://x.com/bcherny/status/2007179842928947333)).
 
+> **2026-09-17 (auto-update)**: case study interno Anthropic — la crescita 25x dei job CI (80% del codice scritto da Claude, suite test 10x piu' grande) ha reso il servizio di test impact analysis un collo di bottiglia; dopo tre patch temporanee (macchina piu' grande, sharding, restart giornalieri), il team lo ha riscritto da singleton a sistema distribuito con journal e consumer separati in 3 settimane-persona. Claude Code ha generato lo sharding iniziale e poi eseguito da solo il tuning finale. Fonte: [Anthropic blog](https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 22.2 Le 3 categorie di compound pattern

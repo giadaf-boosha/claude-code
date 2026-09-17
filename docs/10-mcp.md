@@ -59,6 +59,8 @@ Il 28 luglio 2026 e' uscita la spec **MCP 2026-07-28**, il maggior aggiornamento
 
 Il supporto e' in rollout sui prodotti Claude, incluso Claude Code — i server `http`/`sse` esistenti restano compatibili, la migrazione riguarda soprattutto chi implementa server MCP. Da tenere distinto dagli **MCP tunnels** (research preview da maggio 2026): quelli risolvono l'accesso a server dentro reti private via connessione outbound-only, non riguardano lo stato del protocollo.
 
+> **2026-09-17 (auto-update)**: da v2.1.274 la negoziazione MCP 2026-07-28 con server diretti diventa il default anche su Bedrock, Vertex, Foundry e installazioni con telemetria disattivata (era gia' cosi' sulle altre). Opt-out: `MCP_SDK_GENERATION=v1` o `MCP_PROTOCOL_NEGOTIATION=legacy`. Fonte: [GitHub Releases v2.1.274](https://github.com/anthropics/claude-code/releases/tag/v2.1.274). Vedi anche README "What's new today" del giorno.
+
 <sub>Aggiornato 2026-07-29 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude).</sub>
 
 ---

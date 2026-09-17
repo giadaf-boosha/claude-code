@@ -194,6 +194,8 @@ claude --rc [name]                   # alias
 
 > Fonte: [`/en/remote-control`](https://code.claude.com/docs/en/remote-control).
 
+> **2026-09-17 (auto-update)**: da v2.1.273 una sessione avviata con `claude --remote-control`/`/remote-control` puo' biforcarsi in una sessione locale in background, cosi' la UI resta libera mentre il lavoro continua; arriva anche una notifica quando un server MCP si disconnette a meta' sessione e la riconnessione automatica fallisce. Da v2.1.271 le sessioni Remote (cloud e self-hosted runner) supportano anche **fast mode**. Fonte: [GitHub Releases v2.1.273](https://github.com/anthropics/claude-code/releases/tag/v2.1.273) · [v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271). Vedi anche README "What's new today" del giorno.
+
 ### Cross-session messaging (`SendMessage` + `ListAgents`, da v2.1.224, 7 ago 2026)
 
 Le sessioni Claude Code indipendenti — non subagent, non teammate di un [agent team](./12-agent-teams.md) — possono ora scambiarsi messaggi tra loro senza che tu debba copincollare tra terminali. Claude usa due tool: `ListAgents` per scoprire quali sessioni puo' raggiungere (anche via `/list-agents` o `/peers`), `SendMessage` per consegnare un messaggio a una di loro per nome. Un messaggio e' solo testo scritto da un Claude per l'altro — mai cronologia o file; per portare l'intero contesto serve invece il [resume/fork di sessione](./08-subagents.md#85-forking-di-sessione).
