@@ -32,6 +32,8 @@ Subagent = AI assistant specializzato con context window proprio, system prompt 
 
 ## 8.2 Frontmatter completo
 
+> **2026-09-17 (auto-update)**: da v2.1.271, `omitClaudeMd: true` nel frontmatter dell'agent fa girare subagent custom/plugin senza caricare CLAUDE.md utente/progetto/locale (i file di policy gestita continuano a caricare). Fonte: [GitHub Releases v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271). Vedi anche README "What's new today" del giorno.
+
 ```yaml
 ---
 name: code-reviewer            # opzionale, default = filename
