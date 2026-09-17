@@ -183,6 +183,35 @@ Casi d'uso tipici:
 
 <sub>Aggiornato 2026-09-12 via daily what's new. Fonte: [GitHub Releases v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269).</sub>
 
+### Claude Mods: Function Hooks per estendere l'engine (Early Access, da v2.1.270+)
+
+Un **mod** e' un plugin Claude Code il cui comportamento vive interamente in un modulo hooks: un solo entry point `register(on, options)` si aggancia agli eventi del motore agentico con funzioni `(on, e, next)` — rispettivamente interfaccia dell'engine, evento, callback per passare al hook successivo. A differenza degli hook `command` del [cap. 07](./07-hooks.md#79-disabilitazione-e-safety), che restano processi esterni, i mod girano come codice TypeScript tipizzato dentro il processo di Claude Code: possono intercettare e modificare una tool call prima che parta, aggiungere componenti interattivi all'interfaccia (pannelli, overlay) o esporre nuovi "nomi" sull'oggetto `$` (es. `$.telemetry.log()`, `$.diff`), con i contratti dichiarati in `types/index.d.ts`.
+
+Struttura di un mod:
+
+```
+mio-mod/
+├── .claude-plugin/plugin.json   # metadata plugin
+├── hooks/hooks.json             # nome del modulo hooks
+├── hooks/                       # implementazione TypeScript (tipizzata su /plugin-types)
+├── types/index.d.ts             # contratti dei "nomi" che il mod aggiunge a $
+└── tests/                       # test (opzionali)
+```
+
+Mod di riferimento nel repository ufficiale:
+- **`sec-default`**: isola le policy e i tool consentiti dall'organizzazione dai plugin installati dall'utente (strato piu' esterno)
+- **`diff`**: pannello con le modifiche non committate, aggiornato in tempo reale mentre Claude edita
+- **`telemetry`**: aggiunge `$.telemetry` (`log`, `mark`) per analytics first-party
+
+```bash
+claude --plugin-dir mods/diff      # avvia Claude Code caricando un mod dal sorgente
+claude plugin test mods/diff       # esegue i test del mod
+```
+
+I primi mod della community, comparsi entro ore dal lancio, spaziano da overlay che nascondono dati sensibili al passaggio del mouse a un rendering inline dei diagrammi Mermaid, fino a un arcade con Tetris che gira mentre Claude lavora (senza consumare token). **API in Early Access**: le interfacce esposte possono cambiare in modo incompatibile prima della disponibilita' generale.
+
+<sub>Aggiornato 2026-09-17 via daily what's new. Fonte: [@bcherny](https://x.com/bcherny/status/2099551291601248485) · [repo `mods/`](https://github.com/anthropics/claude-code/tree/main/mods).</sub>
+
 ---
 
 ## 11.4 Scope di installazione

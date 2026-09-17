@@ -389,6 +389,8 @@ Exit 2 / `decision: block` → blocca compaction.
 
 Slow helper warning se hook >10s. PostToolUse hooks da v2.1.119 includono `duration_ms`.
 
+**Hook `command` vs Claude Mods**: i tipi di handler di questo capitolo restano processi esterni (script, HTTP) invocati dall'engine su un evento. Da v2.1.270+, i **Claude Mods** (Early Access) offrono un meccanismo piu' profondo — "Function Hooks" TypeScript che girano dentro il processo di Claude Code e possono intercettare/modificare la tool call stessa o aggiungere componenti all'interfaccia, non solo osservare/bloccare — vedi [11.3b](./11-plugins-marketplace.md#claude-mods-function-hooks-per-estendere-lengine-early-access-da-v21270).
+
 ---
 
 ## 7.10 Fonti / annunci
@@ -400,6 +402,9 @@ Slow helper warning se hook >10s. PostToolUse hooks da v2.1.119 includono `durat
 - `mcp_tool` hook type: v2.1.118 (23 apr 2026)
 - `PreCompact`: v2.1.106 (13 apr 2026)
 - Conditional `if:`: v2.1.83 (24 mar 2026)
+- Claude Mods (Function Hooks in-process): v2.1.270+ (15 set 2026) — vedi [11.3b](./11-plugins-marketplace.md#claude-mods-function-hooks-per-estendere-lengine-early-access-da-v21270)
+
+<sub>Aggiornato 2026-09-17 via daily what's new. Fonte: [@bcherny](https://x.com/bcherny/status/2099551291601248485).</sub>
 
 ---
 
