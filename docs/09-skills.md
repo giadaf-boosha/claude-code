@@ -17,6 +17,8 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
 
+> **2026-09-18 (auto-update)**: v2.1.275 sincronizza automaticamente le skill (e i plugin) abilitati sull'account claude.ai verso le sessioni terminal collegate allo stesso account — opt-out con `syncClaudeAiSkills: false` / `syncClaudeAiPlugins: false`. Fonte: [GitHub Releases v2.1.275](https://github.com/anthropics/claude-code/releases/tag/v2.1.275). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 9.1 Bundled skills (sempre disponibili)

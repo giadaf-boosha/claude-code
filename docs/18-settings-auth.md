@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-09-18 (auto-update)**: v2.1.276 corregge un fix critico — v2.1.275 aveva introdotto un errore `400 ... Input tag 'advisor_20260301'` che bloccava ogni richiesta quando `ANTHROPIC_BASE_URL` punta a un proxy o gateway. Fonte: [GitHub Releases v2.1.276](https://github.com/anthropics/claude-code/releases/tag/v2.1.276). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)

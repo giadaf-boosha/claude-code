@@ -15,6 +15,8 @@
 
 **Per il deep-dive**: [14 — `/loop` & Monitor](./14-loop-monitor.md) per il loop locale + [14b — Agent loop ReAct](./14b-agent-loop-react.md) per il pattern.
 
+> **2026-09-18 (auto-update)**: annunciato il redesign di **Projects**, da modello a cartelle a modello conversazionale — Claude scompone la richiesta, delega a thread paralleli in sessioni cloud, coordina e assembla il risultato, con memoria condivisa e libreria file/artifact. Beta Pro/Max su sessioni cloud, poi Team/Enterprise. Fonte: [Anthropic blog](https://claude.com/blog/projects-redesigned). Vedi anche README "What's new today" del giorno.
+
 Lanciate **14 aprile 2026** in research preview. Eseguono su infrastruttura Anthropic, niente laptop acceso, niente sessione aperta.
 
 > Fonti: [blog Anthropic](https://claude.com/blog/introducing-routines-in-claude-code), [`/en/routines`](https://code.claude.com/docs/en/routines), [`/en/web-scheduled-tasks`](https://code.claude.com/docs/en/web-scheduled-tasks). Annuncio: [@claudeai](https://x.com/claudeai/status/2044095086460309790).
