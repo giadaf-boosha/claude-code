@@ -15,6 +15,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
+> **2026-09-18 (auto-update)**: v2.1.275 introduce il tasto **"send-now"** (`ctrl+enter` o `ctrl+x ctrl+s`) che interrompe il turno corrente e invia subito tutti i messaggi in coda. Fonte: [GitHub Releases v2.1.275](https://github.com/anthropics/claude-code/releases/tag/v2.1.275). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.1 Tabella completa
