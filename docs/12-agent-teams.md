@@ -284,3 +284,38 @@ La versione interna di Claude Tag genera il **65% del codice del product team An
 | **Use case** | Orchestrazione complessa in-session | Collaborazione team async su task ricorrenti |
 
 <sub>Aggiornato 2026-06-26 via daily what's new. Fonte: [@claudeai](https://x.com/claudeai/status/2069468694552461375) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2069468913264644419) · [Anthropic blog](https://www.anthropic.com/news/introducing-claude-tag).</sub>
+
+---
+
+## 12.18 Projects redesign: da cartella a conversazione (beta, 17 set 2026)
+
+Anthropic ha ridisegnato **Projects**, la feature che finora era "una cartella con dentro una chat": file caricati + un'unica conversazione. La nuova versione capovolge il modello — **il progetto e' una conversazione persistente**, e Claude vi opera come **coordinatore** invece che come singolo interlocutore.
+
+### Come funziona
+
+Descrivi cosa va fatto e Claude:
+1. **Scopes** la richiesta (la scompone in sotto-task)
+2. **Delega** ai thread che fanno il lavoro
+3. **Coordina** i thread in parallelo, con **memoria condivisa** e una **libreria comune** di file/artifact tra tutti i thread del progetto
+4. **Rivede** gli output dei thread
+5. **Assembla** il risultato finale nella conversazione principale
+
+E' concettualmente vicino agli [Agent Teams](#cosa-e-concettualmente) (coordinamento multi-thread, lead + worker) ma applicato al layer **Projects** invece che a una singola sessione: qui il coordinatore e i thread vivono nel cloud, lo steering resta possibile da qualunque device — incluso il telefono — e il lavoro continua dopo che chiudi il laptop, sullo stesso pattern delle [Routines](./13-routines-cloud.md).
+
+### Confronto con Agent Teams e Routines
+
+| | Agent Teams | Routines | Projects (redesign) |
+|---|---|---|---|
+| **Dove gira** | Sessione locale interattiva | Cloud, senza sessione aperta | Cloud, conversazione persistente |
+| **Trigger** | Comando naturale al lead | Schedule / API / GitHub event | Richiesta descritta nella conversazione |
+| **Coordinamento** | Lead Claude + teammates via task list/mailbox | Nessuno (run singolo per trigger) | Coordinatore Claude + thread paralleli, memoria condivisa |
+| **Steering** | Nella sessione | Nessuno (autonomo) | Anche da telefono, in ogni momento |
+| **Persistenza** | Fino a shutdown team | Un run per trigger | Conversazione + libreria file/artifact che restano nel progetto |
+
+### Disponibilita'
+
+Beta a partire dal **17 settembre 2026** per un gruppo selezionato di utenti **Pro e Max** che gia' usano sessioni cloud e non hanno progetti esistenti su web o desktop. Rollout esteso nei giorni successivi al resto degli utenti Pro/Max su Claude Code, poi al resto di Claude e ai plan **Team ed Enterprise**.
+
+> Fonte: [Anthropic blog — "Projects redesigned: from folder to conversation"](https://claude.com/blog/projects-redesigned).
+
+<sub>Aggiornato 2026-09-18 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/projects-redesigned).</sub>

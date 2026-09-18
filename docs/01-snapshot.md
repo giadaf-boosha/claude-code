@@ -52,6 +52,7 @@ Annunci recenti rilevanti:
 - **Claude Code in Claude Desktop** (dic 2025) — [@_catwu](https://x.com/_catwu/status/2008628736409956395)
 - **Desktop redesign multi-session** (mar 2026) — [@claudeai](https://x.com/claudeai/status/2044131493966909862)
 - **Remote Control** (feb 2026, GA mar 2026) — [@claudeai](https://x.com/claudeai/status/2026418433911603668)
+- **Projects redesign** (beta, 17 set 2026): "Projects" diventa una conversazione persistente coordinata da Claude invece che una cartella con una chat — vedi [12.18](./12-agent-teams.md#1218-projects-redesign-da-cartella-a-conversazione-beta-17-set-2026). Fonte: [Anthropic blog](https://claude.com/blog/projects-redesigned).
 
 ---
 

@@ -259,6 +259,7 @@ Testa con `npm test`. Apri draft PR.
 
 ## 13.13 Annunci e copertura
 
+- **Projects redesign** (beta, 17 set 2026): nuovo layer "Projects" costruito sullo stesso principio delle routine (lavoro cloud che continua senza sessione aperta, steering da telefono) ma organizzato come conversazione persistente con un coordinatore che delega a thread paralleli con memoria condivisa, invece che come singolo trigger schedulato/API/GitHub — vedi [12.18](./12-agent-teams.md#1218-projects-redesign-da-cartella-a-conversazione-beta-17-set-2026). Fonte: [Anthropic blog](https://claude.com/blog/projects-redesigned).
 - Annuncio ufficiale: [blog](https://claude.com/blog/introducing-routines-in-claude-code) · 14 apr 2026
 - Tweet: [@claudeai](https://x.com/claudeai/status/2044095086460309790), [@noahzweben](https://x.com/noahzweben/status/2044093913376706655)
 - Precursore "Scheduled cloud tasks": [@noahzweben](https://x.com/noahzweben/status/2035122989533163971)

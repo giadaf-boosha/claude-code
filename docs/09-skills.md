@@ -88,6 +88,21 @@ Da v2.1.157, plugin completi (con `.claude-plugin/plugin.json`) posizionati in `
 
 ---
 
+## 9.2b Sync skill da claude.ai al terminale (da v2.1.275)
+
+Da v2.1.275, le **skill abilitate sull'account claude.ai** (web) si sincronizzano automaticamente nelle sessioni CLI aperte con lo stesso account — non serve piu' replicare a mano l'abilitazione tra web e terminale. Il sync riguarda l'insieme di skill *abilitate a livello account*, non il contenuto dei file: skill di progetto/utente/enterprise restano gestite come in [9.2](#92-path--scope), con le stesse regole di override.
+
+Per disattivare il sync in un progetto specifico:
+```json
+{
+  "syncClaudeAiSkills": false
+}
+```
+
+Stesso meccanismo per i plugin, vedi [11.4b](./11-plugins-marketplace.md#114b-sync-plugin-da-claudeai-al-terminale-da-v21275).
+
+---
+
 ## 9.3 Frontmatter completo
 
 ```yaml
@@ -297,8 +312,10 @@ Salva in `RELEASE_NOTES.md`.
 - **Hooks in skill frontmatter** (CC 2.1.0)
 - **Plugin auto-install dependencies** (v2.1.117, 22 apr 2026)
 - **Plugin SKILL.md root come skill** (v2.1.142, 14 mag 2026): plugin con `SKILL.md` nella directory root esposto automaticamente come skill, senza richiedere la struttura `skills/<name>/`
+- **Sync skill da claude.ai al terminale** (v2.1.275, 17 set 2026) — vedi [9.2b](#92b-sync-skill-da-claudeai-al-terminale-da-v21275)
 
 <sub>Aggiornato 2026-05-15 via daily what's new. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142).</sub>
+<sub>Aggiornato 2026-09-18 via daily what's new. Fonte: [GitHub Releases v2.1.275](https://github.com/anthropics/claude-code/releases/tag/v2.1.275).</sub>
 
 ---
 

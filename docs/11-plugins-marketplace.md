@@ -196,6 +196,19 @@ Casi d'uso tipici:
 
 ---
 
+## 11.4b Sync plugin da claude.ai al terminale (da v2.1.275)
+
+Da v2.1.275, i **plugin abilitati sull'account claude.ai** (web) si sincronizzano automaticamente nelle sessioni CLI loggate con lo stesso account — stesso meccanismo del sync skill, vedi [9.2b](./09-skills.md#92b-sync-skill-da-claudeai-al-terminale-da-v21275). Riguarda solo l'abilitazione a livello account: scope User/Project/Local/Managed della tabella sopra restano invariati e hanno priorita' come sempre.
+
+Opt-out per progetto:
+```json
+{
+  "syncClaudeAiPlugins": false
+}
+```
+
+---
+
 ## 11.5 Auto-update
 
 Toggle per marketplace via UI:
@@ -301,6 +314,9 @@ LSP ufficiali: `typescript-lsp`, `pyright-lsp`, `rust-analyzer-lsp`, `gopls-lsp`
 - Plugin auto-install deps (v2.1.117)
 - Plugin da `.zip` e URL (Week 19, v2.1.128–129): `--plugin-dir` accetta `.zip`, `--plugin-url` scarica da URL
 - `claude plugin eval` (v2.1.269, 11 set 2026): eval suite con report JSON/HTML — vedi [11.3](#113-comandi-plugin)
+- Sync plugin da claude.ai al terminale (v2.1.275, 17 set 2026) — vedi [11.4b](#114b-sync-plugin-da-claudeai-al-terminale-da-v21275)
+
+<sub>Aggiornato 2026-09-18 via daily what's new. Fonte: [GitHub Releases v2.1.275](https://github.com/anthropics/claude-code/releases/tag/v2.1.275).</sub>
 
 ---
 
