@@ -31,6 +31,8 @@ Claude Code ha **due sistemi di memoria** complementari: CLAUDE.md (scritto da t
 
 ## 6.2 CLAUDE.md: locations e precedence
 
+> **2026-09-19 (auto-update)**: da v2.1.277, se un progetto non ha un CLAUDE.md Claude Code legge AGENTS.md al suo posto (preferenza in `/config` → "Project instructions", non ancora su Bedrock/Vertex/Foundry). Fonte: [GitHub Releases v2.1.277](https://github.com/anthropics/claude-code/releases/tag/v2.1.277). Vedi anche README "What's new today" del giorno.
+
 Tutti i file scoperti vengono **concatenati** (non override). Precedenza: piu' locale prima.
 
 | Scope | Path | Shared with |
