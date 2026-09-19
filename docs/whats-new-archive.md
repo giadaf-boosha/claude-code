@@ -9,6 +9,15 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-09-18
+
+- **Projects redesign: da cartella a conversazione** (beta, 17 set): Anthropic rilascia una nuova esperienza "Projects" in Claude Code — non piu' una cartella con dentro una chat, ma una conversazione persistente in cui Claude fa da coordinatore, delega il lavoro a thread paralleli con memoria condivisa e una libreria comune di file/artifact, e assembla il risultato finale; si puo' guidare l'avanzamento anche da telefono, e il lavoro continua dopo che chiudi il laptop. Beta da oggi per un gruppo selezionato di utenti Pro/Max che usano sessioni cloud e non hanno ancora progetti su web/desktop, rollout esteso nei prossimi giorni e poi a Team/Enterprise. Fonte: [Anthropic blog](https://claude.com/blog/projects-redesigned). Doc: [docs/12-agent-teams.md](./12-agent-teams.md), [docs/13-routines-cloud.md](./13-routines-cloud.md), [docs/19-changelog.md](./19-changelog.md).
+- **Sync skill/plugin da claude.ai al terminale** (v2.1.275, 17 set): le skill e i plugin abilitati sull'account claude.ai si sincronizzano ora automaticamente nelle sessioni CLI loggate con lo stesso account, con opt-out per-progetto via `syncClaudeAiSkills: false` / `syncClaudeAiPlugins: false` — riduce la deriva tra cosa hai abilitato sul web e cosa gira in terminale. Fonte: [GitHub Releases v2.1.275](https://github.com/anthropics/claude-code/releases/tag/v2.1.275). Doc: [docs/09-skills.md](./09-skills.md), [docs/11-plugins-marketplace.md](./11-plugins-marketplace.md), [docs/19-changelog.md](./19-changelog.md).
+
+Il resto delle release v2.1.270-274 (12-17 set: fast mode esteso alle sessioni Remote, `allowed_domains` per-comando su Bash/PowerShell/Monitor in auto mode con sandboxing, fork di sessioni Remote Control in locale, diagnostica `/mcp` su disconnessione, avviso di memoria critica, fix vari) resta sotto la soglia editoriale. Nota fonti: `code.claude.com/docs/en/changelog` e la pagina GitHub Releases hanno risposto 503 per l'intera finestra di ricerca; i dettagli versione per versione sono ricostruiti incrociando piu' aggregatori indipendenti (changelog mirror community, digest di terze parti), l'annuncio Projects e' invece confermato direttamente dal blog Anthropic e da piu' testate tech indipendenti.
+
+---
+
 ## 2026-09-12
 
 - **`claude plugin eval`** (v2.1.269, 11 set): nuovo comando CLI che esegue la suite di eval di un plugin contro Claude Code e restituisce un risultato riproducibile con punteggio, in formato JSON e HTML — porta un framework di test formale agli autori di plugin/skill. Fonte: [GitHub Releases v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269). Doc: [docs/11-plugins-marketplace.md](./11-plugins-marketplace.md), [docs/19-changelog.md](./19-changelog.md).
@@ -198,14 +207,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 
 - **Stacked slash-skill invocations** (v2.1.199, 2 lug): `/skill-a /skill-b do XYZ` carica fino a 5 skill in cascata da un unico prompt — composizione skill senza configurazione aggiuntiva o modifica del frontmatter. Fonte: [GitHub Releases v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **Artifacts su Pro e Max** (2 lug): Artifacts in Claude Code estesi a Pro e Max — le pagine web condivisibili da sessione ora disponibili per tutti i piani paid, non solo Team/Enterprise. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2072770790114914317). Doc: [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-07-02
-
-- **Claude in Chrome GA** (v2.1.198, 1 lug): accesso browser-native alle sessioni e agli agenti Claude Code senza installazione aggiuntiva — la Chrome extension diventa surface di prima classe con Agent View completa. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198) · [@ClaudeCodeLog](https://x.com/ClaudeCodeLog/status/2072425697629343845). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Background agents auto-delivery** (v2.1.198, 1 lug): gli agenti background al termine del lavoro in worktree eseguono automaticamente commit, push e aprono una draft PR — chiude il loop delivery senza intervento manuale. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/08-subagents.md](./docs/08-subagents.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/dataviz` skill built-in** (v2.1.198, 1 lug): nuovo skill bundled per progettazione grafici, chart e dashboard — include validatore tavolozza colori e linee guida accessibilita' per output coerenti in light e dark mode. Fonte: [GitHub Releases v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
 ---
 
