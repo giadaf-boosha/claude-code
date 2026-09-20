@@ -63,14 +63,18 @@ Genera CLAUDE.md scansionando il progetto. Con `CLAUDE_CODE_NEW_INIT=1` flow int
 - Approval dialog la prima volta che un import viene scoperto
 - Block-level `<!-- HTML comments -->` strippati prima dell'injection
 
-### AGENTS.md interop
-Claude Code legge **CLAUDE.md**, non AGENTS.md. Workaround:
+### AGENTS.md interop (nativo da v2.1.277)
+Da v2.1.277, se un progetto **non ha CLAUDE.md**, Claude Code legge automaticamente **AGENTS.md** — lo standard cross-tool gia' adottato in decine di migliaia di repo condivisi tra piu' agenti AI (Codex, Cursor e altri). Il file di istruzioni preferito e' configurabile da "Project instructions" in `/config`. Non ancora disponibile su Bedrock, Vertex, Foundry: li' resta necessario il workaround via `@import` sotto.
+
+Se il progetto ha **entrambi** i file, CLAUDE.md resta quello letto di default. Per importare esplicitamente AGENTS.md dentro un CLAUDE.md — ad esempio per aggiungere istruzioni specifiche di Claude Code sopra regole gia' condivise con altri tool — resta valido:
 ```markdown
 @AGENTS.md
 
 ## Claude Code
 Use plan mode for changes under `src/billing/`.
 ```
+
+<sub>Aggiornato 2026-09-20 via daily what's new. Fonte: [GitHub Releases v2.1.277](https://github.com/anthropics/claude-code/releases/tag/v2.1.277).</sub>
 
 ### Additional dirs CLAUDE.md
 ```bash
