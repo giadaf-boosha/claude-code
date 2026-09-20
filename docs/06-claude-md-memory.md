@@ -72,6 +72,8 @@ Claude Code legge **CLAUDE.md**, non AGENTS.md. Workaround:
 Use plan mode for changes under `src/billing/`.
 ```
 
+> **2026-09-20 (auto-update)**: da v2.1.277 (18 set) il workaround sopra non e' piu' necessario nel caso base — se una cartella non ha un CLAUDE.md, Claude Code legge e usa direttamente AGENTS.md (toggle in `/config` → "Project instructions"; se esiste gia' un CLAUDE.md resta prioritario). Non ancora su Bedrock/Vertex/Foundry. Fonte: [changelog v2.1.277](https://code.claude.com/docs/en/changelog) · [@trq212](https://x.com/trq212/status/2101009392611278961). Vedi anche README "What's new today" del giorno.
+
 ### Additional dirs CLAUDE.md
 ```bash
 CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1

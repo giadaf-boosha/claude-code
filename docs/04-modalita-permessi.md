@@ -104,6 +104,8 @@ claude --permission-mode manual
 
 <sub>Aggiornato 2026-08-10 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/auto-mode-default-in-claude-code) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2085794862608318627) · [code.claude.com/docs/en/auto-mode-config](https://code.claude.com/docs/en/auto-mode-config).</sub>
 
+> **2026-09-20 (auto-update)**: da v2.1.278 (19 set) arriva la rimozione del sovrapprezzo annunciata sopra — su API diretta, Enterprise, Bedrock, Vertex, Foundry e Claude apps gateway i controlli auto mode girano di default lato server e non sono piu' fatturati come richieste extra al modello (riga "Auto mode server" in `/status`, opt-out `CLAUDE_CODE_AUTO_MODE_SERVER=0`). Fonte: [changelog v2.1.278](https://code.claude.com/docs/en/changelog) · [auto-mode-classifier-billing](https://code.claude.com/docs/en/auto-mode-classifier-billing). Vedi anche README "What's new today" del giorno.
+
 ### Caratteristiche
 - Classifier model review actions (separato dal main model)
 - Boundaries dichiarate in conversation rispettate (ma non rules permanenti)
