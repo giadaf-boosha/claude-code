@@ -8,13 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-20)
+## What's new today (2026-09-21)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Supporto nativo ad AGENTS.md** (v2.1.277, 18 set): nei progetti senza CLAUDE.md, Claude Code legge ora automaticamente **AGENTS.md** — lo standard cross-tool gia' usato in decine di migliaia di repo condivisi tra piu' agenti AI (Codex, Cursor e altri) — eliminando il workaround manuale via `@AGENTS.md` che serviva finora. Il file di istruzioni preferito resta configurabile da "Project instructions" in `/config`; non ancora disponibile su Bedrock, Vertex e Foundry. Fonte: [GitHub Releases v2.1.277](https://github.com/anthropics/claude-code/releases/tag/v2.1.277). Doc: [docs/06-claude-md-memory.md](./docs/06-claude-md-memory.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Il resto delle release v2.1.276/278 (18-19 set: fix di una regressione 400 su gateway/proxy introdotta da v2.1.275, e il passaggio di default al classificatore auto mode lato server per utenti Claude API/Enterprise/Bedrock/Vertex/Foundry/gateway — non piu' fatturato per l'overhead di classificazione) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code e nessun post team rilevante (oltre a quanto gia' coperto il 18 set) nelle ultime 24-48 ore.
+Nessuna nuova release dopo v2.1.278 (19 set, gia' coperta il 20 set), nessun annuncio Anthropic blog dedicato su Claude Code, nessun post team rilevante e nessun nuovo digest settimanale ufficiale (ancora fermo alla Week 37, 7-11 set).
 
 ---
 
