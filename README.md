@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **20 settembre 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **22 settembre 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.278** · Modello default **Sonnet 5** · Premium **Fable 5.1 / Opus 5** (Max plan; Opus 4.8 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-20)
+## What's new today (2026-09-22)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Supporto nativo ad AGENTS.md** (v2.1.277, 18 set): nei progetti senza CLAUDE.md, Claude Code legge ora automaticamente **AGENTS.md** — lo standard cross-tool gia' usato in decine di migliaia di repo condivisi tra piu' agenti AI (Codex, Cursor e altri) — eliminando il workaround manuale via `@AGENTS.md` che serviva finora. Il file di istruzioni preferito resta configurabile da "Project instructions" in `/config`; non ancora disponibile su Bedrock, Vertex e Foundry. Fonte: [GitHub Releases v2.1.277](https://github.com/anthropics/claude-code/releases/tag/v2.1.277). Doc: [docs/06-claude-md-memory.md](./docs/06-claude-md-memory.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Il resto delle release v2.1.276/278 (18-19 set: fix di una regressione 400 su gateway/proxy introdotta da v2.1.275, e il passaggio di default al classificatore auto mode lato server per utenti Claude API/Enterprise/Bedrock/Vertex/Foundry/gateway — non piu' fatturato per l'overhead di classificazione) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code e nessun post team rilevante (oltre a quanto gia' coperto il 18 set) nelle ultime 24-48 ore.
+Verificate changelog ufficiale, GitHub releases, blog Anthropic e post team (@bcherny @_catwu @noahzweben @trq212 @claudeai @ClaudeDevs @alistaiir @ClaudeCodeLog): la versione piu' recente resta **v2.1.278** (19 set, gia' coperta), nessun digest What's New settimanale successivo pubblicato, nessun annuncio blog o post team con sostanza tecnica nella finestra 20-22 set.
 
 ---
 
