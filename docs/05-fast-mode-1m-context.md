@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
 > 🔧 Operational · 🟡 Intermediate
 
-Feature legate ai modelli: il **fast mode** (Opus 5 e Opus 4.8 di default, da v2.1.219), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Claude Opus 5** come nuovo modello premium (v2.1.219, 24 lug 2026), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), e **Claude Sonnet 5** come modello di default (v2.1.197, 30 giu 2026).
+Feature legate ai modelli: il **fast mode** (Opus 5 e Opus 4.8 di default, da v2.1.219), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Claude Opus 5** come nuovo modello premium (v2.1.219, 24 lug 2026), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), **Claude Sonnet 5** come modello di default (v2.1.197, 30 giu 2026), e **Claude Opus 5.5** come nuovo modello Opus di default, con Pro e Team Standard che passano da Sonnet a Opus (v2.1.280, 22 set 2026).
 
 ## Cosa e' concettualmente
 
@@ -275,6 +275,35 @@ v2.1.219 (24 luglio 2026). `claude-opus-5` diventa il **nuovo modello Opus premi
 Opus 4.7 e' stato rimosso da Fast mode: da v2.1.219 `/fast` copre **Opus 5** e Opus 4.8 (vedi [5.1](#51-fast-mode-opus-48-di-default-da-v21154)). Opus 4.8 resta disponibile via `/model claude-opus-4-8` per chi vuole restare pinned sul modello precedente.
 
 <sub>Aggiornato 2026-07-26 via daily what's new. Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5) · [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219).</sub>
+
+---
+
+## 5.10 Claude Opus 5.5 (da v2.1.280)
+
+### Annunciato
+v2.1.280 (22 settembre 2026). `claude-opus-5-5` diventa il **nuovo modello Opus di default** in Claude Code e nella Claude app (incluso Cowork), su Pro, Max e Team. E' il primo modello della nuova famiglia Claude 5.5: performa al livello di Fable 5.1 sulla gran parte dei task, con output oltre il 30% piu' veloce e un costo di esercizio il 40% piu' basso di Opus 5. Contestualmente, il modello di default su **Pro e Team Standard passa da Sonnet a Opus**, allineandosi a Max/Team Premium/Enterprise.
+
+### Come si usa in Claude Code
+```bash
+/model claude-opus-5-5   # esplicito
+/model claude-opus-5     # per restare sul predecessore
+```
+
+### Caratteristiche principali
+| Caratteristica | Valore |
+|---|---|
+| Model ID | `claude-opus-5-5` |
+| Context window | 1M token |
+| Pricing standard | $4/MTok input, $20/MTok output (-20% vs Opus 5) |
+| Cache read | $0.20/MTok (-60% vs Opus 5) |
+| Velocita' output | Oltre il 30% piu' veloce di Opus 5 |
+| Rate limit | Vanno il 25% piu' lontano rispetto a Opus 5 a parita' di piano |
+| Disponibilita' | Anthropic API, AWS, Google Cloud, Microsoft Foundry |
+
+### Relazione con Opus 5 e default dei piani
+Opus 5 resta selezionabile via `/model claude-opus-5`. Da v2.1.280 anche i piani **Pro** e **Team Standard** passano a Opus come modello di default (in precedenza Sonnet) — vedi [1.1](./01-snapshot.md#11-versioni-e-modelli). Anthropic ha segnalato che Sonnet 5.5 e Haiku 5.5 arriveranno nelle prossime settimane.
+
+<sub>Aggiornato 2026-09-23 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-opus-5-5) · [GitHub Releases v2.1.280](https://github.com/anthropics/claude-code/releases/tag/v2.1.280).</sub>
 
 ---
 

@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-09-20
+
+- **Supporto nativo ad AGENTS.md** (v2.1.277, 18 set): nei progetti senza CLAUDE.md, Claude Code legge ora automaticamente **AGENTS.md** — lo standard cross-tool gia' usato in decine di migliaia di repo condivisi tra piu' agenti AI (Codex, Cursor e altri) — eliminando il workaround manuale via `@AGENTS.md` che serviva finora. Il file di istruzioni preferito resta configurabile da "Project instructions" in `/config`; non ancora disponibile su Bedrock, Vertex e Foundry. Fonte: [GitHub Releases v2.1.277](https://github.com/anthropics/claude-code/releases/tag/v2.1.277). Doc: [docs/06-claude-md-memory.md](./06-claude-md-memory.md), [docs/19-changelog.md](./19-changelog.md).
+
+Il resto delle release v2.1.276/278 (18-19 set: fix di una regressione 400 su gateway/proxy introdotta da v2.1.275, e il passaggio di default al classificatore auto mode lato server per utenti Claude API/Enterprise/Bedrock/Vertex/Foundry/gateway — non piu' fatturato per l'overhead di classificazione) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code e nessun post team rilevante (oltre a quanto gia' coperto il 18 set) nelle ultime 24-48 ore.
+
+---
+
 ## 2026-09-18
 
 - **Projects redesign: da cartella a conversazione** (beta, 17 set): Anthropic rilascia una nuova esperienza "Projects" in Claude Code — non piu' una cartella con dentro una chat, ma una conversazione persistente in cui Claude fa da coordinatore, delega il lavoro a thread paralleli con memoria condivisa e una libreria comune di file/artifact, e assembla il risultato finale; si puo' guidare l'avanzamento anche da telefono, e il lavoro continua dopo che chiudi il laptop. Beta da oggi per un gruppo selezionato di utenti Pro/Max che usano sessioni cloud e non hanno ancora progetti su web/desktop, rollout esteso nei prossimi giorni e poi a Team/Enterprise. Fonte: [Anthropic blog](https://claude.com/blog/projects-redesigned). Doc: [docs/12-agent-teams.md](./12-agent-teams.md), [docs/13-routines-cloud.md](./13-routines-cloud.md), [docs/19-changelog.md](./19-changelog.md).
