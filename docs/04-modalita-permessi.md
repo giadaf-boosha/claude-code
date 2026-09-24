@@ -218,6 +218,12 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 
 <sub>Aggiornato 2026-09-02 via daily what's new. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257).</sub>
 
+### Hardening ulteriore (v2.1.281)
+
+Da v2.1.281 (23 set 2026), due nuovi livelli si aggiungono al contenimento di auto mode: i prompt di conferma per comandi `rm` pericolosi in sessioni unattended attendono ora 2 minuti e poi negano automaticamente, restituendo un suggerimento di riscrittura del comando; inoltre i comandi shell read-only e sandboxed vengono aggiunti alla review server-side invece di essere auto-approvati silenziosamente.
+
+> **2026-09-24 (auto-update)**: hardening auto mode — timeout 2 minuti + deny automatico su `rm` pericolosi in sessioni unattended, review server-side per comandi read-only/sandboxed. Fonte: [GitHub Releases v2.1.281](https://github.com/anthropics/claude-code/releases/tag/v2.1.281). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.4 Sandbox mode {#sandbox}

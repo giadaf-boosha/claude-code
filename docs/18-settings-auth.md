@@ -122,6 +122,9 @@ Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 ### Attribution (commit/PR)
 - `attribution.commit` (false per `Co-Authored-By` removal)
 - `attribution.pr`
+- **`"attribution": false`** (da v2.1.281): scorciatoia top-level che disattiva in un colpo solo sia `attribution.commit` che `attribution.pr`, senza doverle impostare separatamente.
+
+> **2026-09-24 (auto-update)**: `"attribution": false` in `settings.json` disattiva in un colpo solo l'attribuzione automatica su commit e PR. Fonte: [GitHub Releases v2.1.281](https://github.com/anthropics/claude-code/releases/tag/v2.1.281). Vedi anche README "What's new today" del giorno.
 
 ### Plugins
 - `enabledPlugins`, `extraKnownMarketplaces`

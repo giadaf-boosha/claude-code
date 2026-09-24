@@ -1,20 +1,21 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **23 settembre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.280** · Modello default **Opus 5.5** (Pro/Max/Team; Sonnet 5 resta selezionabile) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **24 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.281** · Modello default **Opus 5.5** (Pro/Max/Team; Sonnet 5 resta selezionabile) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-23)
+## What's new today (2026-09-24)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude Opus 5.5 diventa il nuovo modello Opus di default in Claude Code** (v2.1.280, 22 set): prima uscita della famiglia Claude 5.5, performa al livello di Fable 5.1 sulla gran parte dei task, con output oltre il 30% piu' veloce e un costo di esercizio il 40% piu' basso di Opus 5 — 1M di context, pricing $4/$20 per MTok e cache read a $0.20/MTok (-60%). Contestualmente, su **Pro e Team Standard il modello di default passa da Sonnet a Opus**, allineandosi a Max/Premium/Enterprise. Fonte: [Anthropic](https://www.anthropic.com/claude-opus-5-5) · [GitHub Releases v2.1.280](https://github.com/anthropics/claude-code/releases/tag/v2.1.280). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`"attribution": false` in `settings.json`** (v2.1.281, 23 set): nuova scorciatoia che disattiva in un colpo solo l'attribuzione automatica di Claude Code su commit e PR, al posto di dover impostare separatamente `attribution.commit` e `attribution.pr`. Fonte: [GitHub Releases v2.1.281](https://github.com/anthropics/claude-code/releases/tag/v2.1.281). Doc: [docs/18-settings-auth.md](./docs/18-settings-auth.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Hardening auto mode** (v2.1.281, 23 set): i comandi `rm` pericolosi in sessioni unattended attendono ora 2 minuti poi vengono negati automaticamente con un suggerimento di riscrittura, e i comandi shell read-only/sandboxed vengono aggiunti alla review server-side — due ulteriori livelli del sistema di contenimento dopo la regola Containment Escape (v2.1.257). Fonte: [GitHub Releases v2.1.281](https://github.com/anthropics/claude-code/releases/tag/v2.1.281). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Il resto della release v2.1.280 (supporto mouse esteso a piu' liste in fullscreen, `CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH` per il cap sulla lunghezza delle description dei tool MCP, oltre un centinaio di fix su auto mode, dialog, MCP, subagent e sessioni Remote/cloud) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato specificamente a Claude Code oltre al lancio del modello (qui incluso per l'impatto diretto sul default CLI), ne' altri post team rilevanti nelle ultime 24-48 ore.
+Il resto della release v2.1.281 (23 set, oltre 200 modifiche): supporto Claude apps gateway per `assume_role`/`guardrail` Bedrock e `telemetry.resource_attributes`, elicitation MCP in URL-mode, validazione dei server MCP in `claude plugin validate`, stima dei permission prompt di auto mode in `/insights`, tasto "invia subito" che ora sposta i tool in esecuzione in background invece di cancellarli, oltre a numerosi fix su resume sessione, prompt cache, stream handling, Vim mode, VS Code, Claude Tag/Slack, Remote Control e performance di avvio — resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato a Claude Code e nessun post rilevante dai team X monitorati (Boris, Cat, Noah, Thariq, @claudeai, @ClaudeDevs, @alistaiir, @ClaudeCodeLog) nelle ultime 24-48 ore.
 
 ---
 
