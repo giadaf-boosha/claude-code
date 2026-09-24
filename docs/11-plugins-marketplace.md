@@ -69,6 +69,18 @@ Se `version` e' omesso, viene usato il commit SHA (ogni commit = nuova versione)
 
 Demo plugin source: https://github.com/anthropics/claude-code/tree/main/plugins.
 
+### Claude Marketplace: il catalogo unificato (da 23 set 2026)
+
+Il 23 settembre 2026 Anthropic ha lanciato **Claude Marketplace** (https://claude.com/platform/marketplace), un hub unico che consolida tre categorie prima sparse su piu' superfici:
+
+1. **Connector e plugin**: oltre 2.000 integrazioni (Atlassian, Google, Microsoft, Notion, Salesforce e altri) — include il marketplace plugin di Claude Code descritto sopra, ora scopribile anche da qui.
+2. **Prodotti e agenti Claude-powered**: software di partner come Cursor, Harvey, Legora, Lovable, Snowflake e CrowdStrike, acquistabile usando una quota dello spend committed Anthropic dell'organizzazione — utile per i team che vogliono estendere Claude Code con tool di terze parti gia' pronti all'uso enterprise.
+3. **Service partner**: il Claude Partner Network per consulenza e system integration (Accenture, Boston Consulting Group, Deloitte e altri), per chi vuole supporto nel rollout di Claude/Claude Code in azienda.
+
+Per chi costruisce plugin o prodotti Claude-powered, la candidatura al marketplace resta un canale di distribuzione aggiuntivo rispetto a `/plugin marketplace add`: il flusso CLI illustrato in [11.3](#113-comandi-plugin) non cambia, ma un plugin listato su Claude Marketplace guadagna visibilita' anche fuori da Claude Code.
+
+<sub>Aggiornato 2026-09-24 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/claude-marketplace).</sub>
+
 ---
 
 ## 11.3 Comandi plugin
