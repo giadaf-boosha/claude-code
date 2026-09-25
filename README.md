@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **23 settembre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.280** · Modello default **Opus 5.5** (Pro/Max/Team; Sonnet 5 resta selezionabile) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **25 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.282** · Modello default **Opus 5.5** (Pro/Max/Team; Sonnet 5 resta selezionabile) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-23)
+## What's new today (2026-09-25)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude Opus 5.5 diventa il nuovo modello Opus di default in Claude Code** (v2.1.280, 22 set): prima uscita della famiglia Claude 5.5, performa al livello di Fable 5.1 sulla gran parte dei task, con output oltre il 30% piu' veloce e un costo di esercizio il 40% piu' basso di Opus 5 — 1M di context, pricing $4/$20 per MTok e cache read a $0.20/MTok (-60%). Contestualmente, su **Pro e Team Standard il modello di default passa da Sonnet a Opus**, allineandosi a Max/Premium/Enterprise. Fonte: [Anthropic](https://www.anthropic.com/claude-opus-5-5) · [GitHub Releases v2.1.280](https://github.com/anthropics/claude-code/releases/tag/v2.1.280). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Il resto della release v2.1.280 (supporto mouse esteso a piu' liste in fullscreen, `CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH` per il cap sulla lunghezza delle description dei tool MCP, oltre un centinaio di fix su auto mode, dialog, MCP, subagent e sessioni Remote/cloud) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato specificamente a Claude Code oltre al lancio del modello (qui incluso per l'impatto diretto sul default CLI), ne' altri post team rilevanti nelle ultime 24-48 ore.
+Le uniche release CLI nella finestra (v2.1.281, 23 set; v2.1.282, 24 set) restano sotto la soglia editoriale: solo settings enterprise/gateway (`assume_role` e `guardrail` su Bedrock, `telemetry.resource_attributes`, `"attribution": false` per nascondere le righe di attribuzione commit/PR), `maxProseWidth` per limitare la larghezza del testo nei terminali wide, e un ampio giro di fix su sessioni, resume, vim mode e prompt cache. I due post del blog Anthropic del 22 e 24 settembre su Opus 5.5 (pricing dei task, ottimizzazione per sessioni di coding lunghe) approfondiscono un modello gia' coperto il 23 settembre, senza annunciare feature nuove. Nessun nuovo slash command, tool o annuncio di sistema nelle ultime 24-48 ore.
 
 ---
 
