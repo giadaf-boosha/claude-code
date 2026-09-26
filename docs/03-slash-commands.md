@@ -19,6 +19,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 ## 3.1 Tabella completa
 
+> **2026-09-26 (auto-update)**: `/doctor prompt-audit` (alias `/checkup prompt-audit`, da v2.1.283) audita `CLAUDE.md`, skill, agent e comandi custom per pattern di prompting scritti per modelli piu' vecchi. Fonte: [GitHub Releases v2.1.283](https://github.com/anthropics/claude-code/releases/tag/v2.1.283). Vedi anche README "What's new today" del giorno.
+
 | Comando | Tipo | Funzione |
 |---|---|---|
 | `/add-dir <path>` | built-in | Aggiunge working directory file-access |
