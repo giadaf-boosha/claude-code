@@ -133,6 +133,8 @@ Nome MCP server riservato lato client: `Claude Browser` (insieme a `Claude Previ
 
 URL: [claude.ai/code](https://claude.ai/code). Cloud session (fresh repo clone). Mobile via iOS app.
 
+**GA dal 23 settembre 2026**: le cloud session (rebrand di "Claude Code on the web", in research preview da ott/nov 2025) sono ora generalmente disponibili per **Pro, Max, Team** e per **Enterprise** con seat premium o Chat + Claude Code. Ogni sessione gira in un sandbox isolato (restrizioni di rete e filesystem) su infrastruttura Anthropic-managed, permette task multipli in parallelo su repo diverse con PR e summary automatici, e completa i flussi CLI/IDE per bug fix, task di routine e modifiche backend. Fonte: [Claude blog](https://claude.com/blog/claude-code-on-the-web).
+
 ### Comandi correlati
 - `--remote "<task>"` per kick-off cloud session da CLI
 - `--teleport` per pull session locale
@@ -148,6 +150,9 @@ URL: [claude.ai/code](https://claude.ai/code). Cloud session (fresh repo clone).
 
 ### Annuncio Claude Code on the web
 - [@_catwu](https://x.com/_catwu/status/1980338889958257106): ott/nov 2025
+- GA: [Claude blog, 23 set 2026](https://claude.com/blog/claude-code-on-the-web)
+
+<sub>Aggiornato 2026-09-26 via daily what's new. Fonte: [Claude blog](https://claude.com/blog/claude-code-on-the-web).</sub>
 
 ---
 

@@ -113,6 +113,7 @@ Cronologia compatta (per dettaglio vedi [19-changelog.md](./19-changelog.md)):
 | 11 set 2026 | v2.1.269 — **`claude plugin eval`**, eval suite plugin con report JSON/HTML — vedi [11 — Plugins & Marketplace](./11-plugins-marketplace.md#claude-plugin-eval-testare-un-plugin-con-risultati-riproducibili-da-v21269) |
 | 14 set 2026 | **Limiti settimanali**: bonus temporaneo +50% sostituito da aumento permanente +25% — netto -17% per chi usa il bonus oggi (vedi [1.4](#14-pricing-semplificato)) |
 | 22 set 2026 | v2.1.280 — **Claude Opus 5.5** diventa il nuovo modello Opus di default; Pro e Team Standard passano da Sonnet a Opus come default — vedi [05.10](./05-fast-mode-1m-context.md#510-claude-opus-55-da-v21280) |
+| 23 set 2026 | **Cloud sessions GA** (ex "Claude Code on the web"): esce dalla research preview per Pro, Max, Team e Enterprise (seat premium o Chat + Claude Code) — vedi [17.4](./17-ide-surface.md#174-web-enclaude-code-on-the-web) |
 
 <sub>Aggiornato 2026-09-23 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-opus-5-5) · [GitHub Releases v2.1.280](https://github.com/anthropics/claude-code/releases/tag/v2.1.280).</sub>
 
