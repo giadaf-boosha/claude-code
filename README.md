@@ -1,20 +1,21 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **25 settembre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.282** · Modello default **Opus 5.5** (Pro/Max/Team; Sonnet 5 resta selezionabile) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **26 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.283** · Modello default **Opus 5.5** (Pro/Max/Team; Sonnet 5 resta selezionabile) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-25)
+## What's new today (2026-09-26)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **v2.1.283** (25 set): introduce **`/doctor prompt-audit`** (alias `/checkup prompt-audit`), nuovo comando che audita `CLAUDE.md`, skill, agent e comandi custom cercando pattern di prompting scritti per modelli piu' vecchi. Aggiunge anche i managed setting `deniedModels` (blocca modelli specifici anche se `availableModels` li permette) e `availableModelsMatch: "exact"` (blocca le nuove versioni finche' non vengono esplicitamente elencate), oltre a header di gateway per raggruppare le richieste di uno stesso prompt e al logging OpenTelemetry degli output di MCP/WebFetch/WebSearch. Fonte: [GitHub Releases v2.1.283](https://github.com/anthropics/claude-code/releases/tag/v2.1.283). Vedi [docs/03 § 3.1](./docs/03-slash-commands.md#31-tabella-completa), [docs/18 § Model & effort](./docs/18-settings-auth.md), [docs/19 changelog](./docs/19-changelog.md).
+- **Portale di sottomissione plugin nella Claude directory**: Anthropic apre un portale per sottomettere plugin/connector MCP alla directory di Claude, con validazione automatica, tracking della review e analytics di utilizzo (installazioni, ricerche) una volta pubblicati; disponibile per i piani a pagamento. Annunciata anche l'unificazione della discovery tra Claude e Claude Code nelle prossime settimane. Fonte: [Anthropic blog — Build plugins for Claude](https://claude.com/blog/build-plugins-for-claude). Vedi [docs/11 § 11.11](./docs/11-plugins-marketplace.md#1111-annunci-rilevanti).
 
-Le uniche release CLI nella finestra (v2.1.281, 23 set; v2.1.282, 24 set) restano sotto la soglia editoriale: solo settings enterprise/gateway (`assume_role` e `guardrail` su Bedrock, `telemetry.resource_attributes`, `"attribution": false` per nascondere le righe di attribuzione commit/PR), `maxProseWidth` per limitare la larghezza del testo nei terminali wide, e un ampio giro di fix su sessioni, resume, vim mode e prompt cache. I due post del blog Anthropic del 22 e 24 settembre su Opus 5.5 (pricing dei task, ottimizzazione per sessioni di coding lunghe) approfondiscono un modello gia' coperto il 23 settembre, senza annunciare feature nuove. Nessun nuovo slash command, tool o annuncio di sistema nelle ultime 24-48 ore.
+Il resto della release v2.1.283 (fix estesi su SDK sessions, MCP, plugin loading, vim mode, permessi, VS Code e Claude Tag) resta sotto la soglia editoriale. Nessun altro annuncio Anthropic blog dedicato a Claude Code nelle ultime 24 ore (il post del 24 settembre su Opus 5.5 e sessioni di coding lunghe approfondisce un modello gia' coperto il 23 settembre), ne' post team rilevanti individuati.
 
 ---
 

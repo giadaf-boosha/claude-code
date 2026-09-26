@@ -308,6 +308,8 @@ LSP ufficiali: `typescript-lsp`, `pyright-lsp`, `rust-analyzer-lsp`, `gopls-lsp`
 
 ## 11.11 Annunci rilevanti
 
+> **2026-09-26 (auto-update)**: Anthropic apre un portale di sottomissione per plugin e connector MCP nella Claude directory — validazione automatica, review tracking e analytics di utilizzo (installazioni, ricerche) una volta pubblicati; aperto ai piani a pagamento. Annunciata l'unificazione della discovery tra Claude e Claude Code nelle prossime settimane. Fonte: [Anthropic blog — Build plugins for Claude](https://claude.com/blog/build-plugins-for-claude). Vedi anche README "What's new today" del giorno.
+
 - **Customizability** (feb 2026): "hooks, plugins, LSPs, MCPs, skills, effort, custom agents, status lines, output styles" — [@bcherny](https://x.com/bcherny/status/2021699851499798911)
 - Hidden features Boris (mar 2026) — [@bcherny](https://x.com/bcherny/status/2038454336355999749)
 - Plugin executables sul `PATH` di Bash tool (Week 14, v2.1.94)

@@ -67,6 +67,8 @@ La modifica e' persistente nella sessione (non viene scritta su disco a meno che
 
 <sub>Aggiornato 2026-06-12 via daily what's new. Fonte: [GitHub Releases v2.1.175](https://github.com/anthropics/claude-code/releases/tag/v2.1.175).</sub>
 
+> **2026-09-26 (auto-update)**: nuovi managed setting `deniedModels` (blocca modelli specifici anche se presenti in `availableModels`) e `availableModelsMatch: "exact"` (accetta solo la versione esatta elencata, bloccando le nuove release finche' non aggiunte esplicitamente). Fonte: [GitHub Releases v2.1.283](https://github.com/anthropics/claude-code/releases/tag/v2.1.283). Vedi anche README "What's new today" del giorno.
+
 > **`fallbackModel`** (da v2.1.166): configura fino a 3 modelli di fallback provati in sequenza quando il modello primario e' sovraccarico o non disponibile. Il flag `--fallback-model` funziona ora anche nelle sessioni interattive (in precedenza solo in `-p`). Errori auth, rate-limit, request-size e transport vengono comunque segnalati immediatamente senza tentare il fallback.
 >
 > ```json
