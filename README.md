@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **25 settembre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.282** · Modello default **Opus 5.5** (Pro/Max/Team; Sonnet 5 resta selezionabile) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **27 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.283** · Modello default **Opus 5.5** (Pro/Max/Team; Sonnet 5 resta selezionabile) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-25)
+## What's new today (2026-09-27)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **Graceful wrap-up al limite delle 5 ore**: quando il limite di sessione interrompe un turno in corso, Claude Code cerca ora un punto di arresto pulito invece di tagliare a meta' un edit — usa una piccola quota fissa presa dal limite *settimanale* per finire la modifica, far passare i test e lasciare una nota su cosa resta da fare. Su Pro disponibile una volta a settimana, su Max e Team Premium a ogni limite raggiunto (quota permettendo). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2103561342057943314). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Le uniche release CLI nella finestra (v2.1.281, 23 set; v2.1.282, 24 set) restano sotto la soglia editoriale: solo settings enterprise/gateway (`assume_role` e `guardrail` su Bedrock, `telemetry.resource_attributes`, `"attribution": false` per nascondere le righe di attribuzione commit/PR), `maxProseWidth` per limitare la larghezza del testo nei terminali wide, e un ampio giro di fix su sessioni, resume, vim mode e prompt cache. I due post del blog Anthropic del 22 e 24 settembre su Opus 5.5 (pricing dei task, ottimizzazione per sessioni di coding lunghe) approfondiscono un modello gia' coperto il 23 settembre, senza annunciare feature nuove. Nessun nuovo slash command, tool o annuncio di sistema nelle ultime 24-48 ore.
+Il resto della release v2.1.283 (25 set) resta sotto la soglia editoriale: `/doctor prompt-audit` per pattern di prompting datati in CLAUDE.md/skill/agent, `availableModelsMatch: "exact"` e `deniedModels` per bloccare modelli non elencati, header gateway `x-claude-code-prompt-id`, oltre 90 fix su MCP, plugin, vim mode e permessi. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo nelle ultime 48 ore.
 
 ---
 

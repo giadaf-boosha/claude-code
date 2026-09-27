@@ -84,6 +84,10 @@ Fast mode bills sempre come **extra usage** (anche con plan rimanente). 1M conte
 
 > **14 settembre 2026**: i limiti *settimanali* (non quelli a 5 ore sopra) cambiano registro: il bonus temporaneo del +50% attivo da mesi su Pro, Max, Team ed Enterprise a seat viene sostituito da un aumento *permanente* del +25% sul limite standard. Chi sta usando il bonus del +50% oggi vede quindi la propria capacita' netta scendere del 17% dal 14 settembre, anche se la comunicazione la inquadra come un "aumento". Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266).
 
+> **25 settembre 2026 — Graceful wrap-up al limite delle 5 ore**: quando il limite di sessione interrompe un turno in corso, Claude Code non taglia piu' a meta' un edit — cerca un punto di arresto pulito usando una piccola quota fissa presa dal limite *settimanale* per chiudere la modifica, far passare i test e lasciare una nota su cosa resta da fare. Disponibile su terminale, IDE e Desktop: su Pro una volta a settimana, su Max e Team Premium a ogni limite di sessione raggiunto (quota settimanale permettendo); si puo' sempre continuare oltre con extra usage. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2103561342057943314).
+
+<sub>Aggiornato 2026-09-27 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2103561342057943314).</sub>
+
 <sub>Aggiornato 2026-09-12 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266).</sub>
 
 <sub>Aggiornato 2026-05-07 via daily what's new. Fonte: [Anthropic news](https://www.anthropic.com/news/higher-limits-spacex).</sub>
