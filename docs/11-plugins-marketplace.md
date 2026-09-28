@@ -56,6 +56,8 @@ Se `version` e' omesso, viene usato il commit SHA (ogni commit = nuova versione)
 
 ## 11.2 Marketplace ufficiale
 
+> **2026-09-28 (auto-update)**: nuovo portale `claude.ai/directory/manage/new` per sottomettere plugin (singolo MCP connector remoto, o bundle MCP+skill da repo GitHub), con auto-validazione/safety scan durante la review e analytics di installazione/discovery a pubblicazione avvenuta. Anthropic segnala un uso di MCP sui prodotti Claude cresciuto 110x nell'ultimo anno. Fonte: [Anthropic blog](https://claude.com/blog/build-plugins-for-claude). Vedi anche README "What's new today" del giorno.
+
 - **`claude-plugins-official`** — auto-disponibile, ~101 plugin (mar 2026)
 - Browse: https://claude.com/plugins
 - Submit: https://claude.ai/settings/plugins/submit

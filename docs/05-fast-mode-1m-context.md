@@ -122,6 +122,8 @@ v2.1.111 (16 aprile 2026). `claude-opus-4-7` con effort `xhigh` (tra `high` e `m
 /effort auto                           # auto-pick
 ```
 
+> **2026-09-28 (auto-update)**: Thariq (team Claude Code) analizza cosa cambia davvero tra i livelli di effort — alzarlo compra soprattutto piu' verifica ed edge-case testing, non un ragionamento di base piu' intelligente. `low`/`medium` restano la scelta migliore per lavorare "in loop" con Claude, `max` conviene solo per task a zero-input o ricerca vulnerabilita'. Fonte: [@trq212](https://x.com/trq212/status/2103576349499855160). Vedi anche README "What's new today" del giorno.
+
 Su Opus 4.8 l'effort di **default e' `high`**; `xhigh` (tra `high` e `max`) e' pensato per i task piu' duri. Oltre a questi esiste **`ultracode`** = `xhigh` + orchestrazione workflow automatica (vedi [./24-workflows.md](./24-workflows.md)).
 
 Default da v2.1.117: `high` per Pro/Max su Opus 4.6 + Sonnet 4.6.
