@@ -8,13 +8,14 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-27)
+## What's new today (2026-09-28)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Graceful wrap-up al limite delle 5 ore**: quando il limite di sessione interrompe un turno in corso, Claude Code cerca ora un punto di arresto pulito invece di tagliare a meta' un edit — usa una piccola quota fissa presa dal limite *settimanale* per finire la modifica, far passare i test e lasciare una nota su cosa resta da fare. Su Pro disponibile una volta a settimana, su Max e Team Premium a ogni limite raggiunto (quota permettendo). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2103561342057943314). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Portale di submission plugin per Claude**: Anthropic apre un nuovo portale (`claude.ai/directory/manage/new`) che permette agli sviluppatori su piano a pagamento di sottomettere plugin al Claude Directory, seguirne la review con auto-validazione e safety scan, e vedere analytics di installazione/discovery una volta pubblicati. Si sottomette un singolo MCP connector remoto oppure un bundle plugin (MCP + skill, e in Claude Code anche LSP/comandi/hook/agent) da repo GitHub. Anthropic segnala che l'uso di MCP sui prodotti Claude e' cresciuto 110 volte nell'ultimo anno. Fonte: [Anthropic blog](https://claude.com/blog/build-plugins-for-claude) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2103577007938228300). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/10-mcp.md](./docs/10-mcp.md).
+- **Thariq: quando conviene alzare l'effort**: nuovo articolo del team Claude Code che analizza cosa cambia davvero tra i livelli di `/effort` — alzarlo compra soprattutto piu' verifica ed edge-case testing, non un ragionamento di base piu' intelligente; `low`/`medium` restano la scelta migliore per lavorare "in loop" con Claude, `max` conviene solo per task a zero-input o per la ricerca di vulnerabilita' di sicurezza. Fonte: [@trq212](https://x.com/trq212/status/2103576349499855160). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md).
 
-Il resto della release v2.1.283 (25 set) resta sotto la soglia editoriale: `/doctor prompt-audit` per pattern di prompting datati in CLAUDE.md/skill/agent, `availableModelsMatch: "exact"` e `deniedModels` per bloccare modelli non elencati, header gateway `x-claude-code-prompt-id`, oltre 90 fix su MCP, plugin, vim mode e permessi. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo nelle ultime 48 ore.
+Nessuna nuova release CLI nelle ultime 24-48 ore oltre alla v2.1.283 (25 set) gia' coperta: i due item di oggi sono un annuncio blog e un contenuto editoriale del team, entrambi non ancora documentati in repo. Nessun altro post rilevante individuato su @bcherny, @_catwu, @noahzweben, @alistaiir, @claudeai, @ClaudeCodeLog nella finestra.
 
 ---
 
