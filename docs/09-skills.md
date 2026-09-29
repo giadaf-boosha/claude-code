@@ -27,7 +27,7 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 | `/batch <instruction>` | Refactor large-scale: 5-30 unit, 1 worktree+PR per agente |
 | `/debug [description]` | Debug logging mid-session |
 | `/loop` | Re-run prompt (vedi [14](./14-loop-monitor.md)) |
-| `/claude-api` | Reference API + tool migration |
+| `/claude-api` | Reference API + tool migration; da fine settembre 2026 anche `build-eval`/`hillclimb` per costruire eval e migliorare iterativamente un'app che chiama la Claude API — vedi sotto |
 | `/fewer-permission-prompts` | Scansiona transcript e crea allowlist read-only |
 | `/dataviz` | Progettazione grafici, chart e dashboard — validatore tavolozza colori integrato e linee guida accessibilita' per output coerenti in light/dark mode (da v2.1.198) |
 | `/verify` | Esercita end-to-end il flusso toccato da una modifica e osserva il comportamento reale, invece di fermarsi a test/typecheck |
@@ -53,6 +53,21 @@ Accumulare skill custom e plugin ha un costo silenzioso: ogni `SKILL.md` caricat
 Utile prima di un cleanup del proprio `.claude/skills/` o quando una sessione sembra piu' lenta del solito ad avviarsi: spesso la causa e' un accumulo di skill mai invocate che restano comunque nel prompt iniziale.
 
 <sub>Aggiornato 2026-09-05 via daily what's new. Fonte: [GitHub Releases v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261).</sub>
+
+---
+
+### `/claude-api build-eval` e `/claude-api hillclimb`: eval e tuning iterativo (da fine settembre 2026)
+
+La skill ufficiale `claude-api` guadagna due workflow pensati per chi ha una feature che chiama la Claude API e vuole migliorarla senza affidarsi all'istinto. `/claude-api build-eval` costruisce, dentro il codebase, una eval che rispecchia il lavoro reale in produzione (non un benchmark sintetico). Con una eval di cui ci si fida, `/claude-api hillclimb` fa cambiare a Claude un aspetto alla volta — system prompt, skill, description dei tool, modello, effort level o altri parametri API, fino all'harness agent che orchestra il tutto — e verifica ogni modifica su un held-out set di esempi mai usati per il tuning, cosi' un miglioramento che sembra tale sulla eval principale non e' solo overfitting.
+
+```
+/claude-api build-eval
+/claude-api hillclimb
+```
+
+Il principio guida e' l'iterazione a basso costo: si parte da cio' che e' facile modificare e revertire (prompt, skill) prima di toccare superfici piu' costose come il modello. Nella guida pubblicata da Anthropic, un benchmark interno di supporto clienti passa dal 74,4% al 98,9% di accuratezza dopo alcuni round, con il costo per ticket sceso da 4,6 a circa 1 centesimo; in un altro caso la skill API di Anthropic stessa migliora dal 66% all'88% con lo stesso processo.
+
+<sub>Aggiornato 2026-09-29 via daily what's new. Fonte: [Anthropic](https://claude.dev/blog/automating-eval-design-and-hillclimbing/) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2104676099083190435).</sub>
 
 ---
 

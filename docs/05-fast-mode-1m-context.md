@@ -301,9 +301,39 @@ v2.1.280 (22 settembre 2026). `claude-opus-5-5` diventa il **nuovo modello Opus 
 | Disponibilita' | Anthropic API, AWS, Google Cloud, Microsoft Foundry |
 
 ### Relazione con Opus 5 e default dei piani
-Opus 5 resta selezionabile via `/model claude-opus-5`. Da v2.1.280 anche i piani **Pro** e **Team Standard** passano a Opus come modello di default (in precedenza Sonnet) — vedi [1.1](./01-snapshot.md#11-versioni-e-modelli). Anthropic ha segnalato che Sonnet 5.5 e Haiku 5.5 arriveranno nelle prossime settimane.
+Opus 5 resta selezionabile via `/model claude-opus-5`. Da v2.1.280 anche i piani **Pro** e **Team Standard** passano a Opus come modello di default (in precedenza Sonnet) — vedi [1.1](./01-snapshot.md#11-versioni-e-modelli). Anthropic ha rilasciato **Sonnet 5.5** il 28 settembre 2026 (vedi [5.11](#511-claude-sonnet-55-da-v21284)); Haiku 5.5 resta atteso.
 
 <sub>Aggiornato 2026-09-23 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-opus-5-5) · [GitHub Releases v2.1.280](https://github.com/anthropics/claude-code/releases/tag/v2.1.280).</sub>
+
+---
+
+## 5.11 Claude Sonnet 5.5 (da v2.1.284)
+
+### Annunciato
+v2.1.284 (28 settembre 2026). `claude-sonnet-5-5` diventa il **nuovo modello Sonnet di default** sulla Claude API e in Claude Code, sostituendo Sonnet 5. E' il secondo modello della famiglia Claude 5.5 dopo Opus 5.5 (vedi [5.10](#510-claude-opus-55-da-v21280)): stesso pricing del predecessore, output oltre il 30% piu' veloce e un numero di token/tool call per task nettamente inferiore, con un salto su Terminal-Bench 4.0 dal 10,3% di Sonnet 5 al 70,6%. E' anche la prima Sonnet a ricevere safeguard e fallback cyber equivalenti a quelli riservati finora a Opus 5, oltre al watermarking invisibile del testo generato.
+
+### Come si usa in Claude Code
+```bash
+/model claude-sonnet-5-5   # esplicito
+/model claude-sonnet-5     # per restare sul predecessore
+```
+
+### Caratteristiche principali
+| Caratteristica | Valore |
+|---|---|
+| Model ID | `claude-sonnet-5-5` |
+| Context window | 1M token (nativo) |
+| Pricing | $2/MTok input, $10/MTok output (invariato vs Sonnet 5) |
+| Cache read | $0.20/MTok |
+| Velocita' output | Oltre il 30% piu' veloce di Sonnet 5, meno token/tool call per task equivalente |
+| Terminal-Bench 4.0 | 70,6% (Sonnet 5: 10,3%) |
+| Sicurezza | Prima Sonnet con cyber safeguard/fallback al livello di Opus 5; watermarking invisibile del testo |
+| Disponibilita' | Claude API, Claude Platform; anche in GitHub Copilot dallo stesso giorno |
+
+### Relazione con Sonnet 5 e Opus 5.5
+Sonnet 5 resta selezionabile via `/model claude-sonnet-5`. Con Sonnet 5.5 la famiglia Claude 5.5 copre sia il livello premium (Opus 5.5, [5.10](#510-claude-opus-55-da-v21280)) che il default di massa; Haiku 5.5 resta atteso.
+
+<sub>Aggiornato 2026-09-29 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-sonnet-5-5) · [GitHub Releases v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284).</sub>
 
 ---
 
