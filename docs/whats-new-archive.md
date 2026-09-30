@@ -9,6 +9,15 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-09-29
+
+- **Claude Sonnet 5.5 diventa il nuovo modello Sonnet di default** (v2.1.284, 28 set): sostituisce Sonnet 5 sulla Claude API e in Claude Code, stesso pricing ($2/$10 per MTok, cache read $0.20/MTok), output oltre il 30% piu' veloce con meno token/tool call per task, salto da 10,3% a 70,6% su Terminal-Bench 4.0, cyber safeguard equivalenti a Opus 5 (prima volta su una Sonnet) e watermarking invisibile del testo. Fonte: [Anthropic](https://www.anthropic.com/claude-sonnet-5-5) · [GitHub Releases v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284). Doc: [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/01-snapshot.md](./01-snapshot.md), [docs/19-changelog.md](./19-changelog.md).
+- **`/claude-api build-eval` e `/claude-api hillclimb`**: la skill ufficiale `claude-api` guadagna due workflow per costruire dentro il codebase una eval che rispecchia il lavoro reale in produzione e poi migliorare l'app (prompt, skill, tool, modello, effort) un cambiamento alla volta, verificando su un held-out set che il miglioramento non sia overfitting. Fonte: [Anthropic](https://claude.dev/blog/automating-eval-design-and-hillclimbing/) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2104676099083190435). Doc: [docs/09-skills.md](./09-skills.md), [docs/19-changelog.md](./19-changelog.md).
+
+Il resto della release v2.1.284 resta sotto la soglia editoriale: risposta "si', ma richiedimelo di nuovo" al prompt di auto mode per letture fuori working directory, importi in dollari nella spend limit bar di `/usage`, `/mcp reconnect all`, oltre un centinaio di fix su stream di risposta, "Prompt is too long" e vim mode.
+
+---
+
 ## 2026-09-27
 
 - **Graceful wrap-up al limite delle 5 ore**: quando il limite di sessione interrompe un turno in corso, Claude Code cerca ora un punto di arresto pulito invece di tagliare a meta' un edit — usa una piccola quota fissa presa dal limite *settimanale* per finire la modifica, far passare i test e lasciare una nota su cosa resta da fare. Su Pro disponibile una volta a settimana, su Max e Team Premium a ogni limite raggiunto (quota permettendo). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2103561342057943314). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
@@ -208,12 +217,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 
 - **Browser in-app su Desktop**: Claude Code su Desktop apre un browser integrato, sandboxato, con cui Claude legge documentazione, design e siti esterni, clicca ed interagisce come gia' fa coi dev server locali — sessioni persistenti opzionali, permessi per-sito (Allow once / Always / Deny). Scorciatoia `Ctrl+Shift+B` (Windows) / `Cmd+Shift+B` (macOS). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2075635283211772279). Doc: [docs/17-ide-surface.md](./17-ide-surface.md), [docs/19-changelog.md](./19-changelog.md).
 - **`/checkup`** (v2.1.205, 8 lug): nuovo alias di `/doctor` che diventa un vero setup checkup — diagnostica e propone fix per skill/MCP/plugin inutilizzati (in base al costo di context), deduplica `CLAUDE.md` locali contro le versioni committate e segnala hook lenti; riporta i risultati e chiede conferma prima di modificare nulla. Fonte: [GitHub Releases v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205). Doc: [docs/03-slash-commands.md](./03-slash-commands.md), [docs/02-cli-installazione.md](./02-cli-installazione.md), [docs/19-changelog.md](./19-changelog.md).
-
----
-
-## 2026-07-08
-
-- **Dynamic workflow size** in `/config` (v2.1.202, 6 lug): linea guida small/medium/large su quanti agent Claude tende a usare quando scrive un [dynamic workflow](./24-workflows.md) — indicativa, non un tetto imposto dal runtime. Stessa release: attributi OpenTelemetry `workflow.run_id`/`workflow.name` per ricostruire l'attivita' di un run, e `/review <PR>` torna a single-pass veloce (multi-agent resta su `/code-review <level> <PR#>`). Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202). Doc: [docs/24-workflows.md](./24-workflows.md), [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
 
 ---
 

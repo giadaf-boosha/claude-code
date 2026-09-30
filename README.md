@@ -1,21 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **29 settembre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.284** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **30 settembre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.285** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-09-29)
+## What's new today (2026-09-30)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude Sonnet 5.5 diventa il nuovo modello Sonnet di default** (v2.1.284, 28 set): sostituisce Sonnet 5 sulla Claude API e in Claude Code, stesso pricing ($2/$10 per MTok, cache read $0.20/MTok), output oltre il 30% piu' veloce con meno token/tool call per task, salto da 10,3% a 70,6% su Terminal-Bench 4.0, cyber safeguard equivalenti a Opus 5 (prima volta su una Sonnet) e watermarking invisibile del testo. Fonte: [Anthropic](https://www.anthropic.com/claude-sonnet-5-5) · [GitHub Releases v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/claude-api build-eval` e `/claude-api hillclimb`**: la skill ufficiale `claude-api` guadagna due workflow per costruire dentro il codebase una eval che rispecchia il lavoro reale in produzione e poi migliorare l'app (prompt, skill, tool, modello, effort) un cambiamento alla volta, verificando su un held-out set che il miglioramento non sia overfitting. Fonte: [Anthropic](https://claude.dev/blog/automating-eval-design-and-hillclimbing/) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2104676099083190435). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Il resto della release v2.1.284 resta sotto la soglia editoriale: risposta "si', ma richiedimelo di nuovo" al prompt di auto mode per letture fuori working directory, importi in dollari nella spend limit bar di `/usage`, `/mcp reconnect all`, oltre un centinaio di fix su stream di risposta, "Prompt is too long" e vim mode.
+L'unica release nella finestra (v2.1.285, 29 set) resta sotto la soglia editoriale: `claude --desktop` per aprire la desktop app dalla CLI, `claude plugin configure` per gestire le opzioni di un plugin, il setting `allowedProviders` per limitare i provider API ammessi su una macchina, le env var `CLAUDE_CODE_DISABLE_WEB_FETCH` e `CLAUDE_CODE_NONSTREAMING_TIMEOUT_RETRIES`, oltre un centinaio di fix su plugin, MCP, Remote Control, VS Code e Artifact tool. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo, nessun post team rilevante nelle ultime 24-48 ore.
 
 ---
 
