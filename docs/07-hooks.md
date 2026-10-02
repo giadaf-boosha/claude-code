@@ -17,6 +17,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 > Fonte: [`/en/hooks`](https://code.claude.com/docs/en/hooks).
 
+> 🆕 Da v2.1.287, i plugin possono aggiungere anche **hook a funzione** (JS/TypeScript, con UI e stato) oltre agli hook JSON qui descritti — vedi [11.1b — Claude Mods](./11-plugins-marketplace.md#111b-claude-mods-plugin-con-hook-a-funzione-da-v21287).
+
 ---
 
 ## 7.1 Eventi supportati (30+)

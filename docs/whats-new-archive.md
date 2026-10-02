@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-01
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+L'unica release nella finestra (v2.1.286, 30 set) resta sotto la soglia editoriale: contatore "2 di 5" per i permission prompt in coda, supporto mouse per le righe "N more" delle liste in fullscreen, migliorata la commit guidance per eseguire una skill `verify` prima di committare, bookmark e question tracking per Claude Code in VS Code, oltre un centinaio di fix su resume/continue, errori API 400, sessioni cloud, spend meter, login macOS e Remote Control. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo, nessun post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-09-30
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -212,12 +220,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 
 - **`/fork` → sessione background + `/subtask`** (v2.1.212, 17 lug): `/fork` non spawna piu' un subagent in-sessione ma copia l'intera conversazione in una nuova sessione background (riga separata in `claude agents`), lasciando libero il thread principale; il vecchio comportamento (subagent dentro la sessione corrente) e' ora `/subtask`. Stessa release: tetti di sicurezza default (200 WebSearch, 200 subagent spawn per sessione) e `/resume` con picker delle sessioni passate, incluse quelle cancellate. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212). Doc: [docs/08-subagents.md](./08-subagents.md), [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
 - **Tool `EndConversation`** (v2.1.214, 18 lug): nuovo tool primitivo che permette a Claude di terminare autonomamente una conversazione con utenti fortemente abusivi o tentativi di jailbreak, affiancandosi a Monitor e AskUserQuestion nella cassetta degli attrezzi built-in dell'agent loop. Fonte: [GitHub Releases v2.1.214](https://github.com/anthropics/claude-code/releases/tag/v2.1.214). Doc: [docs/16-headless-agent-sdk.md](./16-headless-agent-sdk.md), [docs/04-modalita-permessi.md](./04-modalita-permessi.md), [docs/19-changelog.md](./19-changelog.md).
-
----
-
-## 2026-07-13
-
-> Nessuna novita' significativa nelle ultime 24 ore.
 
 ---
 

@@ -54,6 +54,47 @@ Se `version` e' omesso, viene usato il commit SHA (ogni commit = nuova versione)
 
 ---
 
+## 11.1b Claude Mods: plugin con hook a funzione (da v2.1.287)
+
+Da v2.1.287 (1 ott 2026) un plugin puo' includere un **hooks module**: un file JS/TypeScript il cui `register(on)` aggancia funzioni (hook) a eventi del harness (`session.start`, `tool.call`, `command.run`, `ui.render`, ...), con accesso a un'API dei mod (convenzionalmente `$`) per disegnare pannelli/comandi in UI, chiamare un modello o mantenere stato tra eventi. Un plugin con un hooks module si chiama **mod**: puo' riscrivere un prompt, aggiungere un comando o sostituire un comportamento built-in — un layer programmabile che va oltre gli [hook JSON](./07-hooks.md) classici, limitati ad allow/deny/block senza stato ne' disegno di interfaccia.
+
+Struttura minima di un mod:
+```
+my-mod/
+├── .claude-plugin/plugin.json   # manifest, nessun campo speciale richiesto dai mod
+└── hooks/
+    ├── hooks.json               # { "modules": ["./register.js"] }
+    └── register.js              # export function register(on) { ... }
+```
+
+```javascript
+// register.js — conta le tool call e le mostra accanto allo spinner
+let calls = 0
+export function register(on) {
+  on('tool.call', async ($, e, next) => {
+    calls += 1
+    $.ui.invalidate('ui.render')
+    return next(e)
+  })
+  on('ui.render', { component: 'Spinner' }, async ($, e, next) =>
+    next({ ...e, props: { ...e.props, suffix: ` · tool calls: ${calls}` } }))
+}
+```
+
+Workflow tipico:
+- **Sviluppo**: `claude --plugin-dir ./my-mod` carica il mod per la sessione corrente con hot-reload a ogni salvataggio; `claude plugin validate ./my-mod` controlla staticamente hook e chiamate API senza avviare una sessione; `claude plugin test` esegue i test automatici del mod.
+- **Senza scrivere codice**: basta descrivere il mod a Claude in sessione interattiva (es. "fammi un mod che mostra il branch git sopra il prompt") — la skill built-in `plugin-authoring` scrive i file in `~/.claude/dev-mods/<session-id>/` e propone hot reload per il resto della sessione.
+- **Distribuzione**: un mod e' un plugin come un altro — versionato nel manifest, pubblicato su un marketplace (vedi [11.2](#112-marketplace-ufficiale)) e installato/aggiornato con i comandi `/plugin` di sempre.
+
+**Built-in: "You should know"** — primo mod ufficiale bundlato: un side-agent opt-in che osserva la sessione e segnala cose che l'utente o Claude potrebbero perdere. Richiede telemetria attiva (sessioni first-party):
+```bash
+/plugin enable cc-plugin-you-should-know@builtin
+```
+
+<sub>Aggiornato 2026-10-02 via daily what's new. Fonte: [GitHub Releases v2.1.287](https://github.com/anthropics/claude-code/releases/tag/v2.1.287) · [code.claude.com/docs/en/plugins/mods/create](https://code.claude.com/docs/en/plugins/mods/create) · [@bcherny](https://x.com/bcherny/status/2105756563302723721) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2105721434807083061).</sub>
+
+---
+
 ## 11.2 Marketplace ufficiale
 
 - **`claude-plugins-official`** — auto-disponibile, ~101 plugin (mar 2026)
