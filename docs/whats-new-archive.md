@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-02
+
+- **Claude Mods**: i plugin possono ora modificare il comportamento profondo di Claude Code con un *hooks module* JS/TypeScript — riscrivere prompt, disegnare pannelli/comandi in UI, sostituire feature built-in — un layer programmabile oltre gli hook JSON dichiarativi (che restano allow/deny/block). Bundlato il primo mod ufficiale **"You should know"**, side-agent opt-in che osserva la sessione e segnala cose che utente o Claude potrebbero perdere (`/plugin enable cc-plugin-you-should-know@builtin`). Fonte: [GitHub Releases v2.1.287](https://github.com/anthropics/claude-code/releases/tag/v2.1.287) · [code.claude.com/docs/en/plugins/mods/create](https://code.claude.com/docs/en/plugins/mods/create) · [@bcherny](https://x.com/bcherny/status/2105756563302723721) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2105721434807083061). Doc: [docs/11-plugins-marketplace.md](./11-plugins-marketplace.md), [docs/07-hooks.md](./07-hooks.md), [docs/19-changelog.md](./19-changelog.md).
+
+Il resto della release v2.1.287 (filtro `n:<text>` in Agent View, URL prompt da server MCP sul protocollo 2025-11-25, oltre una dozzina di fix su Remote Control, fast mode remoto, notifiche hook e controlli modello Bedrock/Vertex) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore; digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-01
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -213,13 +221,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 ## 2026-07-19
 
 - **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./09-skills.md), [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
-
----
-
-## 2026-07-18
-
-- **`/fork` → sessione background + `/subtask`** (v2.1.212, 17 lug): `/fork` non spawna piu' un subagent in-sessione ma copia l'intera conversazione in una nuova sessione background (riga separata in `claude agents`), lasciando libero il thread principale; il vecchio comportamento (subagent dentro la sessione corrente) e' ora `/subtask`. Stessa release: tetti di sicurezza default (200 WebSearch, 200 subagent spawn per sessione) e `/resume` con picker delle sessioni passate, incluse quelle cancellate. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212). Doc: [docs/08-subagents.md](./08-subagents.md), [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
-- **Tool `EndConversation`** (v2.1.214, 18 lug): nuovo tool primitivo che permette a Claude di terminare autonomamente una conversazione con utenti fortemente abusivi o tentativi di jailbreak, affiancandosi a Monitor e AskUserQuestion nella cassetta degli attrezzi built-in dell'agent loop. Fonte: [GitHub Releases v2.1.214](https://github.com/anthropics/claude-code/releases/tag/v2.1.214). Doc: [docs/16-headless-agent-sdk.md](./16-headless-agent-sdk.md), [docs/04-modalita-permessi.md](./04-modalita-permessi.md), [docs/19-changelog.md](./19-changelog.md).
 
 ---
 
