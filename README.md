@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **3 ottobre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.287** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **4 ottobre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.289** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-03)
+## What's new today (2026-10-04)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-L'unica release nella finestra (v2.1.288, 2 ott) resta sotto la soglia editoriale: `$.ui.selection()` per i mod (legge il testo selezionato in fullscreen e la riga di trascrizione associata), `gh api` integrato nelle sessioni cloud senza GitHub CLI, Ctrl+F in Agent View per cercare sessioni per nome, flag `--max-findings <n>|all` per `/code-review`, recovery della bozza con Up dopo Ctrl+C, prompt di ri-autenticazione OAuth quando un server MCP richiede scope aggiuntivo a meta' tool call, oltre una dozzina di fix su resume/compacting, session titles/hook su Mantle o dietro gateway e chiamate MCP duplicate su risultati oltre 16 MB. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore (l'unico post del 2 ott, sull'investimento da $100M per formare 10.000 ingegneri, non riguarda Claude Code); nessun nuovo slash command, tool primitivo o post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+L'unica release nella finestra (v2.1.289, 3 ott) resta sotto la soglia editoriale: quasi trenta fix di stabilita' per plugin e mod (freeze del terminale su blocchi di codice con tag `<script>` non chiusi o `${` annidati, deny/ask rule su comandi shell composti e su Bash con prefisso da variabile d'ambiente che il sandbox auto-allow bypassava, `Read` deny rule non applicate a file raggiunti via simlink, `plugin list`/`eval`/`update` con copie stale da marketplace locali, mod che non si caricano alla prima sessione dopo un upgrade, isolamento dei crash di pannelli/band/`Client` dei mod cosi' da non far cadere l'intera sessione), oltre alla nuova `agent.spawn` per i teammate e gli stati idle/waiting in `$.agent.list()`. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore (gli ultimi post, 1-2 ottobre, riguardano il lancio dei Mods, gia' coperto nei giorni scorsi); nessun nuovo post rilevante dai team (bcherny, catwu, noahzweben, trq212, alistaiir, claudeai, ClaudeDevs) nelle ultime 24 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
