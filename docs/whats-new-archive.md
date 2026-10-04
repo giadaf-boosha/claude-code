@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-03
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+L'unica release nella finestra (v2.1.288, 2 ott) resta sotto la soglia editoriale: `$.ui.selection()` per i mod (legge il testo selezionato in fullscreen e la riga di trascrizione associata), `gh api` integrato nelle sessioni cloud senza GitHub CLI, Ctrl+F in Agent View per cercare sessioni per nome, flag `--max-findings <n>|all` per `/code-review`, recovery della bozza con Up dopo Ctrl+C, prompt di ri-autenticazione OAuth quando un server MCP richiede scope aggiuntivo a meta' tool call, oltre una dozzina di fix su resume/compacting, session titles/hook su Mantle o dietro gateway e chiamate MCP duplicate su risultati oltre 16 MB. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore (l'unico post del 2 ott, sull'investimento da $100M per formare 10.000 ingegneri, non riguarda Claude Code); nessun nuovo slash command, tool primitivo o post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-02
 
 - **Claude Mods**: i plugin possono ora modificare il comportamento profondo di Claude Code con un *hooks module* JS/TypeScript — riscrivere prompt, disegnare pannelli/comandi in UI, sostituire feature built-in — un layer programmabile oltre gli hook JSON dichiarativi (che restano allow/deny/block). Bundlato il primo mod ufficiale **"You should know"**, side-agent opt-in che osserva la sessione e segnala cose che utente o Claude potrebbero perdere (`/plugin enable cc-plugin-you-should-know@builtin`). Fonte: [GitHub Releases v2.1.287](https://github.com/anthropics/claude-code/releases/tag/v2.1.287) · [code.claude.com/docs/en/plugins/mods/create](https://code.claude.com/docs/en/plugins/mods/create) · [@bcherny](https://x.com/bcherny/status/2105756563302723721) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2105721434807083061). Doc: [docs/11-plugins-marketplace.md](./11-plugins-marketplace.md), [docs/07-hooks.md](./07-hooks.md), [docs/19-changelog.md](./19-changelog.md).
@@ -215,12 +223,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 ## 2026-07-26
 
 - **Claude Opus 5** (v2.1.219, 24 lug): nuovo modello Opus, si avvicina a Fable 5 su molti benchmark a meta' del prezzo (stesso pricing di Opus 4.8, $5/$25 per MTok standard). Diventa il modello premium di default su Max e il piu' forte disponibile su Pro; effort toggle low/medium/high per bilanciare costo e capacita', 1M context nativo, modello meno "prompt-injectable" ad oggi. Sostituisce Opus 4.7 in fast mode (`/fast` ora copre Opus 5 e Opus 4.8). Fonte: [Anthropic news](https://www.anthropic.com/news/claude-opus-5) · [GitHub Releases v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219). Doc: [docs/01-snapshot.md](./01-snapshot.md), [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/19-changelog.md](./19-changelog.md).
-
----
-
-## 2026-07-19
-
-- **`/verify` e `/code-review` non piu' auto-invocate** (v2.1.215, 19 lug): Claude non lancia piu' di propria iniziativa le skill `/verify` e `/code-review` a fine task — vanno invocate esplicitamente quando servono. Riduce le review "a sorpresa" non richieste dall'utente. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215). Doc: [docs/09-skills.md](./09-skills.md), [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
 
 ---
 
