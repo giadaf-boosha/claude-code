@@ -8,13 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-03)
+## What's new today (2026-10-05)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-L'unica release nella finestra (v2.1.288, 2 ott) resta sotto la soglia editoriale: `$.ui.selection()` per i mod (legge il testo selezionato in fullscreen e la riga di trascrizione associata), `gh api` integrato nelle sessioni cloud senza GitHub CLI, Ctrl+F in Agent View per cercare sessioni per nome, flag `--max-findings <n>|all` per `/code-review`, recovery della bozza con Up dopo Ctrl+C, prompt di ri-autenticazione OAuth quando un server MCP richiede scope aggiuntivo a meta' tool call, oltre una dozzina di fix su resume/compacting, session titles/hook su Mantle o dietro gateway e chiamate MCP duplicate su risultati oltre 16 MB. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore (l'unico post del 2 ott, sull'investimento da $100M per formare 10.000 ingegneri, non riguarda Claude Code); nessun nuovo slash command, tool primitivo o post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+L'unica release nella finestra (v2.1.289, 3 ott) resta sotto la soglia editoriale: estensioni dell'API mod per gli agenti teammate (`agent.spawn`, id agente unico tra gli hook event, stati idle/waiting in `$.agent.list()`), oltre una ventina di fix su plugin/mod (hot reload, pannelli, Box con border style ignoto, regioni che crescono senza altezza), sandbox auto-allow su variabili d'ambiente espanse nei comandi Bash e artifact pubblicati che si bloccavano su `<script>` non chiusi annidati. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore; nessun nuovo slash command, tool primitivo o post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
