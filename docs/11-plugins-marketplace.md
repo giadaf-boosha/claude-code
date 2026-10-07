@@ -134,6 +134,8 @@ claude plugin install formatter@your-org --scope project
 /reload-plugins                    # apply senza restart
 ```
 
+> **2026-10-07 (auto-update)**: v2.1.292 aggiunge il flag `--marketplace <source>` a `claude plugin install` — aggiunge il marketplace se non e' ancora presente (stessi controlli di `/plugin marketplace add`) e installa il plugin da li' in un solo comando. Fonte: [GitHub Releases v2.1.292](https://github.com/anthropics/claude-code/releases/tag/v2.1.292). Vedi anche README "What's new today" del giorno.
+
 ### Gestione dipendenze tra plugin (da v2.1.143)
 
 Quando un plugin dipende da un altro, il sistema applica la dipendenza in modo automatico:

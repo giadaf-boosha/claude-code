@@ -8,13 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-06)
+## What's new today (2026-10-07)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.292** introduce il parametro `effort` sul tool Agent (esegue un subagent a un livello di ragionamento specifico, indipendente dalla sessione principale), il flag `--marketplace <source>` per `claude plugin install` (aggiunge il marketplace se serve e installa in un solo comando) e nuove API mod (cache dei prompt su `$.model.complete`, evento `prompt.autocomplete`), oltre 90 fix di sicurezza e stabilita'. Fonte: [GitHub Releases v2.1.292](https://github.com/anthropics/claude-code/releases/tag/v2.1.292). Vedi [docs/08 § 8.4](./docs/08-subagents.md#84-spawn--interazione), [docs/11 § 11.3](./docs/11-plugins-marketplace.md#113-comandi-plugin) e [docs/19 § 19.9](./docs/19-changelog.md).
 
-Le uniche release nella finestra (v2.1.290, 5 ott; v2.1.291, 6 ott) restano sotto la soglia editoriale: v2.1.290 aggiunge estensioni dei plugin hook per i mod (`serverToolUses` nel risultato di `turn.step`, `agentId` nell'evento `tool.check` per distinguere i permessi dei subagent, `ceiling` per il livello di approvazione richiesto da un'organizzazione, tipi `ThemeKey`/`Color` per i pannelli), un pulsante Deny nella pagina di sign-in del gateway e il matching parziale del nome sessione per `claude attach`/`claude logs`, oltre un centinaio di fix (proxy/gateway, sessioni lunghe con molte immagini, subagent ripresi che perdono il prompt cache, WebFetch che troncava pagine oltre 100.000 caratteri, `/rewind`, scheduled task al resume, plan mode); v2.1.291 corregge due regressioni introdotte da 2.1.290 e 2.1.288. Nessun annuncio Anthropic blog dedicato specificamente a Claude Code nelle ultime 24-48 ore: l'annuncio del 5 ott su memory persistente per Claude Managed Agents riguarda la piattaforma Claude API/Console (`ant` CLI), non la CLI Claude Code; l'annuncio Barclays del 6 ott e' marketing privo di dettaglio tecnico. Nessun nuovo slash command, tool primitivo o post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Nessun annuncio Anthropic blog dedicato a Claude Code nelle ultime 24 ore (l'unico post Anthropic del 6 ottobre, "Expanding the Cyber Verification Program", riguarda la verifica cyber generale e non Claude Code); nessun post team (Boris/Cat/Noah/Thariq/@claudeai/@ClaudeDevs/@alistaiir/@ClaudeCodeLog) rilevante individuato nelle ultime 24-48 ore (fetch diretto su x.com bloccato dal proxy di rete, ricerca completata via WebSearch senza riscontri specifici di oggi). Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 

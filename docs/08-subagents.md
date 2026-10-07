@@ -75,6 +75,8 @@ claude --agents '[{"name":"adhoc","tools":["Read","Bash"]}]'
 claude agents                  # Agent View (lista + stato sessioni)
 ```
 
+> **2026-10-07 (auto-update)**: v2.1.292 aggiunge il parametro `effort` al tool Agent, per eseguire un sub-agent a un livello di ragionamento specifico (`low`/`medium`/`high`/`xhigh`/`max`) indipendente da quello della sessione principale. Fonte: [GitHub Releases v2.1.292](https://github.com/anthropics/claude-code/releases/tag/v2.1.292). Vedi anche README "What's new today" del giorno.
+
 > **`agent` in `settings.json` per dispatch** (da v2.1.157): il campo `agent` in `.claude/settings.json` (o `~/.claude/settings.json`) viene ora rispettato anche per le sessioni dispatch — Claude usa l'agente configurato di default senza richiederlo esplicitamente a ogni invocazione. Override per singola sessione: `--agent <name>`.
 >
 > ```json
