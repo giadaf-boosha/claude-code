@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
 > 🔧 Operational · 🟡 Intermediate
 
-Feature legate ai modelli: il **fast mode** (Opus 5 e Opus 4.8 di default, da v2.1.219), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Claude Opus 5** come nuovo modello premium (v2.1.219, 24 lug 2026), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), **Claude Sonnet 5** come modello di default (v2.1.197, 30 giu 2026), e **Claude Opus 5.5** come nuovo modello Opus di default, con Pro e Team Standard che passano da Sonnet a Opus (v2.1.280, 22 set 2026).
+Feature legate ai modelli: il **fast mode** (Opus 5 e Opus 4.8 di default, da v2.1.219), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Claude Opus 5** come nuovo modello premium (v2.1.219, 24 lug 2026), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), **Claude Sonnet 5** come modello di default (v2.1.197, 30 giu 2026), **Claude Opus 5.5** come nuovo modello Opus di default, con Pro e Team Standard che passano da Sonnet a Opus (v2.1.280, 22 set 2026), e la famiglia **Claude 5.5** completata da Sonnet 5.5 (v2.1.284, 28 set 2026) e **Haiku 5.5** (v2.1.293, 7 ott 2026).
 
 ## Cosa e' concettualmente
 
@@ -301,7 +301,7 @@ v2.1.280 (22 settembre 2026). `claude-opus-5-5` diventa il **nuovo modello Opus 
 | Disponibilita' | Anthropic API, AWS, Google Cloud, Microsoft Foundry |
 
 ### Relazione con Opus 5 e default dei piani
-Opus 5 resta selezionabile via `/model claude-opus-5`. Da v2.1.280 anche i piani **Pro** e **Team Standard** passano a Opus come modello di default (in precedenza Sonnet) — vedi [1.1](./01-snapshot.md#11-versioni-e-modelli). Anthropic ha rilasciato **Sonnet 5.5** il 28 settembre 2026 (vedi [5.11](#511-claude-sonnet-55-da-v21284)); Haiku 5.5 resta atteso.
+Opus 5 resta selezionabile via `/model claude-opus-5`. Da v2.1.280 anche i piani **Pro** e **Team Standard** passano a Opus come modello di default (in precedenza Sonnet) — vedi [1.1](./01-snapshot.md#11-versioni-e-modelli). Con **Sonnet 5.5** (28 settembre, [5.11](#511-claude-sonnet-55-da-v21284)) e **Haiku 5.5** (7 ottobre, [5.12](#512-claude-haiku-55-da-v21293)) la famiglia Claude 5.5 e' ora completa su tutti i livelli.
 
 <sub>Aggiornato 2026-09-23 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-opus-5-5) · [GitHub Releases v2.1.280](https://github.com/anthropics/claude-code/releases/tag/v2.1.280).</sub>
 
@@ -331,9 +331,40 @@ v2.1.284 (28 settembre 2026). `claude-sonnet-5-5` diventa il **nuovo modello Son
 | Disponibilita' | Claude API, Claude Platform; anche in GitHub Copilot dallo stesso giorno |
 
 ### Relazione con Sonnet 5 e Opus 5.5
-Sonnet 5 resta selezionabile via `/model claude-sonnet-5`. Con Sonnet 5.5 la famiglia Claude 5.5 copre sia il livello premium (Opus 5.5, [5.10](#510-claude-opus-55-da-v21280)) che il default di massa; Haiku 5.5 resta atteso.
+Sonnet 5 resta selezionabile via `/model claude-sonnet-5`. Con Sonnet 5.5 la famiglia Claude 5.5 copre sia il livello premium (Opus 5.5, [5.10](#510-claude-opus-55-da-v21280)) che il default di massa; il livello small-model e' coperto da **Haiku 5.5** dal 7 ottobre 2026 ([5.12](#512-claude-haiku-55-da-v21293)).
 
 <sub>Aggiornato 2026-09-29 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-sonnet-5-5) · [GitHub Releases v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284).</sub>
+
+---
+
+## 5.12 Claude Haiku 5.5 (da v2.1.293)
+
+### Annunciato
+v2.1.293 (7 ottobre 2026). `claude-haiku-5-5` diventa il **nuovo modello Haiku di default** sulla Claude API, terzo e ultimo tassello della famiglia Claude 5.5 dopo Opus 5.5 ([5.10](#510-claude-opus-55-da-v21280)) e Sonnet 5.5 ([5.11](#511-claude-sonnet-55-da-v21284)). Anthropic lo descrive come "il modello small piu' economico, veloce e capace mai rilasciato": pensato per lavoro ad alto volume — riassunti, compaction, query su database, classificazione — e utilizzabile come sub-agent di coding affiancato a Opus 5.5/Sonnet 5.5 (es. Devin CLI di Cognition lo usa come "sidekick" con Opus 5.5 come lead). E' la prima Haiku con **effort regolabile**.
+
+### Come si usa in Claude Code
+```bash
+/model claude-haiku-5-5   # esplicito
+/model claude-haiku-4-5   # per restare sul predecessore
+```
+
+### Caratteristiche principali
+| Caratteristica | Valore |
+|---|---|
+| Model ID | `claude-haiku-5-5` |
+| Context window | 1M token |
+| Pricing (prompt ≤100K) | $0,10/MTok input, $0,50/MTok output |
+| Pricing (prompt >100K) | $0,50/MTok input, $2,50/MTok output |
+| Cache read / write | $0,01 / $0,125 per MTok (≤100K) |
+| Costo vs Haiku 4.5 | Circa -75% in media |
+| Effort | Regolabile (prima volta su una Haiku) |
+| Terminal-Bench 4.0 | 39,2% (Haiku 4.5: 0,0%; Sonnet 5.5: 70,6%) |
+| Disponibilita' | Claude API, AWS, Google Cloud, Microsoft Azure |
+
+### Relazione con Haiku 4.5 e uso come sub-agent
+Haiku 4.5 resta selezionabile via `/model claude-haiku-4-5`. Haiku 5.5 e' indicato per i sub-agent Claude Code su task ristretti (es. `Explore`, riassunti di contesto) dove Opus 5.5/Sonnet 5.5 sarebbero sovradimensionati — vedi [8](./08-subagents.md) per la configurazione del modello dei sub-agent.
+
+<sub>Aggiornato 2026-10-08 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-haiku-5-5) · [GitHub Releases v2.1.293](https://github.com/anthropics/claude-code/releases/tag/v2.1.293).</sub>
 
 ---
 

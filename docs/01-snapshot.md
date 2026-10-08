@@ -118,6 +118,9 @@ Cronologia compatta (per dettaglio vedi [19-changelog.md](./19-changelog.md)):
 | 14 set 2026 | **Limiti settimanali**: bonus temporaneo +50% sostituito da aumento permanente +25% — netto -17% per chi usa il bonus oggi (vedi [1.4](#14-pricing-semplificato)) |
 | 22 set 2026 | v2.1.280 — **Claude Opus 5.5** diventa il nuovo modello Opus di default; Pro e Team Standard passano da Sonnet a Opus come default — vedi [05.10](./05-fast-mode-1m-context.md#510-claude-opus-55-da-v21280) |
 | 28 set 2026 | v2.1.284 — **Claude Sonnet 5.5** diventa il nuovo modello Sonnet di default sulla Claude API e in Claude Code — vedi [05.11](./05-fast-mode-1m-context.md#511-claude-sonnet-55-da-v21284) |
+| 7 ott 2026 | v2.1.293 — **Claude Haiku 5.5** diventa il nuovo modello Haiku di default, terzo e ultimo tassello della famiglia Claude 5.5 — vedi [05.12](./05-fast-mode-1m-context.md#512-claude-haiku-55-da-v21293) |
+
+<sub>Aggiornato 2026-10-08 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-haiku-5-5) · [GitHub Releases v2.1.293](https://github.com/anthropics/claude-code/releases/tag/v2.1.293).</sub>
 
 <sub>Aggiornato 2026-09-29 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-sonnet-5-5) · [GitHub Releases v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284).</sub>
 

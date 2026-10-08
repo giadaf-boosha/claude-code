@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **3 ottobre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.287** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`).
+> Ultimo aggiornamento: **8 ottobre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.293** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-06)
+## What's new today (2026-10-08)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **Claude Haiku 5.5**: Anthropic rilascia il nuovo modello Haiku di default (`claude-haiku-5-5`, v2.1.293) — 1M context, circa il 75% piu' economico di Haiku 4.5, prima Haiku con effort regolabile, pensata come sub-agent di coding affiancato a Opus 5.5/Sonnet 5.5. Completa la famiglia Claude 5.5. Fonte: [Anthropic](https://www.anthropic.com/claude-haiku-5-5) · [GitHub Releases v2.1.293](https://github.com/anthropics/claude-code/releases/tag/v2.1.293). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Le uniche release nella finestra (v2.1.290, 5 ott; v2.1.291, 6 ott) restano sotto la soglia editoriale: v2.1.290 aggiunge estensioni dei plugin hook per i mod (`serverToolUses` nel risultato di `turn.step`, `agentId` nell'evento `tool.check` per distinguere i permessi dei subagent, `ceiling` per il livello di approvazione richiesto da un'organizzazione, tipi `ThemeKey`/`Color` per i pannelli), un pulsante Deny nella pagina di sign-in del gateway e il matching parziale del nome sessione per `claude attach`/`claude logs`, oltre un centinaio di fix (proxy/gateway, sessioni lunghe con molte immagini, subagent ripresi che perdono il prompt cache, WebFetch che troncava pagine oltre 100.000 caratteri, `/rewind`, scheduled task al resume, plan mode); v2.1.291 corregge due regressioni introdotte da 2.1.290 e 2.1.288. Nessun annuncio Anthropic blog dedicato specificamente a Claude Code nelle ultime 24-48 ore: l'annuncio del 5 ott su memory persistente per Claude Managed Agents riguarda la piattaforma Claude API/Console (`ant` CLI), non la CLI Claude Code; l'annuncio Barclays del 6 ott e' marketing privo di dettaglio tecnico. Nessun nuovo slash command, tool primitivo o post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Il resto delle release nella finestra (v2.1.292, 6 ott; v2.1.294, 8 ott) resta sotto la soglia editoriale: v2.1.292 aggiunge `claude plugin install --marketplace`, un parametro `effort` per lo strumento Agent e un fix di sicurezza su letture di file via rete UNC che bypassavano il prompt dei permessi; v2.1.294 corregge solo hook `prompt`/`agent` scritti come istruzioni che non bloccavano cio' che dovevano. Nessun nuovo slash command, tool primitivo o post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
