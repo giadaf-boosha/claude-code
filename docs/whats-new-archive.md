@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-08
+
+- **Claude Haiku 5.5**: Anthropic rilascia il nuovo modello Haiku di default (`claude-haiku-5-5`, v2.1.293) — 1M context, circa il 75% piu' economico di Haiku 4.5, prima Haiku con effort regolabile, pensata come sub-agent di coding affiancato a Opus 5.5/Sonnet 5.5. Completa la famiglia Claude 5.5. Fonte: [Anthropic](https://www.anthropic.com/claude-haiku-5-5) · [GitHub Releases v2.1.293](https://github.com/anthropics/claude-code/releases/tag/v2.1.293). Doc: [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/01-snapshot.md](./01-snapshot.md), [docs/19-changelog.md](./19-changelog.md).
+
+Il resto delle release nella finestra (v2.1.292, 6 ott; v2.1.294, 8 ott) resta sotto la soglia editoriale: v2.1.292 aggiunge `claude plugin install --marketplace`, un parametro `effort` per lo strumento Agent e un fix di sicurezza su letture di file via rete UNC che bypassavano il prompt dei permessi; v2.1.294 corregge solo hook `prompt`/`agent` scritti come istruzioni che non bloccavano cio' che dovevano. Nessun nuovo slash command, tool primitivo o post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-06
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -221,12 +229,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 ## 2026-08-01
 
 > Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-07-29
-
-- **Spec MCP 2026-07-28**: il Model Context Protocol passa a un core stateless (niente piu' `Mcp-Session-Id`, ogni request puo' essere gestita da qualsiasi istanza server), con OAuth/OIDC rafforzati ed extension versionate per Apps e Tasks — il maggior aggiornamento del protocollo dal lancio. Supporto in rollout sui prodotti Claude, incluso Claude Code. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2082164248697069935). Doc: [docs/10-mcp.md](./10-mcp.md), [docs/19-changelog.md](./19-changelog.md).
 
 ---
 

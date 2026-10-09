@@ -121,7 +121,15 @@ Conditional `if:` (da v2.1.83): permette di matchare pattern fini-grained dentro
 |---|---|
 | `0` + JSON output | Process decision |
 | `2` | Blocking, stderr → Claude (motivazione) |
-| altro | Non-blocking, stderr → log |
+| altro | Non-blocking, stderr → log (default) |
+
+**`onFailure: "block"`** (handler `command`/`http`, da v2.1.295): di default un hook che non parte, va in timeout o esce con un codice inatteso e' trattato come "altro" — non-blocking, l'azione prosegue. Per regole di sicurezza non negoziabili questo e' un fail-open indesiderato: con `"onFailure": "block"` sullo stesso oggetto hook, un fallimento del processo diventa equivalente a exit `2` e blocca l'azione invece di lasciarla passare.
+
+```json
+{ "type": "command", "command": "./guard.sh", "onFailure": "block" }
+```
+
+<sub>Aggiornato 2026-10-09 via daily what's new. Fonte: [GitHub Releases v2.1.295](https://github.com/anthropics/claude-code/releases/tag/v2.1.295).</sub>
 
 ---
 
