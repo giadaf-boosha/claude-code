@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-09
+
+- **`onFailure: "block"` per gli hook**: un hook `command`/`http` che non parte, va in timeout o esce con un codice inatteso bloccava l'azione in corso solo per caso (default "non-blocking"). Da v2.1.295 si puo' dichiarare esplicitamente `"onFailure": "block"` sull'hook perche' un suo fallimento equivalga a exit `2` — utile per regole di sicurezza non negoziabili dove il fail-open e' inaccettabile. Fonte: [GitHub Releases v2.1.295](https://github.com/anthropics/claude-code/releases/tag/v2.1.295). Doc: [docs/07-hooks.md](./07-hooks.md), [docs/19-changelog.md](./19-changelog.md).
+
+Il resto della release v2.1.295 (8 ott, enorme: 120+ voci) resta sotto la soglia editoriale: Program Status Protocol (OSC 7501) per i terminali, header `request-id` sul gateway, cap tool search alzato a 16.384 caratteri, subagent limitati a 32 skill precaricate, decine di fix su MCP remoto, `claude -p`, vim mode e mod. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore (i post Anthropic dell'8 ott — Usage Policy, scientific discovery, Cyber Mission — non riguardano Claude Code). Nessun nuovo slash command, tool primitivo o post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-08
 
 - **Claude Haiku 5.5**: Anthropic rilascia il nuovo modello Haiku di default (`claude-haiku-5-5`, v2.1.293) — 1M context, circa il 75% piu' economico di Haiku 4.5, prima Haiku con effort regolabile, pensata come sub-agent di coding affiancato a Opus 5.5/Sonnet 5.5. Completa la famiglia Claude 5.5. Fonte: [Anthropic](https://www.anthropic.com/claude-haiku-5-5) · [GitHub Releases v2.1.293](https://github.com/anthropics/claude-code/releases/tag/v2.1.293). Doc: [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/01-snapshot.md](./01-snapshot.md), [docs/19-changelog.md](./19-changelog.md).
@@ -221,12 +229,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 ---
 
 ## 2026-08-02
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-08-01
 
 > Nessuna novita' significativa nelle ultime 24 ore.
 
