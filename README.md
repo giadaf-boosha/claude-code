@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **10 ottobre 2026, 07:00 CEST**.
-> Versione CLI di riferimento: **v2.1.295** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **12 ottobre 2026, 07:00 CEST**.
+> Versione CLI di riferimento: **v2.1.296** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-10)
+## What's new today (2026-10-12)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-L'unica release nella finestra (v2.1.296, 9 ott) resta sotto la soglia editoriale: `autoCompactWindow` per i subagent, `CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL`, backoff piu' lungo configurabile sugli errori 529, opzione `allow_large` sul Read tool, limite description tool MCP alzato a 4.096 caratteri, cache read di Sonnet 5.5 scesa a $0,10/MTok, oltre un centinaio di fix (hook `PreToolUse` managed, resume/subagent, prompt dei permessi PowerShell, redazione secret). Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'ultimo, Claude Haiku 5.5, e' del 7 ottobre e gia' coperto). Nessun nuovo slash command, tool primitivo o post team rilevante: X non raggiungibile (DNS) e ricerche web senza risultati pertinenti. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Nessuna nuova release CLI nella finestra: v2.1.296 (9 ott) resta l'ultima pubblicata su [GitHub Releases](https://github.com/anthropics/claude-code/releases), nessuna v2.1.297+ rilevata. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (gli ultimi post Claude Code-correlati — "Claude Code in the cloud: a field guide", "Building effective agent automations", Claude Haiku 5.5 — sono del 6-8 ottobre e gia' coperti nei giorni precedenti). Nessun nuovo slash command, tool primitivo o post team rilevante: X/Twitter non raggiungibile direttamente (DNS) e le ricerche web di fallback sui profili @bcherny, @_catwu, @noahzweben, @trq212, @claudeai, @ClaudeDevs non hanno restituito post datati 11-12 ottobre. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
