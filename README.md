@@ -8,13 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-10)
+## What's new today (2026-10-14)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-L'unica release nella finestra (v2.1.296, 9 ott) resta sotto la soglia editoriale: `autoCompactWindow` per i subagent, `CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL`, backoff piu' lungo configurabile sugli errori 529, opzione `allow_large` sul Read tool, limite description tool MCP alzato a 4.096 caratteri, cache read di Sonnet 5.5 scesa a $0,10/MTok, oltre un centinaio di fix (hook `PreToolUse` managed, resume/subagent, prompt dei permessi PowerShell, redazione secret). Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'ultimo, Claude Haiku 5.5, e' del 7 ottobre e gia' coperto). Nessun nuovo slash command, tool primitivo o post team rilevante: X non raggiungibile (DNS) e ricerche web senza risultati pertinenti. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+L'unica release nella finestra (v2.1.299, 14 ott) resta sotto la soglia editoriale: idle compaction per sessioni terminal con oltre 200K token ferme da ~54 minuti (configurabile via `idleCompaction` in settings.json e `CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS`), `/effort` e `/fast` che impostano ora il default delle nuove sessioni in Agent View, `CLAUDE_CODE_DISABLE_FILE_MENTIONS`, `--shutdown-drain-sec` per il self-hosted runner, nuove API mod (`$.prompt.media`, `$.session.identity()`, styling `Text`/`Box`), avvisi `/usage` su effort massimo/workflow/context sempre attivo, oltre 131 fix (sandbox Bash su Linux, WSL2, Remote Control). Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post nella finestra, 13 ott, riguarda l'insider threat program AI di Uber, non Claude Code). Nessun nuovo slash command, tool primitivo o post team rilevante: X non raggiungibile (DNS) e ricerche web di fallback senza risultati pertinenti nella finestra 10-14 ottobre. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
