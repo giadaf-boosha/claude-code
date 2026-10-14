@@ -210,6 +210,8 @@ Il plugin auto-loadato appare nella tab **Installed** di `/plugin` e rispetta tu
 
 Da v2.1.269, gli autori di plugin non devono piu' verificare a mano se una skill o un agente si comporta come previsto: `claude plugin eval` esegue la eval suite del plugin contro Claude Code e restituisce un risultato con punteggio, riproducibile, in due formati.
 
+> **2026-10-14 (auto-update)**: da v2.1.299, `--disallow-tools` (e il campo `disallowed_tools` nei case) escludono tool built-in come Agent dalle eval run, per isolare meglio cosa si sta davvero testando. Fonte: [GitHub Releases v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299). Vedi anche README "What's new today" del giorno.
+
 ```bash
 claude plugin eval ./my-plugin              # esegue la suite, report leggibile a schermo
 claude plugin eval ./my-plugin --json        # output JSON (CI, script)
