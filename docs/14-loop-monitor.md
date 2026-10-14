@@ -107,6 +107,8 @@ Max 50 scheduled tasks per sessione.
 
 Lanciato **9 aprile 2026** in v2.1.98. Sostituisce il polling con interrupt push-based.
 
+> **2026-10-14 (auto-update)**: v2.1.299 corregge `ScheduleWakeup`, che non scattava piu' mentre un task in background era in corso su sessioni Agent SDK, IDE e `claude remote-control`. Fonte: [GitHub Releases v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299). Vedi anche README "What's new today" del giorno.
+
 ### Use case
 
 - Tail log file e flag errors

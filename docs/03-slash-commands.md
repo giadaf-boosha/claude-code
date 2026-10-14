@@ -11,6 +11,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Modello mentale**: come le funzioni built-in di una shell vs gli script in `~/bin`. Stessa cosa, due classi.
 
+> **2026-10-14 (auto-update)**: da v2.1.299, `/effort` e `/fast` nell'agent view impostano il default per le nuove sessioni; lanciati senza argomento aprono un picker interattivo, come gia' faceva `/model`. Fonte: [GitHub Releases v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299). Vedi anche README "What's new today" del giorno.
+
 **Componente harness IMPACT**: Tool layer (espongono capabilities) + Intent capture (riducono ambiguita' del prompt).
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.

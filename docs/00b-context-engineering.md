@@ -100,6 +100,8 @@ prompt: "Trova tutti gli endpoint REST nel monorepo e ritorna lista file:linea"
 ### 7. `/compact` e Rewind "Summarize up to here"
 `/compact` comprime l'intera conversation in summary, mantenendo solo cio' che serve. Ideale ogni 30-50 turn.
 
+> **2026-10-14 (auto-update)**: da v2.1.299, una conversazione da terminale oltre 200K token ferma da ~54 minuti viene compattata in automatico (idle compaction) prima che la cache di un'ora scada — niente da riprocessare al prossimo messaggio. Soglia regolabile con `CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS`, disattivabile con `"idleCompaction": false`. Fonte: [GitHub Releases v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299). Vedi anche README "What's new today" del giorno.
+
 Da v2.1.141 (13 mag 2026) il menu **Rewind** aggiunge l'opzione **"Summarize up to here"**: comprime selettivamente il context accumulato fino al punto scelto, lasciando intatti i turni piu' recenti. Utile quando si vuole alleggerire il context di lunghe sessioni senza perdere il filo dell'ultima interazione.
 
 ```

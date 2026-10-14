@@ -59,6 +59,8 @@ Il 28 luglio 2026 e' uscita la spec **MCP 2026-07-28**, il maggior aggiornamento
 
 Il supporto e' in rollout sui prodotti Claude, incluso Claude Code — i server `http`/`sse` esistenti restano compatibili, la migrazione riguarda soprattutto chi implementa server MCP. Da tenere distinto dagli **MCP tunnels** (research preview da maggio 2026): quelli risolvono l'accesso a server dentro reti private via connessione outbound-only, non riguardano lo stato del protocollo.
 
+> **2026-10-14 (auto-update)**: da v2.1.299 le richieste verso il proxy connector di claude.ai, i server MCP ospitati da Anthropic e il proxy MCP di sessioni cloud/self-hosted runner non seguono piu' redirect HTTP (hardening di sicurezza; i redirect gestiti dal server del connector stesso non sono toccati). La negoziazione del protocollo 2026-07-28 si estende anche a sessioni cloud e Remote Control (`MCP_PROTOCOL_NEGOTIATION=legacy` per l'opt-out). Fonte: [GitHub Releases v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299). Vedi anche README "What's new today" del giorno.
+
 <sub>Aggiornato 2026-07-29 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude).</sub>
 
 ---

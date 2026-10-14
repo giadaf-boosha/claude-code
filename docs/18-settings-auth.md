@@ -312,6 +312,8 @@ La scelta tra **subscription OAuth** (Claude Pro/Max/Team/Enterprise) e **API ke
   - Accesso ai modelli piu' recenti (Sonnet 4.7, Opus 4.7) senza per-request cost se hai Max
   - **Nessun costo per richiesta** sul piano Max — adatto a sessioni lunghe e a `--dangerously-skip-permissions` in worktree isolati
   - Tracking unificato in `/usage` (sessione, settimana, breakdown per modello)
+
+> **2026-10-14 (auto-update)**: v2.1.299 corregge `/usage`, l'avviso di limite in arrivo e la status line, che potevano mostrare oltre il 100% di utilizzo ([#92238](https://github.com/anthropics/claude-code/issues/92238)); aggiunge anche avvisi dedicati per max effort, workflow, always-on context e risultati tool molto grandi. Fonte: [GitHub Releases v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299). Vedi anche README "What's new today" del giorno.
   - Verifica login: `/cost` deve mostrare info subscription, non saldo API
 - **API key** (`ANTHROPIC_API_KEY`)
   - Pay-per-token, nessun cap settimanale
