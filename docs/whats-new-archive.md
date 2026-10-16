@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-15
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+Le due release nella finestra (v2.1.299 e v2.1.300, entrambe 14 ott; nessuna release pubblica tra il 10 e il 13 ottobre) restano sotto la soglia editoriale: idle compaction per conversazioni ferme oltre 200K token (compattate dopo circa 54 minuti di inattivita', prima che la cache di un'ora scada — disattivabile con `"idleCompaction": false`), `CLAUDE_CODE_DISABLE_FILE_MENTIONS` per passare i path invece dei contenuti negli @-mention, `/effort` e `/fast` che impostano i default delle nuove sessioni, nuovi warning su `/usage`; v2.1.300 aggiunge solo API per i mod (`virtualText`, hook `prompt.change`, `$.ui.view({ agentId })`), attributi OpenTelemetry GenAI e l'estensione di `/advisor` (feature gia' esistente da v2.1.98) a Claude Platform su AWS, oltre un paio di centinaia di fix complessivi. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (i due post del 14 ottobre — ufficio di Singapore, preparazione midterm USA — non riguardano Claude Code). Nessun nuovo slash command, tool primitivo o post team rilevante: X non raggiungibile (DNS), ricerche web senza risultati pertinenti. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-10
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -227,18 +235,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 - **Rimosso `/ultraplan`** (v2.1.222, 4 ago): il planning in cloud lanciato ad aprile 2026 e' stato eliminato dal CLI senza sostituto dedicato — resta `/plan` locale o le routine (`/schedule`) per orchestrazione cloud. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222). Doc: [docs/15-ultraplan-ultrareview.md](./docs/15-ultraplan-ultrareview.md), [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **`/review` torna alias di `/code-review`** (v2.1.223, 6 ago): revisiona il diff corrente o una PR (`/code-review <level> <pr#>`), `/code-review ultra` per la deep review cloud — inverte la separazione single-pass introdotta a luglio (v2.1.202). Fonte: [GitHub Releases v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
 - **Focus view in VS Code** (v2.1.221, 4 ago): toggle `Ctrl+Alt+F` che nasconde l'attivita' dei tool dietro un riassunto per-turno espandibile, con indicatore live del tool in esecuzione. Fonte: [GitHub Releases v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221). Doc: [docs/17-ide-surface.md](./docs/17-ide-surface.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
----
-
-## 2026-08-03
-
-> Nessuna novita' significativa nelle ultime 24 ore.
-
----
-
-## 2026-08-02
-
-> Nessuna novita' significativa nelle ultime 24 ore.
 
 ---
 
