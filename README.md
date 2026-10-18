@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **17 ottobre 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **18 ottobre 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.295** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-17)
+## What's new today (2026-10-18)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Le due release nella finestra (v2.1.301, 15 ott; v2.1.302, 16 ott) restano sotto la soglia editoriale: v2.1.301 aggiunge `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS` per il retry mode non presidiato, il motion `%` in vim mode e nuovi attributi OpenTelemetry (`classifier_verdict`, `permission_mode`, `classifier_category`) sugli eventi `tool_decision`; v2.1.302 aggiunge `CLAUDE_CODE_AUTO_MODE_MODEL` per scegliere il modello del classificatore auto mode lato client, una riga "Idle compaction" in `/config`, un banner nelle sessioni cloud sul perche' una routine non e' partita, e porta i fork subagent — gia' default in terminale — a default anche su `claude -p`, Agent SDK, desktop app e VS Code (disattivabile con `CLAUDE_CODE_FORK_SUBAGENT=0`), oltre una quarantina di fix. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (i post del 14-15 ottobre — ufficio di Singapore, midterm USA, aggiornamento sui valutatori indipendenti — non riguardano Claude Code). Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Nessuna nuova release nella finestra: l'ultima resta v2.1.302 (16 ott, gia' coperta ieri), nessun tag successivo su GitHub Releases ne' nuove entry sul changelog ufficiale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (gli ultimi post, 14-15 ottobre, riguardano l'ufficio di Singapore, i midterm USA e i valutatori indipendenti, non Claude Code). Nessun nuovo slash command, tool primitivo o post team rilevante: X non raggiungibile via fetch diretto (DNS), ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
