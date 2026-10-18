@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-17
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+Le due release nella finestra (v2.1.301, 15 ott; v2.1.302, 16 ott) restano sotto la soglia editoriale: v2.1.301 aggiunge `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS` per il retry mode non presidiato, il motion `%` in vim mode e nuovi attributi OpenTelemetry (`classifier_verdict`, `permission_mode`, `classifier_category`) sugli eventi `tool_decision`; v2.1.302 aggiunge `CLAUDE_CODE_AUTO_MODE_MODEL` per scegliere il modello del classificatore auto mode lato client, una riga "Idle compaction" in `/config`, un banner nelle sessioni cloud sul perche' una routine non e' partita, e porta i fork subagent — gia' default in terminale — a default anche su `claude -p`, Agent SDK, desktop app e VS Code (disattivabile con `CLAUDE_CODE_FORK_SUBAGENT=0`), oltre una quarantina di fix. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (i post del 14-15 ottobre — ufficio di Singapore, midterm USA, aggiornamento sui valutatori indipendenti — non riguardano Claude Code). Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-15
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
