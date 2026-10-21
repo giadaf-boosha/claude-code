@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-20
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+L'unica release nella finestra (v2.1.304, 19 ott) resta sotto la soglia editoriale: `/auto-mode-setup`, wizard guidato per configurare auto mode (comando di setup per una feature di sistema gia' esistente, non un primitivo nuovo), e `/claude-api managed-agents-secure`, confronto in sola lettura tra le impostazioni di un Managed Agent e la guida di sicurezza Anthropic; il resto e' un avviso di utilizzo sul resume di conversazioni inattive (Pro/Max), estensioni API mod e 43 fix (tra cui `rm -r` su drive montati con lo stesso prompt di sicurezza di `rm -rf /Applications`, e un `--worktree` che in uscita non elimina piu' silenziosamente worktree/branch con commit non pushati). Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post del 18 ottobre, sul fondo per il beneficio pubblico, non riguarda Claude Code). Nessun nuovo slash command di rilievo, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-19
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
