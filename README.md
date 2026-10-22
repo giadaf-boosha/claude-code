@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **20 ottobre 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **22 ottobre 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.295** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-21)
+## What's new today (2026-10-22)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Le due release nella finestra (v2.1.305, 20 ott; v2.1.306, 21 ott) restano sotto la soglia editoriale: v2.1.305 aggiunge il setting `sandbox.allowNestedUserNamespaces` per far creare user namespace a comandi Linux sandboxed (serve a Chromium e rootless podman, ma allenta anche le protezioni sui file della sandbox) e `CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS` per il retry mode non presidiato, oltre a decine di fix (tool search rifiutata da gateway/endpoint che rompeva ogni richiesta su Vertex/Bedrock, worktree in repository bare che partivano dal HEAD locale invece del branch di default, `/effort`/`/autocompact` ignorati con nomi modello che differiscono solo per maiuscole o tag `[1m]`); v2.1.306 e' solo due fix (falso "prompt is too long" con tanti tool MCP, `claude -p` che segnalava "Not logged in" in sessioni cloud). Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post recente, il 18 ottobre sul fondo per il beneficio pubblico, non riguarda Claude Code). Nessun nuovo slash command di rilievo, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Le due release nella finestra (v2.1.307, 21 ott; v2.1.308, 22 ott) restano sotto la soglia editoriale: v2.1.307 aggiunge l'evento OpenTelemetry `claude_code.safety_event` (emesso per ogni tool call bloccata, confermata o rimandata da permessi, auto mode, hook o sandbox), un retry automatico (fino a due tentativi) sui tool call non parsabili prima di terminare il turno con errore, un timeout di 30 minuti di default per gli hook di checkout sui self-hosted runner (configurabile con `--checkout-hook-timeout-min`), l'estensione di Code Review con `@claude review stop` (oltre a `off`/`pause`) per terminare un abbonamento `@claude review always` su una PR, e il comando `/claude-api api-version`; v2.1.308 e' solo fix e miglioramenti di affidabilita' senza dettaglio ulteriore. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post del 21 ottobre, sull'ingresso del fisico Christopher Stubbs nel Long-Term Benefit Trust, non riguarda Claude Code). Nessun nuovo slash command di rilievo, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
