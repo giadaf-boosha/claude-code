@@ -17,6 +17,8 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
 
+> **2026-10-23 (auto-update)**: Anthropic dona lo standard Agent Skills (nome, logo, org GitHub, dominio agentskills.io) alla Agentic AI Foundation (Linux Foundation), co-fondata con Block e OpenAI e gia' destinataria di MCP; oltre 70 piattaforme integrate, quasi 280M installazioni dal lancio dic 2025. Fonte: [Anthropic](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 9.1 Bundled skills (sempre disponibili)

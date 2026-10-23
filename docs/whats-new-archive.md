@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-22
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+Le due release nella finestra (v2.1.307, 21 ott; v2.1.308, 22 ott) restano sotto la soglia editoriale: v2.1.307 aggiunge l'evento OpenTelemetry `claude_code.safety_event` (emesso per ogni tool call bloccata, confermata o rimandata da permessi, auto mode, hook o sandbox), un retry automatico (fino a due tentativi) sui tool call non parsabili prima di terminare il turno con errore, un timeout di 30 minuti di default per gli hook di checkout sui self-hosted runner (configurabile con `--checkout-hook-timeout-min`), l'estensione di Code Review con `@claude review stop` (oltre a `off`/`pause`) per terminare un abbonamento `@claude review always` su una PR, e il comando `/claude-api api-version`; v2.1.308 e' solo fix e miglioramenti di affidabilita' senza dettaglio ulteriore. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post del 21 ottobre, sull'ingresso del fisico Christopher Stubbs nel Long-Term Benefit Trust, non riguarda Claude Code). Nessun nuovo slash command di rilievo, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-21
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -234,12 +242,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 
 - **Cross-session messaging: mention diretto con `@`** (v2.1.232, 13 ago): digitare `@nome-sessione` nel prompt basta a raggiungere un'altra sessione Claude Code — Claude usa `SendMessage` in automatico, senza bisogno di invocare esplicitamente il tool; se il nome e' univoco tra le sessioni vive, il messaggio parte subito senza conferma. Nomi duplicati sulla stessa macchina ricevono ora una variante automatica `nome-parola-parola`. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Doc: [docs/17-ide-surface.md](./17-ide-surface.md), [docs/19-changelog.md](./19-changelog.md).
 - **Subagent forking di default** (v2.1.232, 13 ago): i subagent `subagent_type: "fork"` ereditano ora conversazione e prompt cache completi dalla sessione padre; gli agent non-teammate spawnati in sessioni interattive girano di default in background invece che in foreground. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Doc: [docs/08-subagents.md](./08-subagents.md), [docs/19-changelog.md](./19-changelog.md).
-
----
-
-## 2026-08-12
-
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.227 e v2.1.228, 10-11 ago) contengono solo bug fix e hardening, sotto la soglia editoriale.
 
 ---
 

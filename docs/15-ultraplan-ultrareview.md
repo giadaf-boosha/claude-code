@@ -81,6 +81,8 @@ Se manca al primo uso, Claude Code crea un cloud env standard per la sessione we
 
 Lanciato **Week 14** (v2.1.86, 30 mar 2026), GA con Opus 4.7 (v2.1.111, 16 apr 2026). Una flotta di agenti specialisti analizza la diff in parallelo. Ogni finding e' **riprodotto da un agente di verifica indipendente** prima di essere riportato in CLI: solo bug verificati, non rumore stilistico.
 
+> **2026-10-23 (auto-update)**: da v2.1.309, `claude ultrareview` richiede un workspace di cui ti fidi — chiede conferma in terminale, altrimenti si rifiuta; gli script passano `--trust-workspace` (senza valore: PR/branch prima) o impostano `CLAUDE_CODE_DISABLE_ULTRAREVIEW_TRUST_CHECK=1`. Fonte: [GitHub Releases v2.1.309](https://github.com/anthropics/claude-code/releases/tag/v2.1.309). Vedi anche README "What's new today" del giorno.
+
 ### `/review` vs `/ultrareview`
 
 |  | `/review` | `/ultrareview` |

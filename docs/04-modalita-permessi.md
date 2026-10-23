@@ -38,6 +38,8 @@ CLI: `--permission-mode manual|acceptEdits|plan|auto|dontAsk|bypassPermissions`.
 
 <sub>Aggiornato 2026-07-04 via daily what's new. Fonte: [GitHub Releases v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200).</sub>
 
+> **2026-10-23 (auto-update)**: da v2.1.309, in bypass permissions mode (Desktop app, VS Code) un `rm`/`rmdir` pericoloso viene negato subito con un suggerimento di riscrittura, invece del vecchio prompt di conferma che bloccava le sessioni non presidiate. Fonte: [GitHub Releases v2.1.309](https://github.com/anthropics/claude-code/releases/tag/v2.1.309). Vedi anche README "What's new today" del giorno.
+
 ### Protected paths (mai auto-approved)
 - Directories: `.git`, `.vscode`, `.idea`, `.husky`, `.claude` (eccetto `.claude/commands`, `.claude/agents`, `.claude/skills`, `.claude/worktrees`)
 - Files: `.gitconfig`, `.gitmodules`, `.bashrc`, `.zshrc`, `.profile`, `.ripgreprc`, `.mcp.json`, `.claude.json`

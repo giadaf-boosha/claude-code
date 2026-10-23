@@ -1,20 +1,23 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **22 ottobre 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **23 ottobre 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.295** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-22)
+## What's new today (2026-10-23)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **Agent Skills donato alla Agentic AI Foundation**: Anthropic cede lo standard Agent Skills (nome, logo, org GitHub, dominio agentskills.io) alla Agentic AI Foundation ospitata dalla Linux Foundation, co-fondata con Block e OpenAI e gia' destinataria di MCP; oltre 70 piattaforme lo hanno integrato, quasi 280M installazioni dal lancio di dicembre 2025. Fonte: [Anthropic](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation). Vedi [docs/09-skills.md § Cosa e' concettualmente](./docs/09-skills.md).
+- **CLI v2.1.309**: `claude ultrareview` richiede ora un workspace di cui ti fidi (chiede conferma in terminale, altrimenti si rifiuta); script non interattivi passano `--trust-workspace` o impostano `CLAUDE_CODE_DISABLE_ULTRAREVIEW_TRUST_CHECK=1`. Fonte: [GitHub Releases v2.1.309](https://github.com/anthropics/claude-code/releases/tag/v2.1.309). Vedi [docs/15-ultraplan-ultrareview.md § 15.2](./docs/15-ultraplan-ultrareview.md) e [docs/19-changelog.md](./docs/19-changelog.md).
+- **Fix v2.1.309**: in bypass permissions mode (Desktop app, VS Code) un `rm`/`rmdir` pericoloso viene ora negato subito con un suggerimento di riscrittura, invece del vecchio prompt di conferma che bloccava le sessioni non presidiate in attesa di una risposta. Fonte: [GitHub Releases v2.1.309](https://github.com/anthropics/claude-code/releases/tag/v2.1.309). Vedi [docs/04-modalita-permessi.md § 4.1](./docs/04-modalita-permessi.md).
+- **Fix v2.1.309**: corretto un bug per cui Claude notificava utenti GitHub non coinvolti scrivendo nomi di ruolo o placeholder come mention (`@reviewer`, `@human`) in PR, issue e commenti. Fonte: [GitHub Releases v2.1.309](https://github.com/anthropics/claude-code/releases/tag/v2.1.309). Vedi n/a.
 
-Le due release nella finestra (v2.1.307, 21 ott; v2.1.308, 22 ott) restano sotto la soglia editoriale: v2.1.307 aggiunge l'evento OpenTelemetry `claude_code.safety_event` (emesso per ogni tool call bloccata, confermata o rimandata da permessi, auto mode, hook o sandbox), un retry automatico (fino a due tentativi) sui tool call non parsabili prima di terminare il turno con errore, un timeout di 30 minuti di default per gli hook di checkout sui self-hosted runner (configurabile con `--checkout-hook-timeout-min`), l'estensione di Code Review con `@claude review stop` (oltre a `off`/`pause`) per terminare un abbonamento `@claude review always` su una PR, e il comando `/claude-api api-version`; v2.1.308 e' solo fix e miglioramenti di affidabilita' senza dettaglio ulteriore. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post del 21 ottobre, sull'ingresso del fisico Christopher Stubbs nel Long-Term Benefit Trust, non riguarda Claude Code). Nessun nuovo slash command di rilievo, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Il resto della release v2.1.309 (60+ fix) resta sotto la soglia editoriale: comandi sandboxed su macOS/Linux che eseguivano gli script di avvio della shell fuori dalla sandbox, `sed -i` che ora passa dal prompt Bash standard invece di una preview edit simulata, e decine di fix su worktree, MCP, VS Code e sessioni cloud. Nessun altro annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore. Nessun post team rilevante individuato via web search (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog). Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
