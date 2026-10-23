@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **22 ottobre 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **23 ottobre 2026, 07:00 CEST**.
 > Versione CLI di riferimento: **v2.1.295** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-22)
+## What's new today (2026-10-23)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+- **Agent Skills diventa uno standard open-governance**: Anthropic dona il formato Agent Skills — nome, logo, organizzazione GitHub e dominio [agentskills.io](https://agentskills.io) — alla **Agentic AI Foundation** (sotto Linux Foundation, co-fondata con Block e OpenAI), lo stesso percorso seguito da MCP a dicembre 2025. Oltre 70 piattaforme lo hanno adottato (ChatGPT, Cursor, GitHub Copilot, VS Code), per circa 1 milione di skill pubblicate e quasi 280 milioni di install. Fonte: [Anthropic](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/10-mcp.md](./docs/10-mcp.md), [docs/23-glossario.md](./docs/23-glossario.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Le due release nella finestra (v2.1.307, 21 ott; v2.1.308, 22 ott) restano sotto la soglia editoriale: v2.1.307 aggiunge l'evento OpenTelemetry `claude_code.safety_event` (emesso per ogni tool call bloccata, confermata o rimandata da permessi, auto mode, hook o sandbox), un retry automatico (fino a due tentativi) sui tool call non parsabili prima di terminare il turno con errore, un timeout di 30 minuti di default per gli hook di checkout sui self-hosted runner (configurabile con `--checkout-hook-timeout-min`), l'estensione di Code Review con `@claude review stop` (oltre a `off`/`pause`) per terminare un abbonamento `@claude review always` su una PR, e il comando `/claude-api api-version`; v2.1.308 e' solo fix e miglioramenti di affidabilita' senza dettaglio ulteriore. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post del 21 ottobre, sull'ingresso del fisico Christopher Stubbs nel Long-Term Benefit Trust, non riguarda Claude Code). Nessun nuovo slash command di rilievo, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+La release nella finestra (v2.1.309, 22 ott) resta sotto la soglia editoriale: fix di sandbox su macOS/Linux (script di shell startup che girava fuori dalla sandbox, protezione dei file di config MCP), `rm`/`rmdir` in bypass-permissions mode su desktop app/VS Code negati subito con un suggerimento di riscrittura, `claude ultrareview` che richiede ora workspace trust (`--trust-workspace` per gli script), `sed -i` passato al prompt Bash standard, oltre a fix su VS Code e sessioni cloud. Nessun nuovo slash command o tool primitivo nelle ultime 24 ore. Nessun post team rilevante individuato via web search (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog). Nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
@@ -163,7 +163,7 @@ E come reference:
 | **Cross-device** | Remote Control: parti CLI, continui da telefono | [docs/17](./docs/17-ide-surface.md) |
 | **Sandboxed by default** | OS-level isolation (Seatbelt, bubblewrap) + filesystem/network rules | [docs/04](./docs/04-modalita-permessi.md) |
 | **1M context GA** | Sonnet 4.6 + Opus 4.6 a pricing standard | [docs/05](./docs/05-fast-mode-1m-context.md) |
-| **Open standards** | MCP donato a Linux Foundation, Skills compatibile con [agentskills.io](https://agentskills.io) | [docs/10](./docs/10-mcp.md) |
+| **Open standards** | MCP e Agent Skills entrambi donati a fondazioni Linux Foundation ([agentskills.io](https://agentskills.io) alla Agentic AI Foundation da ott 2026) | [docs/10](./docs/10-mcp.md), [docs/09](./docs/09-skills.md) |
 | **Headless first-class** | Print mode, structured outputs, Agent SDK Python/TS, distributed tracing | [docs/16](./docs/16-headless-agent-sdk.md) |
 
 ---

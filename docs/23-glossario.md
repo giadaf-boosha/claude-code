@@ -291,11 +291,11 @@ Glossario alfabetico di 35+ termini che ricorrono nella guida. Per ogni termine:
 **Correlati**: Authority, Guardrail.
 
 ### Skill
-**Definizione**: file markdown con frontmatter YAML che estende Claude (custom command). Auto-attivabile da Claude o user-invocable.
+**Definizione**: file markdown con frontmatter YAML che estende Claude (custom command). Auto-attivabile da Claude o user-invocable. Standard apribile [Agent Skills](https://agentskills.io), donato alla Agentic AI Foundation/Linux Foundation da ott 2026 (stesso percorso di MCP, dic 2025).
 **Sinonimi**: `SKILL.md`.
 **Appare in**: [09](./09-skills.md).
 **Esempio**: `.claude/skills/release-notes/SKILL.md`.
-**Correlati**: Slash command, Plugin, Subagent.
+**Correlati**: Slash command, Plugin, Subagent, MCP.
 
 ### Subagent
 **Definizione**: agent con context window proprio, system prompt custom, tool/permessi indipendenti. Built-in: Explore, Plan, general-purpose.

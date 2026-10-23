@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Estensibilita'](../README.md#estensibilita) → **09 Skills**
 > 🔧 Operational · 🟡 Intermediate
 
-Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Agent Skills open standard](https://agentskills.io). Custom commands e skills sono **fusi**: un file in `.claude/commands/deploy.md` e uno in `.claude/skills/deploy/SKILL.md` creano entrambi `/deploy`.
+Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Agent Skills open standard](https://agentskills.io), dal 22 ottobre 2026 sotto governance Agentic AI Foundation / Linux Foundation (vedi [9.0b](#90b-governance-agent-skills-donato-alla-agentic-ai-foundation-ott-2026)). Custom commands e skills sono **fusi**: un file in `.claude/commands/deploy.md` e uno in `.claude/skills/deploy/SKILL.md` creano entrambi `/deploy`.
 
 ## Cosa e' concettualmente
 
@@ -16,6 +16,18 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 **Per il deep-dive**: [00b — Context engineering § tecniche](./00b-context-engineering.md) per come le skill ottimizzano il context.
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
+
+---
+
+## 9.0b Governance: Agent Skills donato alla Agentic AI Foundation (ott 2026)
+
+Il 22 ottobre 2026 Anthropic dona lo standard **Agent Skills** — nome, logo, organizzazione GitHub e dominio [agentskills.io](https://agentskills.io) — alla **Agentic AI Foundation (AAIF)**, sotto la Linux Foundation. E' lo stesso percorso di governance seguito da MCP a dicembre 2025 (vedi [10 MCP](./10-mcp.md)): Anthropic ha co-fondato AAIF insieme a Block e OpenAI, e lo standard resta open, community-driven e vendor-neutral anche per chi non aderisce formalmente alla foundation.
+
+Da quando lo standard e' stato pubblicato (dicembre 2025), oltre **70 piattaforme** lo hanno integrato — tra cui ChatGPT, Cursor, GitHub Copilot e VS Code, oltre a loader community per Codex e OpenCode — per circa **1 milione di skill pubblicate** e quasi **280 milioni di install**. La manutenzione passa a ingegneri di Anthropic, Google, OpenAI e altre aziende che partecipano come individui (lead maintainer: David Soria Parra e Mahesh Murag); la roadmap prevede release versionate, un processo di proposta formale e linee guida di sicurezza per chi scrive o installa skill.
+
+Per Claude Code in pratica non cambia nulla nell'uso quotidiano: `SKILL.md` e la struttura cartella restano identici, e le skill esistenti continuano a funzionare. Cambia la governance — non piu' un formato controllato da un solo vendor, ma uno standard multi-vendor con adozione cross-platform verificata.
+
+<sub>Aggiornato 2026-10-23 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation).</sub>
 
 ---
 

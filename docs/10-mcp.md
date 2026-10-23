@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Estensibilita'](../README.md#estensibilita) → **10 MCP**
 > 🔧 Operational · 🟡 Intermediate
 
-MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app). Donato a Linux Foundation a dicembre 2025.
+MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app). Donato a Linux Foundation a dicembre 2025 — lo stesso percorso seguito da Agent Skills a ottobre 2026, donato alla Agentic AI Foundation (vedi [09 Skills § 9.0b](./09-skills.md#90b-governance-agent-skills-donato-alla-agentic-ai-foundation-ott-2026)): MCP copre il Tool layer (accesso a dati/azioni esterne), Skills il layer procedurale (come usarli).
 
 ## Cosa e' concettualmente
 
