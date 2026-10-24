@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-23
+
+- **Agent Skills diventa uno standard open-governance**: Anthropic dona il formato Agent Skills — nome, logo, organizzazione GitHub e dominio [agentskills.io](https://agentskills.io) — alla **Agentic AI Foundation** (sotto Linux Foundation, co-fondata con Block e OpenAI), lo stesso percorso seguito da MCP a dicembre 2025. Oltre 70 piattaforme lo hanno adottato (ChatGPT, Cursor, GitHub Copilot, VS Code), per circa 1 milione di skill pubblicate e quasi 280 milioni di install. Fonte: [Anthropic](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation). Doc: [docs/09-skills.md](./09-skills.md), [docs/10-mcp.md](./10-mcp.md), [docs/23-glossario.md](./23-glossario.md), [docs/19-changelog.md](./19-changelog.md).
+
+La release nella finestra (v2.1.309, 22 ott) resta sotto la soglia editoriale: fix di sandbox su macOS/Linux (script di shell startup che girava fuori dalla sandbox, protezione dei file di config MCP), `rm`/`rmdir` in bypass-permissions mode su desktop app/VS Code negati subito con un suggerimento di riscrittura, `claude ultrareview` che richiede ora workspace trust (`--trust-workspace` per gli script), `sed -i` passato al prompt Bash standard, oltre a fix su VS Code e sessioni cloud. Nessun nuovo slash command o tool primitivo nelle ultime 24 ore. Nessun post team rilevante individuato via web search (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog). Nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-22
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -235,13 +243,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 ## 2026-08-18
 
 > Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.233 e v2.1.234, 14-17 ago) contengono solo fix, hardening di sicurezza e feature minori (badge merge request GitLab, auto-continuazione sessione al reset dei limiti d'uso, keybinding di selezione), sotto la soglia editoriale.
-
----
-
-## 2026-08-14
-
-- **Cross-session messaging: mention diretto con `@`** (v2.1.232, 13 ago): digitare `@nome-sessione` nel prompt basta a raggiungere un'altra sessione Claude Code — Claude usa `SendMessage` in automatico, senza bisogno di invocare esplicitamente il tool; se il nome e' univoco tra le sessioni vive, il messaggio parte subito senza conferma. Nomi duplicati sulla stessa macchina ricevono ora una variante automatica `nome-parola-parola`. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Doc: [docs/17-ide-surface.md](./17-ide-surface.md), [docs/19-changelog.md](./19-changelog.md).
-- **Subagent forking di default** (v2.1.232, 13 ago): i subagent `subagent_type: "fork"` ereditano ora conversazione e prompt cache completi dalla sessione padre; gli agent non-teammate spawnati in sessioni interattive girano di default in background invece che in foreground. Fonte: [GitHub Releases v2.1.232](https://github.com/anthropics/claude-code/releases/tag/v2.1.232). Doc: [docs/08-subagents.md](./08-subagents.md), [docs/19-changelog.md](./19-changelog.md).
 
 ---
 
