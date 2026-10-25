@@ -8,13 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-24)
+## What's new today (2026-10-25)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-L'unica release nella finestra (v2.1.310, 23 ott) resta sotto la soglia editoriale: estende il Monitor tool e i monitor dei plugin anche a Bedrock, Vertex e Foundry e ai setup con telemetria/traffico non essenziale disattivati (bloccando anche li' gli sleep in foreground troppo lunghi, feature gia' coperta in [docs/14-loop-monitor.md](./docs/14-loop-monitor.md)), aggiunge permessi Enterprise per ruoli custom su Cloud sessions e Remote Control e un pulsante per caricare da file lo script di setup di un cloud environment, oltre a una quarantina di fix (retry automatico su gateway che rifiutano il beta `effort-2025-11-24` o messaggi di sistema a meta' conversazione, cleanup in background che non cancella piu' file recenti con `cleanupPeriodDays` molto alto, hook Windows che non bypassano piu' i permessi quando Git Bash manca, fix su VS Code, Claude Tag e Code Review admin). Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post rilevante, sulla donazione di Agent Skills alla Agentic AI Foundation, e' del 22 ottobre e gia' coperto ieri). Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.310 (23 ott), gia' coperta ieri. Due articoli sul blog Anthropic del 23 ottobre restano fuori soglia perche' non riguardano la CLI Claude Code: l'unificazione di chat e Cowork per i piani Enterprise (estensione business di una feature gia' in GA da aprile) e le misure di sicurezza di **Claude Duet**, nuovo agente consumer separato che riusa il classificatore di auto mode di Claude Code come building block ma non e' una sua feature. Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 

@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-24
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+L'unica release nella finestra (v2.1.310, 23 ott) resta sotto la soglia editoriale: estende il Monitor tool e i monitor dei plugin anche a Bedrock, Vertex e Foundry e ai setup con telemetria/traffico non essenziale disattivati (bloccando anche li' gli sleep in foreground troppo lunghi, feature gia' coperta in [docs/14-loop-monitor.md](./docs/14-loop-monitor.md)), aggiunge permessi Enterprise per ruoli custom su Cloud sessions e Remote Control e un pulsante per caricare da file lo script di setup di un cloud environment, oltre a una quarantina di fix (retry automatico su gateway che rifiutano il beta `effort-2025-11-24` o messaggi di sistema a meta' conversazione, cleanup in background che non cancella piu' file recenti con `cleanupPeriodDays` molto alto, hook Windows che non bypassano piu' i permessi quando Git Bash manca, fix su VS Code, Claude Tag e Code Review admin). Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post rilevante, sulla donazione di Agent Skills alla Agentic AI Foundation, e' del 22 ottobre e gia' coperto ieri). Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-23
 
 - **Agent Skills diventa uno standard open-governance**: Anthropic dona il formato Agent Skills — nome, logo, organizzazione GitHub e dominio [agentskills.io](https://agentskills.io) — alla **Agentic AI Foundation** (sotto Linux Foundation, co-fondata con Block e OpenAI), lo stesso percorso seguito da MCP a dicembre 2025. Oltre 70 piattaforme lo hanno adottato (ChatGPT, Cursor, GitHub Copilot, VS Code), per circa 1 milione di skill pubblicate e quasi 280 milioni di install. Fonte: [Anthropic](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation). Doc: [docs/09-skills.md](./09-skills.md), [docs/10-mcp.md](./10-mcp.md), [docs/23-glossario.md](./23-glossario.md), [docs/19-changelog.md](./19-changelog.md).
@@ -237,12 +245,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 ## 2026-08-24
 
 > Nessuna novita' significativa nelle ultime 24 ore. Le release piu' recenti (v2.1.235-v2.1.241, 18-23 ago) restano sotto la soglia editoriale: solo settings minori (output style built-in "Concise", env var `ANTHROPIC_DEFAULT_MODEL`, `spellcheck` opzionale, `keybindingFlavor`, shutdown graduale per self-hosted runner), fix di affidabilita' e sicurezza. Nessun annuncio Anthropic rilevante nelle ultime 24 ore.
-
----
-
-## 2026-08-18
-
-> Nessuna novita' significativa nelle ultime 24 ore. Le uniche release (v2.1.233 e v2.1.234, 14-17 ago) contengono solo fix, hardening di sicurezza e feature minori (badge merge request GitLab, auto-continuazione sessione al reset dei limiti d'uso, keybinding di selezione), sotto la soglia editoriale.
 
 ---
 
