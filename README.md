@@ -8,13 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-25)
+## What's new today (2026-10-26)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.310 (23 ott), gia' coperta ieri. Due articoli sul blog Anthropic del 23 ottobre restano fuori soglia perche' non riguardano la CLI Claude Code: l'unificazione di chat e Cowork per i piani Enterprise (estensione business di una feature gia' in GA da aprile) e le misure di sicurezza di **Claude Duet**, nuovo agente consumer separato che riusa il classificatore di auto mode di Claude Code come building block ma non e' una sua feature. Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.310 (23 ott), gia' coperta nei giorni scorsi. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'ultimo rilevante resta la donazione di Agent Skills alla Agentic AI Foundation del 22 ottobre, gia' coperta). Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 

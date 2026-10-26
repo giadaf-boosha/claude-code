@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-25
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.310 (23 ott), gia' coperta ieri. Due articoli sul blog Anthropic del 23 ottobre restano fuori soglia perche' non riguardano la CLI Claude Code: l'unificazione di chat e Cowork per i piani Enterprise (estensione business di una feature gia' in GA da aprile) e le misure di sicurezza di **Claude Duet**, nuovo agente consumer separato che riusa il classificatore di auto mode di Claude Code come building block ma non e' una sua feature. Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-24
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -239,12 +247,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 ## 2026-08-26
 
 > Nessuna novita' significativa nelle ultime 24 ore. Il digest ufficiale settimanale resta fermo alla Week 34 (17-21 ago, gia' coperta: `/design`, output style "Concise", device card Remote Control, `ANTHROPIC_DEFAULT_MODEL`). Le release piu' recenti (v2.1.243, v2.1.245, v2.1.246, 24-25 ago) restano sotto la soglia editoriale: settings minori (tab classificatore auto mode in `/permissions`, breakdown loop in `/usage`, `modelPicker`, TTL prompt cache configurabile) e fix (crash glibc 2.44 su Linux, rallentamenti transcript). Nessun annuncio Anthropic rilevante nelle ultime 24 ore.
-
----
-
-## 2026-08-24
-
-> Nessuna novita' significativa nelle ultime 24 ore. Le release piu' recenti (v2.1.235-v2.1.241, 18-23 ago) restano sotto la soglia editoriale: solo settings minori (output style built-in "Concise", env var `ANTHROPIC_DEFAULT_MODEL`, `spellcheck` opzionale, `keybindingFlavor`, shutdown graduale per self-hosted runner), fix di affidabilita' e sicurezza. Nessun annuncio Anthropic rilevante nelle ultime 24 ore.
 
 ---
 
