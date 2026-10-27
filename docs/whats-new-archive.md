@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-26
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.310 (23 ott), gia' coperta nei giorni scorsi. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'ultimo rilevante resta la donazione di Agent Skills alla Agentic AI Foundation del 22 ottobre, gia' coperta). Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-25
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
