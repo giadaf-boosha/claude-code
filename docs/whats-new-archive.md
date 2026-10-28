@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-27
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+L'unica release nella finestra (v2.1.311, 26 ott) resta sotto la soglia editoriale: aggiunge `--hold-idle-file` e `--max-hold-min` per `self-hosted-runner` (mantiene una sessione idle mentre l'host segnala processi lasciati in esecuzione) e un tip per l'output style Explanatory, oltre a una lunga serie di fix (freeze all'avvio con un item di lista molto lungo in CLAUDE.md, Write/Edit che si bloccavano fino a 5 secondi modificando migliaia di righe, hook `SubagentStop` che scattavano circa due volte al minuto invece che una sola a fine lavoro, sessioni standard-context che si fermavano con errore "Usage credits required for 1M context" sopra 200K token invece di compattare, worktree isolati di subagent rimossi mentre un loro sotto-subagent in background ci lavorava ancora) e miglioramenti minori (rimozione del suffisso `[1m]` dai nomi modello dove non ha effetto, sintassi colorata nei code block della risposta in VS Code, vista Skills nelle analytics di Claude Tag). Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (l'unico post del 26 ottobre, il deposito S-1 per l'IPO, e' notizia societaria/finanziaria, non un annuncio prodotto su Claude Code). Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-26
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -249,12 +257,6 @@ Il resto della release v2.1.251 (streaming live dei tool call subagent verso Rem
 ## 2026-08-28
 
 > Nessuna novita' significativa nelle ultime 24 ore. Le release piu' recenti (v2.1.247, v2.1.248, v2.1.250, 26-28 ago) restano sotto la soglia editoriale: tool `SendFeedback` per bozze di feedback da `/feedback`, `/claude-api cost-optimize` per profilare la spesa API, nuovo flag `--restricted` per sessioni lock-down (rimuove i tool che eseguono comandi/codice e `WebFetch`, rifiuta `bypassPermissions`, ignora i settings utente/progetto), cross-session messaging esteso a Bedrock/Vertex/Foundry, fix di sicurezza (`/ultrareview` non carica piu' file tipo `.env`/`.tfvars`/backup di credenziali). Nessun annuncio Anthropic rilevante su Claude Code nelle ultime 24 ore.
-
----
-
-## 2026-08-26
-
-> Nessuna novita' significativa nelle ultime 24 ore. Il digest ufficiale settimanale resta fermo alla Week 34 (17-21 ago, gia' coperta: `/design`, output style "Concise", device card Remote Control, `ANTHROPIC_DEFAULT_MODEL`). Le release piu' recenti (v2.1.243, v2.1.245, v2.1.246, 24-25 ago) restano sotto la soglia editoriale: settings minori (tab classificatore auto mode in `/permissions`, breakdown loop in `/usage`, `modelPicker`, TTL prompt cache configurabile) e fix (crash glibc 2.44 su Linux, rallentamenti transcript). Nessun annuncio Anthropic rilevante nelle ultime 24 ore.
 
 ---
 
