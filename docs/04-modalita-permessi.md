@@ -19,6 +19,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 ## 4.1 Permission modes
 
+> **2026-10-30 (auto-update)**: v2.1.314 aggiunge `permissions.blockWritesOutsideWorkingDirectories`: con il setting attivo, Write, Edit e NotebookEdit rifiutano ogni path fuori dalle working directory in tutte le permission mode, incluso `bypassPermissions`. Fonte: [GitHub Releases v2.1.314](https://github.com/anthropics/claude-code/releases/tag/v2.1.314). Vedi anche README "What's new today" del giorno.
+
 Cycle: `Shift+Tab` → `manual` → `acceptEdits` → `plan`.
 
 > **v2.1.200 (3 lug 2026)**: il mode precedentemente chiamato `default` e' stato rinominato `manual` in tutta la UI (CLI, VS Code, JetBrains). Comportamento invariato — solo letture auto-approvate. Aggiornare eventuali script che passavano `--permission-mode default` in `--permission-mode manual`.

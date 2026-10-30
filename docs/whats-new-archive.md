@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-29
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+L'unica release nella finestra (v2.1.312, 27 ott) resta sotto la soglia editoriale: aggiunge `oidc.user_id_claim` per identificare gli utenti tramite un claim diverso da `sub` (es. `oid` di Microsoft Entra ID), il click-to-send sul prompt accodato in fullscreen, un effort level nel model picker delle routine cloud e un editor Bash con syntax highlighting per lo script di setup degli ambienti cloud, oltre a una lunga serie di fix (CLAUDE.md/rules file molto grandi che Claude sovrascriveva leggendone solo l'inizio, skill per-directory non trovate dopo un `cd` Bash dentro un repo git, prima risposta mancante al resume di una sessione terminale, un comando con nome non valido che bloccava il caricamento di tutti gli altri comandi, Read che falliva su pagine PDF durante il cleanup dei file di sessione) e la rimozione dell'evento OpenTelemetry `claude_code.safety_event`. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (i post del 27-28 ottobre riguardano AI for Science, sviluppo farmaci, la partnership con la GSA, nuove funzioni report/sondaggi/budget per Claude Enterprise e un case study IDC/Quanta — nessuno introduce feature tecniche per la CLI). Nessun nuovo slash command, tool primitivo o post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-27
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
