@@ -17,6 +17,8 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
 
+> **2026-10-30 (auto-update)**: v2.1.314 aggiorna la skill bundled `dataviz`: non risponde piu' con grafici a torta/donut su richiesta (propone bar chart ordinati o barre segmentate con valori stampati) e precisa quando stampare per intero le etichette degli assi (y sotto 10.000, x orizzontali sotto il milione). Fonte: [GitHub Releases v2.1.314](https://github.com/anthropics/claude-code/releases/tag/v2.1.314). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 9.0b Governance: Agent Skills donato alla Agentic AI Foundation (ott 2026)

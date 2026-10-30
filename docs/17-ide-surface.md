@@ -19,6 +19,8 @@ VS Code, JetBrains, Desktop, Web, Slack, Channels, Remote Control. Tutti i modi 
 
 ## 17.1 VS Code
 
+> **2026-10-30 (auto-update)**: v2.1.314 estende l'idle compaction (riassunto automatico delle conversazioni oltre 200K token lasciate ferme) anche a VS Code e al tab Code di Claude Desktop, prima solo CLI. Fonte: [GitHub Releases v2.1.314](https://github.com/anthropics/claude-code/releases/tag/v2.1.314). Vedi anche README "What's new today" del giorno.
+
 Estensione: `vscode:extension/anthropic.claude-code`. Requires VS Code 1.98.0+.
 
 ### Features GUI

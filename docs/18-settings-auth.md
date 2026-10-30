@@ -260,6 +260,8 @@ Da v2.1.111: read-only bash glob + `cd <project-dir> &&` no prompt.
 
 ## 18.5 Authentication
 
+> **2026-10-30 (auto-update)**: v2.1.314 aggiunge, per il Claude apps gateway enterprise, una lista `groups` sugli upstream (instrada solo gli sviluppatori nei gruppi IdP elencati, anche in failover) e `guardrail_trace` sugli upstream Bedrock (logga quale filtro guardrail Amazon Bedrock ha bloccato una richiesta, senza il testo intercettato). Fonte: [GitHub Releases v2.1.314](https://github.com/anthropics/claude-code/releases/tag/v2.1.314). Vedi anche README "What's new today" del giorno.
+
 ### Storage
 - macOS: Keychain (encrypted)
 - Linux/Windows: `~/.claude/.credentials.json` (mode 0600 / user profile ACLs)
