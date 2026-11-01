@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-10-31
+
+> Nessuna novita' significativa nelle ultime 24-48 ore. Prossimo aggiornamento domani 07:00.
+
+Le release nella finestra (v2.1.314, 30 ott; v2.1.316, 31 ott) restano sotto la soglia editoriale: v2.1.314 aggiunge `permissions.blockWritesOutsideWorkingDirectories` (Write/Edit/NotebookEdit rifiutano sempre i path fuori dalle working directory, in ogni modalita' di permesso), idle compaction anche in VS Code e nel tab Code della desktop app (estensione di una feature gia' in terminale da v2.1.299), una lista `groups` per limitare un upstream del gateway Claude apps a determinati gruppi IdP, oltre a 81 fix (tra cui `claude -p` che usciva con codice 0 senza output in caso di errore di avvio, e un bug TLS con certificati radice rinnovati cross-signed); v2.1.316 aggiunge `CLAUDE_CODE_DISABLE_ULTRATHINK` e `CLAUDE_CODE_SUBAGENT_EFFORT`, budget di gruppo aggregati (`pooled_budget`) e `managed.policy_mode: "layered"` per il gateway, e annuncia la **deprecazione del fast mode per Opus 4.8** dal 30 ottobre (rimosso il 30 novembre 2026, poi errore invece di fallback — da migrare a Opus 5.5), oltre a fix su comandi shell lasciati in esecuzione dopo l'uscita su macOS/Linux e alias `sonnet`/`opus`/`haiku` che su Vertex/Bedrock andavano in errore a meta' sessione invece di passare a un modello piu' vecchio. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore. Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-29
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -242,15 +250,6 @@ Il resto delle release v2.1.265-269 (8-11 set: gateway pricing/`gatewayInternalN
 - **`/skill-doctor`** (v2.1.261, 4 set): nuovo comando diagnostico che individua le skill caricate ma mai invocate e il loro costo di context, per ripulire il setup senza doverlo fare a occhio. Fonte: [GitHub Releases v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261). Doc: [docs/09-skills.md](./09-skills.md), [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
 
 Il resto delle release v2.1.259/260/261 (2-4 set: `managedMcpServers` per MCP gestiti da org, `--permission-prompts none` per host headless unattended, diff panel fullscreen via `/diff`, settings `bashOutputMaxChars`/`taskOutputMaxChars`, fix su prompt cache e Remote Control) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore.
-
----
-
-## 2026-09-02
-
-- **Claude Fable 5.1 diventa il modello Fable di default** (v2.1.257, 1 set): stesso pricing di Fable 5 ($10/$50 per MTok) ma cache read tagliate del 75% ($0.25/MTok); arriva piu' lontano in task lunghi prima di richiedere input, segnala meglio quando e' bloccato, stile di scrittura piu' naturale. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2094851229734277228) · [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Doc: [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/19-changelog.md](./19-changelog.md).
-- **Regola "Containment Escape" in auto mode** (v2.1.257, 1 set): auto mode non auto-approva piu' fetch di credenziali da metadata cloud, tentativi di egress evasion o cross-tenant reach, a meno che l'ambiente non li dichiari espliciti come attesi. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257). Doc: [docs/04-modalita-permessi.md](./04-modalita-permessi.md), [docs/19-changelog.md](./19-changelog.md).
-
-Il resto delle release v2.1.252/257/258 (25-1 set: fix estesi su Remote Control, VS Code, sandbox e permessi, `CLAUDE_CODE_SUBAGENT_MODEL_FORCE`, settings `timeZone`/`timeFormat`) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore.
 
 ---
 

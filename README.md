@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **31 ottobre 2026, 07:00 CEST**.
+> Ultimo aggiornamento: **1 novembre 2026, 07:00 CET**.
 > Versione CLI di riferimento: **v2.1.295** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-10-31)
+## What's new today (2026-11-01)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24-48 ore. Prossimo aggiornamento domani 07:00.
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Le release nella finestra (v2.1.314, 30 ott; v2.1.316, 31 ott) restano sotto la soglia editoriale: v2.1.314 aggiunge `permissions.blockWritesOutsideWorkingDirectories` (Write/Edit/NotebookEdit rifiutano sempre i path fuori dalle working directory, in ogni modalita' di permesso), idle compaction anche in VS Code e nel tab Code della desktop app (estensione di una feature gia' in terminale da v2.1.299), una lista `groups` per limitare un upstream del gateway Claude apps a determinati gruppi IdP, oltre a 81 fix (tra cui `claude -p` che usciva con codice 0 senza output in caso di errore di avvio, e un bug TLS con certificati radice rinnovati cross-signed); v2.1.316 aggiunge `CLAUDE_CODE_DISABLE_ULTRATHINK` e `CLAUDE_CODE_SUBAGENT_EFFORT`, budget di gruppo aggregati (`pooled_budget`) e `managed.policy_mode: "layered"` per il gateway, e annuncia la **deprecazione del fast mode per Opus 4.8** dal 30 ottobre (rimosso il 30 novembre 2026, poi errore invece di fallback — da migrare a Opus 5.5), oltre a fix su comandi shell lasciati in esecuzione dopo l'uscita su macOS/Linux e alias `sonnet`/`opus`/`haiku` che su Vertex/Bedrock andavano in errore a meta' sessione invece di passare a un modello piu' vecchio. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore. Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.316 (31 ott), gia' coperta ieri — nessuna versione successiva su GitHub Releases, tags o changelog ufficiale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (i post recenti — AI for Science, sviluppo farmaci, partnership GSA, deposito S-1 per l'IPO — non riguardano la CLI). Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
