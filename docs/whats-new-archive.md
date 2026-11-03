@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-11-01
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.316 (31 ott), gia' coperta ieri — nessuna versione successiva su GitHub Releases, tags o changelog ufficiale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (i post recenti — AI for Science, sviluppo farmaci, partnership GSA, deposito S-1 per l'IPO — non riguardano la CLI). Nessun nuovo slash command, tool primitivo o post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-10-31
 
 > Nessuna novita' significativa nelle ultime 24-48 ore. Prossimo aggiornamento domani 07:00.
@@ -241,15 +249,6 @@ Il resto delle release v2.1.270-274 (12-17 set: fast mode esteso alle sessioni R
 - **Limiti settimanali: +25% permanente dal 14 set, ma e' un calo del 17% rispetto al bonus attuale**: Anthropic sostituisce il bonus temporaneo del +50% (in vigore da mesi) con un aumento permanente del +25% sui limiti settimanali standard di Pro, Max, Team e Enterprise a seat — per chi sta usando il bonus oggi la capacita' netta scende del 17% dal 14 settembre. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2093742321473065266). Doc: [docs/01-snapshot.md](./01-snapshot.md), [docs/19-changelog.md](./19-changelog.md).
 
 Il resto delle release v2.1.265-269 (8-11 set: gateway pricing/`gatewayInternalNetworks`, `maxEffortLevel`, `/output-style` cross-surface, agent map e dialog hook/permessi in VS Code, `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS`, fix su WebFetch timeout e sessioni cloud) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore; digest ufficiale settimanale ancora fermo alla Week 34 (17-21 ago).
-
----
-
-## 2026-09-05
-
-- **Computer use in background** in Claude Cowork e Claude Code (2 set): Claude clicca, digita e apre app sul desktop senza prendere il controllo dello schermo, cosi' l'utente continua a lavorare su altro nel frattempo; dentro Cowork la priorita' resta ai connector nativi (Gmail, Drive, Microsoft 365, Slack) e al browser, il controllo diretto dello schermo interviene solo come ultima risorsa. Solo macOS, piani Pro e Max, toggle manuale in Settings → General → Desktop app (off di default). Fonte: [@claudeai](https://x.com/claudeai/status/2095226833293685100). Doc: [docs/17-ide-surface.md](./17-ide-surface.md), [docs/19-changelog.md](./19-changelog.md).
-- **`/skill-doctor`** (v2.1.261, 4 set): nuovo comando diagnostico che individua le skill caricate ma mai invocate e il loro costo di context, per ripulire il setup senza doverlo fare a occhio. Fonte: [GitHub Releases v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261). Doc: [docs/09-skills.md](./09-skills.md), [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
-
-Il resto delle release v2.1.259/260/261 (2-4 set: `managedMcpServers` per MCP gestiti da org, `--permission-prompts none` per host headless unattended, diff panel fullscreen via `/diff`, settings `bashOutputMaxChars`/`taskOutputMaxChars`, fix su prompt cache e Remote Control) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore.
 
 ---
 
