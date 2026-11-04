@@ -8,13 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-03)
+## What's new today (2026-11-04)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24-48 ore. Prossimo aggiornamento domani 07:00.
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-L'unica release nella finestra (v2.1.317, 3 nov) resta sotto la soglia editoriale: aggiunge un avviso in `/schedule` quando una nuova attivita' cloud usa connettori MCP non richiesti in precedenza, un controllo di conferma prima che un tool web o shell invii l'email dell'account, `onFailure: "block"` per gli hook dell'Agent SDK, nuove metriche OpenTelemetry e un report dei costi nell'API admin del gateway Claude apps, oltre a `CLAUDE_CODE_DISABLE_NESTED_SESSION_ID` e al fix di `claude -p` che ora esce con errore invece di proseguire silenziosamente a disco pieno — nessun nuovo slash command, tool primitivo o feature di sistema. Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli ultimi post, 26-28 ottobre, riguardano AI for Science, sviluppo farmaci e la partnership GSA). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+L'unica release nella finestra (v2.1.318, 4 nov) resta sotto la soglia editoriale: aggiunge `assume_role` per gli upstream `mantle` del gateway Claude apps (ruoli cross-account, utile per l'attribuzione dei costi per developer su AWS), `loginExpiresAt` in `claude auth status` e `credential_expires_at` nell'output JSON di `claude -p`, un'opzione `effort` per `$.model.fork` dei mod, e sposta in background i comandi shell dei subagent dopo 3 minuti su tutti i provider, oltre a una lunga serie di fix (`--continue` che perdeva la conversazione precedente dopo retry su tool call malformate, regressione di v2.1.314; stalli macOS con molti comandi Bash in esecuzione; falso "Not logged in" quando lo stesso account accede da un'altra sessione; un `~/.claude.json` non valido non viene piu' silenziosamente sovrascritto con i default) — nessun nuovo slash command, tool primitivo o feature di sistema. Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (l'ultimo post, 28 ottobre, riguarda l'espansione del programma AI for Science). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
