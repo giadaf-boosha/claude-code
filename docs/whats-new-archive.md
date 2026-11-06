@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-11-04
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+L'unica release nella finestra (v2.1.318, 4 nov) resta sotto la soglia editoriale: l'estensione IDE non si installa/aggiorna piu' se Claude Code parte da un terminale IDE (usare `/ide` da terminale esterno), i subagent in background spostano i comandi shell in background dopo 3 minuti su tutti i provider per non far scadere la prompt cache, `assume_role` sugli upstream `mantle` del gateway Claude apps e un avviso quando un login claude.ai salvato sta per scadere, oltre a 47 fix (tra cui `--continue` che perdeva la conversazione precedente dopo retry su tool call malformate, regressione di 2.1.314) — nessun nuovo slash command, tool primitivo o feature di sistema. L'unico articolo Anthropic nella finestra (4 nov, nuovi partner nel Claude Marketplace per sicurezza/dev infra/marketing/produttivita') non riguarda la CLI Claude Code, sotto soglia. Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-11-03
 
 > Nessuna novita' significativa nelle ultime 24-48 ore. Prossimo aggiornamento domani 07:00.
@@ -239,15 +247,6 @@ Il resto della release v2.1.280 (supporto mouse esteso a piu' liste in fullscree
 - **Supporto nativo ad AGENTS.md** (v2.1.277, 18 set): nei progetti senza CLAUDE.md, Claude Code legge ora automaticamente **AGENTS.md** — lo standard cross-tool gia' usato in decine di migliaia di repo condivisi tra piu' agenti AI (Codex, Cursor e altri) — eliminando il workaround manuale via `@AGENTS.md` che serviva finora. Il file di istruzioni preferito resta configurabile da "Project instructions" in `/config`; non ancora disponibile su Bedrock, Vertex e Foundry. Fonte: [GitHub Releases v2.1.277](https://github.com/anthropics/claude-code/releases/tag/v2.1.277). Doc: [docs/06-claude-md-memory.md](./06-claude-md-memory.md), [docs/19-changelog.md](./19-changelog.md).
 
 Il resto delle release v2.1.276/278 (18-19 set: fix di una regressione 400 su gateway/proxy introdotta da v2.1.275, e il passaggio di default al classificatore auto mode lato server per utenti Claude API/Enterprise/Bedrock/Vertex/Foundry/gateway — non piu' fatturato per l'overhead di classificazione) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code e nessun post team rilevante (oltre a quanto gia' coperto il 18 set) nelle ultime 24-48 ore.
-
----
-
-## 2026-09-18
-
-- **Projects redesign: da cartella a conversazione** (beta, 17 set): Anthropic rilascia una nuova esperienza "Projects" in Claude Code — non piu' una cartella con dentro una chat, ma una conversazione persistente in cui Claude fa da coordinatore, delega il lavoro a thread paralleli con memoria condivisa e una libreria comune di file/artifact, e assembla il risultato finale; si puo' guidare l'avanzamento anche da telefono, e il lavoro continua dopo che chiudi il laptop. Beta da oggi per un gruppo selezionato di utenti Pro/Max che usano sessioni cloud e non hanno ancora progetti su web/desktop, rollout esteso nei prossimi giorni e poi a Team/Enterprise. Fonte: [Anthropic blog](https://claude.com/blog/projects-redesigned). Doc: [docs/12-agent-teams.md](./12-agent-teams.md), [docs/13-routines-cloud.md](./13-routines-cloud.md), [docs/19-changelog.md](./19-changelog.md).
-- **Sync skill/plugin da claude.ai al terminale** (v2.1.275, 17 set): le skill e i plugin abilitati sull'account claude.ai si sincronizzano ora automaticamente nelle sessioni CLI loggate con lo stesso account, con opt-out per-progetto via `syncClaudeAiSkills: false` / `syncClaudeAiPlugins: false` — riduce la deriva tra cosa hai abilitato sul web e cosa gira in terminale. Fonte: [GitHub Releases v2.1.275](https://github.com/anthropics/claude-code/releases/tag/v2.1.275). Doc: [docs/09-skills.md](./09-skills.md), [docs/11-plugins-marketplace.md](./11-plugins-marketplace.md), [docs/19-changelog.md](./19-changelog.md).
-
-Il resto delle release v2.1.270-274 (12-17 set: fast mode esteso alle sessioni Remote, `allowed_domains` per-comando su Bash/PowerShell/Monitor in auto mode con sandboxing, fork di sessioni Remote Control in locale, diagnostica `/mcp` su disconnessione, avviso di memoria critica, fix vari) resta sotto la soglia editoriale. Nota fonti: `code.claude.com/docs/en/changelog` e la pagina GitHub Releases hanno risposto 503 per l'intera finestra di ricerca; i dettagli versione per versione sono ricostruiti incrociando piu' aggregatori indipendenti (changelog mirror community, digest di terze parti), l'annuncio Projects e' invece confermato direttamente dal blog Anthropic e da piu' testate tech indipendenti.
 
 ---
 
