@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-11-06
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+Una nuova versione (v2.1.319) e' stata pubblicata su npm nella notte tra il 5 e il 6 novembre, ma il changelog ufficiale (GitHub CHANGELOG.md, `code.claude.com/docs/en/changelog`) non si e' ancora sincronizzato al momento di questo aggiornamento — l'ultima voce verificabile resta v2.1.318 (4 nov, gia' coperta), quindi nessun dettaglio di contenuto e' al momento confermabile; verra' valutata nell'aggiornamento di domani una volta disponibile. I due articoli Anthropic del 5 novembre nella finestra (beta "Personal Finance in Claude" e nuovi controlli di sicurezza/amministrazione per Claude Enterprise) riguardano i prodotti Claude apps/Enterprise, non la CLI Claude Code, sotto soglia. Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-11-04
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -239,14 +247,6 @@ Le uniche release CLI nella finestra (v2.1.281, 23 set; v2.1.282, 24 set) restan
 - **Claude Opus 5.5 diventa il nuovo modello Opus di default in Claude Code** (v2.1.280, 22 set): prima uscita della famiglia Claude 5.5, performa al livello di Fable 5.1 sulla gran parte dei task, con output oltre il 30% piu' veloce e un costo di esercizio il 40% piu' basso di Opus 5 — 1M di context, pricing $4/$20 per MTok e cache read a $0.20/MTok (-60%). Contestualmente, su **Pro e Team Standard il modello di default passa da Sonnet a Opus**, allineandosi a Max/Premium/Enterprise. Fonte: [Anthropic](https://www.anthropic.com/claude-opus-5-5) · [GitHub Releases v2.1.280](https://github.com/anthropics/claude-code/releases/tag/v2.1.280). Doc: [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/01-snapshot.md](./01-snapshot.md), [docs/19-changelog.md](./19-changelog.md).
 
 Il resto della release v2.1.280 (supporto mouse esteso a piu' liste in fullscreen, `CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH` per il cap sulla lunghezza delle description dei tool MCP, oltre un centinaio di fix su auto mode, dialog, MCP, subagent e sessioni Remote/cloud) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato specificamente a Claude Code oltre al lancio del modello (qui incluso per l'impatto diretto sul default CLI), ne' altri post team rilevanti nelle ultime 24-48 ore.
-
----
-
-## 2026-09-20
-
-- **Supporto nativo ad AGENTS.md** (v2.1.277, 18 set): nei progetti senza CLAUDE.md, Claude Code legge ora automaticamente **AGENTS.md** — lo standard cross-tool gia' usato in decine di migliaia di repo condivisi tra piu' agenti AI (Codex, Cursor e altri) — eliminando il workaround manuale via `@AGENTS.md` che serviva finora. Il file di istruzioni preferito resta configurabile da "Project instructions" in `/config`; non ancora disponibile su Bedrock, Vertex e Foundry. Fonte: [GitHub Releases v2.1.277](https://github.com/anthropics/claude-code/releases/tag/v2.1.277). Doc: [docs/06-claude-md-memory.md](./06-claude-md-memory.md), [docs/19-changelog.md](./19-changelog.md).
-
-Il resto delle release v2.1.276/278 (18-19 set: fix di una regressione 400 su gateway/proxy introdotta da v2.1.275, e il passaggio di default al classificatore auto mode lato server per utenti Claude API/Enterprise/Bedrock/Vertex/Foundry/gateway — non piu' fatturato per l'overhead di classificazione) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code e nessun post team rilevante (oltre a quanto gia' coperto il 18 set) nelle ultime 24-48 ore.
 
 ---
 
