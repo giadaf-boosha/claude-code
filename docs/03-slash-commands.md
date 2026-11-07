@@ -29,7 +29,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/btw <question>` | built-in | Side question senza inquinare la conversation |
 | `/cd <path>` | built-in | Sposta la sessione in una nuova working directory senza rompere il prompt cache (da v2.1.169) |
 | `/chrome` | built-in | Configura Claude in Chrome |
-| `/claude-api [migrate\|managed-agents-onboard]` | **Skill** | Reference Claude API + tool migration |
+| `/claude-api [migrate\|managed-agents-onboard\|latency-optimize]` | **Skill** | Reference Claude API + tool migration; `latency-optimize` individua dove il codice che chiama la Claude API fa attendere l'utente e testa settaggi piu' rapidi contro il tuo eval (da v2.1.319) |
 | `/clear` (alias `/reset`, `/new`) | built-in | Nuova conversation, pregresso resta in `/resume` |
 | `/color [color\|default]` | built-in | Colore prompt bar (sync claude.ai con Remote Control) |
 | `/compact [instructions]` | built-in | Comprime context |
@@ -116,6 +116,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 <sub>Aggiornato 2026-07-18 via daily what's new. Fonte: [GitHub Releases v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212).</sub>
 <sub>Aggiornato 2026-07-19 via daily what's new. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215).</sub>
 <sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222) · [v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223).</sub>
+<sub>Aggiornato 2026-11-07 via daily what's new. Fonte: [GitHub Releases v2.1.319](https://github.com/anthropics/claude-code/releases/tag/v2.1.319).</sub>
 
 ---
 

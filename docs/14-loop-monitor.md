@@ -58,6 +58,7 @@ Omettendo entrambi (prompt + interval) in `/loop`:
 
 - **Esc**: clear pending wakeup (v2.1.113)
 - Tasks scheduled chiedendo a Claude direttamente NON cancellate da Esc
+- **Da v2.1.319**: un loop self-paced termina da solo quando un turno finisce senza richiamare `ScheduleWakeup` (prima restava agganciato finche' non arrivava `/loop --cancel` o `Esc`). Per tornare al comportamento precedente: `CLAUDE_CODE_LOOP_KEEPALIVE=1`.
 
 ### One-time reminders
 
@@ -124,7 +125,9 @@ Lanciato **9 aprile 2026** in v2.1.98. Sostituisce il polling con interrupt push
 
 ### Permessi
 
-Stesse rules di **Bash** (allow/deny patterns matchano).
+Stesse rules di **Bash** (allow/deny patterns matchano). **Da v2.1.319**: il watch WebSocket di Monitor segue la regola su ogni comando Bash sottostante — un deny lo blocca, e una regola ask richiede comunque conferma anche in bypass permissions o auto mode (prima il watch poteva proseguire senza riprompt una volta avviato).
+
+<sub>Aggiornato 2026-11-07 via daily what's new. Fonte: [GitHub Releases v2.1.319](https://github.com/anthropics/claude-code/releases/tag/v2.1.319).</sub>
 
 ### Non disponibile su
 

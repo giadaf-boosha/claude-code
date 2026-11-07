@@ -82,6 +82,20 @@ claude mcp logout <name>         # rimuove credenziali salvate per il server
 
 ---
 
+## 10.3b Task MCP in background (da v2.1.319)
+
+Quando un server MCP esegue una tool call come **task** (lavoro lungo, non una risposta immediata), Claude Code la sposta in background e riporta il risultato a Claude quando finisce, invece di bloccare il turno in attesa. Il comportamento riusa lo stesso pattern dei comandi shell background e di Monitor: il thread principale resta libero, il risultato arriva come notifica quando e' pronto.
+
+Per tornare al comportamento precedente (attesa sincrona dentro la tool call):
+
+```bash
+CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND=1
+```
+
+<sub>Aggiornato 2026-11-07 via daily what's new. Fonte: [GitHub Releases v2.1.319](https://github.com/anthropics/claude-code/releases/tag/v2.1.319).</sub>
+
+---
+
 ## 10.4 Scope settings
 
 | Campo | Effetto |
