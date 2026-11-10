@@ -168,6 +168,8 @@ Lanciato **feb 2026** (research preview Max), GA mar 2026 ([@_catwu](https://x.c
 ### Cosa fa
 Collega la sessione locale a `claude.ai/code`, app iOS e Android. Conversazione sincronizzata cross-device.
 
+> **2026-11-10 (auto-update)**: da v2.1.321, `claude remote-control` supporta `--settings <file>`, che applica quel file di settings a ogni sessione avviata via Remote Control. Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Vedi anche README "What's new today" del giorno.
+
 ### Trigger
 ```bash
 /remote-control                      # in sessione (CLI)

@@ -218,6 +218,8 @@ Default cap: ~25KB. Se troppo basso, tool restituiscono "TRUNCATED".
 
 ## 10.11 OAuth per server remoti
 
+> **2026-11-10 (auto-update)**: fix di sicurezza v2.1.321 — l'OAuth MCP non invia piu' secret come i refresh token a un host diverso quando un server remoto reindirizza la richiesta. Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Vedi anche README "What's new today" del giorno.
+
 I server HTTP/SSE possono richiedere OAuth. Flow:
 1. `/mcp` → seleziona server → Authorize
 2. Browser apre OAuth provider

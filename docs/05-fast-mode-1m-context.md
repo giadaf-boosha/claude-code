@@ -60,6 +60,8 @@ Settings:
 - Team/Enterprise: admin enable
 - v2.1.36+
 
+> **2026-11-10 (auto-update)**: da v2.1.322, fast mode e' disponibile anche su **Vertex AI** (region global, us, eu) — prima limitato ad Anthropic API. Torna a velocita' standard se Vertex lo rifiuta. Fonte: [GitHub Releases v2.1.322](https://github.com/anthropics/claude-code/releases/tag/v2.1.322). Vedi anche README "What's new today" del giorno.
+
 ### Disable e override
 - `CLAUDE_CODE_DISABLE_FAST_MODE=1` — disabilita Fast mode completamente
 - `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1` — forza Opus 4.6 invece di Opus 4.8
@@ -212,6 +214,12 @@ Dal 1 settembre 2026 (v2.1.257), `claude-fable-5-1` sostituisce Fable 5 come mod
 Nei gateway (Claude apps gateway, deployment di terze parti) non ancora aggiornati per Fable 5.1, gli alias `fable` e `best` continuano a risolvere su Fable 5 fino all'aggiornamento del gateway; selezionare `claude-fable-5-1` esplicitamente in `/model` per usare la nuova versione.
 
 <sub>Aggiornato 2026-09-02 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2094851229734277228) · [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257).</sub>
+
+### Fable 5.2 e Mythos 5.2 — nuovo modello Fable di default (da v2.1.321)
+
+Il 9 novembre 2026 Anthropic lancia **Claude Fable 5.2** e **Claude Mythos 5.2** (stesso modello sottostante, safeguard diverse: Fable disponibile a tutti con forti safeguard cyber/bio, Mythos riservato a org verificate in cybersecurity/life sciences con meno safeguard). Da v2.1.321, `claude-fable-5-2` sostituisce Fable 5.1 come modello Fable di default in Claude Code e sulla Claude Platform: $8/MTok input, $40/MTok output, cache read $0.20/MTok; fast mode opzionale fino a 2.5x piu' veloce ($16/$80 per MTok). Effort medium resta il default in Claude apps e Claude Code (non e' un cambio di modello).
+
+> **2026-11-10 (auto-update)**: lancio Fable 5.2/Mythos 5.2 e cambio di default Fable in Claude Code. Fonte: [Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2) · [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Vedi anche README "What's new today" del giorno.
 
 ---
 

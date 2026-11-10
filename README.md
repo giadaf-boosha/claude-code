@@ -1,20 +1,23 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **8 novembre 2026, 07:00 CET**.
-> Versione CLI di riferimento: **v2.1.319** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.1** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **10 novembre 2026, 07:00 CET**.
+> Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-08)
+## What's new today (2026-11-10)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
-
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.319 (6 nov), gia' coperta ieri — nessuna versione successiva su GitHub Releases, tags o changelog ufficiale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (gli ultimi post, 4-5 novembre, riguardano Personal Finance in Claude, controlli di sicurezza per Claude Enterprise e nuovi partner del Marketplace — non la CLI). Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+- **Claude Fable 5.2 e Claude Mythos 5.2**: Anthropic lancia i due nuovi modelli flagship (stesso modello sottostante, safeguard diverse); **Fable 5.2** diventa il modello Fable di default in Claude Code, $8/$40 per Mtok (cache read $0.20/Mtok), fast mode 2.5x disponibile, effort medium di default. Fonte: [Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2). Vedi [docs/05 § 5.7](./docs/05-fast-mode-1m-context.md#fable-52-e-mythos-52--nuovo-modello-fable-di-default-da-v21321) e [docs/19-changelog.md](./docs/19-changelog.md).
+- **CLI v2.1.322** aggiunge fast mode su **Vertex AI** (region global, us, eu) — prima solo Anthropic API; torna a velocita' standard se Vertex lo rifiuta. Fonte: [GitHub Releases v2.1.322](https://github.com/anthropics/claude-code/releases/tag/v2.1.322). Vedi [docs/05 § 5.1](./docs/05-fast-mode-1m-context.md#51-fast-mode-opus-48-di-default-da-v21154).
+- **Fix di sicurezza (v2.1.321)**: l'OAuth MCP non invia piu' secret come i refresh token a un host diverso quando un server reindirizza la richiesta. Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Vedi [docs/10 § 10.11](./docs/10-mcp.md#1011-oauth-per-server-remoti).
+- **Fix di sicurezza (v2.1.321)**: un comando Bash read-only poteva girare fuori dalla sandbox senza prompt; le deny rule/prompt sui file protetti ora si applicano anche al file di destinazione scritto da `cp`/`mv`. Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Vedi [docs/04 § 4.4](./docs/04-modalita-permessi.md#44-sandbox-mode).
+- **Mod, comportamento cambiato (v2.1.321)**: i mod che Claude scrive non si attivano piu' senza chiedere in auto/bypass mode e non caricano in modalita' `dontAsk`; le loro tool call non generano piu' prompt di permesso (deny rule e policy org restano valide). Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Vedi [docs/11 § 11.1b](./docs/11-plugins-marketplace.md#111b-claude-mods-plugin-con-hook-a-funzione-da-v21287).
+- **`claude remote-control --settings <file>`** (v2.1.321): applica un file di settings a ogni sessione avviata via Remote Control. Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Vedi [docs/17 § 17.6](./docs/17-ide-surface.md#remote-control).
 
 ---
 

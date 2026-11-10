@@ -224,6 +224,8 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 
 OS-level enforcement su Bash e child processes. Filesystem isolation + network isolation. Riduce permission prompt dell'~84% in uso interno Anthropic.
 
+> **2026-11-10 (auto-update)**: due fix di sicurezza v2.1.321 — un comando Bash read-only poteva girare fuori dalla sandbox senza prompt di permesso; le deny rule e i prompt sui file protetti ora si applicano anche al file di destinazione scritto da `cp`/`mv`. Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Vedi anche README "What's new today" del giorno.
+
 ### Piattaforme
 - **macOS**: Seatbelt (out of the box)
 - **Linux/WSL2**: bubblewrap + socat (`apt-get install bubblewrap socat`). WSL1 NON supportato.
