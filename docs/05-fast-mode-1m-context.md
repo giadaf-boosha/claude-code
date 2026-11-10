@@ -3,7 +3,7 @@
 > 📍 [README](../README.md) → [Workflow](../README.md#workflow) → **05 Fast mode + 1M context**
 > 🔧 Operational · 🟡 Intermediate
 
-Feature legate ai modelli: il **fast mode** (Opus 5 e Opus 4.8 di default, da v2.1.219), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Claude Opus 5** come nuovo modello premium (v2.1.219, 24 lug 2026), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), **Claude Sonnet 5** come modello di default (v2.1.197, 30 giu 2026), **Claude Opus 5.5** come nuovo modello Opus di default, con Pro e Team Standard che passano da Sonnet a Opus (v2.1.280, 22 set 2026), e la famiglia **Claude 5.5** completata da Sonnet 5.5 (v2.1.284, 28 set 2026) e **Haiku 5.5** (v2.1.293, 7 ott 2026).
+Feature legate ai modelli: il **fast mode** (Opus 5 e Opus 4.8 di default, da v2.1.219), il **context window da 1M token GA**, gli **effort level** (default `high`, `xhigh` per i task piu' duri, piu' `ultracode`), **Claude Opus 5** come nuovo modello premium (v2.1.219, 24 lug 2026), **Claude Fable 5** come primo modello Mythos-class disponibile pubblicamente (v2.1.170), **Claude Sonnet 5** come modello di default (v2.1.197, 30 giu 2026), **Claude Opus 5.5** come nuovo modello Opus di default, con Pro e Team Standard che passano da Sonnet a Opus (v2.1.280, 22 set 2026), la famiglia **Claude 5.5** completata da Sonnet 5.5 (v2.1.284, 28 set 2026) e **Haiku 5.5** (v2.1.293, 7 ott 2026), e **Claude Fable 5.2** come nuovo modello Fable di default (v2.1.321, 9 nov 2026).
 
 ## Cosa e' concettualmente
 
@@ -212,6 +212,18 @@ Dal 1 settembre 2026 (v2.1.257), `claude-fable-5-1` sostituisce Fable 5 come mod
 Nei gateway (Claude apps gateway, deployment di terze parti) non ancora aggiornati per Fable 5.1, gli alias `fable` e `best` continuano a risolvere su Fable 5 fino all'aggiornamento del gateway; selezionare `claude-fable-5-1` esplicitamente in `/model` per usare la nuova versione.
 
 <sub>Aggiornato 2026-09-02 via daily what's new. Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2094851229734277228) · [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257).</sub>
+
+### Fable 5.2 — nuovo modello Fable di default (da v2.1.321)
+
+Dal 9 novembre 2026 (v2.1.321), `claude-fable-5-2` sostituisce Fable 5.1 come modello Fable di default in Claude Code. Stesso context window da 1M token, ma pricing piu' basso ($8/MTok input, $40/MTok output contro $10/$50 di Fable 5.1) e cache read a $0.20/MTok.
+
+```bash
+/model claude-fable-5-2
+```
+
+Le selezioni salvate su Fable 5.1 migrano all'alias `fable`: su Pro e Max subito, su Team e Enterprise quando l'organizzazione lo abilita. Per tornare alla versione precedente, seleziona `claude-fable-5-1` esplicitamente in `/model`.
+
+<sub>Aggiornato 2026-11-10 via daily what's new. Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321).</sub>
 
 ---
 

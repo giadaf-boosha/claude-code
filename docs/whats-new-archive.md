@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-11-08
+
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
+
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.319 (6 nov), gia' coperta ieri — nessuna versione successiva su GitHub Releases, tags o changelog ufficiale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24-48 ore (gli ultimi post, 4-5 novembre, riguardano Personal Finance in Claude, controlli di sicurezza per Claude Enterprise e nuovi partner del Marketplace — non la CLI). Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-11-07
 
 > Aggiornamento con 3 voci editoriali.
@@ -243,12 +251,6 @@ Il resto della release v2.1.284 resta sotto la soglia editoriale: risposta "si',
 Il resto della release v2.1.283 (25 set) resta sotto la soglia editoriale: `/doctor prompt-audit` per pattern di prompting datati in CLAUDE.md/skill/agent, `availableModelsMatch: "exact"` e `deniedModels` per bloccare modelli non elencati, header gateway `x-claude-code-prompt-id`, oltre 90 fix su MCP, plugin, vim mode e permessi. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo nelle ultime 48 ore.
 
 ---
-
-## 2026-09-25
-
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
-
-Le uniche release CLI nella finestra (v2.1.281, 23 set; v2.1.282, 24 set) restano sotto la soglia editoriale: solo settings enterprise/gateway (`assume_role` e `guardrail` su Bedrock, `telemetry.resource_attributes`, `"attribution": false` per nascondere le righe di attribuzione commit/PR), `maxProseWidth` per limitare la larghezza del testo nei terminali wide, e un ampio giro di fix su sessioni, resume, vim mode e prompt cache. I due post del blog Anthropic del 22 e 24 settembre su Opus 5.5 (pricing dei task, ottimizzazione per sessioni di coding lunghe) approfondiscono un modello gia' coperto il 23 settembre, senza annunciare feature nuove. Nessun nuovo slash command, tool o annuncio di sistema nelle ultime 24-48 ore.
 
 ---
 
