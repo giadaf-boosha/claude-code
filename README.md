@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **10 novembre 2026, 07:00 CET**.
+> Ultimo aggiornamento: **11 novembre 2026, 07:00 CET**.
 > Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-10)
+## What's new today (2026-11-11)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-- **Claude Fable 5.2** diventa il nuovo modello Fable di default in Claude Code, sostituendo Fable 5.1: stesso context window da 1M token, pricing piu' basso ($8/$40 per MTok contro $10/$50, cache read a $0.20/MTok). Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Doc: [docs/05-fast-mode-1m-context.md](./docs/05-fast-mode-1m-context.md), [docs/19-changelog.md](./docs/19-changelog.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Il resto della finestra resta sotto la soglia editoriale: v2.1.321 (9 nov) aggiunge anche `--settings <file>` per `claude remote-control` e fix di sicurezza su MCP OAuth/sandbox/`cp`-`mv`, mentre v2.1.322 (10 nov) porta solo il fast mode su Vertex AI (regioni global/us/eu) — nessun nuovo slash command o tool primitivo. Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (l'unico post, 9 novembre, annuncia Claude Fable 5.2/Mythos 5.2 in generale, non una feature della CLI). Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta ieri — nessuna versione successiva su GitHub Releases, tags o changelog ufficiale. Tre annunci Anthropic blog il 10 novembre ("Claude Whiteboards, Sheets e Data", "Your apps can now open in Claude", connettori interattivi MCP) riguardano le app Claude.ai consumer/enterprise, non la CLI Claude Code, quindi sotto soglia (stesso pattern delle esclusioni precedenti su Personal Finance/Enterprise/Marketplace). Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 
