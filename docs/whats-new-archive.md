@@ -9,6 +9,16 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-11-10
+
+> Aggiornamento con 1 voce editoriale.
+
+- **Claude Fable 5.2** diventa il nuovo modello Fable di default in Claude Code, sostituendo Fable 5.1: stesso context window da 1M token, pricing piu' basso ($8/$40 per MTok contro $10/$50, cache read a $0.20/MTok). Fonte: [GitHub Releases v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321). Doc: [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/19-changelog.md](./19-changelog.md).
+
+Il resto della finestra resta sotto la soglia editoriale: v2.1.321 (9 nov) aggiunge anche `--settings <file>` per `claude remote-control` e fix di sicurezza su MCP OAuth/sandbox/`cp`-`mv`, mentre v2.1.322 (10 nov) porta solo il fast mode su Vertex AI (regioni global/us/eu) — nessun nuovo slash command o tool primitivo. Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (l'unico post, 9 novembre, annuncia Claude Fable 5.2/Mythos 5.2 in generale, non una feature della CLI). Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti nella finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
+
+---
+
 ## 2026-11-08
 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
@@ -241,16 +251,6 @@ L'unica release nella finestra (v2.1.285, 29 set) resta sotto la soglia editoria
 - **`/claude-api build-eval` e `/claude-api hillclimb`**: la skill ufficiale `claude-api` guadagna due workflow per costruire dentro il codebase una eval che rispecchia il lavoro reale in produzione e poi migliorare l'app (prompt, skill, tool, modello, effort) un cambiamento alla volta, verificando su un held-out set che il miglioramento non sia overfitting. Fonte: [Anthropic](https://claude.dev/blog/automating-eval-design-and-hillclimbing/) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2104676099083190435). Doc: [docs/09-skills.md](./09-skills.md), [docs/19-changelog.md](./19-changelog.md).
 
 Il resto della release v2.1.284 resta sotto la soglia editoriale: risposta "si', ma richiedimelo di nuovo" al prompt di auto mode per letture fuori working directory, importi in dollari nella spend limit bar di `/usage`, `/mcp reconnect all`, oltre un centinaio di fix su stream di risposta, "Prompt is too long" e vim mode.
-
----
-
-## 2026-09-27
-
-- **Graceful wrap-up al limite delle 5 ore**: quando il limite di sessione interrompe un turno in corso, Claude Code cerca ora un punto di arresto pulito invece di tagliare a meta' un edit — usa una piccola quota fissa presa dal limite *settimanale* per finire la modifica, far passare i test e lasciare una nota su cosa resta da fare. Su Pro disponibile una volta a settimana, su Max e Team Premium a ogni limite raggiunto (quota permettendo). Fonte: [@ClaudeDevs](https://x.com/ClaudeDevs/status/2103561342057943314). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/19-changelog.md](./docs/19-changelog.md).
-
-Il resto della release v2.1.283 (25 set) resta sotto la soglia editoriale: `/doctor prompt-audit` per pattern di prompting datati in CLAUDE.md/skill/agent, `availableModelsMatch: "exact"` e `deniedModels` per bloccare modelli non elencati, header gateway `x-claude-code-prompt-id`, oltre 90 fix su MCP, plugin, vim mode e permessi. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo nelle ultime 48 ore.
-
----
 
 ---
 
