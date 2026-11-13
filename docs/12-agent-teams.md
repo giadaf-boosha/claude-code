@@ -17,6 +17,8 @@ Coordina piu' istanze di Claude Code che lavorano insieme con shared task list e
 
 > "Coordinate multiple Claude Code instances working together as a team" — [`/en/agent-teams`](https://code.claude.com/docs/en/agent-teams)
 
+> **2026-11-13 (auto-update)**: da v2.1.323, il limite di messaggi che le sessioni sulla stessa macchina possono scambiarsi senza un tuo intervento sale da ~20 a 100.000. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 12.1 Enable

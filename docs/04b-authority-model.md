@@ -17,6 +17,8 @@ Senza Authority esplicita, un agent e' una mina vagante:
 
 L'Authority **dichiarativa** trasforma "sperare che l'LLM si comporti bene" in "il sistema **non puo'** comportarsi male".
 
+> **2026-11-13 (auto-update)**: da v2.1.323, diversi fix rafforzano il Layer 1 (permission rules): le regole Bash deny/ask ora intercettano anche i comandi lanciati via `sudo`/`env`, e Write/Edit non possono piu' scrivere su path coperti da una regola deny di Read. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi anche README "What's new today" del giorno.
+
 Mappa IMPACT:
 - **Intent**: cosa vuoi ottenere (CLAUDE.md)
 - **Memory**: cosa l'agent ricorda
