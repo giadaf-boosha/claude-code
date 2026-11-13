@@ -5,6 +5,8 @@
 
 > **Tesi del capitolo**: ogni agent autonomo (incluso Claude Code) gira un **loop**: ragiona → agisce → osserva → ragiona di nuovo. Questo loop e' formalizzato nel paper **ReAct (Yao et al. 2022)**. Capire il pattern ReAct e' la chiave per leggere `/loop`, Monitor tool, plan mode, hooks come componenti dello stesso meccanismo, non come feature isolate.
 
+> **2026-11-13 (auto-update)**: da v2.1.323, **Code Mode** (sperimentale, opt-in) cambia il passo "Action" del loop: Claude scrive JavaScript per chiamare i suoi tool invece di invocarli uno a uno. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 14b.1 Origine: il paper ReAct (2022)

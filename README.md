@@ -1,20 +1,26 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 novembre 2026, 07:00 CET**.
-> Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **13 novembre 2026, 07:00 CET**.
+> Versione CLI di riferimento: **v2.1.323** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-13)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.323** introduce **Code Mode** (sperimentale, opt-in): Claude scrive JavaScript per chiamare i suoi tool invece di invocarli uno a uno. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/14b § Agent loop](./docs/14b-agent-loop-react.md) e [docs/19 § Tabella versioni](./docs/19-changelog.md).
+- **CLI v2.1.323**: `plugin.json` guadagna `engines["claude-code"]` — i plugin fuori dal range di versione dichiarato non vengono piu' installati, aggiornati o caricati. Fonte: [v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/11 § Plugin marketplace](./docs/11-plugins-marketplace.md).
+- **CLI v2.1.323**: `claude plugin validate` aggiunge il type-checking TypeScript degli hook dei plugin (avviso, errore con `--strict`). Fonte: [v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/11 § Plugin marketplace](./docs/11-plugins-marketplace.md).
+- **CLI v2.1.323 (fix sicurezza)**: `--permission-mode auto`/`defaultMode: auto` parte ora in modalita' Manual quando l'auto mode non e' disponibile, invece di una modalita' piu' permissiva. Fonte: [v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/04 § Modalita' permessi](./docs/04-modalita-permessi.md), [docs/04b § Authority model](./docs/04b-authority-model.md).
+- **CLI v2.1.323 (fix sicurezza)**: diverse regole Bash allow con wildcard (es. `Bash(ls*)`) smettono di bypassare il prompt di permesso; le regole deny/ask ora intercettano anche i comandi lanciati via `sudo`/`env`; Write/Edit non possono piu' scrivere su path coperti da una regola deny di Read. Fonte: [v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/04 § Modalita' permessi](./docs/04-modalita-permessi.md).
+- **CLI v2.1.323**: il limite di messaggi che le sessioni sulla stessa macchina possono scambiarsi senza conferma sale da ~20 a 100.000. Fonte: [v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/12 § Agent teams](./docs/12-agent-teams.md).
+- **CLI v2.1.323**: supporto `.docx` per gli upload del tool Artifact; deprecato il setting plugin `agent` (ancora attivo, ora con avviso). Fonte: [v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/11 § Plugin marketplace](./docs/11-plugins-marketplace.md).
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (nessun post tra l'11 e il 13 novembre sulla pagina news; l'ultimo, 10 novembre, riguarda il roadshow per l'IPO). Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati datati alla finestra.
 
 ---
 
