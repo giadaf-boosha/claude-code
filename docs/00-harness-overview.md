@@ -189,6 +189,7 @@ Ogni feature di Claude Code corrisponde a un componente harness. Questo mapping 
 | **checkpoints** | State + Error recovery | State | [04](./04-modalita-permessi.md) sez. 4.5 |
 | **`/rewind`** | State restoration | State | [04](./04-modalita-permessi.md) |
 | **MCP** | Tool layer extensibile | Tool | [10](./10-mcp.md) |
+| **Code Mode** | Tool layer: Claude scrive codice per chiamare i tool invece di tool call discrete | Tool | [10](./10-mcp.md#103c-code-mode-claude-scrive-javascript-per-chiamare-i-tool-da-v21323-sperimentale) |
 | **plugins** | Tool + Skills + Hooks bundle | Tool | [11](./11-plugins-marketplace.md) |
 | **skills** | Tool layer behavior packs | Tool | [09](./09-skills.md) |
 | **`/ultrareview`** | Guardrails pre-merge | Guard | [15](./15-ultraplan-ultrareview.md) |
