@@ -96,6 +96,16 @@ CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND=1
 
 ---
 
+## 10.3c Code Mode: Claude scrive JavaScript per chiamare i tool (da v2.1.323, sperimentale)
+
+Modalita' sperimentale e opt-in in cui, invece di emettere una tool call discreta alla volta (incluse quelle verso server MCP), Claude scrive uno script JavaScript che chiama i propri tool direttamente nel codice — utile per catene di chiamate lunghe o ripetitive (es. iterare su decine di risultati MCP, orchestrare piu' tool in sequenza) dove il pattern richiesta → risposta → richiesta successiva aggiunge latenza e token di overhead a ogni passo.
+
+Si attiva (o si disattiva per un'intera organizzazione) seguendo la guida ufficiale: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).
+
+<sub>Aggiornato 2026-11-13 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323).</sub>
+
+---
+
 ## 10.4 Scope settings
 
 | Campo | Effetto |
