@@ -9,6 +9,14 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-11-12
+
+> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+
+Nessuna nuova release CLI nella finestra: l'ultima restava v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale era ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardavano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+
+---
+
 ## 2026-11-10
 
 > Aggiornamento con 1 voce editoriale.
@@ -242,15 +250,6 @@ L'unica release nella finestra (v2.1.286, 30 set) resta sotto la soglia editoria
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 L'unica release nella finestra (v2.1.285, 29 set) resta sotto la soglia editoriale: `claude --desktop` per aprire la desktop app dalla CLI, `claude plugin configure` per gestire le opzioni di un plugin, il setting `allowedProviders` per limitare i provider API ammessi su una macchina, le env var `CLAUDE_CODE_DISABLE_WEB_FETCH` e `CLAUDE_CODE_NONSTREAMING_TIMEOUT_RETRIES`, oltre un centinaio di fix su plugin, MCP, Remote Control, VS Code e Artifact tool. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo, nessun post team rilevante nelle ultime 24-48 ore.
-
----
-
-## 2026-09-29
-
-- **Claude Sonnet 5.5 diventa il nuovo modello Sonnet di default** (v2.1.284, 28 set): sostituisce Sonnet 5 sulla Claude API e in Claude Code, stesso pricing ($2/$10 per MTok, cache read $0.20/MTok), output oltre il 30% piu' veloce con meno token/tool call per task, salto da 10,3% a 70,6% su Terminal-Bench 4.0, cyber safeguard equivalenti a Opus 5 (prima volta su una Sonnet) e watermarking invisibile del testo. Fonte: [Anthropic](https://www.anthropic.com/claude-sonnet-5-5) · [GitHub Releases v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284). Doc: [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/01-snapshot.md](./01-snapshot.md), [docs/19-changelog.md](./19-changelog.md).
-- **`/claude-api build-eval` e `/claude-api hillclimb`**: la skill ufficiale `claude-api` guadagna due workflow per costruire dentro il codebase una eval che rispecchia il lavoro reale in produzione e poi migliorare l'app (prompt, skill, tool, modello, effort) un cambiamento alla volta, verificando su un held-out set che il miglioramento non sia overfitting. Fonte: [Anthropic](https://claude.dev/blog/automating-eval-design-and-hillclimbing/) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2104676099083190435). Doc: [docs/09-skills.md](./09-skills.md), [docs/19-changelog.md](./19-changelog.md).
-
-Il resto della release v2.1.284 resta sotto la soglia editoriale: risposta "si', ma richiedimelo di nuovo" al prompt di auto mode per letture fuori working directory, importi in dollari nella spend limit bar di `/usage`, `/mcp reconnect all`, oltre un centinaio di fix su stream di risposta, "Prompt is too long" e vim mode.
 
 ---
 

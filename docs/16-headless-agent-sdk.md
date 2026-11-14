@@ -17,6 +17,8 @@ Per usare Claude Code in **CI/CD**, **batch**, o come **libreria** in app Python
 
 ---
 
+> **2026-11-14 (auto-update)**: da v2.1.323 arriva **Code Mode**, modalita' sperimentale opt-in in cui Claude scrive JavaScript per chiamare i tool invece di farlo tramite chiamate dirette. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ## 16.1 CLI Headless (`-p`)
 
 ```bash
