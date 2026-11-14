@@ -208,6 +208,41 @@ angles (data model, API surface, migration path), then weigh them and recommend 
 
 ---
 
+## 24.10 Code Mode (sessione singola, sperimentale) {#code-mode-vs-dynamic-workflows}
+
+Da **v2.1.323** (12 nov 2026), un'altra feature sperimentale fa scrivere codice a Claude per chiamare i tool — ma dentro la sessione interattiva corrente, non in un run isolato in background come i workflow: **Code Mode**. Con Code Mode attivo, Claude non emette piu' una tool call alla volta: scrive un pezzo di JavaScript che ne fa piu' in un colpo (in parallelo, incatenando il risultato di una nella successiva, filtrando l'output prima di leggerlo) e Claude Code lo esegue nella sessione.
+
+```javascript
+const files = await $`rg -l "function retryPolicy" src`.text();
+const target = files.trim().split("\n")[0];
+await edit(target, "maxAttempts: 3", "maxAttempts: 5");
+({ edited: target, tests: $`npm test -- retryPolicy`.nothrow() });
+```
+
+Nella conversazione vedi comunque le singole tool call (es. il diff di un edit), non il codice — `Ctrl+O` apre il transcript viewer dove ogni blocco appare come riga **Code** collassata, da espandere.
+
+### Code Mode vs Dynamic Workflows
+
+|  | **Code Mode** | **Dynamic Workflows** |
+|---|---|---|
+| Dove gira | Sessione interattiva corrente, in foreground (o background fino a 2h) | Runtime isolato in background |
+| Chi chiama i tool | Lo script, sui **tool della sessione** (Read, Edit, Bash, ...) | Lo script, spawnando **subagent** |
+| Scala | Una catena di tool call per task | Da decine a centinaia di agent per run |
+| Attivazione | `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`, solo CLI interattiva | Keyword `workflow` o `/effort ultracode` |
+| Stato | Sperimentale, opt-in, da v2.1.323 | GA da research preview (28 mag 2026) |
+
+### Limiti principali
+
+Solo in una sessione `claude` interattiva da terminale — non con `-p`, Agent SDK, pannello VS Code, Desktop app o sessioni cloud. Non compatibile con Remote Control, Claude in Chrome o computer use. Il codice si ferma dopo 10 minuti a meno che non girhi in background (fino a 2 ore, richiede auto mode o `bypassPermissions`). In auto mode il classificatore revisiona **il codice scritto**, non ogni singola tool call che ne risulta — i valori calcolati a runtime (es. un path preso dall'output di una ricerca) non sono visibili al classificatore, quindi le regole `deny`/`ask` e gli hook `PreToolUse` restano il controllo su cui contare (vedi [4.3](./04-modalita-permessi.md#43-auto-mode-da-v2183-default-promaxteam-da-14-ago-2026)).
+
+Attivazione: `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude` (oppure in `~/.claude/settings.json`; la variabile e' ignorata nei settings di progetto, cosi' un repo clonato non puo' attivarla per te).
+
+> Fonte: [`/en/code-mode`](https://code.claude.com/docs/en/code-mode).
+
+<sub>Aggiornato 2026-11-14 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
+
+---
+
 ← [23 Glossario](./23-glossario.md) · Successivo → [25 /goal](./25-goal.md)
 
 <sub>Aggiornato 2026-07-08 via daily what's new. Fonte: [GitHub Releases v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202).</sub>

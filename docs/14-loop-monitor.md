@@ -59,6 +59,9 @@ Omettendo entrambi (prompt + interval) in `/loop`:
 - **Esc**: clear pending wakeup (v2.1.113)
 - Tasks scheduled chiedendo a Claude direttamente NON cancellate da Esc
 - **Da v2.1.319**: un loop self-paced termina da solo quando un turno finisce senza richiamare `ScheduleWakeup` (prima restava agganciato finche' non arrivava `/loop --cancel` o `Esc`). Per tornare al comportamento precedente: `CLAUDE_CODE_LOOP_KEEPALIVE=1`.
+- **Da v2.1.325**: uno scheduled task o un'iterazione di `/loop` che invocherebbe una skill con `allowed-tools` o hook dichiarati nel suo `SKILL.md` chiede ora conferma prima di eseguirla, invece di partire in autonomia come le altre skill. Rilevante per automazioni (`loop.md`, task ricorrenti) che si appoggiano a skill di terze parti o custom con hook: la prima esecuzione puo' fermarsi su un prompt anche in sessioni altrimenti non presidiate.
+
+<sub>Aggiornato 2026-11-14 via daily what's new. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325).</sub>
 
 ### One-time reminders
 

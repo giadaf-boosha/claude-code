@@ -239,6 +239,22 @@ OS-level enforcement su Bash e child processes. Filesystem isolation + network i
 | `auto-allow` | Sandboxed cmd auto-approved; cmd non sandboxabili tornano al permission flow normale |
 | `regular` | Standard prompt flow con sandbox come protezione extra |
 
+### Sandbox Bash: conferma di default (da v2.1.325)
+
+Da **v2.1.325** (13 nov 2026), un comando Bash eseguito in sandbox non e' piu' auto-approvato per il solo fatto di essere sandboxed: segue il **flusso di permessi normale**, come un comando non sandboxed, e puo' quindi fermarsi su un prompt. Per tornare al comportamento precedente (sandboxed = auto-allow):
+
+```json
+{
+  "sandbox": {
+    "autoAllowBashIfSandboxed": true
+  }
+}
+```
+
+La stessa release introduce un prompt di conferma anche per i comandi git **read-only** eseguiti in un repository non trusted, e rifiuta `git bisect run` e comandi simili dentro una sessione worktree. Il classificatore di [Code Mode](./24-workflows.md#code-mode-vs-dynamic-workflows) segue una logica simile: revisiona lo script scritto da Claude, non ogni singola tool call che ne risulta.
+
+<sub>Aggiornato 2026-11-14 via daily what's new. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325).</sub>
+
 ### Filesystem isolation
 ```json
 {
