@@ -19,6 +19,8 @@ VS Code, JetBrains, Desktop, Web, Slack, Channels, Remote Control. Tutti i modi 
 
 ## 17.1 VS Code
 
+> **2026-11-14 (auto-update)**: da v2.1.325 nuovi suggerimenti di prompt (Tab per accettare), un sign-in Console che non crea una API key, e un campo redirect URL per il sign-in MCP su SSH/WSL/container. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 Estensione: `vscode:extension/anthropic.claude-code`. Requires VS Code 1.98.0+.
 
 ### Features GUI

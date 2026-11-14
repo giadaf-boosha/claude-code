@@ -17,6 +17,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 ---
 
+> **2026-11-14 (auto-update)**: da v2.1.323 `/security-review` chiede conferma prima di avviarsi, come gli altri comandi che toccano il sistema. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ## 3.1 Tabella completa
 
 | Comando | Tipo | Funzione |

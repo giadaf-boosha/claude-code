@@ -19,6 +19,8 @@ Due feature complementari per **automazione intra-sessione**: `/loop` esegue rip
 
 ## 14.1 `/loop` (bundled skill)
 
+> **2026-11-14 (auto-update)**: da v2.1.325 le attivita' pianificate e `/loop` chiedono conferma prima di eseguire una skill che dichiara `allowed-tools` o hook; aggiungi `Skill(name)` a `permissions.allow` per lanciarla senza presidio. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 > Disponibile da v2.1.72 (base), evoluzione **self-pacing** in Week 15 (apr 2026). Alias: `/proactive`.
 
 ### Sintassi

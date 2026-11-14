@@ -222,6 +222,8 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 
 ## 4.4 Sandbox mode {#sandbox}
 
+> **2026-11-14 (auto-update)**: da v2.1.325 i comandi Bash sandboxati seguono di default il normale flusso permessi (non piu' auto-approvati). Per il vecchio comportamento: `sandbox.autoAllowBashIfSandboxed: true`. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 OS-level enforcement su Bash e child processes. Filesystem isolation + network isolation. Riduce permission prompt dell'~84% in uso interno Anthropic.
 
 ### Piattaforme

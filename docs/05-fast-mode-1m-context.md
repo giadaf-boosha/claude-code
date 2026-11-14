@@ -79,6 +79,8 @@ Anthropic ha distribuito $50 di extra usage a tutti i Pro/Max. [@_catwu](https:/
 
 ## 5.2 1M context window (GA)
 
+> **2026-11-14 (auto-update)**: da v2.1.323 il context window di default per i modelli non riconosciuti sale da 200K a 1M token. `CLAUDE_CODE_DISABLE_1M_CONTEXT=1` per restare a 200K. Fonte: [changelog](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ### Cosa cambia
 Contesto da 1M token GA per **Opus 4.6**, **Sonnet 4.6** e (nativo) **Sonnet 5** a pricing standard (no multiplier). Sonnet 4.6: $3/$15 per MTok anche su 900K-token request. **Sonnet 5** espone 1M token come context window nativa (non richiede flag aggiuntivi).
 
