@@ -89,6 +89,7 @@ Claude Code rende esplicito ogni componente del loop:
 | **Loop autonomous** | Auto mode + `/loop` self-pacing | Claude decide quando ri-eseguire |
 | **Loop bounded** | `--max-turns N` | Hard cap sul loop |
 | **Loop interrupted** | Esc, `/btw` side query | Side-chain mid-loop |
+| **Act batched** | **Code Mode** (sperimentale, v2.1.323) | Un Act unico scrive ed esegue JS che incatena piu' tool call, invece di un tool call per turno — vedi [14b.11](#14b11-code-mode-il-loop-che-scrive-codice-invece-di-chiamare-un-tool-alla-volta) |
 
 ---
 
@@ -176,6 +177,7 @@ flowchart TD
     Q -->|esecuzione long-running automatica| AT[/loop self-paced]
     Q -->|24/7 senza laptop| RT[Routines cloud]
     Q -->|task complesso da pianificare| UP[/ultraplan + execute]
+    Q -->|tante tool call ripetitive/indipendenti| CM[Code Mode sperimentale]
 ```
 
 | Variante | Quando | Doc |
@@ -186,6 +188,7 @@ flowchart TD
 | Monitor tool | Eventi async (logs, CI) | [14](./14-loop-monitor.md) |
 | Routines | 24/7 cloud, no laptop | [13](./13-routines-cloud.md) |
 | `/ultraplan` | Pianificazione cloud-scale | [15](./15-ultraplan-ultrareview.md) |
+| Code Mode (sperimentale) | Un task con molte tool call legate tra loro (refactor ripetuto su N file, ricerca che va filtrata prima di essere letta, comandi indipendenti da lanciare insieme) | [14b.11](#14b11-code-mode-il-loop-che-scrive-codice-invece-di-chiamare-un-tool-alla-volta) |
 
 ---
 
@@ -223,6 +226,37 @@ while not done:
 
 ---
 
+## 14b.11 Code Mode: il loop che scrive codice invece di chiamare un tool alla volta
+
+> Sperimentale, opt-in, da v2.1.323 (12 nov 2026). Disattivato di default, puo' cambiare o essere rimosso in qualsiasi release.
+
+Finora ogni Act del loop ReAct in Claude Code corrisponde a **una** tool call: Claude chiama `Read`, legge il risultato, ragiona, chiama `Edit`, e cosi' via — un frame per tool call. **Code Mode cambia la granularita' dell'Act**: Claude scrive un blocco di JavaScript che fa **piu' tool call in un colpo solo**, e Claude Code lo esegue nella sessione. L'Observe arriva quando Claude legge solo cio' che il codice decide di restituire, non l'output grezzo di ogni singola call.
+
+```javascript
+const files = await $`rg -l "function retryPolicy" src`.text();
+const target = files.trim().split("\n")[0];
+await edit(target, "maxAttempts: 3", "maxAttempts: 5");
+({ edited: target, tests: $`npm test -- retryPolicy`.nothrow() });
+```
+
+Una singola Act cosi' trova il file, lo modifica e lancia i test — tre tool call (ricerca, edit, bash) che nel loop classico sarebbero stati tre frame separati, qui diventano un frame unico con un Observe finale piu' corto.
+
+**Dove si vede nella UI**: in conversazione compaiono i tool call risultanti (es. il diff dell'edit), non il codice. `Ctrl+O` apre il transcript viewer e mostra ogni blocco come riga **Code** da espandere.
+
+**Permessi**: ogni tool call dentro il codice passa comunque per le regole `deny`/`ask` e gli hook `PreToolUse` ([07](./07-hooks.md)); in più, l'[auto mode](./04-modalita-permessi.md) applica il classificatore al codice nel suo insieme (non vede valori calcolati a runtime, es. un path preso da un risultato di ricerca). Il codice puo' girare in background fino a 2 ore in modalita' auto/`bypassPermissions`, altrimenti si attende il suo esito e si ferma dopo 10 minuti.
+
+**Limiti principali**: solo sessione interattiva `claude` in terminale (non `-p`, non Agent SDK, non VS Code panel, non Desktop, non cloud); resume possibile solo con Code Mode riattivato; incompatibile con Remote Control, Claude in Chrome, computer use e agent teams.
+
+**Attivazione**: `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude`, o nel blocco `env` di `~/.claude/settings.json`. Un'organizzazione lo blocca impostando la stessa env var a `0` nei managed settings.
+
+Vale la pena leggerlo come **variante strutturale del loop**, non come automazione in piu': e' lo stesso Reason → Act → Observe, ma con un Act che puo' incatenare N tool call prima di tornare il controllo al modello — utile quando le tool call successive dipendono l'una dall'altra o possono girare in parallelo senza bisogno di un Observe intermedio.
+
+Doc ufficiale: https://code.claude.com/docs/en/code-mode.
+
+<sub>Aggiunto 2026-11-15 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
+
+---
+
 ## 14b.9 Letture di approfondimento
 
 - Paper originale ReAct: https://arxiv.org/abs/2210.03629
@@ -231,6 +265,7 @@ while not done:
 - [15 — Ultraplan & Ultrareview](./15-ultraplan-ultrareview.md) — loop multi-agent
 - [00 — Harness overview](./00-harness-overview.md) sez. 0.4 — Control flow in IMPACT
 - [22 — Compound engineering](./22-compound-engineering.md) — composizione di loop
+- [14b.11 — Code Mode](#14b11-code-mode-il-loop-che-scrive-codice-invece-di-chiamare-un-tool-alla-volta) — l'Act che scrive codice invece di una tool call per volta
 - `_research/dossier-conceptual-react.md` — dossier interno
 
 ---
