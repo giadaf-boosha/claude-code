@@ -184,6 +184,7 @@ Ogni feature di Claude Code corrisponde a un componente harness. Questo mapping 
 | **`/loop`** | Control flow ricorsivo | C | [14](./14-loop-monitor.md) |
 | **Monitor tool** | Control flow event-driven | C | [14](./14-loop-monitor.md) |
 | **auto mode** | Control flow classifier-based | C | [04](./04-modalita-permessi.md) |
+| **Code Mode** (sperimentale) | Control flow — tool call aggregate in codice | C | [04](./04-modalita-permessi.md#code-mode-tool-call-scritte-in-codice-sperimentale-da-v21323) |
 | **subagents** | Orchestration single-thread | Orch | [08](./08-subagents.md) |
 | **agent teams** | Orchestration multi-thread | Orch | [12](./12-agent-teams.md) |
 | **checkpoints** | State + Error recovery | State | [04](./04-modalita-permessi.md) sez. 4.5 |

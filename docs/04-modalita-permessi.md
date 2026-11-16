@@ -218,6 +218,16 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 
 <sub>Aggiornato 2026-09-02 via daily what's new. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257).</sub>
 
+### Code Mode: tool call scritte in codice (sperimentale, da v2.1.323) {#code-mode-tool-call-scritte-in-codice-sperimentale-da-v21323}
+
+Da v2.1.323 (12 nov 2026), una modalita' sperimentale e opt-in cambia il modo in cui Claude usa i tool: invece di chiedere un tool call alla volta (Bash, Read, Edit...) e leggere il risultato prima di decidere il passo successivo, Claude scrive un pezzo di JavaScript che incatena piu' tool call in un solo step. Utile su task con molte chiamate correlate: una modifica che si ripete su tanti file, una ricerca i cui risultati vanno filtrati prima di essere letti, piu' comandi indipendenti lanciabili in parallelo. In conversazione si vede solo l'effetto (es. il diff di un Edit), non il codice; il codice compare nel transcript viewer (`Ctrl+O`) come riga **Code** collassata.
+
+Si attiva per sessione con la variabile d'ambiente `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1` (o nel blocco `env` di `settings.json`; ignorata nei settings di progetto, cosi' un repository clonato non puo' attivarla per te), richiede l'installazione nativa di Claude Code in un terminale interattivo e un modello Opus 5.5, Sonnet 5.5, Haiku 5.5 o Fable 5.2 — non funziona con `-p`, Agent SDK, pannello VS Code, desktop app, sessioni cloud, Remote Control, Claude in Chrome o computer use, e non e' disponibile dietro gateway, Bedrock, Claude Platform su AWS, Agent Platform di Google Cloud o Microsoft Foundry.
+
+In **auto mode** il classificatore rivede il codice nel suo complesso prima che parta, non ogni singola tool call al suo interno, e non vede i valori calcolati a runtime (ad esempio un path preso da un risultato di ricerca): per le chiamate che vanno davvero presidiate restano quindi necessarie regole `deny`/`ask` e hook `PreToolUse`, che continuano a valutare ogni tool call generata dal codice (matchano il tool `REPL` per leggere il codice stesso da `tool_input.code`). Un'organizzazione puo' bloccare Code Mode per tutti i suoi utenti impostando lo stesso env var a `0` via managed settings (vedi [18](./18-settings-auth.md)).
+
+<sub>Aggiornato 2026-11-16 via daily what's new. Fonte: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode) · [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323).</sub>
+
 ---
 
 ## 4.4 Sandbox mode {#sandbox}
