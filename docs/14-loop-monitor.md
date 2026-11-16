@@ -21,6 +21,8 @@ Due feature complementari per **automazione intra-sessione**: `/loop` esegue rip
 
 > Disponibile da v2.1.72 (base), evoluzione **self-pacing** in Week 15 (apr 2026). Alias: `/proactive`.
 
+> **2026-11-16 (auto-update)**: da v2.1.325, le attivita' pianificate e `/loop` chiedono conferma prima di eseguire una skill che dichiara `allowed-tools` o hook. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Vedi anche README "What's new today" del giorno.
+
 ### Sintassi
 
 | Input | Esempio | Comportamento |

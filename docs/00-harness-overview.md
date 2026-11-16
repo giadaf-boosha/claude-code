@@ -136,6 +136,8 @@ L'IMPACT framework descrive **a che livello** l'harness lavora. Sotto, ogni harn
 
 > Nota: la fonte primaria (tufano `01b-harness`) elenca 7 componenti tecnici; "Intent capture" e' aggiunto come ottavo per coerenza con IMPACT. Vedi `_research/dossier-conceptual-harness.md` sez. 13 per trasparenza.
 
+> **2026-11-16 (auto-update)**: **Code Mode** (v2.1.323, sperimentale, opt-in via `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`) cambia il Tool layer: Claude scrive JavaScript che fa piu' tool call in un solo step invece di una alla volta, solo in sessione terminale interattiva. Fonte: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 0.6 Tre case study fondativi
