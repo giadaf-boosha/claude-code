@@ -1,20 +1,27 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 novembre 2026, 07:00 CET**.
-> Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **16 novembre 2026, 07:00 CET**.
+> Versione CLI di riferimento: **v2.1.325** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-16)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+> Finestra ampliata ai giorni 12-16 novembre: la routine daily non girava dal 12 novembre, questo aggiornamento recupera il backlog.
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+- **Code Mode (v2.1.323, sperimentale)**: Claude scrive JavaScript che chiama piu' tool in un solo step invece di uno alla volta; opt-in via `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`, solo sessione terminale interattiva. Fonte: [docs Code Mode](https://code.claude.com/docs/en/code-mode) · [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/00 § 0.5](./docs/00-harness-overview.md) e [docs/19 § tabella versioni](./docs/19-changelog.md).
+- **CLI v2.1.325** corregge un bug di sicurezza nella decodifica zstd e due falle sui permessi Bash (comandi composti che bypassavano il prompt, una regola allow che poteva eseguire un programma diverso da quello indicato). Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Vedi [docs/19 § tabella versioni](./docs/19-changelog.md).
+- **Sandbox**: da v2.1.325 i comandi Bash in sandbox seguono di default il normale flusso di permessi; `sandbox.autoAllowBashIfSandboxed: true` per il vecchio comportamento. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Vedi [docs/04 § 4.4 Sandbox](./docs/04-modalita-permessi.md#sandbox).
+- **`/loop` e attivita' pianificate** chiedono ora conferma prima di eseguire una skill con `allowed-tools` o hook dichiarati (v2.1.325). Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Vedi [docs/14 § 14.1](./docs/14-loop-monitor.md).
+- **`--permission-mode auto`** quando auto mode non e' disponibile parte ora in modalita' `manual` invece che in una meno restrittiva (v2.1.323). Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/04 § 4.3](./docs/04-modalita-permessi.md).
+- **`plugin.json`** supporta `engines["claude-code"]` per limitare un plugin alle versioni di Claude Code compatibili (v2.1.323). Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/11 § Manifest](./docs/11-plugins-marketplace.md).
+
+Nessuna versione successiva a v2.1.325 trovata su GitHub Releases/changelog ufficiale al momento della ricerca. Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra. Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti alla finestra. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 

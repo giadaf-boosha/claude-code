@@ -52,6 +52,8 @@ my-plugin/
 
 Se `version` e' omesso, viene usato il commit SHA (ogni commit = nuova versione). Specifica `version` per controllo update.
 
+> **2026-11-16 (auto-update)**: da v2.1.323, `engines["claude-code"]` in `plugin.json` limita un plugin alle versioni di Claude Code compatibili (semver range). Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 11.1b Claude Mods: plugin con hook a funzione (da v2.1.287)
