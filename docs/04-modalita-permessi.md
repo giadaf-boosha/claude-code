@@ -326,6 +326,26 @@ E' complementare, non sostitutivo, agli altri layer di Authority (permission rul
 
 ---
 
+## 4.5c Code Mode (sperimentale, da v2.1.323) {#code-mode}
+
+Da v2.1.323, Claude Code introduce **Code Mode**: invece di chiedere i tool call uno alla volta (Bash, Read, Edit, ...) e leggerne il risultato prima di decidere il passo successivo, Claude scrive un pezzo di **JavaScript** che Claude Code esegue nella sessione. Lo stesso blocco di codice puo' lanciare comandi in parallelo, incatenare il risultato di una chiamata alla successiva e filtrare l'output prima di restituire a Claude solo la parte che serve — utile su task con molte tool call correlate (una modifica ripetuta su tanti file, una ricerca da filtrare prima di leggerla, piu' comandi indipendenti lanciabili insieme).
+
+In conversazione si vedono i singoli tool call risultanti (es. il diff di un edit), non il codice: per leggerlo si apre **Ctrl+O** e si espande la riga **Code**. E' attivabile per singola sessione con la variabile d'ambiente `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1` (o in `~/.claude/settings.json`, ignorata se messa nei settings di un progetto clonato) e richiede conferma al primo avvio.
+
+### Permessi e limiti
+
+Ogni tool call dentro il codice passa comunque per le regole `deny`/`ask` e gli hook `PreToolUse` sotto il nome usuale del tool (es. `Bash`). La differenza e' in **auto mode**: il classificatore rivede il *codice* prima che parta, non ogni singola tool call — non vede quindi valori calcolati a runtime (es. un path preso da un output di ricerca), per cui regole/hook restano necessari per le chiamate da controllare comunque. Per controllare il codice stesso si scrive un hook `PreToolUse` sul tool `REPL` (il tool che esegue lo script) leggendo `tool_input.code`.
+
+Limiti principali: funziona solo in sessione interattiva da terminale (non con `-p`, Agent SDK, VS Code panel, desktop app o sessioni cloud), non e' compatibile con Remote Control, Claude in Chrome o computer use, il codice si ferma dopo 10 minuti a meno che non giri in background (fino a 2 ore, in auto mode o `bypassPermissions`), e una sessione avviata in Code Mode si puo' riprendere solo con Code Mode di nuovo attivo. Richiede build nativa, modelli Opus 5.5/Sonnet 5.5/Haiku 5.5/Fable 5.2, e non e' disponibile su gateway/Bedrock/Vertex/Foundry ne' con configurazioni HIPAA o zero data retention.
+
+Da **v2.1.326**, Code Mode funziona anche con gli [Agent Teams](./12-agent-teams.md) attivi: i teammate girano in Code Mode nella modalita' di visualizzazione in-process di default, mentre in split pane partono senza (vedi [12.19](./12-agent-teams.md#1219-code-mode-nei-teammate-da-v21326)).
+
+> Feature sperimentale, off di default, "puo' cambiare o essere rimossa in qualunque release". Fonte: [`/en/code-mode`](https://code.claude.com/docs/en/code-mode).
+
+<sub>Aggiornato 2026-11-17 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
+
+---
+
 ## 4.6 Checkpoints e rewind
 
 Claude Code traccia automaticamente edit. **NON** traccia bash file mods (`rm`, `mv`, `cp`).
