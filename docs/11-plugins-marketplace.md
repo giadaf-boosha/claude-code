@@ -17,6 +17,8 @@ I plugin sono pacchetti che bundlano Skills, Subagents, Hooks, MCP server, LSP s
 
 > Fonti: [`/en/plugins`](https://code.claude.com/docs/en/plugins), [`/en/discover-plugins`](https://code.claude.com/docs/en/discover-plugins), [`/en/plugin-marketplaces`](https://code.claude.com/docs/en/plugin-marketplaces).
 
+> **2026-11-12 (auto-update)**: `plugin.json` guadagna `engines["claude-code"]` (v2.1.323) per limitare l'installazione di un plugin a un range di versioni della CLI. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 11.1 Struttura di un plugin

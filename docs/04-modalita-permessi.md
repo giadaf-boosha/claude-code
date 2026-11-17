@@ -15,6 +15,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per il framework completo.
 
+> **2026-11-13 (auto-update)**: da v2.1.325 i comandi Bash eseguiti in sandbox seguono il normale flusso di permessi (chiedono conferma) invece di essere auto-consentiti; per il vecchio comportamento serve `sandbox.autoAllowBashIfSandboxed: true`. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.1 Permission modes
