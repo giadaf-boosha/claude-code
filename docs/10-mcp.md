@@ -17,6 +17,8 @@ MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app).
 
 > Fonte: [`/en/mcp`](https://code.claude.com/docs/en/mcp).
 
+> **2026-11-12 (auto-update)**: Claude Code introduce **Code Mode** (v2.1.323, sperimentale/opt-in): Claude scrive JavaScript per chiamare i suoi tool (incl. MCP) invece di singole tool call, riducendo i round-trip. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 10.1 Configurazione base
