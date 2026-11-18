@@ -96,6 +96,14 @@ CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND=1
 
 ---
 
+## 10.3c Code Mode (da v2.1.323)
+
+> **2026-11-18 (auto-update)**: opt-in sperimentale in cui Claude scrive JavaScript per incatenare piu' tool call (MCP e built-in) in un solo blocco invece di farle una per una, riducendo round-trip e token. Resta soggetto ai controlli dei permessi esistenti; gli admin possono disattivarlo per l'organizzazione. Esteso agli agent team da v2.1.326. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode). Vedi anche README "What's new today" del giorno.
+
+<sub>Aggiornato 2026-11-18 via daily what's new.</sub>
+
+---
+
 ## 10.4 Scope settings
 
 | Campo | Effetto |
