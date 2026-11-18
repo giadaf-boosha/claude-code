@@ -172,6 +172,9 @@ Lead controlla active teammates first, poi shutdown ordinato. La task list riman
 - Lead fixed (no promote/transfer)
 - Permissions set at spawn
 - Split panes NON in VS Code integrated terminal, Windows Terminal, Ghostty
+- **[Code Mode](./14-loop-monitor.md#146-code-mode-sperimentale-da-v21323)** (sperimentale, da v2.1.323): richiede v2.1.326+ per essere compatibile con gli agent teams; i teammate lo usano solo nel display mode in-process (12.4), non nei pannelli separati.
+
+<sub>Aggiornato 2026-11-18 via daily what's new. Fonte: [GitHub Releases v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326).</sub>
 
 ---
 

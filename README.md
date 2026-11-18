@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 novembre 2026, 07:00 CET**.
-> Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **18 novembre 2026, 07:00 CET**.
+> Versione CLI di riferimento: **v2.1.327** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-18)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+- **Code Mode** (sperimentale, da v2.1.323): nuovo modo di eseguire i tool. Invece di chiamare Bash/Read/Edit uno a uno, Claude scrive un piccolo script JavaScript che incatena piu' tool call in un colpo solo, eseguito in sandbox nella sessione — utile su refactor ripetuti su molti file o ricerche da filtrare prima di leggerle. Esteso in v2.1.326 alla compatibilita' con gli agent teams. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode). Doc: [docs/14-loop-monitor.md](./docs/14-loop-monitor.md), [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+Il resto della finestra (12-18 novembre) resta sotto la soglia editoriale: v2.1.325 (13 nov) e' quasi tutta fix di sicurezza (zstd, permessi Bash su regole allow aggirabili), v2.1.326 (16 nov) porta anche auto mode di default per alcune organizzazioni su terminale/VS Code e un tunnel CONNECT per Remote Control, v2.1.327 (17 nov) aggiunge conferme di sicurezza su `/install-github-app` e `ExitWorktree` oltre a `claude mcp add-json <name> -` per tenere i token fuori dalla command line — nessuno di questi e' un nuovo slash command, tool primitivo o feature di sistema a se stante. Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli ultimi post Claude Code-correlati, 12 novembre, riguardano un case study J.Crew, non una feature della CLI). Nessun post team X pertinente trovato via web search. Nessun articolo tecnico con tutorial riproducibile rilevante trovato.
 
 ---
 

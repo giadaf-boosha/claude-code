@@ -247,4 +247,46 @@ Lancia: `/loop 10m`.
 
 ---
 
+## 14.6 Code Mode (sperimentale, da v2.1.323)
+
+> "Code Mode changes how Claude uses its tools. Without it, Claude asks for tool calls such as Bash, Read, or Edit directly and reads each result before it decides what to do next. With Code Mode, Claude writes a piece of JavaScript that makes the tool calls, and Claude Code runs that code in your session." — [`/en/code-mode`](https://code.claude.com/docs/en/code-mode)
+
+E' un terzo primitivo di esecuzione, distinto da `/loop` (ricorsivita') e Monitor (observation): invece di una chiamata tool alla volta, Claude scrive un piccolo script JS che ne incatena piu' in un solo step — risultati intermedi filtrati prima di tornare nel contesto di Claude, chiamate in parallelo, meno round-trip.
+
+### Quando usarlo
+
+- Una modifica che si ripete su molti file
+- Una ricerca il cui output va filtrato prima che Claude lo legga
+- Piu' comandi indipendenti lanciabili in parallelo
+
+### Come si attiva
+
+```bash
+CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude
+```
+
+Oppure in `~/.claude/settings.json` (ignorato nei settings di progetto, per evitare che un repo clonato attivi Code Mode a tua insaputa):
+
+```json
+{ "env": { "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1" } }
+```
+
+Il codice generato non appare nella conversazione (si vedono solo gli effetti, es. il diff di un `edit`): va aperto con `Ctrl+O` nel transcript viewer.
+
+### Permessi
+
+Ogni tool call dentro il codice passa comunque per le regole `deny`/`ask` e i `PreToolUse` hook sotto il nome standard del tool (es. `Bash`). In piu', in auto mode un classificatore rivede il codice prima che parta — non ogni singola chiamata — quindi non vede valori calcolati a runtime (es. un path preso dall'output di una ricerca: mantieni regole o hook dedicati per le chiamate che devi controllare comunque).
+
+### Limiti
+
+- Si puo' riprendere una sessione Code Mode solo da terminale, con Code Mode ancora attivo
+- Codice "foreground" si interrompe dopo 10 minuti; in background (auto mode o `bypassPermissions`) arriva a 2 ore
+- Non disponibile con `-p`, Agent SDK, pannello VS Code, Desktop app, sessioni cloud, Remote Control, Claude in Chrome, computer use
+- Richiede Opus 5.5 / Sonnet 5.5 / Haiku 5.5 / Fable 5.2, build nativa, e un account Claude o Console (non via gateway, Bedrock, Foundry o le altre piattaforme cloud)
+- **Con [Agent Teams](./12-agent-teams.md)**: serve v2.1.326+; i teammate lo usano solo nel [display mode in-process](./12-agent-teams.md#124-display-modes-teammatemode----teammate-mode), non nei pannelli separati
+
+<sub>Aggiornato 2026-11-18 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326) · [`/en/code-mode`](https://code.claude.com/docs/en/code-mode).</sub>
+
+---
+
 ← [13 Routines (cloud)](./13-routines-cloud.md) · Successivo → [15 Ultraplan & Ultrareview](./15-ultraplan-ultrareview.md)
