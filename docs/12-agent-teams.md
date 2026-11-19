@@ -318,4 +318,12 @@ Beta a partire dal **17 settembre 2026** per un gruppo selezionato di utenti **P
 
 > Fonte: [Anthropic blog — "Projects redesigned: from folder to conversation"](https://claude.com/blog/projects-redesigned).
 
+---
+
+## 12.19 Code Mode con gli Agent Teams (da v2.1.326)
+
+Da v2.1.326 (16 nov 2026), [Code Mode](./01-snapshot.md#12b-code-mode-sperimentale-da-v21323) — la modalita' sperimentale in cui Claude scrive JavaScript per eseguire piu' tool call in un solo passaggio — funziona anche con gli Agent Teams attivi. I teammate girano in Code Mode nella modalita' di visualizzazione **in-process** di default; nei **split pane** partono invece senza Code Mode. Resta una combinazione sperimentale: entrambe le feature sono opt-in e vanno attivate separatamente (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` + `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`).
+
+<sub>Aggiornato 2026-11-19 via daily what's new. Fonte: [GitHub Releases v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
+
 <sub>Aggiornato 2026-09-18 via daily what's new. Fonte: [Anthropic blog](https://claude.com/blog/projects-redesigned).</sub>

@@ -164,6 +164,10 @@ Importante: Auto mode **non sostituisce** gli altri layer.
 
 Auto mode + sandbox + managed + hooks = quattro reti di sicurezza in serie.
 
+**Nuance con [Code Mode](./01-snapshot.md#12b-code-mode-sperimentale-da-v21323) (sperimentale, da v2.1.323)**: quando Claude scrive JavaScript invece di chiamare i tool uno a uno, ogni tool call generata dal codice passa comunque dalle regole `deny`/`ask` del Layer 1 e dagli hook `PreToolUse` del Layer 3, sotto il nome usuale del tool (es. `Bash`). La differenza e' nel classifier di Auto mode: in Code Mode rivede **il codice nel suo complesso prima dell'esecuzione**, non ogni singola tool call — quindi non vede valori calcolati a runtime (es. un path preso da un output di ricerca precedente). Chi ha regole o hook critici dovrebbe quindi tenerli sul Layer 1/3 (che restano granulari) invece di fare affidamento solo sul classifier quando Code Mode e' attivo.
+
+<sub>Aggiornato 2026-11-19 via daily what's new. Fonte: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
+
 ---
 
 ## 04b.5 Pattern operativi

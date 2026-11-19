@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 novembre 2026, 07:00 CET**.
-> Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **19 novembre 2026, 07:00 CET**.
+> Versione CLI di riferimento: **v2.1.328** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-19)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+- **Code Mode**: nuova feature sperimentale (opt-in) in cui Claude scrive JavaScript per eseguire piu' tool call in un solo passaggio, invece di chiamarle una per una. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Doc: [docs/01-snapshot.md](./docs/01-snapshot.md), [docs/04b-authority-model.md](./docs/04b-authority-model.md), [docs/12-agent-teams.md](./docs/12-agent-teams.md), [docs/23-glossario.md](./docs/23-glossario.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+Il resto della finestra (12-19 novembre, versioni v2.1.323, v2.1.325, v2.1.326, v2.1.327, v2.1.328) resta sotto la soglia editoriale: avviso per subagent con modello diverso dal lead e `claude purge` non piu' silenzioso senza terminale (v2.1.325); Code Mode estesa agli agent teams, `OTEL_RESOURCE_INCLUDE_HOST` e avviso su regole `--allowedTools`/`--disallowedTools` malformate (v2.1.326); `claude mcp add-json <name> -` da stdin, `attributionProject` per la fatturazione e `/tui classic` (v2.1.327); auto mode per Opus 4.6/Sonnet 4.6 anche su Bedrock/Vertex/Foundry e `"onFailure": "block"` per gli hook `mcp_tool` (v2.1.328) — nessun nuovo slash command o tool primitivo oltre a Code Mode. L'articolo Anthropic "Building always-on agents" (13 nov) riguarda l'architettura generale degli agenti always-on (Agent SDK/Managed Agents), non una feature dedicata alla CLI Claude Code, sotto soglia. Nessun post team X rilevante trovato nella finestra oltre a quanto gia' coperto dalle release. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 

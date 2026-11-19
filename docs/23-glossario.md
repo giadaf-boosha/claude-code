@@ -72,6 +72,12 @@ Glossario alfabetico di 35+ termini che ricorrono nella guida. Per ogni termine:
 **Esempio**: `~/.claude/CLAUDE.md` con regole anti-hallucination personali.
 **Correlati**: `.claude/rules/`, Auto-memory, `@import`.
 
+### Code Mode
+**Definizione**: modalita' sperimentale (opt-in, da v2.1.323) in cui Claude scrive JavaScript per eseguire piu' tool call in un solo passaggio, invece di chiamarle una per una.
+**Appare in**: [01](./01-snapshot.md#12b-code-mode-sperimentale-da-v21323), [04b](./04b-authority-model.md#04b4-auto-mode-vs-authority), [12](./12-agent-teams.md#1219-code-mode-con-gli-agent-teams-da-v21326).
+**Esempio**: `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude`, poi `Ctrl+O` per leggere il codice generato nel transcript viewer.
+**Correlati**: Auto mode, Agent team.
+
 ### Compound engineering
 **Definizione**: pratica di comporre pattern architetturali (caching + idempotenza + parallelizzazione + verification) sopra l'harness per moltiplicare la produttivita'.
 **Sinonimi**: compounding engineering.

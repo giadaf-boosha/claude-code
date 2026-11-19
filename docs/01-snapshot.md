@@ -56,6 +56,22 @@ Annunci recenti rilevanti:
 
 ---
 
+## 1.2b Code Mode (sperimentale, da v2.1.323)
+
+Da v2.1.323 (12 nov 2026), Claude Code offre **Code Mode**: invece di chiedere i tool call uno alla volta (Bash, Read, Edit...) e leggere ogni risultato prima di decidere il passo successivo, Claude scrive un pezzo di **JavaScript** che esegue piu' tool call in un solo passaggio — eseguendo comandi in parallelo, incatenando un risultato nella chiamata successiva e restituendo solo la parte di output che gli serve leggere. In conversazione si vedono i tool call risultanti (es. il diff di un edit), non il codice: per leggerlo si apre il transcript viewer con `Ctrl+O`.
+
+**Come attivarla**: impostare la variabile d'ambiente `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1` (shell o `~/.claude/settings.json`); Claude Code chiede conferma al primo avvio. E' **sperimentale e disattiva di default**, va bloccata per un'intera organizzazione con lo stesso settaggio a `0` nei [managed settings](./04b-authority-model.md#layer-4--managed-settings-enterprise).
+
+**Requisiti principali**: CLI v2.1.323+, account Claude/Console (non via gateway, Bedrock, Vertex o Foundry), modelli Opus 5.5/Sonnet 5.5/Haiku 5.5/Fable 5.2, sessione terminale interattiva (non `-p`, Agent SDK, pannello VS Code, Desktop app o sessioni cloud). Supportata con gli [Agent Teams](./12-agent-teams.md#1219-code-mode-con-gli-agent-teams-da-v21326) da v2.1.326+.
+
+**Permessi**: ogni tool call dentro il codice passa comunque dalle regole `deny`/`ask` e dagli hook `PreToolUse` sotto il nome usuale del tool (es. `Bash`); in più, in [auto mode](./04b-authority-model.md#04b4-auto-mode-vs-authority) il classificatore rivede il codice nel suo complesso prima dell'esecuzione, non ogni singola chiamata — quindi non vede valori calcolati a runtime (es. un path preso da un output di ricerca). Il codice che gira a lungo (build, test) si ferma dopo 10 minuti in foreground, oppure continua in background fino a 2 ore in auto/bypass mode.
+
+Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).
+
+<sub>Aggiornato 2026-11-19 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323).</sub>
+
+---
+
 ## 1.3 Provider supportati
 
 | Provider | Variabile | Note |
@@ -119,6 +135,9 @@ Cronologia compatta (per dettaglio vedi [19-changelog.md](./19-changelog.md)):
 | 22 set 2026 | v2.1.280 — **Claude Opus 5.5** diventa il nuovo modello Opus di default; Pro e Team Standard passano da Sonnet a Opus come default — vedi [05.10](./05-fast-mode-1m-context.md#510-claude-opus-55-da-v21280) |
 | 28 set 2026 | v2.1.284 — **Claude Sonnet 5.5** diventa il nuovo modello Sonnet di default sulla Claude API e in Claude Code — vedi [05.11](./05-fast-mode-1m-context.md#511-claude-sonnet-55-da-v21284) |
 | 7 ott 2026 | v2.1.293 — **Claude Haiku 5.5** diventa il nuovo modello Haiku di default, terzo e ultimo tassello della famiglia Claude 5.5 — vedi [05.12](./05-fast-mode-1m-context.md#512-claude-haiku-55-da-v21293) |
+| 12 nov 2026 | v2.1.323 — **Code Mode** (sperimentale, opt-in): Claude scrive JavaScript per eseguire piu' tool call in un solo passaggio — vedi [1.2b](#12b-code-mode-sperimentale-da-v21323) |
+
+<sub>Aggiornato 2026-11-19 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323).</sub>
 
 <sub>Aggiornato 2026-10-08 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-haiku-5-5) · [GitHub Releases v2.1.293](https://github.com/anthropics/claude-code/releases/tag/v2.1.293).</sub>
 
