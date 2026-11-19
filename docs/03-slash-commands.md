@@ -9,6 +9,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 > Gli slash commands sono il **vocabolario condiviso** tra utente e agent. Sono shortcut a workflow ricorrenti: ognuno e' un'intent capture pre-codificato. I bundled skills (`/loop`, `/simplify`, `/batch`, `/debug`) sono skill markdown auto-installate; i built-in (`/plan`, `/compact`, `/effort`) sono comandi nativi del CLI.
 
+> **2026-11-19 (auto-update)**: da v2.1.328 `/code-review` sui modelli piu' recenti segnala solo bug e violazioni CLAUDE.md; riuso, semplificazione ed efficienza passano a `/simplify`, che non e' piu' semplice alias ma un comando distinto. Ogni finding e' marcato Important/Pre-existing/Nit con un fix suggerito a fine riepilogo. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Vedi anche README "What's new today" del giorno.
+
 **Modello mentale**: come le funzioni built-in di una shell vs gli script in `~/bin`. Stessa cosa, due classi.
 
 **Componente harness IMPACT**: Tool layer (espongono capabilities) + Intent capture (riducono ambiguita' del prompt).

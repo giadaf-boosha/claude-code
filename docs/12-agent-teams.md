@@ -17,6 +17,8 @@ Coordina piu' istanze di Claude Code che lavorano insieme con shared task list e
 
 > "Coordinate multiple Claude Code instances working together as a team" — [`/en/agent-teams`](https://code.claude.com/docs/en/agent-teams)
 
+> **2026-11-19 (auto-update)**: da v2.1.326 **Code Mode** (Claude scrive script JS per orchestrare piu' tool call in una volta, vedi [19 Changelog](./19-changelog.md)) e' utilizzabile anche con Agent Teams attivi; se era gia' acceso, le sessioni con team attivi partono ora direttamente in Code Mode. Fonte: [GitHub Releases v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 12.1 Enable
