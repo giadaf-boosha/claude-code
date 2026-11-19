@@ -91,6 +91,8 @@ Da agosto 2025: Opus 4.x per plan + Sonnet per execution. [@_catwu](https://x.co
 
 Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permissions`: un classifier separato decide cosa Claude puo' fare senza chiedere.
 
+> **2026-11-19 (auto-update)**: da v2.1.328 auto mode e' disponibile anche per Opus 4.6/Sonnet 4.6 su Amazon Bedrock, Google Cloud Agent Platform, Microsoft Foundry e gateway Claude apps; le sessioni interattive senza modalita' di permesso partono ora in auto mode. Da v2.1.326 le sessioni terminale/VS Code con configurazione Claude Code + Cowork HIPAA partono di default in auto mode (`disableAutoMode` per disattivare). Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) · [v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326). Vedi anche README "What's new today" del giorno.
+
 ### Diventa il permission mode di default (da 14 ago 2026)
 
 Dal **14 agosto 2026**, `auto` sostituisce `manual` come permission mode di partenza per le nuove sessioni su Pro, Max e Team — non serve piu' attivarlo esplicitamente con `--permission-mode auto` o Shift+Tab. Un default impostato manualmente dall'utente resta valido finche' non si accetta il prompt di switch one-time mostrato una tantum; un default gestito a livello organizzativo non viene toccato. Enterprise, API diretta, Bedrock, Vertex AI, Foundry e le sessioni [Claude apps gateway](./17-ide-surface.md) restano opt-in per ora — Anthropic prevede di renderlo default anche li' nelle settimane successive, insieme alla rimozione del sovrapprezzo per l'overhead del classifier.
@@ -223,6 +225,8 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 ## 4.4 Sandbox mode {#sandbox}
 
 OS-level enforcement su Bash e child processes. Filesystem isolation + network isolation. Riduce permission prompt dell'~84% in uso interno Anthropic.
+
+> **2026-11-19 (auto-update)**: da v2.1.325 i comandi Bash sandboxed seguono il flusso di permesso normale di default, invece di girare senza prompt; per il vecchio comportamento serve `sandbox.autoAllowBashIfSandboxed: true` (anche nelle managed settings). Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Vedi anche README "What's new today" del giorno.
 
 ### Piattaforme
 - **macOS**: Seatbelt (out of the box)

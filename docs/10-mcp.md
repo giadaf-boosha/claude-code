@@ -78,6 +78,8 @@ claude mcp logout <name>         # rimuove credenziali salvate per il server
 
 `claude mcp login/logout` (introdotti in v2.1.186) semplificano i workflow CI/CD e SSH dove aprire il browser per il flusso OAuth non e' praticabile. Equivalenti funzionali del flusso "Authorize" nel menu `/mcp`, ma invocabili da script o prima ancora di aprire una sessione.
 
+> **2026-11-19 (auto-update)**: da v2.1.327 `claude mcp add-json <nome> -` legge il JSON del server da stdin, cosi' i token non finiscono sulla command line (non disponibile dentro una sessione Claude Code). Fonte: [GitHub Releases v2.1.327](https://github.com/anthropics/claude-code/releases/tag/v2.1.327). Vedi anche README "What's new today" del giorno.
+
 <sub>Aggiornato 2026-06-23 via daily what's new. Fonte: [GitHub Releases v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186).</sub>
 
 ---
