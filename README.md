@@ -1,20 +1,20 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 novembre 2026, 07:00 CET**.
-> Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **20 novembre 2026, 07:00 CET**.
+> Versione CLI di riferimento: **v2.1.329** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-20)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+- **`/tasks` elenca anche task programmati, risvegli `/loop`, goal e fork** (v2.1.329, 19 nov): la lista background task di questa sessione ora include anche gli scheduled task cloud, i risvegli self-paced di `/loop`, il goal dichiarato e i fork della conversazione; premendo `x` si interrompe l'elemento selezionato dopo conferma. Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329). Vedi [docs/03 § `/tasks`](./docs/03-slash-commands.md) e [docs/14](./docs/14-loop-monitor.md).
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+Il resto di v2.1.329 (19 nov, release successiva a v2.1.328) resta sotto la soglia editoriale: un avviso nel trust dialog su dove sono dichiarati gli hook di una cartella, un avviso in conversazione quando gli hook delle managed settings non si caricano, una riga "Server message" in `/mcp` per gli errori JSON-RPC di un server HTTP remoto che rifiuta la connessione, una riga "Marketplace auto-update" in `/status` e il supporto a Code Mode con eventi/metriche OpenTelemetry attivi, oltre a 10 miglioramenti e 91 fix (tra cui `~/.claude.json` che tornava ai default dopo uno stallo di rete durante il salvataggio, e sign-out ripetuti su macOS quando il Keychain si leggeva ma non si scriveva). Nessuna versione successiva a v2.1.329 su GitHub Releases o changelog ufficiale al momento di questo aggiornamento. Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (l'unico post, 18 novembre, riguarda il pricing dell'IPO Anthropic, non la CLI). Nessun post team rilevante: x.com irraggiungibile dalla rete della sessione (DNS), ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra 19-20 novembre.
 
 ---
 

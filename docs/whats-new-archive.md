@@ -9,6 +9,31 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-11-19
+
+> Nota: la routine daily non girava da sette giorni (ultimo aggiornamento 12 nov); questa edizione copre quindi l'intera finestra v2.1.323→v2.1.328 (12-19 nov) invece delle sole ultime 24h.
+
+- **Code Mode** (v2.1.323, 12 nov): feature sperimentale opt-in, Claude scrive script JavaScript che orchestrano piu' tool call in una volta invece di chiamate singole sequenziali; da v2.1.326 funziona anche con Agent Teams attivi. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323).
+- **Auto mode estesa a Opus 4.6/Sonnet 4.6 su Bedrock, GCP, Foundry e gateway** (v2.1.328, 19 nov): le sessioni interattive senza modalita' di permesso partono ora in auto mode anche su questi provider. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Doc: [docs/04-modalita-permessi.md](./04-modalita-permessi.md).
+- **`/code-review` e `/simplify` si separano** (v2.1.328): `/code-review` sui modelli piu' recenti segnala solo bug e violazioni CLAUDE.md; riuso, semplificazione ed efficienza passano a `/simplify`, non piu' semplice alias. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Doc: [docs/03-slash-commands.md](./03-slash-commands.md).
+- **Fix di sicurezza zstd** (v2.1.325, 13 nov): corretta una vulnerabilita' nella decodifica delle risposte compresse zstd. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325).
+- **Sandbox: permesso normale di default** (v2.1.325): i comandi Bash sandboxed seguono ora il flusso di permesso standard invece di girare senza prompt; serve `sandbox.autoAllowBashIfSandboxed: true` per il vecchio comportamento. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Doc: [docs/04-modalita-permessi.md](./04-modalita-permessi.md#sandbox).
+- **Auto mode default per sessioni HIPAA** (v2.1.326, 16 nov): terminale e VS Code nelle organizzazioni con configurazione Claude Code + Cowork HIPAA partono ora in auto mode di default (`disableAutoMode` per disattivare). Fonte: [GitHub Releases v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326). Doc: [docs/12-agent-teams.md](./12-agent-teams.md).
+- **`/status` diagnostico + `mcp add-json` da stdin** (v2.1.327, 17 nov): `/status` segnala ora file agent/skill/comandi rotti, errori di keybinding, sandbox non disponibile, permessi ignorati e hook matcher mai attivati; `claude mcp add-json <nome> -` legge il JSON del server da stdin cosi' i token non finiscono sulla command line. Fonte: [GitHub Releases v2.1.327](https://github.com/anthropics/claude-code/releases/tag/v2.1.327). Doc: [docs/10-mcp.md](./10-mcp.md).
+- **`/loop` e scheduled task chiedono conferma su skill con hook** (v2.1.325): un task cloud programmato o un `/loop` chiede ora conferma prima di eseguire una skill che dichiara `allowed-tools` o hook; aggiungere `Skill(name)` a `permissions.allow` per farla girare senza presidio. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Doc: [docs/14-loop-monitor.md](./14-loop-monitor.md).
+
+Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 10 e 18 novembre, riguardano il roadshow e il pricing dell'IPO Anthropic, non la CLI). Nessun post team rilevante trovato via web search sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) nella finestra 12-19 novembre.
+
+---
+
+## 2026-11-12
+
+> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+
+---
+
 ## 2026-11-10
 
 > Aggiornamento con 1 voce editoriale.
@@ -226,31 +251,6 @@ L'unica release nella finestra (v2.1.288, 2 ott) resta sotto la soglia editorial
 - **Claude Mods**: i plugin possono ora modificare il comportamento profondo di Claude Code con un *hooks module* JS/TypeScript — riscrivere prompt, disegnare pannelli/comandi in UI, sostituire feature built-in — un layer programmabile oltre gli hook JSON dichiarativi (che restano allow/deny/block). Bundlato il primo mod ufficiale **"You should know"**, side-agent opt-in che osserva la sessione e segnala cose che utente o Claude potrebbero perdere (`/plugin enable cc-plugin-you-should-know@builtin`). Fonte: [GitHub Releases v2.1.287](https://github.com/anthropics/claude-code/releases/tag/v2.1.287) · [code.claude.com/docs/en/plugins/mods/create](https://code.claude.com/docs/en/plugins/mods/create) · [@bcherny](https://x.com/bcherny/status/2105756563302723721) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2105721434807083061). Doc: [docs/11-plugins-marketplace.md](./11-plugins-marketplace.md), [docs/07-hooks.md](./07-hooks.md), [docs/19-changelog.md](./19-changelog.md).
 
 Il resto della release v2.1.287 (filtro `n:<text>` in Agent View, URL prompt da server MCP sul protocollo 2025-11-25, oltre una dozzina di fix su Remote Control, fast mode remoto, notifiche hook e controlli modello Bedrock/Vertex) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code nelle ultime 24 ore; digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
-
----
-
-## 2026-10-01
-
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
-
-L'unica release nella finestra (v2.1.286, 30 set) resta sotto la soglia editoriale: contatore "2 di 5" per i permission prompt in coda, supporto mouse per le righe "N more" delle liste in fullscreen, migliorata la commit guidance per eseguire una skill `verify` prima di committare, bookmark e question tracking per Claude Code in VS Code, oltre un centinaio di fix su resume/continue, errori API 400, sessioni cloud, spend meter, login macOS e Remote Control. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo, nessun post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
-
----
-
-## 2026-09-30
-
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
-
-L'unica release nella finestra (v2.1.285, 29 set) resta sotto la soglia editoriale: `claude --desktop` per aprire la desktop app dalla CLI, `claude plugin configure` per gestire le opzioni di un plugin, il setting `allowedProviders` per limitare i provider API ammessi su una macchina, le env var `CLAUDE_CODE_DISABLE_WEB_FETCH` e `CLAUDE_CODE_NONSTREAMING_TIMEOUT_RETRIES`, oltre un centinaio di fix su plugin, MCP, Remote Control, VS Code e Artifact tool. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo, nessun post team rilevante nelle ultime 24-48 ore.
-
----
-
-## 2026-09-29
-
-- **Claude Sonnet 5.5 diventa il nuovo modello Sonnet di default** (v2.1.284, 28 set): sostituisce Sonnet 5 sulla Claude API e in Claude Code, stesso pricing ($2/$10 per MTok, cache read $0.20/MTok), output oltre il 30% piu' veloce con meno token/tool call per task, salto da 10,3% a 70,6% su Terminal-Bench 4.0, cyber safeguard equivalenti a Opus 5 (prima volta su una Sonnet) e watermarking invisibile del testo. Fonte: [Anthropic](https://www.anthropic.com/claude-sonnet-5-5) · [GitHub Releases v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284). Doc: [docs/05-fast-mode-1m-context.md](./05-fast-mode-1m-context.md), [docs/01-snapshot.md](./01-snapshot.md), [docs/19-changelog.md](./19-changelog.md).
-- **`/claude-api build-eval` e `/claude-api hillclimb`**: la skill ufficiale `claude-api` guadagna due workflow per costruire dentro il codebase una eval che rispecchia il lavoro reale in produzione e poi migliorare l'app (prompt, skill, tool, modello, effort) un cambiamento alla volta, verificando su un held-out set che il miglioramento non sia overfitting. Fonte: [Anthropic](https://claude.dev/blog/automating-eval-design-and-hillclimbing/) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2104676099083190435). Doc: [docs/09-skills.md](./09-skills.md), [docs/19-changelog.md](./19-changelog.md).
-
-Il resto della release v2.1.284 resta sotto la soglia editoriale: risposta "si', ma richiedimelo di nuovo" al prompt di auto mode per letture fuori working directory, importi in dollari nella spend limit bar di `/usage`, `/mcp reconnect all`, oltre un centinaio di fix su stream di risposta, "Prompt is too long" e vim mode.
 
 ---
 
