@@ -23,6 +23,8 @@ Due feature complementari per **automazione intra-sessione**: `/loop` esegue rip
 
 > **2026-11-19 (auto-update)**: da v2.1.325 un task cloud programmato o un `/loop` chiede ora conferma prima di eseguire una skill che dichiara `allowed-tools` o hook; aggiungere `Skill(name)` a `permissions.allow` per farla girare senza presidio. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Vedi anche README "What's new today" del giorno.
 
+> **2026-11-20 (auto-update)**: da v2.1.329 `/tasks` elenca anche gli scheduled task cloud di questa sessione e i risvegli self-paced di `/loop`, oltre al goal e ai fork della conversazione; `x` interrompe l'elemento selezionato dopo conferma. Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329). Vedi anche README "What's new today" del giorno.
+
 ### Sintassi
 
 | Input | Esempio | Comportamento |
