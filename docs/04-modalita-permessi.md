@@ -220,6 +220,32 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 
 ---
 
+## 4.3b Code Mode (sperimentale, da v2.1.323) {#code-mode}
+
+Da v2.1.323 (12 nov 2026), Code Mode cambia il modo in cui Claude usa i tool: invece di chiedere una tool call alla volta (Bash, Read, Edit...) e leggere ogni risultato prima di decidere il passo successivo, Claude scrive un pezzo di JavaScript che incatena piu' chiamate in un colpo solo — comandi in parallelo, uso di un risultato nella chiamata successiva, ritorno solo della parte di output che serve. E' spento di default e va attivato esplicitamente (feature sperimentale, puo' cambiare o essere rimossa in qualsiasi release).
+
+**Quando serve**: task con molte tool call collegate — una modifica che si ripete su tanti file, una ricerca i cui risultati vanno filtrati prima che Claude li legga, piu' comandi indipendenti lanciabili insieme.
+
+**Attivazione**:
+```bash
+CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude
+```
+oppure in `~/.claude/settings.json` (ignorato se impostato nei settings di progetto, per evitare che un repo clonato lo attivi di nascosto):
+```json
+{ "env": { "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1" } }
+```
+Claude Code chiede conferma al primo avvio; nella UI il codice non compare in chat (si vedono solo gli effetti, es. il diff di un edit) ma e' ispezionabile con `Ctrl+O` nel transcript viewer, come riga **Code** collassata.
+
+**Permessi**: ogni tool call dentro il codice passa comunque dalle regole `deny`/`ask` e dagli hook `PreToolUse` con il nome abituale del tool (`Bash`, nome del tool MCP...). La differenza e' in auto mode: il classificatore valuta il codice nel suo complesso prima che parta, non ogni singola tool call — non vede valori calcolati a runtime (es. un path preso dall'output di una ricerca), quindi per chiamate da controllare sempre servono regole o hook espliciti. Per vedere il codice prima che parta, si puo' mettere `REPL` (il tool che esegue il codice) in `ask`.
+
+**Limiti principali**: resume solo da terminale con Code Mode attivo; non funziona con `-p`, Agent SDK, pannello VS Code, Desktop app o sessioni cloud; nessun Remote Control, Claude in Chrome o computer use; codice lungo si ferma dopo 10 minuti a meno di backgrounding (fino a 2 ore, serve auto o `bypassPermissions` mode); richiede Claude Opus 5.5/Sonnet 5.5/Haiku 5.5/Fable 5.2 e un account Claude o Console (non funziona su gateway, Bedrock, Google Cloud, Microsoft Foundry). Da v2.1.326, funziona anche con gli [agent teams](./08-subagents.md) (in-process display mode).
+
+**Fonte**: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).
+
+<sub>Aggiornato 2026-11-20 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
+
+---
+
 ## 4.4 Sandbox mode {#sandbox}
 
 OS-level enforcement su Bash e child processes. Filesystem isolation + network isolation. Riduce permission prompt dell'~84% in uso interno Anthropic.
