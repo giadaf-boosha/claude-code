@@ -89,6 +89,30 @@ Claude Code rende esplicito ogni componente del loop:
 | **Loop autonomous** | Auto mode + `/loop` self-pacing | Claude decide quando ri-eseguire |
 | **Loop bounded** | `--max-turns N` | Hard cap sul loop |
 | **Loop interrupted** | Esc, `/btw` side query | Side-chain mid-loop |
+| **Act batched** | **Code Mode** (sperimentale, v2.1.323) | Script JS sostituisce N tool call sequenziali con un unico passo |
+
+---
+
+## 14b.4b Code Mode (sperimentale, da v2.1.323)
+
+Il loop ReAct classico negozia un tool alla volta: Thought → Act (1 tool call) → Observe → repeat. **Code Mode** e' un'alternativa opt-in dove Claude, invece di richiedere i tool uno per uno, scrive uno script JavaScript che li chiama in sequenza (o in parallelo) dentro un unico passo Act — il motore esegue lo script e restituisce tutti i risultati insieme. Meno round-trip e meno token spesi a rinegoziare lo stesso piano ad ogni singola tool call, soprattutto su task con tanti step meccanici (es. leggere 20 file, trasformarli, scriverli).
+
+Attivazione (per sessione):
+```json
+{
+  "env": { "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1" }
+}
+```
+
+Vincoli attuali:
+- Disponibile solo in sessioni **terminale interattive**: non su VS Code, Desktop app, Claude Code on the web o `claude -p`.
+- Una sessione avviata in Code Mode si puo' riprendere solo con Code Mode ancora attivo.
+- I tool chiamati dallo script restano soggetti alle regole di permesso/hook/sandbox normali (Authority layer invariato) — cambia solo la granularita' dell'Act, non chi autorizza cosa.
+- Da v2.1.326 compatibile con gli [Agent Teams](./12-agent-teams.md#1219-code-mode-e-agent-teams-da-v21326); da v2.1.328 emette eventi/metriche OpenTelemetry.
+
+**Quando usarlo**: task batch-like con molte tool call simili e poca necessita' di steering tra l'una e l'altra. **Quando non usarlo**: task dove ogni Observe cambia il piano del prossimo Act (qui il loop ReAct a grana fine resta piu' sicuro).
+
+<sub>Aggiornato 2026-11-21 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
 
 ---
 
