@@ -90,6 +90,8 @@ La modifica e' persistente nella sessione (non viene scritta su disco a meno che
 - `apiKeyHelper`, `awsCredentialExport`, `awsAuthRefresh`
 - `otelHeadersHelper`, `forceLoginMethod`, `forceLoginOrgUUID`
 
+> **2026-11-21 (auto-update)**: da v2.1.330, il sign-in applica da solo le impostazioni dell'Enterprise Admin Console dell'organizzazione (provider/gateway managed) senza passaggi manuali aggiuntivi. Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Vedi anche README "What's new today" del giorno.
+
 ### Sandbox
 Vedi [4 Modalita' permessi § 4.4](./04-modalita-permessi.md#sandbox).
 

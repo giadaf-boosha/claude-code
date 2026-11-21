@@ -19,6 +19,8 @@ Raccolta di pattern e tip operative dai post X del team Claude Code (Boris Chern
 
 ## 20.1 Tips dal team Claude Code
 
+> **2026-11-21 (auto-update)**: il team Claude Code pubblica "How the Claude Code team thinks about verification" (16 nov), su come verificano il codice scritto dagli agenti prima di fidarsene in produzione. Fonte: blog Claude Code. Vedi anche README "What's new today" del giorno.
+
 ### 1. Setup vanilla > customizzazione
 > "My setup might be surprisingly vanilla! Claude Code works great out of the box, so I personally don't customize it much." — [@bcherny](https://x.com/bcherny/status/2007179832300581177)
 

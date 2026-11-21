@@ -15,6 +15,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
+> **2026-11-21 (auto-update)**: da v2.1.328, `/code-review` riporta solo bug e violazioni di CLAUDE.md (non piu' reuse/semplificazione, ora su `/simplify`), con i finding taggati Important/Pre-existing/Nit. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.1 Tabella completa
