@@ -287,6 +287,14 @@ La versione interna di Claude Tag genera il **65% del codice del product team An
 
 ---
 
+## 12.19 Code Mode e Agent Teams (da v2.1.326)
+
+Da v2.1.326, [Code Mode](./14b-agent-loop-react.md#14b4b-code-mode-sperimentale-da-v21323) — la modalita' sperimentale in cui Claude scrive uno script JS per incatenare piu' tool call in un solo passo — funziona anche dentro un Agent Team: un teammate con Code Mode attivo batcha le proprie tool call, mentre coordinamento, task list e mailbox tra teammate restano quelli standard. Utile quando un singolo teammate deve macinare molti step meccanici simili (es. applicare la stessa trasformazione a decine di file) senza rinegoziare il piano ad ogni tool call.
+
+<sub>Aggiornato 2026-11-21 via daily what's new. Fonte: [GitHub Releases v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326).</sub>
+
+---
+
 ## 12.18 Projects redesign: da cartella a conversazione (beta, 17 set 2026)
 
 Anthropic ha ridisegnato **Projects**, la feature che finora era "una cartella con dentro una chat": file caricati + un'unica conversazione. La nuova versione capovolge il modello — **il progetto e' una conversazione persistente**, e Claude vi opera come **coordinatore** invece che come singolo interlocutore.
