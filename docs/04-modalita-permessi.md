@@ -15,6 +15,8 @@ Claude Code ha 6 permission modes, una sandbox OS-level e un sistema di checkpoi
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per il framework completo.
 
+> **2026-11-21 (auto-update)**: batch di hardening permessi/sandbox in v2.1.325-327 (sandbox Bash torna al flusso normale di permessi, piu' comandi Bash/PowerShell chiedono conferma anche in bypass mode, `rm` distruttivi bloccati o confermati da v2.1.330) e **auto mode estesa a Opus/Sonnet 4.6** su Bedrock/Vertex/Foundry/gateway Claude apps (v2.1.328). Fonte: [GitHub Releases v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326) · [v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 4.1 Permission modes

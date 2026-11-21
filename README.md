@@ -1,20 +1,25 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 novembre 2026, 07:00 CET**.
-> Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **21 novembre 2026, 07:00 CET**.
+> Versione CLI di riferimento: **v2.1.330** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-21)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
-
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+- **Code Mode** (v2.1.323, 12 nov): Claude Code introduce una modalita' sperimentale in cui Claude scrive JavaScript per orchestrare piu' chiamate a strumenti/MCP invece di farle una alla volta, restando libero di rispondere mentre i comandi lunghi girano; confermata anche da [@ClaudeDevs](https://x.com/ClaudeDevs/status/2122801681939234950). Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/10 MCP](./docs/10-mcp.md), [docs/19 Changelog](./docs/19-changelog.md).
+- **v2.1.325** (13 nov): fix di sicurezza nella decodifica zstd; i comandi Bash in sandbox tornano al normale flusso di permessi invece di auto-eseguirsi; i comandi git read-only fuori dal progetto chiedono ora conferma. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Vedi [docs/04 § 4.1](./docs/04-modalita-permessi.md), [docs/19 Changelog](./docs/19-changelog.md).
+- **v2.1.326** (16 nov, release piu' ampia della finestra): ampio batch di hardening sandbox/permessi (home protette di default, piu' comandi Bash/PowerShell che chiedono conferma anche in bypass mode); Code Mode supporta ora anche gli agent teams. Fonte: [GitHub Releases v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326). Vedi [docs/04 § 4.1](./docs/04-modalita-permessi.md), [docs/19 Changelog](./docs/19-changelog.md).
+- **v2.1.327** (17 nov): `claude mcp add-json <name> -` legge il JSON del server da stdin; conferma richiesta prima che `/install-github-app` modifichi un repo; WebFetch rifiuta URL oltre 2.000 caratteri per evitare stalli. Fonte: [GitHub Releases v2.1.327](https://github.com/anthropics/claude-code/releases/tag/v2.1.327). Vedi [docs/10 MCP](./docs/10-mcp.md), [docs/19 Changelog](./docs/19-changelog.md).
+- **v2.1.328** (19 nov): auto mode estesa a Opus/Sonnet 4.6 su Bedrock/Vertex/Foundry/gateway Claude apps; `/code-review` ridefinito — solo bug e violazioni CLAUDE.md, con tag Important/Pre-existing/Nit. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Vedi [docs/04 § 4.3](./docs/04-modalita-permessi.md), [docs/03 Slash commands](./docs/03-slash-commands.md), [docs/19 Changelog](./docs/19-changelog.md).
+- **v2.1.329** (19 nov): Code Mode emette ora eventi OpenTelemetry per singola tool call; `/tasks` integra scheduled tasks, wakeup di `/loop`, goal e fork di conversazione. Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329). Vedi [docs/14 § 14.1](./docs/14-loop-monitor.md), [docs/19 Changelog](./docs/19-changelog.md).
+- **v2.1.330** (20 nov, ultima versione): nuovo mod integrato **easel** per grafici automatici; sign-in che applica da solo le impostazioni dell'Enterprise Admin Console; nuovi comandi VS Code `/fork` e `/workflows`; scheduled tasks e `/loop` durano ora 30 giorni (non piu' 7); comandi `rm` piu' distruttivi richiedono conferma o sono bloccati. Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Vedi [docs/18 Settings](./docs/18-settings-auth.md), [docs/14 § 14.1](./docs/14-loop-monitor.md), [docs/19 Changelog](./docs/19-changelog.md).
+- **Tip team Claude Code**: nuovo post sul blog ufficiale su come il team Claude Code verifica il codice scritto dagli agenti prima di fidarsene in produzione (16 nov). Fonte: blog Claude Code. Vedi [docs/20 Tips](./docs/20-tips-best-practices.md).
 
 ---
 
