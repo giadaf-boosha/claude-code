@@ -97,8 +97,11 @@ Max 50 scheduled tasks per sessione.
 - No catch-up missed fires
 - Fresh conversation clears tasks
 - `--resume`/`--continue` restore unexpired
+- **Durata massima estesa a 30 giorni (da v2.1.330)**: un loop ricorrente o un task pianificato, mentre la sua sessione resta attiva, dura ora fino a 30 giorni invece di 7, con un avviso prima della scadenza; i task creati prima di v2.1.330 restano limitati a 7 giorni. `/tasks` (da v2.1.329) elenca anche i task pianificati e i wakeup di `/loop` insieme a goal e fork, utile per vedere a colpo d'occhio quanto manca alla scadenza di ciascuno.
 
 > Fonte: [`/en/scheduled-tasks`](https://code.claude.com/docs/en/scheduled-tasks).
+
+<sub>Aggiornato 2026-11-22 via daily what's new. Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329) · [v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330).</sub>
 
 ---
 

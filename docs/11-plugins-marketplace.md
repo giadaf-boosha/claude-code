@@ -95,6 +95,21 @@ Workflow tipico:
 
 ---
 
+## 11.1c `easel`: mod ufficiale per i grafici (da v2.1.330)
+
+Da v2.1.330 (20 nov 2026) **`easel`** e' il secondo [mod built-in](#111b-claude-mods-plugin-con-hook-a-funzione-da-v21287) bundlato con Claude Code, dopo "You should know": disegna grafici quando richiesti in conversazione e automaticamente sotto i risultati di metriche MCP, senza bisogno di installare nulla. Disponibile su Pro e Max, e su Team/Enterprise dove previsto, su macOS e Linux.
+
+```bash
+# i grafici automatici sotto i risultati MCP si disattivano da /config
+/config
+```
+
+Se un'organizzazione limita i server MCP con un allow/denylist, `easel` va trattato come gli altri tool built-in — prima di v2.1.330 un allowlist/denylist che lo escludeva generava un falso avviso "MCP server blocked by enterprise policy: easel" a ogni avvio (fix incluso nella stessa release). `easel` funziona anche richiamato da uno script [Code Mode](./10-mcp.md#103c-code-mode-tool-call-come-script-js-sperimentale-da-v21323).
+
+<sub>Aggiornato 2026-11-22 via daily what's new. Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330).</sub>
+
+---
+
 ## 11.2 Marketplace ufficiale
 
 - **`claude-plugins-official`** — auto-disponibile, ~101 plugin (mar 2026)

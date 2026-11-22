@@ -96,6 +96,29 @@ CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND=1
 
 ---
 
+## 10.3c Code Mode: tool call come script JS (sperimentale, da v2.1.323)
+
+Da v2.1.323 (12 nov 2026) Claude puo' eseguire le proprie tool call scrivendo **JavaScript** invece di una tool call per volta: uno script puo' incatenare Bash, Read/Edit, tool MCP e altri tool built-in in un solo step, filtrare o aggregare i risultati nello script stesso, e far rientrare in conversazione solo cio' che serve davvero — utile su task con decine di chiamate ripetitive (scan di molti file, polling su piu' server MCP) dove oggi ogni singolo risultato intermedio gonfia il contesto e il numero di round-trip.
+
+E' una feature **sperimentale e opt-in**, non abilitata di default:
+
+```bash
+# in ~/.claude/settings.json (ignorata nei settings di progetto)
+{ "env": { "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1" } }
+```
+
+La prima sessione chiede conferma esplicita prima di attivarla. Per riprendere una sessione avviata in Code Mode, la variabile va mantenuta attiva anche su `claude --continue`/`--resume`: se e' disattivata, Claude Code si rifiuta di riprendere quella sessione.
+
+Note pratiche (dalle versioni successive, v2.1.326-330):
+- Disponibile anche con [agent teams](./12-agent-teams.md) attivi (da v2.1.326).
+- Supporta OpenTelemetry (eventi e metriche, da v2.1.329).
+- `/context` conta correttamente i tool di sistema anche in Code Mode prima della prima risposta di Claude; una tool call al tool `easel` (vedi [11.1c](./11-plugins-marketplace.md#111c-easel-mod-ufficiale-per-i-grafici-da-v21330)) funziona ora anche dentro uno script Code Mode (fix v2.1.330).
+- Anthropic segnala che la specifica puo' cambiare o la feature puo' essere rimossa in versioni future: non ha ancora una data di general availability.
+
+<sub>Aggiornato 2026-11-22 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
+
+---
+
 ## 10.4 Scope settings
 
 | Campo | Effetto |
