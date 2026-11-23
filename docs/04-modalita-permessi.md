@@ -89,6 +89,8 @@ Da agosto 2025: Opus 4.x per plan + Sonnet per execution. [@_catwu](https://x.co
 
 ## 4.3 Auto mode (da v2.1.83, default Pro/Max/Team da 14 ago 2026)
 
+> **2026-11-23 (auto-update)**: da v2.1.326, auto mode diventa il default anche per sessioni terminale/VS Code senza modalita' impostata quando la policy org non e' ancora caricata; v2.1.328 lo estende a Opus 4.6/Sonnet 4.6 su Bedrock, Google Cloud Agent Platform e Microsoft Foundry. v2.1.325 fa anche tornare sandboxed Bash ai normali prompt di permesso di default (prima bypassava). Fonte: [GitHub Releases v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326) · [v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Vedi anche README "What's new today" del giorno.
+
 Lanciato w13 (24 mar 2026). Alternativa piu' sicura a `--dangerously-skip-permissions`: un classifier separato decide cosa Claude puo' fare senza chiedere.
 
 ### Diventa il permission mode di default (da 14 ago 2026)

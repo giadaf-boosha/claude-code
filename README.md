@@ -1,20 +1,29 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 novembre 2026, 07:00 CET**.
-> Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **23 novembre 2026, 07:00 CET**.
+> Versione CLI di riferimento: **v2.1.330** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-23)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+> Recupero di 8 versioni CLI non ancora coperte dai run precedenti (v2.1.323 → v2.1.330, 11-20 nov): nessuna release successiva a v2.1.330 risulta pubblicata nelle ultime 24 ore.
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+- **Code Mode**: feature sperimentale opt-in, Claude scrive JavaScript per chiamare i tool invece del tool calling classico; estesa agli **agent team** in v2.1.326. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/19 § Fasi](./docs/19-changelog.md).
+- **Auto mode** diventa il default per sessioni terminale/VS Code senza modalita' impostata quando la policy org non e' ancora caricata (v2.1.326), poi esteso a **Opus 4.6/Sonnet 4.6** su Bedrock, Google Cloud e Microsoft Foundry (v2.1.328). Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Vedi [docs/04 § 4.3 Auto mode](./docs/04-modalita-permessi.md#43-auto-mode-da-v2183-default-promaxteam-da-14-ago-2026).
+- Fix di sicurezza nella **decodifica zstd** delle risposte; sandboxed Bash segue ora i normali prompt di permesso di default. Fonte: [GitHub Releases v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325). Vedi [docs/04 § Sandbox](./docs/04-modalita-permessi.md).
+- **`claude mcp add-json <name> -`** legge il JSON del server da stdin, niente token in chiaro sulla riga di comando. Fonte: [GitHub Releases v2.1.327](https://github.com/anthropics/claude-code/releases/tag/v2.1.327). Vedi [docs/10 MCP](./docs/10-mcp.md).
+- **`onFailure: "block"`** per gli hook `mcp_tool`: un hook che non parte o va in timeout blocca ora l'azione. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Vedi [docs/07 Hooks](./docs/07-hooks.md).
+- **`/tasks`** mostra ora scheduled task, loop wakeup, goal e fork; scheduled task e `/loop` arrivano a **30 giorni** (da 7) mentre la sessione resta attiva. Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329) · [v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Vedi [docs/14 Loop & Monitor](./docs/14-loop-monitor.md).
+- **Sign-in alle organizzazioni Enterprise Admin Console** via `claude auth login` (applica policy e provider/gateway dell'org). Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Vedi [docs/18 Settings & Auth](./docs/18-settings-auth.md).
+- Nuovo mod built-in **"easel"** che disegna grafici automaticamente in sessione. Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Vedi [docs/11 § 11.1b Claude Mods](./docs/11-plugins-marketplace.md#111b-claude-mods-plugin-con-hook-a-funzione-da-v21287).
+- Context window di default per i modelli non riconosciuti sale da 200K a 1M token. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **Team**: secondo fonti secondarie (non verificate sui post X originali), Cat Wu (@_catwu) e Thariq Shihipar (@trq212) avrebbero lasciato Anthropic (fine ott/inizio nov) — spiega l'assenza di post team rilevanti nelle ultime settimane. Fonte: [fourweekmba](https://fourweekmba.com/ai-claude-codes-cat-wu-leaves-anthropic-after-revenue-grew-45x/). n/a.
 
 ---
 

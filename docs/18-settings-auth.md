@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-11-23 (auto-update)**: da v2.1.330, `claude auth login` permette il sign-in direttamente a un'organizzazione Enterprise Admin Console, applicando le sue policy e il provider/gateway configurato. Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)

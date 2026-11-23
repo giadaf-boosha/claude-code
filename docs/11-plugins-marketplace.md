@@ -56,6 +56,8 @@ Se `version` e' omesso, viene usato il commit SHA (ogni commit = nuova versione)
 
 ## 11.1b Claude Mods: plugin con hook a funzione (da v2.1.287)
 
+> **2026-11-23 (auto-update)**: da v2.1.330, Claude Code include il mod built-in **"easel"**, che disegna grafici in sessione (macOS/Linux, Pro/Max e dove disponibile Team/Enterprise), disattivabile se non lo si vuole automatico. Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Vedi anche README "What's new today" del giorno.
+
 Da v2.1.287 (1 ott 2026) un plugin puo' includere un **hooks module**: un file JS/TypeScript il cui `register(on)` aggancia funzioni (hook) a eventi del harness (`session.start`, `tool.call`, `command.run`, `ui.render`, ...), con accesso a un'API dei mod (convenzionalmente `$`) per disegnare pannelli/comandi in UI, chiamare un modello o mantenere stato tra eventi. Un plugin con un hooks module si chiama **mod**: puo' riscrivere un prompt, aggiungere un comando o sostituire un comportamento built-in — un layer programmabile che va oltre gli [hook JSON](./07-hooks.md) classici, limitati ad allow/deny/block senza stato ne' disegno di interfaccia.
 
 Struttura minima di un mod:
