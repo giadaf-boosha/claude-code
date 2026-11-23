@@ -17,6 +17,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 > Fonte: [`/en/hooks`](https://code.claude.com/docs/en/hooks).
 
+> **2026-11-23 (auto-update)**: da v2.1.328, `"onFailure": "block"` e' disponibile anche per gli hook `mcp_tool` — un hook che non parte, va in timeout o esce con codice inatteso blocca ora l'azione invece di lasciarla passare. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Vedi anche README "What's new today" del giorno.
+
 > 🆕 Da v2.1.287, i plugin possono aggiungere anche **hook a funzione** (JS/TypeScript, con UI e stato) oltre agli hook JSON qui descritti — vedi [11.1b — Claude Mods](./11-plugins-marketplace.md#111b-claude-mods-plugin-con-hook-a-funzione-da-v21287).
 
 ---

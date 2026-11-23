@@ -15,6 +15,8 @@ Due feature complementari per **automazione intra-sessione**: `/loop` esegue rip
 
 **Per il deep-dive**: [14b — Agent loop ReAct](./14b-agent-loop-react.md) per il pattern teorico, [13 — Routines](./13-routines-cloud.md) per il loop in cloud.
 
+> **2026-11-23 (auto-update)**: da v2.1.329, `/tasks` mostra anche scheduled task, loop wakeup, goal e fork in corso. Da v2.1.330, scheduled task e `/loop` possono restare attivi fino a **30 giorni** (da 7) mentre la sessione resta in esecuzione. Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329) · [v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 14.1 `/loop` (bundled skill)
