@@ -236,14 +236,37 @@ Lancia: `/loop 10m`.
 
 ---
 
-## 14.5 Annunci e fonti
+## 14.5 Code Mode (sperimentale, da v2.1.323)
+
+Da v2.1.323 (12 nov 2026) una sessione terminale puo' attivare **Code Mode**: invece di chiedere i tool (Bash, Read, Edit, ...) uno alla volta e leggere ogni risultato prima di decidere il prossimo passo, Claude scrive un pezzo di JavaScript che fa piu' tool call in un colpo solo — in parallelo, incatenando il risultato di una chiamata nella successiva, e restituendo solo la parte di output che serve davvero. E' sperimentale, off di default, e puo' cambiare o essere rimossa in qualunque release.
+
+```javascript
+// Esempio dalla documentazione ufficiale: alza il retry limit e lancia i test
+const files = await $`rg -l "function retryPolicy" src`.text();
+const target = files.trim().split("\n")[0];
+await edit(target, "maxAttempts: 3", "maxAttempts: 5");
+({ edited: target, tests: $`npm test -- retryPolicy`.nothrow() });
+```
+
+**Attivazione**: `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude` (o nel blocco `env` di `~/.claude/settings.json` per renderla permanente). Al primo avvio Claude Code chiede conferma, poi la sessione mostra `Code Mode (experimental) is on`. In conversazione si vedono solo gli effetti dei tool call (es. il diff di un edit): il codice JS resta collassato in una riga **Code** del transcript viewer (`Ctrl+O`).
+
+**Quando usarla**: task con molte tool call collegate — una modifica che si ripete su tanti file, una ricerca i cui risultati vanno filtrati prima che Claude li legga, piu' comandi indipendenti lanciabili in parallelo.
+
+**Limiti principali**: resume solo da terminale con Code Mode attiva; in auto mode il classifier valuta il codice scritto, non ogni singola tool call; il codice si ferma dopo 10 minuti a meno che non giri in background (fino a 2 ore, avviando la sessione in auto o `bypassPermissions`); non disponibile con Remote Control, Claude in Chrome, computer use o sessioni cloud/desktop/VS Code. Da v2.1.326 funziona anche con gli [agent teams](./12-agent-teams.md). Doc ufficiale: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).
+
+<sub>Aggiornato 2026-11-23 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
+
+---
+
+## 14.6 Annunci e fonti
 
 - `/loop` self-pacing: [@noahzweben](https://x.com/noahzweben/status/2042670949003153647), 9-10 apr 2026
 - Monitor tool: [@noahzweben](https://x.com/noahzweben/status/2042332268450963774), 9 apr 2026
 - Tip Thariq Monitor + dev server: [@trq212](https://x.com/trq212/status/2042335178388103559)
 - Esempio Alistair Monitor + kubectl: https://x.com/alistaiir/status/2042345049980362819
 - Tip Boris `/loop` + `/schedule`: [@bcherny](https://x.com/bcherny/status/2038454341884154269)
-- Docs: [`/en/scheduled-tasks`](https://code.claude.com/docs/en/scheduled-tasks), [`/en/tools-reference#monitor-tool`](https://code.claude.com/docs/en/tools-reference)
+- Code Mode: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323), 12 nov 2026
+- Docs: [`/en/scheduled-tasks`](https://code.claude.com/docs/en/scheduled-tasks), [`/en/tools-reference#monitor-tool`](https://code.claude.com/docs/en/tools-reference), [`/en/code-mode`](https://code.claude.com/docs/en/code-mode)
 
 ---
 

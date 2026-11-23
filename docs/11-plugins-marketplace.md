@@ -91,6 +91,10 @@ Workflow tipico:
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
+**Built-in: `easel` (da v2.1.330)** — secondo mod ufficiale bundlato: disegna grafici quando richiesto in conversazione e automaticamente sotto i risultati di metriche MCP (es. output numerico di un tool di analytics), su Pro/Max e, dove disponibile, Team/Enterprise, solo su macOS e Linux. I grafici automatici sotto i risultati MCP si disattivano da `/config`; se un allowlist/denylist MCP esclude `easel`, il tool resta bloccato senza piu' mostrare l'avviso "MCP server blocked by enterprise policy" a ogni avvio (fix in v2.1.330).
+
+<sub>Aggiornato 2026-11-23 via daily what's new. Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330).</sub>
+
 <sub>Aggiornato 2026-10-02 via daily what's new. Fonte: [GitHub Releases v2.1.287](https://github.com/anthropics/claude-code/releases/tag/v2.1.287) · [code.claude.com/docs/en/plugins/mods/create](https://code.claude.com/docs/en/plugins/mods/create) · [@bcherny](https://x.com/bcherny/status/2105756563302723721) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2105721434807083061).</sub>
 
 ---
