@@ -72,6 +72,12 @@ Glossario alfabetico di 35+ termini che ricorrono nella guida. Per ogni termine:
 **Esempio**: `~/.claude/CLAUDE.md` con regole anti-hallucination personali.
 **Correlati**: `.claude/rules/`, Auto-memory, `@import`.
 
+### Code Mode
+**Definizione**: feature sperimentale (off by default, `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`) in cui Claude scrive JavaScript che fa piu' tool call in un solo step, invece di chiamare i tool uno alla volta.
+**Appare in**: [04](./04-modalita-permessi.md#code-mode-da-v21323), [00](./00-harness-overview.md).
+**Esempio**: una ricerca `rg` + edit + run test in un solo blocco di codice, invece di tre tool call separate.
+**Correlati**: Tool, Auto mode, Hooks.
+
 ### Compound engineering
 **Definizione**: pratica di comporre pattern architetturali (caching + idempotenza + parallelizzazione + verification) sopra l'harness per moltiplicare la produttivita'.
 **Sinonimi**: compounding engineering.

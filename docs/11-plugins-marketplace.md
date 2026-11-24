@@ -93,6 +93,10 @@ Workflow tipico:
 
 <sub>Aggiornato 2026-10-02 via daily what's new. Fonte: [GitHub Releases v2.1.287](https://github.com/anthropics/claude-code/releases/tag/v2.1.287) · [code.claude.com/docs/en/plugins/mods/create](https://code.claude.com/docs/en/plugins/mods/create) · [@bcherny](https://x.com/bcherny/status/2105756563302723721) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2105721434807083061).</sub>
 
+**Built-in: "Easel" (da v2.1.330)** — secondo mod ufficiale bundlato, dedicato ai grafici: disegna chart quando l'utente lo chiede e sotto i risultati di metriche letti via MCP, senza passare per uno script o una skill dedicata. Disponibile su Pro, Max e (dove offerto) Team/Enterprise, solo macOS/Linux; i grafici automatici si disattivano dalla riga dedicata in `/config`.
+
+<sub>Aggiornato 2026-11-24 via daily what's new. Fonte: [code.claude.com/docs/en/changelog](https://code.claude.com/docs/en/changelog) (v2.1.330, 20 nov 2026).</sub>
+
 ---
 
 ## 11.2 Marketplace ufficiale

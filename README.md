@@ -1,20 +1,24 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **12 novembre 2026, 07:00 CET**.
-> Versione CLI di riferimento: **v2.1.322** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
+> Ultimo aggiornamento: **24 novembre 2026, 07:00 CET**.
+> Versione CLI di riferimento: **v2.1.331** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-24)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+> Aggiornamento con 3 voci editoriali (routine ferma dal 12 novembre: finestra coperta 12-23 novembre, v2.1.323 → v2.1.331).
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+- **Code Mode**: nuova feature sperimentale opt-in, Claude scrive JavaScript per fare piu' tool call in un solo step invece di chiamarli uno alla volta; estesa ad agent teams, telemetria/OpenTelemetry e piu' provider (Bedrock, Google Cloud, Foundry, AWS) nelle release successive. Fonte: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode) (v2.1.323, 12 nov). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md#code-mode-da-v21323), [docs/00-harness-overview.md](./docs/00-harness-overview.md), [docs/23-glossario.md](./docs/23-glossario.md).
+- **`/code-review` cambiato**: riporta ora solo bug e violazioni di CLAUDE.md (riuso/efficienza passa a `/simplify`), ogni finding e' marcato Important/Pre-existing/Nit con fix suggerita, e senza target revisiona l'intero branch invece del solo diff corrente. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) · [v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/15-ultraplan-ultrareview.md](./docs/15-ultraplan-ultrareview.md).
+- **Easel**: secondo mod built-in ufficiale, disegna grafici su richiesta e sotto i risultati di metriche MCP (Pro/Max/Team/Enterprise, macOS/Linux). Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md).
+
+Il resto delle nove release nella finestra (gateway/enterprise settings, self-hosted runner, nuovi setting VS Code, ~400 fix complessivi) resta sotto la soglia editoriale. Nessun annuncio Anthropic blog dedicato su Claude Code individuato nella finestra. Nessun post team rilevante confermato con fonte primaria sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog). Nessun articolo tecnico con tutorial riproducibile rilevante trovato.
 
 ---
 

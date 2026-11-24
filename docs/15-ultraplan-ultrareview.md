@@ -176,6 +176,10 @@ E' attivabile via Claude GitHub App per Team/Enterprise. Differenze:
 - **Code Review (PR agents)**: automatico su PR open, runs sempre
 - **`/ultrareview`**: on-demand, user-triggered, multi-agent piu' deep
 
+Da non confondere con la skill locale `/code-review` (3 agent paralleli nella sessione corrente, non sulla PR GitHub) — vedi [03 Slash commands](./03-slash-commands.md) per il comportamento aggiornato da v2.1.328 (severity tag Important/Pre-existing/Nit, default sull'intero branch).
+
+<sub>Aggiornato 2026-11-24 via daily what's new. Fonte: [code.claude.com/docs/en/changelog](https://code.claude.com/docs/en/changelog) (v2.1.328-329, 19 nov 2026).</sub>
+
 ---
 
 ## 15.5 Tips operative

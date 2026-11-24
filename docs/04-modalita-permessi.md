@@ -218,6 +218,16 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 
 <sub>Aggiornato 2026-09-02 via daily what's new. Fonte: [GitHub Releases v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257).</sub>
 
+### Code Mode (da v2.1.323) {#code-mode-da-v21323}
+
+Feature sperimentale, off by default: invece di chiedere i tool uno alla volta (Bash, Read, Edit...) e leggere ogni risultato prima di decidere il prossimo passo, Claude scrive un pezzo di JavaScript che fa piu' tool call in un solo step — utile su task che ripetono la stessa modifica su molti file, ricerche il cui output va filtrato prima di essere letto, o comandi indipendenti lanciabili in parallelo. Il codice non e' visibile in conversazione (si vede solo l'effetto, es. il diff di un `edit()`); per leggerlo si apre il transcript viewer (`Ctrl+O`) e si espande la riga **Code**.
+
+Attivazione: env var `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1` (shell per provarlo, `settings.json` → `env` per renderlo default), poi conferma alla prima sessione. Richiede terminale (non VS Code/desktop/cloud), modello Opus/Sonnet/Haiku 5.5 o Fable 5.2, e l'account Claude/Console (non via gateway/Bedrock/Vertex/Foundry). Una sessione avviata in Code Mode si riprende solo con la env var ancora a `1`.
+
+Impatto sui permessi: ogni tool call dentro il codice passa comunque per le regole `deny`/`ask` e i hook `PreToolUse` con il nome tool abituale (`Bash`, nome tool MCP...), ma in **auto mode il classificatore valuta il codice nel suo complesso prima che parta, non ogni singola tool call** — non vede valori calcolati a runtime (es. un path preso dall'output di una ricerca), quindi per chiamate che vanno controllate comunque servono regole o hook dedicati. Per chiedere conferma su un comando specifico anche in auto/bypass mode si aggiunge una regola `ask` (es. `"ask": ["Bash(git push *)"]`); per leggere/approvare il codice prima che parta si aggiunge `"ask": ["REPL"]` (il tool che esegue il codice). Da v2.1.326 funziona anche con gli [agent teams](./12-agent-teams.md); da v2.1.329 e' compatibile con telemetria/feature-flag disattivati e con OpenTelemetry; da v2.1.331 e' disponibile anche su Bedrock, Google Cloud Agent Platform, Microsoft Foundry e Claude Platform su AWS.
+
+<sub>Aggiornato 2026-11-24 via daily what's new. Fonte: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode) · [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) → [v2.1.331](https://github.com/anthropics/claude-code/releases/tag/v2.1.331).</sub>
+
 ---
 
 ## 4.4 Sandbox mode {#sandbox}
