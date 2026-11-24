@@ -8,13 +8,15 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-24)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+- **Claude Ship** (beta): nuovo comando `/ship` in Claude Code — pusha, apre la PR, la revisiona e lavora su check CI falliti e feedback in automatico. Include **Code Review** (ora GA, livelli Quick/Standard/Deep), **PR Steward** (beta: risolve CI/conflitti/feedback, non approva ne' fa merge) e **Claude Approvals** (beta: policy di approvazione da file nel repo, tipo CODEOWNERS piu' intelligente). Team/Enterprise su GitHub, non su ZDR/HIPAA/CMEK. Fonte: [Anthropic — Introducing Claude Ship](https://claude.com/resources/articles/introducing-claude-ship). Vedi [docs/15 § 15.4](./docs/15-ultraplan-ultrareview.md) e [docs/03](./docs/03-slash-commands.md).
+- **CLI v2.1.331** estende Code Mode nelle sessioni terminale anche a Amazon Bedrock, Google Cloud Agent Platform, Microsoft Foundry e Claude Platform on AWS; aggiunge una sezione "API connectivity" a `claude doctor` e `optionalDependencies` nei manifest plugin. Fonte: [GitHub Releases v2.1.331](https://github.com/anthropics/claude-code/releases/tag/v2.1.331). Vedi [docs/19-changelog.md](./docs/19-changelog.md).
+- **Plugin marketplace**: dal 30 novembre 2026 i marketplace in `extraKnownMarketplaces` managed avranno l'auto-update attivo di default; opt-out con `"autoUpdate": false` sulla singola entry. Fonte: [GitHub Releases v2.1.331](https://github.com/anthropics/claude-code/releases/tag/v2.1.331). Vedi [docs/11 § 11.6](./docs/11-plugins-marketplace.md).
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+Nota: tra v2.1.322 (10 nov, ultima versione coperta prima di oggi) e v2.1.331 (23 nov) sono uscite diverse versioni intermedie non ancora documentate in questa repo — gap dovuto a un'interruzione della routine giornaliera, non alla finestra delle ultime 24 ore di oggi. Nessuna release pubblicata oggi 24 nov (l'ultima resta v2.1.331, di ieri). Nessun post team datato con certezza a oggi: x.com non raggiungibile direttamente dalla rete della sessione, ricerche web sostitutive sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati con certezza alla finestra.
 
 ---
 

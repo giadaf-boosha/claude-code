@@ -136,6 +136,8 @@ claude plugin install formatter@your-org --scope project
 
 ### Gestione dipendenze tra plugin (da v2.1.143)
 
+> **2026-11-24 (auto-update)**: da v2.1.331, i manifest plugin possono dichiarare `optionalDependencies` — un plugin elencato li' si installa insieme a chi lo richiede, ma puo' essere disabilitato o disinstallato singolarmente (diverso dalle dipendenze "dure" qui sotto). Fonte: [GitHub Releases v2.1.331](https://github.com/anthropics/claude-code/releases/tag/v2.1.331). Vedi anche README "What's new today" del giorno.
+
 Quando un plugin dipende da un altro, il sistema applica la dipendenza in modo automatico:
 
 - **Disabilitazione**: `claude plugin disable <name>` rifiuta l'operazione se un altro plugin abilitato dipende dal target. L'output include un hint con il comando copy-pasteable per disabilitare l'intera catena nell'ordine corretto.
@@ -274,6 +276,8 @@ FORCE_AUTOUPDATE_PLUGINS=1       # plugin auto-update anche con autoupdater off
   }
 }
 ```
+
+> **2026-11-24 (auto-update)**: avviso in v2.1.331 — dal 30 novembre 2026 i marketplace elencati qui in `extraKnownMarketplaces` managed avranno l'auto-update attivo di default (finora serviva opt-in). Per escludere una entry, settare `"autoUpdate": false` su quella entry. Fonte: [GitHub Releases v2.1.331](https://github.com/anthropics/claude-code/releases/tag/v2.1.331). Vedi anche README "What's new today" del giorno.
 
 ### Managed restrictions
 

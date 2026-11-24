@@ -19,6 +19,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 ## 3.1 Tabella completa
 
+> **2026-11-24 (auto-update)**: nuovo comando **`/ship`** (beta, Team/Enterprise su GitHub): lo esegui quando una modifica e' pronta, Claude pusha, apre la PR, la revisiona e lavora su CI falliti/feedback — fa parte della suite **Claude Ship** annunciata oggi (Code Review GA + PR Steward beta + Claude Approvals beta). Fonte: [Anthropic — Introducing Claude Ship](https://claude.com/resources/articles/introducing-claude-ship). Vedi anche [docs/15 § 15.4](./15-ultraplan-ultrareview.md) e README "What's new today" del giorno.
+
 | Comando | Tipo | Funzione |
 |---|---|---|
 | `/add-dir <path>` | built-in | Aggiunge working directory file-access |
