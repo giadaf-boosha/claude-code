@@ -168,6 +168,8 @@ Pattern "**plan locally, execute remotely**" che il team Claude Code usa interna
 
 ## 15.4 Code Review (PR agents) - feature correlata
 
+> **2026-11-24 (auto-update)**: Anthropic lancia **Claude Ship** (beta): nuovo comando `/ship` che pusha, apre la PR, la revisiona e lavora su CI/feedback in automatico. Oltre a Code Review (qui sotto, ormai GA) include **PR Steward** (beta: risolve check CI falliti, conflitti e feedback senza approvare o fare merge) e **Claude Approvals** (beta: policy di approvazione da file nel repo, tipo CODEOWNERS piu' intelligente). Team/Enterprise su GitHub, non su ZDR/HIPAA/CMEK. Fonte: [Anthropic — Introducing Claude Ship](https://claude.com/resources/articles/introducing-claude-ship). Vedi anche README "What's new today" del giorno.
+
 Annunciata GA mar 2026 (oltre a `/ultrareview`):
 - "When a PR opens, Claude dispatches a team of agents to hunt for bugs." — [@claudeai](https://x.com/claudeai/status/2031088171262554195)
 - "A team of agents runs a deep review on every PR. We built it for ourselves first. Code output per Anthropic engineer is up 200% this year and reviews were the bottleneck." — [@bcherny](https://x.com/bcherny/status/2031089411820228645)
