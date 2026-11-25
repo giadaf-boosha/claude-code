@@ -86,6 +86,7 @@ Claude Code rende esplicito ogni componente del loop:
 | **Act with safety** | Permission rules, sandbox, hooks | Layer Authority sull'Act |
 | **Observe push-based** | **Monitor tool** (v2.1.98) | Stdout streaming → notifica Claude |
 | **Observe poll-based** | `/loop` (cron) | Periodic check |
+| **Act batched/scripted** | **Code Mode** (da v2.1.323, nov 2026) | Claude scrive JS che incatena N tool call ed e' lui a filtrare l'output prima che rientri in context |
 | **Loop autonomous** | Auto mode + `/loop` self-pacing | Claude decide quando ri-eseguire |
 | **Loop bounded** | `--max-turns N` | Hard cap sul loop |
 | **Loop interrupted** | Esc, `/btw` side query | Side-chain mid-loop |
@@ -119,6 +120,23 @@ Frame ogni 5 min:
   Act: edit + push
   Observe: CI green, comment resolved
 ```
+
+### Pattern 1b — Code Mode: l'Act diventa uno script (nov 2026)
+
+Finora l'Act del loop era sempre "un tool call per iterazione": Claude ragiona, chiama un tool, aspetta l'Observation, ragiona di nuovo. Da v2.1.323, **Code Mode** (opt-in, sperimentale) cambia quel passo: invece di una chiamata alla volta, Claude scrive uno script JavaScript che invoca piu' tool in sequenza o in parallelo, filtra e riduce l'output lui stesso dentro lo script, e fa rientrare in context solo il risultato finale — non ogni Observation intermedia.
+
+```
+Senza Code Mode (N round-trip):          Con Code Mode (1 round-trip):
+Reason -> Act(Read file1) -> Observe     Reason -> Act(script.js):
+Reason -> Act(Read file2) -> Observe       - legge file1..fileN
+Reason -> Act(Grep pattern) -> Observe     - grep pattern
+...                                         - filtra/riduce risultati
+Reason -> Act(Edit) -> Observe            -> Observe (solo output finale)
+```
+
+Effetto pratico: meno token spesi in Observation intermedie, meno latenza per task che incatenano molte chiamate simili (bulk read, bulk grep, batch di fix). Disattivabile a livello org. Lanciato in sessioni terminale (v2.1.323), poi esteso agli Agent Teams (v2.1.326), a OpenTelemetry (v2.1.329) e a Bedrock/Google Cloud Agent Platform/Microsoft Foundry/Claude Platform su AWS (v2.1.331) — vedi [01.5](./01-snapshot.md#15-roadmap-visibile-post-15-feb-2026) e [19-changelog](./19-changelog.md).
+
+<sub>Aggiornato 2026-11-25 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [docs/en/code-mode](https://code.claude.com/docs/en/code-mode).</sub>
 
 ### Pattern 2 — Monitor + dev server (Thariq, apr 2026)
 > "start my dev server and use the MonitorTool to observe for errors" — [@trq212](https://x.com/trq212/status/2042335178388103559)

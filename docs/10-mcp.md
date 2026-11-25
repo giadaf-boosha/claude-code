@@ -96,6 +96,16 @@ CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND=1
 
 ---
 
+## 10.3c Skill da server MCP (beta)
+
+Da v2.1.332, un server MCP puo' esporre le proprie **skill** oltre a tool, resource e prompt: compaiono nel menu `/` come `server:skill` (es. `linear:triage-issue`), accanto a quelle locali che mantengono il nome semplice. E' lo stesso principio di [10.7 — MCP prompts come slash commands](#107-mcp-prompts-come-slash-commands), applicato alle skill: il server MCP diventa una fonte di conoscenza eseguibile, senza passare da un plugin da installare localmente.
+
+Essendo una skill caricata da una fonte esterna, puo' comunque dichiarare comandi shell inline: il nuovo hook `PreSkillShellCommand` (vedi [07 Hooks § 7.1](./07-hooks.md#71-eventi-supportati-30)) li puo' rifiutare prima che partano. Dettaglio lato skill in [09 Skills § 9.2c](./09-skills.md#92c-skill-da-server-mcp-beta-da-v21332).
+
+<sub>Aggiornato 2026-11-25 via daily what's new. Fonte: [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332).</sub>
+
+---
+
 ## 10.4 Scope settings
 
 | Campo | Effetto |
