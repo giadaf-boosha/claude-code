@@ -15,6 +15,8 @@ Gerarchia settings, sintassi permessi, autenticazione (claude.ai, API key, Bedro
 
 **Per il deep-dive**: [04b — Authority model](./04b-authority-model.md) per i 4 layer di Authority.
 
+> **2026-11-25 (auto-update)**: `claude auth login` supporta ora il login alle organizzazioni gestite dall'Enterprise Admin Console (v2.1.330); nuova guida Anthropic per CISO/CTO sulla sicurezza degli agenti di codifica (sandbox, permessi, policy centralizzate). Fonte: [GitHub Releases v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330) · [Anthropic blog](https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 18.1 Settings precedence (top to bottom)

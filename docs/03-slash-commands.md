@@ -15,6 +15,8 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 
 **Per il deep-dive**: [09 — Skills](./09-skills.md) per come scrivere i tuoi.
 
+> **2026-11-25 (auto-update)**: nuovo comando `/ship` (Claude Ship, beta): apre la PR, la revisiona (Code Review), gestisce CI/conflitti/feedback (PR Steward) e applica una policy di auto-approvazione (Claude Approvals) — piani Team/Enterprise. Fonte: [Anthropic blog](https://claude.com/resources/articles/introducing-claude-ship). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 3.1 Tabella completa

@@ -18,6 +18,8 @@ Introdotto in **Claude Code v2.1.139** (11 maggio 2026).
 
 > Fonti: [`/en/goal`](https://code.claude.com/docs/en/goal), [changelog v2.1.139](https://code.claude.com/docs/en/changelog).
 
+> **2026-11-25 (auto-update)**: `/tasks` mostra ora anche i goal attivi (oltre a scheduled task, wakeup di `/loop` e fork), con `x` per fermarli (v2.1.329). Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 25.1 Quando usarlo
