@@ -17,6 +17,8 @@ Skills = Markdown con YAML frontmatter che estendono Claude. Compatibile con [Ag
 
 > Fonte: [`/en/skills`](https://code.claude.com/docs/en/skills).
 
+> **2026-11-25 (auto-update)**: i server MCP possono ora distribuire skill (beta, v2.1.332), mostrate come `server:skill` nel menu `/` e caricate solo quando servono. Fonte: [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332) · [Anthropic blog](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 9.0b Governance: Agent Skills donato alla Agentic AI Foundation (ott 2026)
