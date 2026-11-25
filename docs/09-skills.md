@@ -130,6 +130,18 @@ Stesso meccanismo per i plugin, vedi [11.4b](./11-plugins-marketplace.md#114b-sy
 
 ---
 
+## 9.2c Skill da server MCP (beta, da v2.1.332)
+
+Da v2.1.332, una skill non deve piu' arrivare per forza da un file `SKILL.md` locale: un **server MCP** puo' esporre le proprie skill, che compaiono nel menu `/` con il prefisso `server:skill` (es. `linear:triage-issue`) per distinguerle da quelle bundled/progetto/utente, che mantengono il nome semplice. E' lo stesso principio dei [MCP prompts come slash commands](./10-mcp.md#107-mcp-prompts-come-slash-commands) applicato alle skill: il server diventa una fonte di conoscenza eseguibile al pari di un file locale, senza passare da un plugin da installare.
+
+Perche' conta per l'Authority model: una skill caricata da un server esterno puo' dichiarare comandi shell inline come una skill locale, ma arriva da una fonte che non controlli direttamente. Per questo v2.1.332 introduce in parallelo l'hook `PreSkillShellCommand` ([07 Hooks § 7.1](./07-hooks.md#71-eventi-supportati-30)): puo' rifiutare quei comandi prima che partano, cosi' una skill remota non eredita automaticamente la fiducia di una skill scritta in `.claude/skills/`.
+
+Vedi anche [10 — MCP](./10-mcp.md#103c-skill-da-server-mcp-beta) per il lato server della feature.
+
+<sub>Aggiornato 2026-11-25 via daily what's new. Fonte: [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332).</sub>
+
+---
+
 ## 9.3 Frontmatter completo
 
 ```yaml
@@ -340,9 +352,11 @@ Salva in `RELEASE_NOTES.md`.
 - **Plugin auto-install dependencies** (v2.1.117, 22 apr 2026)
 - **Plugin SKILL.md root come skill** (v2.1.142, 14 mag 2026): plugin con `SKILL.md` nella directory root esposto automaticamente come skill, senza richiedere la struttura `skills/<name>/`
 - **Sync skill da claude.ai al terminale** (v2.1.275, 17 set 2026) — vedi [9.2b](#92b-sync-skill-da-claudeai-al-terminale-da-v21275)
+- **Skill da server MCP (beta)** (v2.1.332, 25 nov 2026) — vedi [9.2c](#92c-skill-da-server-mcp-beta-da-v21332)
 
 <sub>Aggiornato 2026-05-15 via daily what's new. Fonte: [GitHub Releases v2.1.142](https://github.com/anthropics/claude-code/releases/tag/v2.1.142).</sub>
 <sub>Aggiornato 2026-09-18 via daily what's new. Fonte: [GitHub Releases v2.1.275](https://github.com/anthropics/claude-code/releases/tag/v2.1.275).</sub>
+<sub>Aggiornato 2026-11-25 via daily what's new. Fonte: [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332).</sub>
 
 ---
 

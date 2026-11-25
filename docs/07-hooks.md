@@ -19,6 +19,10 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 > 🆕 Da v2.1.287, i plugin possono aggiungere anche **hook a funzione** (JS/TypeScript, con UI e stato) oltre agli hook JSON qui descritti — vedi [11.1b — Claude Mods](./11-plugins-marketplace.md#111b-claude-mods-plugin-con-hook-a-funzione-da-v21287).
 
+> 🆕 Da v2.1.332, il nuovo evento `PreSkillShellCommand` copre un varco di Authority aperto dalle **skill da MCP server (beta)**: una skill caricata da un server esterno puo' dichiarare comandi shell inline, e questo hook puo' rifiutarli prima che partano — vedi [09 Skills § 9.2c](./09-skills.md#92c-skill-da-server-mcp-beta-da-v21332).
+
+<sub>Aggiornato 2026-11-25 via daily what's new. Fonte: [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332).</sub>
+
 ---
 
 ## 7.1 Eventi supportati (30+)
@@ -51,6 +55,7 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 | `Elicitation` / `ElicitationResult` | MCP server input request | Si' |
 | `MessageDisplay` | Messaggio assistente prima della visualizzazione (da v2.1.152) | Si' |
 | `PreModelSwitch` / `PostModelSwitch` (da v2.1.251) | Prima/dopo un cambio di modello a runtime | Pre=Si' |
+| `PreSkillShellCommand` (da v2.1.332) | Prima che una skill o uno slash command eseguano i comandi shell inline dichiarati nel loro file | Si' |
 
 ---
 

@@ -61,9 +61,9 @@ Annunci recenti rilevanti:
 | Provider | Variabile | Note |
 |---|---|---|
 | Anthropic API (default) | — | Tutte le feature |
-| Amazon Bedrock | `CLAUDE_CODE_USE_BEDROCK=1` | Niente fast mode, niente ultrareview/ultraplan, niente Monitor |
+| Amazon Bedrock | `CLAUDE_CODE_USE_BEDROCK=1` | Niente fast mode, niente ultrareview/ultraplan, niente Monitor. Code Mode disponibile da v2.1.331 |
 | Google Vertex AI | `CLAUDE_CODE_USE_VERTEX=1` | Stesse limitazioni |
-| Microsoft Foundry | `CLAUDE_CODE_USE_FOUNDRY=1` | Stesse limitazioni |
+| Microsoft Foundry | `CLAUDE_CODE_USE_FOUNDRY=1` | Stesse limitazioni. Code Mode disponibile da v2.1.331 |
 
 > Le feature cloud (Routines, Ultraplan, Ultrareview, Computer use, Monitor) richiedono Anthropic provider.
 
@@ -119,6 +119,10 @@ Cronologia compatta (per dettaglio vedi [19-changelog.md](./19-changelog.md)):
 | 22 set 2026 | v2.1.280 — **Claude Opus 5.5** diventa il nuovo modello Opus di default; Pro e Team Standard passano da Sonnet a Opus come default — vedi [05.10](./05-fast-mode-1m-context.md#510-claude-opus-55-da-v21280) |
 | 28 set 2026 | v2.1.284 — **Claude Sonnet 5.5** diventa il nuovo modello Sonnet di default sulla Claude API e in Claude Code — vedi [05.11](./05-fast-mode-1m-context.md#511-claude-sonnet-55-da-v21284) |
 | 7 ott 2026 | v2.1.293 — **Claude Haiku 5.5** diventa il nuovo modello Haiku di default, terzo e ultimo tassello della famiglia Claude 5.5 — vedi [05.12](./05-fast-mode-1m-context.md#512-claude-haiku-55-da-v21293) |
+| 12 nov 2026 | v2.1.323 — **Code Mode** (sperimentale, opt-in): Claude scrive JavaScript per incatenare e filtrare piu' tool call in un solo round-trip invece di una chiamata per iterazione — vedi [14b.4](./14b-agent-loop-react.md#pattern-1b--code-mode-lact-diventa-uno-script-nov-2026). Esteso agli Agent Teams (v2.1.326, 16 nov), a OpenTelemetry (v2.1.329, 19 nov) e a Bedrock/Google Cloud Agent Platform/Microsoft Foundry/Claude Platform su AWS (v2.1.331, 23 nov) |
+| 25 nov 2026 | v2.1.332 — **Skill da server MCP (beta)**: una skill puo' arrivare da un server MCP, mostrata come `server:skill` nel menu `/`; nuovo hook `PreSkillShellCommand` per rifiutarne i comandi shell inline — vedi [09.2c](./09-skills.md#92c-skill-da-server-mcp-beta-da-v21332) |
+
+<sub>Aggiornato 2026-11-25 via daily what's new. Fonte: [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332).</sub>
 
 <sub>Aggiornato 2026-10-08 via daily what's new. Fonte: [Anthropic](https://www.anthropic.com/claude-haiku-5-5) · [GitHub Releases v2.1.293](https://github.com/anthropics/claude-code/releases/tag/v2.1.293).</sub>
 
