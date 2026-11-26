@@ -8,13 +8,15 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-26)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+- **CLI v2.1.332 (25 nov)** introduce le **skill da server MCP (beta)**: un server MCP puo' esporre skill proprie, mostrate nel menu `/` come `server:skill`. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog) · [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332). Vedi [docs/09-skills.md](./docs/09-skills.md), [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Nuovo hook `PreSkillShellCommand`** (v2.1.332): puo' rifiutare i comandi shell inline caricati all'avvio di una skill o di uno slash command, prima che vengano eseguiti. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog). Vedi [docs/07-hooks.md](./docs/07-hooks.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Auto mode di default per Sonnet 5/5.5** (v2.1.332) sulle sessioni terminale via Bedrock Mantle, Agent Platform (Google Cloud) e Microsoft Foundry, disattivabile con `disableAutoMode`; Foundry passa anche a **Sonnet 5.5** come modello default. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog). Vedi [docs/04-modalita-permessi.md § 4.3](./docs/04-modalita-permessi.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra delle ultime 24-48 ore (gli ultimi post, 18-20 novembre, riguardano il pricing e la chiusura dell'IPO, non feature della CLI). Nessun post team rilevante individuato: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Nota: la routine non girava dal 12 novembre, quindi restano non coperte nel dettaglio le versioni v2.1.323–v2.1.331 (13–23 nov) — consultare il [changelog ufficiale](https://code.claude.com/docs/en/changelog) per il recupero completo.
 
 ---
 
