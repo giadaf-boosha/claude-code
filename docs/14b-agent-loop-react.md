@@ -223,6 +223,27 @@ while not done:
 
 ---
 
+## 14b.11 Code Mode: JavaScript invece del loop standard (da v2.1.323)
+
+> Feature sperimentale opt-in, v2.1.323 (12 nov 2026), estesa agli agent team in v2.1.326 e a Bedrock/Google Cloud Agent Platform/Microsoft Foundry/Claude Platform su AWS in v2.1.331 (prima solo su Claude API).
+
+Nel loop ReAct standard ogni iterazione e' una singola tool call: Claude ragiona, chiama un tool, legge il risultato intero nel context, ragiona di nuovo. Con **Code Mode** attivo, Claude scrive invece un programma JavaScript che effettua piu' tool call in sequenza (incluse quelle verso server MCP) e Claude Code lo esegue nella sessione corrente: solo l'output che il codice decide di restituire entra nel context, non il risultato grezzo di ogni singola chiamata. Meno round-trip modello↔harness e meno rumore nel context per task che incatenano molte tool call (es. filtrare, aggregare o trasformare l'output di una ricerca prima di usarlo).
+
+Attivazione:
+```json
+// settings.json — persistente su ogni nuova sessione
+{ "env": { "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1" } }
+```
+oppure `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude` per la singola sessione.
+
+**Permessi**: le regole deny/ask e gli hook `PreToolUse` si applicano comunque a ogni tool call eseguita dentro il programma JavaScript; in auto mode un classificatore rivede il codice prima di eseguirlo, non solo le singole chiamate. **Limiti**: funziona solo in sessione terminale interattiva (non in `-p` headless al lancio di questa feature); una sessione avviata con Code Mode attivo richiede che resti attivo per essere ripresa con `/resume`.
+
+Riferimento ufficiale: https://code.claude.com/docs/en/code-mode. Vedi anche [10 — MCP](./10-mcp.md) per le tool call verso server MCP dentro il codice.
+
+<sub>Aggiornato 2026-11-26 via daily what's new. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog) (v2.1.323, v2.1.326, v2.1.331).</sub>
+
+---
+
 ## 14b.9 Letture di approfondimento
 
 - Paper originale ReAct: https://arxiv.org/abs/2210.03629

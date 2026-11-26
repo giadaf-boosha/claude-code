@@ -8,13 +8,15 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-26)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+- **Code Mode** (sperimentale, v2.1.323, 12 nov): Claude scrive ed esegue un programma JavaScript che effettua le tool call al posto del loop standard a singola chiamata, filtrando nella sessione solo l'output che serve. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog) · [docs/en/code-mode](https://code.claude.com/docs/en/code-mode). Doc: [docs/14b-agent-loop-react.md](./docs/14b-agent-loop-react.md), [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **Skill da server MCP (beta)** (v2.1.332, 25 nov): Claude Code scopre le skill dichiarate da un server MCP e le mostra nel menu `/` come `server:skill`, senza doverle copiare in locale. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog). Doc: [docs/09-skills.md](./docs/09-skills.md), [docs/10-mcp.md](./docs/10-mcp.md), [docs/19-changelog.md](./docs/19-changelog.md).
+- **`easel`, mod built-in per i grafici** (v2.1.330, 20 nov): nuovo mod bundlato che disegna chart nativi dentro la sessione (Pro, Max e dove disponibile Team/Enterprise, macOS e Linux). Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog). Doc: [docs/11-plugins-marketplace.md](./docs/11-plugins-marketplace.md), [docs/19-changelog.md](./docs/19-changelog.md).
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+Il resto della finestra (14 giorni, v2.1.323 → v2.1.332: validazione plugin con version range, menu crediti di utilizzo, auto mode per Opus 4.6/Sonnet 4.6 anche su Bedrock/Agent Platform/Foundry, Code Mode estesa agli agent team e a piu' provider, `/tasks` che elenca anche scheduled task/loop/goal/fork, sign-in a organizzazioni Enterprise Admin Console, `claude mcp add-json` da stdin) resta sotto la soglia editoriale — enhancement e disponibilita' estesa, non nuovi primitivi. Nessun annuncio Anthropic blog dedicato a una feature di Claude Code nella finestra (i post del periodo riguardano enterprise security guide, verification philosophy interna e il load test dei Claude Docs — materiale di engineering, non lancio prodotto). Nessun post team rilevante individuato via web search (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog; x.com non raggiungibile dalla rete della sessione). Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
 
 ---
 

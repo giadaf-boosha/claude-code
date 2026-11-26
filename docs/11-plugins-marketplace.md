@@ -91,7 +91,13 @@ Workflow tipico:
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
+**Built-in: `easel`** (da v2.1.330, 20 nov 2026) — secondo mod ufficiale bundlato: disegna grafici nativi dentro la sessione invece di descriverli a parole (Pro, Max e dove disponibile Team/Enterprise, macOS e Linux):
+```bash
+/plugin enable easel@builtin
+```
+
 <sub>Aggiornato 2026-10-02 via daily what's new. Fonte: [GitHub Releases v2.1.287](https://github.com/anthropics/claude-code/releases/tag/v2.1.287) · [code.claude.com/docs/en/plugins/mods/create](https://code.claude.com/docs/en/plugins/mods/create) · [@bcherny](https://x.com/bcherny/status/2105756563302723721) · [@ClaudeDevs](https://x.com/ClaudeDevs/status/2105721434807083061).</sub>
+<sub>Aggiornato 2026-11-26 via daily what's new. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog) (v2.1.330).</sub>
 
 ---
 
