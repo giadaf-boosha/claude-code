@@ -96,6 +96,18 @@ CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND=1
 
 ---
 
+## 10.3c Skill da server MCP (beta, da v2.1.332)
+
+Da v2.1.332 (25 nov 2026) Claude Code scopre le **skill che un server MCP dichiara** (via il protocollo `skill://` di MCP) e le registra come skill invocabili, senza dover copiare un `SKILL.md` in locale: appaiono nel menu `/` con il nome `server:skill` (es. `linear:create-issue`). Il server resta la fonte di verita' — un aggiornamento alla skill lato server e' visibile alla sessione successiva, senza redistribuire file.
+
+Per una skill caricata cosi', un nuovo hook **`PreSkillShellCommand`** puo' ispezionare o bloccare i comandi shell inline dichiarati dalla skill prima che vengano eseguiti al caricamento, utile quando il server MCP non e' sotto il proprio controllo diretto.
+
+Differenza rispetto alle skill locali ([9 — Skills](./09-skills.md#91-bundled-skills-sempre-disponibili)): una skill da server MCP vive nello scope di quel server (stessi `enabledMcpjsonServers`/permessi del server), non in `.claude/skills/`; per condividerla in team si distribuisce il server MCP, non il plugin/marketplace.
+
+<sub>Aggiornato 2026-11-26 via daily what's new. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog) (v2.1.332).</sub>
+
+---
+
 ## 10.4 Scope settings
 
 | Campo | Effetto |
