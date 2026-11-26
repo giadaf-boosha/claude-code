@@ -17,6 +17,8 @@ MCP e' il protocollo open per collegare LLM a tool esterni (DB, API, file, app).
 
 > Fonte: [`/en/mcp`](https://code.claude.com/docs/en/mcp).
 
+> **2026-11-26 (auto-update)**: da v2.1.332 (beta) un server MCP puo' esporre proprie skill, mostrate nel menu `/` come `server:skill` — vedi anche [09 Skills](./09-skills.md). Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 ---
 
 ## 10.1 Configurazione base

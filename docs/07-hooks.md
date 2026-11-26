@@ -17,6 +17,8 @@ Gli hook permettono di intercettare deterministicamente il lifecycle di Claude C
 
 > Fonte: [`/en/hooks`](https://code.claude.com/docs/en/hooks).
 
+> **2026-11-26 (auto-update)**: nuovo evento `PreSkillShellCommand` (v2.1.332), puo' rifiutare i comandi shell inline caricati all'avvio di una skill o di uno slash command. Fonte: [changelog ufficiale](https://code.claude.com/docs/en/changelog). Vedi anche README "What's new today" del giorno.
+
 > 🆕 Da v2.1.287, i plugin possono aggiungere anche **hook a funzione** (JS/TypeScript, con UI e stato) oltre agli hook JSON qui descritti — vedi [11.1b — Claude Mods](./11-plugins-marketplace.md#111b-claude-mods-plugin-con-hook-a-funzione-da-v21287).
 
 ---
