@@ -83,7 +83,7 @@ Max 50 scheduled tasks per sessione.
 - Fire low priority **between turns** (mai mid-response)
 - Local timezone (`0 9 * * *` = 9am locale)
 - **Jitter**: recurring fire fino 10% periodo late (cap 15 min); one-shot top/bottom hour fino 90s early. Per timing esatto, usa minute non-`:00`/`:30`.
-- **7-day expiry**: recurring fire una volta finale poi delete. Cancel & recreate per longer.
+- **30-day expiry** (era 7 giorni fino a v2.1.329): recurring fire una volta finale poi delete. Cancel & recreate per longer. Il limite vale sia per i `CronCreate`/`/loop` sotto il cofano sia per i cloud scheduled task ricorrenti (ex "routine", vedi [13](./13-routines-cloud.md)) — stesso meccanismo, estensione comune da v2.1.330 (20 nov 2026).
 
 ### Cron expressions
 5-field `minute hour dom month dow`. Wildcards, single, steps `*/15`, ranges `1-5`, lists `1,15,30`. NO `L`, `W`, `?`, `MON`/`JAN` aliases.
@@ -244,6 +244,8 @@ Lancia: `/loop 10m`.
 - Esempio Alistair Monitor + kubectl: https://x.com/alistaiir/status/2042345049980362819
 - Tip Boris `/loop` + `/schedule`: [@bcherny](https://x.com/bcherny/status/2038454341884154269)
 - Docs: [`/en/scheduled-tasks`](https://code.claude.com/docs/en/scheduled-tasks), [`/en/tools-reference#monitor-tool`](https://code.claude.com/docs/en/tools-reference)
+
+<sub>Aggiornato 2026-11-27 via daily what's new. Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329) · [v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330). Scadenza dei task ricorrenti estesa da 7 a 30 giorni; `/tasks` elenca ora anche scheduled task e wakeup di `/loop`.</sub>
 
 ---
 

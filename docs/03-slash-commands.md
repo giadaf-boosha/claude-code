@@ -89,13 +89,14 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 | `/security-review` | built-in | Analizza diff per security issues |
 | `/setup-bedrock` / `/setup-vertex` | built-in | Wizard provider |
 | `/skill-doctor` | built-in | Individua le skill caricate ma mai invocate nella sessione e il loro costo di context, per ripulire il setup (da v2.1.261) |
-| `/code-review [focus] [effort] [--comment\|--fix]` | **Skill** | 3 review agent paralleli; `effort` opzionale (es. `high`); `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente; `--fix` applica automaticamente i suggerimenti al working tree (alias: `/simplify`). (da v2.1.146; `--comment` v2.1.147; `--fix` e alias `/simplify` da v2.1.152). Da v2.1.215 non piu' auto-invocata a fine task: va lanciata esplicitamente (idem per la skill `/verify`, vedi [09 Skills](./09-skills.md#invocazione-manuale-per-verify-e-code-review-da-v2115)) |
+| `/code-review [focus] [effort] [--comment\|--fix]` | **Skill** | 3 review agent paralleli; `effort` opzionale (es. `high`); `--comment` pubblica i risultati come commenti inline sulla PR GitHub corrente; `--fix` applica automaticamente i suggerimenti al working tree. (da v2.1.146; `--comment` v2.1.147; `--fix` da v2.1.152). Da v2.1.215 non piu' auto-invocata a fine task: va lanciata esplicitamente (idem per la skill `/verify`, vedi [09 Skills](./09-skills.md#invocazione-manuale-per-verify-e-code-review-da-v2115)). **Da v2.1.328**: sulla maggior parte dei modelli riporta solo bug di correttezza (e violazioni di `CLAUDE.md`); i suggerimenti di cleanup/reuse/semplificazione sono passati a `/simplify`, che non e' piu' un semplice alias di `--fix` |
 | `/skills` | built-in | Lista skills, `t` per sort by token |
+| `/simplify [focus] [effort]` | **Skill** | Review del diff per reuse, semplificazione, efficienza e cleanup di altitudine, poi applica i fix. Solo qualita': non caccia bug, per quello usa `/code-review`. Fino a v2.1.327 era un semplice alias di `/code-review --fix`; da v2.1.328 e' un comando distinto con questo scope ristretto |
 | `/status` | built-in | Settings → Status (version, model, account) |
 | `/statusline` | built-in | Configura status line |
 | `/stickers` | built-in | Order stickers |
 | `/subtask <instruction>` | built-in | Spawna un subagent dentro la sessione corrente (comportamento ex `/fork`, da v2.1.212) — vedi [08 Subagents](./08-subagents.md#85-forking-di-sessione) |
-| `/tasks` (alias `/bashes`) | built-in | Background tasks (incluse cron, ultraplan, ultrareview) |
+| `/tasks` (alias `/bashes`) | built-in | Background tasks (incluse cron, ultraplan, ultrareview); da v2.1.329 elenca anche gli scheduled task cloud, i wakeup di `/loop` e i fork — vedi [13](./13-routines-cloud.md), [14](./14-loop-monitor.md) |
 | `/team-onboarding` | built-in | Genera onboarding guide da usage history |
 | `/teleport` (alias `/tp`) | built-in | Pull web session nel terminale |
 | `/terminal-setup` | built-in | Keybindings shell (VS Code/Cursor/Windsurf/Alacritty/Zed) |
@@ -117,6 +118,7 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 <sub>Aggiornato 2026-07-19 via daily what's new. Fonte: [GitHub Releases v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215).</sub>
 <sub>Aggiornato 2026-08-06 via daily what's new. Fonte: [GitHub Releases v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222) · [v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223).</sub>
 <sub>Aggiornato 2026-11-07 via daily what's new. Fonte: [GitHub Releases v2.1.319](https://github.com/anthropics/claude-code/releases/tag/v2.1.319).</sub>
+<sub>Aggiornato 2026-11-27 via daily what's new. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) · [v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329). `/code-review`/`/simplify` split e riga `/tasks` aggiornata su scheduled task/loop wakeup/fork.</sub>
 
 ---
 
@@ -126,7 +128,6 @@ Riferimento completo dei comandi `/` built-in e bundled skills al v2.1.183. Type
 |---|---|---|
 | `/vim` | rimosso v2.1.92 | `/config` → Editor mode (Vim ora con visual mode `v`/`V` da v2.1.118) |
 | `/pr-comments` | rimosso v2.1.91 | Chiedere a Claude direttamente sui commenti PR |
-| `/simplify` | alias da v2.1.152 | `/code-review --fix` (era rinominato in v2.1.146, reintrodotto come alias in v2.1.152) |
 | `/ultraplan` | **rimosso v2.1.222** | Nessun sostituto diretto — planning in cloud non piu' disponibile come comando dedicato; usare `/plan` locale o `/schedule` per routine cloud. Vedi [15.1](./15-ultraplan-ultrareview.md#151-ultraplan-rimosso-da-v21222) |
 
 ---

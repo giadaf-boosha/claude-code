@@ -19,6 +19,10 @@ Lanciate **14 aprile 2026** in research preview. Eseguono su infrastruttura Anth
 
 > Fonti: [blog Anthropic](https://claude.com/blog/introducing-routines-in-claude-code), [`/en/routines`](https://code.claude.com/docs/en/routines), [`/en/web-scheduled-tasks`](https://code.claude.com/docs/en/web-scheduled-tasks). Annuncio: [@claudeai](https://x.com/claudeai/status/2044095086460309790).
 
+> **Rinominate "cloud scheduled task" (da v2.1.332, 25 nov 2026)**: la parola "routine" nell'interfaccia e nella documentazione ufficiale lascia il posto a "cloud scheduled task" — stesso prodotto, stesso modello concettuale di questo capitolo, solo terminologia aggiornata (probabile disambiguazione dal significato generico di "routine" usato altrove). Questo doc usa ancora "routine" per continuita' con la numerazione dei capitoli.
+
+<sub>Aggiornato 2026-11-27 via daily what's new. Fonte: [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332).</sub>
+
 ---
 
 ## 13.1 Cosa cambia rispetto a `/loop` e Desktop scheduled

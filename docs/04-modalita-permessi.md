@@ -220,6 +220,35 @@ Da v2.1.257 (1 set 2026), auto mode aggiunge una regola dedicata al contenimento
 
 ---
 
+## 4.3b Code Mode (sperimentale, da v2.1.323) {#code-mode}
+
+Da v2.1.323 (12 nov 2026) Claude puo' smettere di chiamare i tool uno a uno e scrivere invece un pezzo di JavaScript che fa piu' tool call in un colpo solo — Claude Code esegue quel codice nella sessione. E' sperimentale, disattivato di default, e puo' cambiare o essere rimosso in qualsiasi release (feedback via `/feedback`).
+
+**Perche' conviene**: su task con molte tool call collegate — una modifica che si ripete su tanti file, una ricerca i cui risultati vanno filtrati prima di leggerli, piu' comandi indipendenti lanciabili in parallelo — un solo script fa il lavoro di decine di round trip Claude ↔ tool, e Claude legge solo l'output rilevante (l'ultima riga del codice decide cosa tornare).
+
+**Attivazione**:
+```bash
+CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude
+# oppure, persistente, in ~/.claude/settings.json
+{ "env": { "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1" } }
+```
+Richiede confirm alla prima sessione, Claude Opus/Sonnet/Haiku 5.5 o Fable 5.2, un account Claude/Console o un cloud provider (Bedrock, Agent Platform, Foundry — serve v2.1.331+), e un terminale `claude` interattivo (non VS Code, Desktop, cloud session). Una sessione avviata in Code Mode si riprende solo con la variabile ancora a `1`.
+
+**Cosa si vede**: in conversazione compaiono solo i tool call (es. il diff di una `Edit`), non il codice. `Ctrl+O` apre il transcript viewer e mostra la riga **Code** da espandere.
+
+**Permessi**: le regole `allow`/`deny`/`ask` e gli hook `PreToolUse`/`PostToolUse` restano scoped ai singoli tool (`Bash`, nome del tool MCP, ecc.) dentro il codice. In più, in auto mode un classificatore rivede lo script prima dell'esecuzione (non ogni singola call) — non vede valori calcolati a runtime, quindi conviene comunque tenere regole o hook sulle call critiche. Per leggere il codice stesso serve un hook `PreToolUse` sul tool `REPL` (quello che esegue lo script), via `tool_input.code`. Esempio minimo:
+
+```javascript
+const files = await $`rg -l "function retryPolicy" src`.text();
+await edit(files.trim().split("\n")[0], "maxAttempts: 3", "maxAttempts: 5");
+```
+
+**Limitazioni principali**: niente Remote Control, Claude in Chrome, computer use; niente fork in background né spostamento su Desktop; il codice si ferma dopo 10 minuti a meno che non girhi in background (fino a 2 ore, solo in auto/`bypassPermissions`); per usarlo in un subagent aggiungi `REPL` alla sua `tools` list.
+
+<sub>Aggiornato 2026-11-27 via daily what's new. Fonte: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode) · [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323) · [v2.1.331](https://github.com/anthropics/claude-code/releases/tag/v2.1.331). Vedi anche [docs/07-hooks.md](./07-hooks.md) per l'hook `PreToolUse`/`PostToolUse` su `REPL` e [docs/19-changelog.md](./19-changelog.md).</sub>
+
+---
+
 ## 4.4 Sandbox mode {#sandbox}
 
 OS-level enforcement su Bash e child processes. Filesystem isolation + network isolation. Riduce permission prompt dell'~84% in uso interno Anthropic.

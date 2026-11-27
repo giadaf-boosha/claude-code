@@ -130,6 +130,18 @@ Stesso meccanismo per i plugin, vedi [11.4b](./11-plugins-marketplace.md#114b-sy
 
 ---
 
+## 9.2c Skill da server MCP (beta, da v2.1.332)
+
+Da v2.1.332 (25 nov 2026) le skill non arrivano solo da file locali, plugin o sync claude.ai: un **server MCP** puo' esporle direttamente. Compaiono nel menu `/` con il nome `server:skill` (prefisso = nome del server MCP che la serve), e si invocano e si auto-discoverano come ogni altra skill — stessa precedenza/clash resolution di [9.6](#96-auto-discovery-e-nested).
+
+E' un passo oltre il semplice `skill://` resource protocol del MCP Skills extension (che alcuni client, incluso Claude Code su versioni precedenti, si limitavano a leggere senza registrarlo come skill invocabile): qui il server diventa una fonte di skill a tutti gli effetti, utile per distribuire skill versionate insieme al server MCP che le usa (stesso repo, stesso deploy) invece di duplicarle come file `.md` nel progetto.
+
+Insieme arriva anche l'hook `PreSkillShellCommand`, che puo' rifiutare un comando shell inline dichiarato dal frontmatter di una skill (locale o da MCP) prima che parta — vedi [docs/07-hooks.md](./07-hooks.md) per l'anatomia degli hook.
+
+<sub>Aggiornato 2026-11-27 via daily what's new. Fonte: [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332). Vedi anche [docs/10-mcp.md](./10-mcp.md) e [docs/19-changelog.md](./19-changelog.md).</sub>
+
+---
+
 ## 9.3 Frontmatter completo
 
 ```yaml
