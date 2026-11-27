@@ -8,13 +8,13 @@
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-12)
+## What's new today (2026-11-27)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
-Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.322 (10 nov), gia' coperta nell'aggiornamento precedente — nessuna versione successiva su GitHub Releases, tag o changelog ufficiale, e il digest settimanale ufficiale e' ancora fermo alla Week 37 (7-11 set). Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli unici post, 9-10 novembre, riguardano Claude Fable 5.2/Mythos 5.2 in generale e il roadshow per l'IPO, non una feature della CLI). Nessun post team rilevante: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati pertinenti e datati alla finestra; nessun articolo tecnico con tutorial riproducibile rilevante trovato nella finestra.
+Nessuna nuova release CLI nella finestra: l'ultima resta v2.1.332 (25 nov) — nessuna versione successiva confermata su changelog ufficiale, CHANGELOG.md del repo o GitHub Releases. Nessun annuncio Anthropic blog dedicato su Claude Code nella finestra (gli ultimi post, 24 novembre, riguardano gli artifact come app desktop Mac/Windows e le skill esposte dai server MCP — quest'ultima gia' coperta dalla release v2.1.332). Nessun post team rilevante individuato nella finestra: ricerche web sugli account del team (bcherny, catwu, noahzweben, trq212, claudeai, ClaudeDevs, alistaiir, ClaudeCodeLog) senza risultati datati a oggi; nessun articolo tecnico con tutorial riproducibile rilevante trovato. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set). **Nota operativa**: restano aperte e non mergiate le PR giornaliere "what's new" dal 13 al 26 novembre (#127–#159 su GitHub), che portano gia' il changelog fino a v2.1.332 — consigliata una revisione/merge manuale per riallineare README e [docs/19-changelog.md](./docs/19-changelog.md) alla finestra corrente prima che il backlog cresca ulteriormente.
 
 ---
 
