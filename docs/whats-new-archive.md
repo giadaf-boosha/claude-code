@@ -9,6 +9,17 @@ Il README master mostra **solo l'aggiornamento del giorno corrente**. Quando ne 
 
 **Politica di retention**: ultimi 30 giorni. Le entry piu' vecchie sono cancellate (per evitare crescita illimitata del file). La storia completa resta comunque tracciabile via `git log README.md`.
 
+## 2026-11-27
+
+> Aggiornamento con 4 voci editoriali (retroattivo: la routine non e' girata tra il 13 e il 26 novembre 2026, copre la finestra 12-25 novembre su changelog ufficiale e GitHub Releases).
+
+- **Code Mode (sperimentale)**: Claude smette di chiamare i tool uno a uno e scrive invece un blocco di JavaScript che fa piu' tool call in un colpo solo — utile su task con molte call collegate (refactor multi-file, ricerca+filtro, comandi paralleli). Disattivato di default (`CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`), esteso ai cloud provider (Bedrock, Agent Platform, Foundry) da v2.1.331. Fonte: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode) · [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Doc: [docs/04-modalita-permessi.md](./04-modalita-permessi.md#code-mode), [docs/19-changelog.md](./19-changelog.md).
+- **Skill da server MCP (beta)**: un server MCP puo' ora esporre skill direttamente, mostrate come `server:skill` nel menu `/` — oltre ai file locali, ai plugin e al sync da claude.ai. Fonte: [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332). Doc: [docs/09-skills.md](./09-skills.md#92c-skill-da-server-mcp-beta-da-v21332), [docs/19-changelog.md](./19-changelog.md).
+- **`/code-review` e `/simplify` si separano**: `/code-review` riporta ora solo bug di correttezza e violazioni `CLAUDE.md`; i suggerimenti di cleanup/reuse/semplificazione passano a `/simplify`, che smette di essere un semplice alias. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Doc: [docs/03-slash-commands.md](./03-slash-commands.md), [docs/19-changelog.md](./19-changelog.md).
+- **Automazione: scheduled task e `/loop` fino a 30 giorni**: durata massima dei task ricorrenti estesa da 7 a 30 giorni; `/tasks` elenca anche scheduled task cloud, wakeup di `/loop` e fork; "routine" viene rinominata **"cloud scheduled task"** nell'interfaccia ufficiale. Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329) · [v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330) · [v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332). Doc: [docs/13-routines-cloud.md](./13-routines-cloud.md), [docs/14-loop-monitor.md](./14-loop-monitor.md).
+
+---
+
 ## 2026-11-12
 
 > Nessuna novita' significativa nelle ultime 48 ore. Prossimo aggiornamento domani 07:00.
@@ -244,14 +255,6 @@ Il resto della release v2.1.287 (filtro `n:<text>` in Agent View, URL prompt da 
 > Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 L'unica release nella finestra (v2.1.286, 30 set) resta sotto la soglia editoriale: contatore "2 di 5" per i permission prompt in coda, supporto mouse per le righe "N more" delle liste in fullscreen, migliorata la commit guidance per eseguire una skill `verify` prima di committare, bookmark e question tracking per Claude Code in VS Code, oltre un centinaio di fix su resume/continue, errori API 400, sessioni cloud, spend meter, login macOS e Remote Control. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo, nessun post team rilevante nelle ultime 24-48 ore. Digest settimanale ufficiale ancora fermo alla Week 37 (7-11 set).
-
----
-
-## 2026-09-30
-
-> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
-
-L'unica release nella finestra (v2.1.285, 29 set) resta sotto la soglia editoriale: `claude --desktop` per aprire la desktop app dalla CLI, `claude plugin configure` per gestire le opzioni di un plugin, il setting `allowedProviders` per limitare i provider API ammessi su una macchina, le env var `CLAUDE_CODE_DISABLE_WEB_FETCH` e `CLAUDE_CODE_NONSTREAMING_TIMEOUT_RETRIES`, oltre un centinaio di fix su plugin, MCP, Remote Control, VS Code e Artifact tool. Nessun annuncio Anthropic blog dedicato su Claude Code, nessun nuovo slash command o tool primitivo, nessun post team rilevante nelle ultime 24-48 ore.
 
 ---
 

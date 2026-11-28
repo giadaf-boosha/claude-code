@@ -1,23 +1,18 @@
 # Claude Code — Guida (5 maggio 2026)
 
 > Reference completa di Claude Code (CLI, IDE, Web, Desktop, SDK) curata da [Boosha AI](https://boosha.it).
-> Ultimo aggiornamento: **27 novembre 2026, 07:00 CET**.
+> Ultimo aggiornamento: **28 novembre 2026, 07:00 CET**.
 > Versione CLI di riferimento: **v2.1.332** · Modello default **Opus 5.5** (Pro/Max/Team) · Sonnet **5.5** (Free/Pro; nuovo default anche su Claude API) · Premium **Fable 5.2** (Max plan; Opus 5 rimane disponibile via `/model`) · Small model **Haiku 5.5** (nuovo default Haiku, API).
 
 > 🆕 **Novita' aprile 2026 (F4)**: integrato il case study **Kora team Every** (compound engineering applicato), **filosofia vibe-to-agentic**, **workflow operativi storici** (worktree script, Friday refactor, bug investigation), **Conductor + Ralph community pattern**. Nuova [Quick Start 60 min](./docs/QUICKSTART.md) + 8 [template `.claude/` per persona](./examples/personas/).
 > 👉 **Nuovo a Claude Code?** Inizia da [docs/QUICKSTART.md](./docs/QUICKSTART.md) (60 min) o [README-NAVIGATION.md](./README-NAVIGATION.md) per il percorso adatto al tuo profilo.
 > 🤖 **Automazione daily**: ogni giorno alle 07:00 Europe/Rome una routine cloud aggiorna la sezione "What's new today" (vedi sotto). Setup: [`automations/daily-whats-new/`](./automations/daily-whats-new/).
 
-## What's new today (2026-11-27)
+## What's new today (2026-11-28)
 
 > _Aggiornamento automatico dalle 07:00 Europe/Rome. Vedi [archive](./docs/whats-new-archive.md) per i giorni precedenti._
 
-> **Nota**: la routine non e' girata tra il 13 e il 26 novembre 2026 (gap operativo). Questo aggiornamento copre retroattivamente l'intera finestra 12-25 novembre su changelog ufficiale e GitHub Releases.
-
-- **Code Mode (sperimentale)**: Claude smette di chiamare i tool uno a uno e scrive invece un blocco di JavaScript che fa piu' tool call in un colpo solo — utile su task con molte call collegate (refactor multi-file, ricerca+filtro, comandi paralleli). Disattivato di default (`CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`), esteso ai cloud provider (Bedrock, Agent Platform, Foundry) da v2.1.331. Fonte: [code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode) · [GitHub Releases v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323). Doc: [docs/04-modalita-permessi.md](./docs/04-modalita-permessi.md#code-mode), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Skill da server MCP (beta)**: un server MCP puo' ora esporre skill direttamente, mostrate come `server:skill` nel menu `/` — oltre ai file locali, ai plugin e al sync da claude.ai. Fonte: [GitHub Releases v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332). Doc: [docs/09-skills.md](./docs/09-skills.md#92c-skill-da-server-mcp-beta-da-v21332), [docs/19-changelog.md](./docs/19-changelog.md).
-- **`/code-review` e `/simplify` si separano**: `/code-review` riporta ora solo bug di correttezza e violazioni `CLAUDE.md`; i suggerimenti di cleanup/reuse/semplificazione passano a `/simplify`, che smette di essere un semplice alias. Fonte: [GitHub Releases v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328). Doc: [docs/03-slash-commands.md](./docs/03-slash-commands.md), [docs/19-changelog.md](./docs/19-changelog.md).
-- **Automazione: scheduled task e `/loop` fino a 30 giorni**: durata massima dei task ricorrenti estesa da 7 a 30 giorni; `/tasks` elenca anche scheduled task cloud, wakeup di `/loop` e fork; "routine" viene rinominata **"cloud scheduled task"** nell'interfaccia ufficiale. Fonte: [GitHub Releases v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329) · [v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330) · [v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332). Doc: [docs/13-routines-cloud.md](./docs/13-routines-cloud.md), [docs/14-loop-monitor.md](./docs/14-loop-monitor.md).
+> Nessuna novita' significativa nelle ultime 24 ore. Prossimo aggiornamento domani 07:00.
 
 ---
 
